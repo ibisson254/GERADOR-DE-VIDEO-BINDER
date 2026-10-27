@@ -86,6 +86,18 @@ Para dados de metagame (MTGGoldfish, MTGTop8, Melee).
 
 - Easter egg (máx. 1) escondido na chuva de código; registar em `comum/easter_eggs.md`.
 
+## 7.1 Trilha: jazz de precisão
+
+Tema oficial: `musica/tubo_tema.mp3` (40,6 s). Composição própria do Ibisson ("Paper Thin Alibi"); original completo em `musica/tubo_tema_original.mp3` (62 s).
+- Conceito: big band tensa à la Whiplash — o TUBO é o maestro implacável; qualquer desvio é erro humano. Tom menor (Fá menor).
+- Edição (`editar_tema.py`): dois cortes nas batidas mais parecidas (12,6→26,7 s e 49,1→54,3 s do original), EQ a puxar bombo e caixa (+3,5 dB 70 Hz, +2,5 dB 3,5 kHz, −2 dB 800 Hz), −16 LUFS.
+- Mapa no vídeo:
+  - 0–6 s: abertura quase em silêncio com batidas soltas → gancho.
+  - ~12,6 s: banda entra cheia → mergulho no tubo / análise.
+  - **29,0–30,2 s: corte seco (silêncio) → revelação.** Assinatura sonora da série: o silêncio anuncia a jogada.
+  - 30,2 s: banda volta → pergunta e frase de fecho; termina em 40,6 s e passa ao outro.
+- Montagem: baixar a trilha ~12 dB enquanto o TUBO fala (ducking) e subir nas pausas. Alinhar a revelação ao corte dos 29 s.
+
 ## 8. Pilares
 
 1. A Jogada que Não Viste.

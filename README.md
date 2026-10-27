@@ -18,6 +18,7 @@ Kit de produção automatizada de Reels 9:16 (1080×1920, 30 fps) para o Instagr
 ├── oraculo/          # Oráculo de Tubo — personagem TUBO (análise competitiva)
 │   ├── CONTEXTO.md   # Personagem, ambientação, tipos de episódio e regras
 │   ├── assets/       # Imagem-mestra do TUBO
+│   ├── musica/       # Tema oficial (tubo_tema.mp3) e original
 │   └── legendas/     # Legendas dos episódios
 └── comum/
     └── historico.md  # Histórico de desempenho e métricas
