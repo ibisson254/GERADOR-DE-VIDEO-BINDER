@@ -98,6 +98,23 @@ Tema oficial: `musica/tubo_tema.mp3` (40,6 s). Composição própria do Ibisson 
   - 30,2 s: banda volta → pergunta e frase de fecho; termina em 40,6 s e passa ao outro.
 - Montagem: baixar a trilha ~12 dB enquanto o TUBO fala (ducking) e subir nas pausas. Alinhar a revelação ao corte dos 29 s.
 
+## 7.2 Identidade extra (aprovada 27/10/2026)
+
+**Personagem**
+1. **Som de arranque:** "tum" de desmagnetização de CRT ao ligar + chiado curto de modem no mergulho para dentro do tubo. A série reconhece-se em 1 s pelo som.
+2. **Contador de erros humanos:** número no canto do terminal (`ERROS HUMANOS: 007`) que sobe a cada episódio com jogada imprevisível. Contagem real de episódios, nunca inventada.
+3. **Limite do humor:** a arrogância visa decisões e probabilidades, nunca jogadores reais pelo nome em tom de deboche.
+
+**Episódios**
+4. **Previsões registadas:** antes de um torneio grande, o TUBO faz uma previsão marcada como opinião. Depois do evento, volta a ela e mostra acerto ou erro (erro = "Erro de sistema"). Registar cada previsão em `comum/historico.md`.
+5. **"O TUBO julga o teu deck":** seguidores deixam a lista nos comentários; uma é analisada por semana. Pedir autorização ao autor e citar o @.
+6. **Crossovers:** TUBO vs Conde ("carta feia, mas presença real no meta", com número verificado) ou o TUBO a aparecer na TV do sofá de Mana & Burn. Um universo BINDER partilhado.
+
+**Produção e conversão**
+7. **Legendas em estilo terminal:** fonte mono verde, palavra a palavra (a maioria vê sem som).
+8. **Ponte honesta para o app:** o "scan" da carta a entrar no tubo ecoa o scanner real do outro. Nunca mostrar ou inventar outras funcionalidades.
+9. **Carrossel derivado:** cada "Relatório do Meta" também sai como carrossel com os mesmos dados e fontes.
+
 ## 8. Pilares
 
 1. A Jogada que Não Viste.
