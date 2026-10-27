@@ -1,0 +1,29 @@
+# Ambientes e variáveis
+.env
+.env.*
+
+# Pastas de saída e trabalho temporário
+vozes/
+saida/
+output/
+prev/
+prev2/
+
+# Arquivos de mídia gerados durante render
+*.mp4
+*.mov
+*.wav
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+env/
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
