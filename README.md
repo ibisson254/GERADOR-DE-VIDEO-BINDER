@@ -15,6 +15,10 @@ Kit de produção automatizada de Reels 9:16 (1080×1920, 30 fps) para o Instagr
 │   ├── assets/       # Retrato oficial e expressões do Conde
 │   ├── legendas/     # Legendas dos episódios
 │   └── musica/       # Tema oficial (tema.mp3)
+├── oraculo/          # Oráculo de Tubo — personagem TUBO (análise competitiva)
+│   ├── CONTEXTO.md   # Personagem, ambientação, tipos de episódio e regras
+│   ├── assets/       # Imagem-mestra do TUBO
+│   └── legendas/     # Legendas dos episódios
 └── comum/
     └── historico.md  # Histórico de desempenho e métricas
 ```
@@ -28,6 +32,8 @@ git clone --depth 1 https://github.com/ibisson254/GERADOR-DE-VIDEO-BINDER.git
 cd GERADOR-DE-VIDEO-BINDER/conde     # Para O Tribunal Estético
 # ou
 cd GERADOR-DE-VIDEO-BINDER/manaburn  # Para Mana & Burn
+# ou
+cd GERADOR-DE-VIDEO-BINDER/oraculo   # Para Oráculo de Tubo (TUBO)
 ```
 
 ## Dependências
