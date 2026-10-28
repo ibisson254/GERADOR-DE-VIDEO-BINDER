@@ -1,0 +1,20 @@
+EP01 META EM CURTO · FONTES E VERIFICAÇÃO (28/10/2026)
+
+Confirmado:
+- AC13: 24–25 out 2026, Standard, 176 jogadores. Mono-Green Landfall 29 (16,5%); Dimir Uldaros 25 (14,2%); Orzhov Life Gain 21 (11,9%); Dimir Midrange 14 (8,0%); Jund Sacrifice 14 (8,0%).
+  https://magic.gg/news/arena-championship-13-standard-metagame-breakdown
+- Final: Gage Fevold (Orzhov Lifegain) vs Jeff Lin (Mono-Green Landfall).
+  https://x.com/MTG_Arena/status/2114496611317604752
+- Campeão: Gage Fevold, Orzhov Lifegain.
+  https://magic.gg/events/arena-championship-13
+- Vaga no Mundial (MagicCon Amsterdam, 2027) para os dois finalistas.
+  https://x.com/PlayMTG/status/2114497533061878126
+
+Correção ao rascunho anterior (ep01_ac13_landfall.md): o Mundial NÃO é em Atlanta em nov/2026; a PlayMTG indica MagicCon Amsterdam, 2027. Não usado no vídeo.
+
+Não afirmado no vídeo (sem dado): win rates, resultado do confronto direto fora da final, jogadas da final, causalidade da vitória.
+
+Easter egg (1): "GG·FEVOLD" na chuva de código do terminal, segundos 9–10.
+Voz: ElevenLabs eleven_v4, voz "Antonio de Jesus" (MK5tXPmT83J5SUlpUo4K), take A, atempo 1,05.
+Música: "Paper Thin Alibi" (tubo_tema_original.mp3), ducking ~10 dB sob a voz, corte seco na revelação (16,3–17,5 s).
+Fecho: reconstruído com os 45 quadros reais de comum/outro/scan + logótipo + textos do LEIA-ME (o outro_binder_916.mp4 não está no repositório: *.mp4 no .gitignore).

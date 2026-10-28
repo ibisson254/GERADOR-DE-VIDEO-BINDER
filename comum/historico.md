@@ -21,3 +21,6 @@ Impulsionamento: R$ 11 em dois vídeos, ver marcação abaixo (confirmar quais).
 - Halloween teve a maior taxa de partilhas (17 em 945 views): tema sazonal partilha bem.
 - Comentários quase zero em todos: a pergunta do comentário fixado não está a puxar resposta. Testar pergunta de escolha (A ou B) ou de número.
 - Views não são instalações. Próximo print: Visão geral, com visitas ao perfil e toques no link.
+
+## Publicações em preparação
+- 28/10/2026 · Meta em Curto EP01 "29 jogadores escolheram este deck. O troféu foi para outro." (AC13). Voz TUBO: ElevenLabs "Antonio de Jesus". Previsões registadas: nenhuma.
