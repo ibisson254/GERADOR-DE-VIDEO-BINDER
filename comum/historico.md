@@ -23,4 +23,4 @@ Impulsionamento: R$ 11 em dois vídeos, ver marcação abaixo (confirmar quais).
 - Views não são instalações. Próximo print: Visão geral, com visitas ao perfil e toques no link.
 
 ## Publicações em preparação
-- 28/10/2026 · Meta em Curto EP01 "29 jogadores escolheram este deck. O troféu foi para outro." (AC13). Voz TUBO: ElevenLabs "Antonio de Jesus". Previsões registadas: nenhuma.
+- 28/10/2026 · Meta em Curto EP01 v2 "Mais jogado: 1 no Top 8. 3º mais jogado: 3." (AC13, Relatório do Meta: conversão por arquétipo). Voz TUBO: ElevenLabs "Antonio de Jesus". Previsões registadas: nenhuma.

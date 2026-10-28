@@ -1,20 +1,25 @@
-EP01 META EM CURTO · FONTES E VERIFICAÇÃO (28/10/2026)
+META EM CURTO EP01 v2 · FONTES E VERIFICAÇÃO (28/10/2026)
+Tipo de episódio: RELATÓRIO DO META (conversão por arquétipo). Não é análise de jogada.
 
-Confirmado:
-- AC13: 24–25 out 2026, Standard, 176 jogadores. Mono-Green Landfall 29 (16,5%); Dimir Uldaros 25 (14,2%); Orzhov Life Gain 21 (11,9%); Dimir Midrange 14 (8,0%); Jund Sacrifice 14 (8,0%).
-  https://magic.gg/news/arena-championship-13-standard-metagame-breakdown
-- Final: Gage Fevold (Orzhov Lifegain) vs Jeff Lin (Mono-Green Landfall).
-  https://x.com/MTG_Arena/status/2114496611317604752
-- Campeão: Gage Fevold, Orzhov Lifegain.
-  https://magic.gg/events/arena-championship-13
-- Vaga no Mundial (MagicCon Amsterdam, 2027) para os dois finalistas.
-  https://x.com/PlayMTG/status/2114497533061878126
+Por que não é uma jogada: o único registo da final é o VOD oficial do Dia 2 (youtube.com/watch?v=Gky3PYj01F0, 8h23). Não tem legendas e as ferramentas de análise de vídeo disponíveis recusam vídeos com mais de 6 h. Sem estado de mesa verificável, não se inventou jogada.
 
-Correção ao rascunho anterior (ep01_ac13_landfall.md): o Mundial NÃO é em Atlanta em nov/2026; a PlayMTG indica MagicCon Amsterdam, 2027. Não usado no vídeo.
+FACTOS
+- AC13, 24–25/10/2026, Standard. Breakdown: 176 jogadores; Landfall 29 (16,5%); Dimir Uldaros 25; Orzhov Life Gain 21 (11,9%) — https://magic.gg/news/arena-championship-13-standard-metagame-breakdown
+- Estrutura: suíço até 7 vitórias ou 3 derrotas; playoff de Top 16 em eliminação simples — https://magic.gg/news/arena-championship-13-viewers-guide
+- Classificação 1–16 (nomes) — https://magic.gg/news/arena-championship-13-final-standings
+- Arquétipos do Top 16 — https://www.mtggoldfish.com/tournament/67636 (dados melee.gg):
+  1 Fevold Orzhov Lifegain · 2 Lin Mono-Green Landfall · 3 Stettner Orzhov Lifegain · 4 Ichikawa Boros Dwarves · 5 Moscato Dimir Uldaros · 6 Edelson Orzhov Lifegain · 7 Maier Jund Sacrifice · 8 Santos Jund Sacrifice · 9 Huschenbeth Landfall · 10 LLuck_123 Jund Sacrifice · 11 Jung Dimir Uldaros · 12 Silverman Jund Sacrifice · 13 Paugsch Esper Uldaros · 14 Leinen Landfall · 15 Sinclair Azorius Artifacts · 16 jiaohongchen Landfall
+- Final Fevold (Lifegain) vs Lin (Landfall), campeão Fevold — https://x.com/MTG_Arena/status/2114496611317604752 · https://magic.gg/events/arena-championship-13
 
-Não afirmado no vídeo (sem dado): win rates, resultado do confronto direto fora da final, jogadas da final, causalidade da vitória.
+CÁLCULOS (feitos por nós a partir dos dados acima)
+- Top 16: Landfall 4/29 = 13,8% · Lifegain 3/21 = 14,3%
+- Top 8: Landfall 1/29 = 3,4% · Lifegain 3/21 = 14,3%
+- Oitavas: Lifegain 3 de 3 avançaram · Landfall 1 de 4
 
-Easter egg (1): "GG·FEVOLD" na chuva de código do terminal, segundos 9–10.
-Voz: ElevenLabs eleven_v4, voz "Antonio de Jesus" (MK5tXPmT83J5SUlpUo4K), take A, atempo 1,05.
-Música: "Paper Thin Alibi" (tubo_tema_original.mp3), ducking ~10 dB sob a voz, corte seco na revelação (16,3–17,5 s).
-Fecho: reconstruído com os 45 quadros reais de comum/outro/scan + logótipo + textos do LEIA-ME (o outro_binder_916.mp4 não está no repositório: *.mp4 no .gitignore).
+INFERÊNCIA: até ao Top 16 a conversão dos dois foi praticamente igual; a diferença no Top 8 surge numa só rodada eliminatória.
+OPINIÃO (TUBO): uma rodada não mede um deck.
+INCERTEZA: emparelhamentos das oitavas desconhecidos (não sabemos se houve Lifegain vs Landfall); amostras pequenas; o total de jogadores varia entre fontes (176 no breakdown e no mtggoldfish, 177 na classificação do magic.gg). Usou-se 176, base do breakdown.
+
+Easter egg (1): "GG·FEVOLD" no canto inferior direito do terminal, segundo 8.
+Voz: ElevenLabs eleven_v4, "Antonio de Jesus" (MK5tXPmT83J5SUlpUo4K), atempo 1,10. Música: "Paper Thin Alibi" (original), ducking ~10 dB, corte seco de 23,0 a 24,9 s.
+Fecho: 45 quadros reais do scanner + logótipo (outro_binder_916.mp4 não está no repositório), entrada com transição de 0,4 s.

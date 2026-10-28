@@ -1,11 +1,12 @@
 LEGENDA (Instagram)
-29 jogadores levaram Mono-Green Landfall ao Arena Championship 13. Jeff Lin chegou à final com ele. O troféu ficou com Gage Fevold, de Orzhov Lifegain.
-Uma final não prova que um deck vence o outro.
-Meta em Curto, com o TUBO: análise de torneio com dado e fonte.
-Fonte: magic.gg (metagame e resultado do AC13, 24–25/10/2026).
+Mono-Green Landfall foi o deck mais jogado do Arena Championship 13 (29 de 176) e pôs 1 jogador no Top 8. Orzhov Lifegain, o terceiro mais jogado (21), pôs 3 e levou o título com Gage Fevold.
+Parece goleada. Mas no Top 16 os dois converteram quase igual: 4 de 29 (13,8%) contra 3 de 21 (14,3%). A diferença nasceu numa única rodada de oitavas.
+Uma rodada não mede um deck. O TUBO avisa: grau de certeza baixo.
+Meta em Curto: análise de torneio com dado e fonte.
+Fontes: magic.gg (metagame e classificação) e mtggoldfish (arquétipos do Top 16, via melee.gg).
 Organize sua coleção: baixe o BINDER Vision.
 
 COMENTÁRIO FIXADO
-No próximo Standard, você leva o deck mais jogado ou o que ganha dele? Responda L (Landfall) ou O (Orzhov).
-Top 5 do AC13 (176 jogadores): Mono-Green Landfall 29 · Dimir Uldaros 25 · Orzhov Life Gain 21 · Dimir Midrange 14 · Jund Sacrifice 14. Fevold e Lin garantiram vaga no Mundial 33 (MagicCon Amsterdam, 2027).
+Nas oitavas, o que pesou mais: matchup, chaveamento ou pilotagem? Responda M, C ou P.
+Top 16 por arquétipo: Landfall 4 (2º, 9º, 14º, 16º) · Lifegain 3 (1º, 3º, 6º) · Jund Sacrifice 4 · Dimir Uldaros 2 · Boros Dwarves, Esper Uldaros e Azorius Artifacts 1 cada. Não sabemos quem enfrentou quem nas oitavas: se um Lifegain eliminou um Landfall, é a pista que falta.
 Tem um detalhe escondido. Diga o segundo.

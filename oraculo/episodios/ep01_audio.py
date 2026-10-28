@@ -1,13 +1,13 @@
 import numpy as np, soundfile as sf, subprocess, json
-SR=48000; TEMPO=1.05; LEAD=0.25
+SR=48000; TEMPO=1.10; LEAD=0.25
 def load(p):
     raw=subprocess.run(['ffmpeg','-v','error','-i',p,'-ac','2','-ar',str(SR),'-f','f32le','-'],capture_output=True).stdout
     return np.frombuffer(raw,np.float32).reshape(-1,2).copy()
 # voz: atempo 1.05, normalizar ~ -16 LUFS
-subprocess.run(['ffmpeg','-y','-v','error','-i','vozA.mp3','-af',f'atempo={TEMPO},highpass=f=70,acompressor=threshold=-20dB:ratio=2.5:attack=8:release=120,loudnorm=I=-16:TP=-1.5:LRA=7','-ar',str(SR),'-ac','2','voz_proc.wav'],check=True)
+subprocess.run(['ffmpeg','-y','-v','error','-i','voz.mp3','-af',f'atempo={TEMPO},highpass=f=70,acompressor=threshold=-20dB:ratio=2.5:attack=8:release=120,loudnorm=I=-16:TP=-1.5:LRA=7','-ar',str(SR),'-ac','2','voz_proc.wav'],check=True)
 voz=load('voz_proc.wav')
 vend=LEAD+len(voz)/SR
-OUT_START=round(vend+0.55,3); OUT_LEN=3.87; TOTAL=OUT_START+OUT_LEN
+OUT_START=round(vend+0.45,3); OUT_LEN=3.87; TOTAL=OUT_START+OUT_LEN
 N=int(TOTAL*SR)
 V=np.zeros((N,2),np.float32); a=int(LEAD*SR); V[a:a+len(voz)]=voz[:N-a]
 # música: tema original, a partir de 0
@@ -26,7 +26,7 @@ g=10**(g_db/20)
 # corte seco da revelação
 w=json.load(open('words.json')); 
 def vt(x): return x/TEMPO+LEAD
-REV0=vt(17.017)-0.18; REV1=vt(18.16)-0.02
+REV0=vt(24.97); REV1=vt(27.12)
 cut=np.ones(N); i0,i1=int(REV0*SR),int(REV1*SR); f=int(0.03*SR)
 cut[i0:i1]=0; cut[i0-f:i0]=np.linspace(1,0,f); cut[i1:i1+f]=np.linspace(0,1,f)
 # fecho: sobe no outro e fade final
@@ -50,9 +50,9 @@ S=np.zeros_like(V)
 def put(x,at,gain):
     i=int(at*SR); n=min(len(x),N-i); S[i:i+n]+=x[:n,None]*gain
 put(thump(),0.0,0.8)
-DIVE=vt(5.76)-0.55
+DIVE=vt(6.5)
 put(modem(),DIVE,0.55)
-EXIT=vt(30.587)-0.45
+EXIT=vt(30.74)-0.4
 put(thump(0.4,70),EXIT+0.25,0.35)
 mix=V+M+S
 peak=np.abs(mix).max(); 
