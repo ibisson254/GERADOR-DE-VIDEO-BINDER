@@ -1,13 +1,12 @@
-Qual carta faz você levantar da mesa? Responda só com o nome dela. As melhores respostas vão para o próximo episódio.
+Se alguém baixa um Tabernacle na sua mesa casual: você paga o pedágio das criaturas ou concede a partida?
 
-Como a Stasis tranca a mesa:
-1. Ninguém desvira nada no começo do turno, nem terrenos nem criaturas, inclusive quem a jogou.
-2. Na manutenção dele, o dono paga uma mana azul ou sacrifica a Stasis.
-3. Terreno novo entra desvirado, por isso ele costuma baixar uma Ilha por turno para pagar.
-4. Quando ele para de pagar, a Stasis sai e a mesa volta a desvirar.
+A) Pago o pedágio até a última gota de mana
+B) Concedo na hora e vou pegar um café
+C) Espero comprar minha remoção de terreno
 
-Texto atual da carta (Oracle): "Players skip their untap steps. At the beginning of your upkeep, sacrifice this enchantment unless you pay {U}."
+O Plantão do Banimento nº 008:
+- Carta: The Tabernacle at Pendrell Vale (Legends, 1994, nº 307)
+- O pesadelo: 1 mana por criatura no início da sua manutenção, ou o bicho é destruído
+- Bastidor: Carta reservada da Wizards, cotada em mais de R$ 20.000 (US$ 3.600+ no Scryfall)
 
-Salt Score mede o quanto uma carta irrita a mesa; não é lista de banimento. No mesmo ranking, o Armageddon subiu do 7º para o 2º lugar e o Tabernacle ficou em 4º.
-
-Reparou na TV? O putômetro usa o Salt Score da Stasis: 3,05 numa escala de 0 a 4, ou seja, 76%. E na mesa de quatro, são 4 de 4 jogadores putos, inclusive quem jogou.
+Pausou o vídeo? Repare no marcador do Putômetro e no Plantão da TV SAL atrás da carta!

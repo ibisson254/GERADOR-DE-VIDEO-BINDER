@@ -16,5 +16,5 @@ with sync_playwright() as p:
     b.close()
 subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate',str(FPS),'-i',str(frames/'%05d.jpg'),'-i',str(root/'trilha_final.wav'),
   '-c:v','libx264','-preset','veryfast','-crf','19','-pix_fmt','yuv420p','-r',str(FPS),'-c:a','aac','-b:a','192k','-shortest','-movflags','+faststart',str(out)],check=True)
-subprocess.run(['ffmpeg','-y','-loglevel','error','-i',str(frames/f'{int(4.5*FPS):05d}.jpg'),'-q:v','2',str(out.with_name(out.stem + '_capa.jpg'))],check=True)
+subprocess.run(['ffmpeg','-y','-loglevel','error','-i',str(frames/f'{int(2.0*FPS):05d}.jpg'),'-q:v','2',str(out.with_name(out.stem + '_capa.jpg'))],check=True)
 print('ok', out)

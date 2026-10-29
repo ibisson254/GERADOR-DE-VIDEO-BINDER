@@ -9,6 +9,10 @@ output/
 prev/
 prev2/
 
+frames/
+_audio_tmp/
+prev_*.png
+
 # Arquivos de mídia gerados durante render
 *.mp4
 *.mov

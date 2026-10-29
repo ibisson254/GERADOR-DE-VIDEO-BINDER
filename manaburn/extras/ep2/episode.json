@@ -1,0 +1,18 @@
+{
+ "B": ["Saiu a lista das cartas mais odiadas do Commander. Deu *Stasis*. De novo!",
+       "Ninguém desvira. Nem terreno, nem criatura. *Ninguém!*",
+       "Inclusive pra quem jogou!",
+       "Sem desvirar? Com que mana?",
+       "Prende a mesa inteira e paga o aluguel da cela com *Ilha*.",
+       "Então ele decide quando a greve acaba?!",
+       "Qual carta faz você *levantar da mesa*?"],
+ "M": ["Carta de 1993.",
+       "*Greve geral* na mesa.",
+       "Lê a carta… ele *paga uma azul* todo turno pra manter.",
+       "Baixa uma Ilha nova. Terreno novo *entra desvirado*.",
+       "E quando cansar, é só *não pagar*.",
+       "Greve com patrão.",
+       "Comenta aí."],
+ "gap": [0, 0.08, 0.06, 0.08, -0.10, 0.10, 0.06, 0.10, 0.06, 0.10, -0.08, 0.10, 0.10, 0.38],
+ "ins": [[7, 0.12]]
+}

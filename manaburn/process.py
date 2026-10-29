@@ -93,7 +93,7 @@ music_start = MUSIC_BREAK - last['start']
 T_SLAM = MUSIC_SLAM - music_start
 assert last['start'] + last['dur'] < T_SLAM - 0.05, 'o "Comenta aí" passou da pancada'
 T_END = round(T_SLAM + 2.0, 2)
-open('data.js', 'w').write('const DATA=' + json.dumps(dict(lines=lines, T_SLAM=round(T_SLAM, 3), T_END=T_END), ensure_ascii=False) + ';')
+open('data.js', 'w', encoding='utf-8').write('const DATA=' + json.dumps(dict(lines=lines, T_SLAM=round(T_SLAM, 3), T_END=T_END), ensure_ascii=False) + ';')
 
 # ---------- mixagem ----------
 n = int(T_END * SR)
