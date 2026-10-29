@@ -11,6 +11,7 @@ Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao ris
 - [ ] Fontes necessárias acessíveis; se não, plano de bloqueio (constituição §11).
 - [ ] Recursos do kit inspecionados e na versão atual.
 - [ ] Estratégia proporcional (constituição §3, Etapa 2).
+- [ ] Especial ou homenagem: constituição §14 (duração pela história, tom de celebração e legado, humor subtil quando couber, rigor intacto).
 
 ## B. Antes de exportar
 
