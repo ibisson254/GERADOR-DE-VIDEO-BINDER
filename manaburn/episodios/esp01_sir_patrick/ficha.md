@@ -1,5 +1,7 @@
 # Ficha · Mana & Burn · Especial · Antes da carta chegar: obrigado, Sir Patrick
 
+> **Estado (29/10/2026, 23:04): versão 1, substituída pela v2 em `../esp02_picard_v2/`. Não publicar.** Guardada para histórico e comparação.
+
 ## Classificação
 - Série: Mana & Burn · especial de homenagem (tarja "HOMENAGEM")
 - Classe: notícia + tendência cultural (morte de Sir Patrick Stewart a 28/10/2026, coincidente com o lançamento de Magic: The Gathering | Star Trek a 13/11/2026)

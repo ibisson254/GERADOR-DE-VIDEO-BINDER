@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 29/10/2026 · Especial Capitão Picard refeito (v2) pela secção 14
+
+**O quê:** nova versão do especial em `manaburn/episodios/esp02_picard_v2/` (celebração, conversa de Mana e Burn, 69,9 s). A v1 (`esp01_sir_patrick/`, commit caf6e97) fica guardada e marcada como não publicável.
+**Porquê:** ordem do Ibisson de 29/10/2026 (23:04) para refazer o especial segundo a §14.
+**Impacto:** mantêm-se as exceções de entrega do brief original (sem fecho do scanner, sem CTA do app, sem "Diga o segundo"), porque a ordem nova não as revoga e o episódio continua ligado a uma morte. A duração deixa de ser exceção (§14).
+
 ## 29/10/2026 · Especiais e homenagens (constituição v1.1, secção 14)
 
 **O quê:** nova secção 14 na constituição e um item no checklist (A). Especiais, homenagens e acontecimentos extraordinários podem existir em qualquer série, sem limite rígido de duração; homenagens priorizam celebração, admiração, legado, inspiração, personalidade e reconhecimento, com humor subtil quando adequado; velocidade editorial nunca à custa de rigor, identidade da marca ou qualidade narrativa.
