@@ -34,3 +34,6 @@ ehthumbs.db
 
 # Exceção: o fecho de marca obrigatório é versionado (não é render de episódio)
 !comum/outro/*.mp4
+
+# Áudio de trabalho dos episódios do Conde (voz bruta e mistura)
+conde/ep*/audio/*.mp3

@@ -1,0 +1,32 @@
+Conde de Manaforte · Ep. 003 · Voldaren Pariah // Abolisher of Bloodlines · fontes (consulta 29/10/2026)
+
+CARTA (texto, flavor, imagens, rodapé)
+https://api.scryfall.com/cards/sld/1441
+https://scryfall.com/card/sld/1441/voldaren-pariah-abolisher-of-bloodlines
+Imagens usadas: png e art_crop, frente e verso (cards.scryfall.io, id c08e90df-9268-4cfb-af03-25c249e3d129).
+
+DROP OFICIAL
+https://secretlair.wizards.com/eu/product/1253746/artist-series-veronique-meignaud  ("returns to Magic"; "Shipping begins January 19th", sem ano)
+https://secretlair.wizards.com/us/product/1253730/artist-series-vronique-meignaud    ("returns to Magic"; sem data de envio visível)
+https://magic.wizards.com/en/news/announcements/secret-lair-corn-maze-superdrop     (4 cartas do drop; venda a 12/10/2026)
+Não acessíveis nesta sessão: secretlair.wizards.com/us/product/1253730/artist-series-veronique-meignaud e /uk/it/product/1253762/… (fora da lista de rede). A data de envio nos EUA (15/12) do briefing ficou por confirmar.
+
+ANÚNCIO / CONTEXTO (secundárias)
+https://edhrec.com/articles/secret-lair-corn-maze-superdrop-officially-announced/  (lista as 4 cartas; sem datas de envio)
+https://lordsofgaming.net/2026/10/magic-the-gathering-reveals-secret-lair-corn-maze-superdrop/  (não consultada)
+https://draftsim.com/mtg-corn-maze-secret-lair-cards/  (não usada: nenhuma opinião de terceiros entrou no episódio)
+
+ARTISTA
+https://api.scryfall.com/cards/search?q=a%3A%22V%C3%A9ronique+Meignaud%22&unique=prints  (85 impressões; ZEN 2009 terrenos de arte completa 232/236/240/244/248; EXP 16–20, 2015)
+
+ORIGINAL
+https://api.scryfall.com/cards/emn/111  (Eldritch Moon, 22/07/2016, arte de James Ryman)
+
+PRODUÇÃO
+Voz: ElevenLabs, voz "Conde de Manaforte" (bbnQVGWT7UMdmoK4URLr), eleven_v4, 1 geração. Flow "Conde Ep003 · Voldaren Pariah" (z6jfKLeI5YqfsSxQKNYo).
+Tempos por palavra: eleven_scribe_v1 (alinhamento do texto).
+Música: conde/musica/tema.mp3 ("Verdict in Varnish and Vellum", ElevenLabs Music).
+Fecho: reconstruído com comum/outro/scan/000–044.jpg + manaburn/logo/logo_mark.png (outro_binder_916.mp4 ausente do repositório e do Drive).
+
+DIREITOS
+https://company.wizards.com/fancontentpolicy

@@ -121,10 +121,11 @@ Regras de conteúdo:
 
 - **Ep. 001 · Keldon Warlord** (Alpha, 1993, nº 160, Kev Brockschmidt) — 44,2 s. A perninha abaixo da espada; "obra notável… da cintura para cima".
 - **Ep. 002 · Olivia Voldaren** (Innistrad, 2011, nº 215, Eric Deschamps) — 47,5 s. O "joelho órfão"; bastidor do arquivo errado segundo o Draftsim; "salvem sempre duas vezes".
+- **Ep. 003 · Voldaren Pariah // Abolisher of Bloodlines** (Secret Lair Drop, 2026, nº 1441, Véronique Meignaud) — 47,3 s. Carta de dupla face com flip; o rosto "inacabado" do verso é a transformação; "está no meio da refeição"; "acusação retirada". Especial Halloween (31/10).
 
 ## 10. Próximos réus (candidatos)
 
-Hyalopterous Lemure; Joven (Homelands, 1995, Douglas Shuler, só análise visual); Celestial Prism, Reverse Polarity, Gabriel Angelfire, Mongrel Pack, Sorrow's Path, Urza's Mine, Chains of Mephistopheles. **Não usar:** Stasis (já foi Mana & Burn) e Moor Fiend.
+Hyalopterous Lemure; Joven (Homelands, 1995, Douglas Shuler, só análise visual); Celestial Prism, Reverse Polarity, Gabriel Angelfire, Mongrel Pack, Sorrow's Path, Urza's Mine, Chains of Mephistopheles. **Não usar:** Stasis (já foi Mana & Burn), Moor Fiend, Olivia Voldaren (Ep. 002) e Voldaren Pariah (Ep. 003).
 
 ## 11. Métricas
 
