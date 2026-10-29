@@ -6,35 +6,27 @@ Kit de produção automatizada de Reels 9:16 (1080×1920, 30 fps) para o Instagr
 
 ```
 /
+├── CLAUDE.md         # Entrada obrigatória dos agentes (AGENTS.md aponta para ele)
 ├── README.md
-├── .gitignore
-├── manaburn/         # Gerador Mana & Burn (HTML/Playwright + ffmpeg)
-│   └── musica/       # Trilhas sonoras originais
-├── conde/            # Montador O Tribunal Estético (Pillow + ffmpeg)
-│   ├── CONTEXTO.md   # Diretrizes, tom e regras de produção
-│   ├── assets/       # Retrato oficial e expressões do Conde
-│   ├── legendas/     # Legendas dos episódios
-│   └── musica/       # Tema oficial (tema.mp3)
-├── oraculo/          # Oráculo de Tubo — personagem TUBO (análise competitiva)
-│   ├── CONTEXTO.md   # Personagem, ambientação, tipos de episódio e regras
-│   ├── assets/       # Imagem-mestra do TUBO
-│   ├── musica/       # Tema oficial (tubo_tema.mp3) e original
-│   └── legendas/     # Legendas dos episódios
+├── manaburn/         # Mana & Burn · PERFIL.md + gerador (HTML/Playwright + ffmpeg)
+├── conde/            # Conde de Manaforte · O Tribunal Estético · PERFIL.md + CONTEXTO.md
+├── oraculo/          # Meta em Curto (TUBO, ex-Oráculo de Tubo) · PERFIL.md + CONTEXTO.md
 └── comum/
-    └── historico.md  # Histórico de desempenho e métricas
+    ├── originals/    # Constituição BINDER Originals, checklist, modelos, registo de decisões
+    ├── outro/        # Fecho obrigatório com o scanner real
+    ├── historico.md  # Desempenho e previsões
+    └── easter_eggs.md
 ```
 
 ## Como Usar (Claude / Agentes)
 
-Clone o repositório com profundidade 1 e acesse a pasta da série desejada:
+Ler primeiro o [`CLAUDE.md`](CLAUDE.md). Depois, clonar com profundidade 1 e usar a pasta da série:
 
 ```bash
 git clone --depth 1 https://github.com/ibisson254/GERADOR-DE-VIDEO-BINDER.git
-cd GERADOR-DE-VIDEO-BINDER/conde     # Para O Tribunal Estético
-# ou
-cd GERADOR-DE-VIDEO-BINDER/manaburn  # Para Mana & Burn
-# ou
-cd GERADOR-DE-VIDEO-BINDER/oraculo   # Para Oráculo de Tubo (TUBO)
+cd GERADOR-DE-VIDEO-BINDER/conde     # Conde de Manaforte
+cd GERADOR-DE-VIDEO-BINDER/manaburn  # Mana & Burn
+cd GERADOR-DE-VIDEO-BINDER/oraculo   # Meta em Curto (TUBO)
 ```
 
 ## Dependências

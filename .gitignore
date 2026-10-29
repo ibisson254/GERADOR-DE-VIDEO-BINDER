@@ -31,3 +31,6 @@ env/
 Thumbs.db
 ehthumbs.db
 [Dd]esktop.ini
+
+# Exceção: o fecho de marca obrigatório é versionado (não é render de episódio)
+!comum/outro/*.mp4
