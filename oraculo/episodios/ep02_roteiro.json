@@ -1,0 +1,31 @@
+{
+ "episodio": "Meta em Curto EP02 · Spotlight Fracture (Hartford) · Leitura da Final (Modo B)",
+ "nota": "Cada bloco: texto canónico (legenda no ecrã) e texto falado (grafia fonética enviada ao ElevenLabs). Mesmo número de palavras nos dois, para alinhar os tempos.",
+ "blocos": [
+  {
+   "id": "gancho",
+   "texto": "Na final de Hartford, ele começou atrás na mesa. Nos dois jogos. E ganhou os dois.",
+   "fala": "Na final de Rártford, ele começou atrás na mesa. Nos dois jogos. E ganhou os dois."
+  },
+  {
+   "id": "fichas",
+   "texto": "Von Stange, Jund Sacrifice. Contra Ott, Jeskai Artifacts, seed um. Ott tinha a mesa: aceleração, United Battlefront, Constructs enormes.",
+   "fala": "Fon Stêinj, Jund Sácrifais. Contra Ót, Jéscai Ártifécts, sid um. Ót tinha a mesa: aceleração, Iunáited Bátolfrant, Cônstructs enormes."
+  },
+  {
+   "id": "motor",
+   "texto": "O von Stange não disputava a mesa. Contava dano. Biotech Specialist: artefato sacrificado, dois de dano. Sackville-Bagginses: ficha sacrificada, um de vida. Um Tesouro é as duas coisas: três. E o Lively Dirge busca uma peça e traz até duas de volta.",
+   "fala": "O fon Stêinj não disputava a mesa. Contava dano. Báiotec Spéchalist: artefato sacrificado, dois de dano. Séquivil-Béguinses: ficha sacrificada, um de vida. Um Tesouro é as duas coisas: três. E o Láivli Dêrdj busca uma peça e traz até duas de volta."
+  },
+  {
+   "id": "erro",
+   "texto": "O meu modelo contou a mesa. Ele contou o dano. Mesa não é vida.",
+   "fala": "O meu modelo contou a mesa. Ele contou o dano. Mesa não é vida."
+  },
+  {
+   "id": "pergunta",
+   "texto": "O que decidiu a final? A: a mesa do Ott chegou tarde. B: o Dirge achou as peças. C: a pilotagem. Probabilidade calculada. Humanos, imprevisíveis.",
+   "fala": "O que decidiu a final? Á: a mesa do Ót chegou tarde. Bê: o Dêrdj achou as peças. Cê: a pilotagem. Probabilidade calculada. Humanos, imprevisíveis."
+  }
+ ]
+}

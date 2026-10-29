@@ -1,0 +1,25 @@
+LEGENDA (Instagram)
+Na final do Magic Spotlight: Fracture, Connor Ott (Jeskai Artifacts) saiu na frente na mesa nos dois jogos. Alex von Stange (Jund Sacrifice) ganhou os dois.
+O deck dele não disputava a mesa: contava dano. Com Biotech Specialist e The Sackville-Bagginses em campo, cada Tesouro sacrificado tira 3 de vida do oponente, e o Lively Dirge busca as peças. A lista completa está no comentário fixado.
+Mesa não é vida. É a leitura do TUBO, não regra do jogo.
+Meta em Curto: análise de torneio com dado e fonte. Fontes: Star City Games (relato da final e listas, 25/10/2026) e Scryfall (texto das cartas).
+Na tela: United Battlefront (Tarkir: Dragonstorm, 2025), nº 32, arte de Darren Tan; Biotech Specialist (Edge of Eternities, 2025), nº 214, arte de Alexandre Honoré; The Sackville-Bagginses (The Hobbit, 2026), nº 83, arte de Denman Rooke; Treasure (ficha, The Hobbit, 2026), nº 12, arte de Leonardo Santanna; Lively Dirge (Outlaws of Thunder Junction, 2024), nº 93, arte de Warren Mahy. © Wizards of the Coast. Conteúdo de fã não oficial.
+#MTG #MagicTheGathering #MTGStandard #JundSacrifice #MTGBrasil
+Escaneie suas cartas e organize seus decks: baixe o BINDER Vision.
+
+COMENTÁRIO FIXADO
+O que decidiu a final? Responda A, B ou C.
+A: a mesa do Ott chegou tarde · B: o Dirge achou as peças · C: a pilotagem do von Stange.
+
+Lista do campeão, Alex von Stange (Jund Sacrifice, 1.º):
+Criaturas (22): 4 Biotech Specialist, 4 Gene Pollinator, 4 Greedy Freebooter, 1 Llanowar Elves, 1 Smaug the Magnificent, 4 The Sackville-Bagginses, 4 Umbral Collar Zealot
+Encantamentos (7): 4 Obsessive Pursuit, 3 The Misty Mountains Cold
+Feitiços (5): 4 Lively Dirge, 1 Stir Up Trouble
+Instantâneas (4): 1 Requiting Hex, 3 Torch the Tower
+Terrenos (22): 1 Blazemire Verge, 4 Blood Crypt, 4 Blooming Marsh, 1 Forest, 1 Mountain, 2 Overgrown Tomb, 4 Starting Town, 3 Stomping Ground, 1 Swamp, 1 Thornspire Verge
+Reserva (15): 3 Duress, 2 Fire Magic, 1 Guerrilla Gorilla, 1 Heritage Reclamation, 1 Leatherhead, Swamp Stalker, 1 Maelstrom Pulse, 1 Professor Dellian Fel, 1 Shoot the Sheriff, 3 Strategic Betrayal, 1 Vengeful Tracker
+
+Detalhe técnico: o Lively Dirge tem Spree. Com +{1}, põe 1 carta do deck no cemitério; com +{2}, devolve até 2 criaturas com valor de mana total 4 ou menos. Biotech Specialist e The Sackville-Bagginses custam 2 cada.
+Não analisamos o VOD: o vídeo do Dia 2 tem mais de 10 h e não tem legendas, por isso não reconstruímos nenhuma jogada.
+Listas (incluindo a do Ott) e relato da final: starcitygames.com, artigo "Von Stange, Jund Sacrifice, Wins Magic Spotlight: Fracture".
+Tem um detalhe escondido. Diga o segundo.

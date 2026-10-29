@@ -1,0 +1,25 @@
+{
+ "fonte": "https://articles.starcitygames.com/magic-the-gathering/von-stange-jund-sacrifice-wins-magic-spotlight-fracture/ (acedido 29/10/2026)",
+ "nota": "Melee.gg indisponível nesta sessão (bloqueado pelo proxy e por robots): listas conferidas só na SCG.",
+ "von_stange": {
+  "jogador": "Alexander von Stange", "deck": "Jund Sacrifice", "posicao": "1.º",
+  "principal": {
+   "CRIATURAS (22)": [[4,"Biotech Specialist"],[4,"Gene Pollinator"],[4,"Greedy Freebooter"],[1,"Llanowar Elves"],[1,"Smaug the Magnificent"],[4,"The Sackville-Bagginses"],[4,"Umbral Collar Zealot"]],
+   "ENCANTAMENTOS (7)": [[4,"Obsessive Pursuit"],[3,"The Misty Mountains Cold"]],
+   "FEITIÇOS (5)": [[4,"Lively Dirge"],[1,"Stir Up Trouble"]],
+   "MÁGICAS INSTANTÂNEAS (4)": [[1,"Requiting Hex"],[3,"Torch the Tower"]],
+   "TERRENOS (22)": [[1,"Blazemire Verge"],[4,"Blood Crypt"],[4,"Blooming Marsh"],[1,"Forest"],[1,"Mountain"],[2,"Overgrown Tomb"],[4,"Starting Town"],[3,"Stomping Ground"],[1,"Swamp"],[1,"Thornspire Verge"]]
+  },
+  "reserva": [[3,"Duress"],[2,"Fire Magic"],[1,"Guerrilla Gorilla"],[1,"Heritage Reclamation"],[1,"Leatherhead, Swamp Stalker"],[1,"Maelstrom Pulse"],[1,"Professor Dellian Fel"],[1,"Shoot the Sheriff"],[3,"Strategic Betrayal"],[1,"Vengeful Tracker"]],
+  "chave": ["Biotech Specialist","The Sackville-Bagginses","Lively Dirge"]
+ },
+ "ott": {
+  "jogador": "Connor Ott", "deck": "Jeskai Artifacts", "posicao": "2.º",
+  "principal": {
+   "ARTEFATOS (32)": [[1,"Braided Net // Braided Quipu"],[4,"Cryogen Relic"],[4,"Perilous Snare"],[3,"Pinnacle Starcage"],[3,"Repurposing Bay"],[4,"Simulacrum Synthesizer"],[2,"Solitary Cell"],[1,"Spring-Loaded Sawblades // Bladewheel Chariot"],[2,"The Enigma Jewel // Locus of Enlightenment"],[1,"The Fire Crystal"],[4,"The Mind Stone"],[1,"Torpor Orb"],[1,"Warmaker Gunship"],[1,"White Auracite"]],
+   "FEITIÇOS (4)": [[4,"United Battlefront"]],
+   "TERRENOS (24)": [[4,"Castle Doom"],[1,"Deserted Beach"],[3,"Floodfarm Verge"],[1,"Fomori Vault"],[3,"Hallowed Fountain"],[1,"Island"],[2,"Meticulous Archive"],[1,"Plains"],[2,"Sacred Foundry"],[3,"Starting Town"],[2,"Steam Vents"],[1,"Sundown Pass"]]
+  },
+  "reserva": [[1,"Braided Net // Braided Quipu"],[1,"Chandra, Chill of Compliance"],[1,"Day of Judgment"],[2,"Erode"],[2,"Negate"],[1,"Rest in Peace"],[2,"Seam Rip"],[1,"Tony Stark // The Invincible Iron Man"],[2,"Torpor Orb"],[2,"Voice of Victory"]]
+ }
+}

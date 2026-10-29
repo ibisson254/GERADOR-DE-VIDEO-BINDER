@@ -1,4 +1,4 @@
-# META EM CURTO (TUBO, ex-Oráculo de Tubo) — CONTEXTO (v5, 29/10/2026)
+# META EM CURTO (TUBO, ex-Oráculo de Tubo) — CONTEXTO (v6, 29/10/2026)
 
 Fonte de verdade da série. Ler inteiro antes de qualquer produção.
 
@@ -72,6 +72,16 @@ Para uma partida de torneio.
 Para dados de metagame (MTGGoldfish, MTGTop8, Melee).
 - Percentagens em barras de terminal.
 - Fonte e data sempre visíveis no ecrã.
+
+### 6.4 Evidência visual (regra de todos os tipos, desde o EP02)
+Tudo o que o TUBO cita aparece no ecrã.
+- **Deck citado** → «impressão» da lista principal completa no terminal: agrupada por tipo, quantidade + nome, 2 colunas, letra com ≥ 28 px de corpo, parada ≥ 2,5 s, cartas-chave a verde #10B981 e o resto em fósforo esmaecido. A mesma lista vai em texto no comentário fixado e no carrossel derivado, sempre com a linha de fonte.
+- **Carta citada** → imagem oficial do Scryfall (impressão usada no torneio quando se sabe), entrada «scan» linha a linha, ≥ 60 % da largura quando é o assunto, arte nunca alterada nem recortada. Crédito no ecrã: carta · coleção nº · artista + «Cartas © Wizards of the Coast · imagens via Scryfall». Só entram cartas efetivamente citadas.
+- **Jogador citado** → «FICHA DE JOGADOR» no terminal: nome, deck, seed, campanha, títulos verificados; avatar = silhueta pixelizada em fósforo, nunca um rosto.
+  - Não se descarregam nem usam fotos de jogadores (cobertura SCG/WotC, redes sociais, pesquisa de imagens): têm direitos de terceiros e direito de imagem da pessoa.
+  - Foto real só se o Ibisson a fornecer com autorização registada em `oraculo/autorizacoes/`.
+  - O @ oficial do jogador vai no comentário fixado só se confirmado num perfil verificável; senão, omite-se.
+- Imagens de transmissão continuam proibidas (6.2).
 
 ## 7. Estrutura do Reel (~40 s)
 
@@ -147,10 +157,18 @@ Usados no EP01 e mantidos como identidade da série:
 
 Ficha completa e controlo de qualidade: `episodios/ep01_ac13_ficha.md`.
 
+## 11.1 Estreado no EP02 (29/10/2026)
+
+- **Erro de sistema**: olhos duplicados (separação verde/vermelho), fatias deslocadas no ecrã, tremor, LED vermelho a piscar e caixa «MODELO TUBO» com o erro a vermelho. Usado quando o modelo do TUBO falha (ex.: «vencedor provável = mesa maior → Ott»).
+- **Fichas de jogador** e **impressão da lista** (6.4).
+- **Leitura da Final** (Modo B): quando não há VOD analisável, explica a final só com o relato do organizador + texto Oracle, sem reconstruir jogadas. Fica entre o 6.2 e o 6.3.
+- Linha de fontes com corpo 34 (≥ 24 px de altura de letra), acima das legendas; mix a −14,0 LUFS.
+
+Ficha: `episodios/ep02_hartford_ficha.md`.
+
 ## 12. Pendente
 
-1. Expressão "Erro de sistema" (glitch, LED vermelho) ainda não usada em episódio. Já existem: analítico, confiante, desconfiado, LED pela voz, terminal 9:16 e mergulho.
-2. Primeiro episódio "A Jogada que Não Viste" com jogada real verificada no VOD (o EP01 passou a Relatório do Meta porque o VOD da final, com 8h23, não pôde ser analisado).
-3. Linha de fontes do terminal com ≥ 24 px de altura (no EP01 ficou com ≈16 px).
-4. Mix final a −14 LUFS (o EP01 saiu a −15,2).
-5. Contador `ERROS HUMANOS` ainda não estreado.
+1. Primeiro episódio «A Jogada que Não Viste» com jogada real verificada no VOD. EP01 e EP02 caíram por VODs de 8–11 h sem legendas. Pedir à cobertura (ou ao Ibisson) o minuto da final, ou escolher eventos com VOD da final em vídeo próprio.
+2. Contador `ERROS HUMANOS` ainda não estreado.
+3. Fecho `comum/outro/outro_binder_916.mp4` continua fora do repositório (fecho reconstruído com os quadros do scanner).
+4. Melee.gg inacessível nas sessões de produção: resultados jogo a jogo e listas só pela SCG/magic.gg.
