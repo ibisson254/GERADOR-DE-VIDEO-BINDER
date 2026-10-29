@@ -1,4 +1,4 @@
-# ORÁCULO DE TUBO — CONTEXTO (v4, 27/10/2026)
+# META EM CURTO (TUBO, ex-Oráculo de Tubo) — CONTEXTO (v5, 29/10/2026)
 
 Fonte de verdade da série. Ler inteiro antes de qualquer produção.
 
@@ -32,7 +32,7 @@ Imagem-mestra: `assets/tubo_mestra_916.png` (1080×1920). Feita por edição da 
 A voz é o LED ao lado de BINDER: o brilho segue a amplitude do áudio (ElevenLabs), com halo ~40 px na placa.
 - Silêncio: verde muito escuro.
 - Erro de sistema: LED vermelho, 2–3 piscadelas secas.
-- Voz: masculina, médio-grave, articulada, leve nasalidade (a escolher no ElevenLabs).
+- Voz: ElevenLabs "Antonio de Jesus" (voice_id `MK5tXPmT83J5SUlpUo4K`), modelo eleven_v4, acelerada com atempo 1,10 (escolhida e usada no EP01).
 
 ## 4. Expressões (camadas na montagem, sem gerar imagens novas)
 
@@ -96,7 +96,7 @@ Tema oficial: `musica/tubo_tema.mp3` (40,6 s). Composição própria do Ibisson 
   - ~12,6 s: banda entra cheia → mergulho no tubo / análise.
   - **29,0–30,2 s: corte seco (silêncio) → revelação.** Assinatura sonora da série: o silêncio anuncia a jogada.
   - 30,2 s: banda volta → pergunta e frase de fecho; termina em 40,6 s e passa ao outro.
-- Montagem: baixar a trilha ~12 dB enquanto o TUBO fala (ducking) e subir nas pausas. Alinhar a revelação ao corte dos 29 s.
+- Montagem: baixar a trilha ~12 dB enquanto o TUBO fala (ducking) e subir nas pausas. Alinhar o corte seco à revelação: o silêncio segue a revelação, não um segundo fixo (no EP01 ficou entre 23,0 e 24,9 s).
 
 ## 7.2 Identidade extra (aprovada 27/10/2026)
 
@@ -136,10 +136,21 @@ Tema oficial: `musica/tubo_tema.mp3` (40,6 s). Composição própria do Ibisson 
 - Conferir enquadramento 9:16 sem corte lateral antes de entregar.
 - Commit: roteiro, legenda e histórico. Nunca vídeos renderizados.
 
-## 11. Pendente
+## 11. Elementos fixados no EP01 (29/10/2026)
 
-1. Camadas animadas: olhos (4 expressões), chuva de código, LED, recorte do monitor no pivô.
-2. Escolher a voz no ElevenLabs.
-3. Teste de 5 s com LED sincronizado à primeira narração.
-4. Terminal "dentro do tubo" (template HTML 9:16) e transição de mergulho.
-5. Piloto: "A Jogada que Não Viste", com jogada real verificada.
+Usados no EP01 e mantidos como identidade da série:
+- **Medidor "GRAU DE CERTEZA"** (5 segmentos) fora do tubo, sempre que a amostra é pequena ou a conclusão é incerta. É a forma visual de separar dado de opinião.
+- **Pergunta com 3 opções em chips** (ex.: matchup · chaveamento · pilotagem), respondida com uma letra no comentário fixado.
+- **Cartão de assinatura** antes do fecho: "META EM CURTO · com TUBO · BINDER Originals".
+- **Rodapé do terminal:** `● BINDER` à esquerda e `META EM CURTO · EPnn` à direita; linha de fontes por cima.
+- **Fecho:** quadros reais de `comum/outro/scan/` + logótipo, entrada com transição de 0,4 s.
+
+Ficha completa e controlo de qualidade: `episodios/ep01_ac13_ficha.md`.
+
+## 12. Pendente
+
+1. Expressão "Erro de sistema" (glitch, LED vermelho) ainda não usada em episódio. Já existem: analítico, confiante, desconfiado, LED pela voz, terminal 9:16 e mergulho.
+2. Primeiro episódio "A Jogada que Não Viste" com jogada real verificada no VOD (o EP01 passou a Relatório do Meta porque o VOD da final, com 8h23, não pôde ser analisado).
+3. Linha de fontes do terminal com ≥ 24 px de altura (no EP01 ficou com ≈16 px).
+4. Mix final a −14 LUFS (o EP01 saiu a −15,2).
+5. Contador `ERROS HUMANOS` ainda não estreado.

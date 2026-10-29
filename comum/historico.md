@@ -23,4 +23,5 @@ Impulsionamento: R$ 11 em dois vídeos, ver marcação abaixo (confirmar quais).
 - Views não são instalações. Próximo print: Visão geral, com visitas ao perfil e toques no link.
 
 ## Publicações em preparação
-- 28/10/2026 · Meta em Curto EP01 v2 "Mais jogado: 1 no Top 8. 3º mais jogado: 3." (AC13, Relatório do Meta: conversão por arquétipo). Voz TUBO: ElevenLabs "Antonio de Jesus". Previsões registadas: nenhuma.
+- 28/10/2026 · Meta em Curto EP01 v2 "Mais jogado: 1 no Top 8. 3º mais jogado: 3." (AC13, Relatório do Meta: conversão por arquétipo). Voz TUBO: ElevenLabs "Antonio de Jesus". Previsões registadas: nenhuma. Render final conferido a 29/10 (47,3 s, sem corte lateral, −15,2 LUFS, sem defeitos bloqueadores): `oraculo/episodios/ep01_ac13_ficha.md`. Hipótese em teste: pergunta com 3 opções (M/C/P) contra pergunta aberta. Métricas: aguardam o print do Insights.
+- 29/10/2026 · Mana & Burn Ep. 08 The Tabernacle at Pendrell Vale (Legends, 1994): kit no repositório (commit 814ed8e).

@@ -30,7 +30,7 @@ Gancho: frase seca com o dado ou a decisão surpreendente (fora do tubo, desconf
 
 ## Formato
 
-35–45 s. Áudio alvo da trilha -16 LUFS (`CONTEXTO.md` §7.1); mix final -14 LUFS. Revelação alinhada ao silêncio dos 29 s.
+35–45 s **sem contar o fecho** do scanner (o EP01 teve 43,4 s + 3,9 s de fecho). Áudio alvo da trilha -16 LUFS (`CONTEXTO.md` §7.1); mix final -14 LUFS. Corte seco da trilha alinhado à revelação (não a um segundo fixo).
 
 ## Ponte para o BINDER
 
@@ -51,4 +51,4 @@ Guardados + partilhas (conteúdo de referência). Secundária: respostas à perg
 
 ## Lacunas conhecidas
 
-Pendentes de `CONTEXTO.md` §11 (camadas animadas, terminal 9:16, transição de mergulho). Voz: `comum/historico.md` regista "Antonio de Jesus" no EP01; `CONTEXTO.md` §3 ainda diz "a escolher" — confirmar e atualizar o `CONTEXTO.md`.
+Ver `CONTEXTO.md` §12. Episódios: EP01 (AC13, Relatório do Meta) — `episodios/ep01_ac13_ficha.md`.

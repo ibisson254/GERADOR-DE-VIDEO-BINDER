@@ -41,7 +41,7 @@ Classes de referência (lista aberta): leitura de carta, jogada de torneio, rela
 | Facto simples e bem documentado | Verificação rápida | 1 fonte primária |
 | Afirmação controversa, recente ou complexa | Investigação aprofundada | 2 fontes independentes ou fonte primária + atribuição na fala |
 | A história depende de uma sequência real (partida) | Reconstrução esquemática | VOD com minuto + texto Oracle de cada carta citada |
-| Conclusão depende de números | Análise de dados | Fonte, data e amostra visíveis no ecrã |
+| Conclusão depende de números | Análise de dados | Fonte, data e amostra visíveis no ecrã (linha de fontes com ≥ 24 px de altura) |
 | Objeto central é uma obra de arte | Análise estética | Observação separada de interpretação e de facto histórico |
 | Recursos do kit já resolvem | Produção por reutilização | Conferir que o recurso é a versão atual |
 | Não há material utilizável | Produção visual original | Nunca simular gravação, ecrã do app ou transmissão |
