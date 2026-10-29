@@ -19,7 +19,7 @@
 | Carta de Magic | anunciada (data, nome) | explicada pelo "Lê a carta": a regra é liderança (contadores na tripulação e na nave) |
 | Factos | morte, idade, data, carta | + frases do personagem, chá, 7 temporadas, 4 filmes, série Star Trek: Picard (fontes na ficha) |
 | Luz | sala à noite, a TV como única luz | fim de tarde, véu quente e feixes de janela; cenário oficial da série |
-| Música | piano lento e cordas, resolução calma | 96 BPM, cordas em colcheias, metais suaves, motivo próprio; pausa seca no banimento, crescendo no legado, acorde final no "Engage" |
+| Música | piano lento e cordas, resolução calma | "Beyond the Last Horizon" (faixa do Ibisson), trecho com o último ponto forte no "Engage"; quase silêncio no banimento, sobe no legado |
 | Montagem | planos longos, fades lentos | 7 tipos de plano, cortes por fala, zoom no texto da carta, textos de ecrã com ritmo |
 | Fecho | TV desliga, ponto verde, assinatura | "Engage": a TV encolhe e o ponto verde parte em arrancada; assinatura + "Obrigado, capitão." |
 | Duração | 54,8 s (limite do brief) | 69,9 s (escolhida pela história, constituição §14) |

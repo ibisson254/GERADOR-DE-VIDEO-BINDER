@@ -113,12 +113,28 @@ for l, s in zip(lines, segs):
     a = int(l['start'] * SR); voz[a:a + len(s)] += s[: max(0, n - a)]
 mk = dict(t_ban=lines[12]['start'] - .55, t_ban_fim=lines[13]['start'] + .2, t_swell=lines[14]['start'] - .1,
           t_calma=lines[15]['start'] - .2, t_calma_fim=lines[16]['start'] + lines[16]['dur'], t_engage=ult['start'] + .05)
-mus = musica2.trilha(T_END, mk, SR)
+import os
+MUSICA = os.environ.get('MUSICA')          # faixa enviada pelo Ibisson (ex.: musica_ext/beyond_the_last_horizon.mp3)
+if MUSICA:
+    # trecho escolhido pela estrutura da faixa: o último ponto forte (163 s) cai no "Engage"
+    OFF = float(os.environ.get('MUSICA_OFF', '0')) or (163.0 - mk['t_engage'])
+    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-ss', f'{OFF:.3f}', '-t', f'{T_END:.3f}', '-i', MUSICA, '-ac', '2', '-ar', str(SR), '-f', 's16le', '_mus.raw'], check=True)
+    mus = np.frombuffer(open('_mus.raw', 'rb').read(), '<i2').astype(np.float32).reshape(-1, 2) / 32768
+    mus = np.pad(mus, ((0, max(0, n - len(mus))), (0, 0)))[:n]
+    t_ = np.arange(n) / SR; mus *= (np.clip(t_ / .35, 0, 1) * np.clip((T_END - t_) / 1.6, 0, 1))[:, None]
+    mus = mus / (np.max(np.abs(mus)) + 1e-9) * .9
+    print(f'   música: {os.path.basename(MUSICA)} de {OFF:.1f}s a {OFF + T_END:.1f}s')
+else:
+    mus = musica2.trilha(T_END, mk, SR)
 tt = np.arange(n) / SR
 env = np.convolve(np.abs(voz), np.ones(int(.06 * SR)) / int(.06 * SR), 'same')
 act = np.clip(env / (np.percentile(env[env > 1e-4], 60) + 1e-9), 0, 1)
 CR = 100; tc = np.arange(int(T_END * CR) + 1) / CR
 alvo = -13 + 7 * (1 - np.interp(tc, tt, act)); alvo[tc < lines[0]['start']] = 0; alvo[tc >= ult['start']] = 0
+if MUSICA:   # com faixa pronta, as marcas da montagem viram automação de volume
+    alvo[(tc >= mk['t_ban']) & (tc < mk['t_ban_fim'])] -= 12            # quase silêncio no suspense do banimento
+    alvo[(tc >= mk['t_calma']) & (tc < mk['t_calma_fim'])] -= 3         # mais baixo na fala do Sir Patrick
+    alvo[(tc >= mk['t_swell']) & (tc < mk['t_swell'] + 3.5)] += 2       # sobe nas "sete temporadas"
 g = np.empty_like(alvo); g[0] = alvo[0]; aa, ar = 1 - np.exp(-1 / (CR * .04)), 1 - np.exp(-1 / (CR * .35))
 for i in range(1, len(tc)): g[i] = g[i - 1] + (aa if alvo[i] < g[i - 1] else ar) * (alvo[i] - g[i - 1])
 gm = .34 * 10 ** (np.interp(tt, tc, g) / 20)
