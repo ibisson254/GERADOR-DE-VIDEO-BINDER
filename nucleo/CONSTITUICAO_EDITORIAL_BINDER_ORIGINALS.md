@@ -1,33 +1,36 @@
 # Constituição editorial e operacional · BINDER Originals
 
-Versão 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
+Versão 1.4 · 31/10/2026 (§1 bíblias do Órbita e do Lambe-lambe no repositório, §6 Órbita sem fecho) · 1.3 · 31/10/2026 (§1 hierarquia documental, §2 catálogo, §6 formatos por frente, §10 frase do easter egg) · 1.2 · 31/10/2026 (fonte de verdade, registo, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
 
-Norma comum de **processo** para todas as séries do @binderthetrade. Não define personagens nem estética: isso vive no `CONTEXTO.md` de cada série. Não define o produto: só funções confirmadas (secção 9).
+Norma comum de **processo** para todas as frentes do @binderthetrade (séries, universo temático, formato espontâneo e especiais; ver `CATALOGO_EDITORIAL.md`). Não define personagens nem estética: isso vive na bíblia de cada frente. Não define o produto: só funções confirmadas (secção 9).
 
 Princípio: **mesma disciplina, identidades diferentes.** Nenhuma série herda a voz, o humor, a duração, a estrutura de guião ou o visual de outra.
 
 ---
 
-## 1. Hierarquia de fontes (quando duas regras chocam)
+## 1. Hierarquia documental (quando duas regras chocam)
 
-1. Instruções do projeto Binder Marketing (claude.ai) e pedido explícito do Ibisson na conversa.
-2. Esta constituição (processo, rigor, entrega, registo).
-3. `PERFIL.md` da série (adaptações operacionais da série).
-4. `CONTEXTO.md` da série (identidade, voz, visual, fórmula). **Autoridade criativa**: o perfil e a constituição nunca a reescrevem.
-5. Fichas de episódio e histórico.
+Um pedido explícito do fundador na conversa prevalece sobre tudo o que está abaixo e é registado em `DECISOES.md` quando muda uma regra.
+
+1. `AGENTS.md` (raiz): instruções operacionais para agentes. Diz como trabalhar e o que ler; não cria regras editoriais e nunca contradiz esta constituição.
+2. Esta constituição: princípios e regras do estúdio (processo, rigor, entrega, bloqueios, especiais).
+3. `CATALOGO_EDITORIAL.md`: frentes, classificação e estado.
+4. Bíblias editoriais: `CONTEXTO.md` de cada frente (identidade, voz, visual, fórmula), com o `PERFIL.md` como adaptação operacional. **Autoridade criativa**: a constituição e o perfil nunca a reescrevem.
+5. `DECISOES.md`: decisões do fundador e histórico de alterações de regra. Uma decisão nova é incorporada no documento canónico que altera; o registo guarda o porquê.
+6. Documentação técnica: `series.yaml`, `LEIA-ME.md` das séries, scripts, `comum/outro/LEIA-ME.md`.
+7. Documentação histórica: fichas de episódio, `comum/historico.md`, `INVENTARIO.md`, versões antigas.
 
 Se uma regra criativa do `CONTEXTO.md` contradiz uma regra de entrega daqui (ex.: frase final da legenda), vale a regra de entrega e regista-se a divergência em `DECISOES.md`. Lacuna de identidade: assinalar, nunca inventar.
 
-## 2. Séries e onde estão
+**Fonte de verdade.** Este repositório é a fonte de verdade técnica e documental do estúdio. As instruções do projeto claude.ai, os documentos do Google Drive e as skills apontam para ele e nunca o contradizem; se contradisserem, vale o repositório e regista-se a divergência. Exceção, até a bíblia existir no repositório: o documento da série Mana & Burn no Drive é a bíblia do Mana & Burn.
 
-| Série | Pasta | Identidade | Perfil |
-|---|---|---|---|
-| Meta em Curto (personagem TUBO; ex-Oráculo de Tubo) | `oraculo/` | `oraculo/CONTEXTO.md` | `oraculo/PERFIL.md` |
-| Mana & Burn | `manaburn/` | Doc da série no Google Drive + skill `binder-mana-burn-episodio` + `manaburn/LEIA-ME.md` | `manaburn/PERFIL.md` |
-| Conde de Manaforte · O Tribunal Estético | `conde/` | `conde/CONTEXTO.md` | `conde/PERFIL.md` |
-| Recursos partilhados | `comum/` | — | — |
+## 2. Frentes e onde estão
 
-Série nova: copiar `modelos/PERFIL_SERIE.md` para `<pasta>/PERFIL.md`, criar `<pasta>/CONTEXTO.md`, acrescentar uma linha nesta tabela e em `DECISOES.md`. Esta constituição não muda.
+O catálogo canónico das frentes (classificação, estado, objetivo, identidade, documentação, território) é `CATALOGO_EDITORIAL.md`. A configuração técnica (palavra de arranque, pasta, vozes, trilhas, referência) é `../series.yaml`. Esta constituição não repete nenhum dos dois.
+
+Pastas fixas: `nucleo/` (regras comuns), `comum/` (fecho, histórico, easter eggs; os scripts dependem destes caminhos), `especiais/` (crossovers), uma pasta por frente (`manaburn/`, `oraculo/`, `conde/`, `orbita/`, `lambe-lambe/`).
+
+Frente nova: ver o fim de `CATALOGO_EDITORIAL.md`. Esta constituição não muda.
 
 ## 3. Motor de orquestração (antes de cada produção)
 
@@ -77,11 +80,11 @@ As 12 perguntas da orquestração (série, objetivo, interesse, investigação, 
 
 ## 6. Qualidade audiovisual
 
-- 9:16, 1080×1920, 30 fps, **sem corte lateral** (regra com historial de reclamações: conferir quadros reais do vídeo final, não só a prévia).
+- Formato da frente (catálogo): séries em Reel 9:16, 1080×1920, 30 fps; Órbita em Reel 4:5, 1080×1350; Lambe-lambe em post 4:5 ou Reel 9:16. Em qualquer formato, **sem corte lateral** (regra com historial de reclamações: conferir quadros reais do ficheiro final, não só a prévia).
 - Carta real, inteira, rodapé visível, nada por cima.
 - Texto legível no telemóvel; legenda dentro da zona segura.
 - Voz, música, efeitos e legendas conferidos no ficheiro final; -14 LUFS (ou o alvo do perfil), pico < -1 dBFS.
-- Todo vídeo termina com `comum/outro/outro_binder_916.mp4` (ver `comum/outro/LEIA-ME.md`). Nunca redesenhar a tela do app.
+- Todo vídeo das séries e do Lambe-lambe termina com `comum/outro/outro_binder_916.mp4` (ver `comum/outro/LEIA-ME.md`), salvo exceção registada num especial. **O Órbita não termina com o fecho nem com propaganda do BINDER** (decisão do fundador, 31/10/2026). Nunca redesenhar a tela do app.
 - Reutilizar recursos mestres (retratos, imagem-mestra, temas, fecho); não regenerar personagens.
 - Nunca dizer que um vídeo foi inspecionado se não foi.
 
@@ -110,10 +113,11 @@ As 12 perguntas da orquestração (série, objetivo, interesse, investigação, 
 
 ## 10. Entrega e registo (comum)
 
-Entregáveis: vídeo · capa · legenda limpa · comentário fixado · ficha de fatos/fontes.
+Entregáveis: vídeo · capa · legenda limpa · comentário fixado · texto alternativo · ficha de fatos/fontes.
 
 - **Legenda:** gancho; uma frase de facto que manda para o comentário; créditos ("Na tela/TV: carta (coleção, ano), nº n. Arte: artista. © Wizards of the Coast. Conteúdo de fã não oficial."); CTA em rotação; até 5 hashtags; sem emojis; **termina com "baixe o BINDER Vision"**. PT-BR, tratamento por "você".
-- **Comentário fixado:** pergunta fácil na 1.ª linha + complemento (passos, texto Oracle, fonte, VOD) + **"Tem um detalhe escondido. Diga o segundo."**
+- **Comentário fixado:** pergunta fácil na 1.ª linha + complemento (passos, texto Oracle, fonte, VOD) + **"Tem um detalhe escondido. Diga o segundo."** quando o conteúdo tem easter egg (sem egg, a frase não entra)
+- **Texto alternativo:** descrição da imagem ou do vídeo e transcrição do texto que aparece no ecrã, para o campo "texto alternativo" do Instagram (regra da skill `binder-posts-instagram`, peça 4 do pacote).
 - **Easter egg:** no máximo 1 por episódio, registado em `comum/easter_eggs.md`.
 - **Commit no fim:** roteiro/ficha, legenda, fontes, histórico. Nunca vídeos.
 
@@ -138,3 +142,16 @@ Entregáveis: vídeo · capa · legenda limpa · comentário fixado · ficha de 
 
 Guarda: regras aprovadas, perfis, modelos, fichas e fontes de episódios, legendas, aprendizagens verificadas, scripts reutilizáveis.
 Não guarda: transcrições de conversas, prompts temporários, resultados não verificados, mídia renderizada, segredos.
+
+## 14. Especiais e homenagens
+
+Regra do Ibisson (29/10/2026). Vale para todas as séries.
+
+- **Pode haver especiais.** Qualquer série pode ter episódios especiais, homenagens e acontecimentos extraordinários fora da duração habitual do perfil.
+- **Duração livre.** Não há limite rígido: a extensão sai da força da história e da qualidade narrativa. A duração do `PERFIL.md` não se aplica ao especial; regista-se na ficha porque se escolheu aquela duração.
+- **Tom de celebração.** Uma homenagem não assume por defeito um tom triste, fúnebre ou melancólico. Prioridade: celebração, admiração, legado, inspiração, personalidade e reconhecimento.
+- **Humor subtil, quando adequado.** Sem desrespeitar a pessoa homenageada.
+- **Objetivo.** Uma experiência memorável, emocionalmente envolvente e digna de ser partilhada pela comunidade.
+- **Velocidade com rigor.** Num acontecimento relevante, avaliar a oportunidade editorial depressa, mas nunca sacrificar o rigor factual (§4), a identidade da marca nem a qualidade narrativa em nome da velocidade.
+
+As restantes secções continuam a valer. Uma exceção a uma regra de entrega (§10) num especial só existe se o pedido do Ibisson para esse especial o disser, e regista-se em `DECISOES.md`.

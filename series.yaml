@@ -1,0 +1,88 @@
+# Configuração técnica das frentes do Estúdio BINDER (@binderthetrade)
+# Classificação, estado, objetivo e identidade de cada frente: nucleo/CATALOGO_EDITORIAL.md (canónico).
+# Aqui só o que os agentes e scripts precisam para produzir: palavra de arranque, pasta, documentos, vozes, trilhas, referência.
+# null = dado ainda não registado em nenhuma fonte (não inventar).
+
+versao: 1
+atualizado: 2026-10-31
+
+nucleo:
+  constituicao: nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md
+  checklist: nucleo/CHECKLIST_QUALIDADE.md
+  decisoes: nucleo/DECISOES.md
+  fecho: comum/outro/outro_binder_916.mp4      # 3,87 s, sem áudio; gerado a 31/10/2026 do fim do Ep. 6 (comum/outro/LEIA-ME.md)
+  fecho_quadros: comum/outro/scan/             # 45 quadros reais do scanner (fallback de reconstrução)
+  historico: comum/historico.md
+  easter_eggs: comum/easter_eggs.md
+  formato_video: {largura: 1080, altura: 1920, fps: 30, lufs: -14, pico_dbfs: -1}
+
+series:
+  - slug: manaburn
+    nome: Mana & Burn
+    palavras: [manaburn]
+    formato: reel_9x16
+    pasta: manaburn/
+    perfil: manaburn/PERFIL.md
+    identidade: "Drive: BINDER Marketing — Série Mana & Burn (doc 1fYkvk8xHufhunow3zg5Qh3aRRW2vD1ZoMAm0Wv9YQ74) + skill binder-mana-burn-episodio"
+    tecnico: manaburn/LEIA-ME.md               # v1; a v2 está no projeto claude.ai (claude/gerador-manaburn/), sobe na Fase 2
+    vozes:
+      burn: {fornecedor: elevenlabs, nome: "Talis - Natural, Descontraído, Real", voice_id: null, modelo: eleven_v4, atempo: 1.06}
+      mana: {fornecedor: elevenlabs, nome: "Erik - Calmo e Introspectivo", voice_id: null, modelo: eleven_v4, atempo: 1.12}
+    trilha:
+      - {nome: midnight_throttle, ficheiro: manaburn/musica.mp3, uso: "Ep. 1–2 e padrão do trilha.py v2"}
+      - {nome: concrete_teeth, ficheiro: null, uso: "Ep. 5–7 (ficheiro em falta no repositório)"}
+    referencia: manaburn/episodios/ep09_dack/
+
+  - slug: tubo
+    nome: Meta em Curto (personagem TUBO; ex-Oráculo de Tubo)
+    palavras: [tubo, meta, oraculo]
+    formato: reel_9x16
+    formatos_extra: [carrossel_4x5]
+    pasta: oraculo/                            # nome antigo mantido: os scripts dependem dele
+    perfil: oraculo/PERFIL.md
+    identidade: oraculo/CONTEXTO.md
+    vozes:
+      tubo: {fornecedor: elevenlabs, nome: "Antonio de Jesus", voice_id: MK5tXPmT83J5SUlpUo4K, modelo: eleven_v4, atempo: 1.10}
+    trilha:
+      - {nome: "Paper Thin Alibi (tema do TUBO)", ficheiro: oraculo/musica/tubo_tema.mp3, original: oraculo/musica/tubo_tema_original.mp3}
+    referencia: oraculo/episodios/ep02_hartford_ficha.md
+
+  - slug: conde
+    nome: Conde de Manaforte · O Tribunal Estético
+    palavras: [conde]
+    formato: reel_9x16
+    pasta: conde/
+    perfil: conde/PERFIL.md
+    identidade: conde/CONTEXTO.md
+    vozes:
+      conde: {fornecedor: elevenlabs, nome: "Conde de Manaforte (Voice Design)", voice_id: bbnQVGWT7UMdmoK4URLr, modelo: eleven_v4, atempo: 1.08}
+    trilha:
+      - {nome: "Verdict in Varnish and Vellum", ficheiro: conde/musica/tema.mp3}
+    referencia: conde/episodios/ep003_voldaren_pariah_ficha.md
+
+  - slug: especial
+    nome: Especiais e homenagens
+    palavras: [especial]
+    formato: livre                            # constituição §14
+    pasta: especiais/                          # especial de uma série: <pasta da série>/episodios/espNN_<nome>/
+    exemplos: [especiais/halloween_2026/, manaburn/episodios/esp02_picard_v2/]
+
+  - slug: orbita
+    nome: Órbita · Star Trek
+    palavras: [orbita]
+    formato: reel_4x5                          # 1080x1350, 12 s, 30 fps, loop
+    pasta: orbita/
+    identidade: orbita/CONTEXTO.md
+    tecnico: orbita/gerador/LEIA-ME.md
+    fecho: false                               # sem fecho do scanner (fundador, 31/10/2026)
+    vozes: {}
+    trilha: []                                 # Reels sem áudio; música escolhida no Instagram (exceção: Commander Spock)
+
+  - slug: lambe-lambe
+    nome: Lambe-lambe
+    palavras: [lambe, post]
+    formato: imagem_4x5                        # 1080x1350; Reels 9:16 quando houver demonstração do app
+    pasta: lambe-lambe/
+    identidade: lambe-lambe/CONTEXTO.md         # + skill binder-posts-instagram
+    vozes: {}
+    trilha: []

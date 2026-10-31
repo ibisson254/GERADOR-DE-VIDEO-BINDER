@@ -1,6 +1,6 @@
 # Perfil operacional · Meta em Curto (TUBO)
 
-Herda `comum/originals/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Identidade, visual, trilha, estrutura do Reel e tipos de episódio: `oraculo/CONTEXTO.md` (autoridade). Pasta e scripts mantêm o nome antigo `oraculo/`; o nome público da série é **Meta em Curto**.
+Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Identidade, visual, trilha, estrutura do Reel e tipos de episódio: `oraculo/CONTEXTO.md` (autoridade). Pasta e scripts mantêm o nome antigo `oraculo/`; o nome público da série é **Meta em Curto**.
 
 - **Território:** competição. Torneios mais recentes e mais falados da comunidade mundial; decks, metagame, matchups, mulligan, sideboard, sequenciamento, decisões de jogo.
 - **Fora do território:** curiosidades, hype de sets, preço, Salt Score, cultura → Mana & Burn. Arte → Conde. Temas genéricos ou sem torneio por trás não entram.

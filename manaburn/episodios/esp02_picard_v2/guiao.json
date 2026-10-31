@@ -1,0 +1,24 @@
+{
+ "titulo": "Isso NÃO devia ser banido · Especial Capitão Picard",
+ "falas": [
+  {"quem": "B", "tags": "[excited]", "legenda": "Mano, olha quem tá chegando no Magic: o capitão *Jean-Luc Picard*!"},
+  {"quem": "M", "tags": "[warm]", "legenda": "Jean-Luc Picard, Luminary. Chega dia *13 de novembro*, no Commander de Star Trek."},
+  {"quem": "B", "tags": "[excited]", "legenda": "O cara comandava a Enterprise com três palavras: *Make it so*.", "tts": "O cara comandava a Enterprise com três palavras: Mêik it sôu."},
+  {"quem": "M", "tags": "[amused]", "legenda": "E pedia o chá sempre do mesmo jeito. *Tea. Earl Grey. Hot.*", "tts": "E pedia o chá sempre do mesmo jeito. Tí. Érl Grêi. Rót."},
+  {"quem": "B", "tags": "[laughs]", "legenda": "Eu tentei pedir assim no bar. Veio *refrigerante*."},
+  {"quem": "M", "tags": "[warm]", "legenda": "Mas o que fazia dele capitão era outra coisa. Ele *ouvia a tripulação* antes de decidir."},
+  {"quem": "B", "tags": "[playful]", "legenda": "Capitão que resolve no papo. Eu resolvo *banindo*."},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Lê a carta: quando você compra a *segunda carta* no turno, quem cresce não é ele."},
+  {"quem": "B", "tags": "[surprised]", "legenda": "Contador na *tripulação*... e carga na *nave*?!"},
+  {"quem": "M", "tags": "[warm]", "legenda": "Ele melhora quem tá do lado. Liderança que virou *regra*."},
+  {"quem": "B", "tags": "[serious]", "legenda": "Tá. Vou fazer uma coisa que eu nunca fiz nesse sofá."},
+  {"quem": "M", "tags": "[bored]", "legenda": "Pagar a *pizza*?"},
+  {"quem": "B", "tags": "[solemn]", "legenda": "Isso... *NÃO* devia ser banido.", "tts": "Isso... não devia ser banido."},
+  {"quem": "M", "tags": "[surprised]", "legenda": "Peraí. Alguém grava isso. *Primeira vez* na história."},
+  {"quem": "B", "tags": "[excited]", "legenda": "Sete temporadas, quatro filmes e uma série com o *nome dele*, véi!"},
+  {"quem": "M", "tags": "[warm]", "legenda": "E tudo isso com a cara do *Sir Patrick Stewart*. Ele se despediu essa semana, aos 86. O capitão fica."},
+  {"quem": "B", "tags": "[warm]", "legenda": "Obrigado, Sir Patrick. E aí: qual é o seu *momento favorito* do Picard?"},
+  {"quem": "M", "tags": "[warm]", "legenda": "Comenta aí."},
+  {"quem": "B", "tags": "[confident]", "legenda": "*Engage.*", "tts": "Engêidj."}
+ ]
+}
