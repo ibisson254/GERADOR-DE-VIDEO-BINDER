@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 31/10/2026 · Fecho do scanner no repositório e merge da consolidação para `main`
+
+**O quê:** `comum/outro/outro_binder_916.mp4` passa a existir no repositório, cortado do fim do `ManaBurn_Ep6_GodPack_916.mp4` publicado (49,0 s → fim), com o rótulo "MANA & BURN" tapado na fase da logo; script em `comum/outro/gerar_fecho.py`. Resolve o bloqueador 8 da entrada de 28/10. O fundador aprovou o merge de `consolidacao-estudio` para `main` (PR #1).
+**Porquê:** pedido do fundador (31/10/2026, 15:50): "Tire do final do vídeo que te enviei. Aprovado o merge."
+**Impacto:** quem clona o repositório já cumpre a regra do fecho sem reconstruir. Os episódios publicados com o fecho reconstruído não mudam. Depois do merge, `main` é a branch de trabalho e o prompt do ChatGPT aponta para ela.
+
 ## 31/10/2026 (15:18) · Respostas do fundador a Q1–Q3 (constituição v1.4)
 
 **O quê:**

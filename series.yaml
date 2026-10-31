@@ -10,7 +10,7 @@ nucleo:
   constituicao: nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md
   checklist: nucleo/CHECKLIST_QUALIDADE.md
   decisoes: nucleo/DECISOES.md
-  fecho: comum/outro/outro_binder_916.mp4      # AUSENTE do repositório (bloqueio, ver STATUS.md)
+  fecho: comum/outro/outro_binder_916.mp4      # 3,87 s, sem áudio; gerado a 31/10/2026 do fim do Ep. 6 (comum/outro/LEIA-ME.md)
   fecho_quadros: comum/outro/scan/             # 45 quadros reais do scanner (fallback de reconstrução)
   historico: comum/historico.md
   easter_eggs: comum/easter_eggs.md

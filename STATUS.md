@@ -1,6 +1,6 @@
 # STATUS · Estúdio BINDER
 
-Branch de trabalho: `consolidacao-estudio` (a `main` não é tocada até o fundador aprovar o merge).
+Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão em curso: "Consolidação estrutural do BINDER Originals" (31/10/2026, 10:46), que sucede à "Operação de Consolidação" da mesma data.
 
 ## Estado editorial
@@ -20,12 +20,13 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbit
 | Prompts Claude Project e ChatGPT | Texto pronto | `nucleo/prompts/` |
 | Instruções do projeto claude.ai | Aplicadas pelo fundador (31/10) | `nucleo/prompts/CLAUDE_PROJECT.md` |
 | Respostas Q1–Q3 aplicadas (nome Meta em Curto, Órbita sem fecho, Órbita e Lambe-lambe no repositório) | Concluído | `orbita/`, `lambe-lambe/`, constituição v1.4 |
-| Merge para `main` | Preparado: pull request aberto, sem conflitos (a `main` está contida na branch) | GitHub, PR #1 `consolidacao-estudio` → `main` |
+| Fecho do scanner no repositório | Concluído (cortado do fim do Ep. 6, rótulo tapado) | `comum/outro/outro_binder_916.mp4`, `comum/outro/gerar_fecho.py` |
+| Merge para `main` | Concluído, aprovado pelo fundador | GitHub, PR #1 |
+| Prompt do ChatGPT a apontar para `main` | Concluído | `nucleo/prompts/CHATGPT.md` |
 
 ## Depende do fundador
 
-1. Aprovar o pull request #1 (https://github.com/ibisson254/GERADOR-DE-VIDEO-BINDER/pull/1) (botão "Merge" no GitHub, ou pedir ao agente).
-2. Enviar `comum/outro/outro_binder_916.mp4` (a regra do fecho aponta para um ficheiro que não está no repositório). Origem: corte do fim do `ManaBurn_Ep5_Knacksaw_916.mp4` (a partir de 43,2 s), sem rótulo de série, entregue num chat do claude.ai por volta de 24–25/10; não está no Drive nem no projeto claude.ai. Alternativa sem custo: gerar a reconstrução que os episódios publicados já usam (`manaburn/episodios/ep09_dack/fecho_scanner.py`, 3,87 s, quadros reais do scanner). Não bloqueia o merge.
+Nada bloqueia a produção. Opcional: colar `nucleo/prompts/CHATGPT.md` nas instruções do projeto ou GPT do ChatGPT.
 
 ## Pendências técnicas (não bloqueiam a governação)
 
@@ -33,22 +34,20 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbit
 - Gerador do Órbita já no repositório (`orbita/gerador/`); para renderizar faltam os PNGs das cartas (`BINDER_gerador_orbita.zip`) e as fontes em `node_modules/`.
 - `oraculo/episodios/ep01_render_v2.py` importa `render`, que não existe; `conde/montar_ep002.py` tem caminho absoluto. Não se mexe em scripts de episódios publicados sem necessidade.
 - Skills `binder-*` ainda mandam ler primeiro o Drive e dizem que o Scryfall não abre; alinhar com o repositório quando o fundador quiser.
-- `nucleo/prompts/CHATGPT.md`: depois do merge, trocar `consolidacao-estudio` por `main` nos links.
 
 ## Próximo passo concreto
 
-Fundador: aprovar o merge de `consolidacao-estudio` para `main`. Agente: fazer o merge e trocar `consolidacao-estudio` por `main` nos links de `nucleo/prompts/CHATGPT.md`.
+Produzir normalmente a partir da `main`: palavra de arranque → `AGENTS.md` → `nucleo/SHOWRUNNER.md`. Pendência técnica com mais impacto: subir o motor v2 do Mana & Burn (`claude/gerador-manaburn/` no projeto claude.ai) para `manaburn/`.
 
 ## Handoff
 
 ```
 HANDOFF · 31/10/2026 · Claude
-Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch consolidacao-estudio
-Objetivo atual: merge da consolidação para main.
-Decisões: Órbita e Lambe-lambe ativos; conteúdos do repositório aprovados e lançados; pastas das séries mantidas (nucleo/DECISOES.md, 31/10).
-Documentos consultados: missão de 31/10, perfis das 3 séries, índices do Drive do Órbita e do Lambe-lambe, claude/serie-star-trek-bauhaus.md, claude/reel-lambe-lambe-pop.md.
-Alterações: nucleo/CATALOGO_EDITORIAL.md, nucleo/SHOWRUNNER.md, nucleo/modelos/HANDOFF.md, nucleo/prompts/, constituição v1.3, checklist, series.yaml, AGENTS.md, nucleo/README.md, comum/historico.md, INVENTARIO.md (nota de histórico).
-Alterações (15:18): orbita/ (bíblia + gerador), lambe-lambe/ (bíblia), constituição v1.4, catálogo, series.yaml, AGENTS.md, SHOWRUNNER.md.
-Pendentes: ver "Depende do fundador" e "Pendências técnicas".
-Próximo passo: merge para main com aprovação do fundador.
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (PR #1 integrado)
+Objetivo atual: consolidação concluída; estúdio pronto a produzir a partir da main.
+Decisões: Órbita e Lambe-lambe ativos; nome Meta em Curto; Órbita sem fecho; conteúdos do repositório aprovados e lançados; fecho do scanner cortado do Ep. 6 (nucleo/DECISOES.md, 31/10).
+Documentos consultados: AGENTS.md, STATUS.md, comum/outro/LEIA-ME.md, ManaBurn_Ep6_GodPack_916.mp4 (enviado pelo fundador).
+Alterações: comum/outro/outro_binder_916.mp4 e gerar_fecho.py; comum/outro/LEIA-ME.md; series.yaml; nucleo/DECISOES.md; nucleo/prompts/CHATGPT.md (links para main); STATUS.md.
+Pendentes: ver "Pendências técnicas".
+Próximo passo: produzir; ou subir o motor v2 do Mana & Burn para manaburn/.
 ```
