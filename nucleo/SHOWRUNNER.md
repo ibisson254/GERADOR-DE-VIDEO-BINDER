@@ -33,6 +33,7 @@ Antes de perguntar ao fundador, procurar a resposta nestes documentos. Só se pe
 | Torneio como *acontecimento* (polémica, reação, comportamento viral) | Mana & Burn | `DECISOES.md` 28/10, item 4: decisão e meta → TUBO; reação/polémica → Mana & Burn |
 | Ilustração: composição, técnica, simbolismo, bastidores, artista | Conde de Manaforte | Território "ilustração" (`conde/PERFIL.md`) |
 | Arte de uma carta como curiosidade rápida, sem crítica encenada | Lambe-lambe | Formato espontâneo (série "Artistas de Magic") |
+| Conceito básico do jogo explicado a crianças (carta, criatura, custo, atacar, cores), palavra `mestre` | Pequeno Mestre (em desenvolvimento) | Território "aprender a jogar, para crianças" (`pequeno-mestre/PERFIL.md`); nada publicável antes das decisões de `pequeno-mestre/CONTEXTO.md` §10 |
 | Carta do set de Star Trek | Órbita, ou uma série se o ângulo for o território dela | O ângulo decide; registar a escolha |
 
 Quando um tema cabe em duas frentes: propor a escolha com uma frase de justificação e pedir aprovação antes do roteiro. Tema fora de todos os territórios: dizer isso e propor alternativa; não forçar.

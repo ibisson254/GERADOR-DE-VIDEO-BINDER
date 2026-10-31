@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 31/10/2026 · Frente nova em desenvolvimento: Pequeno Mestre
+
+**O quê:** nova frente `pequeno-mestre/` (palavra de arranque `mestre`): série infantil com um menino autista de 4–5 anos que ensina Magic com os bichos de brinquedo dele. Pasta com `CONTEXTO.md` (bíblia), `PERFIL.md`, kit de assets v1 (`assets/`, 23 imagens + recortes com transparência) e `recortar.py`. Entradas novas no catálogo, em `series.yaml`, no `AGENTS.md` e no router do Showrunner.
+**Porquê:** pedido do fundador em conversa de 31/10/2026: nome "Pequeno Mestre", público infantil (pais que jogam Magic põem para os filhos verem), cordão da bolsinha com símbolo do autismo discreto, cenário neutro com referência de desenho dos anos 90. O visual veio das imagens que o fundador gerou e enviou.
+**Impacto:** nenhuma série existente muda. A frente fica "em desenvolvimento": nada publicável até o fundador decidir voz, nome da série, plataforma e duração, e se o fecho do scanner entra num conteúdo para crianças (`pequeno-mestre/CONTEXTO.md` §10). B1 (boca fechada) é um quadro composto a partir de B2 e B5.
+
 ## 31/10/2026 · Fecho do scanner no repositório e merge da consolidação para `main`
 
 **O quê:** `comum/outro/outro_binder_916.mp4` passa a existir no repositório, cortado do fim do `ManaBurn_Ep6_GodPack_916.mp4` publicado (49,0 s → fim), com o rótulo "MANA & BURN" tapado na fase da logo; script em `comum/outro/gerar_fecho.py`. Resolve o bloqueador 8 da entrada de 28/10. O fundador aprovou o merge de `consolidacao-estudio` para `main` (PR #1).
