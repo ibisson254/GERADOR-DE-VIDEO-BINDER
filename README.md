@@ -13,6 +13,8 @@ Kit de produção automatizada de Reels 9:16 (1080×1920, 30 fps) para o Instagr
 ├── manaburn/         # Mana & Burn · PERFIL.md + gerador (HTML/Playwright + ffmpeg)
 ├── conde/            # Conde de Manaforte · O Tribunal Estético · PERFIL.md + CONTEXTO.md
 ├── oraculo/          # Meta em Curto (TUBO, ex-Oráculo de Tubo) · PERFIL.md + CONTEXTO.md
+├── orbita/           # Órbita · Star Trek · CONTEXTO.md + gerador/ (Reels 4:5)
+├── lambe-lambe/      # Lambe-lambe · CONTEXTO.md
 ├── especiais/        # Especiais e crossovers entre séries
 └── comum/
     ├── outro/        # Fecho obrigatório com o scanner real

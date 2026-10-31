@@ -1,6 +1,6 @@
 # Constituição editorial e operacional · BINDER Originals
 
-Versão 1.3 · 31/10/2026 (§1 hierarquia documental, §2 catálogo, §6 formatos por frente, §10 frase do easter egg) · 1.2 · 31/10/2026 (fonte de verdade, registo, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
+Versão 1.4 · 31/10/2026 (§1 bíblias do Órbita e do Lambe-lambe no repositório, §6 Órbita sem fecho) · 1.3 · 31/10/2026 (§1 hierarquia documental, §2 catálogo, §6 formatos por frente, §10 frase do easter egg) · 1.2 · 31/10/2026 (fonte de verdade, registo, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
 
 Norma comum de **processo** para todas as frentes do @binderthetrade (séries, universo temático, formato espontâneo e especiais; ver `CATALOGO_EDITORIAL.md`). Não define personagens nem estética: isso vive na bíblia de cada frente. Não define o produto: só funções confirmadas (secção 9).
 
@@ -22,13 +22,13 @@ Um pedido explícito do fundador na conversa prevalece sobre tudo o que está ab
 
 Se uma regra criativa do `CONTEXTO.md` contradiz uma regra de entrega daqui (ex.: frase final da legenda), vale a regra de entrega e regista-se a divergência em `DECISOES.md`. Lacuna de identidade: assinalar, nunca inventar.
 
-**Fonte de verdade.** Este repositório é a fonte de verdade técnica e documental do estúdio. As instruções do projeto claude.ai, os documentos do Google Drive e as skills apontam para ele e nunca o contradizem; se contradisserem, vale o repositório e regista-se a divergência. Exceções, até a bíblia existir no repositório: o documento da série Mana & Burn no Drive é a bíblia do Mana & Burn; os documentos do Órbita e do Lambe-lambe indicados no catálogo são as bíblias dessas frentes.
+**Fonte de verdade.** Este repositório é a fonte de verdade técnica e documental do estúdio. As instruções do projeto claude.ai, os documentos do Google Drive e as skills apontam para ele e nunca o contradizem; se contradisserem, vale o repositório e regista-se a divergência. Exceção, até a bíblia existir no repositório: o documento da série Mana & Burn no Drive é a bíblia do Mana & Burn.
 
 ## 2. Frentes e onde estão
 
 O catálogo canónico das frentes (classificação, estado, objetivo, identidade, documentação, território) é `CATALOGO_EDITORIAL.md`. A configuração técnica (palavra de arranque, pasta, vozes, trilhas, referência) é `../series.yaml`. Esta constituição não repete nenhum dos dois.
 
-Pastas fixas: `nucleo/` (regras comuns), `comum/` (fecho, histórico, easter eggs; os scripts dependem destes caminhos), `especiais/` (crossovers), uma pasta por série (`manaburn/`, `oraculo/`, `conde/`).
+Pastas fixas: `nucleo/` (regras comuns), `comum/` (fecho, histórico, easter eggs; os scripts dependem destes caminhos), `especiais/` (crossovers), uma pasta por frente (`manaburn/`, `oraculo/`, `conde/`, `orbita/`, `lambe-lambe/`).
 
 Frente nova: ver o fim de `CATALOGO_EDITORIAL.md`. Esta constituição não muda.
 
@@ -84,7 +84,7 @@ As 12 perguntas da orquestração (série, objetivo, interesse, investigação, 
 - Carta real, inteira, rodapé visível, nada por cima.
 - Texto legível no telemóvel; legenda dentro da zona segura.
 - Voz, música, efeitos e legendas conferidos no ficheiro final; -14 LUFS (ou o alvo do perfil), pico < -1 dBFS.
-- Todo vídeo termina com `comum/outro/outro_binder_916.mp4` (ver `comum/outro/LEIA-ME.md`), salvo exceção registada num especial. O fecho só existe em 9:16: como se aplica aos Reels 4:5 do Órbita é pergunta em aberto (`DECISOES.md`, 31/10). Nunca redesenhar a tela do app.
+- Todo vídeo das séries e do Lambe-lambe termina com `comum/outro/outro_binder_916.mp4` (ver `comum/outro/LEIA-ME.md`), salvo exceção registada num especial. **O Órbita não termina com o fecho nem com propaganda do BINDER** (decisão do fundador, 31/10/2026). Nunca redesenhar a tela do app.
 - Reutilizar recursos mestres (retratos, imagem-mestra, temas, fecho); não regenerar personagens.
 - Nunca dizer que um vídeo foi inspecionado se não foi.
 

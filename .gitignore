@@ -37,3 +37,9 @@ ehthumbs.db
 
 # Áudio de trabalho dos episódios do Conde (voz bruta e mistura)
 conde/ep*/audio/*.mp3
+
+# Saídas do gerador do Órbita
+orbita/gerador/out*/
+orbita/gerador/html*/
+orbita/gerador/frames*/
+orbita/gerador/node_modules/

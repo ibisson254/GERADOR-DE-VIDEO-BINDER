@@ -21,15 +21,15 @@ Antes de perguntar ao fundador, procurar a resposta nestes documentos. Só se pe
 |---|---|---|
 | Palavra de série (`manaburn`, `conde`, `tubo`) ou tema dentro de um território de série | Episódio de série | Perfil + bíblia da série |
 | Acontecimento, data, morte, aniversário, crossover entre séries, palavra `especial` | Especial ou homenagem | Constituição §14; exceções só com pedido explícito, registadas |
-| Cartas ou temas de Star Trek, palavra `orbita` | Publicação temática (Órbita) | Bíblia do Órbita (catálogo) |
-| Curiosidade avulsa, oportunidade, experiência, demonstração do app, palavra `lambe` ou `post` | Publicação espontânea (Lambe-lambe) | Skill `binder-posts-instagram` + bíblia do Lambe-lambe |
+| Cartas ou temas de Star Trek, palavra `orbita` | Publicação temática (Órbita) | `orbita/CONTEXTO.md`; sem fecho do scanner |
+| Curiosidade avulsa, oportunidade, experiência, demonstração do app, palavra `lambe` ou `post` | Publicação espontânea (Lambe-lambe) | `lambe-lambe/CONTEXTO.md` + skill `binder-posts-instagram` |
 
 ### 2.2 Router entre séries (território)
 
 | Tema | Frente | Porquê |
 |---|---|---|
 | Carta polémica, Salt Score, hype de set, spoilers, preço noticiado, reação da comunidade, notícia da Wizards | Mana & Burn | Território "cultura e caos" (`manaburn/PERFIL.md`) |
-| Torneio recente: decks, metagame, matchup, mulligan, sideboard, decisão de jogo | Meta em Curto · Oráculo de Tubo | Território "competição" (`oraculo/PERFIL.md`) |
+| Torneio recente: decks, metagame, matchup, mulligan, sideboard, decisão de jogo | Meta em Curto | Território "competição" (`oraculo/PERFIL.md`) |
 | Torneio como *acontecimento* (polémica, reação, comportamento viral) | Mana & Burn | `DECISOES.md` 28/10, item 4: decisão e meta → TUBO; reação/polémica → Mana & Burn |
 | Ilustração: composição, técnica, simbolismo, bastidores, artista | Conde de Manaforte | Território "ilustração" (`conde/PERFIL.md`) |
 | Arte de uma carta como curiosidade rápida, sem crítica encenada | Lambe-lambe | Formato espontâneo (série "Artistas de Magic") |

@@ -34,7 +34,7 @@ series:
     referencia: manaburn/episodios/ep09_dack/
 
   - slug: tubo
-    nome: Meta em Curto · Oráculo de Tubo (TUBO)   # nome público por confirmar (DECISOES.md 31/10)
+    nome: Meta em Curto (personagem TUBO; ex-Oráculo de Tubo)
     palavras: [tubo, meta, oraculo]
     formato: reel_9x16
     formatos_extra: [carrossel_4x5]
@@ -71,8 +71,10 @@ series:
     nome: Órbita · Star Trek
     palavras: [orbita]
     formato: reel_4x5                          # 1080x1350, 12 s, 30 fps, loop
-    pasta: null                                # lacuna: código no projeto claude.ai (claude/gerador/), índice no Drive (pasta 02)
-    identidade: "Projeto claude.ai: claude/serie-star-trek-bauhaus.md · Drive: Órbita · Star Trek · índice"
+    pasta: orbita/
+    identidade: orbita/CONTEXTO.md
+    tecnico: orbita/gerador/LEIA-ME.md
+    fecho: false                               # sem fecho do scanner (fundador, 31/10/2026)
     vozes: {}
     trilha: []                                 # Reels sem áudio; música escolhida no Instagram (exceção: Commander Spock)
 
@@ -80,7 +82,7 @@ series:
     nome: Lambe-lambe
     palavras: [lambe, post]
     formato: imagem_4x5                        # 1080x1350; Reels 9:16 quando houver demonstração do app
-    pasta: null                                # lacuna: material no projeto claude.ai e no Drive (pasta 03)
-    identidade: "Projeto claude.ai: claude/reel-lambe-lambe-pop.md · skill binder-posts-instagram"
+    pasta: lambe-lambe/
+    identidade: lambe-lambe/CONTEXTO.md         # + skill binder-posts-instagram
     vozes: {}
     trilha: []

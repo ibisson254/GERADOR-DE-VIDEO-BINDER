@@ -12,7 +12,7 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 
 | Tipo | O que é | Frentes |
 |---|---|---|
-| Episódio de série | Peça recorrente com personagem, fórmula e identidade fixas | Mana & Burn, Conde de Manaforte, Meta em Curto · Oráculo de Tubo |
+| Episódio de série | Peça recorrente com personagem, fórmula e identidade fixas | Mana & Burn, Conde de Manaforte, Meta em Curto |
 | Especial ou homenagem | Peça pontual ligada a um acontecimento, data ou pessoa; pode cruzar séries | Especiais |
 | Publicação temática | Peças de um universo temático com estilo visual próprio | Órbita |
 | Publicação espontânea | Peças de oportunidade, experimentais ou avulsas | Lambe-lambe |
@@ -47,13 +47,13 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Conteúdo produzido | Reel 9:16, ~42–48 s |
 | Relação com o BINDER Vision | Fecho do scanner; verde BINDER só no fecho |
 
-### Meta em Curto · Oráculo de Tubo (personagem TUBO)
+### Meta em Curto (personagem TUBO)
 
 | Campo | Valor |
 |---|---|
 | Classificação | Série permanente · episódio de série |
 | Estado | Ativa |
-| Nome | O repositório usa "Meta em Curto" como nome público (ex-"Oráculo de Tubo"); a missão de 31/10 chama-lhe "Oráculo de Tubo". **Lacuna: confirmar o nome público** (pergunta registada em `DECISOES.md`) |
+| Nome | **Meta em Curto** é o nome público (confirmado pelo fundador a 31/10/2026). "Oráculo de Tubo" é o nome antigo; a pasta `oraculo/` mantém-se porque os scripts dependem dela |
 | Objetivo editorial | Explicar em ~40 s porque um deck ou uma jogada funcionou (jogador competitivo e de Commander) |
 | Identidade | Monitor CRT dos anos 90 com estética de código verde; voz = LED a acender; "fora do tubo / dentro do tubo"; jazz de precisão com o tema "Paper Thin Alibi" |
 | Documentação | Bíblia: `oraculo/CONTEXTO.md` · Perfil: `oraculo/PERFIL.md` |
@@ -72,11 +72,10 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Estado | Ativa |
 | Objetivo editorial | Peças sobre as cartas de Magic: The Gathering \| Star Trek, com o que a comunidade diz de cada carta |
 | Identidade | Cartaz creme com quadro pintado em abstração geométrica (Kandinsky/Bauhaus, gerado por código), carta inteira e parada no centro, planetas e anéis em órbita, loop perfeito |
-| Documentação | Índice no Drive "Órbita · Star Trek · índice" (pasta 02) · `claude/serie-star-trek-bauhaus.md` no projeto claude.ai · documento mestre do Drive §5, 9–11, 13. **Lacuna: não há bíblia nem pasta no repositório** |
-| Regras específicas | Não cita preços; carta e texto parados; sem contador acima da carta; CTA em rotação sem repetir em posts seguidos |
+| Documentação | Bíblia: `orbita/CONTEXTO.md` · Gerador: `orbita/gerador/` (ver `LEIA-ME.md`) |
+| Regras específicas | Não cita preços; carta e texto parados; sem contador acima da carta; CTA da legenda em rotação sem repetir em posts seguidos; **sem fecho do scanner nem propaganda do BINDER no fim do vídeo** (fundador, 31/10/2026) |
 | Formatos | Reel 4:5 (1080×1350), 12 s, 30 fps; formatos Quadro, Constelação, Pergunta e Scanner (os dois últimos sem produção registada) |
-| Técnica | Gerador `claude/gerador/` no projeto claude.ai (build2–4, paint.js, anim.js, batch, captions). **Lacuna: código fora do repositório** |
-| Relação com o BINDER Vision | Legenda termina com CTA de download. **Lacuna: o fecho do scanner existe só em 9:16; não está documentado como os Reels 4:5 cumprem a regra do fecho** |
+| Relação com o BINDER Vision | Selo "BINDER Vision" na composição e CTA de download na legenda; o vídeo não termina com o fecho do scanner |
 
 ## Formato espontâneo
 
@@ -88,7 +87,7 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Estado | Ativo, permanente |
 | Objetivo editorial | Publicações de oportunidade e experimentais: curiosidades, artistas, demonstrações do app |
 | Identidade | Muro de lambe-lambe pop (rosa), papel rasgado e fita só nos cantos de cima; cartaz pop = cultura TCG, cartaz preto BINDER = produto; adesivos "Curiosidade de Magic" (amarelo) e "Artistas de Magic" (azul) |
-| Documentação | `claude/reel-lambe-lambe-pop.md` e `claude/00-comece-aqui.md` no projeto claude.ai · índice no Drive (pasta 03) · skill `binder-posts-instagram`. **Lacuna: não há bíblia nem pasta no repositório** |
+| Documentação | Bíblia: `lambe-lambe/CONTEXTO.md` · skill `binder-posts-instagram` |
 | Regras específicas | Carta limpa, sem filtros nem cortes, rodapé visível; produto só com gravação real do app; legenda v3 (gancho, curiosidade, fontes, ponte para uma função real, CTA de download, até 5 hashtags) |
 | Formatos | Post 4:5 (1080×1350); Reels 9:16 (scanner, "Pause e descubra", "Na prática") |
 | Relação com o BINDER Vision | Direta: pilar de demonstração do produto e ponte para funções reais |

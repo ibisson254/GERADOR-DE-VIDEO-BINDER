@@ -27,7 +27,7 @@ Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao ris
 - [ ] Quadros do ficheiro final conferidos no formato da frente (9:16 ou 4:5), **sem corte lateral**, carta inteira.
 - [ ] Legenda queimada dentro da zona segura e legível.
 - [ ] Loudness medido no ficheiro final.
-- [ ] Vídeo termina com `comum/outro/outro_binder_916.mp4`, sem encurtar (salvo exceção registada).
+- [ ] Vídeo termina com `comum/outro/outro_binder_916.mp4`, sem encurtar (exceto Órbita e exceções registadas).
 - [ ] Legenda termina com "baixe o BINDER Vision"; até 5 hashtags; sem emojis.
 - [ ] Comentário fixado: pergunta fácil + complemento (+ "Tem um detalhe escondido. Diga o segundo." se houver easter egg).
 - [ ] Texto alternativo escrito (descrição + texto do ecrã).

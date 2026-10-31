@@ -13,11 +13,11 @@ Ponto de entrada para qualquer agente (Claude, ChatGPT ou outro). As instruçõe
    | Palavra | Frente | Tipo | Ler |
    |---|---|---|---|
    | `manaburn` | Mana & Burn | Série | `manaburn/PERFIL.md` → doc da série no Drive / skill `binder-mana-burn-episodio` → `manaburn/LEIA-ME.md` |
-   | `tubo` / `meta` / `oraculo` | Meta em Curto · Oráculo de Tubo | Série | `oraculo/PERFIL.md` → `oraculo/CONTEXTO.md` |
+   | `tubo` / `meta` / `oraculo` | Meta em Curto | Série | `oraculo/PERFIL.md` → `oraculo/CONTEXTO.md` |
    | `conde` | Conde de Manaforte | Série | `conde/PERFIL.md` → `conde/CONTEXTO.md` |
    | `especial` | Especiais e homenagens | Pontual | constituição §14 + bíblias das séries envolvidas |
-   | `orbita` | Órbita · Star Trek | Temática | documentos indicados no catálogo |
-   | `lambe` / `post` | Lambe-lambe | Espontânea | skill `binder-posts-instagram` + documentos indicados no catálogo |
+   | `orbita` | Órbita · Star Trek | Temática | `orbita/CONTEXTO.md` → `orbita/gerador/LEIA-ME.md` |
+   | `lambe` / `post` | Lambe-lambe | Espontânea | `lambe-lambe/CONTEXTO.md` → skill `binder-posts-instagram` |
 
 6. `comum/historico.md` e `comum/easter_eggs.md`: não repetir tema nem egg.
 
@@ -30,7 +30,7 @@ Ponto de entrada para qualquer agente (Claude, ChatGPT ou outro). As instruçõe
 3. Entregar: vídeo, capa, legenda, comentário fixado, texto alternativo, fontes, e as limitações reais.
 4. Commit: ficha/roteiro, legenda, fontes, histórico, easter egg. Nunca vídeos renderizados.
 
-Regras que nunca mudam: não inventar factos nem funções/telas do app; todo vídeo termina com `comum/outro/outro_binder_916.mp4` (salvo exceção registada num especial); sem corte lateral no formato da frente, conferido no ficheiro final.
+Regras que nunca mudam: não inventar factos nem funções/telas do app; todo vídeo termina com `comum/outro/outro_binder_916.mp4` (exceto Órbita e exceções registadas em especiais); sem corte lateral no formato da frente, conferido no ficheiro final.
 
 Frente nova: fim de `nucleo/CATALOGO_EDITORIAL.md`. Mudança de regra: `nucleo/DECISOES.md`. Conteúdos publicados ou aprovados não se reabrem.
 

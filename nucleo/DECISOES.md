@@ -2,6 +2,15 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 31/10/2026 (15:18) · Respostas do fundador a Q1–Q3 (constituição v1.4)
+
+**O quê:**
+1. Q1 · O nome público da série do TUBO é **Meta em Curto**. A pasta `oraculo/` mantém-se (scripts). Catálogo, `series.yaml`, `AGENTS.md`, `SHOWRUNNER.md` e a linha de território de `oraculo/CONTEXTO.md` usam o nome novo.
+2. Q2 · **O Órbita não termina com o fecho do scanner nem com propaganda do BINDER no fim do vídeo.** Constituição §6, checklist C, `orbita/CONTEXTO.md` §4 e `series.yaml` (`fecho: false`). O selo "BINDER Vision" da composição e o CTA da legenda mantêm-se, porque o fundador falou do fim do vídeo e fazem parte da identidade aprovada.
+3. Q3 · Órbita e Lambe-lambe passam a ter pasta no repositório: `orbita/CONTEXTO.md` (bíblia), `orbita/gerador/` (10 ficheiros copiados sem alterações de `claude/gerador/` do projeto claude.ai, com `LEIA-ME.md`) e `lambe-lambe/CONTEXTO.md` (bíblia). As bíblias foram compostas só a partir das fontes indicadas no topo de cada uma; os documentos de origem ficam como histórico.
+**Porquê:** mensagem do fundador de 31/10/2026, 15:18.
+**Impacto:** a exceção "bíblias do Órbita e do Lambe-lambe fora do repositório" sai da constituição §1. Para renderizar o Órbita faltam os PNGs das cartas e as fontes em `node_modules/` (ver `orbita/gerador/LEIA-ME.md`). `captions2–5.py` (legendas publicadas do Órbita) ficam no projeto claude.ai como histórico.
+
 ## 31/10/2026 · Missão "Consolidação estrutural do BINDER Originals": frentes, hierarquia e Showrunner (constituição v1.3)
 
 **Decisões do fundador (missão de 31/10/2026, 10:46):**
