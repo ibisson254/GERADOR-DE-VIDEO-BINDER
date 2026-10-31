@@ -1,0 +1,31 @@
+"""Capa do especial (1080x1920; área segura 4:5 da grelha = y 285–1635). uso: python3 capa.py"""
+import sys; sys.argv = ['render.py']
+import render as R
+from PIL import Image, ImageDraw
+W, H = R.W, R.H
+im = R.bg_innistrad('moorland'); dr = R.bg_dusk('island')
+m = Image.new('L', (W, H), 0); ImageDraw.Draw(m).polygon([(W * 0.6, 0), (W, 0), (W, H), (W * 0.4, H)], fill=255)
+im = R.vignette(Image.composite(dr, im, m))
+# Innistrad: arte em moldura gravada (esq.) · Duskmourn: polaroide (dir.)
+a = R.ART['moorland'].resize((440, int(440 * 457 / 626)))
+fr = Image.new('RGBA', (a.width + 40, a.height + 40), (0, 0, 0, 0)); fd = ImageDraw.Draw(fr)
+fd.rectangle((2, 2, fr.width - 3, fr.height - 3), outline=R.IVORY, width=3); fr.paste(a, (20, 20)); fr = fr.rotate(5, expand=True)
+im.paste(fr, (10, 720), fr)
+b = R.ART['island'].resize((440, int(440 * 457 / 626))); pol = Image.new('RGBA', (b.width + 30, b.height + 80), (236, 230, 216, 255)); pol.paste(b, (15, 15))
+pol = pol.rotate(-5, expand=True); im.paste(pol, (W - pol.width - 10, 740), pol)
+# TUBO (imagem-mestra, recorte sem alterar o personagem)
+t = R.tubo_frame(0.0, 'confiante').crop((180, 430, 900, 1450)).resize((480, 680))
+pan = Image.new('RGBA', (t.width + 24, t.height + 24), (0, 0, 0, 0)); pd = ImageDraw.Draw(pan)
+pd.rounded_rectangle((0, 0, pan.width - 1, pan.height - 1), 28, fill=R.EM + (255,)); pan.paste(t, (12, 12))
+mk = Image.new('L', pan.size, 0); ImageDraw.Draw(mk).rounded_rectangle((0, 0, pan.width - 1, pan.height - 1), 28, fill=255)
+ImageDraw.Draw(mk).rounded_rectangle((12, 12, pan.width - 13, pan.height - 13), 20, fill=255)
+im.paste(pan, ((W - pan.width) // 2, 712), mk)
+d = ImageDraw.Draw(im, 'RGBA')
+d.text((W / 2, 300), 'BINDER ORIGINALS · ESPECIAL DE HALLOWEEN', font=R.F(R.INTSB, 32), fill=R.EM, anchor='ma')
+d.text((W / 2, 360), 'INNISTRAD', font=R.F(R.LORA, 118, 'Bold'), fill=R.IVORY, anchor='ma')
+d.text((W / 2, 492), '×', font=R.F(R.BANG, 90), fill=R.YEL, anchor='ma')
+d.text((W / 2 + 5, 590), 'DUSKMOURN', font=R.F(R.MONOB, 104), fill=(255, 40, 40, 170), anchor='ma')
+d.text((W / 2, 590), 'DUSKMOURN', font=R.F(R.MONOB, 104), fill=(255, 235, 230), anchor='ma')
+d.text((W / 2, 1436), 'O JULGAMENTO DO HORROR', font=R.F(R.BANG, 92), fill=R.YEL, anchor='ma', stroke_width=5, stroke_fill=(17, 17, 17))
+d.text((W / 2, 1552), 'Mana & Burn · Conde de Manaforte · TUBO', font=R.F(R.INTSB, 34), fill=(235, 235, 235), anchor='ma')
+im.convert('RGB').save('BINDER_Especial_Halloween_capa.jpg', quality=92); print('ok capa')

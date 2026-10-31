@@ -1,0 +1,228 @@
+{
+ "emrakul": {
+  "name": "Emrakul, the Promised End",
+  "set": "EMN",
+  "set_name": "Eldritch Moon",
+  "num": "6",
+  "year": "2016",
+  "artist": "Jaime Jones",
+  "type": "Legendary Creature — Eldrazi",
+  "oracle": "This spell costs {1} less to cast for each card type among cards in your graveyard.\nWhen you cast this spell, you gain control of target opponent during that player's next turn. After that turn, that player takes an extra turn.\nFlying, trample, protection from instants",
+  "pt": [
+   "13",
+   "13"
+  ],
+  "mana": "{13}",
+  "flavor": "An enigma as vexing as life itself.",
+  "uri": "https://scryfall.com/card/emn/6/emrakul-the-promised-end?utm_source=api",
+  "rarity": "mythic"
+ },
+ "valgavoth": {
+  "name": "Valgavoth, Terror Eater",
+  "set": "DSK",
+  "set_name": "Duskmourn: House of Horror",
+  "num": "120",
+  "year": "2024",
+  "artist": "Antonio José Manzanedo",
+  "type": "Legendary Creature — Elder Demon",
+  "oracle": "Flying, lifelink\nWard—Sacrifice three nonland permanents.\nIf a card you didn't control would be put into an opponent's graveyard from anywhere, exile it instead.\nDuring your turn, you may play cards exiled with Valgavoth. If you cast a spell this way, pay life equal to its mana value rather than pay its mana cost.",
+  "pt": [
+   "9",
+   "9"
+  ],
+  "mana": "{6}{B}{B}{B}",
+  "flavor": "",
+  "uri": "https://scryfall.com/card/dsk/120/valgavoth-terror-eater?utm_source=api",
+  "rarity": "mythic"
+ },
+ "mindskinner": {
+  "name": "The Mindskinner",
+  "set": "DSK",
+  "set_name": "Duskmourn: House of Horror",
+  "num": "66",
+  "year": "2024",
+  "artist": "Abz J Harding",
+  "type": "Legendary Enchantment Creature — Nightmare",
+  "oracle": "The Mindskinner can't be blocked.\nIf a source you control would deal damage to an opponent, prevent that damage and each opponent mills that many cards.",
+  "pt": [
+   "10",
+   "1"
+  ],
+  "mana": "{U}{U}{U}",
+  "flavor": "It slices away the most precious memories first, then the mundane, until all that remains is blank, formless fear.",
+  "uri": "https://scryfall.com/card/dsk/66/the-mindskinner?utm_source=api",
+  "rarity": "rare"
+ },
+ "annex": {
+  "name": "Unholy Annex // Ritual Chamber",
+  "set": "DSK",
+  "set_name": "Duskmourn: House of Horror",
+  "num": "118",
+  "year": "2024",
+  "artist": "Matteo Bassini",
+  "type": "Enchantment — Room // Enchantment — Room",
+  "oracle": "At the beginning of your end step, draw a card. If you control a Demon, each opponent loses 2 life and you gain 2 life. Otherwise, you lose 2 life.\n(You may cast either half. That door unlocks on the battlefield. As a sorcery, you may pay the mana cost of a locked door to unlock it.) // When you unlock this door, create a 6/6 black Demon creature token with flying.\n(You may cast either half. That door unlocks on the battlefield. As a sorcery, you may pay the mana cost of a locked door to unlock it.)",
+  "pt": [
+   null,
+   null
+  ],
+  "mana": "{2}{B} // {3}{B}{B}",
+  "flavor": "",
+  "uri": "https://scryfall.com/card/dsk/118/unholy-annex-ritual-chamber?utm_source=api",
+  "rarity": "rare"
+ },
+ "moorland": {
+  "name": "Moorland Haunt",
+  "set": "ISD",
+  "set_name": "Innistrad",
+  "num": "244",
+  "year": "2011",
+  "artist": "James Paick",
+  "type": "Land",
+  "oracle": "{T}: Add {C}.\n{W}{U}, {T}, Exile a creature card from your graveyard: Create a 1/1 white Spirit creature token with flying.",
+  "pt": [
+   null,
+   null
+  ],
+  "mana": "",
+  "flavor": "",
+  "uri": "https://scryfall.com/card/isd/244/moorland-haunt?utm_source=api",
+  "rarity": "rare"
+ },
+ "bloodline": {
+  "name": "Bloodline Keeper // Lord of Lineage",
+  "set": "ISD",
+  "set_name": "Innistrad",
+  "num": "90",
+  "year": "2011",
+  "artist": "Jason Chan",
+  "type": "Creature — Vampire // Creature — Vampire",
+  "oracle": "Flying\n{T}: Create a 2/2 black Vampire creature token with flying.\n{B}: Transform this creature. Activate only if you control five or more Vampires. // Flying\nOther Vampire creatures you control get +2/+2.\n{T}: Create a 2/2 black Vampire creature token with flying.",
+  "pt": [
+   null,
+   null
+  ],
+  "mana": "{2}{B}{B} // ",
+  "flavor": "",
+  "uri": "https://scryfall.com/card/isd/90/bloodline-keeper-lord-of-lineage?utm_source=api",
+  "rarity": "rare"
+ },
+ "huntmaster": {
+  "name": "Huntmaster of the Fells // Ravager of the Fells",
+  "set": "DKA",
+  "set_name": "Dark Ascension",
+  "num": "140",
+  "year": "2012",
+  "artist": "Chris Rahn",
+  "type": "Creature — Human Werewolf // Creature — Werewolf",
+  "oracle": "Whenever this creature enters or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature. // Trample\nWhenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent or planeswalker and 2 damage to up to one target creature that player or that planeswalker's controller controls.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+  "pt": [
+   null,
+   null
+  ],
+  "mana": "{2}{R}{G} // ",
+  "flavor": "",
+  "uri": "https://scryfall.com/card/dka/140/huntmaster-of-the-fells-ravager-of-the-fells?utm_source=api",
+  "rarity": "mythic"
+ },
+ "geist": {
+  "name": "Geist of Saint Traft",
+  "set": "ISD",
+  "set_name": "Innistrad",
+  "num": "213",
+  "year": "2011",
+  "artist": "Igor Kieryluk",
+  "type": "Legendary Creature — Spirit Cleric",
+  "oracle": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)\nWhenever Geist of Saint Traft attacks, create a 4/4 white Angel creature token with flying that's tapped and attacking. Exile that token at end of combat.",
+  "pt": [
+   "2",
+   "2"
+  ],
+  "mana": "{1}{W}{U}",
+  "flavor": "",
+  "uri": "https://scryfall.com/card/isd/213/geist-of-saint-traft?utm_source=api",
+  "rarity": "mythic"
+ },
+ "arabella": {
+  "name": "Arabella, Abandoned Doll",
+  "set": "DSK",
+  "set_name": "Duskmourn: House of Horror",
+  "num": "208",
+  "year": "2024",
+  "artist": "J.P. Targete",
+  "type": "Legendary Artifact Creature — Toy",
+  "oracle": "Whenever Arabella attacks, it deals X damage to each opponent and you gain X life, where X is the number of creatures you control with power 2 or less.",
+  "pt": [
+   "1",
+   "3"
+  ],
+  "mana": "{R}{W}",
+  "flavor": "Every night, Cori threw the unsettling doll away. Every morning, it was back on the shelf, its eyes following her every move.",
+  "uri": "https://scryfall.com/card/dsk/208/arabella-abandoned-doll?utm_source=api",
+  "rarity": "uncommon"
+ },
+ "balloon": {
+  "name": "The Jolly Balloon Man",
+  "set": "DSK",
+  "set_name": "Duskmourn: House of Horror",
+  "num": "219",
+  "year": "2024",
+  "artist": "Campbell White",
+  "type": "Legendary Creature — Human Clown",
+  "oracle": "Haste\n{1}, {T}: Create a token that's a copy of another target creature you control, except it's a 1/1 red Balloon creature in addition to its other colors and types and it has flying and haste. Sacrifice it at the beginning of the next end step. Activate only as a sorcery.",
+  "pt": [
+   "1",
+   "4"
+  ],
+  "mana": "{1}{R}{W}",
+  "flavor": "",
+  "uri": "https://scryfall.com/card/dsk/219/the-jolly-balloon-man?utm_source=api",
+  "rarity": "rare"
+ },
+ "toxrill": {
+  "name": "Toxrill, the Corrosive",
+  "set": "VOW",
+  "set_name": "Innistrad: Crimson Vow",
+  "num": "132",
+  "year": "2021",
+  "artist": "Simon Dominic",
+  "type": "Legendary Creature — Slug Horror",
+  "oracle": "At the beginning of each end step, put a slime counter on each creature you don't control.\nCreatures you don't control get -1/-1 for each slime counter on them.\nWhenever a creature you don't control with a slime counter on it dies, create a 1/1 black Slug creature token.\n{U}{B}, Sacrifice a Slug: Draw a card.",
+  "pt": [
+   "7",
+   "7"
+  ],
+  "mana": "{5}{B}{B}",
+  "flavor": "",
+  "uri": "https://scryfall.com/card/vow/132/toxrill-the-corrosive?utm_source=api",
+  "rarity": "mythic"
+ },
+ "hullbreaker": {
+  "name": "Hullbreaker Horror",
+  "set": "VOW",
+  "set_name": "Innistrad: Crimson Vow",
+  "num": "63",
+  "year": "2021",
+  "artist": "Svetlin Velinov",
+  "type": "Creature — Kraken Horror",
+  "oracle": "Flash\nThis spell can't be countered.\nWhenever you cast a spell, choose up to one —\n• Return target spell you don't control to its owner's hand.\n• Return target nonland permanent to its owner's hand.",
+  "pt": [
+   "7",
+   "8"
+  ],
+  "mana": "{5}{U}{U}",
+  "flavor": "",
+  "uri": "https://scryfall.com/card/vow/63/hullbreaker-horror?utm_source=api",
+  "rarity": "rare"
+ },
+ "island": {
+  "name": "Island",
+  "set": "DSK",
+  "set_name": "Duskmourn: House of Horror",
+  "num": "280",
+  "year": "2024",
+  "artist": "Leonardo Borazio",
+  "oracle": "",
+  "uri": "https://scryfall.com/card/dsk/280/island?utm_source=api"
+ }
+}

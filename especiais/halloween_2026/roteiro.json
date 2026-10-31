@@ -1,0 +1,242 @@
+{
+ "id": "especial_halloween_2026",
+ "titulo": "Innistrad × Duskmourn: O Julgamento do Horror",
+ "notas": "PT-BR (vozes das séries). 'quem': B=Burn, M=Mana, K=Conde, T=TUBO. 'fonte' = trecho da faixa gerada (s, antes de tempo/respiro). Sem 'fonte' = fala ainda sem voz (PRÉVIA). 'cena' liga a fala ao storyboard. 'so_ecra': fala só no ecrã (sem voz), para caber no tempo.",
+ "falas": [
+  {
+   "id": "K0a",
+   "quem": "K",
+   "cena": "abre_i",
+   "legenda": "Existem lugares onde os monstros vivem nas *sombras*."
+  },
+  {
+   "id": "K0b",
+   "quem": "K",
+   "cena": "abre_d",
+   "legenda": "E existem lugares... onde a própria *casa* quer matar-te."
+  },
+  {
+   "id": "B1",
+   "quem": "B",
+   "cena": "sofa1",
+   "legenda": "Julgamento do *horror*, mano! Innistrad contra Duskmourn!",
+   "fonte": [
+    0.0,
+    3.69
+   ]
+  },
+  {
+   "id": "M1",
+   "quem": "M",
+   "cena": "sofa1",
+   "legenda": "A EDHREC deu *três a dois* pra Duskmourn.",
+   "fonte": [
+    0.0,
+    3.86
+   ]
+  },
+  {
+   "id": "T1",
+   "quem": "T",
+   "cena": "tubo",
+   "legenda": "Recontagem autorizada. Tudo pode ser *calculado*."
+  },
+  {
+   "id": "B3",
+   "quem": "B",
+   "cena": "cat1",
+   "legenda": "*Emrakul*! Treze de mana e tentáculo pra todo lado!",
+   "fonte": [
+    8.84,
+    12.07
+   ],
+   "foco": "A"
+  },
+  {
+   "id": "M2",
+   "quem": "M",
+   "cena": "cat1",
+   "legenda": "Lê a carta: quando você conjura, você *controla o adversário* no próximo turno dele.",
+   "fonte": [
+    5.9,
+    10.76
+   ],
+   "foco": "A"
+  },
+  {
+   "id": "B4",
+   "quem": "B",
+   "cena": "cat1",
+   "legenda": "E o *Valgavoth*?!",
+   "fonte": [
+    12.63,
+    13.5
+   ],
+   "foco": "B"
+  },
+  {
+   "id": "M3",
+   "quem": "M",
+   "cena": "cat1",
+   "legenda": "Tava preso numa casa comum. Não fugiu: *aumentou a casa* até engolir o plano.",
+   "fonte": [
+    11.55,
+    16.29
+   ],
+   "foco": "B"
+  },
+  {
+   "id": "T2",
+   "quem": "T",
+   "cena": "veredito1",
+   "legenda": "Controla o seu turno. Ponto: *Innistrad*."
+  },
+  {
+   "id": "M4",
+   "quem": "M",
+   "cena": "cat2",
+   "legenda": "Innistrad é o monstro que você vê. Turno sem mágica... e o caçador vira *lobisomem*.",
+   "fonte": [
+    16.98,
+    22.0
+   ],
+   "foco": "A"
+  },
+  {
+   "id": "B5",
+   "quem": "B",
+   "cena": "cat2",
+   "legenda": "E o *Mindskinner* nem bate! Previne o dano!",
+   "fonte": [
+    14.15,
+    16.76
+   ],
+   "foco": "B"
+  },
+  {
+   "id": "M5",
+   "quem": "M",
+   "cena": "cat2",
+   "legenda": "Lê a carta: em vez do dano, você perde cartas do grimório. Ele não te machuca. *Te apaga.*",
+   "fonte": [
+    22.52,
+    28.26
+   ],
+   "foco": "B"
+  },
+  {
+   "id": "T3",
+   "quem": "T",
+   "cena": "veredito2",
+   "legenda": "*Wizards*: Duskmourn é o medo do que não se vê."
+  },
+  {
+   "id": "M6",
+   "quem": "M",
+   "cena": "cat3",
+   "legenda": "Duskmourn não tem mapa. O plano inteiro é *uma casa*.",
+   "fonte": [
+    28.65,
+    31.77
+   ],
+   "foco": "B"
+  },
+  {
+   "id": "B7",
+   "quem": "B",
+   "cena": "cat3",
+   "legenda": "E a carta é um *cômodo*! Destranca a porta, sai um demônio *seis por seis*!",
+   "fonte": [
+    21.15,
+    25.15
+   ],
+   "foco": "B"
+  },
+  {
+   "id": "T4",
+   "quem": "T",
+   "cena": "veredito3",
+   "legenda": "Dois a um, *Duskmourn*.",
+   "so_ecra": true
+  },
+  {
+   "id": "K1",
+   "quem": "K",
+   "cena": "cat4",
+   "legenda": "Arabella nos encara: porcelana rachada, ursos com dentes. *Eficaz.*",
+   "foco": "B"
+  },
+  {
+   "id": "K2",
+   "quem": "K",
+   "cena": "cat4",
+   "legenda": "Mas o vampiro nem nos olha. A lua lhe serve de *auréola*.",
+   "foco": "A"
+  },
+  {
+   "id": "K3",
+   "quem": "K",
+   "cena": "cat4",
+   "legenda": "Parecer: *Innistrad*. O medo que não nos olha é o mais elegante.",
+   "foco": "A"
+  },
+  {
+   "id": "T5",
+   "quem": "T",
+   "cena": "veredito4",
+   "legenda": "Dois a dois."
+  },
+  {
+   "id": "T6",
+   "quem": "T",
+   "cena": "cat5",
+   "legenda": "Desconforto, em *sal*. Top 100 da EDHREC: Innistrad, três. Duskmourn, *zero*."
+  },
+  {
+   "id": "B8",
+   "quem": "B",
+   "cena": "zero",
+   "legenda": "*ZERO*?!",
+   "fonte": [
+    25.55,
+    26.25
+   ]
+  },
+  {
+   "id": "T7",
+   "quem": "T",
+   "cena": "erro",
+   "legenda": "Três a dois, Innistrad. Ao contrário da EDHREC. *Erro de sistema.*"
+  },
+  {
+   "id": "T8",
+   "quem": "T",
+   "cena": "fecho_tubo",
+   "legenda": "Probabilidade calculada. Humanos, *imprevisíveis*."
+  },
+  {
+   "id": "B9",
+   "quem": "B",
+   "cena": "sofa2",
+   "legenda": "*Innistrad ou Duskmourn?* Qual desses mundos você sobreviveria a visitar?",
+   "fonte": [
+    26.84,
+    31.09
+   ]
+  },
+  {
+   "id": "M7",
+   "quem": "M",
+   "cena": "sofa2",
+   "legenda": "Comenta aí.",
+   "fonte": [
+    32.26,
+    33.36
+   ]
+  }
+ ],
+ "tts_pendente": {
+  "K": "[calm, dry, aristocratic] Existem lugares onde os monstros vivem nas sombras. [long pause] E existem lugares... onde a própria casa quer matar-te. [long pause] [calm, dry, aristocratic] Arabella nos encara: porcelana rachada, ursos com dentes. [deadpan] Eficaz. [long pause] [slow] Mas o vampiro nem nos olha. A lua lhe serve de auréola. [long pause] [deadpan] Parecer: Ínistrad. O medo que não nos olha é o mais elegante.",
+  "T": "[deadpan] Recontagem autorizada. Tudo pode ser calculado. [long pause] [deadpan] Controla o seu turno. Ponto: Ínistrad. [long pause] [deadpan] Wizards: Dâskmórn é o medo do que não se vê. [long pause] [deadpan] Dois a dois. [long pause] [deadpan] Desconforto, em sal. Top cem da é dê agá réc: Ínistrad, três. Dâskmórn, zero. [long pause] [deadpan] Três a dois, Ínistrad. Ao contrário da é dê agá réc. [pause] Erro de sistema. [long pause] [deadpan] Probabilidade calculada. Humanos, imprevisíveis."
+ }
+}
