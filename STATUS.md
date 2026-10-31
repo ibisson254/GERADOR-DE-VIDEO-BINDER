@@ -20,12 +20,12 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbit
 | Prompts Claude Project e ChatGPT | Texto pronto | `nucleo/prompts/` |
 | Instruções do projeto claude.ai | Aplicadas pelo fundador (31/10) | `nucleo/prompts/CLAUDE_PROJECT.md` |
 | Respostas Q1–Q3 aplicadas (nome Meta em Curto, Órbita sem fecho, Órbita e Lambe-lambe no repositório) | Concluído | `orbita/`, `lambe-lambe/`, constituição v1.4 |
-| Merge para `main` | Aguarda aprovação do fundador | — |
+| Merge para `main` | Preparado: pull request aberto, sem conflitos (a `main` está contida na branch) | GitHub, PR `consolidacao-estudio` → `main` |
 
 ## Depende do fundador
 
-1. Aprovar o merge de `consolidacao-estudio` para `main`.
-2. Enviar `comum/outro/outro_binder_916.mp4` (a regra do fecho aponta para um ficheiro que não está no repositório).
+1. Aprovar o pull request `consolidacao-estudio` → `main` (botão "Merge" no GitHub, ou pedir ao agente).
+2. Enviar `comum/outro/outro_binder_916.mp4` (a regra do fecho aponta para um ficheiro que não está no repositório). Origem: corte do fim do `ManaBurn_Ep5_Knacksaw_916.mp4` (a partir de 43,2 s), sem rótulo de série, entregue num chat do claude.ai por volta de 24–25/10; não está no Drive nem no projeto claude.ai. Alternativa sem custo: gerar a reconstrução que os episódios publicados já usam (`manaburn/episodios/ep09_dack/fecho_scanner.py`, 3,87 s, quadros reais do scanner). Não bloqueia o merge.
 
 ## Pendências técnicas (não bloqueiam a governação)
 
