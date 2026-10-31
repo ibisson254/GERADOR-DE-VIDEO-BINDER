@@ -18,6 +18,7 @@ Ponto de entrada para qualquer agente (Claude, ChatGPT ou outro). As instruçõe
    | `especial` | Especiais e homenagens | Pontual | constituição §14 + bíblias das séries envolvidas |
    | `orbita` | Órbita · Star Trek | Temática | `orbita/CONTEXTO.md` → `orbita/gerador/LEIA-ME.md` |
    | `lambe` / `post` | Lambe-lambe | Espontânea | `lambe-lambe/CONTEXTO.md` → skill `binder-posts-instagram` |
+   | `mestre` | Pequeno Mestre (em desenvolvimento) | Série infantil | `pequeno-mestre/PERFIL.md` → `pequeno-mestre/CONTEXTO.md` → `pequeno-mestre/assets/LEIA-ME.md` |
 
 6. `comum/historico.md` e `comum/easter_eggs.md`: não repetir tema nem egg.
 

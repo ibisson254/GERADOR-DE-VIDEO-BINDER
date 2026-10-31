@@ -7,6 +7,8 @@ Missão em curso: "Consolidação estrutural do BINDER Originals" (31/10/2026, 1
 
 Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbita (temática); Lambe-lambe (espontânea); especiais. Tudo o que está no repositório está aprovado e lançado; Halloween 2026 e Star Trek publicados. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
 
+Em desenvolvimento: **Pequeno Mestre** (`pequeno-mestre/`, palavra `mestre`), série infantil. Kit de assets v1 e bíblia prontos; nada publicável até o fundador decidir voz, nome da série, plataforma/duração e fecho (`pequeno-mestre/CONTEXTO.md` §10).
+
 ## Consolidação
 
 | Bloco | Estado | Onde |
@@ -28,6 +30,8 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbit
 
 Nada bloqueia a produção. Opcional: colar `nucleo/prompts/CHATGPT.md` nas instruções do projeto ou GPT do ChatGPT.
 
+Pequeno Mestre: aprovar e integrar a branch `pequeno-mestre/kit-v1` (PR); responder às seis questões de `pequeno-mestre/CONTEXTO.md` §10, a começar pela voz.
+
 ## Pendências técnicas (não bloqueiam a governação)
 
 - Motor v2 do Mana & Burn está só no projeto claude.ai (`claude/gerador-manaburn/`); o `process.py` do Ep. 09 importa módulos que faltam no repositório.
@@ -40,6 +44,20 @@ Nada bloqueia a produção. Opcional: colar `nucleo/prompts/CHATGPT.md` nas inst
 Produzir normalmente a partir da `main`: palavra de arranque → `AGENTS.md` → `nucleo/SHOWRUNNER.md`. Pendência técnica com mais impacto: subir o motor v2 do Mana & Burn (`claude/gerador-manaburn/` no projeto claude.ai) para `manaburn/`.
 
 ## Handoff
+
+```
+HANDOFF · 31/10/2026, 23:55 · Claude (projeto claude.ai "BINDER Originals — Showrunner Editorial")
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch pequeno-mestre/kit-v1 (PR para main, sem merge)
+Objetivo atual: criar a personagem Pequeno Mestre e deixá-la pronta para animar.
+Decisões tomadas nesta sessão:
+- Frente nova "Pequeno Mestre", em desenvolvimento (registada em nucleo/DECISOES.md: sim)
+Documentos consultados: AGENTS.md, STATUS.md, nucleo/CATALOGO_EDITORIAL.md, nucleo/SHOWRUNNER.md, nucleo/DECISOES.md, nucleo/modelos/*, conde/PERFIL.md, conde/CONTEXTO.md, constituição §7–§13.
+Alterações: pequeno-mestre/ (CONTEXTO.md, PERFIL.md, recortar.py, assets/ com LEIA-ME.md, 23 imagens e 17 recortes PNG); AGENTS.md (palavra mestre); nucleo/CATALOGO_EDITORIAL.md; nucleo/SHOWRUNNER.md (router); nucleo/DECISOES.md; series.yaml; STATUS.md.
+Pendentes: voz, nome da série, plataforma e duração, fecho do scanner em conteúdo infantil, bordões, tema do 1.º episódio (decide o fundador); poses A1, A3, A6 e braços C1–C5 (gera o fundador, se precisar).
+Próximo passo: com a voz aprovada, montar um teste de animação de recorte (E1 + A2 + kit de fala B1–B5) e o roteiro do 1.º episódio.
+```
+
+Handoff anterior:
 
 ```
 HANDOFF · 31/10/2026 · Claude

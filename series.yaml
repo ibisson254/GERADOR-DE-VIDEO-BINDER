@@ -86,3 +86,16 @@ series:
     identidade: lambe-lambe/CONTEXTO.md         # + skill binder-posts-instagram
     vozes: {}
     trilha: []
+
+  - slug: pequeno-mestre
+    nome: Pequeno Mestre (em desenvolvimento)
+    palavras: [mestre]
+    formato: reel_9x16                          # proposta; duração por definir
+    pasta: pequeno-mestre/
+    perfil: pequeno-mestre/PERFIL.md
+    identidade: pequeno-mestre/CONTEXTO.md
+    assets: pequeno-mestre/assets/              # kit v1; recortes PNG em assets/recortes/ (recortar.py)
+    vozes:
+      mestre: {fornecedor: elevenlabs, nome: null, voice_id: null, modelo: null, atempo: null}   # a definir pelo fundador; Voice Design, nunca clonar
+    trilha: []                                  # a definir
+    referencia: null

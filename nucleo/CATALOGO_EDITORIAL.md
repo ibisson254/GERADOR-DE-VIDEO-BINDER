@@ -16,6 +16,7 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Especial ou homenagem | Peça pontual ligada a um acontecimento, data ou pessoa; pode cruzar séries | Especiais |
 | Publicação temática | Peças de um universo temático com estilo visual próprio | Órbita |
 | Publicação espontânea | Peças de oportunidade, experimentais ou avulsas | Lambe-lambe |
+| Em desenvolvimento | Frente aprovada para criar, ainda sem peças publicáveis | Pequeno Mestre |
 
 ## Séries permanentes
 
@@ -104,6 +105,22 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Onde ficam | Especial de uma série: `<pasta da série>/episodios/espNN_<nome>/` · crossover: `especiais/<nome>/` |
 | Já produzidos | Homenagem a Sir Patrick Stewart (v1 `esp01_sir_patrick/`, não publicável; v2 `esp02_picard_v2/`) · Especial de Halloween 2026 Innistrad × Duskmourn (`especiais/halloween_2026/`, publicado) |
 | Relação com o BINDER Vision | Fecho do scanner, salvo exceção registada (ex.: homenagem a Sir Patrick) |
+
+## Em desenvolvimento
+
+### Pequeno Mestre
+
+| Campo | Valor |
+|---|---|
+| Classificação | Série infantil · episódio de série |
+| Estado | Em desenvolvimento (31/10/2026): visual e kit de assets v1 prontos; sem voz, sem formato fechado, sem peças publicáveis |
+| Objetivo editorial | Apresentar Magic a crianças pequenas de forma simples e carinhosa; os pais que jogam põem para os filhos verem |
+| Identidade | Menino autista de 4–5 anos, black power preto, camiseta de listras verde e branca, fones azuis, bolsinha laranja com cordão creme de infinitos em arco-íris; ensina com os bichos de brinquedo (leão e dinossauro favoritos); sala neutra; som calmo |
+| Documentação | Bíblia: `pequeno-mestre/CONTEXTO.md` · Perfil: `pequeno-mestre/PERFIL.md` · Assets: `pequeno-mestre/assets/LEIA-ME.md` |
+| Regras específicas | Autismo representado só por comportamento, nunca como piada ou sofrimento; regras do jogo simplificadas mas corretas; nada de dados, fotos, nome ou voz de crianças reais |
+| Território | Primeiros passos do jogo: carta, criatura, custo de mana, atacar e bloquear, cores, habilidades simples |
+| Conteúdo produzido | Nenhum ainda (formato proposto: Reel 9:16) |
+| Relação com o BINDER Vision | Em aberto: decidir se o fecho do scanner entra num conteúdo para crianças |
 
 ## Frente nova
 
