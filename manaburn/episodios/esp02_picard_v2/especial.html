@@ -1,0 +1,457 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Bangers;src:url(node_modules/@fontsource/bangers/files/bangers-latin-400-normal.woff2)}
+@font-face{font-family:Comic;font-weight:700;src:url(node_modules/@fontsource/comic-neue/files/comic-neue-latin-700-normal.woff2)}
+@font-face{font-family:Geist;font-weight:700;src:url(node_modules/geist/dist/fonts/geist-sans/Geist-Bold.woff2)}
+@font-face{font-family:Geist;font-weight:500;src:url(node_modules/geist/dist/fonts/geist-sans/Geist-Medium.woff2)}
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#050A10}
+#tv{position:absolute;inset:0;transform-origin:540px 960px}
+#stage{position:absolute;inset:0;overflow:hidden;background:#3a352b}
+svg{position:absolute;left:0;top:0}
+#sub{position:absolute;left:70px;right:70px;bottom:440px;text-align:center;font:700 47px/1.16 Geist;color:#fff;
+  -webkit-text-stroke:10px #000;paint-order:stroke fill;letter-spacing:.2px}
+#sub .k{color:#FFD84A}
+#bug{position:absolute;left:60px;top:150px;opacity:.9}
+#bug .a{display:inline-block;background:rgba(20,18,16,.78);color:#F2EBDA;font:400 34px/1 Bangers;letter-spacing:2px;padding:7px 14px 5px}
+#bug .b{display:block;width:max-content;background:#2E8C8A;color:#fff;font:700 17px/1 Geist;letter-spacing:1.5px;padding:5px 14px 4px}
+#cred{position:absolute;left:60px;width:max-content;max-width:900px;top:246px;font:500 17px/1.35 Geist;background:rgba(10,8,6,.42);padding:5px 10px;border-radius:6px;color:#F5EEDC;text-shadow:0 1px 3px #000,0 0 2px #000}
+#logo{position:absolute;inset:0;opacity:0}
+#logo .cta{position:absolute;left:0;right:0;top:1150px;text-align:center;font:700 42px/1.3 Comic;color:#F2EBDA}
+#logo .cta img{display:block;margin:0 auto 18px;height:110px}
+#ins{position:absolute;inset:0;pointer-events:none}
+#ins img{position:absolute;width:300px;border-radius:14px;box-shadow:0 10px 0 rgba(0,0,0,.45),0 0 0 5px #221C17;transform-origin:50% 50%;opacity:0}
+#logo .show{position:absolute;left:0;right:0;top:560px;text-align:center;font:400 54px/1 Bangers;letter-spacing:3px;
+  color:#E0B43A;-webkit-text-stroke:4px #111;paint-order:stroke fill}
+#ovl{position:absolute;left:50px;right:50px;top:340px;text-align:center;pointer-events:none}
+#ovl .d{font:700 60px/1.1 Geist;letter-spacing:4px;color:#FFD84A;-webkit-text-stroke:7px #050A10;paint-order:stroke fill}
+#ovl .d2{margin-top:12px;font:700 30px/1.2 Geist;letter-spacing:2px;color:#F4F1E8;-webkit-text-stroke:5px #050A10;paint-order:stroke fill}
+#ovl .q{display:inline-block;font:700 66px/1.1 Geist;color:#FFD84A;-webkit-text-stroke:8px #050A10;paint-order:stroke fill;transform-origin:50% 50%}
+#ovl .nums{display:inline-block;text-align:left}
+#ovl .n{font:700 44px/1.25 Geist;color:#F4F1E8;-webkit-text-stroke:7px #050A10;paint-order:stroke fill}
+#ovl .n b{color:#FFD84A;font-size:62px}
+</style></head>
+<body>
+<div id="tv">
+ <div id="stage">
+  <svg id="world" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+  <svg id="shot2" width="1080" height="1920" viewBox="0 0 1080 1920" style="display:none"></svg>
+  <svg id="fx" width="1080" height="1920"></svg>
+  <div id="bug"><span class="a">MANA &amp; BURN</span><span class="b">PLANTÃO DO BANIMENTO</span></div>
+  <div id="ins"></div>
+  <div id="ovl"></div>
+  <div id="sub"></div>
+  <div id="cred">Na TV: Q, Stacking the Deck (Magic: The Gathering | Star Trek, 2026), nº 165. Arte: Ryan Valle.<br>© Wizards of the Coast. Star Trek © CBS.</div>
+ </div>
+</div>
+<svg id="dot" width="1080" height="1920" style="position:absolute;left:0;top:0"></svg>
+<div id="logo">
+  <div class="show">MANA &amp; BURN</div>
+  <svg id="logosvg" width="1080" height="1920" style="position:absolute;left:0;top:0"></svg>
+  
+</div>
+<script src="data.js"></script>
+<script src="episode.js"></script>
+<script>
+const LINES = DATA.lines, T_SLAM = DATA.T_SLAM, T_END = DATA.T_END, T_CLICK = T_SLAM - 0.16;
+const BLINK_M=[...Array(12)].map((_,k)=>2.1+k*3.9), BLINK_B=[...Array(12)].map((_,k)=>1.3+k*4.4);
+const CARD={x:742,y:554.6,w:136.3,h:190};
+const K='#221C17';
+const S=(a)=>`stroke="${K}" stroke-width="${a||4.5}" stroke-linejoin="round" stroke-linecap="round"`;
+function tube(pts,col,w,ol=9){const d='M'+pts.map(p=>p.join(' ')).join(' L ');
+  return `<path d="${d}" fill="none" stroke="${K}" stroke-width="${w+ol}" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="${d}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;}
+const SKM='#D9A982', SKB='#E2AE88';
+const R=(n)=>{let x=Math.sin(n*12.9898)*43758.5453;return x-Math.floor(x);};   // aleatório fixo
+function dots(cx,cy,w,h,n,col,r=2.2,seed=1){let s='';for(let i=0;i<n;i++){s+=`<circle cx="${(cx+(R(seed+i)-.5)*w).toFixed(1)}" cy="${(cy+(R(seed+i+99)-.5)*h).toFixed(1)}" r="${r*(.6+R(seed+i+7)*.8)}" fill="${col}"/>`;}return s;}
+
+const defs = `<defs>
+ <filter id="rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.032" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5.5"/></filter>
+ <filter id="rough2" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="9"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="2"/><feColorMatrix values="0 0 0 0 0.18  0 0 0 0 0.15  0 0 0 0 0.1  0 0 0 .55 0"/></filter>
+ <filter id="blotch"><feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="21"/><feColorMatrix values="0 0 0 0 0.32  0 0 0 0 0.27  0 0 0 0 0.13  0 0 0 1.3 -0.55"/></filter>
+ <pattern id="wall" width="72" height="10" patternUnits="userSpaceOnUse"><rect width="72" height="10" fill="#B3A982"/><rect width="34" height="10" fill="#A79C73"/><rect x="34" width="2" height="10" fill="#8F855E"/></pattern>
+ <pattern id="carpet" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#6B6045"/><circle cx="4" cy="5" r="1.4" fill="#5A5038"/><circle cx="11" cy="11" r="1.4" fill="#776B4E"/></pattern>
+ <pattern id="plaid" width="34" height="34" patternUnits="userSpaceOnUse"><rect width="34" height="34" fill="#A4473B"/>
+   <rect x="0" y="12" width="34" height="8" fill="#6E2A24" opacity=".8"/><rect x="13" y="0" width="8" height="34" fill="#6E2A24" opacity=".8"/>
+   <rect x="0" y="29" width="34" height="2" fill="#2a1a14" opacity=".45"/><rect x="29" y="0" width="2" height="34" fill="#2a1a14" opacity=".45"/></pattern>
+ <pattern id="velvet" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#66704A"/><circle cx="5" cy="6" r="1.5" fill="#58613E"/><circle cx="15" cy="15" r="1.5" fill="#737D55"/></pattern>
+ <pattern id="buzz" width="11" height="11" patternUnits="userSpaceOnUse"><rect width="11" height="11" fill="#C25A33"/><circle cx="3" cy="3" r="1.5" fill="#8E3A1C"/><circle cx="8" cy="8" r="1.5" fill="#8E3A1C"/></pattern>
+ <clipPath id="cardclip"><rect x="${CARD.x}" y="${CARD.y}" width="${CARD.w}" height="${CARD.h}" rx="6"/></clipPath>
+ <clipPath id="cardclip2"><rect x="245" y="703" width="373" height="520" rx="16"/></clipPath>
+ <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>`;
+
+// ---------- sala gasta ----------
+const room = `
+ <rect x="-400" y="-260" width="1880" height="1270" fill="url(#wall)"/>
+ <rect x="-400" y="-260" width="1880" height="1270" filter="url(#blotch)" opacity=".75"/>
+ <!-- infiltração escorrendo do teto -->
+ <path d="M700 -80 Q760 40 742 150 Q735 210 760 260 Q730 250 718 190 Q700 120 660 60 Q640 0 600 -80 Z" fill="#7E7350" opacity=".45"/>
+ <path d="M-40 -80 L260 -80 Q240 20 180 60 Q120 100 60 90 Q0 80 -40 40 Z" fill="#7E7350" opacity=".4"/>
+ <!-- papel de parede descascando -->
+ <path d="M560 170 L650 160 L672 240 L630 300 L590 290 L548 240 Z" fill="#D8CFB4" ${S(3.5)}/>
+ <path d="M650 160 Q700 175 690 215 Q672 230 672 240 Z" fill="#C9BE93" ${S(3.5)}/>
+ <path d="M566 200 l20 6 M600 250 l24 -8 M582 272 l10 10" stroke="#9E957A" stroke-width="3"/>
+ <!-- pôster rasgado de dragão (desenho próprio), preso com fita -->
+ <g transform="rotate(-4 415 225)"><path d="M330 110 L500 104 L506 330 L470 340 L452 318 L336 324 Z" fill="#E3D8BA" ${S(4)}/>
+  <path d="M352 290 Q372 210 420 190 Q470 172 486 140 Q470 200 446 222 Q470 230 480 260 Q440 250 420 270 Q400 290 352 290 Z" fill="#A8473A" ${S(3.5)}/>
+  <path d="M470 150 l10 -22 l4 26 M440 200 q12 4 18 -4" stroke="${K}" stroke-width="3" fill="none"/>
+  <path d="M486 140 q20 4 30 -10 q-6 18 -24 22" fill="#D9A24A" ${S(2.5)}/>
+  <text x="418" y="132" text-anchor="middle" font-family="Bangers" font-size="22" fill="#5A3A22">DRAGÃO</text>
+  <rect x="318" y="100" width="44" height="14" fill="#C9C3A8" opacity=".9" transform="rotate(-20 340 107)"/><rect x="478" y="96" width="44" height="14" fill="#C9C3A8" opacity=".9" transform="rotate(18 500 103)"/></g>
+ <!-- lâmpada pelada no fio -->
+ <path d="M770 -270 L770 128" stroke="${K}" stroke-width="3"/><rect x="760" y="122" width="20" height="16" fill="#6B6A63" ${S(3)}/>
+ <path d="M752 140 Q752 182 770 186 Q788 182 788 140 Z" fill="#EFE6B8" ${S(3.5)}/>
+ <!-- rachadura -->
+ <path d="M120 -40 L150 40 L132 90 L176 160 L160 220 L200 300 M150 40 L190 70 M176 160 L214 150" fill="none" stroke="${K}" stroke-width="3"/>
+ <!-- marca de quadro que caiu + prego -->
+ <rect x="880" y="120" width="120" height="150" fill="#C3BA94" opacity=".6"/><circle cx="940" cy="112" r="5" fill="#555" ${S(2.5)}/>
+ <!-- quadro torto com vidro rachado -->
+ <g transform="rotate(7 370 485)"><rect x="318" y="430" width="104" height="104" fill="#6E4A2A" ${S(5)}/>
+  <rect x="330" y="442" width="80" height="80" fill="#C98A45"/><rect x="330" y="488" width="80" height="34" fill="#4E7392"/>
+  <circle cx="368" cy="486" r="13" fill="#E2C25A"/><path d="M344 522 Q350 492 358 472 M358 472 q-14 2 -20 10 M358 472 q14 -2 20 8" stroke="#2A2218" stroke-width="3.5" fill="none"/>
+  <path d="M334 446 L372 494 L406 470 M372 494 L360 520" stroke="#F2EEDC" stroke-width="2" fill="none" opacity=".8"/></g>
+ <!-- calendário velho -->
+ <g transform="rotate(-6 84 530)"><rect x="40" y="470" width="88" height="118" fill="#E8DFC4" ${S(4)}/>
+  <rect x="40" y="470" width="88" height="32" fill="#A8473A" ${S(4)}/>
+  <text x="84" y="495" text-anchor="middle" font-family="Bangers" font-size="24" fill="#F2EBDA">2019</text>
+  ${[0,1,2,3].map(r=>[0,1,2,3].map(c=>`<rect x="${50+c*19}" y="${512+r*17}" width="12" height="9" fill="#B9AA8C"/>`).join('')).join('')}
+  <path d="M128 560 L112 588 L128 588 Z" fill="#CFC5A6" ${S(3)}/></g>
+ <!-- tomada com benjamim -->
+ <rect x="1040" y="930" width="34" height="46" rx="4" fill="#E0D8C0" ${S(3.5)}/><rect x="1032" y="944" width="50" height="20" fill="#F0EADA" ${S(3.5)}/>
+ <path d="M1040 964 Q1000 990 1010 1040 M1064 964 Q1076 1010 1050 1060" stroke="${K}" stroke-width="4" fill="none"/>
+ <!-- rodapé quebrado -->
+ <path d="M-400 985 L520 985 L540 998 L560 985 L1480 985 L1480 1012 L-400 1012 Z" fill="#5E3E22" ${S(4)}/>
+ <path d="M520 985 L540 998 L560 985" fill="#3a352b"/>
+ <!-- carpete encardido -->
+ <rect x="-400" y="1012" width="1880" height="820" fill="url(#carpet)"/>
+ <ellipse cx="420" cy="1420" rx="160" ry="34" fill="#4F462F" opacity=".5"/>
+ <!-- caixa de pizza velha e lata amassada -->
+ <g transform="rotate(-8 820 1360)"><path d="M700 1330 L930 1322 L940 1400 L708 1410 Z" fill="#C9A46A" ${S(4)}/>
+  <path d="M716 1338 L920 1331" stroke="#9E7B45" stroke-width="3"/><circle cx="790" cy="1372" r="14" fill="#B5543A" opacity=".7"/><circle cx="850" cy="1380" r="9" fill="#B5543A" opacity=".6"/></g>
+ <path d="M980 1300 l34 -6 l8 18 l-12 16 l-26 2 Z" fill="#3E7A4E" ${S(3.5)}/>
+ <ellipse cx="300" cy="1140" rx="120" ry="26" fill="#4F462F" opacity=".55"/><ellipse cx="840" cy="1250" rx="90" ry="20" fill="#4F462F" opacity=".5"/>
+ ${dots(520,1170,700,180,40,'#8C7F58',2,5)}
+ <path d="M700 1180 q20 -18 46 -6 q14 10 34 0 l6 22 q-30 14 -52 4 q-20 -6 -34 4 Z" fill="#8A8F9A" ${S(3.5)}/>
+ <!-- caixas de booster amassadas -->
+ <g>${[['#3E6E70',780,-1.5],['#B06A2E',890,1],['#5A4772',1000,-.5]].map(([c,y,r],i)=>`
+  <g transform="rotate(${r} 888 ${y+55})"><rect x="${738+i*4}" y="${y}" width="300" height="110" rx="4" fill="${c}" ${S(5)}/>
+  <path d="M${1000+i*4} ${y} l38 0 l0 30 Z" fill="#E8DFC4" ${S(3.5)}/>
+  <text x="${880+i*4}" y="${y+72}" text-anchor="middle" font-family="Bangers" font-size="44" letter-spacing="4" fill="#E9D9A8" stroke="${K}" stroke-width="3" paint-order="stroke">BOOSTER</text>
+  <path d="M${770+i*4} ${y+30} l8 16 l18 2 l-13 12 l4 18 l-17 -9 l-17 9 l4 -18 l-13 -12 l18 -2 Z" fill="#D9B44A" ${S(3)}/></g>`).join('')}</g>`;
+
+const tvSmall = `
+ <image href="tv_asset.png" x="640" y="518" width="420" height="266"/>`;
+const tvSmallLine = `<rect x="641" y="519" width="418" height="264" rx="4" fill="none" ${S(5)}/>`;
+const tvSmallCard = `<image href="${EP.card.img}" x="${CARD.x}" y="${CARD.y}" width="${CARD.w}" height="${CARD.h}" clip-path="url(#cardclip)"/>`;
+
+const couchBack = `
+ <path d="M58 900 L60 694 Q56 642 112 640 L648 636 Q704 642 702 692 L700 900 Z" fill="url(#velvet)" ${S(6)}/>
+ <path d="M96 880 L98 700 Q98 668 136 668 L350 670 Q388 672 386 708 L384 880 Z" fill="#717C51" ${S(5)}/>
+ <path d="M378 880 L378 706 Q378 668 418 668 L630 670 Q668 672 666 710 L664 880 Z" fill="#717C51" ${S(5)}/>
+ <!-- rasgo com espuma -->
+ <path d="M520 700 L548 692 L566 716 L556 742 L524 744 L512 722 Z" fill="#E2D49C" ${S(4)}/>
+ <path d="M522 712 q8 -10 16 0 q8 -10 16 2 M524 730 q8 -8 16 0 q8 -8 14 0" stroke="#B9A96E" stroke-width="3" fill="none"/>
+ ${dots(240,780,260,160,14,'#5A643C',3,11)}
+ <!-- manta caindo -->
+ <path d="M62 650 L208 646 L196 760 L150 905 L64 905 Z" fill="#D9CDAE" ${S(5)}/>
+ ${[[78,662,'#9E4A3C'],[124,660,'#4E7A55'],[170,660,'#BC9A44'],[80,708,'#4A6488'],[126,706,'#B9788C'],[168,706,'#9E4A3C'],[80,754,'#BC9A44'],[124,752,'#4A6488'],[80,800,'#4E7A55'],[118,800,'#B5653A'],[80,846,'#B9788C']].map(([x,y,c],i)=>`<rect x="${x}" y="${y}" width="34" height="34" rx="5" fill="${c}" stroke="#D9CDAE" stroke-width="4" transform="rotate(${(R(i)-.5)*10} ${x+17} ${y+17})"/>`).join('')}`;
+
+const couchFront = `
+ <path d="M20 802 Q22 758 74 760 Q130 758 128 804 L126 1062 L22 1060 Z" fill="url(#velvet)" ${S(6)}/>
+ <path d="M632 800 Q634 760 686 760 Q742 762 740 804 L738 1060 L634 1062 Z" fill="url(#velvet)" ${S(6)}/>
+ <!-- fita silver tape em X no braço -->
+ <path d="M650 800 L722 860 M722 800 L650 860" stroke="#AEADA4" stroke-width="20"/><path d="M650 800 L722 860 M722 800 L650 860" stroke="${K}" stroke-width="2" opacity=".5"/>
+ <path d="M110 870 Q380 862 650 870 L648 956 L112 958 Z" fill="#7B8657" ${S(5)}/>
+ <path d="M380 872 L382 952" stroke="${K}" stroke-width="4"/>
+ <path d="M104 946 L656 944 L654 1046 L106 1050 Z" fill="#59623D" ${S(6)}/>
+ <path d="M200 960 q60 30 140 6" stroke="#4A5232" stroke-width="5" fill="none"/>
+ <rect x="40" y="1058" width="26" height="26" fill="#3A2614" ${S(4)}/><rect x="694" y="1058" width="26" height="24" fill="#3A2614" ${S(4)}/>`;
+
+// ---------- MANA ----------
+function manaLegs(){ return tube([[208,905],[204,965],[200,1092]],'#4E5F78',44)+tube([[264,905],[268,965],[272,1092]],'#4E5F78',44)+
+  `<path d="M190 962 q14 -8 28 0 q-14 10 -28 0 Z" fill="${SKM}" ${S(3)}/>
+   <path d="M156 1112 Q160 1092 194 1094 Q228 1094 228 1114 Q206 1128 156 1112 Z" fill="#CFC8B4" ${S(5)}/><path d="M246 1112 Q250 1092 284 1094 Q318 1094 318 1114 Q296 1128 246 1112 Z" fill="#CFC8B4" ${S(5)}/>
+   <path d="M176 1104 l26 0 M266 1104 l26 0" stroke="${K}" stroke-width="3"/><path d="M160 1116 l60 2 M250 1116 l60 2" stroke="#8E8670" stroke-width="3"/>`; }
+function manaTorso(){ return `
+  <path d="M170 652 Q158 600 200 594 L272 592 Q314 602 302 652 Z" fill="#9C7330" ${S(5)}/>
+  <path d="M162 624 Q236 600 310 620 L304 902 Q234 918 168 904 Z" fill="#B98A3A" ${S(6)}/>
+  <ellipse cx="270" cy="760" rx="18" ry="12" fill="#8E6A2C" opacity=".7"/><ellipse cx="196" cy="690" rx="10" ry="7" fill="#8E6A2C" opacity=".7"/>
+  <path d="M196 802 L276 800 L274 858 L198 860 Z" fill="#A87D33" ${S(4)}/>
+  <path d="M222 640 L216 704 M250 640 L256 696" stroke="${K}" stroke-width="3.5"/><path d="M216 704 l-4 8 M216 704 l4 9" stroke="${K}" stroke-width="2.5"/>`; }
+function manaHeadBack(){ return `
+  <path d="M170 470 Q144 600 154 664 L204 662 Q190 590 196 535 Z" fill="#5A3A22" ${S(5)}/>
+  <path d="M300 470 Q326 600 316 666 L268 662 Q280 590 276 535 Z" fill="#5A3A22" ${S(5)}/>
+  <path d="M164 560 l6 60 M176 590 l2 50 M306 560 l-4 70 M292 600 l2 50" stroke="#3A2414" stroke-width="2.5"/>
+  <path d="M220 578 L250 578 L252 614 L218 614 Z" fill="${SKM}" ${S(4)}/><path d="M233 596 q5 4 0 10" stroke="${K}" stroke-width="2.5" fill="none"/>`; }
+function manaHead(st){
+  const lk={tv:[5,1],other:[5,1],cam:[0,0],up:[1,-5]}[st.look]||[0,0];
+  const eye = st.blink ? `<path d="M194 521 Q210 528 226 521" stroke="${K}" stroke-width="4.5" fill="none"/>`
+   : `<ellipse cx="210" cy="521" rx="15" ry="12" fill="#E9E1C8" ${S(3.5)}/><circle cx="${210+lk[0]}" cy="${523+lk[1]}" r="4.5" fill="${K}"/>
+      <path d="M193 516 Q210 503 227 516 L227 504 L193 504 Z" fill="${SKM}"/><path d="M193 517 Q210 508 227 517" stroke="${K}" stroke-width="4.5" fill="none"/>
+      <path d="M216 515 l6 4" stroke="#B4544A" stroke-width="1.5"/>`;
+  const brow = st.brow==='up' ? `<path d="M193 490 Q210 480 229 489" stroke="${K}" stroke-width="5" fill="none"/>`
+                              : `<path d="M193 499 Q208 494 229 498" stroke="${K}" stroke-width="5" fill="none"/>`;
+  const mouth = {closed:`<path d="M214 580 Q230 584 248 575" stroke="${K}" stroke-width="4" fill="none"/>`,
+    mid:`<path d="M216 574 Q232 571 247 574 Q244 586 231 587 Q218 586 216 574 Z" fill="#4A1A16" ${S(3.5)}/>`,
+    open:`<path d="M214 570 Q232 566 250 570 Q247 594 232 595 Q216 594 214 570 Z" fill="#4A1A16" ${S(3.5)}/><path d="M220 572 L242 572 L240 578 L222 578 Z" fill="#E2D9B8"/>`}[st.mouth];
+  return `<g transform="translate(0 ${st.bob?-4:0}) rotate(${st.bob?-1.5:0} 236 520)"><path d="M176 500 Q172 436 236 434 Q298 436 296 506 Q298 566 274 590 Q236 606 204 590 Q176 566 176 500 Z" fill="${SKM}" ${S(5.5)}/>
+   <path d="M194 532 Q210 540 226 532 M197 538 Q210 546 223 538" stroke="#9C6E52" stroke-width="2.5" fill="none"/>
+   ${eye}${brow}
+   <path d="M238 522 Q256 556 240 566 Q232 568 230 562" stroke="${K}" stroke-width="4.5" fill="none"/>
+   ${mouth}
+   ${dots(232,600,40,12,14,'#4A3424',1.6,31)}
+   <circle cx="196" cy="560" r="4" fill="#C2665A"/><circle cx="268" cy="548" r="3.5" fill="#C2665A"/><circle cx="204" cy="478" r="3" fill="#C2665A"/>
+   <path d="M236 462 Q270 456 300 470 Q310 545 292 592 Q266 562 258 526 Q250 494 236 490 Z" fill="#5A3A22" ${S(5)}/>
+   <path d="M248 476 l14 60 M264 470 l16 80 M282 472 l8 70" stroke="#3A2414" stroke-width="2.5"/>
+   <path d="M170 488 Q176 472 198 470 Q186 502 178 522 Z" fill="#5A3A22" ${S(4.5)}/>
+   <path d="M171 484 Q172 402 236 400 Q298 404 300 484 Z" fill="#4E7048" ${S(6)}/>
+   <path d="M262 420 q10 -6 16 4 q-8 8 -16 -4 Z" fill="#2C3A27" ${S(2.5)}/>
+   <path d="M164 466 Q236 458 306 468 L304 496 Q236 488 166 496 Z" fill="#3E5A3A" ${S(5)}/>
+   ${[0,1,2,3,4,5,6,7,8,9].map(i=>`<path d="M${178+i*13} 470 L${177+i*13} 490" stroke="#2F4530" stroke-width="2.5"/>`).join('')}</g>`; }
+function manaArms(pose,clickOn){
+  const sl='#B98A3A', hand=(x,y,r=19)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${SKM}" ${S(4.5)}/>`;
+  const chips=(x,y)=>`<g transform="rotate(-10 ${x} ${y})"><path d="M${x-36} ${y-44} L${x+34} ${y-48} L${x+30} ${y+44} L${x-30} ${y+42} Z" fill="#B7562E" ${S(4.5)}/>
+     <path d="M${x-28} ${y-12} L${x+28} ${y-16} L${x+28} ${y+10} L${x-28} ${y+12} Z" fill="#C9A044" ${S(3.5)}/></g>`;
+  let L = tube([[172,648],[146,760],[172,858]],sl,40) + chips(150,852) + hand(174,858), Rr;
+  if(pose==='finger') Rr = tube([[298,648],[332,742],[312,656]],sl,40) + `<path d="M306 644 L304 606 Q311 598 318 606 L318 644 Z" fill="${SKM}" ${S(4.5)}/>` + hand(312,656);
+  else if(pose==='chip') Rr = tube([[298,648],[336,730],[272,612]],sl,40) + hand(270,612) + `<path d="M246 600 q12 -12 24 -2 q-10 12 -24 2 Z" fill="#D8B44A" ${S(3.5)}/>`;
+  else if(pose==='remote') Rr = tube([[298,648],[318,700],[300,730]],sl,44) + `<g transform="rotate(-12 300 700)"><rect x="276" y="640" width="48" height="96" rx="10" fill="#2A2926" ${S(4.5)}/>
+       <path d="M278 690 L322 690" stroke="#AEADA4" stroke-width="10"/>
+       <circle cx="300" cy="656" r="7" fill="${clickOn?'#FF3B30':'#6A1F1F'}" ${S(2.5)}/>${clickOn?'<circle cx="300" cy="656" r="24" fill="#FF3B30" opacity=".35"/>':''}
+       ${[0,1].map(r=>[0,1].map(c=>`<rect x="${286+c*18}" y="${702+r*14}" width="10" height="8" rx="2" fill="#7E7C74"/>`).join('')).join('')}</g>` + hand(300,726,29);
+  else Rr = tube([[298,648],[322,760],[284,868]],sl,40) + hand(284,868);
+  return L+Rr; }
+
+// ---------- BURN ----------
+function burnLegs(){ const leg=(x1,x2)=>tube([[x1,905],[x2,962]],'#9F8C5E',60)+tube([[x2,985],[x2-4,1090]],SKB,34)+
+   `<path d="M${x2-4} 1000 l-6 5 M${x2+6} 1018 l6 6 M${x2-8} 1040 l-6 4 M${x2+4} 1060 l6 5" stroke="${K}" stroke-width="2.5"/>`;
+  return leg(450,440)+leg(522,532)+
+  `<path d="M392 1108 Q394 1096 430 1098 Q468 1098 470 1110 Q440 1124 392 1108 Z" fill="#3A5C9A" ${S(4)}/><path d="M494 1108 Q496 1096 532 1098 Q570 1098 572 1110 Q540 1124 494 1108 Z" fill="#3A5C9A" ${S(4)}/>
+   <ellipse cx="432" cy="1098" rx="25" ry="10" fill="${SKB}" ${S(4)}/><ellipse cx="530" cy="1098" rx="25" ry="10" fill="${SKB}" ${S(4)}/>
+   <path d="M416 1106 L432 1094 L448 1106 M514 1106 L530 1094 L546 1106" stroke="#E6DEC4" stroke-width="5" fill="none"/>`; }
+function burnTorso(){ return `
+  <path d="M380 726 Q486 692 590 724 Q618 822 586 908 Q484 928 386 906 Q352 822 380 726 Z" fill="url(#plaid)" ${S(6)}/>
+  <path d="M446 714 Q486 740 524 714 L536 908 Q486 918 434 908 Z" fill="#E1D7BB" ${S(5)}/>
+  <path d="M470 780 q14 -10 22 4 q-4 16 -18 10 q-12 -4 -4 -14 Z" fill="#B44A36" opacity=".8"/><circle cx="500" cy="800" r="4" fill="#B44A36" opacity=".8"/>
+  <path d="M446 714 L466 752 L452 760 Z M524 714 L504 752 L518 760 Z" fill="url(#plaid)" ${S(4)}/>
+  <path d="M456 684 L514 684 L516 724 L454 724 Z" fill="${SKB}" ${S(4)}/>`; }
+function burnFace(st,cx,cy,sc){ // cabeça do Burn em qualquer lugar (usada no plano da TV)
+  const lk={tv:[6,0],other:[-6,1],cam:[0,0],up:[0,-6],screen:[-7,6],left:[-8,1]}[st.look]||[0,0];
+  const eyes = st.blink ? `<path d="M448 627 Q462 634 476 627 M494 627 Q508 634 522 627" stroke="${K}" stroke-width="4.5" fill="none"/>`
+   : `<ellipse cx="462" cy="625" rx="15" ry="14" fill="#E9E1C8" ${S(3.5)}/><ellipse cx="509" cy="624" rx="14" ry="15" fill="#E9E1C8" ${S(3.5)}/>
+      <circle cx="${462+lk[0]}" cy="${626+lk[1]}" r="5" fill="${K}"/><circle cx="${509+lk[0]}" cy="${625+lk[1]}" r="5" fill="${K}"/>`;
+  const brows = {angry:`<path d="M442 598 L479 608 M528 596 L492 607" stroke="${K}" stroke-width="9"/>`,
+    up:`<path d="M443 593 Q460 580 479 590 M492 589 Q511 579 528 592" stroke="${K}" stroke-width="9" fill="none"/>`,
+    normal:`<path d="M443 601 Q460 598 479 602 M492 602 Q510 597 528 601" stroke="${K}" stroke-width="9" fill="none"/>`}[st.brow];
+  const mouth = {closed:`<path d="M455 683 Q486 692 516 679" stroke="${K}" stroke-width="4.5" fill="none"/>`,
+    mid:`<path d="M455 674 Q486 670 515 674 Q511 702 486 704 Q460 702 455 674 Z" fill="#4A1A16" ${S(4.5)}/><ellipse cx="486" cy="695" rx="12" ry="5" fill="#C86A62"/><path d="M466 675 L478 675 L477 682 L467 682 Z" fill="#E2D9B8"/>`,
+    open:`<path d="M449 667 Q486 661 521 667 Q517 717 486 720 Q453 717 449 667 Z" fill="#4A1A16" ${S(4.5)}/>
+          <path d="M456 669 L476 669 L475 680 L457 680 Z M484 669 L500 669 L500 678 L485 679 Z M506 669 L514 669 L513 676 L506 676 Z" fill="#E2D9B8"/><ellipse cx="486" cy="707" rx="15" ry="6" fill="#C86A62"/>`}[st.mouth];
+  const sweat = st.mouth==='open' && st.brow==='angry' ? `<path d="M560 590 q8 14 0 20 q-8 -6 0 -20 Z" fill="#BFE0E8" ${S(2.5)}/>` : '';
+  return `<g transform="translate(${cx-485*sc} ${cy-630*sc+(st.bob?-5:0)}) scale(${sc}) rotate(${st.bob?1.5:0} 485 640)">
+   <ellipse cx="404" cy="638" rx="15" ry="22" fill="${SKB}" ${S(4.5)}/><ellipse cx="567" cy="632" rx="12" ry="18" fill="${SKB}" ${S(4.5)}/>
+   <path d="M406 640 Q402 556 486 548 Q566 552 564 636 Q566 708 486 712 Q410 710 406 640 Z" fill="${SKB}" ${S(6)}/>
+   ${dots(486,690,120,40,40,'#8A5E44',1.6,51)}
+   <path d="M406 614 Q406 548 486 546 Q562 548 564 612 Q540 590 486 588 Q430 590 406 614 Z" fill="url(#buzz)" ${S(5)}/>
+   <path d="M446 642 Q462 650 478 642 M494 641 Q509 649 524 641" stroke="#A06E50" stroke-width="2.5" fill="none"/>
+   ${brows}${eyes}
+   <path d="M486 640 Q470 662 484 666 Q500 668 498 656" fill="#D7966E" ${S(4.5)}/>
+   <circle cx="530" cy="660" r="4" fill="#C2665A"/>
+   ${mouth}${sweat}</g>`; }
+function burnHead(st){ return burnFace(st,485,630,1); }
+function burnArms(pose){
+  const slc='#A4473B', hand=(x,y,r=21)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${SKB}" ${S(4.5)}/>`;
+  const can=(x,y)=>`<path d="M${x-18} ${y-30} L${x+18} ${y-31} L${x+18} ${y+28} L${x-17} ${y+28} Z" fill="#3E7A4E" ${S(4.5)}/><path d="M${x-18} ${y-8} L${x+18} ${y-10} L${x+18} ${y+6} L${x-18} ${y+8} Z" fill="#C9A044"/><path d="M${x-8} ${y-30} l6 10 l6 -10" stroke="${K}" stroke-width="3" fill="none"/>`;
+  const point=(x,y)=>`<path d="M${x} ${y-7} L${x+44} ${y-5} Q${x+50} ${y} ${x+44} ${y+6} L${x} ${y+7} Z" fill="${SKB}" ${S(4.5)}/>`+hand(x,y);
+  let L,Rr;
+  if(pose==='arms_up'){
+    L = tube([[394,742],[346,654],[364,566]],slc,46) + can(364,540) + hand(364,566);
+    Rr = tube([[576,742],[626,654],[608,566]],slc,46) + hand(608,566,24);
+  } else if(pose==='shrug'){
+    L = tube([[394,742],[358,812],[322,780]],slc,46) + `<ellipse cx="318" cy="776" rx="28" ry="13" fill="${SKB}" ${S(4.5)}/>`;
+    Rr = tube([[576,742],[612,812],[648,780]],slc,46) + `<ellipse cx="652" cy="776" rx="28" ry="13" fill="${SKB}" ${S(4.5)}/>`;
+  } else {
+    L = tube([[394,742],[372,834],[420,884]],slc,46) + can(418,862) + hand(420,884);
+    if(pose==='point_tv') Rr = tube([[576,742],[640,700],[692,646]],slc,46) + point(694,646);
+    else if(pose==='point_cam') Rr = tube([[576,742],[588,780],[560,794]],slc,52) + `<circle cx="556" cy="790" r="37" fill="${SKB}" ${S(5)}/><circle cx="552" cy="782" r="16" fill="${SKB}" ${S(4)}/><circle cx="552" cy="782" r="6" fill="#C88E6A"/>`;
+    else Rr = tube([[576,742],[600,836],[556,892]],slc,46) + hand(556,892);
+  }
+  return L+Rr; }
+
+const table = `
+ <rect x="96" y="1232" width="24" height="120" fill="#3A2614" ${S(4)}/><rect x="600" y="1232" width="24" height="110" fill="#3A2614" ${S(4)} transform="rotate(3 612 1290)"/>
+ <path d="M60 1182 L660 1178 L690 1240 L30 1242 Z" fill="#6A4126" ${S(6)}/>
+ <circle cx="230" cy="1212" r="22" fill="none" stroke="#4E2E18" stroke-width="4"/>
+ <path d="M120 1190 L560 1188 L580 1230 L100 1232 Z" fill="#34506E" ${S(3.5)}/>
+ ${[[170,1196,-8],[236,1200,6],[420,1196,-4],[480,1198,9]].map(([x,y,r])=>`<rect x="${x}" y="${y}" width="40" height="28" rx="3" fill="#6E4A2E" ${S(3)} transform="rotate(${r} ${x+20} ${y+14})"/>`).join('')}
+ <ellipse cx="610" cy="1205" rx="38" ry="12" fill="#A8A9A6" ${S(3.5)}/>
+ <g><path d="M500 1206 L498 1150 Q500 1140 522 1140 Q544 1140 546 1150 L544 1206 Q522 1212 500 1206 Z" fill="#DCE6E8" opacity=".92" ${S(3.5)}/>
+  <path d="M502 1206 L501 1170 Q522 1176 543 1170 L542 1206 Q522 1211 502 1206 Z" fill="#F7F4EC"/>
+  <path d="M498 1150 Q500 1128 522 1126 Q544 1128 546 1150 Z" fill="#A8A9A6" ${S(3.5)}/>
+  <circle cx="514" cy="1138" r="2" fill="#333"/><circle cx="522" cy="1134" r="2" fill="#333"/><circle cx="530" cy="1138" r="2" fill="#333"/>
+  ${dots(560,1214,60,8,9,'#F7F4EC',1.8,91)}</g>${dots(600,1200,40,10,8,'#C9A044',2.4,71)}`;
+// ---------- Especial Picard v2: celebração · sala de dia, luz quente ----------
+// (a primeira metade do ficheiro, com sala, dupla, TV e mesa, vem do manaburn/index.html do kit sem alterações)
+const TVSHOTS=['tv','tv2','tvtext'];
+const C2={x:245,y:703,w:373,h:520}, SCR={x:79,y:682,w:704,h:562}, SCX=SCR.x+SCR.w/2, SCY=SCR.y+SCR.h/2;
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)), ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2, easeOut=x=>1-Math.pow(1-x,3);
+const R2=x=>Math.round(x*20)/20;
+// destaque no Seek out (medido no PNG 744x1040: linhas 835-862, 866-893, 896-923)
+const HL=[[0.383,0.802,0.520,0.030],[0.086,0.833,0.817,0.030],[0.086,0.862,0.775,0.030]].map(r=>({x:C2.x+r[0]*C2.w,y:C2.y+r[1]*C2.h,w:r[2]*C2.w,h:r[3]*C2.h}));
+const TELA0={}; LINES.forEach((l,k)=>{ if(!(l.tela in TELA0)) TELA0[l.tela]=k; });
+const BAN=[['Q, Stacking the Deck','Ep. 1'],['Stasis','Ep. 2'],['The Tabernacle at Pendrell Vale','Ep. 8'],['Dack Fayden, Helping Hand','Ep. 9']];
+function telaState(i,t){ const l=LINES[i], k=l.tela, l0=LINES[TELA0[k]], t0=l0.start;
+  const st={k, card:1, hl:0, rows:0, stamp:0, txt:0};
+  if(l.hl){ let a=i; while(a>0&&LINES[a-1].hl) a--; st.hl=clamp((t-LINES[a].start-0.55)/0.9); }
+  if(k==='lista'){ st.card=0; st.rows=clamp((t-t0+0.15)/1.0); const ts=l0.start+l0.dur*0.78; st.stamp=clamp((t-ts)/0.12); st.pop=t>=ts&&t<ts+0.3?1-(t-ts)/0.3:0; }
+  if(k==='nome'){ st.card=1-clamp((t-t0)/0.45); st.txt=easeOut(clamp((t-t0-0.2)/0.8)); }
+  return st; }
+function telaSVG(st){
+  const T=(x,y,s,w,c,txt,ls=0,fam='Geist',anchor='middle')=>`<text x="${x}" y="${y}" text-anchor="${anchor}" font-family="${fam}" font-weight="${w}" font-size="${s}" letter-spacing="${ls}" fill="${c}">${txt}</text>`;
+  let s='';
+  if(st.card>0) s+=`<image href="${EP.card.img}" x="${C2.x}" y="${C2.y}" width="${C2.w}" height="${C2.h}" clip-path="url(#cardclip2)" opacity="${R2(st.card)}"/>`;
+  if(st.hl>0) s+=HL.map((r,k)=>{ const p=clamp(st.hl*3-k); return p>0?`<rect x="${r.x-3}" y="${r.y-2}" width="${r.w*p+6}" height="${r.h+4}" rx="4" fill="#FFD84A" opacity=".28"/><rect x="${r.x-3}" y="${r.y-2}" width="${r.w*p+6}" height="${r.h+4}" rx="4" fill="none" stroke="#FFD84A" stroke-width="2.5" filter="url(#glow)"/>`:''; }).join('');
+  if(st.k==='lista'){
+    const x0=SCR.x+46, y0=SCR.y+78, n=Math.floor(st.rows*(BAN.length+1)+0.001);
+    s+=T(SCX,SCR.y+56,40,400,'#FFD84A','LISTA DE BANIMENTO DO BURN',2,'Bangers');
+    s+=T(SCX,SCR.y+80,17,500,'#AAB4C3','(opinião dele, não da Wizards)');
+    BAN.forEach(([nm,ep],k)=>{ if(k>=n) return; const y=y0+52+k*66;
+      s+=T(x0,y,27,700,'#F4F1E8',nm,0,'Geist','start')+T(x0,y+24,16,500,'#9AA3B2',`Mana & Burn ${ep}`,0,'Geist','start');
+      s+=`<g transform="rotate(-6 ${SCR.x+SCR.w-112} ${y-8})"><rect x="${SCR.x+SCR.w-186}" y="${y-34}" width="148" height="44" rx="6" fill="none" stroke="#FF5A4E" stroke-width="4"/>${T(SCR.x+SCR.w-112,y-3,30,400,'#FF5A4E','BANIDO',2,'Bangers')}</g>`; });
+    if(n>BAN.length){ const y=y0+52+BAN.length*66+14;
+      s+=`<rect x="${x0-14}" y="${y-38}" width="${SCR.w-64}" height="64" rx="8" fill="#10B981" opacity=".14"/>`;
+      s+=T(x0,y,30,700,'#FFFFFF','Jean-Luc Picard, Luminary',0,'Geist','start')+T(x0,y+22,16,500,'#C9D6E8','capitão da Enterprise',0,'Geist','start');
+      if(st.stamp>0){ const sc=1+0.6*(1-st.stamp)+0.15*(st.pop||0);
+        s+=`<g opacity="${R2(st.stamp)}" transform="translate(${SCR.x+SCR.w-112} ${y-10}) rotate(-8) scale(${sc.toFixed(2)})"><rect x="-84" y="-30" width="168" height="54" rx="6" fill="#10B981" opacity=".2"/><rect x="-84" y="-30" width="168" height="54" rx="6" fill="none" stroke="#10B981" stroke-width="5"/>${T(0,10,40,400,'#34D399','NUNCA',3,'Bangers')}</g>`; } } }
+  const o=R2(st.txt);
+  if(o>0 && st.k==='nome') s+=`<g opacity="${o}">${T(SCX,SCY-40,46,700,'#F4F1E8','SIR PATRICK STEWART',5)}
+     <rect x="${SCX-60}" y="${SCY-14}" width="120" height="3" fill="#10B981"/>${T(SCX,SCY+34,34,500,'#C9D6E8','1940–2026',3)}${T(SCX,SCY+96,30,500,'#FFD84A','deu vida ao capitão Picard')}</g>`;
+  s+=`<rect x="${SCR.x}" y="${SCR.y}" width="${SCR.w}" height="${SCR.h}" rx="18" fill="url(#crt)" pointer-events="none"/>`;
+  return s; }
+const extraDefs = `<defs><radialGradient id="crt" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".05"/><stop offset="1" stop-color="#000" stop-opacity=".18"/></radialGradient>
+  <linearGradient id="sol" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC56E" stop-opacity=".30"/><stop offset=".55" stop-color="#FFB34D" stop-opacity=".08"/><stop offset="1" stop-color="#FFB34D" stop-opacity="0"/></linearGradient>
+  <linearGradient id="raio" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFE3A8" stop-opacity="0"/><stop offset=".5" stop-color="#FFE3A8" stop-opacity=".16"/><stop offset="1" stop-color="#FFE3A8" stop-opacity="0"/></linearGradient></defs>`;
+// luz de fim de tarde: um véu quente e dois feixes de janela fora de quadro (desenho próprio)
+const luz = `<rect x="-400" y="-300" width="1900" height="2400" fill="url(#sol)" style="mix-blend-mode:screen"/>
+  <g style="mix-blend-mode:screen"><path d="M-120 -80 L120 -80 L760 1400 L460 1400 Z" fill="url(#raio)"/><path d="M180 -80 L300 -80 L980 1400 L820 1400 Z" fill="url(#raio)" opacity=".7"/></g>`;
+function shot2Markup(st){
+  return `
+  <g filter="url(#rough)">
+   <rect x="-200" y="-200" width="1480" height="2320" fill="url(#wall)"/><rect x="-200" y="-200" width="1480" height="2320" filter="url(#blotch)" opacity=".8"/>
+   <rect x="-200" y="-200" width="1480" height="2320" fill="#2a2418" opacity=".18"/>
+   <path d="M300 -200 L300 330" stroke="${K}" stroke-width="3"/><rect x="290" y="324" width="20" height="16" fill="#6B6A63" ${S(3)}/><path d="M282 342 Q282 384 300 388 Q318 384 318 342 Z" fill="#EFE6B8" ${S(3.5)}/>
+   <path d="M-220 1315 L1300 1315 L1300 2140 L-220 2140 Z" fill="#5A4772" ${S(6)}/>
+   <path d="M980 1315 l100 0 l0 60 Z" fill="#E8DFC4" ${S(4)}/>
+   ${burnFace(st,858,525,1.12)}
+  </g>
+  ${luz}
+  <image href="tv_asset.png" x="-24" y="610" width="1126" height="713"/>
+  <g filter="url(#rough2)"><rect x="-22" y="612" width="1122" height="709" rx="14" fill="none" ${S(7)}/></g>
+  ${telaSVG(st.tela)}
+  ${st.point?`<g filter="url(#rough2)">${tube([[1100,1005],[1010,985],[920,969]],'#A4473B',58)}
+   <path d="M894 961 L842 965 Q832 973 842 981 L894 981 Z" fill="${SKB}" ${S(5)}/><circle cx="902" cy="969" r="28" fill="${SKB}" ${S(5)}/></g>`:''}`; }
+
+// ---------- montagem ----------
+const world=document.getElementById('world'), shot2=document.getElementById('shot2'), fxEl=document.getElementById('fx');
+const tvEl=document.getElementById('tv'), dotEl=document.getElementById('dot'), logo=document.getElementById('logo'), sub=document.getElementById('sub');
+const ovl=document.getElementById('ovl');
+world.innerHTML = defs + extraDefs + `<g id="cam"><g filter="url(#rough)">${room}</g>${tvSmall}<g filter="url(#rough)">${tvSmallLine}</g>
+  <g id="tvsmall"></g><g filter="url(#rough)">${couchBack}${couchFront}</g>
+  <g id="mana" filter="url(#rough2)"></g><g id="burn" filter="url(#rough2)"></g><g filter="url(#rough)">${table}</g>${luz}</g>`;
+shot2.innerHTML = defs + extraDefs + '<g id="s2cam"><g id="s2"></g></g>';
+fxEl.innerHTML = `<defs><radialGradient id="vig" cx="50%" cy="48%" r="72%"><stop offset="62%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#2A1608" stop-opacity=".35"/></radialGradient></defs>
+  ${defs}<rect width="1080" height="1920" filter="url(#grain)" opacity=".45"/><rect width="1080" height="1920" fill="url(#vig)"/>`;
+const tvSmallG=world.querySelector('#tvsmall');
+const manaG=world.querySelector('#mana'), burnG=world.querySelector('#burn'), camG=world.querySelector('#cam'), s2=shot2.querySelector('#s2'), s2cam=shot2.querySelector('#s2cam');
+const credEl=document.getElementById('cred'); credEl.innerHTML=EP.card.cred;
+document.querySelector('#bug .b').textContent='ESPECIAL · CAPITÃO PICARD';
+let CARD_OK=false; { const im=new Image(); im.onload=()=>{CARD_OK=true;}; im.src=EP.card.img; }
+window.READY=()=>CARD_OK;
+const SMALL={x:679,y:545,w:262,h:210};
+function telaPequena(st){ const s=SMALL.w/SCR.w; return `<g transform="translate(${SMALL.x} ${SMALL.y}) scale(${s}) translate(${-SCR.x} ${-SCR.y})">${telaSVG(st)}</g>`; }
+
+function seq(i){ const sh=LINES[i].shot; let a=i; while(a>0&&LINES[a-1].shot===sh) a--; let b=i; while(b<LINES.length-1&&LINES[b+1].shot===sh) b++;
+  return [LINES[a].start, b+1<LINES.length?LINES[b+1].start:T_SLAM]; }
+const FIT=(1080-20)/SCR.w;
+function s2Target(k,t){ const sh=LINES[k].shot, [t0,t1]=seq(k), p=clamp((t-t0)/(t1-t0));
+  if(sh==='tvtext'){ const z=FIT, f=1+0.05*easeOut(p); return {s:z/1.05*f,cx:SCX,cy:SCR.y,tx:540,ty:300}; }   // zoom no texto, tela inteira na largura
+  if(sh==='tv2') return {s:1.12+0.08*ease(p),cx:431,cy:963,tx:540,ty:960};
+  return {s:1+0.06*p,cx:432,cy:963,tx:432,ty:963}; }
+function s2Cam(i,t){ let c=s2Target(i,t); const l=LINES[i];
+  if(i>0 && TVSHOTS.includes(LINES[i-1].shot) && LINES[i-1].shot!==l.shot && t-l.start<0.4){ const a=s2Target(i-1,l.start), q=ease(clamp((t-l.start)/0.4));
+    c={s:a.s+(c.s-a.s)*q,cx:a.cx+(c.cx-a.cx)*q,cy:a.cy+(c.cy-a.cy)*q,tx:a.tx+(c.tx-a.tx)*q,ty:a.ty+(c.ty-a.ty)*q}; }
+  const s=Math.min(c.s,FIT); let cx=c.cx; const L=c.tx+s*(SCR.x-cx), R=c.tx+s*(SCR.x+SCR.w-cx);   // trava do kit: tela inteira na largura
+  if(L<10) cx=SCR.x-(10-c.tx)/s; else if(R>1070) cx=SCR.x+SCR.w-(1070-c.tx)/s;
+  return {s,cx,cy:c.cy,tx:c.tx,ty:c.ty}; }
+function lineAt(t){let i=-1;LINES.forEach((l,k)=>{if(t>=l.start-0.02)i=k;});return i;}
+function mouthFor(k,t){ if(k<0) return 'closed'; const l=LINES[k]; const j=Math.floor((t-l.start)*12);
+  if(j<0||j>=l.env.length) return 'closed'; const v=l.env[j]; return v>0.55?'open':v>0.22?'mid':'closed'; }
+function speaking(who,t){ let k=-1; LINES.forEach((l,i)=>{ if(l.who===who && t>=l.start && t<l.start+l.dur) k=i; }); return k; }
+function blinking(arr,t){return arr.some(b=>t>=b&&t<b+0.12);}
+function camera(t,i){ const sh=LINES[i].shot, [t0,t1]=seq(i), p=clamp((t-t0)/(t1-t0));
+  if(sh==='cuM') return {s:1.45+0.03*p,cx:235,cy:650,tx:520,ty:922};
+  if(sh==='cuB') return {s:1.5+0.03*p,cx:485,cy:700,tx:560,ty:832};
+  if(sh==='push'){ const q=ease(p); return {s:1+0.12*q,cx:540-140*q,cy:675+85*q,tx:540,ty:875+128*q}; }
+  return {s:1+0.03*p,cx:540,cy:675,tx:540,ty:875}; }
+function ovlHTML(i,t){ const l=LINES[i]; if(!l.ovl) return ''; const o=easeOut(clamp((t-l.start-0.15)/0.45));
+  const st=`style="opacity:${R2(o)};transform:translateY(${R2((1-o)*14)}px)"`;
+  if(l.ovl==='data') return `<div class="d" ${st}>13 NOVEMBRO 2026</div><div class="d2" ${st}>MAGIC: THE GATHERING | STAR TREK</div>`;
+  if(l.ovl==='makeitso'){ const q=easeOut(clamp((t-(l.start+l.dur*0.62))/0.35)); return q>0?`<div class="q" style="opacity:${R2(q)};transform:scale(${(0.9+0.1*q).toFixed(2)})">“Make it so.”</div>`:''; }
+  if(l.ovl==='cha'){ const q=easeOut(clamp((t-(l.start+l.dur*0.5))/0.35)); return q>0?`<div class="q" style="opacity:${R2(q)}">“Tea. Earl Grey. Hot.”</div>`:''; }
+  if(l.ovl==='numeros'){ const it=[['7','temporadas',0.15],['4','filmes',0.45],['1','série com o nome dele',0.72]];
+    return `<div class="nums">`+it.map(([n,w,a])=>{ const q=easeOut(clamp((t-(l.start+l.dur*a))/0.3)); return `<div class="n" style="opacity:${R2(q)};transform:translateY(${R2((1-q)*16)}px)"><b>${n}</b> ${w}</div>`; }).join('')+`</div>`; }
+  return ''; }
+
+let last='';
+function render(t){
+  const i=Math.max(0,lineAt(t)), l=LINES[i], tq=Math.floor(t*12)/12, shot=l.shot;
+  const kM=speaking('M',tq), kB=speaking('B',tq), mM=mouthFor(kM,tq), mB=mouthFor(kB,tq);
+  const bM=blinking(BLINK_M,tq), bB=blinking(BLINK_B,tq);
+  const ts=telaState(i,t), tk=[ts.k,R2(ts.card),R2(ts.hl),R2(ts.rows),R2(ts.stamp),R2(ts.pop||0),R2(ts.txt)].join();
+  const bob=x=>x==='open';
+  const key=[i,mM,mB,bM,bB,shot,tk].join();
+  if(key!==last){ last=key;
+    if(TVSHOTS.includes(shot)){ shot2.style.display='block'; world.style.display='none';
+      s2.innerHTML = shot2Markup({look:l.lB,brow:l.bB,mouth:mB,blink:bB,bob:bob(mB),tela:ts,point:l.pB==='point_tv'}); }
+    else { shot2.style.display='none'; world.style.display='block'; tvSmallG.innerHTML=telaPequena(ts);
+      manaG.innerHTML = manaHeadBack()+manaLegs()+manaTorso()+manaHead({look:l.lM,brow:l.bM,mouth:mM,blink:bM,bob:bob(mM)})+manaArms(l.pM,false);
+      burnG.innerHTML = burnLegs()+burnTorso()+burnHead({look:l.lB,brow:l.bB,mouth:mB,blink:bB,bob:bob(mB)})+burnArms(l.pB); }
+  }
+  if(TVSHOTS.includes(shot)){ const q=s2Cam(i,t); s2cam.setAttribute('transform',`translate(${q.tx} ${q.ty}) scale(${q.s}) translate(${-q.cx} ${-q.cy})`); }
+  else { const c=camera(t,i); camG.setAttribute('transform',`translate(${c.tx} ${c.ty}) scale(${c.s}) translate(${-c.cx} ${-c.cy})`); }
+  const oh=t<T_SLAM?ovlHTML(i,t):''; if(ovl.dataset.h!==oh){ ovl.innerHTML=oh; ovl.dataset.h=oh; }
+  const ks=[kM,kB].filter(k=>k>=0); const k=ks.length?Math.max(...ks):-1;
+  let txt=''; if(k>=0) txt=LINES[k].text; else { const j=lineAt(t); if(j>=0 && t<LINES[j].start+LINES[j].dur+0.25) txt=LINES[j].text; }
+  if(t>=T_SLAM) txt='';
+  const html=txt.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\*([^*]+)\*/g,'<span class="k">$1</span>');
+  if(sub.dataset.h!==html){ sub.innerHTML=html; sub.dataset.h=html; }
+  // liga a TV como em todo episódio; no "Engage" a imagem encolhe e o ponto parte em velocidade
+  let sx=1, sy=1, br=1, op=1;
+  if(t<0.22){ const p=clamp(t/0.22); sy=Math.max(0.006,ease(p)); sx=p<0.35?0.6+p:1; br=1+3*(1-p); }
+  if(t>=T_SLAM){ const a=clamp((t-T_SLAM)/0.24), b=clamp((t-T_SLAM-0.24)/0.18);
+    sy=Math.max(0.004,1-ease(a)); sx=1-0.985*ease(b); br=1+5*a; op = t>T_SLAM+0.44 ? 0 : 1; }
+  tvEl.style.transform=`scale(${sx},${sy})`; tvEl.style.filter=`brightness(${br})`; tvEl.style.opacity=op;
+  dotEl.innerHTML=''; logo.style.opacity=0;
+  if(t>=T_SLAM+0.30){
+    const u=clamp((t-T_SLAM-0.36)/0.30), v=clamp((t-T_SLAM-0.70)/0.40);
+    // o ponto verde estica e dispara para o alto, deixando um rasto (arrancada)
+    const y=960-700*Math.pow(u,2.2), len=20+520*Math.sin(Math.PI*clamp(u*1.1)), col='#10B981';
+    if(u<1) dotEl.innerHTML=`<defs><linearGradient id="rasto" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="${col}" stop-opacity="0"/><stop offset="1" stop-color="${col}" stop-opacity=".9"/></linearGradient></defs>
+      <rect x="532" y="${y}" width="16" height="${len}" rx="8" fill="url(#rasto)"/><circle cx="540" cy="${y}" r="12" fill="#E9FFF6"/><circle cx="540" cy="${y}" r="26" fill="${col}" opacity=".3"/>`;
+    if(v>0){ logo.style.opacity=1; drawLogo(v, clamp((t-T_SLAM-1.0)/0.3)); }
+  }
+  const fade=clamp((t-(T_END-0.4))/0.4); document.body.style.filter = fade>0?`brightness(${1-fade})`:'';
+}
+const backOut=x=>{const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2);};
+function drawLogo(v,q){
+  const svg=document.getElementById('logosvg'), sc=Math.max(0.03,0.75*backOut(v)), rot=-140*(1-(1-Math.pow(1-v,3)));
+  svg.innerHTML=`<g transform="translate(540 860) rotate(${rot}) scale(${sc}) translate(-540 -860)"><image href="logo/logo_mark.png" x="390" y="710" width="300" height="300"/></g>
+    <text x="540" y="1090" text-anchor="middle" font-family="Geist" font-weight="700" font-size="64" fill="#fff" opacity="${q}" transform="translate(0 ${(1-q)*18})">BINDER <tspan fill="#10B981">Originals</tspan></text>
+    <text x="540" y="1160" text-anchor="middle" font-family="Geist" font-weight="500" font-size="34" fill="#C9D6E8" opacity="${q}">Obrigado, capitão.</text>`;
+  const sh=document.querySelector('#logo .show'); sh.style.opacity=q; sh.style.transform=`translateY(${(1-q)*20}px)`;
+}
+window.render=render;
+
+</script></body></html>

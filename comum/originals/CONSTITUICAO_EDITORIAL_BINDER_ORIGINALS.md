@@ -1,6 +1,6 @@
 # Constituição editorial e operacional · BINDER Originals
 
-Versão 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
+Versão 1.1 · 29/10/2026 (secção 14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
 
 Norma comum de **processo** para todas as séries do @binderthetrade. Não define personagens nem estética: isso vive no `CONTEXTO.md` de cada série. Não define o produto: só funções confirmadas (secção 9).
 
@@ -138,3 +138,16 @@ Entregáveis: vídeo · capa · legenda limpa · comentário fixado · ficha de 
 
 Guarda: regras aprovadas, perfis, modelos, fichas e fontes de episódios, legendas, aprendizagens verificadas, scripts reutilizáveis.
 Não guarda: transcrições de conversas, prompts temporários, resultados não verificados, mídia renderizada, segredos.
+
+## 14. Especiais e homenagens
+
+Regra do Ibisson (29/10/2026). Vale para todas as séries.
+
+- **Pode haver especiais.** Qualquer série pode ter episódios especiais, homenagens e acontecimentos extraordinários fora da duração habitual do perfil.
+- **Duração livre.** Não há limite rígido: a extensão sai da força da história e da qualidade narrativa. A duração do `PERFIL.md` não se aplica ao especial; regista-se na ficha porque se escolheu aquela duração.
+- **Tom de celebração.** Uma homenagem não assume por defeito um tom triste, fúnebre ou melancólico. Prioridade: celebração, admiração, legado, inspiração, personalidade e reconhecimento.
+- **Humor subtil, quando adequado.** Sem desrespeitar a pessoa homenageada.
+- **Objetivo.** Uma experiência memorável, emocionalmente envolvente e digna de ser partilhada pela comunidade.
+- **Velocidade com rigor.** Num acontecimento relevante, avaliar a oportunidade editorial depressa, mas nunca sacrificar o rigor factual (§4), a identidade da marca nem a qualidade narrativa em nome da velocidade.
+
+As restantes secções continuam a valer. Uma exceção a uma regra de entrega (§10) num especial só existe se o pedido do Ibisson para esse especial o disser, e regista-se em `DECISOES.md`.
