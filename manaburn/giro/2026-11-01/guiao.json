@@ -1,0 +1,19 @@
+{
+ "titulo": "TV SAL · Giro de Domingo nº 1 (semana 26–31/10/2026)",
+ "falas": [
+  {"quem": "B", "tags": "[excited]", "legenda": "TV SAL, giro de domingo, mano! *Três notícias* da semana."},
+  {"quem": "M", "tags": "[serious] [slow]", "legenda": "Um. Na quarta morreu *Sir Patrick Stewart*, o capitão Picard. No dia seguinte, a caixa de Collector de Star Trek, a única com o Picard autografado, *já estava mais cara*.", "tts": "Um. Na quarta morreu Sir Patrick Stewart, o capitão Picard. No dia seguinte, a caixa de Colétor de Star Trek, a única com o Picard autografado, já estava mais cara."},
+  {"quem": "B", "tags": "[angry] [restrained]", "legenda": "Tem gente que olha pro luto e enxerga *margem de lucro*. Isso não é jogada, véi. É falta de respeito."},
+  {"quem": "M", "tags": "[calm]", "legenda": "O set sai dia *13*. Preço de pré-venda oscila. Não compra no susto.", "tts": "O set sai dia treze. Preço de pré-venda oscila. Não compra no susto."},
+  {"quem": "B", "tags": "[excited]", "legenda": "Dois. A Wizards tem *chefe novo*: Dan Ayoub, ex-chefe de estúdio do Halo.", "tts": "Dois. A Wizards tem chefe novo: Dén Aiúb, ex-chefe de estúdio do Rêilou."},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Primeiro promovido *de dentro da casa*. Assume amanhã, dia 2.", "tts": "Primeiro promovido de dentro da casa. Assume amanhã, dia dois."},
+  {"quem": "B", "tags": "[playful]", "legenda": "Ex-Halo? Então a primeira missão é *Commander de quatro* no Arena, pô.", "tts": "Ex-Rêilou? Então a primeira missão é Comânder de quatro no Arena, pô."},
+  {"quem": "M", "tags": "[bored]", "legenda": "Três. Até quinta, dia 5, as lojas fazem o *All Leylines' Eve*: draft com pacote misturado, e todo mundo começa com *Leyline of Anticipation* em jogo.", "tts": "Três. Até quinta, dia cinco, as lojas fazem o Ól Lêilains Ív: draft com pacote misturado, e todo mundo começa com Lêilain óf Antissipêixon em jogo."},
+  {"quem": "B", "tags": "[confused]", "legenda": "E que que essa *Leyline* faz?", "tts": "E que que essa Lêilain faz?"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Lê a carta: você conjura qualquer mágica como se tivesse *flash*.", "tts": "Lê a carta: você conjura qualquer mágica como se tivesse fléch."},
+  {"quem": "B", "tags": "[shouting]", "legenda": "Então eu respondo a sua resposta… com a minha resposta… e *ninguém joga nada*!"},
+  {"quem": "M", "tags": "[tired]", "legenda": "E quem joga leva a Leyline *foil* de arte alternativa. A agenda tá na tela. *Guarda o vídeo*.", "tts": "E quem joga leva a Lêilain fóil de arte alternativa. A agenda tá na tela. Guarda o vídeo."},
+  {"quem": "B", "tags": "[excited]", "legenda": "Qual foi a notícia da semana? Comenta *1, 2 ou 3*.", "tts": "Qual foi a notícia da semana? Comenta um, dois ou três."},
+  {"quem": "M", "tags": "[bored]", "legenda": "Comenta aí."}
+ ]
+}

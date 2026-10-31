@@ -35,6 +35,10 @@ Nada bloqueia a produção. Opcional: colar `nucleo/prompts/CHATGPT.md` nas inst
 - `oraculo/episodios/ep01_render_v2.py` importa `render`, que não existe; `conde/montar_ep002.py` tem caminho absoluto. Não se mexe em scripts de episódios publicados sem necessidade.
 - Skills `binder-*` ainda mandam ler primeiro o Drive e dizem que o Scryfall não abre; alinhar com o repositório quando o fundador quiser.
 
+## Última produção
+
+- 31/10/2026 · Mana & Burn · TV SAL Giro de Domingo nº 1 (publicação 01/11, 21h Lisboa), formato fixo novo (`nucleo/DECISOES.md`). Branch `giro/2026-11-01`. Render conferido (69,0 s, −14,1 LUFS, sem corte lateral). Falta: ouvir a pronúncia antes de publicar.
+
 ## Próximo passo concreto
 
 Produzir normalmente a partir da `main`: palavra de arranque → `AGENTS.md` → `nucleo/SHOWRUNNER.md`. Pendência técnica com mais impacto: subir o motor v2 do Mana & Burn (`claude/gerador-manaburn/` no projeto claude.ai) para `manaburn/`.

@@ -2,6 +2,13 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 31/10/2026 (17h) · Mana & Burn: formato fixo "TV SAL · Giro de Domingo"
+
+**O quê:** todos os domingos (21h Lisboa) o Mana & Burn publica o giro das 3 notícias da semana (1 quente, 1 da casa, 1 útil) + agenda + pergunta "Comenta 1, 2 ou 3". Episódios temáticos passam para dias de semana. Pasta por edição: `manaburn/giro/AAAA-MM-DD/`; o que muda e o que fica: `template_giro.md` da edição nº 1.
+**Porquê:** pedido do Ibisson (31/10/2026). Reaproveita o zapping de 26/10 e a pergunta de número sugerida no perfil.
+**Exceções ao perfil (só no Giro):** 60–75 s com fecho (em vez de 35–45 s); a TV SAL é a bancada inteira (telas tipográficas, sem putômetro nem manchetes de plantão); sem bordão "Isso devia ser banido". Mantêm-se: 14 falas, Burn abre, pergunta do Burn na penúltima, "Comenta aí." do Mana, parada seca, fecho do scanner.
+**Divergências com o brief do nº 1 (registadas):** (1) o número do preço (US$ 495,34 → 576,02) saiu: fonte única; (2) "Obrigado, capitão" saiu: a homenagem já foi feita nos especiais Picard v1/v2 desta semana; (3) Burn abre (regra da série) em vez da Mana; (4) pasta `manaburn/giro/` como pedia o brief; (5) cena montada a partir do especial Picard v2 (o motor v2 continua fora do repositório).
+
 ## 31/10/2026 · Fecho do scanner no repositório e merge da consolidação para `main`
 
 **O quê:** `comum/outro/outro_binder_916.mp4` passa a existir no repositório, cortado do fim do `ManaBurn_Ep6_GodPack_916.mp4` publicado (49,0 s → fim), com o rótulo "MANA & BURN" tapado na fase da logo; script em `comum/outro/gerar_fecho.py`. Resolve o bloqueador 8 da entrada de 28/10. O fundador aprovou o merge de `consolidacao-estudio` para `main` (PR #1).
