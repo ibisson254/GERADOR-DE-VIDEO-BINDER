@@ -30,6 +30,7 @@ Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao ris
 - [ ] Termina com `comum/outro/outro_binder_916.mp4`, sem encurtar.
 - [ ] Legenda termina com "baixe o BINDER Vision"; até 5 hashtags; sem emojis.
 - [ ] Comentário fixado: pergunta fácil + complemento + "Tem um detalhe escondido. Diga o segundo."
+- [ ] Texto alternativo escrito (descrição + texto do ecrã).
 - [ ] Easter egg (0 ou 1) registado.
 - [ ] Commit: ficha/roteiro, legenda, fontes, histórico. Nenhum vídeo.
 

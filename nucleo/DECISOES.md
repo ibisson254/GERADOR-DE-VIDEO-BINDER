@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 31/10/2026 · Consolidação do estúdio, Fase 1: núcleo, registo e fonte de verdade (constituição v1.2)
+
+**O quê:** (1) `comum/originals/` passa a `nucleo/` (mesmos nomes de ficheiro; nenhum script dependia da pasta). (2) Constituição §1: o repositório é a fonte de verdade; as instruções do projeto claude.ai, o Drive e as skills apontam para ele; o pedido explícito do Ibisson continua no topo. (3) §2: entram `especiais/`, `nucleo/` e o registo `series.yaml`. (4) §10 e checklist C: o texto alternativo passa a ser entregável (já era a peça 4 da skill `binder-posts-instagram`). (5) `AGENTS.md` passa a ser o ponto de entrada neutro; `CLAUDE.md` só remete para ele. (6) Merge da branch `especial/sir-patrick` (constituição v1.1 §14, especial Picard v2) para `consolidacao-estudio`.
+**Porquê:** prompt "Operação de Consolidação — Estúdio BINDER" (31/10/2026), §3 e §7, e `INVENTARIO.md` (divergências D1, D3, D4). Opções do inventário aplicadas por defeito depois de "Prossiga" sem resposta às perguntas P1–P4: pastas das séries ficam no lugar (Opção B); Órbita e Lambe-lambe registadas como arquivadas; TUBO mantém silhueta em vez de foto de jogador (entrada de 29/10 abaixo; a bíblia prevalece sobre o prompt); `especial/sir-patrick` integrada.
+**Impacto:** nenhum episódio publicado muda. As pastas `manaburn/`, `oraculo/`, `conde/` e `comum/outro/` não mudaram de sítio, por isso nenhum script parte. As skills e as instruções do projeto claude.ai ainda dizem que o Drive manda; ficam alinhadas na Fase 3. Tudo isto vive só na branch `consolidacao-estudio` até o Ibisson aprovar o merge para `main`.
+
 ## 29/10/2026 · Especial Capitão Picard refeito (v2) pela secção 14
 
 **O quê:** nova versão do especial em `manaburn/episodios/esp02_picard_v2/` (celebração, conversa de Mana e Burn, 69,9 s). A v1 (`esp01_sir_patrick/`, commit caf6e97) fica guardada e marcada como não publicável.

@@ -6,13 +6,15 @@ Kit de produção automatizada de Reels 9:16 (1080×1920, 30 fps) para o Instagr
 
 ```
 /
-├── CLAUDE.md         # Entrada obrigatória dos agentes (AGENTS.md aponta para ele)
-├── README.md
+├── AGENTS.md         # Entrada obrigatória dos agentes (CLAUDE.md remete para ele)
+├── STATUS.md         # Estado atual, bloqueios, próxima tarefa
+├── series.yaml       # Registo das séries: palavra de arranque, pasta, vozes, trilha, referência, estado
+├── nucleo/           # Constituição BINDER Originals, checklist, decisões, modelos, índice das regras comuns
 ├── manaburn/         # Mana & Burn · PERFIL.md + gerador (HTML/Playwright + ffmpeg)
 ├── conde/            # Conde de Manaforte · O Tribunal Estético · PERFIL.md + CONTEXTO.md
 ├── oraculo/          # Meta em Curto (TUBO, ex-Oráculo de Tubo) · PERFIL.md + CONTEXTO.md
+├── especiais/        # Especiais e crossovers entre séries
 └── comum/
-    ├── originals/    # Constituição BINDER Originals, checklist, modelos, registo de decisões
     ├── outro/        # Fecho obrigatório com o scanner real
     ├── historico.md  # Desempenho e previsões
     └── easter_eggs.md
@@ -20,7 +22,7 @@ Kit de produção automatizada de Reels 9:16 (1080×1920, 30 fps) para o Instagr
 
 ## Como Usar (Claude / Agentes)
 
-Ler primeiro o [`CLAUDE.md`](CLAUDE.md). Depois, clonar com profundidade 1 e usar a pasta da série:
+Ler primeiro o [`AGENTS.md`](AGENTS.md). Depois, clonar com profundidade 1 e usar a pasta da série:
 
 ```bash
 git clone --depth 1 https://github.com/ibisson254/GERADOR-DE-VIDEO-BINDER.git

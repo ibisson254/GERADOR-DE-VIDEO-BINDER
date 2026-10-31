@@ -1,8 +1,8 @@
 # Perfil operacional · Conde de Manaforte (O Tribunal Estético)
 
-Herda `comum/originals/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Identidade, personalidade, fórmula, voz, música, visual e pipeline: `conde/CONTEXTO.md` (autoridade). Este perfil não altera nenhuma decisão criativa de lá.
+Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Identidade, personalidade, fórmula, voz, música, visual e pipeline: `conde/CONTEXTO.md` (autoridade). Este perfil não altera nenhuma decisão criativa de lá.
 
-Nome oficial: **Conde de Manaforte**. ("Conde de Terra Forte" apareceu num pedido de 28/10/2026; o repositório e todos os episódios usam Manaforte. Ver `comum/originals/DECISOES.md`.)
+Nome oficial: **Conde de Manaforte**. ("Conde de Terra Forte" apareceu num pedido de 28/10/2026; o repositório e todos os episódios usam Manaforte. Ver `nucleo/DECISOES.md`.)
 
 - **Território:** ilustração de cartas de Magic: composição, luz, anatomia, perspectiva, simbolismo, técnica, bastidores de arte, artistas.
 - **Fora do território:** jogadas e meta → Meta em Curto. Hype, preço, Salt Score → Mana & Burn. Memes e cultura pop brasileira na fala (rejeitado a 26/10/2026).

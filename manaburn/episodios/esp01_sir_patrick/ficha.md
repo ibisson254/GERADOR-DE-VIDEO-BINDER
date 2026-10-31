@@ -10,7 +10,7 @@
 
 ## Editorial
 - Proposta de valor: o que Patrick Stewart deu a Picard não cabe numa carta.
-- Objetivo: homenagem respeitosa; comentários espontâneos com memórias de Picard. Sem promoção do app (pedido do brief; ver `comum/originals/DECISOES.md`, 29/10/2026).
+- Objetivo: homenagem respeitosa; comentários espontâneos com memórias de Picard. Sem promoção do app (pedido do brief; ver `nucleo/DECISOES.md`, 29/10/2026).
 - Público: comunidade de Magic, fãs de Star Trek, colecionadores.
 - Gancho (0–4 s): a carta de Picard aparece do escuro na TV; "Tem uma carta do Jean-Luc Picard prestes a chegar no Magic. E hoje, ela ganhou outro significado."
 - Fecho: "Obrigado, Sir Patrick." (Burn, baixo) → pergunta do Mana na TV → TV desliga → ponto verde → BINDER Originals.

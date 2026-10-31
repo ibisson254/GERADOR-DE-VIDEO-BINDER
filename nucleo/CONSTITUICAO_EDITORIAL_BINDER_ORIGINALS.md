@@ -1,6 +1,6 @@
 # Constituição editorial e operacional · BINDER Originals
 
-Versão 1.1 · 29/10/2026 (secção 14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
+Versão 1.2 · 31/10/2026 (§1, §2, §10: repositório como fonte de verdade, registo de séries, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
 
 Norma comum de **processo** para todas as séries do @binderthetrade. Não define personagens nem estética: isso vive no `CONTEXTO.md` de cada série. Não define o produto: só funções confirmadas (secção 9).
 
@@ -10,13 +10,15 @@ Princípio: **mesma disciplina, identidades diferentes.** Nenhuma série herda a
 
 ## 1. Hierarquia de fontes (quando duas regras chocam)
 
-1. Instruções do projeto Binder Marketing (claude.ai) e pedido explícito do Ibisson na conversa.
+1. Pedido explícito do Ibisson na conversa.
 2. Esta constituição (processo, rigor, entrega, registo).
 3. `PERFIL.md` da série (adaptações operacionais da série).
 4. `CONTEXTO.md` da série (identidade, voz, visual, fórmula). **Autoridade criativa**: o perfil e a constituição nunca a reescrevem.
 5. Fichas de episódio e histórico.
 
 Se uma regra criativa do `CONTEXTO.md` contradiz uma regra de entrega daqui (ex.: frase final da legenda), vale a regra de entrega e regista-se a divergência em `DECISOES.md`. Lacuna de identidade: assinalar, nunca inventar.
+
+**Fonte de verdade.** Este repositório é a fonte de verdade técnica e documental do estúdio. As instruções do projeto claude.ai, os documentos do Google Drive e as skills apontam para ele e nunca o contradizem; se contradisserem, vale o repositório e regista-se a divergência. Exceção: enquanto a identidade do Mana & Burn não tiver bíblia no repositório, o documento da série no Drive continua a ser a autoridade criativa dela (§2).
 
 ## 2. Séries e onde estão
 
@@ -25,9 +27,13 @@ Se uma regra criativa do `CONTEXTO.md` contradiz uma regra de entrega daqui (ex.
 | Meta em Curto (personagem TUBO; ex-Oráculo de Tubo) | `oraculo/` | `oraculo/CONTEXTO.md` | `oraculo/PERFIL.md` |
 | Mana & Burn | `manaburn/` | Doc da série no Google Drive + skill `binder-mana-burn-episodio` + `manaburn/LEIA-ME.md` | `manaburn/PERFIL.md` |
 | Conde de Manaforte · O Tribunal Estético | `conde/` | `conde/CONTEXTO.md` | `conde/PERFIL.md` |
-| Recursos partilhados | `comum/` | — | — |
+| Especiais e crossovers | `especiais/` | ficha do especial + §14 | — |
+| Núcleo (regras comuns) | `nucleo/` | — | — |
+| Recursos partilhados (fecho, histórico, easter eggs) | `comum/` | — | — |
 
-Série nova: copiar `modelos/PERFIL_SERIE.md` para `<pasta>/PERFIL.md`, criar `<pasta>/CONTEXTO.md`, acrescentar uma linha nesta tabela e em `DECISOES.md`. Esta constituição não muda.
+O registo máquina-legível das séries (palavra de arranque, pasta, vozes, trilha, episódio de referência, estado) é `series.yaml`, na raiz. Esta tabela e o registo têm de dizer o mesmo.
+
+Série nova: copiar `modelos/PERFIL_SERIE.md` para `<pasta>/PERFIL.md`, criar `<pasta>/CONTEXTO.md`, acrescentar uma entrada em `series.yaml`, uma linha nesta tabela e uma entrada em `DECISOES.md`. Esta constituição não muda.
 
 ## 3. Motor de orquestração (antes de cada produção)
 
@@ -110,10 +116,11 @@ As 12 perguntas da orquestração (série, objetivo, interesse, investigação, 
 
 ## 10. Entrega e registo (comum)
 
-Entregáveis: vídeo · capa · legenda limpa · comentário fixado · ficha de fatos/fontes.
+Entregáveis: vídeo · capa · legenda limpa · comentário fixado · texto alternativo · ficha de fatos/fontes.
 
 - **Legenda:** gancho; uma frase de facto que manda para o comentário; créditos ("Na tela/TV: carta (coleção, ano), nº n. Arte: artista. © Wizards of the Coast. Conteúdo de fã não oficial."); CTA em rotação; até 5 hashtags; sem emojis; **termina com "baixe o BINDER Vision"**. PT-BR, tratamento por "você".
 - **Comentário fixado:** pergunta fácil na 1.ª linha + complemento (passos, texto Oracle, fonte, VOD) + **"Tem um detalhe escondido. Diga o segundo."**
+- **Texto alternativo:** descrição da imagem ou do vídeo e transcrição do texto que aparece no ecrã, para o campo "texto alternativo" do Instagram (regra da skill `binder-posts-instagram`, peça 4 do pacote).
 - **Easter egg:** no máximo 1 por episódio, registado em `comum/easter_eggs.md`.
 - **Commit no fim:** roteiro/ficha, legenda, fontes, histórico. Nunca vídeos.
 

@@ -1,6 +1,6 @@
 # Perfil operacional · <NOME DA SÉRIE>
 
-Herda `comum/originals/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Aqui só o que é próprio da série. Identidade criativa (personagem, voz, visual, fórmula) vive em `<pasta>/CONTEXTO.md` e não se repete aqui.
+Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Aqui só o que é próprio da série. Identidade criativa (personagem, voz, visual, fórmula) vive em `<pasta>/CONTEXTO.md` e não se repete aqui.
 
 - **Identidade (autoridade):** `<pasta>/CONTEXTO.md`
 - **Território:** o que a série cobre.
