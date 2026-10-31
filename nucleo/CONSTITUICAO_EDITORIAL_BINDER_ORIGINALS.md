@@ -1,39 +1,36 @@
 # Constituição editorial e operacional · BINDER Originals
 
-Versão 1.2 · 31/10/2026 (§1, §2, §10: repositório como fonte de verdade, registo de séries, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
+Versão 1.3 · 31/10/2026 (§1 hierarquia documental, §2 catálogo, §6 formatos por frente, §10 frase do easter egg) · 1.2 · 31/10/2026 (fonte de verdade, registo, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
 
-Norma comum de **processo** para todas as séries do @binderthetrade. Não define personagens nem estética: isso vive no `CONTEXTO.md` de cada série. Não define o produto: só funções confirmadas (secção 9).
+Norma comum de **processo** para todas as frentes do @binderthetrade (séries, universo temático, formato espontâneo e especiais; ver `CATALOGO_EDITORIAL.md`). Não define personagens nem estética: isso vive na bíblia de cada frente. Não define o produto: só funções confirmadas (secção 9).
 
 Princípio: **mesma disciplina, identidades diferentes.** Nenhuma série herda a voz, o humor, a duração, a estrutura de guião ou o visual de outra.
 
 ---
 
-## 1. Hierarquia de fontes (quando duas regras chocam)
+## 1. Hierarquia documental (quando duas regras chocam)
 
-1. Pedido explícito do Ibisson na conversa.
-2. Esta constituição (processo, rigor, entrega, registo).
-3. `PERFIL.md` da série (adaptações operacionais da série).
-4. `CONTEXTO.md` da série (identidade, voz, visual, fórmula). **Autoridade criativa**: o perfil e a constituição nunca a reescrevem.
-5. Fichas de episódio e histórico.
+Um pedido explícito do fundador na conversa prevalece sobre tudo o que está abaixo e é registado em `DECISOES.md` quando muda uma regra.
+
+1. `AGENTS.md` (raiz): instruções operacionais para agentes. Diz como trabalhar e o que ler; não cria regras editoriais e nunca contradiz esta constituição.
+2. Esta constituição: princípios e regras do estúdio (processo, rigor, entrega, bloqueios, especiais).
+3. `CATALOGO_EDITORIAL.md`: frentes, classificação e estado.
+4. Bíblias editoriais: `CONTEXTO.md` de cada frente (identidade, voz, visual, fórmula), com o `PERFIL.md` como adaptação operacional. **Autoridade criativa**: a constituição e o perfil nunca a reescrevem.
+5. `DECISOES.md`: decisões do fundador e histórico de alterações de regra. Uma decisão nova é incorporada no documento canónico que altera; o registo guarda o porquê.
+6. Documentação técnica: `series.yaml`, `LEIA-ME.md` das séries, scripts, `comum/outro/LEIA-ME.md`.
+7. Documentação histórica: fichas de episódio, `comum/historico.md`, `INVENTARIO.md`, versões antigas.
 
 Se uma regra criativa do `CONTEXTO.md` contradiz uma regra de entrega daqui (ex.: frase final da legenda), vale a regra de entrega e regista-se a divergência em `DECISOES.md`. Lacuna de identidade: assinalar, nunca inventar.
 
-**Fonte de verdade.** Este repositório é a fonte de verdade técnica e documental do estúdio. As instruções do projeto claude.ai, os documentos do Google Drive e as skills apontam para ele e nunca o contradizem; se contradisserem, vale o repositório e regista-se a divergência. Exceção: enquanto a identidade do Mana & Burn não tiver bíblia no repositório, o documento da série no Drive continua a ser a autoridade criativa dela (§2).
+**Fonte de verdade.** Este repositório é a fonte de verdade técnica e documental do estúdio. As instruções do projeto claude.ai, os documentos do Google Drive e as skills apontam para ele e nunca o contradizem; se contradisserem, vale o repositório e regista-se a divergência. Exceções, até a bíblia existir no repositório: o documento da série Mana & Burn no Drive é a bíblia do Mana & Burn; os documentos do Órbita e do Lambe-lambe indicados no catálogo são as bíblias dessas frentes.
 
-## 2. Séries e onde estão
+## 2. Frentes e onde estão
 
-| Série | Pasta | Identidade | Perfil |
-|---|---|---|---|
-| Meta em Curto (personagem TUBO; ex-Oráculo de Tubo) | `oraculo/` | `oraculo/CONTEXTO.md` | `oraculo/PERFIL.md` |
-| Mana & Burn | `manaburn/` | Doc da série no Google Drive + skill `binder-mana-burn-episodio` + `manaburn/LEIA-ME.md` | `manaburn/PERFIL.md` |
-| Conde de Manaforte · O Tribunal Estético | `conde/` | `conde/CONTEXTO.md` | `conde/PERFIL.md` |
-| Especiais e crossovers | `especiais/` | ficha do especial + §14 | — |
-| Núcleo (regras comuns) | `nucleo/` | — | — |
-| Recursos partilhados (fecho, histórico, easter eggs) | `comum/` | — | — |
+O catálogo canónico das frentes (classificação, estado, objetivo, identidade, documentação, território) é `CATALOGO_EDITORIAL.md`. A configuração técnica (palavra de arranque, pasta, vozes, trilhas, referência) é `../series.yaml`. Esta constituição não repete nenhum dos dois.
 
-O registo máquina-legível das séries (palavra de arranque, pasta, vozes, trilha, episódio de referência, estado) é `series.yaml`, na raiz. Esta tabela e o registo têm de dizer o mesmo.
+Pastas fixas: `nucleo/` (regras comuns), `comum/` (fecho, histórico, easter eggs; os scripts dependem destes caminhos), `especiais/` (crossovers), uma pasta por série (`manaburn/`, `oraculo/`, `conde/`).
 
-Série nova: copiar `modelos/PERFIL_SERIE.md` para `<pasta>/PERFIL.md`, criar `<pasta>/CONTEXTO.md`, acrescentar uma entrada em `series.yaml`, uma linha nesta tabela e uma entrada em `DECISOES.md`. Esta constituição não muda.
+Frente nova: ver o fim de `CATALOGO_EDITORIAL.md`. Esta constituição não muda.
 
 ## 3. Motor de orquestração (antes de cada produção)
 
@@ -83,11 +80,11 @@ As 12 perguntas da orquestração (série, objetivo, interesse, investigação, 
 
 ## 6. Qualidade audiovisual
 
-- 9:16, 1080×1920, 30 fps, **sem corte lateral** (regra com historial de reclamações: conferir quadros reais do vídeo final, não só a prévia).
+- Formato da frente (catálogo): séries em Reel 9:16, 1080×1920, 30 fps; Órbita em Reel 4:5, 1080×1350; Lambe-lambe em post 4:5 ou Reel 9:16. Em qualquer formato, **sem corte lateral** (regra com historial de reclamações: conferir quadros reais do ficheiro final, não só a prévia).
 - Carta real, inteira, rodapé visível, nada por cima.
 - Texto legível no telemóvel; legenda dentro da zona segura.
 - Voz, música, efeitos e legendas conferidos no ficheiro final; -14 LUFS (ou o alvo do perfil), pico < -1 dBFS.
-- Todo vídeo termina com `comum/outro/outro_binder_916.mp4` (ver `comum/outro/LEIA-ME.md`). Nunca redesenhar a tela do app.
+- Todo vídeo termina com `comum/outro/outro_binder_916.mp4` (ver `comum/outro/LEIA-ME.md`), salvo exceção registada num especial. O fecho só existe em 9:16: como se aplica aos Reels 4:5 do Órbita é pergunta em aberto (`DECISOES.md`, 31/10). Nunca redesenhar a tela do app.
 - Reutilizar recursos mestres (retratos, imagem-mestra, temas, fecho); não regenerar personagens.
 - Nunca dizer que um vídeo foi inspecionado se não foi.
 
@@ -119,7 +116,7 @@ As 12 perguntas da orquestração (série, objetivo, interesse, investigação, 
 Entregáveis: vídeo · capa · legenda limpa · comentário fixado · texto alternativo · ficha de fatos/fontes.
 
 - **Legenda:** gancho; uma frase de facto que manda para o comentário; créditos ("Na tela/TV: carta (coleção, ano), nº n. Arte: artista. © Wizards of the Coast. Conteúdo de fã não oficial."); CTA em rotação; até 5 hashtags; sem emojis; **termina com "baixe o BINDER Vision"**. PT-BR, tratamento por "você".
-- **Comentário fixado:** pergunta fácil na 1.ª linha + complemento (passos, texto Oracle, fonte, VOD) + **"Tem um detalhe escondido. Diga o segundo."**
+- **Comentário fixado:** pergunta fácil na 1.ª linha + complemento (passos, texto Oracle, fonte, VOD) + **"Tem um detalhe escondido. Diga o segundo."** quando o conteúdo tem easter egg (sem egg, a frase não entra)
 - **Texto alternativo:** descrição da imagem ou do vídeo e transcrição do texto que aparece no ecrã, para o campo "texto alternativo" do Instagram (regra da skill `binder-posts-instagram`, peça 4 do pacote).
 - **Easter egg:** no máximo 1 por episódio, registado em `comum/easter_eggs.md`.
 - **Commit no fim:** roteiro/ficha, legenda, fontes, histórico. Nunca vídeos.

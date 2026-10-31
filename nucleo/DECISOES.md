@@ -2,6 +2,26 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 31/10/2026 · Missão "Consolidação estrutural do BINDER Originals": frentes, hierarquia e Showrunner (constituição v1.3)
+
+**Decisões do fundador (missão de 31/10/2026, 10:46):**
+1. Órbita (universo temático de Star Trek) e Lambe-lambe (formato espontâneo, permanente) estão **ativos**. Revoga a classificação "arquivada" da entrada abaixo.
+2. O especial de Halloween 2026 e a sequência de Star Trek estão publicados. Tudo o que está no repositório foi testado, aprovado e lançado. Vozes e músicas foram criadas pelo fundador e estão aprovadas: não se reabrem aprovação, qualidade, licenciamento nem produção desses materiais, nem aparecem como pendências.
+3. Pastas das séries mantêm-se (`manaburn/`, `oraculo/`, `conde/`, `especiais/`, `comum/`); núcleo em `nucleo/`, sem duplicação.
+
+**O quê (execução):**
+- Novo `nucleo/CATALOGO_EDITORIAL.md`, canónico para classificação, estado, objetivo, identidade e território de cada frente; `series.yaml` passa a ter só configuração técnica (sem estado nem classificação).
+- Constituição v1.3: §1 hierarquia documental (AGENTS → constituição → catálogo → bíblias → decisões → técnica → histórico, com o pedido explícito do fundador acima de tudo); §2 remete para o catálogo em vez de repetir a tabela; §6 formato por frente (séries 9:16, Órbita 4:5, Lambe-lambe 4:5 ou 9:16), sem corte lateral em qualquer formato; §10 e checklist: "Tem um detalhe escondido. Diga o segundo." só quando há easter egg (a regra anterior pedia a frase mesmo com 0 eggs).
+- Novo `nucleo/SHOWRUNNER.md` (quatro tipos de produção, router entre frentes, o que decide e o que pede, briefing, manutenção do estado), `nucleo/modelos/HANDOFF.md`, `nucleo/prompts/CLAUDE_PROJECT.md` e `nucleo/prompts/CHATGPT.md`.
+- Palavras de arranque novas, operacionais: `especial`, `orbita`, `lambe`/`post`, `oraculo` (acrescenta a `tubo`/`meta`).
+
+**Perguntas ao fundador (não decididas, para não inventar):**
+- Q1 · Nome público da série do TUBO: "Meta em Curto" (repositório desde 28/10) ou "Oráculo de Tubo" (missão de 31/10)? Até lá, os documentos usam "Meta em Curto · Oráculo de Tubo".
+- Q2 · Fecho do scanner nos Reels 4:5 do Órbita: o fecho existe só em 9:16. Fazer uma versão 4:5, aceitar sem fecho, ou outra regra?
+- Q3 · Bíblias do Órbita e do Lambe-lambe: trazer para o repositório os documentos do projeto claude.ai e do Drive (e o gerador `claude/gerador/` do Órbita)?
+
+**Impacto:** nenhum conteúdo publicado, voz, música ou script mudou. A missão substitui o plano por fases do prompt anterior; o que dele faltava de técnico (motor v2 do Mana & Burn no repositório, episódios de referência) passa a pendência técnica, não bloqueia a governação.
+
 ## 31/10/2026 · Consolidação do estúdio, Fase 1: núcleo, registo e fonte de verdade (constituição v1.2)
 
 **O quê:** (1) `comum/originals/` passa a `nucleo/` (mesmos nomes de ficheiro; nenhum script dependia da pasta). (2) Constituição §1: o repositório é a fonte de verdade; as instruções do projeto claude.ai, o Drive e as skills apontam para ele; o pedido explícito do Ibisson continua no topo. (3) §2: entram `especiais/`, `nucleo/` e o registo `series.yaml`. (4) §10 e checklist C: o texto alternativo passa a ser entregável (já era a peça 4 da skill `binder-posts-instagram`). (5) `AGENTS.md` passa a ser o ponto de entrada neutro; `CLAUDE.md` só remete para ele. (6) Merge da branch `especial/sir-patrick` (constituição v1.1 §14, especial Picard v2) para `consolidacao-estudio`.

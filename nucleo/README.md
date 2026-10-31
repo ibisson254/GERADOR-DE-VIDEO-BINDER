@@ -1,14 +1,29 @@
-# Núcleo BINDER · regras comuns a todas as séries
+# Núcleo BINDER · documentos canónicos
 
-Um agente trabalha numa série lendo só este núcleo e a identidade dessa série. As regras não se repetem aqui: este índice diz onde cada uma vive.
+Um documento canónico por matéria. Este índice diz onde cada uma vive; nada se repete aqui. A ordem de precedência está na constituição §1.
+
+| Matéria | Documento canónico |
+|---|---|
+| Instruções operacionais para agentes | `../AGENTS.md` |
+| Constituição (princípios e regras) | `CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md` |
+| Catálogo de frentes e formatos | `CATALOGO_EDITORIAL.md` |
+| Showrunner (classificação, router, briefing) | `SHOWRUNNER.md` |
+| Decisões do fundador e histórico de alterações | `DECISOES.md` |
+| Controlo de qualidade | `CHECKLIST_QUALIDADE.md` |
+| Modelos (ficha, perfil, handoff) | `modelos/` |
+| Instruções para o projeto claude.ai e para o ChatGPT | `prompts/` |
+| Configuração técnica das frentes | `../series.yaml` |
+| Estado atual do estúdio | `../STATUS.md` |
+
+## Onde está cada regra comum
 
 | Regra comum | Onde está |
 |---|---|
 | Hierarquia de fontes e repositório como fonte de verdade | `CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md` §1 |
-| Séries e onde estão | constituição §2 + `../series.yaml` |
+| Frentes e onde estão | constituição §2 → `CATALOGO_EDITORIAL.md` |
 | Processo de produção (classificar, estratégia, validar, entregar) | constituição §3 |
 | Rigor factual e fontes | constituição §4 |
-| Formato 9:16, 1080×1920, sem corte lateral, −14 LUFS | constituição §6 |
+| Formato por frente, sem corte lateral, −14 LUFS | constituição §6 |
 | Fecho obrigatório com o scanner real | constituição §6 + `../comum/outro/LEIA-ME.md` |
 | Direitos, vozes e músicas com licença | constituição §7 |
 | Produto: funções que podem ser citadas e palavras proibidas | constituição §9 |
@@ -17,9 +32,6 @@ Um agente trabalha numa série lendo só este núcleo e a identidade dessa séri
 | Bloqueios | constituição §11 |
 | Aprendizagem depois de publicar | constituição §12 + `../comum/historico.md` |
 | Especiais e homenagens | constituição §14 |
-| Controlo de qualidade | `CHECKLIST_QUALIDADE.md` |
-| Registo de decisões | `DECISOES.md` |
-| Modelos de ficha e de perfil | `modelos/` |
 
 ## Marca e posicionamento
 
@@ -29,8 +41,3 @@ Fontes: descrição do projeto claude.ai "Binder Marketing" e constituição §9
 - Fase inicial, beta para Android: <https://play.google.com/store/apps/details?id=com.binderstudios.vision>. Sem versão para iPhone.
 - Objetivo de todo conteúdo: levar colecionadores a experimentar a beta. Views não são instalações.
 - Paleta da marca: #050A10, #0F172A, #10B981 (verde-esmeralda). Cada série tem paleta própria; o verde BINDER aparece no fecho.
-
-## Ainda por fazer neste núcleo (Fase 3)
-
-- `router.md`: que tema vai para que série, com exemplos reais.
-- `showrunner.md`: interface palavra de arranque → conteúdo completo.

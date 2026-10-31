@@ -1,7 +1,7 @@
-# Registo de séries do Estúdio BINDER (@binderthetrade)
-# Fonte: INVENTARIO.md §6 e §8 (31/10/2026). Tem de dizer o mesmo que a constituição §2.
-# Criar uma série = criar a pasta + PERFIL.md + CONTEXTO.md e acrescentar uma entrada aqui.
-# null = dado ainda não registado em nenhuma fonte (não inventar; preencher na Fase 2 da série).
+# Configuração técnica das frentes do Estúdio BINDER (@binderthetrade)
+# Classificação, estado, objetivo e identidade de cada frente: nucleo/CATALOGO_EDITORIAL.md (canónico).
+# Aqui só o que os agentes e scripts precisam para produzir: palavra de arranque, pasta, documentos, vozes, trilhas, referência.
+# null = dado ainda não registado em nenhuma fonte (não inventar).
 
 versao: 1
 atualizado: 2026-10-31
@@ -32,11 +32,10 @@ series:
       - {nome: midnight_throttle, ficheiro: manaburn/musica.mp3, uso: "Ep. 1–2 e padrão do trilha.py v2"}
       - {nome: concrete_teeth, ficheiro: null, uso: "Ep. 5–7 (ficheiro em falta no repositório)"}
     referencia: manaburn/episodios/ep09_dack/
-    estado: ativa
 
   - slug: tubo
-    nome: Meta em Curto (TUBO)
-    palavras: [tubo, meta]
+    nome: Meta em Curto · Oráculo de Tubo (TUBO)   # nome público por confirmar (DECISOES.md 31/10)
+    palavras: [tubo, meta, oraculo]
     formato: reel_9x16
     formatos_extra: [carrossel_4x5]
     pasta: oraculo/                            # nome antigo mantido: os scripts dependem dele
@@ -47,7 +46,6 @@ series:
     trilha:
       - {nome: "Paper Thin Alibi (tema do TUBO)", ficheiro: oraculo/musica/tubo_tema.mp3, original: oraculo/musica/tubo_tema_original.mp3}
     referencia: oraculo/episodios/ep02_hartford_ficha.md
-    estado: ativa
 
   - slug: conde
     nome: Conde de Manaforte · O Tribunal Estético
@@ -61,30 +59,28 @@ series:
     trilha:
       - {nome: "Verdict in Varnish and Vellum", ficheiro: conde/musica/tema.mp3}
     referencia: conde/episodios/ep003_voldaren_pariah_ficha.md
-    estado: ativa
 
-  - slug: posts
-    nome: Posts estáticos e carrosséis
-    palavras: [post]
-    formato: imagem_4x5
-    pasta: null                                # criada na Fase 2
-    perfil: null
-    identidade: "skill binder-posts-instagram"
-    vozes: {}
-    trilha: []
-    referencia: null
-    estado: em_desenvolvimento
+  - slug: especial
+    nome: Especiais e homenagens
+    palavras: [especial]
+    formato: livre                            # constituição §14
+    pasta: especiais/                          # especial de uma série: <pasta da série>/episodios/espNN_<nome>/
+    exemplos: [especiais/halloween_2026/, manaburn/episodios/esp02_picard_v2/]
 
   - slug: orbita
     nome: Órbita · Star Trek
-    palavras: []
-    formato: reel_4x5
-    pasta: null                                # código no projeto claude.ai (claude/gerador/), índice no Drive (pasta 02)
-    estado: arquivada
+    palavras: [orbita]
+    formato: reel_4x5                          # 1080x1350, 12 s, 30 fps, loop
+    pasta: null                                # lacuna: código no projeto claude.ai (claude/gerador/), índice no Drive (pasta 02)
+    identidade: "Projeto claude.ai: claude/serie-star-trek-bauhaus.md · Drive: Órbita · Star Trek · índice"
+    vozes: {}
+    trilha: []                                 # Reels sem áudio; música escolhida no Instagram (exceção: Commander Spock)
 
   - slug: lambe-lambe
-    nome: Lambe-lambe, Scanner e Na prática
-    palavras: []
-    formato: imagem_4x5
-    pasta: null                                # índice no Drive (pasta 03)
-    estado: arquivada
+    nome: Lambe-lambe
+    palavras: [lambe, post]
+    formato: imagem_4x5                        # 1080x1350; Reels 9:16 quando houver demonstração do app
+    pasta: null                                # lacuna: material no projeto claude.ai e no Drive (pasta 03)
+    identidade: "Projeto claude.ai: claude/reel-lambe-lambe-pop.md · skill binder-posts-instagram"
+    vozes: {}
+    trilha: []

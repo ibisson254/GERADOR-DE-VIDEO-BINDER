@@ -4,6 +4,8 @@
 
 Nenhum ficheiro existente foi alterado, movido ou apagado. Esta fase só acrescenta este inventário e o `STATUS.md`.
 
+> **Documento histórico.** Retrato do estado a 31/10/2026 de madrugada. Superado em parte pela decisão do fundador de 31/10 (`nucleo/DECISOES.md`): Órbita e Lambe-lambe estão ativos (não arquivados), o especial de Halloween e a sequência de Star Trek estão publicados, e as lacunas de licença de vozes e músicas não são pendências. Estado atual: `STATUS.md` e `nucleo/CATALOGO_EDITORIAL.md`.
+
 Ponto de partida: a auditoria de 30/10 (`claude/comum/BINDER_INTELLIGENT_PUBLISHER_AUDIT.md`, no Project) já cobriu infraestrutura, custos, Supabase e n8n. Aqui só se repete o que importa para o estúdio e regista-se o que mudou desde então.
 
 ---
