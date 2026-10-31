@@ -1,19 +1,27 @@
 {
  "id": "especial_halloween_2026",
  "titulo": "Innistrad × Duskmourn: O Julgamento do Horror",
- "notas": "PT-BR (vozes das séries). 'quem': B=Burn, M=Mana, K=Conde, T=TUBO. 'fonte' = trecho da faixa gerada (s, antes de tempo/respiro). Sem 'fonte' = fala ainda sem voz (PRÉVIA). 'cena' liga a fala ao storyboard. 'so_ecra': fala só no ecrã (sem voz), para caber no tempo.",
+ "notas": "PT-BR (vozes das séries). 'quem': B=Burn, M=Mana, K=Conde, T=TUBO. 'fonte' = trecho da faixa gerada (s, antes de tempo/respiro). Sem 'fonte' = fala ainda sem voz (PRÉVIA). 'cena' liga a fala ao storyboard. 'so_ecra': fala só no ecrã (sem voz), para caber no tempo. K e T: cortes medidos nas faixas de 31/10 (conde_raw/tubo_raw). 'respiro' por fala sobrepõe o da personagem.",
  "falas": [
   {
    "id": "K0a",
    "quem": "K",
    "cena": "abre_i",
-   "legenda": "Existem lugares onde os monstros vivem nas *sombras*."
+   "legenda": "Existem lugares onde os monstros vivem nas *sombras*.",
+   "fonte": [
+    0,
+    3.69
+   ]
   },
   {
    "id": "K0b",
    "quem": "K",
    "cena": "abre_d",
-   "legenda": "E existem lugares... onde a própria *casa* quer matar-te."
+   "legenda": "E existem lugares... onde a própria *casa* quer matar-te.",
+   "fonte": [
+    4.47,
+    8.83
+   ]
   },
   {
    "id": "B1",
@@ -39,7 +47,11 @@
    "id": "T1",
    "quem": "T",
    "cena": "tubo",
-   "legenda": "Recontagem autorizada. Tudo pode ser *calculado*."
+   "legenda": "Recontagem autorizada. Tudo pode ser *calculado*.",
+   "fonte": [
+    0,
+    3.47
+   ]
   },
   {
    "id": "B3",
@@ -89,7 +101,11 @@
    "id": "T2",
    "quem": "T",
    "cena": "veredito1",
-   "legenda": "Controla o seu turno. Ponto: *Innistrad*."
+   "legenda": "Controla o seu turno. Ponto: *Innistrad*.",
+   "fonte": [
+    4.95,
+    7.97
+   ]
   },
   {
    "id": "M4",
@@ -128,7 +144,11 @@
    "id": "T3",
    "quem": "T",
    "cena": "veredito2",
-   "legenda": "*Wizards*: Duskmourn é o medo do que não se vê."
+   "legenda": "*Wizards*: Duskmourn é o medo do que não se vê.",
+   "fonte": [
+    8.77,
+    12.13
+   ]
   },
   {
    "id": "M6",
@@ -164,33 +184,53 @@
    "quem": "K",
    "cena": "cat4",
    "legenda": "Arabella nos encara: porcelana rachada, ursos com dentes. *Eficaz.*",
-   "foco": "B"
+   "foco": "B",
+   "fonte": [
+    9.64,
+    15.85
+   ]
   },
   {
    "id": "K2",
    "quem": "K",
    "cena": "cat4",
    "legenda": "Mas o vampiro nem nos olha. A lua lhe serve de *auréola*.",
-   "foco": "A"
+   "foco": "A",
+   "fonte": [
+    16.66,
+    21.4
+   ]
   },
   {
    "id": "K3",
    "quem": "K",
    "cena": "cat4",
    "legenda": "Parecer: *Innistrad*. O medo que não nos olha é o mais elegante.",
-   "foco": "A"
+   "foco": "A",
+   "fonte": [
+    22.16,
+    28.11
+   ]
   },
   {
    "id": "T5",
    "quem": "T",
    "cena": "veredito4",
-   "legenda": "Dois a dois."
+   "legenda": "Dois a dois.",
+   "fonte": [
+    12.89,
+    13.88
+   ]
   },
   {
    "id": "T6",
    "quem": "T",
    "cena": "cat5",
-   "legenda": "Desconforto, em *sal*. Top 100 da EDHREC: Innistrad, três. Duskmourn, *zero*."
+   "legenda": "Desconforto, em *sal*. Top 100 da EDHREC: Innistrad, três. Duskmourn, *zero*.",
+   "fonte": [
+    14.44,
+    21.31
+   ]
   },
   {
    "id": "B8",
@@ -206,13 +246,22 @@
    "id": "T7",
    "quem": "T",
    "cena": "erro",
-   "legenda": "Três a dois, Innistrad. Ao contrário da EDHREC. *Erro de sistema.*"
+   "legenda": "Três a dois, Innistrad. Ao contrário da EDHREC. *Erro de sistema.*",
+   "fonte": [
+    21.92,
+    27.26
+   ],
+   "respiro": 0.45
   },
   {
    "id": "T8",
    "quem": "T",
    "cena": "fecho_tubo",
-   "legenda": "Probabilidade calculada. Humanos, *imprevisíveis*."
+   "legenda": "Probabilidade calculada. Humanos, *imprevisíveis*.",
+   "fonte": [
+    27.85,
+    31.79
+   ]
   },
   {
    "id": "B9",

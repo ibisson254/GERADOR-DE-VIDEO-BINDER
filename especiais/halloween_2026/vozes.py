@@ -47,6 +47,7 @@ def trim(x, thr=-45):
     a = max(0, idx[0] * win - int(0.03 * SR)); b = min(len(x), (idx[-1] + 1) * win + int(0.06 * SR)); return x[a:b]
 
 def atempo(x, f, path):
+    n = int(0.006 * SR); x = x.copy(); x[:n] *= np.linspace(0, 1, n); x[-n:] *= np.linspace(1, 0, n)   # sem cliques nas pontas
     tmp = path.with_suffix('.raw.wav'); write(tmp, x)
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(tmp), '-af', f'atempo={f}', '-ar', str(SR), '-ac', '1', str(path)], check=True)
     tmp.unlink()
@@ -69,7 +70,7 @@ for q in 'BMKT':
     falas = [f for f in R['falas'] if f['quem'] == q and not f.get('so_ecra')]
     raw = pathlib.Path(RAW[q])
     if raw.exists(): cache[q] = load(str(raw))
-    if q in 'KT' and q in cache:     # corta pelos N-1 maiores silêncios
+    if q in 'KT' and q in cache and not all('fonte' in f for f in falas):     # corta pelos N-1 maiores silêncios
         x = cache[q]; s = sorted(silences(x, -38, 0.25), key=lambda p: p[1] - p[0], reverse=True)[:len(falas) - 1]
         cuts = sorted(s); bounds = [0.0] + [c for p in cuts for c in p] + [len(x) / SR]
         for k, f in enumerate(falas): f['fonte'] = [bounds[2 * k], bounds[2 * k + 1]]
@@ -77,7 +78,7 @@ for q in 'BMKT':
         p = out / f"{f['id']}.wav"
         if 'fonte' in f and q in cache:
             a, b = f['fonte']; x = trim(cache[q][int(a * SR):int(b * SR)])
-            x = respiro(x, RESPIRO[q]); atempo(x, TEMPO[q], p)
+            x = respiro(x, f.get('respiro', RESPIRO[q])); atempo(x, TEMPO[q], p)
             d = float(subprocess.check_output(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', str(p)]))
             info[f['id']] = dict(dur=round(d, 3), previa=False, **env12(p))
         else:

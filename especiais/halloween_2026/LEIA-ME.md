@@ -2,7 +2,7 @@
 
 Crossover BINDER Originals (Mana & Burn + Conde de Manaforte + TUBO). Dossier completo (pesquisa, guião, storyboard, prompts, voz, música, montagem, legenda): documento "Especial de Halloween · Innistrad × Duskmourn — dossier de produção" no claude.ai.
 
-Estado (31/10/2026): PRÉVIA montada (94,9 s). Faltam a voz do Conde e do TUBO (créditos ElevenLabs esgotados: 89) e o tema musical original.
+Estado (31/10/2026): render final com as 4 vozes (97,6 s com fecho). Só a música é provisória (temas das séries); para a trocar, `musica/tema_especial.mp3` + `mix.py` + `build.py`.
 
 ## Como finalizar
 Pasta de trabalho com: estes scripts, `vozes/burn_raw.mp3`, `vozes/mana_raw.mp3` (flow ElevenLabs "BINDER Especial Halloween · Innistrad x Duskmourn"),
