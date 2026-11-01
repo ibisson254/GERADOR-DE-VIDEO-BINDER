@@ -7,7 +7,7 @@ Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao ris
 - [ ] Série, classe de conteúdo e objetivo identificados (ficha, Etapa 1).
 - [ ] A pauta pertence ao território da série (perfil · "Fora do território").
 - [ ] Proposta de valor numa frase.
-- [ ] Tema não repete `comum/historico.md` nem `comum/easter_eggs.md`.
+- [ ] Auditoria de originalidade: `memoria.py pauta` livre (ou decisão do fundador registada) e linha no `comum/REGISTRO_EDITORIAL.md`; egg não repete `comum/easter_eggs.md`.
 - [ ] Fontes necessárias acessíveis; se não, plano de bloqueio (constituição §11).
 - [ ] Recursos do kit inspecionados e na versão atual.
 - [ ] Estratégia proporcional (constituição §3, Etapa 2).
@@ -32,7 +32,7 @@ Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao ris
 - [ ] Comentário fixado: pergunta fácil + complemento (+ "Tem um detalhe escondido. Diga o segundo." se houver easter egg).
 - [ ] Texto alternativo escrito (descrição + texto do ecrã).
 - [ ] Easter egg (0 ou 1) registado.
-- [ ] Commit: ficha/roteiro, legenda, fontes, histórico. Nenhum vídeo.
+- [ ] Encerramento (`SHOWRUNNER.md` §6): `memoria.py encerramento <ID>` OK, registo e histórico atualizados, commit conferido no GitHub. Nenhum vídeo.
 
 ## Defeitos bloqueadores (não publicar)
 
@@ -51,6 +51,6 @@ Ritmo de um bloco, escolha de palavra, variação de CTA, detalhe visual extra, 
 
 ## D. Depois de publicar
 
-- [ ] Números do Insights em `comum/historico.md` (observado ≠ leitura).
+- [ ] Números do Insights em `comum/insights/` (facto ≠ interpretação; impulso A CONFIRMAR até confirmação).
 - [ ] Uma aprendizagem acionável, ou "nenhuma" se não houver.
 - [ ] Previsões do TUBO revistas quando o evento acabar.

@@ -19,16 +19,18 @@ Ponto de entrada para qualquer agente (Claude, ChatGPT ou outro). As instruçõe
    | `orbita` | Órbita · Star Trek | Temática | `orbita/CONTEXTO.md` → `orbita/gerador/LEIA-ME.md` |
    | `lambe` / `post` | Lambe-lambe | Espontânea | `lambe-lambe/CONTEXTO.md` → skill `binder-posts-instagram` |
 
-6. `comum/historico.md` e `comum/easter_eggs.md`: não repetir tema nem egg.
+6. `comum/REGISTRO_EDITORIAL.md` (memória editorial de todas as frentes) e `comum/easter_eggs.md`: não repetir tema, objeto nem egg. Auditoria de originalidade em `nucleo/SHOWRUNNER.md` §2.3.
+7. Domingo, com prints do Instagram Insights: `comum/insights/LEIA-ME.md`.
 
 `series.yaml` tem a configuração técnica de cada frente (pastas, vozes, trilhas, episódio de referência).
 
 ## 2. Produzir um conteúdo
 
-1. Ficha a partir de `nucleo/modelos/FICHA_EPISODIO.md`; estratégia pela constituição §3.
-2. Produzir; validar com `nucleo/CHECKLIST_QUALIDADE.md` e os critérios do perfil.
-3. Entregar: vídeo, capa, legenda, comentário fixado, texto alternativo, fontes, e as limitações reais.
-4. Commit: ficha/roteiro, legenda, fontes, histórico, easter egg. Nunca vídeos renderizados.
+1. Pauta: auditoria de originalidade (`python3 comum/ferramentas/memoria.py pauta …`) e linha nova em `comum/REGISTRO_EDITORIAL.md`.
+2. Ficha a partir de `nucleo/modelos/FICHA_EPISODIO.md`; estratégia pela constituição §3.
+3. Produzir; validar com `nucleo/CHECKLIST_QUALIDADE.md` e os critérios do perfil.
+4. Entregar: vídeo, capa, legenda, comentário fixado, texto alternativo, fontes, e as limitações reais.
+5. **Encerramento obrigatório** (`nucleo/SHOWRUNNER.md` §6): pacote e ficha na pasta do episódio, registo, histórico, STATUS, handoff, `memoria.py encerramento <ID>` OK, commit enviado e conferido no GitHub. Nunca vídeos renderizados. Não se declara um episódio arquivado sem o commit conferido.
 
 Regras que nunca mudam: não inventar factos nem funções/telas do app; todo vídeo termina com `comum/outro/outro_binder_916.mp4` (exceto Órbita e exceções registadas em especiais); sem corte lateral no formato da frente, conferido no ficheiro final.
 
@@ -49,4 +51,5 @@ Frente nova: fim de `nucleo/CATALOGO_EDITORIAL.md`. Mudança de regra: `nucleo/D
 
 - Clonar com profundidade 1 e ler `STATUS.md` antes de qualquer outra coisa.
 - No fim de cada sessão: commit, `STATUS.md` atualizado e handoff no formato de `nucleo/modelos/HANDOFF.md`.
-- Nada do que importa fica só na conversa: decisões em `nucleo/DECISOES.md`, desempenho em `comum/historico.md`, episódios nas fichas.
+- Nada do que importa fica só na conversa: decisões em `nucleo/DECISOES.md`, conteúdos e estados em `comum/REGISTRO_EDITORIAL.md`, cronologia em `comum/historico.md`, números em `comum/insights/`, episódios nas fichas.
+- Antes de fechar: `python3 comum/ferramentas/memoria.py validar` sem erros.
