@@ -142,7 +142,7 @@ def comparar_pauta(entradas, objeto, tema='', gancho=''):
                 tr = tokens(r)
                 if no and nr and (no == nr or (len(no) >= 4 and no in nr) or (len(nr) >= 4 and nr in no)):
                     motivos.append(f'mesmo objeto ("{o}" ~ "{r}")')
-                elif to and tr and len(to & tr) >= max(1, min(len(to), len(tr)) // 2 + (1 if min(len(to), len(tr)) > 2 else 0)):
+                elif to and tr and len(to & tr) >= max(2, (min(len(to), len(tr)) + 1) // 2):
                     motivos.append(f'objeto parecido ("{o}" ~ "{r}": {", ".join(sorted(to & tr))})')
         for nome, valor, campo in (('tema', tema, 'Tema central'), ('gancho', gancho, 'Gancho')):
             if not valor:
