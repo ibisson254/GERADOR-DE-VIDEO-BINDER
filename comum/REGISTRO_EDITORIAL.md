@@ -1,0 +1,171 @@
+# Registo editorial universal · Estúdio BINDER (@binderthetrade)
+
+Fonte operacional comum a todos os agentes (Claude, ChatGPT ou outro) e a todas as frentes. Uma linha por conteúdo: o que é, de que trata, em que estado está e onde está a ficha. Criado a 01/11/2026 (`nucleo/DECISOES.md`).
+
+**Estado do inventário: INCOMPLETO.** A auditoria retroativa de 01/11/2026 migrou tudo o que está no repositório, no projeto claude.ai e nas branches abertas, mas há conteúdos sem fonte (estado `POR AUDITAR`, lista em "Lacunas"). Enquanto houver linhas `POR AUDITAR`, ninguém declara este inventário completo.
+
+## Como usar
+
+1. **Antes de propor uma pauta**: procurar aqui o objeto (carta, pessoa, deck, evento) e o tema, e correr
+   `python3 comum/ferramentas/memoria.py pauta --objeto "<carta ou evento>" --tema "<tema>"`.
+   Resultado `BLOQUEADA` = não avançar sem decisão do fundador registada em `nucleo/DECISOES.md`.
+2. **Ao abrir uma pauta**: acrescentar a linha com o próximo ID livre da frente, estado `IDEIA` ou `EM ANÁLISE`.
+3. **A cada mudança de estado**: atualizar a linha (estado, fonte do estado, datas). Nunca apagar linhas.
+4. **No encerramento** (protocolo em `nucleo/SHOWRUNNER.md` §6): linha em `CONCLUÍDO`, ficha e pacote no repositório; `PUBLICADO` só com confirmação (fundador, print do Insights ou link do post).
+5. Depois de editar: `python3 comum/ferramentas/memoria.py validar`.
+
+## Estados
+
+`IDEIA → EM ANÁLISE → APROVADO → EM PRODUÇÃO → CONCLUÍDO → PUBLICADO`, mais `REJEITADO`, `PAUSADO`, `NÃO PUBLICÁVEL` e `POR AUDITAR`.
+
+| Estado | Significa |
+|---|---|
+| IDEIA | Pauta anotada, sem análise |
+| EM ANÁLISE | Pauta em pesquisa ou à espera de decisão do fundador |
+| APROVADO | O fundador aprovou a pauta ou o conteúdo. Não se reabre |
+| EM PRODUÇÃO | A ser produzido; entregáveis ou QC incompletos |
+| CONCLUÍDO | Entregáveis prontos, QC fechado e arquivado no repositório; falta publicar ou confirmar a publicação |
+| PUBLICADO | Publicação confirmada (fundador, Insights ou link). Não se reabre |
+| REJEITADO | O fundador recusou. Pode voltar só como pauta nova, com ângulo novo e decisão registada |
+| PAUSADO | Parado por decisão; retoma com a mesma linha |
+| NÃO PUBLICÁVEL | Produzido mas não pode sair (versão substituída, falta de licença, erro). Não se reabre |
+| POR AUDITAR | Só para a migração retroativa: o conteúdo existiu mas falta fonte do estado. Nunca usar em conteúdo novo |
+
+Bloqueiam pautas novas com o mesmo objeto ou tema: todos os estados exceto `REJEITADO` (que só gera aviso).
+
+## Regras de originalidade
+
+- Conteúdo `APROVADO`, `PUBLICADO` ou `NÃO PUBLICÁVEL` não se reabre (constituição §10, `DECISOES.md`).
+- Mudar título, personagem, frente ou formato **não** elimina a duplicidade.
+- Comparar tema, objeto, tese, gancho e ângulo com todas as linhas do registo, de todas as frentes.
+- Mesmo objeto com ângulo novo = dúvida. **Na dúvida, a pauta fica bloqueada** até decisão do fundador, registada em `nucleo/DECISOES.md` e citada na coluna "Originalidade".
+- Datas: DD/MM/AAAA. Publicação sem data confirmada fica "confirmada, sem data" ou "A CONFIRMAR". Nunca estimar uma data de publicação.
+
+## Colunas
+
+ID · Tema central · Objeto (carta, pessoa, deck ou evento; vários separados por `;`) · Tese e ângulo narrativo · Gancho · Estado · Fonte do estado · Aprovação · Publicação · Ficha (caminho no repositório, `branch:<nome>:<caminho>` ou `projeto:<caminho>` no projeto claude.ai) · Relações (IDs) · Originalidade (resultado da auditoria). `—` = não se aplica; `LACUNA` = falta informação.
+
+Prefixos de ID: `MB` Mana & Burn · `MC` Meta em Curto · `CM` Conde de Manaforte · `ESP` especiais entre séries · `ORB` Órbita · `LL` Lambe-lambe · `PM` Pequeno Mestre (frente em desenvolvimento, fora da `main`).
+
+## Mana & Burn
+
+| ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| MB-EP01 | Carta nova de Star Trek com efeito aleatório | Q, Stacking the Deck | O Q copia a mão, mas embaralha antes: é sorte, não controlo | O Q de Star Trek transforma cada carta da sua mão em cópia de outra. Só que é na sorte. | PUBLICADO | Insights 26/10/2026 (idade 3 d) | — | confirmada, sem data (anterior a 26/10/2026) | manaburn/extras/ep1/ | ORB-11; MB-ZAP01 | Retroativa: primeira peça sobre o Q no registo. ORB-11 usa a mesma carta noutra frente |
+| MB-EP02 | Carta mais odiada do Commander 2026 (Salt Score EDHREC) | Stasis | Uma carta de 1993 ainda tranca a mesa inteira | A carta mais odiada do Commander em 2026 tem 33 anos e custa duas manas. | PUBLICADO | Fundador, confirmação global de 31/10/2026 (conteúdo do repositório) | — | confirmada, sem data | manaburn/extras/ep2/ | MB-ESP02 (lista de banimento do Burn) | Retroativa: sem conflito |
+| MB-EP03 | LACUNA | LACUNA | LACUNA | LACUNA | POR AUDITAR | Nenhuma fonte encontrada (repositório, projeto) | LACUNA | LACUNA | LACUNA | MB-SN01? | Não auditável: objeto desconhecido |
+| MB-EP04 | LACUNA (chamada "o Kirk autografado") | Kirk autografado (carta exata por confirmar) | LACUNA | LACUNA | POR AUDITAR | Só a chamada em projeto:claude/gerador-manaburn/lote.json | LACUNA | LACUNA | LACUNA | ORB-01; MB-SN01? | Não auditável. Se existiu, partilha objeto com ORB-01 |
+| MB-SN01 | LACUNA (episódio sem número identificado) | LACUNA | LACUNA | Alô? É da mesa de Commander?… (início da legenda) | PUBLICADO | Insights 26/10/2026 (idade 2 d) | — | confirmada, sem data (anterior a 26/10/2026) | LACUNA | MB-EP03?; MB-EP04? | Não auditável: objeto desconhecido |
+| MB-EP05 | Preço sobe 530% por combo antigo de cEDH | Knacksaw Clique; Kinnan, Bonder Prodigy; Paradise Mantle | Nenhuma carta nova: o preço acordou porque um combo velho ganhou torneio | Uma fada de Magic de 2008 subiu 530% sem nenhuma carta nova no meio. | PUBLICADO | Insights 26/10/2026 (idade 2 d) | — | confirmada, sem data (anterior a 26/10/2026) | projeto:claude/gerador-manaburn/episodios/ep5_knacksaw.js | MB-ZAP01 | Retroativa: sem conflito |
+| MB-EP06 | Recorde de vendas de Magic e Collector Booster com menos cartas | Hasbro, resultados do 3.º trimestre 2026; Collector Booster 2027 e god packs; Gods Willing | O recorde vem com menos cartas na caixa | Magic bateu recorde de vendas. E o Collector Booster vai perder 3 cartas. | PUBLICADO | nucleo/DECISOES.md 31/10/2026 (fecho cortado do Ep. 6 "publicado") | — | confirmada, sem data | projeto:claude/gerador-manaburn/episodios/ep6_godpack.js | MB-ZAP01 | Retroativa: sem conflito |
+| MB-EP07 | Evento de Halloween com Leyline em jogo | All Leylines' Eve (30/10–5/11/2026); Leyline of Anticipation | No evento, toda mágica tem lampejo, até criatura | No Halloween do Magic, toda mágica tem lampejo. Até a sua criatura. | PUBLICADO | Insights 26/10/2026 (idade 2 d) | — | confirmada, sem data (anterior a 26/10/2026) | projeto:claude/gerador-manaburn/episodios/ep7_halloween.js | MB-ZAP01; MB-GIRO01; ESP-2026-01 | Retroativa: sem conflito anterior. MB-GIRO01 repete evento e carta (ver essa linha) |
+| MB-ZAP01 | Zapping: cinco assuntos da semana | Q, Stacking the Deck; Hasbro 3.º trimestre; Knacksaw Clique; All Leylines' Eve; Magic Spotlight: Fracture | Resumo da semana em canais de TV, com chamada para os plantões | Cinco assuntos que dominaram a semana do Magic, em 45 segundos. | PUBLICADO | Insights 26/10/2026 (idade 1 d) | — | confirmada, sem data (anterior a 26/10/2026) | projeto:claude/gerador-manaburn/legendas/zapping01_legenda.txt | MB-EP01; MB-EP05; MB-EP06; MB-EP07; MC-EP02 | Formato-resumo: reaproveita objetos de episódios por desenho; antecessor de MB-GIRO01 |
+| MB-PAUTA01 | Preço sobe 600% por causa de um precon | Polymorph; Jace, Multiverse Architect | Carta velha do fichário pode valer mais do que se acha | Uma carta de 1996 subiu 600% em uma semana, e o motivo é um Jace de 2026. | POR AUDITAR | Plano de 27/10/2026 "aguarda o OK"; nenhuma decisão registada; o n.º 08 foi usado pelo MB-EP08 | LACUNA | — | projeto:claude/gerador-manaburn/episodios/ep8_polymorph_plano.md | MB-EP05 (mesmo ângulo de preço); MB-EP09 (mesmo precon) | Dúvida: ângulo "preço acordou" igual ao MB-EP05. Bloqueada até decisão |
+| MB-EP08 | Carta da Reserved List que impõe pedágio na mesa | The Tabernacle at Pendrell Vale | Um terreno que não gera mana e custa o preço de um carro | Você pagaria o preço de um carro popular num terreno que não gera mana? | PUBLICADO | Fundador, confirmação global de 31/10/2026 | — | confirmada, sem data | manaburn/episodios/ep08_tabernacle/ficha_fontes.md | MB-ESP02 (lista de banimento do Burn) | Retroativa: sem conflito |
+| MB-EP09 | Comandante novo que dá criaturas aos adversários e ganha torneio de cEDH | Dack Fayden, Helping Hand; precon Multiverse Reforged | O presente é uma arma: os gatilhos de entrada continuam seus | O maior ladrão do Magic agora dá criaturas aos adversários. E ganha torneio. | APROVADO | Fundador, confirmação global de 31/10/2026 (10:46); publicação estava agendada para 1 ou 2/11, 21h | 31/10/2026 | A CONFIRMAR | manaburn/episodios/ep09_dack/ficha.md | MB-PAUTA01 (mesmo precon); MB-ESP02 | Retroativa: sem conflito |
+| MB-ESP01 | Homenagem a Sir Patrick Stewart (v1, tom contido) | Sir Patrick Stewart; Jean-Luc Picard, Luminary | O que Patrick Stewart deu a Picard não cabe numa carta | Tem uma carta do Jean-Luc Picard prestes a chegar no Magic. E hoje, ela ganhou outro significado. | NÃO PUBLICÁVEL | Ficha (29/10/2026, 23:04) e nucleo/DECISOES.md 29/10/2026: substituída pela v2 | — | — | manaburn/episodios/esp01_sir_patrick/ficha.md | MB-ESP02 (substitui); ORB-13; ORB-20 | Versão substituída; não se reabre |
+| MB-ESP02 | Homenagem-celebração ao capitão Picard (v2) | Sir Patrick Stewart; Jean-Luc Picard, Luminary | Picard é o capitão que até o Burn se recusa a banir | Mano, olha quem tá chegando no Magic: o capitão Jean-Luc Picard! | PUBLICADO | Fundador, confirmação global de 31/10/2026 | — | confirmada, sem data | manaburn/episodios/esp02_picard_v2/ficha.md | MB-ESP01; ORB-13; ORB-20; MB-GIRO01 | Homenagem feita: tema Picard/Stewart fechado para homenagens novas |
+| MB-GIRO01 | TV SAL · Giro de Domingo n.º 1 (3 notícias da semana 26–31/10) | Collector Booster de Star Trek (preço depois da morte de Sir Patrick Stewart); Dan Ayoub, presidente da Wizards; All Leylines' Eve; Leyline of Anticipation | Giro semanal: 1 quente, 1 da casa, 1 útil + agenda | Morreu o capitão Picard. No dia seguinte, a caixa com o autógrafo dele já estava mais cara. | EM PRODUÇÃO | branch:giro/2026-11-01:STATUS.md (render conferido 31/10; falta ouvir a pronúncia; branch por integrar) | LACUNA | prevista 01/11/2026, 21h (A CONFIRMAR) | branch:giro/2026-11-01:manaburn/giro/2026-11-01/ficha_de_fatos.md | MB-EP07; MB-ESP02; ORB-13; MB-ZAP01 | ALERTA para o fundador: o bloco 3 repete evento, carta e regra do MB-EP07 (All Leylines' Eve, "começa com Leyline em jogo"); ângulo novo só na agenda e na promo pw26. O bloco 1 toca o tema Picard depois do MB-ESP02 (ângulo: especulação de preço; divergência já registada na branch) |
+
+## Meta em Curto (TUBO)
+
+| ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| MC-EP00 | Piloto: manter mão com um terreno | Mulligan; probabilidade de terrenos (60 cartas, 24 terrenos) | Não é azar, é conta | Você manteve uma mão com um terreno. Depois culpou a sorte. | POR AUDITAR | Só o guião em projeto:claude/oraculo/episodios/ep00_piloto_um_terreno.md; sem registo de produção | LACUNA | LACUNA | projeto:claude/oraculo/episodios/ep00_piloto_um_terreno.md | — | Não auditável até saber se foi produzido |
+| MC-EP01 | Relatório do Meta: conversão por arquétipo | Arena Championship 13; Mono-Green Landfall; Orzhov Lifegain; Gage Fevold | Uma rodada de mata-mata não mede um deck | O deck mais jogado do Arena Championship 13 pôs UM jogador no Top 8. O terceiro mais jogado pôs TRÊS. | PUBLICADO | Fundador, confirmação global de 31/10/2026 | — | confirmada, sem data (prevista 28/10/2026) | oraculo/episodios/ep01_ac13_ficha.md | MC-EP02 | Retroativa: sem conflito |
+| MC-EP02 | Leitura da Final (Modo B) | Magic Spotlight: Fracture (Hartford, 25/10/2026); Alex von Stange; Connor Ott; Jund Sacrifice; Jeskai Artifacts | Mesa não é vida: o deck contava dano, não mesa | Na final de Hartford, ele começou atrás na mesa. Nos dois jogos. E ganhou os dois. | PUBLICADO | Fundador, confirmação global de 31/10/2026 | — | confirmada, sem data | oraculo/episodios/ep02_hartford_ficha.md | MC-EP01; MB-ZAP01 | Retroativa: sem conflito |
+
+## Conde de Manaforte
+
+| ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| CM-EP001 | Abertura do Tribunal Estético: a perna escondida | Keldon Warlord (Alpha, 1993, n.º 160); Kev Brockschmidt | Ombros de catedral e uma perna minúscula abaixo da espada (sem ficha; tese lida na legenda) | O Conde de Manaforte abriu o Tribunal Estético. Primeiro réu: um senhor da guerra de 1993… | PUBLICADO | Insights 26/10/2026 (idade 1 d) | — | confirmada, sem data (anterior a 26/10/2026) | conde/legendas/ep001_keldon_legenda.txt | CM-EP002 | Retroativa: sem conflito |
+| CM-EP002 | Um joelho que não pertence a ninguém | Olivia Voldaren (Innistrad, 2011, n.º 215); Eric Deschamps | A mão repousa num joelho que a perna não tem (sem ficha; tese lida na legenda) | O Conde de Manaforte encontrou um joelho que não pertence a ninguém. | PUBLICADO | Fundador, confirmação global de 31/10/2026 | — | confirmada, sem data | conde/legendas/ep002_olivia_legenda.txt | CM-EP003 (família Voldaren) | Retroativa: sem conflito |
+| CM-EP003 | O rosto inacabado é o assunto da carta | Voldaren Pariah // Abolisher of Bloodlines (Secret Lair 2026); Véronique Meignaud | O rosto não está inacabado; está no meio da refeição | Meus caros apreciadores do duvidoso. O Tribunal recebe hoje uma dama de 2026. | APROVADO | Fundador, confirmação global de 31/10/2026 (10:46); publicação estava prevista para 31/10, 21h | 31/10/2026 | A CONFIRMAR | conde/episodios/ep003_voldaren_pariah_ficha.md | CM-EP002 | Callback assumido ao CM-EP002; ângulo novo (outra carta, outra tese) |
+
+## Especiais entre séries
+
+| ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| ESP-2026-01 | Halloween 2026: tribunal Innistrad × Duskmourn | Innistrad; Duskmourn; EDHREC (comparação 3 × 2); Emrakul, the Promised End | O tribunal do BINDER recontou e deu 3 a 2 para Innistrad | A EDHREC deu 3 a 2 para Duskmourn. O tribunal do BINDER recontou e deu 3 a 2 para Innistrad. | PUBLICADO | Fundador, explícito (31/10/2026) | — | confirmada a 31/10/2026, data exata não registada | especiais/halloween_2026/LEIA-ME.md | MB-EP07; MC-EP01; CM-EP003 | Retroativa: sem conflito |
+
+## Órbita · Star Trek
+
+Estado de 23/10/2026 em projeto:claude/contexto-binder-instagram.md §9; a 31/10/2026 o fundador confirmou que "a sequência de Star Trek está publicada", sem lista. Só as peças vistas no perfil ou no Insights ficam `PUBLICADO`; as outras ficam com publicação A CONFIRMAR. Legendas, texto alternativo e fontes: projeto:claude/gerador/captions2.py a captions5.py. Código: `orbita/gerador/`.
+
+| ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| ORB-01 | Carta de autógrafo assinada à mão | Captain James T. Kirk, autógrafo (n.º 1701); William Shatner | Assinada à mão | Assinada à mão | PUBLICADO | Capturas do perfil (contexto de 23/10/2026) | — | confirmada, sem data | projeto:claude/contexto-binder-instagram.md | MB-EP04; ORB-05; ORB-08; ORB-10; ORB-17 | Retroativa: sem conflito |
+| ORB-02 | Khan comparado a uma carta forte | Khan, Engineered Evil (Stardates) | O Khan é um Sheoldred | O Khan é um Sheoldred | PUBLICADO | Capturas do perfil (contexto de 23/10/2026) | — | confirmada, sem data | projeto:claude/contexto-binder-instagram.md | ORB-12 | Retroativa: sem conflito |
+| ORB-03 | Moldura LCARS | Dr. Beverly Crusher (LCARS, n.º 366) | Tela da Frota | Tela da Frota | APROVADO | Fundador: sequência publicada (31/10/2026), sem lista | 31/10/2026 | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | ORB-07; ORB-09 | Retroativa: sem conflito |
+| ORB-04 | Nave como carta | U.S.S. Enterprise-D (n.º 273) | NCC-1701-D | NCC-1701-D | APROVADO | Fundador: sequência publicada (31/10/2026), sem lista | 31/10/2026 | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | ORB-15 | Retroativa: sem conflito |
+| ORB-05 | Moldura Classic Enterprise | Captain James T. Kirk (Classic Enterprise, n.º 418) | Cartaz de cinema | Cartaz de cinema | APROVADO | Fundador: sequência publicada (31/10/2026), sem lista | 31/10/2026 | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | ORB-01; ORB-08; ORB-10 | Retroativa: mesmo objeto (Kirk) em versões diferentes, por desenho da série |
+| ORB-06 | Arte estendida | Crystalline Entity (n.º 478) | Não sobra ninguém | Não sobra ninguém | APROVADO | Fundador: sequência publicada (31/10/2026), sem lista | 31/10/2026 | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | — | Retroativa: sem conflito |
+| ORB-07 | Versão normal da comandante | Dr. Beverly Crusher (n.º 13) | A comandante | A comandante | CONCLUÍDO | Contexto de 23/10/2026: "reserva" | LACUNA | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | ORB-03; ORB-09 | Reserva; mesmo objeto de ORB-03 |
+| ORB-08 | Versão surge foil | Captain James T. Kirk (surge foil, n.º 542) | A mesma, em foil | A mesma, em foil | CONCLUÍDO | Contexto de 23/10/2026: "reserva" | LACUNA | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | ORB-05 | Reserva; mesmo objeto de ORB-05 |
+| ORB-09 | LCARS em surge foil | Dr. Beverly Crusher (LCARS surge foil, n.º 500) | LCARS brilhante | LCARS brilhante | CONCLUÍDO | Contexto de 23/10/2026: "reserva" | LACUNA | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | ORB-03 | Reserva; mesmo objeto de ORB-03 |
+| ORB-10 | Versão normal | Captain James T. Kirk (n.º 142) | O Kirk de todo dia | O Kirk de todo dia | CONCLUÍDO | Contexto de 23/10/2026: "reserva" | LACUNA | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | ORB-01 | Reserva; mesmo objeto de ORB-01 |
+| ORB-11 | O Q é quebrado? | Q, Stacking the Deck (LCARS, n.º 383) | Opinião atribuída à MTG Rocks sobre o Q no Commander | O Q é quebrado? | APROVADO | Fundador: sequência publicada (31/10/2026), sem lista | 31/10/2026 | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | MB-EP01 | Mesmo objeto do MB-EP01, noutra frente e ângulo (anterior a este registo) |
+| ORB-12 | Mana infinita com Food Chain | Khan, Vengeful Heart (Classic Enterprise, n.º 416); Food Chain | Mana infinita | Mana infinita | APROVADO | Fundador: sequência publicada (31/10/2026), sem lista | 31/10/2026 | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | ORB-02 | Retroativa: sem conflito |
+| ORB-13 | Carta vazada antes da hora | Captain Jean-Luc Picard (LCARS surge foil, n.º 497) | Vazou antes da hora | Vazou antes da hora | APROVADO | Fundador: sequência publicada (31/10/2026), sem lista | 31/10/2026 | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | MB-ESP01; MB-ESP02; ORB-20; MB-GIRO01 | Retroativa: sem conflito |
+| ORB-14 | Comandante Borg | The Borg Queen (Commander, n.º 1) | A resistência é inútil | A resistência é inútil | PUBLICADO | Capturas do perfil (contexto de 23/10/2026) | — | confirmada, sem data | projeto:claude/contexto-binder-instagram.md | ORB-16; ORB-21 | Retroativa: sem conflito |
+| ORB-15 | Planta da estação | Deep Space 9 (Schematic, n.º 556) | Deep Space 9 | Deep Space 9 | APROVADO | Fundador: sequência publicada (31/10/2026), sem lista | 31/10/2026 | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | ORB-04; ORB-16 | Retroativa: sem conflito |
+| ORB-16 | Constelação: as 5 mais comentadas | Q, Stacking the Deck; Khan, Vengeful Heart; Captain Jean-Luc Picard; The Borg Queen; Deep Space 9 | As 5 mais comentadas | As 5 mais comentadas | APROVADO | Fundador: sequência publicada (31/10/2026), sem lista | 31/10/2026 | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | ORB-11; ORB-12; ORB-13; ORB-14; ORB-15 | Formato-resumo por desenho |
+| ORB-17 | Segundo autógrafo | Mr. Spock, Science Officer, autógrafo (n.º 1702) | Mais um autógrafo | Mais um autógrafo | APROVADO | Fundador: sequência publicada (31/10/2026), sem lista | 31/10/2026 | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | ORB-01; ORB-18 | Retroativa: sem conflito |
+| ORB-18 | Comandante Spock | Commander Spock (Commander, n.º 2) | Fascinante | O Spock chegou ao Commander… (legenda) | PUBLICADO | Capturas do perfil (23/10) e Insights 26/10/2026 (idade 4 d) | — | confirmada, sem data (anterior a 26/10/2026) | projeto:claude/contexto-binder-instagram.md | ORB-17; ORB-21 | Retroativa: sem conflito |
+| ORB-19 | Comandante Klingon | Worf, Defiant Commander (Commander, n.º 4) | Um bom dia para lutar | Um bom dia para lutar | APROVADO | Fundador: sequência publicada (31/10/2026), sem lista | 31/10/2026 | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | ORB-21 | Retroativa: sem conflito |
+| ORB-20 | Motor de cartas | Jean-Luc Picard, Luminary (Commander, n.º 3) | Motor de cartas | Motor de cartas | APROVADO | Fundador: sequência publicada (31/10/2026), sem lista | 31/10/2026 | A CONFIRMAR | projeto:claude/contexto-binder-instagram.md | MB-ESP01; MB-ESP02; ORB-13; ORB-21 | Retroativa: mesma carta dos especiais Picard, ângulo de jogo |
+| ORB-21 | Constelação dos comandantes | The Borg Queen; Commander Spock; Jean-Luc Picard, Luminary; Worf, Defiant Commander | Qual deck você leva? | Qual deck você leva? | APROVADO | Contexto de 23/10/2026: agendar para 06/11/2026, 21h | LACUNA | A CONFIRMAR (agendado 06/11/2026, 21h) | projeto:claude/contexto-binder-instagram.md | ORB-14; ORB-18; ORB-19; ORB-20 | Formato-resumo por desenho |
+
+## Lambe-lambe
+
+Peças de 18–19/10/2026 descritas em projeto:claude/reel-lambe-lambe-pop.md ("prontos", "aguardam aprovação"). Sem registo individual de publicação, exceto o que aparece no Insights.
+
+| ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| LL-CUR01 | Curiosidade: a carta mais cara | Black Lotus (Alpha) | Leilão de US$ 2,2 mi e Lista Reservada | LACUNA | POR AUDITAR | Pronto a 18/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | LL-ART01 | Não auditável |
+| LL-CUR02 | Curiosidade: Brasil e Portugal no Mundial | Carlos Romão; Psychatog; Márcio Carvalho | Lusófonos no topo do Mundial | LACUNA | POR AUDITAR | Pronto a 18/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-CUR03 | Curiosidade: a primeira edição saiu incompleta | Underground Sea; Tundra; Tropical Island; Volcanic Island (ausente da Alpha) | A Alpha saiu sem a Volcanic Island | LACUNA | POR AUDITAR | Pronto a 18/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | LL-CUR08 | Não auditável |
+| LL-CUR04 | Curiosidade: pedido de casamento numa carta | Proposal (1993) | Uma carta feita para um pedido de casamento | LACUNA | POR AUDITAR | Pronto a 18/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-CUR05 | Produto: mais de 31 mil cartas | BINDER Vision (scanner e coleção) | Post de produto | LACUNA | POR AUDITAR | Pronto a 18/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-CUR06 | Curiosidade: Magic é Turing-completo | Rotlung Reanimator; Coalition Victory | Magic pode simular um computador | LACUNA | POR AUDITAR | Pronto a 18/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-CUR07 | Curiosidade: a carta 1 de 1 | The One Ring (1/1); Post Malone | A única cópia | LACUNA | POR AUDITAR | Pronto a 18/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-CUR08 | Curiosidade: carta banida desde 1995 | Chaos Orb | Uma carta que se atira à mesa | LACUNA | POR AUDITAR | Pronto a 18/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | LL-ART03 | Não auditável |
+| LL-CUR09 | Curiosidade: criado por um matemático | Richard Garfield, Ph.D. | O criador é doutor em matemática combinatória | LACUNA | POR AUDITAR | Pronto a 18/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | LL-ART09 | Não auditável |
+| LL-ART01 | Artistas de Magic | Christopher Rush (Black Lotus) | Desenhou os símbolos de mana e o verso das cartas | LACUNA | POR AUDITAR | Pronto a 19/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | LL-CUR01 | Não auditável |
+| LL-ART02 | Artistas de Magic (Brasil) | Nathanna Érica (Faerie Macabre) | De advogada a ilustradora | LACUNA | POR AUDITAR | Pronto a 19/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-ART03 | Artistas de Magic | Mark Tedin (Chaos Orb) | A assinatura diz "TEDIN 92" | LACUNA | POR AUDITAR | Pronto a 19/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | LL-CUR08 | Não auditável |
+| LL-ART04 | Artistas de Magic (Portugal) | Pedro Potier (Elesh Norn, Mother of Machines) | Lisboeta, primeiras cartas em 2021 | LACUNA | POR AUDITAR | Pronto a 19/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-ART05 | Artistas de Magic | Jesper Myrfors (Tundra; Circle of Protection: Black) | Proibia arte digital e fez a primeira | LACUNA | POR AUDITAR | Pronto a 19/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | LL-CUR03 | Não auditável |
+| LL-ART06 | Artistas de Magic (Brasil) | Ernanda Souza (Shalai, Voice of Plenty) | Black is Magic, lucro para a Black Girls CODE | LACUNA | POR AUDITAR | Provável publicado: o Insights de 21/10/2026 lista "Ernanda Souza" (181 views); correspondência por confirmar | LACUNA | A CONFIRMAR | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-ART07 | Artistas de Magic | Rebecca Guay (Jareth; Sarah) | Aquarelas, em Magic desde 1996 | LACUNA | POR AUDITAR | Pronto a 19/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-ART08 | Artistas de Magic (Portugal) | Eleonor Piteira (Haliya, Guided by Light; Bonders' Enclave) | Estreou em 2025 em Edge of Eternities | LACUNA | POR AUDITAR | Pronto a 19/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-ART09 | Artistas de Magic | Dave Dorman (Richard Garfield, Ph.D.) | Pintor de Star Wars, Prémio Eisner 1993 | LACUNA | POR AUDITAR | Pronto a 19/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | LL-CUR09 | Não auditável |
+| LL-ART10 | Artistas de Magic (Brasil) | Eduardo Francisco (Koh, the Face Stealer) | Paulistano, estreia em 2024 | LACUNA | POR AUDITAR | Pronto a 19/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-ART11 | Artistas de Magic | Douglas Shuler (Serra Angel) | Creditado como "Schuler" em 134 cartas | LACUNA | POR AUDITAR | Pronto a 19/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-ART12 | Artistas de Magic: quem é o próximo? | Black Lotus; Elesh Norn; Shalai; Haliya; Koh | Comente o artista favorito | LACUNA | POR AUDITAR | Pronto a 19/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | LL-ART01 a LL-ART11 | Formato-resumo por desenho |
+| LL-R01 | Reel do scanner: carta repetida | Iron Man Armor; scanner do BINDER Vision | O app ajuda a saber o que você já tem | Comprei repetida. De novo. | POR AUDITAR | Corte 1 de 19/10/2026 "aguarda aprovação"; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | LL-NP3 | Não auditável |
+| LL-R02 | Reel "Pause e descubra" (24 cartas) | Black Lotus; The One Ring; Underground Sea; Tundra; Circle of Protection: Black; Tropical Island; Chaos Orb; Serra Angel; Psychatog; Rotlung Reanimator; Coalition Victory; Richard Garfield, Ph.D.; Faerie Macabre; Shalai, Voice of Plenty; Koh, the Face Stealer; Elesh Norn, Mother of Machines; Haliya, Guided by Light; Bonders' Enclave; Jareth, Goblin King; Sarah, Champion to the Lost; Assassin's Trophy; Parallax Tide; Regrowth; Viridian Revel; lista de desejos | A carta que aparecer é a que falta no seu binder | Pause o vídeo: a carta que aparecer é a que falta no seu binder. | POR AUDITAR | Corte 1 de 19/10/2026 "aguarda aprovação"; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | LL-R03 | Não auditável |
+| LL-R03 | Reel "Pause e descubra": as mais jogadas do Commander | Sol Ring; Lightning Greaves; Swords to Plowshares; Counterspell; Cultivate; Dark Ritual; Demonic Tutor; Brainstorm; Growth Spiral; Cyclonic Rift; Rhystic Study; Smothering Tithe; lista de desejos | As mais jogadas, na versão mais bonita | Pause o vídeo: a carta que aparecer é a que falta no seu binder. | POR AUDITAR | Provável publicado: o Insights de 21/10/2026 lista "Sol Ring" (244 views; a capa desta versão é o Sol Ring); correspondência por confirmar | LACUNA | A CONFIRMAR | projeto:claude/reel-lambe-lambe-pop.md | LL-R02 | Não auditável; mesmo gancho de LL-R02 |
+| LL-NP1 | Na prática 1: escolher a versão da carta | Jace, the Mind Sculptor; seletor de versões do app | Cada versão conta | Seu Jace é de qual edição? | POR AUDITAR | Provável publicado: o Insights de 21/10/2026 lista "Jace" (217 views); correspondência por confirmar | LACUNA | A CONFIRMAR | projeto:claude/reel-lambe-lambe-pop.md | — | Não auditável |
+| LL-NP2 | Na prática 2: procurar uma carta no Explorar | Akroma, Angel of Wrath; Explorar e chat do app | Procurou. Achou. Chamou. | "Alguém tem uma Akroma?" Quem nunca mandou essa no grupo? | PUBLICADO | Insights 21/10/2026 ("Alguém tem uma Akroma?", 24 views) | — | confirmada, sem data (anterior a 21/10/2026) | projeto:claude/reel-lambe-lambe-pop.md | — | Retroativa: sem conflito |
+| LL-NP3 | Na prática 3: tour pelo app | BINDER Vision (Explorar, busca, ofertas, chat, versões, Binder) | Seu binder cabe no bolso | Seu binder cabe no bolso: um tour de 10 segundos pelo BINDER Vision. | POR AUDITAR | Pronto a 19/10/2026; publicação não registada | LACUNA | LACUNA | projeto:claude/reel-lambe-lambe-pop.md | LL-R01 | Não auditável |
+| LL-SN01 | LACUNA (post sem ficha identificada) | LACUNA | LACUNA | Uma carta de Magic que, ao ent… (início da legenda) | PUBLICADO | Insights 26/10/2026 (idade 10 h) | — | confirmada, sem data (25 ou 26/10/2026) | LACUNA | — | Não auditável: objeto desconhecido |
+
+## Pequeno Mestre (frente em desenvolvimento, só em branch)
+
+| ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| PM-EP01 | Regra básica para crianças: de onde vem a mana | Terrenos e mana (carta de leão inventada; Planície) | O leão quer jogar, falta mana, e o Pequeno Mestre mostra de onde ela vem | Fila feita. Pode começar. | EM PRODUÇÃO | branch:pequeno-mestre/ep01:pequeno-mestre/ep01/ficha.md ("versão para aprovação"; faltam capa, legenda e texto alternativo) | LACUNA | — | branch:pequeno-mestre/ep01:pequeno-mestre/ep01/ficha.md | MC-EP00 (tema de terrenos, outro público) | Sem conflito: público e ângulo diferentes |
+
+## Lacunas da auditoria retroativa (01/11/2026)
+
+Para fechar o inventário, o fundador (ou o print do perfil) precisa de confirmar:
+
+1. Mana & Burn Ep. 03 e Ep. 04: tema, carta e se foram publicados; qual episódio é o "Alô? É da mesa de Commander?" (MB-SN01).
+2. Datas de publicação de tudo o que está `PUBLICADO` "confirmada, sem data".
+3. MB-EP09, CM-EP003, MB-GIRO01: se e quando saíram (estavam agendados para 31/10 a 2/11).
+4. Órbita: quais dos 21 Reels saíram e em que dia (a confirmação de 31/10 não traz lista; o ORB-21 estava agendado para 06/11).
+5. Lambe-lambe: quais dos 9 posts de curiosidades, 12 de artistas e 6 Reels saíram; qual é o post "Uma carta de Magic que, ao ent…" (LL-SN01). As 5 capas de Reels de 19/10 são capas de posts já existentes (não entram como conteúdo novo).
+6. MB-PAUTA01 (Polymorph) e MC-EP00 (piloto "Um terreno"): rejeitados, pausados ou ainda em análise?
+7. Posts anteriores a 18/10/2026 (o Insights de 21/10 cobre 30 dias): nenhuma fonte os lista.
