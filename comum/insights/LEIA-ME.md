@@ -7,6 +7,7 @@ Sistema permanente de métricas do Instagram. Criado a 01/11/2026 (`nucleo/DECIS
 | Ficheiro | Para quê |
 |---|---|
 | `registo_posts.csv` | Base acumulada: uma linha por publicação por snapshot. Só se acrescentam linhas |
+| `registo_conta.csv` | Totais da conta por snapshot (Visão geral, seguidores). Só se acrescentam linhas |
 | `semanas/AAAA-MM-DD.md` | Relatório de cada snapshot (data = último dia do período do print). Um ficheiro novo por domingo; nunca se reescreve um anterior |
 | `MODELO_SEMANAL.md` | Modelo do relatório |
 
@@ -21,7 +22,7 @@ Sistema permanente de métricas do Instagram. Criado a 01/11/2026 (`nucleo/DECIS
    - Sem confirmação: `A CONFIRMAR`. **Nunca inferir pelo volume de visualizações.**
    - Investimento, moeda, período da campanha e objetivo só quando confirmados.
    - Alcance pago vai na coluna `alcance_pago`; o resto não é "orgânico" enquanto o impulsionamento estiver `A CONFIRMAR`.
-6. Acrescentar as linhas ao `registo_posts.csv` (no fim; não editar linhas antigas, salvo erro de transcrição, corrigido com nota e registado no relatório da semana).
+6. Acrescentar os totais da conta a `registo_conta.csv` e as linhas por publicação ao `registo_posts.csv` (no fim; não editar linhas antigas, salvo erro de transcrição, corrigido com nota e registado no relatório da semana).
 7. Escrever o relatório (Fase 6: facto observado · interpretação · hipótese · recomendação) e comparar com as semanas anteriores.
 8. `python3 comum/ferramentas/memoria.py validar` → commit.
 

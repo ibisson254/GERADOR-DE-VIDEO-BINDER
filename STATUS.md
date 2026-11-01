@@ -10,7 +10,7 @@ Missão em curso: "Consolidação estrutural do BINDER Originals" (31/10/2026, 1
 | Registo editorial universal | Criado; 72 conteúdos migrados; **inventário incompleto** (30 `POR AUDITAR`) | `comum/REGISTRO_EDITORIAL.md` |
 | Auditoria de originalidade | Ativa (script + regra) | `SHOWRUNNER.md` §2.3, `comum/ferramentas/memoria.py pauta` |
 | Encerramento obrigatório | Ativo | `SHOWRUNNER.md` §6, `modelos/FICHA_EPISODIO.md`, `memoria.py encerramento` |
-| Insights semanais | Ativo; snapshots de 21/10 e 26/10 migrados | `comum/insights/` |
+| Insights semanais | Ativo; snapshots de 21/10 e 26/10 migrados; outubro (1–31/10) registado a 01/11 | `comum/insights/` |
 | Testes A–F | 17 testes OK | `python3 -m unittest comum/ferramentas/test_memoria.py` |
 
 ## Estado editorial

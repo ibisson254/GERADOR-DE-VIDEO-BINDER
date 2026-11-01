@@ -43,3 +43,4 @@ Impulsionamento: R$ 11 em dois vídeos, ver marcação abaixo (confirmar quais).
 Formato: data · ID · frente · acontecimento · estado. Mais recente no fim.
 
 - 01/11/2026 · — · estúdio · Registo editorial universal criado com 72 conteúdos migrados (30 `POR AUDITAR`); insights de 21/10 e 26/10 migrados para `comum/insights/`; impulso dos posts de 26/10 passa a `A CONFIRMAR`. Branch `feature/memoria-editorial-insights`.
+- 01/11/2026 · — · estúdio · Insights da conta de 1–31/10 (export do fundador): 13 mil visualizações de Reels, 182 seguidores; `comum/insights/semanas/2026-10-31.md`. MB-EP09 e CM-EP003 confirmados como publicados (miniaturas no export).

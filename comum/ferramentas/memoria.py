@@ -250,6 +250,39 @@ def validar_insights(raiz, ids):
     return erros
 
 
+CONTA_COLUNAS = ['periodo_inicio', 'periodo_fim', 'dias', 'seguidores', 'visualizacoes_reels', 'visualizadores',
+                 'visualizacoes_total', 'contas_alcancadas', 'interacoes', 'curtidas', 'comentarios', 'reposts',
+                 'partilhas', 'guardados', 'visitas_perfil', 'toques_link', 'reels_no_periodo', 'fonte', 'notas']
+
+
+def validar_conta(raiz):
+    erros = []
+    p = raiz / 'comum' / 'insights' / 'registo_conta.csv'
+    if not p.exists():
+        return erros
+    with p.open(encoding='utf-8', newline='') as f:
+        leitor = csv.DictReader(f)
+        if leitor.fieldnames != CONTA_COLUNAS:
+            return [f'registo_conta.csv: cabeçalho diferente do esperado ({CONTA_COLUNAS})']
+        vistos = set()
+        for n, r in enumerate(leitor, 2):
+            k = (r['periodo_inicio'], r['periodo_fim'])
+            if k in vistos:
+                erros.append(f'registo_conta.csv:{n}: período repetido {k}')
+            vistos.add(k)
+            for c in ('periodo_inicio', 'periodo_fim'):
+                try:
+                    dt.date.fromisoformat(r[c])
+                except ValueError:
+                    erros.append(f'registo_conta.csv:{n}: {c} inválido "{r[c]}"')
+            for c in CONTA_COLUNAS[2:17]:
+                if r[c] and not re.fullmatch(r'\d+', r[c]):
+                    erros.append(f'registo_conta.csv:{n}: {c}="{r[c]}" não é inteiro')
+            if not (raiz / 'comum' / 'insights' / 'semanas' / f'{r["periodo_fim"]}.md').exists():
+                erros.append(f'registo_conta.csv:{n}: falta o relatório semanas/{r["periodo_fim"]}.md')
+    return erros
+
+
 def nova_semana(raiz, data):
     dt.date.fromisoformat(data)
     base = raiz / 'comum' / 'insights'
@@ -308,7 +341,7 @@ def main(argv=None):
     entradas, erros = ler_registo(raiz)
     if a.cmd == 'validar':
         e2, avisos = validar_registo(raiz, entradas)
-        erros += e2 + validar_insights(raiz, {e['ID'] for e in entradas})
+        erros += e2 + validar_insights(raiz, {e['ID'] for e in entradas}) + validar_conta(raiz)
         seg = procurar_segredos(raiz)
         erros += [f'possível segredo: {s}' for s in seg]
         for x in erros:
