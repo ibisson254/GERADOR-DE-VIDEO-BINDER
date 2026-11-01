@@ -35,6 +35,10 @@ Nada bloqueia a produção. Opcional: colar `nucleo/prompts/CHATGPT.md` nas inst
 - `oraculo/episodios/ep01_render_v2.py` importa `render`, que não existe; `conde/montar_ep002.py` tem caminho absoluto. Não se mexe em scripts de episódios publicados sem necessidade.
 - Skills `binder-*` ainda mandam ler primeiro o Drive e dizem que o Scryfall não abre; alinhar com o repositório quando o fundador quiser.
 
+## Produção recente
+
+- 01/11/2026 · Meta em Curto EP03 «Arquivo Competitivo» produzido (render conferido, pacote de publicação pronto): `oraculo/episodios/ep03_arquivo_ficha.md`. Falta o fundador publicar. Na branch `meta-em-curto-ep03` (PR para `main`).
+
 ## Próximo passo concreto
 
 Produzir normalmente a partir da `main`: palavra de arranque → `AGENTS.md` → `nucleo/SHOWRUNNER.md`. Pendência técnica com mais impacto: subir o motor v2 do Mana & Burn (`claude/gerador-manaburn/` no projeto claude.ai) para `manaburn/`.
@@ -42,12 +46,28 @@ Produzir normalmente a partir da `main`: palavra de arranque → `AGENTS.md` →
 ## Handoff
 
 ```
-HANDOFF · 31/10/2026 · Claude
-Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (PR #1 integrado)
-Objetivo atual: consolidação concluída; estúdio pronto a produzir a partir da main.
-Decisões: Órbita e Lambe-lambe ativos; nome Meta em Curto; Órbita sem fecho; conteúdos do repositório aprovados e lançados; fecho do scanner cortado do Ep. 6 (nucleo/DECISOES.md, 31/10).
-Documentos consultados: AGENTS.md, STATUS.md, comum/outro/LEIA-ME.md, ManaBurn_Ep6_GodPack_916.mp4 (enviado pelo fundador).
-Alterações: comum/outro/outro_binder_916.mp4 e gerar_fecho.py; comum/outro/LEIA-ME.md; series.yaml; nucleo/DECISOES.md; nucleo/prompts/CHATGPT.md (links para main); STATUS.md.
-Pendentes: ver "Pendências técnicas".
-Próximo passo: produzir; ou subir o motor v2 do Mana & Burn para manaburn/.
+HANDOFF · 01/11/2026 19:45 · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch meta-em-curto-ep03 (PR para main)
+
+Objetivo atual: Meta em Curto EP03 «Arquivo Competitivo» entregue (vídeo, capa, legenda, comentário fixado, texto alternativo, fontes).
+
+Decisões tomadas nesta sessão:
+- Roteiro do fundador refinado por rigor: cortado o 1.º lugar do Spotlight (sem fonte), Taipei sem formato («sem fonte»), São Paulo sem «torneios paralelos», «amanhã» trocado por pergunta A/B/C. Na ficha; nenhuma regra mudou (DECISOES.md: não).
+- Boletim de fim de semana tratado como formato pontual do TUBO, sem alterar a bíblia.
+
+Documentos consultados:
+- AGENTS.md, STATUS.md, nucleo/ (constituição, catálogo, showrunner, decisões, modelos), oraculo/PERFIL.md, oraculo/CONTEXTO.md, ficha e scripts do EP02, comum/outro/LEIA-ME.md, comum/historico.md, comum/easter_eggs.md
+
+Alterações realizadas:
+- oraculo/episodios/ep03_* (ficha, fontes, roteiro, words, ep03_audio.py, ep03_render.py) · novos
+- oraculo/legendas/ep03_arquivo_legenda.txt · novo
+- oraculo/PERFIL.md (lista de episódios), comum/historico.md, comum/easter_eggs.md, STATUS.md
+
+Tarefas pendentes:
+- Publicar o EP03 · fundador
+- Rever o PR e integrar em main · fundador
+- EP04: análise do evento escolhido nas respostas A/B/C (resultados, Top 8, listas) · agente, quando houver respostas
+- Pendências técnicas anteriores mantêm-se
+
+Próximo passo concreto: publicar o EP03 com oraculo/legendas/ep03_arquivo_legenda.txt; depois ler as respostas A/B/C e produzir o EP04.
 ```
