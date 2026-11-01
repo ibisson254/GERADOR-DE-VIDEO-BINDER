@@ -160,7 +160,7 @@ def comparar_pauta(entradas, objeto, tema='', gancho=''):
 
 PECAS = {
     'ficha': ['ficha*.md', '*_ficha.md'],
-    'roteiro': ['roteiro*', 'guiao*', 'episode.json', '*roteiro*.json', 'ficha*.md'],
+    'roteiro': ['roteiro*', 'guiao*', 'episode.json', '*roteiro*.json'],
     'legenda': ['legenda*.txt', '*_legenda.txt'],
     'comentário fixado': ['comentario_fixado*.txt'],
     'texto alternativo': ['texto_alternativo*.txt', 'alt_text*.txt'],
@@ -177,12 +177,24 @@ def verificar_encerramento(raiz, entrada):
     if not p.exists():
         return [f'ficha não existe: {entrada["Ficha"]}']
     pasta = p if p.is_dir() else p.parent
-    for peca, padroes in PECAS.items():
-        if not any(any(pasta.glob(pd)) for pd in padroes):
-            faltas.append(peca)
     ficha = next((f for pd in PECAS['ficha'] for f in pasta.glob(pd)), None)
+    txt = ficha.read_text(encoding='utf-8') if ficha else ''
+    # Estrutura antiga (Conde, Meta em Curto): legendas em <frente>/legendas/<epNN>_*.txt,
+    # com o comentário fixado dentro do mesmo ficheiro.
+    prefixo = (p.stem if p.is_file() else p.name).split('_')[0]
+    antigas = sorted((pasta.parent / 'legendas').glob(f'{prefixo}_*.txt')) if prefixo else []
+    txt_antigas = ' '.join(f.read_text(encoding='utf-8') for f in antigas)
+    for peca, padroes in PECAS.items():
+        if any(any(pasta.glob(pd)) for pd in padroes):
+            continue
+        if peca == 'legenda' and antigas:
+            continue
+        if peca == 'comentário fixado' and 'COMENTÁRIO FIXADO' in txt_antigas.upper():
+            continue
+        if peca == 'roteiro' and re.search(r'(?im)^#+ *(roteiro definitivo|narração final|guião)', txt):
+            continue
+        faltas.append(peca)
     if ficha:
-        txt = ficha.read_text(encoding='utf-8')
         for marca, nome in (('Controlo de qualidade', 'controlo de qualidade na ficha'),
                             ('Ficheiros finais', 'localização do vídeo e da capa na ficha')):
             if marca.lower() not in txt.lower():
