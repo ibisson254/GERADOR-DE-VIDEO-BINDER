@@ -7,7 +7,7 @@ Missão em curso: "Consolidação estrutural do BINDER Originals" (31/10/2026, 1
 
 Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbita (temática); Lambe-lambe (espontânea); especiais. Tudo o que está no repositório está aprovado e lançado; Halloween 2026 e Star Trek publicados. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
 
-Em desenvolvimento: **Pequeno Mestre** (`pequeno-mestre/`, palavra `mestre`), série infantil. Kit de assets v1 e bíblia prontos; nada publicável até o fundador decidir voz, nome da série, plataforma/duração e fecho (`pequeno-mestre/CONTEXTO.md` §10).
+Em desenvolvimento: **Pequeno Mestre** (`pequeno-mestre/`, palavra `mestre`), série infantil. Conceito v2, motor `animar.py` e **Ep. 01 "De onde vem a mana?" renderizado** (branch `pequeno-mestre/ep01`, a partir de `pequeno-mestre/kit-v1`). Aguarda o fundador: aprovar a voz, nome da série, fecho infantil (cartão de marca em vez do scanner) e gerar o asset P2 (armário) (`pequeno-mestre/CONTEXTO.md` §10).
 
 ## Consolidação
 
@@ -30,7 +30,7 @@ Em desenvolvimento: **Pequeno Mestre** (`pequeno-mestre/`, palavra `mestre`), s�
 
 Nada bloqueia a produção. Opcional: colar `nucleo/prompts/CHATGPT.md` nas instruções do projeto ou GPT do ChatGPT.
 
-Pequeno Mestre: aprovar e integrar a branch `pequeno-mestre/kit-v1` (PR); responder às seis questões de `pequeno-mestre/CONTEXTO.md` §10, a começar pela voz.
+Pequeno Mestre: ouvir o Ep. 01 e aprovar a voz; decidir nome e fecho infantil; gerar P2 (armário, prompt em `pequeno-mestre/assets/LEIA-ME.md`); integrar as branches `pequeno-mestre/kit-v1` e `pequeno-mestre/ep01` (PR).
 
 ## Pendências técnicas (não bloqueiam a governação)
 
@@ -44,6 +44,19 @@ Pequeno Mestre: aprovar e integrar a branch `pequeno-mestre/kit-v1` (PR); respon
 Produzir normalmente a partir da `main`: palavra de arranque → `AGENTS.md` → `nucleo/SHOWRUNNER.md`. Pendência técnica com mais impacto: subir o motor v2 do Mana & Burn (`claude/gerador-manaburn/` no projeto claude.ai) para `manaburn/`.
 
 ## Handoff
+
+```
+HANDOFF · 01/11/2026, 01:10 · Claude (projeto claude.ai "BINDER Originals — Showrunner Editorial")
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch pequeno-mestre/ep01 (a partir de pequeno-mestre/kit-v1; sem merge)
+Objetivo atual: primeiro episódio do Pequeno Mestre.
+Decisões tomadas nesta sessão (nucleo/DECISOES.md, 01/11): refúgio = armário antigo de portas abertas; condição da personagem nunca nomeada; música M1 do fundador; voz de biblioteca "Bianca" (Voice Design recusa vozes infantis); bichos não falam.
+Alterações: pequeno-mestre/animar.py (motor novo), ep01/ (falas.json, ficha.md, voz), assets/audio/M1, fontes/ (Baloo 2, OFL), CONTEXTO.md, assets/LEIA-ME.md (M1, pedido do P2), nucleo/DECISOES.md, STATUS.md.
+Produzido: PequenoMestre_Ep01_DeOndeVemAMana_916.mp4 (64,5 s, −14,9 LUFS, sem corte lateral), enviado ao fundador; não commitado. Créditos: 1.808 (2 takes de voz).
+Pendentes: aprovação da voz e do fecho; asset P2; capa, legenda e texto alternativo; reconferir os números das CR citados na ficha.
+Próximo passo: com P2 gerado, trocar o P1 no plano aberto (e, se houver P2b, usar como fundo da mesa) e renderizar de novo.
+```
+
+Handoff anterior:
 
 ```
 HANDOFF · 31/10/2026, 23:55 · Claude (projeto claude.ai "BINDER Originals — Showrunner Editorial")

@@ -1,0 +1,29 @@
+{
+  "voz": "voz_pm_ep01.mp3",
+  "voz_info": "ElevenLabs eleven_v4, voz de biblioteca 'Bianca - Quirky and Animated' (HReOQZPV9tH5iTEnSbGo), take 1 de 2. Voice Design de voz infantil é bloqueado pela plataforma.",
+  "offset_voz": 3.0,
+  "falas": [
+    {"id": "L1",  "ini": 0.14,  "fim": 2.33,  "texto": "Fila feita. Pode começar."},
+    {"id": "L2",  "ini": 3.93,  "fim": 9.09,  "texto": "Você quer jogar o seu leão? Hmm... Não dá. Falta mana."},
+    {"id": "L3",  "ini": 10.57, "fim": 14.05, "texto": "Mana é a energia do jogo. E sabe de onde ela vem?"},
+    {"id": "L4",  "ini": 15.37, "fim": 21.21, "texto": "Do terreno! Isto é um terreno. Terreno não briga. Terreno dá mana."},
+    {"id": "L5",  "ini": 22.25, "fim": 25.09, "texto": "Olha. Vira... e sai mana!"},
+    {"id": "L6",  "ini": 26.33, "fim": 30.29, "texto": "Uma mana. Mas o seu leão custa duas. Uma não chega."},
+    {"id": "L7",  "ini": 31.53, "fim": 37.01, "texto": "Outro terreno? Não, dinossauro. Um terreno por turno. Regra é regra."},
+    {"id": "L8",  "ini": 38.44, "fim": 46.45, "texto": "Agora, o próximo turno. Desvira... joga mais um terreno... vira os dois. Uma... duas!"},
+    {"id": "L9",  "ini": 47.12, "fim": 49.17, "texto": "Pronto, leão. Pode entrar!"},
+    {"id": "L10", "ini": 49.91, "fim": 54.37, "texto": "Terreno dá mana. Vira para usar. Um por turno."},
+    {"id": "L11", "ini": 55.13, "fim": 57.53, "texto": "Agora você sabe. Ensina alguém."}
+  ],
+  "marcas": {
+    "leao": 4.97, "nao_da": 7.29, "falta_mana": 8.25,
+    "do_terreno": 15.37, "terreno_da_mana": 19.45,
+    "vira": 23.29, "sai_mana": 24.17,
+    "uma_mana": 26.33, "custa_duas": 28.17, "uma_nao_chega": 29.37,
+    "outro_terreno": 31.53, "nao_dino": 32.89, "um_por_turno": 34.25, "regra": 35.77,
+    "proximo_turno": 38.44, "desvira": 40.49, "joga_mais": 41.61, "vira_os_dois": 43.37, "uma": 44.65, "duas": 45.37,
+    "pronto": 47.12, "pode_entrar": 48.01,
+    "r1": 49.91, "r2": 51.61, "r3": 52.97,
+    "agora_sabe": 55.13
+  }
+}

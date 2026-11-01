@@ -25,12 +25,13 @@ Ilustrações geradas pelo fundador numa ferramenta de imagem, a partir da espec
 | D6 | `bichos/D6_elefante.jpg` | Elefante (versão 2, cores quentes) | sim | A versão 1 (traço fino, cores apagadas) foi descartada |
 | E1 | `cenario/E1_sala.jpg` | Sala vazia: cenário fixo | não | 1856×2304 (4:5); para 9:16 cortar ou estender o chão |
 | P1 | `cenario/P1_movel_azulejos.jpg` | Móvel de madeira com azulejos | sim | Peça de cenário para compor na sala |
+| M1 | `audio/M1_aventura_no_gramado.mp3` | Música de fundo da série, composição do fundador (2:59, −11,8 LUFS) | — | Trecho calmo 0:03–0:45; evitar 0:55–1:20, 1:55–2:20, 2:40–2:48 |
 | R1 | `referencias/R1_inspiracao_triciclo.jpg` | Primeira ilustração de referência | — | Só referência (baixa resolução) |
 | R2 | `referencias/R2_folha_modelo.jpg` | Folha de personagem (poses e expressões) | — | Referência de consistência |
 | R3 | `referencias/R3_folha_fala_v1_substituida.jpg` | Primeiro kit de fala numa folha só | — | Substituído por B1–B5 (sem cordão, não alinhado) |
 | R4 | `referencias/R4_leao_e_trex_juntos.jpg` | Leão e T-rex lado a lado | — | Escala relativa dos dois |
 
-**Em falta (não bloqueia o primeiro episódio):** A1 (de pé, parado, braços soltos), A3 (a apontar), A6 (sentado), C1–C5 (corpo sem braços + braços soltos), E2 (tapete visto de cima).
+**Em falta:** P2 (armário antigo, refúgio; o P1 faz de armário até lá). A1 (de pé, parado, braços soltos), A3 (a apontar), A6 (sentado), C1–C5 (corpo sem braços + braços soltos), E2 (tapete visto de cima).
 
 ## Recortes
 
@@ -45,3 +46,18 @@ Anexar sempre R2 (folha de personagem) e um busto aprovado (B1). Regras que toda
 - Fundo bege liso, sem sombra no chão nem textura; figura inteira dentro do quadro, com margem; sem texto.
 - Variações de um mesmo quadro (bocas, olhos): **editar** a imagem base e mudar só a parte pedida, para continuarem alinhadas.
 - Bichos: brinquedos fofos no mesmo estilo de D1–D6, de lado e virados à direita, fundo bege liso.
+
+
+Fontes: `../fontes/Baloo2-700.ttf` e `Baloo2-800.ttf` (Baloo 2, licença SIL OFL), usadas nas legendas e nas cartas.
+
+## Pedido de asset · P2 armário antigo (01/11/2026)
+
+Gerar na ferramenta de imagem, anexando P1 e E1 como referência de estilo. Guardar como `cenario/P2_armario.jpg` (e `P2b_armario_dentro.jpg`, se gerar a segunda) e acrescentar uma linha em `ASSETS` no `recortar.py`.
+
+P2 (peça de cenário, recortável):
+> Children's picture-book illustration, soft painted brush texture, dark brown outlines, warm light from the upper left, same style as the attached references. An old, friendly wooden wardrobe, a bit taller than a small child, rounded top edge, warm honey-brown wood with gentle wear, small decorative painted tiles on the top panel like the attached cabinet. Both doors are wide open toward the viewer. Inside: a warm small lamp glow, a soft cushion and a little rug on the lower shelf, a short row of toy-animal silhouettes on the upper shelf. Cozy and safe, not dark, not scary. Front view, slightly from above, whole wardrobe inside the frame with margin. Plain flat beige background, no floor shadow, no texture, no text, no people.
+
+P2b (opcional, plano da mesa):
+> Same style and same wardrobe. Close-up of the open lower shelf seen from the front: a warm-lit wooden shelf with a little round rug, used as a play table. Empty, ready for toys and cards. Plain flat beige background around it, no text, no people.
+
+Regras: portas sempre abertas; ninguém dentro; nada que lembre esconderijo fechado.

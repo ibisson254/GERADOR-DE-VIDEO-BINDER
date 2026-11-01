@@ -2,6 +2,18 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 01/11/2026 · Pequeno Mestre: conceito v2, voz, música e Ep. 01
+
+**O quê:**
+1. Refúgio da personagem: um armário antigo, sempre de portas abertas e com luz quente, onde ele brinca e joga com os bichos. Até existir o asset, o P1 faz de armário.
+2. Representação: a palavra que nomeia a condição da personagem nunca aparece em fala, legenda, título, descrição, hashtag ou texto alternativo. No máximo um comportamento por episódio, sem comentário de ninguém.
+3. Música da série: M1 "Aventura no Gramado", composição do fundador, uso liberado (`assets/audio/`).
+4. Voz: autorizada pelo fundador ("escolha a voz"). O Voice Design do ElevenLabs bloqueia vozes infantis; escolhida a voz de biblioteca "Bianca - Quirky and Animated" (dublagem adulta, PT-BR), dirigida para soar calma.
+5. Os bichos não falam; só o Pequeno Mestre tem voz.
+6. Ep. 01 "De onde vem a mana?" produzido (`pequeno-mestre/ep01/`), com o motor novo `pequeno-mestre/animar.py`. Sem o fecho do scanner: termina num cartão de marca calmo (proposta, aguarda o fundador).
+**Porquê:** mensagens do fundador de 01/11/2026 (00:08, 00:17, 00:23): música dele como fundo, armário como refúgio, tom leve, "nunca dizer, só deixar a entender, às vezes, quase nunca"; autorização de créditos e escolha da voz delegada.
+**Impacto:** `CONTEXTO.md` §1, §2, §5, §6 e §10 atualizados. Ficam com o fundador: aprovar a voz, o nome da série, a troca do fecho do scanner pelo cartão de marca e gerar o asset do armário.
+
 ## 31/10/2026 · Frente nova em desenvolvimento: Pequeno Mestre
 
 **O quê:** nova frente `pequeno-mestre/` (palavra de arranque `mestre`): série infantil com um menino autista de 4–5 anos que ensina Magic com os bichos de brinquedo dele. Pasta com `CONTEXTO.md` (bíblia), `PERFIL.md`, kit de assets v1 (`assets/`, 23 imagens + recortes com transparência) e `recortar.py`. Entradas novas no catálogo, em `series.yaml`, no `AGENTS.md` e no router do Showrunner.

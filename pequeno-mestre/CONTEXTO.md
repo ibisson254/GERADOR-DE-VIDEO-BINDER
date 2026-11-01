@@ -1,7 +1,7 @@
 # Pequeno Mestre — bíblia da personagem
 
 Frente nova do BINDER Originals (@binderthetrade), **em desenvolvimento**: visual da personagem definido pelo fundador a 31/10/2026 (kit v1 em `assets/`); ainda sem voz, sem formato fechado e sem episódios.
-Atualizado a 31/10/2026. Ler este ficheiro antes de produzir qualquer peça do Pequeno Mestre. O que está marcado **(proposta)** ainda não foi aprovado pelo fundador.
+Atualizado a 01/11/2026 (conceito v2, `nucleo/DECISOES.md`). Ler este ficheiro antes de produzir qualquer peça do Pequeno Mestre. O que está marcado **(proposta)** ainda não foi aprovado pelo fundador.
 
 ---
 
@@ -13,6 +13,8 @@ O Pequeno Mestre é um menino autista de 4–5 anos que ensina Magic: The Gather
 - **Promessa:** se ele explica, qualquer criança entende.
 - **Como ensina:** ele não joga partidas; demonstra. Os bichos fazem de cartas e de criaturas.
 - **Onde vive:** dentro do @binderthetrade, ao lado das outras séries. Sem conta própria.
+- **O refúgio:** um armário antigo de madeira, **sempre de portas abertas**, com luz quente lá dentro; a prateleira de baixo é a mesa de jogo. É um cantinho, nunca um esconderijo fechado: a personagem nunca aparece fechada dentro do móvel. Até existir o asset (ver `assets/LEIA-ME.md`, "Em falta"), o P1 faz de armário.
+- **Tom:** leve, didático e divertido. Ele é amigável, brincalhão e paciente; é quem sabe a regra.
 
 ## 2. Personalidade e representação do autismo
 
@@ -28,6 +30,8 @@ A representação está no que ele faz, nunca num rótulo. Nada de "autista" esc
 | Fala | Direta e literal, frases curtas (proposta) | — |
 
 **Regra de ouro:** o humor vem da situação e dos bichos, nunca do autismo. Nem piada, nem superpoder, nem tristeza. Nas cenas de barulho ele regula-se com calma; nunca aparece a sofrer.
+
+**Nunca dito, quase nunca mostrado (fundador, 01/11/2026):** a condição da personagem não é nomeada em fala, legenda, título, descrição, hashtag ou texto alternativo. No máximo um comportamento da tabela por episódio (muitos episódios não têm nenhum), e ninguém o comenta, explica ou corrige. Quando há barulho, são os bichos que se adaptam, sem fazer disso a lição. "Regra é regra." liga a personagem ao jogo: ele gosta de regras, e o Magic é feito delas.
 
 ## 3. Visual (autoridade: `assets/`)
 
@@ -52,15 +56,17 @@ A representação está no que ele faz, nunca num rótulo. Nada de "autista" esc
 | Panda | D5 | Preto e branco: carta de duas cores |
 | Elefante | D6 | Grande e calmo (papel a definir) |
 
-Os bichos não falam (proposta): mexem-se e rugem; quem narra é ele. Menos vozes, mais fiel a uma criança a brincar.
+Os bichos não falam (aplicado no Ep. 01): mexem-se, saltam e murcham; quem fala é ele, que fala com os bichos. Menos vozes, mais fiel a uma criança a brincar.
+
+Cores de mana (proposta para a temporada): leão branco, girafa azul, panda preto, tigre vermelho, dinossauro verde; o elefante é o guardião das regras.
 
 ## 5. Voz
 
-**A definir pelo fundador.** Regras já fixas: voz desenhada no ElevenLabs (Voice Design), nunca clonada de uma criança real nem imitando uma voz real (constituição §7); calma, clara, com pausas; criar só com autorização de créditos (AGENTS.md §3).
+**Escolhida (01/11/2026, aguarda o ouvido do fundador):** ElevenLabs, voz de biblioteca "Bianca - Quirky and Animated" (`HReOQZPV9tH5iTEnSbGo`, dublagem adulta em PT-BR, como é habitual em desenho animado), modelo eleven_v4, direção "calm little boy in a cartoon, slow and clear". O Voice Design recusa descrições de voz infantil, por isso não há voz desenhada. Regras já fixas: voz desenhada no ElevenLabs (Voice Design), nunca clonada de uma criança real nem imitando uma voz real (constituição §7); calma, clara, com pausas; criar só com autorização de créditos (AGENTS.md §3).
 
 ## 6. Som e ritmo
 
-Calmo e amigo de quem tem sensibilidade sensorial: sem estouros, sem gritos, sem flashes nem cortes frenéticos. Mais lento do que o Mana & Burn. Música suave (a definir). Loudness da casa: -14 LUFS, pico -1 dBFS.
+Calmo e amigo de quem tem sensibilidade sensorial: sem estouros, sem gritos, sem flashes nem cortes frenéticos. Mais lento do que o Mana & Burn. Música: M1 "Aventura no Gramado" (composição do fundador). Usar o trecho calmo 0:03–0:45 e, se faltar, 1:25–2:00 com crossfade; evitar os picos 0:55–1:20, 1:55–2:20 e 2:40–2:48. Debaixo da voz a música baixa cerca de 7 dB (ducking). Loudness da casa: -14 LUFS, pico -1 dBFS.
 
 ## 7. Formato (proposta, a aprovar)
 
@@ -82,11 +88,15 @@ Calmo e amigo de quem tem sensibilidade sensorial: sem estouros, sem gritos, sem
 - YouTube: conteúdo para crianças tem de ser marcado "feito para crianças", o que desliga os comentários. Instagram é 13+; aqui o público chega pelos pais.
 - Nada de pedir dados, fotos ou contacto às crianças; nada de pressão para comprar.
 
+## 9b. Motor
+
+`pequeno-mestre/animar.py` (PIL + ffmpeg): três planos (aberto, busto com lip-sync B1–B5 pela energia da voz, mesa com cartas desenhadas em código), dissolves de 0,3 s, ducking e normalização. Cada episódio é uma pasta com `falas.json` (falas e marcas em segundos da voz) e a faixa de voz. Pré-visualização: `--quadros 2.0,30.5`.
+
 ## 10. Em aberto (decide o fundador)
 
-1. Voz (descrição e aprovação).
-2. Nome público da série (a personagem chama-se Pequeno Mestre).
-3. Plataforma principal e duração.
-4. Fecho do scanner (`comum/outro/`, propaganda do app) num conteúdo para crianças: manter, adaptar ou retirar.
-5. Bordões, abertura e fecho propostos em §2 e §7.
-6. Tema do primeiro episódio.
+1. Voz: ouvir o Ep. 01 e aprovar a "Bianca" ou pedir outra.
+2. Nome público da série (proposta: só "Pequeno Mestre"; evitar "armário" no título).
+3. Plataforma principal e duração (Ep. 01 tem 64,5 s).
+4. Fecho do scanner num conteúdo para crianças. Proposta aplicada no Ep. 01: retirar e terminar num cartão de marca calmo, sem chamada para baixar ou comprar.
+5. Bordões: "Fila feita. Pode começar." e "Agora você sabe. Ensina alguém." usados no Ep. 01.
+6. Asset P2 (armário antigo): gerar na ferramenta de imagem (prompt na conversa de 01/11/2026 e em `assets/LEIA-ME.md`).
