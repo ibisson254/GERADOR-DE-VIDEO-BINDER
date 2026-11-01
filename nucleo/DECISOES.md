@@ -2,6 +2,25 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 01/11/2026 · Memória editorial universal, encerramento obrigatório e insights (constituição v1.5)
+
+**O quê:**
+1. Novo `comum/REGISTRO_EDITORIAL.md`: um ID e uma linha por conteúdo de todas as frentes, com tema, objeto, tese, gancho, estado, fonte do estado, datas, ficha, relações e auditoria de originalidade. Estados `IDEIA → EM ANÁLISE → APROVADO → EM PRODUÇÃO → CONCLUÍDO → PUBLICADO`, mais `REJEITADO`, `PAUSADO`, `NÃO PUBLICÁVEL` e `POR AUDITAR` (este só para a migração retroativa).
+2. Originalidade: antes de propor uma pauta, comparar tema, objeto, tese, gancho e ângulo com o registo inteiro; mudar título, personagem, frente ou formato não elimina a duplicidade; na dúvida, bloquear até decisão do fundador (`SHOWRUNNER.md` §2.3, constituição §10).
+3. Encerramento obrigatório em 12 passos (`SHOWRUNNER.md` §6): pacote completo na pasta do episódio (roteiro, legenda, comentário fixado, texto alternativo, fontes, QC, localização do vídeo e da capa), registo, histórico, STATUS, handoff e commit conferido no GitHub. Nenhum episódio se declara arquivado antes disso. Ficha, handoff e checklist atualizados.
+4. Novo `comum/insights/` (LEIA-ME, MODELO_SEMANAL, `registo_posts.csv`, `semanas/`): um snapshot por domingo, nunca reescrito; impulsionamento SIM/NÃO/PARCIAL/A CONFIRMAR, nunca inferido pelas views; relatório separa facto, interpretação, hipótese e recomendação. Os números deixam de ir para `comum/historico.md`, que passa a ser só a cronologia.
+5. Ferramenta `comum/ferramentas/memoria.py` (validar, pauta, encerramento, semana, segredos) e testes A–F em `comum/ferramentas/test_memoria.py`.
+
+**Porquê:** missão de engenharia do fundador de 01/11/2026 ("Memória Editorial Universal e Inteligência de Audiência"): trocar de agente, plataforma ou sessão sem perder a memória, repetir episódios ou perder o histórico de audiência.
+
+**Impacto:**
+- Nenhum conteúdo publicado ou aprovado foi reaberto; nenhum script de episódio mudou.
+- Migração retroativa: 72 conteúdos (main, branches `giro/2026-11-01` e `pequeno-mestre/ep01`, projeto claude.ai). 30 ficam `POR AUDITAR` por falta de fonte: o inventário **não** está completo (lacunas no fim do registo).
+- Critério de estado aplicado sem inventar: `PUBLICADO` só com Insights, captura do perfil ou confirmação do fundador. A confirmação global de 31/10 (10:46, "tudo o que está no repositório foi aprovado e lançado") vale como publicação sem data, exceto MB-EP09 e CM-EP003, que estavam agendados para depois dessa hora: ficam `APROVADO` com publicação A CONFIRMAR.
+- Correção na migração dos insights de 26/10: o histórico marcava "não" no impulso de seis posts sem confirmação; passam a `A CONFIRMAR` (o fundador só disse "R$ 11 em dois vídeos").
+- Alerta de originalidade (não decidido, para o fundador): MB-GIRO01 (branch `giro/2026-11-01`, publicação prevista 01/11, 21h) repete no bloco 3 o evento, a carta e a regra do MB-EP07 (All Leylines' Eve).
+- O registo de 26/10 sobre o Q (MB-EP01 × ORB-11), Kirk e Picard mostra objetos repetidos entre frentes antes desta regra; ficam como precedentes, não se reabrem.
+
 ## 31/10/2026 · Fecho do scanner no repositório e merge da consolidação para `main`
 
 **O quê:** `comum/outro/outro_binder_916.mp4` passa a existir no repositório, cortado do fim do `ManaBurn_Ep6_GodPack_916.mp4` publicado (49,0 s → fim), com o rótulo "MANA & BURN" tapado na fase da logo; script em `comum/outro/gerar_fecho.py`. Resolve o bloqueador 8 da entrada de 28/10. O fundador aprovou o merge de `consolidacao-estudio` para `main` (PR #1).

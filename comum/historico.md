@@ -1,5 +1,7 @@
 # Histórico de desempenho · @binderthetrade
 
+> **Desde 01/11/2026:** os números do Instagram vão para `comum/insights/` (snapshots semanais e `registo_posts.csv`) e o estado de cada conteúdo vive em `comum/REGISTRO_EDITORIAL.md`. Este ficheiro passa a ser a cronologia do estúdio (secção "Cronologia" no fim), uma linha por acontecimento, sempre com o ID. As secções abaixo ficam como histórico e já estão migradas (`comum/insights/semanas/2026-10-26.md`); nada foi apagado.
+
 Fonte: print do Instagram Insights (Conteúdo, últimos 7 dias), enviado pelo Ibisson.
 Impulsionamento: R$ 11 em dois vídeos, ver marcação abaixo (confirmar quais).
 
@@ -35,3 +37,9 @@ Impulsionamento: R$ 11 em dois vídeos, ver marcação abaixo (confirmar quais).
 - Especial de Halloween 2026 (Innistrad × Duskmourn): **publicado**. A música que acima aparece como "provisória" foi aprovada como está.
 - Órbita · Star Trek: a sequência editorial está **publicada**.
 - Tudo o que está no repositório foi testado, aprovado e lançado; vozes e músicas foram criadas pelo fundador e estão aprovadas. As notas "pendente: licença" acima ficam resolvidas por esta confirmação.
+
+## Cronologia (desde 01/11/2026)
+
+Formato: data · ID · frente · acontecimento · estado. Mais recente no fim.
+
+- 01/11/2026 · — · estúdio · Registo editorial universal criado com 72 conteúdos migrados (30 `POR AUDITAR`); insights de 21/10 e 26/10 migrados para `comum/insights/`; impulso dos posts de 26/10 passa a `A CONFIRMAR`. Branch `feature/memoria-editorial-insights`.

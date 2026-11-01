@@ -3,6 +3,16 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão em curso: "Consolidação estrutural do BINDER Originals" (31/10/2026, 10:46), que sucede à "Operação de Consolidação" da mesma data.
 
+## Memória editorial e insights (01/11/2026, branch `feature/memoria-editorial-insights`, PR para `main` à espera de aprovação)
+
+| Bloco | Estado | Onde |
+|---|---|---|
+| Registo editorial universal | Criado; 72 conteúdos migrados; **inventário incompleto** (30 `POR AUDITAR`) | `comum/REGISTRO_EDITORIAL.md` |
+| Auditoria de originalidade | Ativa (script + regra) | `SHOWRUNNER.md` §2.3, `comum/ferramentas/memoria.py pauta` |
+| Encerramento obrigatório | Ativo | `SHOWRUNNER.md` §6, `modelos/FICHA_EPISODIO.md`, `memoria.py encerramento` |
+| Insights semanais | Ativo; snapshots de 21/10 e 26/10 migrados | `comum/insights/` |
+| Testes A–F | 17 testes OK | `python3 -m unittest comum/ferramentas/test_memoria.py` |
+
 ## Estado editorial
 
 Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbita (temática); Lambe-lambe (espontânea); especiais. Tudo o que está no repositório está aprovado e lançado; Halloween 2026 e Star Trek publicados. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
@@ -26,7 +36,13 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbit
 
 ## Depende do fundador
 
-Nada bloqueia a produção. Opcional: colar `nucleo/prompts/CHATGPT.md` nas instruções do projeto ou GPT do ChatGPT.
+Nada bloqueia a produção. Para fechar a memória editorial:
+1. Aprovar o merge do PR `feature/memoria-editorial-insights` → `main`.
+2. **Hoje, antes das 21h:** o Giro de Domingo nº 1 (MB-GIRO01, branch `giro/2026-11-01`) repete no bloco 3 o evento, a carta e a regra do Ep. 07 (All Leylines' Eve). Publicar assim ou trocar o bloco?
+3. Confirmar as lacunas do fim de `comum/REGISTRO_EDITORIAL.md` (Ep. 03/04 do Mana & Burn, datas de publicação, quais Reels do Órbita e posts do Lambe-lambe saíram).
+4. Dizer quais dois vídeos levaram os R$ 11 de impulsionamento de 26/10 (e se o valor é total ou por vídeo).
+5. Domingo: enviar os prints de Visão geral **e** Conteúdo (e Anúncios, se houver impulso).
+Opcional: colar `nucleo/prompts/CHATGPT.md` nas instruções do projeto ou GPT do ChatGPT.
 
 ## Pendências técnicas (não bloqueiam a governação)
 
@@ -37,7 +53,7 @@ Nada bloqueia a produção. Opcional: colar `nucleo/prompts/CHATGPT.md` nas inst
 
 ## Próximo passo concreto
 
-Produzir normalmente a partir da `main`: palavra de arranque → `AGENTS.md` → `nucleo/SHOWRUNNER.md`. Pendência técnica com mais impacto: subir o motor v2 do Mana & Burn (`claude/gerador-manaburn/` no projeto claude.ai) para `manaburn/`.
+Depois do merge: produzir a partir da `main` com a auditoria de originalidade (`memoria.py pauta`) e o encerramento obrigatório; no domingo seguinte, `memoria.py semana AAAA-MM-DD` com os prints. Antes do merge: decidir o alerta do Giro (item 2 acima). Pendência técnica com mais impacto: subir o motor v2 do Mana & Burn (`claude/gerador-manaburn/` no projeto claude.ai) para `manaburn/`.
 
 ## Handoff
 
