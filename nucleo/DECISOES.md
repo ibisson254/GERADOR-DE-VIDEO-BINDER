@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 02/11/2026 (01:27) · Merge da evolução visual para `main`
+
+**O quê:** a branch `evolucao-visual-2026-11` (auditoria, QC automático, checklist P0/P1/P2, memória de continuidade, duração livre, kit v2 do Mana & Burn) entra na `main` por PR.
+**Porquê:** "Aprovado" do fundador (02/11/2026, 01:27), em resposta ao pedido de aprovação do merge.
+**Impacto:** `main` volta a ser a branch de trabalho. Continuam por aprovar, com esboço próprio, as expressões novas do Mana e do Burn (auditoria §4).
+
 ## 02/11/2026 (01:08) · Duração livre nos episódios de série (constituição v1.5) e Giro publicado
 
 **O quê:** (1) Os episódios de série não têm duração mínima nem máxima: duram o necessário para reter o público sem destruir o entretenimento. Constituição §6, perfis do Mana & Burn, Meta em Curto e Conde, catálogo, `oraculo/CONTEXTO.md` (linha de formato) e `comum/qc/qc_video.py` (duração só informativa). As durações anteriores ficam como referência histórica. O Órbita mantém o loop de 12 s. (2) O formato Giro de domingo entra no perfil do Mana & Burn. (3) O Giro de domingo de 01/11 está publicado. (4) Seguir com as melhorias mesmo sem o motor do Giro, que foi feito noutro chat e não está disponível.

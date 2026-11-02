@@ -1,7 +1,7 @@
 # STATUS · Estúdio BINDER
 
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
-Missão em curso: "Visual Evolution & Character Excellence" (02/11/2026), na branch `evolucao-visual-2026-11` (não integrada em `main`). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
+Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
 ## Estado editorial
 
@@ -41,9 +41,8 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 
 ## Depende do fundador
 
-- Aprovar ou recusar as propostas da auditoria (§4, §5, §7) e o merge de `evolucao-visual-2026-11`.
+- Aprovar um esboço das expressões novas do Mana e do Burn (auditoria §4) antes de as desenhar no kit.
 - Enviar ou subir o motor que gerou o Giro (não há "giro" em `claude/gerador-manaburn/`).
-- Decidir a TV ao fundo cortada (D-1) e a duração do Mana & Burn (perfil 35–45 s contra doc 05 do Drive 35–53 s).
 - Drive atualizado a 02/11 (notas de fonte de verdade na bíblia, no doc 05 e no Mapa do Drive; secção de estado na bíblia).
 
 ## Pendências técnicas (não bloqueiam a governação)
