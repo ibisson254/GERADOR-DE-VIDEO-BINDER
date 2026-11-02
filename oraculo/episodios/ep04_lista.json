@@ -1,0 +1,158 @@
+{
+ "fonte": "https://www.mtggoldfish.com/deck/8025711 (dados do Melee), consulta 02/11/2026; quantidades lidas da vista visual e iguais às da Merlion citada na pesquisa do ChatGPT",
+ "jogador": "mo que",
+ "deck": "Jund Sacrifice (MTGGoldfish: Jund)",
+ "posicao": "1.º",
+ "campanha": "16-2",
+ "principal": {
+  "CRIATURAS (24)": [
+   [
+    4,
+    "Biotech Specialist"
+   ],
+   [
+    4,
+    "Gene Pollinator"
+   ],
+   [
+    4,
+    "Greedy Freebooter"
+   ],
+   [
+    2,
+    "Magda, the Hoardmaster"
+   ],
+   [
+    1,
+    "Smaug the Magnificent"
+   ],
+   [
+    4,
+    "The Sackville-Bagginses"
+   ],
+   [
+    4,
+    "Umbral Collar Zealot"
+   ],
+   [
+    1,
+    "Wolverine, Fierce Fighter"
+   ]
+  ],
+  "ENCANTAMENTOS (6)": [
+   [
+    4,
+    "Obsessive Pursuit"
+   ],
+   [
+    2,
+    "The Misty Mountains Cold"
+   ]
+  ],
+  "FEITIÇOS (5)": [
+   [
+    4,
+    "Lively Dirge"
+   ],
+   [
+    1,
+    "Molten Collapse"
+   ]
+  ],
+  "INSTANTÂNEAS (3)": [
+   [
+    1,
+    "Requiting Hex"
+   ],
+   [
+    1,
+    "Torch the Tower"
+   ],
+   [
+    1,
+    "Witherbloom Charm"
+   ]
+  ],
+  "TERRENOS (22)": [
+   [
+    2,
+    "Blazemire Verge"
+   ],
+   [
+    2,
+    "Blood Crypt"
+   ],
+   [
+    4,
+    "Blooming Marsh"
+   ],
+   [
+    1,
+    "Forest"
+   ],
+   [
+    1,
+    "Mountain"
+   ],
+   [
+    4,
+    "Overgrown Tomb"
+   ],
+   [
+    4,
+    "Starting Town"
+   ],
+   [
+    3,
+    "Stomping Ground"
+   ],
+   [
+    1,
+    "Swamp"
+   ]
+  ]
+ },
+ "reserva": [
+  [
+   4,
+   "Duress"
+  ],
+  [
+   2,
+   "Fire Magic"
+  ],
+  [
+   2,
+   "Bitter Triumph"
+  ],
+  [
+   2,
+   "Seedship Impact"
+  ],
+  [
+   2,
+   "Strategic Betrayal"
+  ],
+  [
+   1,
+   "Leatherhead, Swamp Stalker"
+  ],
+  [
+   1,
+   "The Ooze"
+  ],
+  [
+   1,
+   "Professor Dellian Fel"
+  ]
+ ],
+ "chave": [
+  "Biotech Specialist",
+  "Gene Pollinator",
+  "Greedy Freebooter",
+  "The Sackville-Bagginses",
+  "Umbral Collar Zealot",
+  "Obsessive Pursuit",
+  "Lively Dirge"
+ ]
+}

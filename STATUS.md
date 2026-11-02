@@ -41,6 +41,8 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 
 ## Depende do fundador
 
+- Meta em Curto EP04 (branch `meta-em-curto-ep04`): voz gerada no flow `b81YGxZSC7uRuJf820D0`; falta trazer o MP3 (computador ligado ou anexo) para render e QC.
+
 - Aprovar um esboço das expressões novas do Mana e do Burn (auditoria §4) antes de as desenhar no kit.
 - Enviar ou subir o motor que gerou o Giro (não há "giro" em `claude/gerador-manaburn/`).
 - Drive atualizado a 02/11 (notas de fonte de verdade na bíblia, no doc 05 e no Mapa do Drive; secção de estado na bíblia).

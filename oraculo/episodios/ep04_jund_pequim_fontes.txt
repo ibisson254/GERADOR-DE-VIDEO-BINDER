@@ -1,0 +1,32 @@
+Meta em Curto EP04 · Jund em Pequim · fontes (consultadas a 02/11/2026)
+
+RESULTADOS (fonte usada no vídeo)
+- MTGGoldfish, dados do Melee: https://www.mtggoldfish.com/tournament/67745 (data 31/10/2026; 857 listas; ordem do Top 16).
+- Lista e campanha do campeão: https://www.mtggoldfish.com/deck/8025711 (mo que, 1.º, 16-2) e /deck/visual/8025711 (quantidades).
+- 2.º AlexMacIsaac 15-2-1 (U-B-R-G Fling): /deck/8025712. 3.º XiaoyuG 13-3-1 (Jund Sacrifice): /deck/8025713.
+- Top 8 MTGGoldfish: 1 mo que (Jund), 2 AlexMacIsaac (U-B-R-G Fling), 3 XiaoyuG (Jund Sacrifice), 4 沁辉 刘 (Mono-Green Combo), 5 tteql (Dimir Midrange), 6 Liujixin (Mono-Green Landfall), 7 hateubear (Izzet Combo), 8 Wenbo Li (Jund Sacrifice).
+- A página do MTGGoldfish não diz «Pequim»; a ligação ao evento vem do nome chinês do torneio, da data e do formato. Organizador: https://www.kadouevents.cn/2026-Spotlight-Beijing/?lang=en
+
+JOGADORES
+- 869: PlayMTG no X, 31/10/2026, lida no resultado de pesquisa (o X bloqueia leitura automática). https://x.com/PlayMTG/status/2116342339698413692 É o número já dito no EP03.
+- 857 listas publicadas: MTGGoldfish. 859: citado pelo DeckSnipe na pesquisa do ChatGPT, não lido nesta sessão. Divergência sem explicação conhecida; não se inventa uma.
+
+HARTFORD (comparação)
+- Lista de von Stange: ep02_listas.json (Star City Games, 25/10/2026).
+- Cálculo nosso: fora dos terrenos, as cartas com 4 cópias são as mesmas 7 nas duas listas: Biotech Specialist, Gene Pollinator, Greedy Freebooter, The Sackville-Bagginses, Umbral Collar Zealot, Obsessive Pursuit, Lively Dirge.
+
+TEXTO ORACLE (Scryfall API, 02/11/2026; todas legal em Standard)
+- Biotech Specialist, The Sackville-Bagginses, Treasure, Lively Dirge: ver oraculo/ep02/cartas/.
+- Umbral Collar Zealot (SOC 227, arte Dmitry Burmak): sacrifica outra criatura ou artefato: surveil 1.
+- Obsessive Pursuit (TLA 112, arte Ichiko Milk Tei): perde 1 de vida e cria Clue ao entrar e na manutenção; ao atacar, X marcadores +1/+1 na criatura atacante alvo, X = permanentes sacrificados no turno; X ≥ 3 dá vínculo com a vida.
+- Greedy Freebooter (LCI 109): ao morrer, scry 1 e cria Tesouro.
+
+CÁLCULO
+- Tesouro sacrificado com Biotech + Sackville: artefato (2 de dano) + ficha (perde 1) = 3. Nenhuma partida reconstruída; sem VOD.
+
+CORTADO DO RASCUNHO (ChatGPT, 02/11)
+- «Final 2–1»: só no DeckSnipe, inacessível nesta sessão; sem segunda fonte. Fora do vídeo e da legenda.
+- «859 jogadores» no gancho: trocado por 869 (fonte legível e coerente com o EP03).
+- Finalista como «deck de cores Izzet»: MTGGoldfish classifica U-B-R-G Fling.
+- stonysilence e yUD1 como nomes do Top 8: o MTGGoldfish mostra Wenbo Li e 沁辉 刘; prováveis nome real × nick, não confirmado. O vídeo mostra posição e deck, sem esses nomes.
+- Fontes DeckSnipe e Merlion: não abriram nesta sessão.

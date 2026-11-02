@@ -5,6 +5,8 @@ Semente de 02/11/2026. Previsões e resultados vivem em `comum/historico.md` (`o
 ## Episódios
 - EP01 · AC13, Relatório do Meta · `oraculo/episodios/ep01_ac13_ficha.md` · previsões: nenhuma.
 - EP02 · Magic Spotlight: Fracture (Hartford), Leitura da Final · `oraculo/episodios/ep02_hartford_ficha.md` · previsões: nenhuma.
+- EP03 · Arquivo Competitivo · branch `meta-em-curto-ep03`, PR #4 · promessa: analisar um evento quando os resultados fecharem [cumprida 02/11, EP04, votação B].
+- EP04 · Jund em Pequim · `oraculo/episodios/ep04_jund_pequim_ficha.md` · previsões: nenhuma. Refere Hartford (EP02): núcleo de 7 cartas igual.
 
 ## Previsões abertas
 - Nenhuma registada (02/11/2026).

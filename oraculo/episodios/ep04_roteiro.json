@@ -1,0 +1,47 @@
+{
+ "episodio": "Meta em Curto EP04 · Jund em Pequim (Magic Spotlight: Fracture, Standard, 31/10–01/11/2026)",
+ "nota": "texto = legenda no ecrã; fala = grafia fonética enviada ao ElevenLabs. Mesmo número de palavras.",
+ "blocos": [
+  {
+   "id": "gancho",
+   "onde": "fora",
+   "texto": "Oitocentos e sessenta e nove jogadores. Um campeão. E o deck dele não precisava vencer a guerra pela mesa."
+  },
+  {
+   "id": "arquivo",
+   "onde": "dentro",
+   "texto": "Magic Spotlight Fracture. Pequim. Standard. Mo Que, campeão com Jund Sacrifice. Campanha: dezesseis a dois."
+  },
+  {
+   "id": "motor",
+   "onde": "dentro",
+   "texto": "Biotech Specialist transforma cada artefato sacrificado em dois de dano. Sackville-Bagginses tira mais um quando esse artefato é uma ficha. Dois mais um: três. Um Tesouro deixa de ser apenas mana. Vira munição."
+  },
+  {
+   "id": "recuperacao",
+   "onde": "dentro",
+   "texto": "Lively Dirge recupera as peças. Umbral Collar Zealot alimenta o motor. Obsessive Pursuit transforma sacrifícios em força de ataque."
+  },
+  {
+   "id": "lista",
+   "onde": "dentro",
+   "texto": "Esta é a lista do campeão. Tirando os terrenos, as sete cartas com quatro cópias são as mesmas da lista que venceu Hartford."
+  },
+  {
+   "id": "top8",
+   "onde": "dentro",
+   "texto": "O Top 8 colocou três listas Jund Sacrifice na chave. E uma delas levou o troféu."
+  },
+  {
+   "id": "revelacao",
+   "onde": "fora",
+   "texto": "Não era sobre ter a maior mesa. Era sobre saber o que sacrificar."
+  },
+  {
+   "id": "pergunta",
+   "onde": "fora",
+   "texto": "Agora me diga: qual peça você removeria primeiro? A: Biotech Specialist. B: Sackville-Bagginses. C: Umbral Collar Zealot. Probabilidade calculada. Humanos, imprevisíveis."
+  }
+ ],
+ "fala": "Oitocentos e sessenta e nove jogadores. Um campeão. E o deck dele não precisava vencer a guerra pela mesa. Médjic Spótlait Frátchur. Pequim. Stândard. Mô Quê, campeão com Jund Sácrifais. Campanha: dezesseis a dois. Báiotec Spéchalist transforma cada artefato sacrificado em dois de dano. Séquivil-Béguinses tira mais um quando esse artefato é uma ficha. Dois mais um: três. Um Tesouro deixa de ser apenas mana. Vira munição. Láivli Dêrdj recupera as peças. Âmbral Cólar Zélot alimenta o motor. Obséssiv Pârsiut transforma sacrifícios em força de ataque. Esta é a lista do campeão. Tirando os terrenos, as sete cartas com quatro cópias são as mesmas da lista que venceu Rártford. O Tóp óito colocou três listas Jund Sácrifais na chave. E uma delas levou o troféu. Não era sobre ter a maior mesa. Era sobre saber o que sacrificar. Agora me diga: qual peça você removeria primeiro? Á: Báiotec Spéchalist. Bê: Séquivil-Béguinses. Cê: Âmbral Cólar Zélot. Probabilidade calculada. Humanos, imprevisíveis."
+}
