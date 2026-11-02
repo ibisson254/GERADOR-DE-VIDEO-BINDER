@@ -1,5 +1,5 @@
 """Efeitos sonoros sintetizados (sem amostras de terceiros): estática de TV, cartas embaralhando,
-clique do controle remoto e TV de tubo desligando."""
+clique do controle remoto, TV de tubo desligando e troca de canal (zapping)."""
 import numpy as np
 from scipy.signal import butter, sosfilt
 rng = np.random.default_rng(42)
@@ -49,15 +49,57 @@ def pop(sr):
     f = 280 + 900 * t / 0.16
     return np.sin(2 * np.pi * np.cumsum(f) / sr) * np.exp(-t / 0.05) * 0.28
 
-def track(n, sr, lines, t_slam, inserts=(), tv_cuts=(), shuffle_at=None):
+def marker(sr, dur=0.26):
+    """Marca-texto passando no papel: atrito filtrado com a ressonância subindo (on_oracle_highlight)."""
+    n = int(dur * sr); t = np.arange(n) / sr
+    x = rng.standard_normal(n) * (0.7 + 0.3 * np.sin(2 * np.pi * 38 * t))          # o atrito da ponta
+    lo = _f(x, 'band', [1700, 2600], sr, 3); hi = _f(x, 'band', [2600, 3800], sr, 3)
+    mix = lo * (1 - t / dur) + hi * (t / dur)                                       # o tom sobe com o traço
+    env = np.minimum(1, t / 0.02) * np.minimum(1, (dur - t) / 0.05)
+    return mix * env * 0.42
+
+def flick(sr):
+    """Estalo de carta de Magic (on_secondary_card_pop): o peteleco, o corpo do papel e o ar."""
+    n = int(0.12 * sr); t = np.arange(n) / sr; out = np.zeros(n)
+    m = int(0.002 * sr); out[:m] += _f(rng.standard_normal(m), 'high', 3000, sr) * 0.55
+    out += _f(rng.standard_normal(n), 'band', [1400, 6500], sr) * np.exp(-t / 0.012) * 0.8
+    out += _f(rng.standard_normal(n), 'low', 900, sr) * np.exp(-((t - 0.03) / 0.025) ** 2) * 0.25
+    return out * 0.42
+
+def thump(sr):
+    """Impacto curto e grave para a indignação do Burn (on_rage_arms_up)."""
+    n = int(0.22 * sr); t = np.arange(n) / sr
+    f = 46 + 40 * np.exp(-t / 0.03)
+    body = np.sin(2 * np.pi * np.cumsum(f) / sr) * np.exp(-t / 0.08)
+    knock = _f(rng.standard_normal(n), 'band', [200, 1600], sr) * np.exp(-t / 0.01) * 0.6
+    return np.tanh((body + knock) * 1.4) * 0.3
+
+def zap(sr, dur=0.30, forte=True):
+    """Troca de canal numa TV de tubo: o clique do controle, o \"tum\" do relé e um chiado curto que some."""
+    n = int(dur * sr); t = np.arange(n) / sr
+    hiss = _f(rng.standard_normal(n), 'band', [700, 9000], sr) * np.where(t < dur * 0.75, 1, np.exp(-(t - dur * 0.75) / 0.02)) * 0.30
+    hum = np.sin(2 * np.pi * 15734 / 4 * t) * 0.025 * (t < dur * 0.6)                 # o zumbido agudo do tubo
+    relay = np.sin(2 * np.pi * 120 * t) * np.exp(-t / 0.025) * 0.35
+    out = hiss + hum + relay
+    c = click(sr); out[:len(c)] += c * 0.9
+    return out * (1.0 if forte else 0.45)
+
+def track(n, sr, lines, t_slam, inserts=(), tv_cuts=(), shuffle_at=None, destaques=(), raiva=(), carta='pop', tv=True,
+          zaps=(), zaps_leves=()):
+    """Camada de efeitos. Os eventos chegam com os horários do process.py (os mesmos que vão para o data.js)."""
     out = np.zeros((n, 2), np.float32)
     def put(t, x, pan=0.0):
         a = int(t * sr); b = min(n, a + len(x))
         if 0 <= a < n: out[a:b, 0] += x[:b - a] * (1 - pan); out[a:b, 1] += x[:b - a] * (1 + pan)
-    for k, t in enumerate(tv_cuts):                                  # estática em cada corte para a TV
-        put(max(0, t - 0.12), static(sr) * (1 if k == 0 else 0.6))
+    if tv:
+        for k, t in enumerate(tv_cuts):                              # on_tv_cut: estática no corte para a TV
+            put(max(0, t - 0.12), static(sr) * (1 if k == 0 else 0.6))
+    for t in zaps: put(max(0, t - 0.02), zap(sr), -0.1)              # troca de canal
+    for t in zaps_leves: put(max(0, t - 0.01), zap(sr, 0.11, False), -0.1)   # zapping rápido da abertura
     if shuffle_at is not None: put(shuffle_at, shuffle(sr), 0.2)     # cartas embaralhando
     put(t_slam - 0.16, click(sr), -0.3)                              # controle remoto
     put(t_slam, crt_off(sr))                                         # TV de tubo desligando
-    for t in inserts: put(t, pop(sr), 0.25)
+    for t in inserts: put(t, flick(sr) if carta == 'flick' else pop(sr), 0.25)   # on_secondary_card_pop
+    for t in destaques: put(t, marker(sr), 0.1)                      # on_oracle_highlight
+    for t in raiva: put(t, thump(sr), 0.15)                          # on_rage_arms_up
     return out

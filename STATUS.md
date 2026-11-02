@@ -1,11 +1,11 @@
 # STATUS · Estúdio BINDER
 
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
-Missão em curso: "Consolidação estrutural do BINDER Originals" (31/10/2026, 10:46), que sucede à "Operação de Consolidação" da mesma data.
+Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
 ## Estado editorial
 
-Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbita (temática); Lambe-lambe (espontânea); especiais. Tudo o que está no repositório está aprovado e lançado; Halloween 2026 e Star Trek publicados. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
+Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbita (temática); Lambe-lambe (espontânea); especiais. Tudo o que está no repositório está aprovado e lançado; Halloween 2026 e Star Trek publicados. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
 
 ## Consolidação
 
@@ -24,30 +24,38 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbit
 | Merge para `main` | Concluído, aprovado pelo fundador | GitHub, PR #1 |
 | Prompt do ChatGPT a apontar para `main` | Concluído | `nucleo/prompts/CHATGPT.md` |
 
+## Evolução visual (02/11/2026)
+
+| Bloco | Estado | Onde |
+|---|---|---|
+| Auditoria do Giro de domingo (01/11) com timecodes, revista com a bíblia do Drive | Concluído: 0 P0, 10 P1, 4 P2, 1 decisão pendente | `nucleo/auditorias/2026-11-02_evolucao_visual.md` |
+| Controlo de qualidade automático | Implementado e testado | `comum/qc/` |
+| Checklist P0/P1/P2 + bloco E | Implementado | `nucleo/CHECKLIST_QUALIDADE.md` |
+| Memória de continuidade por série | Implementado (semente) | `comum/continuidade/` |
+| Expressões e poses novas do Mana e do Burn, regra "quem ouve reage" | Proposto | auditoria §4 |
+| Cenário-mestre, planos fixos, luz da TV, grelha da TV SAL | Proposto | auditoria §5 |
+| Formato "Giro de domingo" no perfil | Proposto | auditoria §7 |
+| Correções no motor que gerou o Giro | Bloqueado: motor feito noutro chat | auditoria §6 |
+| Kit v2 no repositório + melhorias (legenda na zona segura, fonte do medidor, ventilador, antena, paninho) | Implementado e testado (bordas OK) | `manaburn/LEIA-ME.md` |
+| Duração livre nas séries | Implementado (constituição v1.5) | `nucleo/DECISOES.md` |
+
 ## Depende do fundador
 
-Nada bloqueia a produção. Opcional: colar `nucleo/prompts/CHATGPT.md` nas instruções do projeto ou GPT do ChatGPT.
+- Aprovar um esboço das expressões novas do Mana e do Burn (auditoria §4) antes de as desenhar no kit.
+- Enviar ou subir o motor que gerou o Giro (não há "giro" em `claude/gerador-manaburn/`).
+- Drive atualizado a 02/11 (notas de fonte de verdade na bíblia, no doc 05 e no Mapa do Drive; secção de estado na bíblia).
 
 ## Pendências técnicas (não bloqueiam a governação)
 
-- Motor v2 do Mana & Burn está só no projeto claude.ai (`claude/gerador-manaburn/`); o `process.py` do Ep. 09 importa módulos que faltam no repositório.
+- Motor v2 do Mana & Burn: núcleo no repositório desde 02/11 (`manaburn/`, v1 em `manaburn/extras/v1/`); ficaram no projeto claude.ai `montar.py`, `scryfall.py`, `lote.py`, `testes.py`, `formatos.*` e episódios 1, 5–7. O motor do Giro foi feito noutro chat e não está disponível.
 - Gerador do Órbita já no repositório (`orbita/gerador/`); para renderizar faltam os PNGs das cartas (`BINDER_gerador_orbita.zip`) e as fontes em `node_modules/`.
 - `oraculo/episodios/ep01_render_v2.py` importa `render`, que não existe; `conde/montar_ep002.py` tem caminho absoluto. Não se mexe em scripts de episódios publicados sem necessidade.
 - Skills `binder-*` ainda mandam ler primeiro o Drive e dizem que o Scryfall não abre; alinhar com o repositório quando o fundador quiser.
 
 ## Próximo passo concreto
 
-Produzir normalmente a partir da `main`: palavra de arranque → `AGENTS.md` → `nucleo/SHOWRUNNER.md`. Pendência técnica com mais impacto: subir o motor v2 do Mana & Burn (`claude/gerador-manaburn/` no projeto claude.ai) para `manaburn/`.
+Próximo Giro ou episódio do Mana & Burn: produzir com o kit v2 de `manaburn/` (já corrigido) ou, se for com o motor do outro chat, aplicar-lhe as mesmas correções de `manaburn/LEIA-ME.md` ("Melhorias de 02/11"); validar com `python3 -I comum/qc/qc_video.py`. Produção normal continua a partir da `main`.
 
 ## Handoff
 
-```
-HANDOFF · 31/10/2026 · Claude
-Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (PR #1 integrado)
-Objetivo atual: consolidação concluída; estúdio pronto a produzir a partir da main.
-Decisões: Órbita e Lambe-lambe ativos; nome Meta em Curto; Órbita sem fecho; conteúdos do repositório aprovados e lançados; fecho do scanner cortado do Ep. 6 (nucleo/DECISOES.md, 31/10).
-Documentos consultados: AGENTS.md, STATUS.md, comum/outro/LEIA-ME.md, ManaBurn_Ep6_GodPack_916.mp4 (enviado pelo fundador).
-Alterações: comum/outro/outro_binder_916.mp4 e gerar_fecho.py; comum/outro/LEIA-ME.md; series.yaml; nucleo/DECISOES.md; nucleo/prompts/CHATGPT.md (links para main); STATUS.md.
-Pendentes: ver "Pendências técnicas".
-Próximo passo: produzir; ou subir o motor v2 do Mana & Burn para manaburn/.
-```
+Ver o handoff de 02/11/2026 na mensagem de fecho da sessão e no fim de `nucleo/auditorias/2026-11-02_evolucao_visual.md`.

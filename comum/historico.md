@@ -22,6 +22,17 @@ Impulsionamento: R$ 11 em dois vídeos, ver marcação abaixo (confirmar quais).
 - Comentários quase zero em todos: a pergunta do comentário fixado não está a puxar resposta. Testar pergunta de escolha (A ou B) ou de número.
 - Views não são instalações. Próximo print: Visão geral, com visitas ao perfil e toques no link.
 
+## Publicados depois de 26/10 · leituras parciais
+
+Print do próprio post (não do Insights), enviado pelo Ibisson. Entra no quadro semanal quando chegar o print do Insights.
+
+| Data do print | Post (início da legenda) | Série | Views | Curtidas | Coment. | Republicações | Envios | Impulso |
+|---|---|---|---|---|---|---|---|---|
+| 02/11/2026, 01:04 | Morreu o capitão Picard. No dia seguinte,… | Mana & Burn (Giro de domingo, 01/11) | 838 | 21 | 1 | 3 | 4 | não ("Turbinar post" disponível) |
+
+- Giro de domingo de 01/11: **publicado** (confirmado pelo fundador a 02/11). 69,0 s com fecho, −14,1 LUFS. Pergunta numérica "Comenta 1, 2 ou 3". QC e diagnóstico: `nucleo/auditorias/2026-11-02_evolucao_visual.md`. Idade do post no print: não indicada.
+- Observado, não leitura: no telemóvel a legenda queimada tapa a linha "Fonte: TheGamer (29/10/2026), preço do TCGplayer" (confirma o P1-3 da auditoria).
+
 ## Publicações em preparação
 - 28/10/2026 · Meta em Curto EP01 v2 "Mais jogado: 1 no Top 8. 3º mais jogado: 3." (AC13, Relatório do Meta: conversão por arquétipo). Voz TUBO: ElevenLabs "Antonio de Jesus". Previsões registadas: nenhuma. Render final conferido a 29/10 (47,3 s, sem corte lateral, −15,2 LUFS, sem defeitos bloqueadores): `oraculo/episodios/ep01_ac13_ficha.md`. Hipótese em teste: pergunta com 3 opções (M/C/P) contra pergunta aberta. Métricas: aguardam o print do Insights.
 - 29/10/2026 · Mana & Burn Ep. 08 The Tabernacle at Pendrell Vale (Legends, 1994): kit no repositório (commit 814ed8e).

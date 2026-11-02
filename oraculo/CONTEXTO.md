@@ -2,7 +2,7 @@
 
 Fonte de verdade da série. Ler inteiro antes de qualquer produção.
 
-Série BINDER Originals do @binderthetrade. Análise competitiva de Magic: metagame, matchups, mulligan, sideboard, sequenciamento e decisões de torneio. Reels 9:16 (1080×1920, 30 fps), 35–45 s, PT-BR.
+Série BINDER Originals do @binderthetrade. Análise competitiva de Magic: metagame, matchups, mulligan, sideboard, sequenciamento e decisões de torneio. Reels 9:16 (1080×1920, 30 fps), duração livre (constituição §6, 02/11/2026), PT-BR.
 
 Território distinto: Mana & Burn = cultura/caos · Conde de Manaforte = estética · Meta em Curto = competição e decisão.
 
