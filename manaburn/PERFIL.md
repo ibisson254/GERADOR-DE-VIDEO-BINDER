@@ -51,5 +51,5 @@ Respostas à pergunta do comentário fixado (o histórico de 26/10 mostra coment
 
 ## Lacunas conhecidas
 
-- O GitHub tem o kit v1 (`manaburn/`); a skill aponta para o código v2 no projeto claude.ai (`claude/gerador-manaburn/`). Até o v2 subir ao repositório, a versão a usar é a v2 do projeto.
+- Kit v2 no repositório desde 02/11/2026 (`manaburn/LEIA-ME.md`); a skill ainda aponta para o projeto claude.ai. O motor do Giro de domingo foi feito noutro chat e não está no repositório.
 - O fecho com logo próprio da série + fecho do scanner: confirmar no próximo episódio que os dois não se sobrepõem.

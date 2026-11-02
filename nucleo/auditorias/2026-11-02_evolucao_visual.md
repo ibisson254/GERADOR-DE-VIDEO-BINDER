@@ -124,6 +124,12 @@ Formato de 3 notícias da semana (sucessor do Zapping nº 1, 816 views em `comum
 
 Nenhum asset mestre, voz, música, episódio publicado ou script de episódio foi alterado.
 
+## 8a. Implementado depois da revisão (02/11, 01:08–)
+
+- Duração livre nas séries (constituição v1.5); Giro de domingo no perfil.
+- Kit v2 no repositório (`manaburn/`), v1 em `manaburn/extras/v1/`. Melhorias aplicadas e testadas com o Ep. 2: legenda fora da coluna de botões (P1-5), fonte do medidor a 20 px (P1-3/P1-4), ventilador de pé, antena com palha de aço e paninho de crochê (§5). O v2 já tinha o fecho "TV desliga → ponto verde" (P1-9), o braço do Burn a apontar (P1-2) e a TV inteira nos planos do sofá (D-1). `bordas.py`: OK.
+- Por fazer, porque mexem na identidade das personagens e precisam de desenho aprovado: variações de expressão do Mana e do Burn (§4). Por fazer no motor do Giro (outro chat): as mesmas correções.
+
 ## 9. Handoff
 
 ```

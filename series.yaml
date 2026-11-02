@@ -24,7 +24,7 @@ series:
     pasta: manaburn/
     perfil: manaburn/PERFIL.md
     identidade: "Drive: BINDER Marketing — Série Mana & Burn (doc 1fYkvk8xHufhunow3zg5Qh3aRRW2vD1ZoMAm0Wv9YQ74) + skill binder-mana-burn-episodio"
-    tecnico: manaburn/LEIA-ME.md               # v1; a v2 está no projeto claude.ai (claude/gerador-manaburn/), sobe na Fase 2
+    tecnico: manaburn/LEIA-ME.md               # kit v2 desde 02/11/2026 (v1 em manaburn/extras/v1/)
     vozes:
       burn: {fornecedor: elevenlabs, nome: "Talis - Natural, Descontraído, Real", voice_id: null, modelo: eleven_v4, atempo: 1.06}
       mana: {fornecedor: elevenlabs, nome: "Erik - Calmo e Introspectivo", voice_id: null, modelo: eleven_v4, atempo: 1.12}

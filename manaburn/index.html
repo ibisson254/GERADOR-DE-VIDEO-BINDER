@@ -9,7 +9,8 @@ html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#050A10
 #tv{position:absolute;inset:0;transform-origin:540px 960px}
 #stage{position:absolute;inset:0;overflow:hidden;background:#3a352b}
 svg{position:absolute;left:0;top:0}
-#sub{position:absolute;left:70px;right:70px;bottom:440px;text-align:center;font:700 47px/1.16 Geist;color:#fff;
+/* legenda: fora da coluna de botões do Instagram (140 px à direita) e acima da faixa de baixo (02/11/2026) */
+#sub{position:absolute;left:80px;right:160px;bottom:440px;text-align:center;font:700 47px/1.16 Geist;color:#fff;
   -webkit-text-stroke:10px #000;paint-order:stroke fill;letter-spacing:.2px}
 #sub .k{color:#FFD84A}
 #bug{position:absolute;left:60px;top:150px;opacity:.9}
@@ -21,6 +22,11 @@ svg{position:absolute;left:0;top:0}
 #logo .cta img{display:block;margin:0 auto 18px;height:110px}
 #ins{position:absolute;inset:0;pointer-events:none}
 #ins img{position:absolute;width:300px;border-radius:14px;box-shadow:0 10px 0 rgba(0,0,0,.45),0 0 0 5px #221C17;transform-origin:50% 50%;opacity:0}
+#scan{position:absolute;inset:0;background:#050A10;opacity:0}
+#scan img{position:absolute;left:50%;top:170px;height:1400px;transform:translateX(-50%);border-radius:44px;box-shadow:0 0 0 10px #1A1D22,0 0 0 13px #2A2E35}
+#scan .leg{position:absolute;left:60px;right:60px;top:1630px;text-align:center;font:700 40px/1.25 Geist;color:#F4F1E8}
+#scan .leg b{color:#10B981}
+#logo .cta .tag{display:block;font:700 34px/1.3 Geist;color:#F4F1E8;margin-bottom:14px}
 #logo .show{position:absolute;left:0;right:0;top:560px;text-align:center;font:400 54px/1 Bangers;letter-spacing:3px;
   color:#E0B43A;-webkit-text-stroke:4px #111;paint-order:stroke fill}
 </style></head>
@@ -37,6 +43,7 @@ svg{position:absolute;left:0;top:0}
  </div>
 </div>
 <svg id="dot" width="1080" height="1920" style="position:absolute;left:0;top:0"></svg>
+<div id="scan"><img id="scanimg"><div class="leg"></div></div>
 <div id="logo">
   <div class="show">MANA &amp; BURN</div>
   <svg id="logosvg" width="1080" height="1920" style="position:absolute;left:0;top:0"></svg>
@@ -44,17 +51,45 @@ svg{position:absolute;left:0;top:0}
 </div>
 <script src="data.js"></script>
 <script src="episode.js"></script>
+<script src="lote.js"></script>
 <script>
 // DATA vem de data.js: {lines:[{who,text,start,dur,env:[...12 qps]}], T_SLAM, T_END}
 const LINES = DATA.lines, T_SLAM = DATA.T_SLAM, T_END = DATA.T_END, T_CLICK = T_SLAM - 0.16;
 // pose por fala: [Burn, Mana, olharB, olharM, sobrancelhaB, sobrancelhaM, plano]
 const POSE = EP.pose;
+// melhorias v2, ligadas por episódio em EP.fx (os Ep. 1 a 4 continuam iguais)
+const FX = Object.assign({foco:false, tremor:false, poster:false, celular:false, scanner:false}, EP.fx||{});
+const EV = DATA.ev || {cortes_tv:[], destaque:[], raiva:[], cartas:[]};
+const T_SCAN = (FX.scanner && EP.outro && EP.outro.frames && DATA.T_SCAN) || null, SCAN_DUR = T_SCAN ? (DATA.SCAN_DUR || DATA.T_END - T_SLAM - 2.0) : 0, T_LOGO = T_SCAN ? T_SCAN + SCAN_DUR - 0.30 : T_SLAM;
 const INSERTS = EP.inserts || [];
 const BLINK_M=[...Array(12)].map((_,k)=>2.1+k*3.9), BLINK_B=[...Array(12)].map((_,k)=>1.3+k*4.4);
 const C2={x:245,y:703,w:373,h:520};   // carta no plano da TV
-const HLR=Object.fromEntries(Object.entries(EP.hl||{}).map(([k,v])=>{ const rs=(v.rects||[v.rect]).map(r=>({x:C2.x+r[0]*C2.w,y:C2.y+r[1]*C2.h,w:r[2]*C2.w,h:r[3]*C2.h}));
+function mkHLR(hl){ return Object.fromEntries(Object.entries(hl||{}).map(([k,v])=>{ const rs=(v.rects||[v.rect]).map(r=>({x:C2.x+r[0]*C2.w,y:C2.y+r[1]*C2.h,w:r[2]*C2.w,h:r[3]*C2.h}));
   const x0=Math.min(...rs.map(r=>r.x)), y0=Math.min(...rs.map(r=>r.y)), x1=Math.max(...rs.map(r=>r.x+r.w)), y1=Math.max(...rs.map(r=>r.y+r.h));
-  return [k,{rects:rs,x:x0,y:y0,w:x1-x0,h:y1-y0,zoom:v.zoom||2}]; }));   // um destaque pode ter vários retângulos
+  return [k,{rects:rs,x:x0,y:y0,w:x1-x0,h:y1-y0,zoom:v.zoom||2}]; })); }   // um destaque pode ter vários retângulos
+// ---------- zapping (25/10): EP.canais = [{de: fala, img, cred, ch, osd, hl, meter, table, flip, estatica}] ----------
+const CANAIS = EP.canais || null, FLIP_EVERY = EP.flip_a_cada || 0.42;
+const HLR = mkHLR(EP.hl), HLRS = CANAIS ? CANAIS.map(c=>mkHLR(c.hl)) : null;
+function canalIdx(i){ if(!CANAIS) return -1; let c=0; CANAIS.forEach((x,k)=>{ if(i>=x.de) c=k; }); return c; }
+function hlAt(i,sh){ return HLRS ? HLRS[canalIdx(i)][sh] : HLR[sh]; }
+// estado do canal no instante t: carta, créditos, chiado da troca (burst 0..1) e o número na tela (OSD)
+function canalState(t,i){ if(!CANAIS) return null; const k=canalIdx(i), C=CANAIS[k];
+  let img=C.img||null, cred=C.cred, ch=C.ch, burst=0, osd=null, sub=C.osd||'';
+  if(C.flip){ const j=Math.floor(t/FLIP_EVERY), f=C.flip[j%C.flip.length], dt=t-j*FLIP_EVERY; img=f.img; ch=f.ch; sub=f.osd||'';
+    if(j>0 && dt<0.10){ burst=1-dt/0.10*0.5; osd=ch; } }
+  else if(C.de>0){ const dt=t-LINES[C.de].start; if(dt>=-0.02 && dt<0.34){ burst=dt<0.20?1:1-(dt-0.20)/0.14; osd=ch; } }
+  if(C.estatica){ burst=1; osd=ch; img=null; }
+  return {k, img, cred, ch, burst:Math.round(burst*10)/10, osd, sub, est:!!C.estatica}; }
+// chiado de TV de tubo sobre a tela inteira (coordenadas do plano da TV), com o número do canal em verde
+function staticSVG(cs,seed,uid){ if(!cs||cs.burst<=0) return '';
+  const X=79,Y=682,W=704,H=562, bands=[...Array(5)].map((_,k)=>{ const y=Y+((R(seed*7+k)*H)|0), h=6+R(seed*3+k)*26;
+    return `<rect x="${X}" y="${y.toFixed(0)}" width="${W}" height="${h.toFixed(0)}" fill="#fff" opacity="${(.08+R(seed+k*5)*.18).toFixed(2)}"/>`; }).join('');
+  const osd = cs.osd!=null ? `<text x="${X+W/2}" y="${Y+H/2+18}" text-anchor="middle" font-family="Geist" font-weight="700" font-size="118" letter-spacing="6" fill="#7CFF5A" stroke="#050A10" stroke-width="10" paint-order="stroke">CH ${String(cs.osd).padStart(2,'0')}</text>`
+      + (cs.sub?`<text x="${X+W/2}" y="${Y+H/2+92}" text-anchor="middle" font-family="Geist" font-weight="700" font-size="44" letter-spacing="4" fill="#7CFF5A" stroke="#050A10" stroke-width="8" paint-order="stroke">${cs.sub}</text>`:'') : '';
+  return `<g opacity="${cs.burst}" clip-path="url(#tvscr${uid})"><defs><clipPath id="tvscr${uid}"><rect x="${X}" y="${Y}" width="${W}" height="${H}" rx="18"/></clipPath><filter id="tvn${uid}${seed}" x="${X}" y="${Y}" width="${W}" height="${H}" filterUnits="userSpaceOnUse">
+    <feTurbulence type="fractalNoise" baseFrequency="0.95 0.42" numOctaves="1" seed="${seed}"/><feColorMatrix type="saturate" values="0"/>
+    <feComponentTransfer><feFuncR type="linear" slope="2.2" intercept="-0.55"/><feFuncG type="linear" slope="2.2" intercept="-0.55"/><feFuncB type="linear" slope="2.2" intercept="-0.5"/><feFuncA type="linear" slope="0" intercept="1"/></feComponentTransfer></filter></defs>
+    <rect x="${X}" y="${Y}" width="${W}" height="${H}" fill="#222"/><rect x="${X}" y="${Y}" width="${W}" height="${H}" filter="url(#tvn${uid}${seed})"/>${bands}${osd}</g>`; }
 const CARD={x:742,y:554.6,w:136.3,h:190};
 const K='#221C17';
 const S=(a)=>`stroke="${K}" stroke-width="${a||4.5}" stroke-linejoin="round" stroke-linecap="round"`;
@@ -82,6 +117,51 @@ const defs = `<defs>
  <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>`;
 
+// ---------- pôster da parede (easter egg do cenário) ----------
+function posterArt(kind){
+  const gear=(cx,cy,R,r,n)=>{let d='';for(let i=0;i<n*2;i++){const a=Math.PI*i/n, rr=i%2?r:R, b=Math.PI/n/2.6;
+    d+=`${i?'L':'M'}${(cx+rr*Math.cos(a-b)).toFixed(1)} ${(cy+rr*Math.sin(a-b)).toFixed(1)} L${(cx+rr*Math.cos(a+b)).toFixed(1)} ${(cy+rr*Math.sin(a+b)).toFixed(1)} `;}return d+'Z';};
+  const star=(x,y,r,c)=>`<path d="M${x} ${y-r} L${x+r*.28} ${y-r*.28} L${x+r} ${y} L${x+r*.28} ${y+r*.28} L${x} ${y+r} L${x-r*.28} ${y+r*.28} L${x-r} ${y} L${x-r*.28} ${y-r*.28} Z" fill="${c}" ${S(2.5)}/>`;
+  const A = {
+   dragao: ['DRAGÃO', 22, `<path d="M352 290 Q372 210 420 190 Q470 172 486 140 Q470 200 446 222 Q470 230 480 260 Q440 250 420 270 Q400 290 352 290 Z" fill="#A8473A" ${S(3.5)}/>
+     <path d="M470 150 l10 -22 l4 26 M440 200 q12 4 18 -4" stroke="${K}" stroke-width="3" fill="none"/>
+     <path d="M486 140 q20 4 30 -10 q-6 18 -24 22" fill="#D9A24A" ${S(2.5)}/>`],
+   fada: ['FADA', 22, `<ellipse cx="392" cy="214" rx="46" ry="24" transform="rotate(-32 392 214)" fill="#8FC7C2" ${S(3)}/>
+     <ellipse cx="448" cy="214" rx="46" ry="24" transform="rotate(32 448 214)" fill="#8FC7C2" ${S(3)}/>
+     <ellipse cx="398" cy="262" rx="30" ry="16" transform="rotate(24 398 262)" fill="#B9DCD4" ${S(3)}/>
+     <ellipse cx="442" cy="262" rx="30" ry="16" transform="rotate(-24 442 262)" fill="#B9DCD4" ${S(3)}/>
+     <path d="M420 206 L420 300" stroke="${K}" stroke-width="7" stroke-linecap="round"/><circle cx="420" cy="194" r="13" fill="#D9A24A" ${S(3)}/>
+     ${star(362,160,11,'#D9B44A')}${star(482,296,9,'#D9B44A')}`],
+   artefato: ['ARTEFATO', 21, `<path d="${gear(420,226,64,50,8)}" fill="#8A8F9A" ${S(3.5)}/><circle cx="420" cy="226" r="20" fill="#E3D8BA" ${S(3.5)}/>
+     <path d="${gear(470,292,22,16,6)}" fill="#A87A3A" ${S(3)}/>`],
+   encantamento: ['ENCANTAMENTO', 16, `<circle cx="420" cy="224" r="70" fill="none" stroke="#9C8AD8" stroke-width="7" opacity=".9"/>
+     <circle cx="420" cy="224" r="50" fill="none" stroke="#6C5BA8" stroke-width="6"/><circle cx="420" cy="224" r="30" fill="#C9BCEB" ${S(3)}/>
+     ${star(420,224,22,'#D9B44A')}${star(360,160,9,'#9C8AD8')}${star(482,292,8,'#9C8AD8')}`],
+   mago: ['MAGO', 22, `<path d="M432 146 Q414 210 372 282 L476 282 Q446 220 432 146 Z" fill="#4A5C9A" ${S(3.5)}/>
+     <ellipse cx="424" cy="286" rx="72" ry="14" fill="#3B4A7E" ${S(3.5)}/>${star(420,222,10,'#D9B44A')}${star(440,254,7,'#D9B44A')}`],
+   magica: ['MÁGICA', 22, `<path d="M438 146 L384 236 L420 236 L396 312 L466 210 L428 210 L458 146 Z" fill="#D9B44A" ${S(3.5)}/>
+     ${star(366,178,9,'#E3D8BA')}${star(486,268,8,'#A8473A')}`],
+  };
+  const [label, fs, art] = A[kind] || A.dragao;
+  return `<g transform="rotate(-4 415 225)"><path d="M330 110 L500 104 L506 330 L470 340 L452 318 L336 324 Z" fill="#E3D8BA" ${S(4)}/>
+  ${art}
+  <text x="418" y="132" text-anchor="middle" font-family="Bangers" font-size="${fs}" fill="#5A3A22">${label}</text>
+  <rect x="318" y="100" width="44" height="14" fill="#C9C3A8" opacity=".9" transform="rotate(-20 340 107)"/><rect x="478" y="96" width="44" height="14" fill="#C9C3A8" opacity=".9" transform="rotate(18 500 103)"/></g>`;
+}
+
+// ---------- ventilador de pé (bíblia, §1 "Cenário"; acrescentado a 02/11/2026): atrás do sofá, entre o quadro e a TV ----------
+const fan = `
+ <path d="M600 486 L600 660" stroke="${K}" stroke-width="13" stroke-linecap="round"/><path d="M600 486 L600 660" stroke="#8A8F9A" stroke-width="6"/>
+ <g transform="rotate(-8 600 440)">
+  <circle cx="600" cy="440" r="52" fill="#C9C3A8" opacity=".35"/>
+  ${[0,120,240].map(a=>`<ellipse cx="600" cy="413" rx="15" ry="25" fill="#8FA6A0" ${S(3)} transform="rotate(${a+20} 600 440)"/>`).join('')}
+  ${[...Array(12)].map((_,k)=>{ const a=k*Math.PI/6; return `<path d="M${(600+13*Math.cos(a)).toFixed(1)} ${(440+13*Math.sin(a)).toFixed(1)} L${(600+52*Math.cos(a)).toFixed(1)} ${(440+52*Math.sin(a)).toFixed(1)}" stroke="#8E8670" stroke-width="2"/>`; }).join('')}
+  <circle cx="600" cy="440" r="33" fill="none" stroke="#8E8670" stroke-width="2"/>
+  <circle cx="600" cy="440" r="52" fill="none" ${S(4.5)}/>
+  <circle cx="600" cy="440" r="11" fill="#6B6A63" ${S(3.5)}/>
+  <path d="M600 492 L600 500" stroke="${K}" stroke-width="8"/>
+ </g>`;
+
 // ---------- sala gasta ----------
 const room = `
  <rect x="-400" y="-260" width="1880" height="1270" fill="url(#wall)"/>
@@ -93,13 +173,8 @@ const room = `
  <path d="M560 170 L650 160 L672 240 L630 300 L590 290 L548 240 Z" fill="#D8CFB4" ${S(3.5)}/>
  <path d="M650 160 Q700 175 690 215 Q672 230 672 240 Z" fill="#C9BE93" ${S(3.5)}/>
  <path d="M566 200 l20 6 M600 250 l24 -8 M582 272 l10 10" stroke="#9E957A" stroke-width="3"/>
- <!-- pôster rasgado de dragão (desenho próprio), preso com fita -->
- <g transform="rotate(-4 415 225)"><path d="M330 110 L500 104 L506 330 L470 340 L452 318 L336 324 Z" fill="#E3D8BA" ${S(4)}/>
-  <path d="M352 290 Q372 210 420 190 Q470 172 486 140 Q470 200 446 222 Q470 230 480 260 Q440 250 420 270 Q400 290 352 290 Z" fill="#A8473A" ${S(3.5)}/>
-  <path d="M470 150 l10 -22 l4 26 M440 200 q12 4 18 -4" stroke="${K}" stroke-width="3" fill="none"/>
-  <path d="M486 140 q20 4 30 -10 q-6 18 -24 22" fill="#D9A24A" ${S(2.5)}/>
-  <text x="418" y="132" text-anchor="middle" font-family="Bangers" font-size="22" fill="#5A3A22">DRAGÃO</text>
-  <rect x="318" y="100" width="44" height="14" fill="#C9C3A8" opacity=".9" transform="rotate(-20 340 107)"/><rect x="478" y="96" width="44" height="14" fill="#C9C3A8" opacity=".9" transform="rotate(18 500 103)"/></g>
+ <!-- pôster rasgado (desenho próprio), preso com fita: varia com o tipo da carta do episódio -->
+ ${posterArt(FX.poster ? (EP.poster||'dragao') : 'dragao')}
  <!-- lâmpada pelada no fio -->
  <path d="M770 -270 L770 128" stroke="${K}" stroke-width="3"/><rect x="760" y="122" width="20" height="16" fill="#6B6A63" ${S(3)}/>
  <path d="M752 140 Q752 182 770 186 Q788 182 788 140 Z" fill="#EFE6B8" ${S(3.5)}/>
@@ -112,6 +187,7 @@ const room = `
   <rect x="330" y="442" width="80" height="80" fill="#C98A45"/><rect x="330" y="488" width="80" height="34" fill="#4E7392"/>
   <circle cx="368" cy="486" r="13" fill="#E2C25A"/><path d="M344 522 Q350 492 358 472 M358 472 q-14 2 -20 10 M358 472 q14 -2 20 8" stroke="#2A2218" stroke-width="3.5" fill="none"/>
   <path d="M334 446 L372 494 L406 470 M372 494 L360 520" stroke="#F2EEDC" stroke-width="2" fill="none" opacity=".8"/></g>
+ ${fan}
  <!-- calendário velho -->
  <g transform="rotate(-6 84 530)"><rect x="40" y="470" width="88" height="118" fill="#E8DFC4" ${S(4)}/>
   <rect x="40" y="470" width="88" height="32" fill="#A8473A" ${S(4)}/>
@@ -144,7 +220,16 @@ const room = `
 const tvSmall = `
  <image href="tv_asset.png" x="640" y="518" width="420" height="266"/>`;
 const tvSmallLine = `<rect x="641" y="519" width="418" height="264" rx="4" fill="none" ${S(5)}/>`;
-const tvSmallCard = `<image href="${EP.card.img}" x="${CARD.x}" y="${CARD.y}" width="${CARD.w}" height="${CARD.h}" clip-path="url(#cardclip)"/>`;
+// em cima da TV (bíblia, §1 "Cenário"; acrescentado a 02/11/2026): paninho de crochê e antena com palha de aço na ponta
+const tvTop = `
+ <path d="M760 514 L940 512 L940 524 ${[...Array(12)].map((_,k)=>{ const x=940-k*15; return `Q${x-7.5} 538 ${x-15} 524`; }).join(' ')} L760 514 Z" fill="#EDE6D3" ${S(3)}/>
+ ${[...Array(11)].map((_,k)=>`<circle cx="${775+k*15}" cy="521" r="2.2" fill="#B9AE90"/>`).join('')}
+ <path d="M842 508 L800 402 M858 508 L918 398" stroke="${K}" stroke-width="8" stroke-linecap="round"/>
+ <path d="M842 508 L800 402 M858 508 L918 398" stroke="#B9B6AA" stroke-width="3.5" stroke-linecap="round"/>
+ <rect x="826" y="500" width="48" height="16" rx="5" fill="#4A4440" ${S(3.5)}/>
+ <circle cx="800" cy="398" r="13" fill="#A9A79E" opacity=".6" ${S(2.5)}/>
+ ${[...Array(10)].map((_,k)=>`<path d="M${(788+R(k+40)*22).toFixed(1)} ${(390+R(k+50)*16).toFixed(1)} q${((R(k+60)-.5)*16).toFixed(1)} ${(-6-R(k+70)*8).toFixed(1)} ${((R(k+80)-.5)*20).toFixed(1)} 2" stroke="#7E7C74" stroke-width="2.2" fill="none"/>`).join('')}`;
+const tvSmallCard = `<image id="smallcard" href="${CANAIS?(CANAIS[0].img||(CANAIS[0].flip&&CANAIS[0].flip[0].img)||''):EP.card.img}" x="${CARD.x}" y="${CARD.y}" width="${CARD.w}" height="${CARD.h}" clip-path="url(#cardclip)"/>`;
 
 const couchBack = `
  <path d="M58 900 L60 694 Q56 642 112 640 L648 636 Q704 642 702 692 L700 900 Z" fill="url(#velvet)" ${S(6)}/>
@@ -214,7 +299,11 @@ function manaArms(pose,clickOn){
   const sl='#B98A3A', hand=(x,y,r=19)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${SKM}" ${S(4.5)}/>`;
   const chips=(x,y)=>`<g transform="rotate(-10 ${x} ${y})"><path d="M${x-36} ${y-44} L${x+34} ${y-48} L${x+30} ${y+44} L${x-30} ${y+42} Z" fill="#B7562E" ${S(4.5)}/>
      <path d="M${x-28} ${y-12} L${x+28} ${y-16} L${x+28} ${y+10} L${x-28} ${y+12} Z" fill="#C9A044" ${S(3.5)}/></g>`;
-  let L = tube([[172,648],[146,760],[172,858]],sl,40) + chips(150,852) + hand(174,858), Rr;
+  const phone = FX.celular && pose==='remote';   // "Comenta aí": o Mana pega o celular, com o BINDER Vision na tela
+  const cel = `<g transform="rotate(-10 168 818)"><rect x="136" y="756" width="64" height="118" rx="11" fill="#1A1D22" ${S(4.5)}/>
+       <rect x="142" y="766" width="52" height="94" rx="6" fill="#050A10"/><circle cx="168" cy="810" r="30" fill="#10B981" opacity=".22"/>
+       <image href="logo/logo_mark.png" x="148" y="790" width="40" height="40"/></g>`;
+  let L = tube([[172,648],[146,760],[172,858]],sl,40) + (phone ? cel : chips(150,852)) + hand(174,858), Rr;
   if(pose==='finger') Rr = tube([[298,648],[332,742],[312,656]],sl,40) + `<path d="M306 644 L304 606 Q311 598 318 606 L318 644 Z" fill="${SKM}" ${S(4.5)}/>` + hand(312,656);
   else if(pose==='chip') Rr = tube([[298,648],[336,730],[272,612]],sl,40) + hand(270,612) + `<path d="M246 600 q12 -12 24 -2 q-10 12 -24 2 Z" fill="#D8B44A" ${S(3.5)}/>`;
   else if(pose==='remote') Rr = tube([[298,648],[318,700],[300,730]],sl,44) + `<g transform="rotate(-12 300 700)"><rect x="276" y="640" width="48" height="96" rx="10" fill="#2A2926" ${S(4.5)}/>
@@ -297,11 +386,16 @@ const table = `
 // ---------- programação da TV (atrás da carta) ----------
 const TVSHOTS_ALL=['tv','tvtext','tvtext2','tv2'];
 const TVP = EP.tv || null, NEWS_T = 2.4;
+// manchetes: as do roteiro + "Plantão anterior" e "Próximo plantão" vindos do lote (lote.js), quando for deste episódio
+const NEWS = (()=>{ if(!TVP) return []; const L=(typeof LOTE!=='undefined' && LOTE.id===EP.id) ? LOTE : null;
+  if(!L) return TVP.news; return TVP.news.filter(x=>!/^(Plantão anterior|Próximo plantão)/.test(x)).concat([L.anterior,L.proximo].filter(Boolean)); })();
 function wrapTxt(t, n){ const out=[]; let l=''; t.split(' ').forEach(w=>{ if((l+' '+w).trim().length>n){ if(l) out.push(l); l=w; } else l=(l+' '+w).trim(); }); if(l) out.push(l); return out; }
 const esc = x => x.replace(/&/g,'&amp;').replace(/</g,'&lt;');
 function tvFX(fx,uid){ if(!TVP||!fx) return '';
-  const m=TVP.meter, tb=TVP.table, H=330, top=770, bx=180, bw=34, lvl=H*m.fill*fx.m, news=wrapTxt(TVP.news[fx.n%TVP.news.length], 12);
-  const pct=Math.round(100*m.fill*fx.m);
+  const C=(CANAIS&&fx.c>=0)?CANAIS[fx.c]:{}, m=C.meter||TVP.meter, tb=('table' in C)?C.table:TVP.table, H=330, top=770, bx=180, bw=34, lvl=H*m.fill*fx.m, news=wrapTxt(NEWS[fx.n%NEWS.length], 12);
+  // número grande: m.value ("76%", "+530%") contando até o valor enquanto a barra sobe; sem value, a porcentagem da barra
+  const mv=m.value!=null?String(m.value):Math.round(100*m.fill)+'%', mnum=/^[+-]?[0-9.,]+%?$/.test(mv)?parseFloat(mv.replace(/[^0-9.,]/g,'').replace(',','.')):NaN;
+  const pct=fx.m>=1||isNaN(mnum)?mv:mv.replace(/[0-9.,]+/,Math.round(mnum*fx.m));   // "1 EM 300" fica fixo
   return `<g>
    <defs><linearGradient id="putoG${uid}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#6FB487"/><stop offset=".5" stop-color="#F4B414"/><stop offset="1" stop-color="#E3361D"/></linearGradient>
     <clipPath id="putoC${uid}"><rect x="${bx}" y="${top+H-lvl}" width="${bw}" height="${lvl}"/></clipPath></defs>
@@ -312,9 +406,10 @@ function tvFX(fx,uid){ if(!TVP||!fx) return '';
     <circle cx="${bx+bw/2}" cy="${top+H+16}" r="22" fill="${fx.m>0?'#6FB487':'#16202E'}" ${S(3.5)}/>
     ${[...Array(9)].map((_,k)=>`<path d="M${bx-9} ${top+H-k*H/8} l9 0" stroke="#D8D2C0" stroke-width="2.5"/>`).join('')}
    </g>
-   ${m.levels.map(([l,c],k)=>`<text x="${bx-14}" y="${top+16+k*(H-26)/2}" text-anchor="end" font-family="Bangers" font-size="${k===0?22:17}" letter-spacing="1" fill="${c}">${l}</text>`).join('')}
-   <text x="163" y="1168" text-anchor="middle" font-family="Bangers" font-size="52" fill="#FF5A4E" stroke="#050A10" stroke-width="3" paint-order="stroke">${pct}%</text>
-   ${m.calc.map((l,k)=>`<text x="163" y="${1190+k*15}" text-anchor="middle" font-family="Geist" font-weight="700" font-size="13" fill="#D8D2C0">${l}</text>`).join('')}
+   ${m.levels.map(([l,c],k)=>`<text x="${bx-14}" y="${top+16+k*(H-26)/2}" text-anchor="end" font-family="Bangers" font-size="${Math.min(k===0?22:17,Math.floor(78/(l.length*0.47)))}" letter-spacing="1" fill="${c}">${l}</text>`).join('')}
+   <text x="163" y="1168" text-anchor="middle" font-family="Bangers" font-size="${Math.min(52,Math.floor(150/(String(mv).length*0.47)))}" fill="#FF5A4E" stroke="#050A10" stroke-width="3" paint-order="stroke">${pct}</text>
+   ${/* conta e fonte do medidor: 20 px (era 13 px) para a fonte ser legível no telemóvel; constituição §3 (02/11/2026) */''}
+   ${m.calc.map((l,k)=>`<text x="163" y="${1192+k*21}" text-anchor="middle" font-family="Geist" font-weight="700" font-size="20" fill="#D8D2C0" stroke="#050A10" stroke-width="3" paint-order="stroke">${l}</text>`).join('')}
    <g filter="url(#rough2)"><rect x="634" y="700" width="132" height="38" rx="4" fill="#C8352B" ${S(3)}/></g>
    <text x="700" y="729" text-anchor="middle" font-family="Bangers" font-size="28" letter-spacing="2" fill="#FFD84A">${TVP.channel}</text>
    ${fx.live?'<circle cx="652" cy="757" r="6" fill="#FF3B30"/>':''}<text x="664" y="763" font-family="Geist" font-weight="700" font-size="15" fill="#F4F1E8">AO VIVO</text>
@@ -331,7 +426,7 @@ function tvFX(fx,uid){ if(!TVP||!fx) return '';
 // relógio da TV: conta só o tempo em que a TV está em primeiro plano, para cada plano mostrar manchetes novas
 const TVSEG=[]; { let b=0; LINES.forEach((l,k)=>{ if(!TVSHOTS_ALL.includes(POSE[k][6])) return; const D=(k+1<LINES.length?LINES[k+1].start:T_SLAM)-l.start, c=Math.max(1,Math.round(D/NEWS_T)); TVSEG[k]={b,c,D}; b+=c; }); }
 function tvState(t,i,shot){ const big=TVSHOTS_ALL.includes(shot)&&TVSEG[i], g=TVSEG[i];
-  return {n:big?g.b+Math.max(0,Math.min(g.c-1,Math.floor((t-LINES[i].start)/g.D*g.c))):Math.floor(t/NEWS_T), live:Math.floor(t*2)%2===0, m:big?Math.round(ease(clamp((t-LINES[i].start)/0.9))*10)/10:1}; }
+  return {c:canalIdx(i), n:big?g.b+Math.max(0,Math.min(g.c-1,Math.floor((t-LINES[i].start)/g.D*g.c))):Math.floor(t/NEWS_T), live:Math.floor(t*2)%2===0, m:big?Math.round(ease(clamp((t-LINES[i].start)/(i===0&&FX.foco?2.0:0.9)))*10)/10:1}; }
 function shot2Markup(st){
   return `
   <g filter="url(#rough)">
@@ -344,9 +439,10 @@ function shot2Markup(st){
   </g>
   <image href="tv_asset.png" x="-24" y="610" width="1126" height="713"/>
   <g filter="url(#rough2)"><rect x="-22" y="612" width="1122" height="709" rx="14" fill="none" ${S(7)}/></g>
-  ${tvFX(st.fx,'s2')}
-  <image href="${EP.card.img}" x="245" y="703" width="373" height="520" clip-path="url(#cardclip2)"/>
+  ${st.cs&&st.cs.est?'':tvFX(st.fx,'s2')}
+  ${(st.cs?st.cs.img:EP.card.img)?`<image href="${st.cs?st.cs.img:EP.card.img}" x="245" y="703" width="373" height="520" clip-path="url(#cardclip2)"/>`:''}
   ${st.hl>0&&st.hr?st.hr.rects.map(r=>`<rect x="${r.x-3}" y="${r.y-2}" width="${r.w+6}" height="${r.h+4}" rx="4" fill="none" stroke="#FFD84A" stroke-width="2.5" filter="url(#glow)" pathLength="100" stroke-dasharray="${100*st.hl} 100"/>`).join(""):""}
+  ${staticSVG(st.cs,st.seed,'s')}
   <g filter="url(#rough2)">
    ${tube([[1100,1005],[1010,985],[920,969]],'#A4473B',58)}
    <path d="M894 961 L842 965 Q832 973 842 981 L894 981 Z" fill="${SKB}" ${S(5)}/><circle cx="902" cy="969" r="28" fill="${SKB}" ${S(5)}/>
@@ -355,28 +451,48 @@ function shot2Markup(st){
 // ---------- montagem ----------
 const world=document.getElementById('world'), shot2=document.getElementById('shot2'), fx=document.getElementById('fx');
 const tvEl=document.getElementById('tv'), dotEl=document.getElementById('dot'), logo=document.getElementById('logo'), sub=document.getElementById('sub');
-world.innerHTML = defs + `<g id="cam"><g filter="url(#rough)">${room}</g>${tvSmall}<g filter="url(#rough)">${tvSmallLine}</g><g id="tvfx" transform="translate(648.95 290.47) scale(0.373)"></g>${tvSmallCard}<g filter="url(#rough)">${couchBack}${couchFront}</g>
+world.innerHTML = defs + `<g id="cam"><g filter="url(#rough)">${room}</g>${tvSmall}<g filter="url(#rough)">${tvSmallLine}${tvTop}</g><g id="tvfx" transform="translate(648.95 290.47) scale(0.373)"></g>${tvSmallCard}<g filter="url(#rough)">${couchBack}${couchFront}</g>
   <g id="mana" filter="url(#rough2)"></g><g id="burn" filter="url(#rough2)"></g><g filter="url(#rough)">${table}</g></g>`;
 shot2.innerHTML = defs + '<g id="s2cam"><g id="s2"></g></g>';
 fx.innerHTML = `<defs><radialGradient id="vig" cx="50%" cy="48%" r="70%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".45"/></radialGradient></defs>
   ${defs}<rect width="1080" height="1920" filter="url(#grain)" opacity=".5"/><rect width="1080" height="1920" fill="url(#vig)"/>`;
 const tvfxG=world.querySelector('#tvfx');
+const stageEl=document.getElementById('stage'), scanEl=document.getElementById('scan'), scanImg=document.getElementById('scanimg');
+const SCAN=(EP.outro&&EP.outro.frames)||null, SCAN_N=SCAN?SCAN.n:0, SCAN_FPS=SCAN?(SCAN.fps||30):30;
+const SCAN_SRC=k=>SCAN.pattern.replace('%03d', String(k+1).padStart(3,'0'));
+const SCAN_OK={};
+if(FX.scanner && SCAN){ scanEl.querySelector('.leg').innerHTML=EP.outro.legenda||'';
+  for(let k=0;k<SCAN_N;k++){ const im=new Image(); im.onload=()=>{SCAN_OK[k]=true;}; im.onerror=()=>{SCAN_OK[k]=false;}; im.src=SCAN_SRC(k); } }
+if(FX.celular||FX.scanner){ document.querySelector('#logo .cta').innerHTML='<img id="gplay" src="cards/google_play.png" style="display:none"><span class="tag">'
+  +((EP.outro&&EP.outro.assinatura)||'Escaneie suas cartas e organize seus decks.')+'</span>Disponível no Google Play · Link na bio'; }
 const manaG=world.querySelector('#mana'), burnG=world.querySelector('#burn'), camG=world.querySelector('#cam'), s2=shot2.querySelector('#s2'), s2cam=shot2.querySelector('#s2cam');
 const insEl=document.getElementById('ins'); const INS_OK={};
 const credEl=document.getElementById('cred'), CRED_BASE=EP.card.cred;
+if(EP.bug) document.querySelector('#bug .b').textContent=EP.bug;   // tarja do quadro: "PLANTÃO DO PREÇO", "ESPECIAL DE HALLOWEEN"…
 INSERTS.forEach((c,i)=>{const im=new Image(); im.onload=()=>{INS_OK[i]=true;}; im.onerror=()=>{INS_OK[i]=false;}; im.src=c.file; c.el=document.createElement('img'); c.el.src=c.file; insEl.appendChild(c.el);});
 {const g=new Image(); g.onload=()=>{document.getElementById('gplay').style.display='block';}; g.src='cards/google_play.png';}
-window.READY=()=>INSERTS.every((c,i)=>i in INS_OK);
+window.READY=()=>INSERTS.every((c,i)=>i in INS_OK) && (!(FX.scanner&&SCAN) || [...Array(SCAN_N).keys()].every(k=>k in SCAN_OK));
 const TVSHOTS=['tv','tvtext','tvtext2','tv2'];
+// enquadramento dos planos da TV: a tela da TV (x 79–783) nunca sai do vídeo nas laterais nem sobe por baixo dos créditos
+const SCR={x:79,y:682,w:704,h:562}, MARG=10, FIT=(1080-2*MARG)/SCR.w;   // FIT ≈ 1,506: tela inteira na largura, com margem
+function encaixa(c){ const s=Math.min(c.s,FIT); let cx=c.cx;
+  const L=c.tx+s*(SCR.x-cx), R=c.tx+s*(SCR.x+SCR.w-cx);
+  if(L<MARG) cx=SCR.x-(MARG-c.tx)/s; else if(R>1080-MARG) cx=SCR.x+SCR.w-(1080-MARG-c.tx)/s;
+  return {s, cx, cy:c.cy, tx:c.tx, ty:c.ty}; }
 function s2Target(k,t){ const sh=POSE[k][6], l=LINES[k], p=clamp((t-l.start)/Math.max(.5,l.dur));
   // zoom no texto: a tela inteira da TV ocupa a largura do vídeo (carta e TV SAL sem cortes), logo abaixo dos créditos
-  if(HLR[sh]) { const r=HLR[sh], SCR={x:79,y:682,w:704,h:562}; return {s:r.zoom,cx:SCR.x+SCR.w/2,cy:SCR.y,tx:540,ty:300}; }
+  const HR=hlAt(k,sh); if(HR) { const r=HR, z=Math.min(r.zoom,FIT), c={s:z,cx:SCR.x+SCR.w/2,cy:SCR.y,tx:540,ty:300};
+    if(!FX.foco) return c;
+    // oracle_focus: quando o amarelo acende, aproxima devagar 7% (ease-out) e TERMINA no enquadramento acima:
+    // começa em z/1,07 e chega em z, com o topo da TV parado logo abaixo dos créditos. Nada sai pelas laterais.
+    const q=clamp((t-l.start-0.45)/Math.max(1.2,l.dur-0.45)), f=1+0.07*(1-Math.pow(1-q,3));
+    return {s:z/1.07*f, cx:c.cx, cy:c.cy, tx:c.tx, ty:c.ty}; }
   if(sh==='tv2') return {s:1.12+0.04*p,cx:560,cy:963,tx:540,ty:960};
   return {s:1+0.06*p,cx:432,cy:963,tx:432,ty:963}; }
 function s2Cam(i,t){ let c=s2Target(i,t); const l=LINES[i];
   if(i>0 && TVSHOTS.includes(POSE[i-1][6]) && t-l.start<0.4){ const a=s2Target(i-1,l.start), q=ease(clamp((t-l.start)/0.4));
     c={s:a.s+(c.s-a.s)*q,cx:a.cx+(c.cx-a.cx)*q,cy:a.cy+(c.cy-a.cy)*q,tx:a.tx+(c.tx-a.tx)*q,ty:a.ty+(c.ty-a.ty)*q}; }
-  return c; }
+  return encaixa(c); }
 
 const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)), ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
 function lineAt(t){let i=-1;LINES.forEach((l,k)=>{if(t>=l.start-0.02)i=k;});return i;}
@@ -400,14 +516,16 @@ function render(t){
   const kM=speaking('M',tq), kB=speaking('B',tq);
   const mM=mouthFor(kM,tq), mB=mouthFor(kB,tq), clickOn=t>=T_CLICK && t<T_CLICK+0.16;
   const bM=blinking(BLINK_M,tq), bB=blinking(BLINK_B,tq);
-  const hl = HLR[shot] ? Math.round(clamp((t-LINES[i].start-0.45)/0.4)*10)/10 : 0;
+  const HRi = hlAt(i,shot), cs = canalState(t,i), seed = cs&&cs.burst>0 ? Math.floor(t*20) : 0;
+  const hl = HRi && !(cs&&cs.burst>=1) ? Math.round(clamp((t-LINES[i].start-0.45)/0.4)*10)/10 : 0;
   const bobB = mB==='open', bobM = mM==='open';
   const fx=tvState(t,i,shot), fxk=[fx.n,fx.live,fx.m].join();
-  const key=[i,mM,mB,bM,bB,clickOn,shot,hl,fxk].join();
+  const key=[i,mM,mB,bM,bB,clickOn,shot,hl,fxk,cs?[cs.k,cs.img,cs.burst,cs.osd,seed].join('|'):''].join();
   if(key!==last){ last=key;
     if(TVSHOTS.includes(shot)){ shot2.style.display='block'; world.style.display='none';
-      s2.innerHTML = shot2Markup({look:P[2],brow:P[4],mouth:mB,blink:bB,hl,hr:HLR[shot],bob:bobB,fx}); }
-    else { shot2.style.display='none'; world.style.display='block'; tvfxG.innerHTML=tvFX(fx,'w');
+      s2.innerHTML = shot2Markup({look:P[2],brow:P[4],mouth:mB,blink:bB,hl,hr:HRi,bob:bobB,fx,cs,seed}); }
+    else { shot2.style.display='none'; world.style.display='block'; tvfxG.innerHTML=(cs&&cs.est?'':tvFX(fx,'w'))+staticSVG(cs,seed,'w');
+      if(cs){ const sc=world.querySelector('#smallcard'); if(sc.getAttribute('href')!==(cs.img||'')){ sc.setAttribute('href',cs.img||''); } sc.style.display=cs.img?'':'none'; }
       manaG.innerHTML = manaHeadBack()+manaLegs()+manaTorso()+manaHead({look:P[3],brow:P[5],mouth:mM,blink:bM,bob:bobM})+manaArms(P[1],clickOn);
       burnG.innerHTML = burnLegs()+burnTorso()+burnHead({look:P[2],brow:P[4],mouth:mB,blink:bB,bob:bobB})+burnArms(P[0]); }
   }
@@ -421,7 +539,8 @@ function render(t){
     const x=tvs?665:615, y=tvs?770:330, rot=tvs?6:-5, sc=0.6+0.4*backOut(pin);
     c.el.style.left=x+'px'; c.el.style.top=y+'px'; c.el.style.opacity=(1-out);
     c.el.style.transform=`translateX(${(1-ease(pin))*160}px) rotate(${rot}deg) scale(${sc})`; });
-  const credHTML=CRED_BASE+extra; if(credEl.innerHTML!==credHTML) credEl.innerHTML=credHTML;
+  const credHTML=(cs?cs.cred:CRED_BASE)+extra; if(credEl.innerHTML!==credHTML) credEl.innerHTML=credHTML;
+  if(CANAIS){ const C=CANAIS[cs.k], bt=EP.bug+(C.canal?' · '+C.canal:''), be=document.querySelector('#bug .b'); if(be.textContent!==bt) be.textContent=bt; }
   const c=camera(t,shot);
   camG.setAttribute('transform',`translate(${c.tx} ${c.ty}) scale(${c.s}) translate(${-c.cx} ${-c.cy})`);
   // legenda estilo TV: a fala de quem está falando agora
@@ -437,12 +556,20 @@ function render(t){
     sy=Math.max(0.004,1-ease(a)); sx=1-0.985*ease(b); br=1+5*a; op = t>T_SLAM+0.44 ? 0 : 1; }
   tvEl.style.transform=`scale(${sx},${sy})`; tvEl.style.filter=`brightness(${br})`; tvEl.style.opacity=op;
   dotEl.innerHTML=''; logo.style.opacity=0;
-  if(t>=T_SLAM+0.30){
-    const u=clamp((t-T_SLAM-0.36)/0.22), v=clamp((t-T_SLAM-0.50)/0.38);
+  // bloco do scanner: gravação real do app (EP.outro.frames), entre a TV apagar e a logo
+  if(scanEl){ const on = FX.scanner && T_SCAN!==null && t>=T_SCAN && t<T_SCAN+SCAN_DUR;
+    scanEl.style.opacity = on ? Math.min(clamp((t-T_SCAN)/0.12), clamp((T_SCAN+SCAN_DUR-t)/0.12)) : 0;
+    if(on){ const fr=Math.min(SCAN_N-1, Math.floor((t-T_SCAN)*SCAN_FPS)); const src=SCAN_SRC(fr); if(scanImg.dataset.src!==src){ scanImg.src=src; scanImg.dataset.src=src; } } }
+  if(t>=T_LOGO+0.30){
+    const u=clamp((t-T_LOGO-0.36)/0.22), v=clamp((t-T_LOGO-0.50)/0.38);
     const cy=960-120*ease(u), r=8+22*ease(u), col=u<0.5?'#FFFFFF':'#10B981';
     if(v<0.6) dotEl.innerHTML=`<g opacity="${1-v/0.6}"><circle cx="540" cy="${cy}" r="${r+14*(1-u)}" fill="${col}" opacity=".25"/><circle cx="540" cy="${cy}" r="${r}" fill="${col}"/></g>`;
-    if(v>0){ logo.style.opacity=1; drawLogo(v, clamp((t-T_SLAM-0.72)/0.28), clamp((t-T_SLAM-0.92)/0.28)); }
+    if(v>0){ logo.style.opacity=1; drawLogo(v, clamp((t-T_LOGO-0.72)/0.28), clamp((t-T_LOGO-0.92)/0.28)); }
   }
+  // rage_emphasis: tremor de ±4 px por 150 ms no começo das falas indignadas do Burn (DATA.ev.raiva)
+  let shk=''; if(FX.tremor && t<T_SLAM){ const e=EV.raiva.find(e=>t>=e && t<e+0.15);
+    if(e!==undefined){ const P4=[[4,-3],[-4,3],[3,4],[-3,-4],[2,-2]], j=P4[Math.floor((t-e)*30)%5]; shk=`translate(${j[0]}px,${j[1]}px) scale(1.012)`; } }
+  if(stageEl.style.transform!==shk) stageEl.style.transform=shk;
   const fade=clamp((t-(T_END-0.3))/0.3); document.body.style.filter = fade>0?`brightness(${1-fade})`:'';
 }
 const backOut=x=>{const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2);};

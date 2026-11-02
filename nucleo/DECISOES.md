@@ -6,7 +6,7 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 
 **O quê:** (1) Os episódios de série não têm duração mínima nem máxima: duram o necessário para reter o público sem destruir o entretenimento. Constituição §6, perfis do Mana & Burn, Meta em Curto e Conde, catálogo, `oraculo/CONTEXTO.md` (linha de formato) e `comum/qc/qc_video.py` (duração só informativa). As durações anteriores ficam como referência histórica. O Órbita mantém o loop de 12 s. (2) O formato Giro de domingo entra no perfil do Mana & Burn. (3) O Giro de domingo de 01/11 está publicado. (4) Seguir com as melhorias mesmo sem o motor do Giro, que foi feito noutro chat e não está disponível.
 **Porquê:** mensagem do fundador de 02/11/2026, 01:08: "A duração dos episódios tem que ser livre o quanto for necessário para melhorar retenção do público sem destruir o entretenimento. Siga com as atualizações mesmo sem o motor."
-**Impacto:** resolve a divergência 35–45 s (perfil) × 35–53 s (doc 05 do Drive). A regra §5 ("repetição = corte") passa a ser o limite real da duração.
+**Impacto:** resolve a divergência 35–45 s (perfil) × 35–53 s (doc 05 do Drive). A regra §5 ("repetição = corte") passa a ser o limite real da duração. Em execução de (4): o núcleo do kit v2 do Mana & Burn passa para `manaburn/` (v1 em `manaburn/extras/v1/`) com as correções técnicas da auditoria e os elementos de cenário que a bíblia já previa (ventilador, antena com palha de aço, paninho de crochê); as expressões novas das personagens ficam por aprovar.
 
 ## 02/11/2026 · Gravidade P0/P1/P2, controlo de qualidade automático e memória de continuidade
 

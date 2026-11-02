@@ -35,7 +35,9 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 | Expressões e poses novas do Mana e do Burn, regra "quem ouve reage" | Proposto | auditoria §4 |
 | Cenário-mestre, planos fixos, luz da TV, grelha da TV SAL | Proposto | auditoria §5 |
 | Formato "Giro de domingo" no perfil | Proposto | auditoria §7 |
-| Correções no motor que gerou o Giro | Bloqueado: motor fora do repositório e do projeto | auditoria §6 |
+| Correções no motor que gerou o Giro | Bloqueado: motor feito noutro chat | auditoria §6 |
+| Kit v2 no repositório + melhorias (legenda na zona segura, fonte do medidor, ventilador, antena, paninho) | Implementado e testado (bordas OK) | `manaburn/LEIA-ME.md` |
+| Duração livre nas séries | Implementado (constituição v1.5) | `nucleo/DECISOES.md` |
 
 ## Depende do fundador
 
@@ -46,14 +48,14 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 
 ## Pendências técnicas (não bloqueiam a governação)
 
-- Motor v2 do Mana & Burn está só no projeto claude.ai (`claude/gerador-manaburn/`); o `process.py` do Ep. 09 importa módulos que faltam no repositório.
+- Motor v2 do Mana & Burn: núcleo no repositório desde 02/11 (`manaburn/`, v1 em `manaburn/extras/v1/`); ficaram no projeto claude.ai `montar.py`, `scryfall.py`, `lote.py`, `testes.py`, `formatos.*` e episódios 1, 5–7. O motor do Giro foi feito noutro chat e não está disponível.
 - Gerador do Órbita já no repositório (`orbita/gerador/`); para renderizar faltam os PNGs das cartas (`BINDER_gerador_orbita.zip`) e as fontes em `node_modules/`.
 - `oraculo/episodios/ep01_render_v2.py` importa `render`, que não existe; `conde/montar_ep002.py` tem caminho absoluto. Não se mexe em scripts de episódios publicados sem necessidade.
 - Skills `binder-*` ainda mandam ler primeiro o Drive e dizem que o Scryfall não abre; alinhar com o repositório quando o fundador quiser.
 
 ## Próximo passo concreto
 
-Com o motor do Giro em mãos: aplicar P0-1 e P1-1 a P1-6 da auditoria (enquadramento da TV, largura da legenda, linha de fonte) e validar com `python3 -I comum/qc/qc_video.py`. Produção normal continua a partir da `main`.
+Próximo Giro ou episódio do Mana & Burn: produzir com o kit v2 de `manaburn/` (já corrigido) ou, se for com o motor do outro chat, aplicar-lhe as mesmas correções de `manaburn/LEIA-ME.md` ("Melhorias de 02/11"); validar com `python3 -I comum/qc/qc_video.py`. Produção normal continua a partir da `main`.
 
 ## Handoff
 
