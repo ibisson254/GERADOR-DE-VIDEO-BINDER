@@ -175,6 +175,7 @@ def top_card(im, lines, k=1.0, y=210):
 
 # ---------- EP04: dados ----------
 AMBER = (255, 176, 32)
+FOTO = Image.open(K + 'oraculo/ep04/campeao_que_mo.jpg').convert('RGB')
 LISTA = json.load(open(K + 'oraculo/episodios/ep04_lista.json'))
 CARDS = {k: Image.open(K + f'oraculo/{p}/cartas/{k}.png').convert('RGBA') for k, p in
          dict(biotech_specialist='ep02', the_sackvillebagginses='ep02', treasure='ep02', lively_dirge='ep02',
@@ -187,8 +188,9 @@ CRED = {k: cred(*v) for k, v in {
     'lively_dirge': ('Lively Dirge', 'OTJ', '93', 'Warren Mahy'),
     'umbral_collar_zealot': ('Umbral Collar Zealot', 'SOC', '227', 'Dmitry Burmak'),
     'obsessive_pursuit': ('Obsessive Pursuit', 'TLA', '112', 'Ichiko Milk Tei')}.items()}
-TOP8 = [('1.º', 'JUND', True), ('2.º', 'U-B-R-G FLING', False), ('3.º', 'JUND SACRIFICE', True), ('4.º', 'MONO-GREEN COMBO', False),
-        ('5.º', 'DIMIR MIDRANGE', False), ('6.º', 'MONO-GREEN LANDFALL', False), ('7.º', 'IZZET COMBO', False), ('8.º', 'JUND SACRIFICE', True)]
+TOP8 = [('1.º', 'QUE MO · JUND SACRIFICE', True), ('2.º', 'MACISAAC · IZZET FLING', False), ('3.º', 'GUO XIAOYU · JUND SACRIFICE', True),
+        ('4.º', 'LIU QINHUI · MONO-GREEN LANDFALL', False), ('5.º', 'XIONG ZIJIAN · DIMIR MIDRANGE', False),
+        ('6.º', 'LIU JIXIN · MONO-GREEN LANDFALL', False), ('7.º', 'WANG ZIJIAN · IZZET COMBO', False), ('8.º', 'LI WENBO · JUND SACRIFICE', True)]
 SIL = ["......####......", ".....######.....", "....########....", "....########....", "....########....",
        ".....######.....", "......####......", "...##########...", "..############..", ".##############.",
        ".##############.", "################", "################"]
@@ -228,19 +230,29 @@ def scene_arquivo(t):
                                    ('PEQUIM', 22, F(MONOB, 72), WHITE, 930), ('STANDARD', 23, F(MONOB, 72), EM, 1040)]:
             if t >= ws(i_) - .05: d.text((W / 2, y_), s_, font=f_, fill=c_, anchor='ma')
     if t >= ws(24) - .1:
-        k = eio((t - ws(24) + .1) / .35); x0 = 200
-        d.rounded_rectangle((x0, 510, x0 + 680, 1330), 18, outline=EM, width=3, fill=(8, 20, 18, 255))
-        d.text((x0 + 28, 536), 'FICHA DE JOGADOR', font=F(MONOB, 28), fill=GREY)
-        silhueta(d, x0 + 236, 590, col=PH)
-        if k >= .5:
-            d.text((x0 + 340, 790), 'mo que', font=F(INTB, 96), fill=WHITE, anchor='ma')
-            d.text((x0 + 340, 915), '1.º LUGAR', font=F(MONOB, 44), fill=PH, anchor='ma')
-        if t >= ws(28): d.text((x0 + 340, 985), 'JUND SACRIFICE', font=F(CONDB, 56), fill=PH, anchor='ma')
+        # ficha de campeão: foto real (padrão desde o EP04, CONTEXTO §6.4)
+        t0 = ws(24) - .1; X, Y, PW = 70, 492, 500; ph = FOTO.resize((PW, int(PW * FOTO.height / FOTO.width)), Image.LANCZOS)
+        PH_ = min(ph.height, 840); ph = ph.crop((0, 0, PW, PH_))
+        d.rounded_rectangle((X - 10, Y - 10, 1010, Y + PH_ + 10), 16, outline=EM, width=3, fill=(8, 20, 18, 255))
+        k = ease((t - t0) / .5); rows = int(PH_ * k)
+        if rows > 0: im.paste(ph.crop((0, 0, PW, rows)), (X, Y))
+        d = ImageDraw.Draw(im, 'RGBA')
+        if k < 1: d.rectangle((X - 8, Y + rows - 3, X + PW + 8, Y + rows + 3), fill=(0, 255, 65, 230))
+        for cx, cy, sx, sy in [(X, Y, 1, 1), (X + PW, Y, -1, 1), (X, Y + PH_, 1, -1), (X + PW, Y + PH_, -1, -1)]:
+            d.line((cx, cy, cx + 44 * sx, cy), fill=PH, width=5); d.line((cx, cy, cx, cy + 44 * sy), fill=PH, width=5)
+        cx = 790
+        d.text((cx, 512), 'CAMPEÃO', font=F(MONOB, 32), fill=GREY, anchor='ma')
+        d.text((cx, 552), 'QUE MO', font=fit(d, 'QUE MO', INTB, 92, 400), fill=WHITE, anchor='ma')
+        d.text((cx, 660), 'mo que no Melee', font=F(MONO, 28), fill=GREY, anchor='ma')
+        d.text((cx, 706), '1.º LUGAR', font=F(MONOB, 44), fill=PH, anchor='ma')
+        if t >= ws(28): d.text((cx, 776), 'JUND SACRIFICE', font=fit(d, 'JUND SACRIFICE', CONDB, 56, 400), fill=PH, anchor='ma')
         if t >= ws(30):
             kk = eio((t - ws(30)) / .3)
-            d.text((x0 + 340, 1080), 'CAMPANHA', font=F(MONOB, 32), fill=GREY, anchor='ma')
-            d.text((x0 + 340, 1130), '16–2', font=F(INTB, int(100 + 50 * kk)), fill=WHITE, anchor='ma')
-    fontes(d, ['jogadores: PlayMTG no X (31/10/2026)', 'resultado: MTGGoldfish, dados do Melee (consulta 02/11/2026)'])
+            d.text((cx, 856), 'CAMPANHA', font=F(MONOB, 30), fill=GREY, anchor='ma')
+            d.text((cx, 892), '16–2', font=F(INTB, int(60 + 30 * kk)), fill=WHITE, anchor='ma')
+            d.text((cx, 1020), 'FINAL 2–1', font=F(MONOB, 44), fill=EM, anchor='ma')
+            d.text((cx, 1080), 'sobre A. MacIsaac', font=F(CONDB, 36), fill=WHITE, anchor='ma')
+    fontes(d, ['foto: Magic: The Gathering China · chave: Spotlight Series', 'jogadores: PlayMTG (31/10/2026) · campanha: MTGGoldfish (Melee)'])
     hud(d, t); return term_finish(im)
 def scene_card(t, key, t0, title, caps, width=640):
     im, d = term_base(t, 16)
@@ -268,7 +280,7 @@ def scene_conta(t):
     fontes(d, CRED['treasure']); hud(d, t); return term_finish(im)
 def scene_lista(t):
     im, d = term_base(t, 12); L = LISTA
-    d.text((80, 200), '> LISTA · MO QUE · JUND SACRIFICE', font=F(MONOB, 34), fill=PH)
+    d.text((80, 200), '> LISTA · QUE MO · JUND SACRIFICE', font=F(MONOB, 34), fill=PH)
     d.text((80, 252), '  60 cartas no principal · 1.º lugar · 16–2', font=F(MONO, 28), fill=EM)
     d.line((80, 306, 1000, 306), fill=(16, 185, 129, 90), width=2)
     g = list(L['principal'].items()); cols = [g[:2], g[2:]]
@@ -297,11 +309,10 @@ def scene_top8(t):
             on = j and mark
             if on: d.rounded_rectangle((70, y - 8, 945, y + 76), 10, fill=(10, 52, 30, 255), outline=EM, width=3)
             d.text((100, y + 34), p, font=F(MONOB, 40), fill=(PH if on else GREY), anchor='lm')
-            d.text((210, y + 34), nome, font=fit(d, nome, CONDB, 48, 700), fill=(WHITE if on else (150, 170, 175)), anchor='lm')
-            if i == 0 and t >= ws(122): d.text((930, y + 34), 'TROFÉU', font=F(MONOB, 34), fill=PH, anchor='rm')
+            d.text((210, y + 34), nome, font=fit(d, nome, CONDB, 44, 690), fill=(WHITE if on else (150, 170, 175)), anchor='lm')
         y += 96
     if mark: d.text((W / 2, 1076), '3 DE 8', font=F(INTB, 130), fill=PH, anchor='ma')
-    fontes(d, ['fonte: MTGGoldfish, dados do Melee (consulta 02/11/2026)', 'nomes dos arquétipos como no MTGGoldfish'], 1270)
+    fontes(d, ['chave: Magic Spotlight Series · Melee via MTGGoldfish', 'ordem do 3.º ao 8.º: MTGGoldfish'], 1270)
     hud(d, t); return term_finish(im)
 
 # ---------- OUTRO: ficheiro real do fecho ----------

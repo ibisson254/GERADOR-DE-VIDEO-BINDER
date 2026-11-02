@@ -24,9 +24,13 @@ TEXTO ORACLE (Scryfall API, 02/11/2026; todas legal em Standard)
 CÁLCULO
 - Tesouro sacrificado com Biotech + Sackville: artefato (2 de dano) + ficha (perde 1) = 3. Nenhuma partida reconstruída; sem VOD.
 
+CHAVE OFICIAL E FOTO (enviadas pelo fundador, 02/11/2026; oraculo/ep04/)
+- chave_top8_oficial.jpg, arte da Magic Spotlight Series: final Que Mo 2–1 Alexandre MacIsaac; 3 Jund Sacrifice (Que Mo, Guo Xiaoyu, Li Wenbo). Recupera o «Final 2–1». Prevalece sobre os rótulos do MTGGoldfish nos nomes de jogadores e decks.
+- campeao_que_mo.jpg: foto com marca Magic: The Gathering China (万智牌) e crachá Spotlight Beijing; identificada como o campeão pelo fundador. Autor e URL original: não indicados.
+- Melee/MTGGoldfish: «mo que». Vídeo: QUE MO no ecrã, voz diz «mo que», explicado na ficha.
+
 CORTADO DO RASCUNHO (ChatGPT, 02/11)
-- «Final 2–1»: só no DeckSnipe, inacessível nesta sessão; sem segunda fonte. Fora do vídeo e da legenda.
 - «859 jogadores» no gancho: trocado por 869 (fonte legível e coerente com o EP03).
-- Finalista como «deck de cores Izzet»: MTGGoldfish classifica U-B-R-G Fling.
-- stonysilence e yUD1 como nomes do Top 8: o MTGGoldfish mostra Wenbo Li e 沁辉 刘; prováveis nome real × nick, não confirmado. O vídeo mostra posição e deck, sem esses nomes.
+- Finalista: a chave oficial diz Izzet Fling; o MTGGoldfish, U-B-R-G Fling. Usado o oficial.
+- Nomes do Top 8: usados os da chave oficial.
 - Fontes DeckSnipe e Merlion: não abriram nesta sessão.

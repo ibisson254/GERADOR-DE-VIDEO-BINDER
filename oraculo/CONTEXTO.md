@@ -77,10 +77,10 @@ Para dados de metagame (MTGGoldfish, MTGTop8, Melee).
 Tudo o que o TUBO cita aparece no ecrã.
 - **Deck citado** → «impressão» da lista principal completa no terminal: agrupada por tipo, quantidade + nome, 2 colunas, letra com ≥ 28 px de corpo, parada ≥ 2,5 s, cartas-chave a verde #10B981 e o resto em fósforo esmaecido. A mesma lista vai em texto no comentário fixado e no carrossel derivado, sempre com a linha de fonte.
 - **Carta citada** → imagem oficial do Scryfall (impressão usada no torneio quando se sabe), entrada «scan» linha a linha, ≥ 60 % da largura quando é o assunto, arte nunca alterada nem recortada. Crédito no ecrã: carta · coleção nº · artista + «Cartas © Wizards of the Coast · imagens via Scryfall». Só entram cartas efetivamente citadas.
-- **Jogador citado** → «FICHA DE JOGADOR» no terminal: nome, deck, seed, campanha, títulos verificados; avatar = silhueta pixelizada em fósforo, nunca um rosto.
-  - Não se descarregam nem usam fotos de jogadores (cobertura SCG/WotC, redes sociais, pesquisa de imagens): têm direitos de terceiros e direito de imagem da pessoa.
-  - Foto real só se o Ibisson a fornecer com autorização registada em `oraculo/autorizacoes/`.
-  - O @ oficial do jogador vai no comentário fixado só se confirmado num perfil verificável; senão, omite-se.
+- **Campeão do torneio** → «FICHA DE CAMPEÃO» com foto real (padrão desde o EP04, fundador, 02/11/2026): foto à esquerda com entrada «scan» e cantos verdes, dados à direita (nome, posição, deck, campanha, final), sem a silhueta. Foto da cobertura ou divulgação oficial do evento, de preferência com o troféu, enviada ou aprovada pelo fundador; crédito no ecrã, na legenda e em `*_fontes.txt`. Identificar a pessoa pela fonte, nunca pelo rosto.
+- **Outros jogadores citados** → «FICHA DE JOGADOR» no terminal: nome, deck, seed, campanha, títulos verificados; avatar = silhueta pixelizada em fósforo.
+- Sem foto oficial do campeão: usar a silhueta e dizer isso ao fundador.
+- O @ oficial do jogador vai no comentário fixado só se confirmado num perfil verificável; senão, omite-se.
 - Imagens de transmissão continuam proibidas (6.2).
 
 ## 7. Estrutura do Reel (~40 s)
