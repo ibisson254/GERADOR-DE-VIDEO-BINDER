@@ -52,6 +52,10 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 - `oraculo/episodios/ep01_render_v2.py` importa `render`, que não existe; `conde/montar_ep002.py` tem caminho absoluto. Não se mexe em scripts de episódios publicados sem necessidade.
 - Skills `binder-*` ainda mandam ler primeiro o Drive e dizem que o Scryfall não abre; alinhar com o repositório quando o fundador quiser.
 
+## Especial em espera de publicação
+
+`especiais/precon_em_jogo/`: vídeo final conferido (02/11), publicação prevista a 04/11/2026. Depende do fundador: ouvir, avisar @diegoalencard e publicar.
+
 ## Próximo passo concreto
 
 Próximo Giro ou episódio do Mana & Burn: produzir com o kit v2 de `manaburn/` (já corrigido) ou, se for com o motor do outro chat, aplicar-lhe as mesmas correções de `manaburn/LEIA-ME.md` ("Melhorias de 02/11"); validar com `python3 -I comum/qc/qc_video.py`. Produção normal continua a partir da `main`.
