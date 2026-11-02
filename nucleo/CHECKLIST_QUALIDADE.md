@@ -2,6 +2,10 @@
 
 Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao risco: peça simples usa só os itens que se aplicam.
 
+**Gravidade** (pedido do fundador, 02/11/2026): **P0** impede publicação (os "Defeitos bloqueadores" abaixo) · **P1** problema importante de qualidade: corrige-se antes de publicar ou o fundador aceita-o por escrito · **P2** refinamento opcional. Um episódio só está aprovado sem P0 e com os P1 corrigidos ou aceites.
+
+**Passo automático:** `python3 -I comum/qc/qc_video.py VIDEO.mp4 --frente <frente>` (formato, duração, loudness, pico, fecho, cortes, folha de contacto com zona segura). Não dispensa o olho no bloco E.
+
 ## A. Antes de produzir
 
 - [ ] Série, classe de conteúdo e objetivo identificados (ficha, Etapa 1).
@@ -33,6 +37,19 @@ Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao ris
 - [ ] Texto alternativo escrito (descrição + texto do ecrã).
 - [ ] Easter egg (0 ou 1) registado.
 - [ ] Commit: ficha/roteiro, legenda, fontes, histórico. Nenhum vídeo.
+
+## E. Personagens, cena e montagem (ficheiro final, na folha de contacto)
+
+- [ ] P0 · Carta inteira em **todos** os planos, incluindo a TV ao fundo nos planos de conjunto.
+- [ ] P1 · Nenhum texto (legenda, gancho) por cima de rosto, carta ou linha de fonte.
+- [ ] P1 · Linha de fonte com ≥ 24 px de altura no ficheiro final; texto que se quer ler ≥ 28 px.
+- [ ] P1 · Legendas e textos dentro da zona segura (folha de contacto: fora do vermelho).
+- [ ] P1 · Personagens inteiros ou cortados por um enquadramento intencional (sem cabeças soltas a espreitar).
+- [ ] P1 · Personagens no modelo dos recursos mestres (rosto, proporções, roupa, cores); nada regenerado.
+- [ ] P1 · Quem ouve reage: nenhuma pose ou expressão repetida para emoções diferentes; olhares coerentes com quem fala.
+- [ ] P1 · Assinatura da série no fim (ex.: TV desliga → ponto verde no Mana & Burn), depois o fecho.
+- [ ] P2 · Nenhum plano parado mais de ~5 s sem mudança de enquadramento ou de expressão.
+- [ ] P2 · Continuidade do cenário entre planos (objetos, luz, posição da TV).
 
 ## Defeitos bloqueadores (não publicar)
 

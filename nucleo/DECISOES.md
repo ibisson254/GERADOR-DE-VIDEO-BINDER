@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 02/11/2026 · Gravidade P0/P1/P2, controlo de qualidade automático e memória de continuidade
+
+**O quê:** (1) `CHECKLIST_QUALIDADE.md`: classificação P0 (bloqueia) / P1 (corrige ou o fundador aceita por escrito) / P2 (opcional), novo bloco E (personagens, cena, montagem, TV SAL) e passo automático. (2) Novo `comum/qc/qc_video.py` (formato, duração, loudness, pico, fecho, cortes, folha de contacto com zona segura). (3) Nova pasta `comum/continuidade/`: uma memória por série/personagem + índice comum; previsões do TUBO continuam em `comum/historico.md`. (4) Auditoria do Giro de domingo de 01/11 e propostas de evolução visual em `nucleo/auditorias/2026-11-02_evolucao_visual.md` (nada identitário aplicado).
+**Porquê:** missão do fundador "Visual Evolution & Character Excellence" (02/11/2026), §9 (memória), §10 (checklist P0/P1/P2) e §8 (correções técnicas seguras).
+**Impacto:** nenhum episódio publicado, asset mestre, voz, música ou script de episódio mudou. "Carta cortada" passa a conferir-se também na TV ao fundo dos planos de conjunto (já era bloqueador 3; o Giro de 01/11 tinha esse defeito). Propostas de personagens, cenário-mestre e formato "Giro de domingo" aguardam aprovação.
+
 ## 31/10/2026 · Fecho do scanner no repositório e merge da consolidação para `main`
 
 **O quê:** `comum/outro/outro_binder_916.mp4` passa a existir no repositório, cortado do fim do `ManaBurn_Ep6_GodPack_916.mp4` publicado (49,0 s → fim), com o rótulo "MANA & BURN" tapado na fase da logo; script em `comum/outro/gerar_fecho.py`. Resolve o bloqueador 8 da entrada de 28/10. O fundador aprovou o merge de `consolidacao-estudio` para `main` (PR #1).
