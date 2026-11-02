@@ -5,7 +5,7 @@ Missão em curso: "Visual Evolution & Character Excellence" (02/11/2026), na bra
 
 ## Estado editorial
 
-Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbita (temática); Lambe-lambe (espontânea); especiais. Tudo o que está no repositório está aprovado e lançado; Halloween 2026 e Star Trek publicados. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
+Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbita (temática); Lambe-lambe (espontânea); especiais. Tudo o que está no repositório está aprovado e lançado; Halloween 2026 e Star Trek publicados. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
 
 ## Consolidação
 
@@ -41,7 +41,6 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbit
 
 - Aprovar ou recusar as propostas da auditoria (§4, §5, §7) e o merge de `evolucao-visual-2026-11`.
 - Enviar ou subir o motor que gerou o Giro (não há "giro" em `claude/gerador-manaburn/`).
-- Confirmar se o Giro de 01/11 foi publicado (para o registar em `comum/historico.md`).
 - Decidir a TV ao fundo cortada (D-1) e a duração do Mana & Burn (perfil 35–45 s contra doc 05 do Drive 35–53 s).
 - Drive atualizado a 02/11 (notas de fonte de verdade na bíblia, no doc 05 e no Mapa do Drive; secção de estado na bíblia).
 

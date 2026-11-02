@@ -13,7 +13,7 @@ Semente de 02/11/2026, só com o que está no repositório, no projeto claude.ai
 - 01/11 · Giro · "O set sai dia 13. Preço de pré-venda oscila. Não compra no susto."
 
 ## Acontecimentos
-- 01/11 · Giro de domingo (semana 26–31/10): 1 Collector Booster de Star Trek subiu no dia seguinte à morte de Sir Patrick Stewart (TheGamer 29/10, preço TCGplayer); 2 Dan Ayoub presidente da Wizards, assume a 2/11; 3 All Leylines' Eve até 5/11.
+- 01/11 · Giro de domingo (semana 26–31/10), publicado: 1 Collector Booster de Star Trek subiu no dia seguinte à morte de Sir Patrick Stewart (TheGamer 29/10, preço TCGplayer); 2 Dan Ayoub presidente da Wizards, assume a 2/11; 3 All Leylines' Eve até 5/11.
 
 ## Referências já usadas (não repetir a piada)
 - "Ex-Halo? Então a primeira missão é Commander de quatro no Arena" (Giro, 01/11).

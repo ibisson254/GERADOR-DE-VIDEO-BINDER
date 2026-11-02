@@ -102,6 +102,8 @@ Sem vídeos do TUBO e do Conde nesta sessão: nenhuma conclusão visual sobre el
 
 ## 3a. Revisão depois da leitura da bíblia (02/11, 01:00)
 
+- O Giro foi **publicado** (fundador, 02/11, 01:05): não se reabre. Os defeitos valem como regra para os próximos. O print do post no telemóvel confirma o P1-3 (legenda por cima da linha de fonte).
+
 - P0-1 passa a decisão pendente D-1: a bíblia exige a carta inteira nos planos de TV e nos zooms, que o Giro cumpre; a TV ao fundo cortada já existia em episódios aprovados.
 - P1-2 deixa de propor tirar o Burn dos planos de TV: a composição "Burn atrás da TV a apontar" é da bíblia; o defeito é a execução (sem braço).
 - P1-9 confirmado pela bíblia.
