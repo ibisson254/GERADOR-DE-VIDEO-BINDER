@@ -54,7 +54,7 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 
 ## Especial em espera de publicação
 
-`especiais/precon_em_jogo/`: vídeo final conferido (02/11), publicação prevista a 04/11/2026. Depende do fundador: enviar a logomarca oficial da TV (`manaburn/logo/binder_fabricante.png`), ouvir, avisar @diegoalencard e publicar.
+`especiais/precon_em_jogo/`: vídeo final conferido (02/11), publicação prevista a 04/11/2026. Depende do fundador: ouvir, avisar @diegoalencard e publicar.
 
 ## Próximo passo concreto
 

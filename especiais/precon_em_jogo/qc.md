@@ -15,3 +15,6 @@ Placa BINDER: posição testada só em prévia, com logo_mark.png. Não está no
 ## v3 (02/11/2026, interferência por trás das informações)
 qc_video.py: 79,33 s, -14.8 LUFS, pico -2.3 dBTP, sem problemas mensuráveis. bordas.py: OK, 0 quadros com TV cortada. testes_tv.py: 30 quadros distintos, determinístico, ~18 ms por quadro.
 A olho, 10 quadros do ficheiro final: informações por cima, sinal só no fundo, fecho preservado. Nos planos abertos, o braço do sofá do cenário fica à frente do canto inferior esquerdo da TV.
+
+## v4 (02/11/2026, símbolo BINDER no chassis)
+Símbolo verde com fundo transparente na grelha do altifalante. qc_video.py e bordas.py executados no ficheiro/motor finais; 8 quadros conferidos a olho.

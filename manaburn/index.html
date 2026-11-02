@@ -94,7 +94,7 @@ const CARD={x:742,y:554.6,w:136.3,h:190};
 // ---------- TV ANALÓGICA BINDER (manaburn/LEIA-ME.md): marca no chassis e sinal fora do ar ----------
 const TVLOGO=EP.tvLogo===undefined?'logo/binder_fabricante.png':EP.tvLogo; let LOGO_OK=false, LOGO_DONE=!TVLOGO;
 const NS={x:82,y:684,w:698,h:558,rx:58,W:349,H:279};           // vidro do CRT (coordenadas do plano da TV), um pouco para dentro da moldura
-const plateSVG=()=>LOGO_OK?`<g><rect x="926" y="694" width="92" height="92" rx="7" fill="#17130F" stroke="#8E8A7E" stroke-width="3"/><rect x="931" y="699" width="82" height="82" rx="5" fill="none" stroke="#000" stroke-opacity=".55" stroke-width="2"/><image href="${TVLOGO}" x="936" y="704" width="72" height="72" opacity=".92"/></g>`:'';
+const plateSVG=()=>LOGO_OK?`<image href="${TVLOGO}" x="926" y="694" width="92" height="92"/>`:'';   // símbolo verde, fundo transparente, direto no chassis
 const noiseSVG=(id)=>`<foreignObject x="${NS.x}" y="${NS.y}" width="${NS.w}" height="${NS.h}" id="nf${id}" style="display:none"><canvas xmlns="http://www.w3.org/1999/xhtml" id="nc${id}" width="${NS.W}" height="${NS.H}" style="display:block;width:${NS.w}px;height:${NS.h}px;border-radius:${NS.rx}px;image-rendering:auto"></canvas></foreignObject>`;
 function rng(a){ return ()=>{ a|=0; a=a+0x6D2B79F5|0; let t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
 const NSIMG={}; const nsCtx=c=>{ const x=c.getContext('2d'); return [x,NSIMG[c.id]||(NSIMG[c.id]=x.createImageData(NS.W,NS.H))]; };

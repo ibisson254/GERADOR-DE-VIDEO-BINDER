@@ -27,7 +27,7 @@
 - Sem exemplo brasileiro de loja verificado. Gen Con com fonte secundária única.
 - Não houve audição humana: pronúncia conferida por transcrição (Scribe), que devolveu o texto esperado.
 
-- Placa BINDER: ausente na v2; aguarda o ficheiro oficial (`manaburn/logo/binder_fabricante.png`).
+- Marca BINDER: símbolo verde transparente no chassis desde a v4 (fundador, 02/11, 20:45).
 
 ## Fontes
 `fontes.md`.
