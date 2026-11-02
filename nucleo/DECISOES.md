@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 02/11/2026 · Especial "Precon em jogo": seguidor na tela e quadro do Conde
+
+**O quê:** o fundador autorizou (02/11, 18:16) usar a foto de @diegoalencard e os seus comentários no especial `especiais/precon_em_jogo/`. Retrato do Conde na sala como detalhe visual silencioso, só neste especial. Trecho original do TUBO na TV. Autorizou a produção imediata às 18:28.
+**Porquê:** missão de produção do especial (reconhecer a contribuição da comunidade).
+**Impacto:** só este episódio; a identidade da sala não muda. Opções do kit ficam em `especiais/precon_em_jogo/patch.py`, fora de `manaburn/`.
+
 ## 02/11/2026 (01:27) · Merge da evolução visual para `main`
 
 **O quê:** a branch `evolucao-visual-2026-11` (auditoria, QC automático, checklist P0/P1/P2, memória de continuidade, duração livre, kit v2 do Mana & Burn) entra na `main` por PR.

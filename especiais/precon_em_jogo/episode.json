@@ -1,0 +1,156 @@
+{
+ "schema": 2,
+ "chamada": "a comunidade falou: precon em jogo",
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "*Fora do arquivo*, mano?! E torneio de *precon*, ninguém conta?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "O arquivo do TUBO é *resultado competitivo*. É o recorte dele."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Pois o *Diego* cobrou nos comentários!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Hoje são resumidos às lojas e não aos campeonatos grandes. E *premiações modestas*."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Papo reto! Precon é o deck que *geral* tem em casa!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Aqui não tem carta pra ler. Tem regulamento: *deck de caixa*, sem trocar nenhuma carta."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Nem um *terreno*, mano?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Nos Estados Unidos, tem loja cobrando *sete dólares* e pagando em pacote e promo."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Sete dólares e pacote? Prêmio *modesto*, o Diego acertou!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Calma. Na Espanha, em abril, um evento anunciou *Mox Diamond* pro campeão. Contando com cem jogadores."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "*Mox Diamond*?! Com deck de caixa?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "A Gen Con teve batalha de precon sorteado. E o *CommandFest de São Paulo* teve Precon Clash: deck sem alteração, *vinte Tix* pra quem ganha."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Aqui no Brasil?! Então por que *ninguém conta*, mano?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Circuito oficial só de precon, não achei. E Box League é outra coisa: deck de *booster*."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Campeonato grande sem precon? *Isso devia ser banido!*"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Tem um porém: o painel do Commander admite que a força dos precons *varia muito*."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Então sorteia o deck e *todo mundo sofre igual*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Boa ideia não fica perdida em comentário. *Valeu, Diego*."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "E você? *A*, precon em campeonato grande. *B*, deixa na loja."
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Comenta aí."
+  }
+ ],
+ "gap": [
+  0,
+  0.04,
+  0.04,
+  0.06,
+  0.04,
+  0.04,
+  0.02,
+  0.06,
+  0.02,
+  0.06,
+  0.02,
+  0.06,
+  0.04,
+  0.06,
+  0.02,
+  0.06,
+  0.04,
+  0.06,
+  0.04,
+  0.38
+ ],
+ "ins": [],
+ "respiro_max": 0.14,
+ "tempo": {
+  "B": 1.06,
+  "M": 1.12
+ },
+ "mix": {
+  "intro_db": -22,
+  "fala_db": -14,
+  "pausa_db": -6,
+  "fecho_db": 0
+ },
+ "sfx": {
+  "tv": true,
+  "destaque": true,
+  "carta": "flick",
+  "raiva": true
+ },
+ "outro": {
+  "scanner": 0,
+  "hold": 0
+ },
+ "inicio": 3.75,
+ "clip": {
+  "wav": "esp/clip.wav",
+  "t0": 0.3,
+  "nivel": 0.8
+ }
+}
