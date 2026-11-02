@@ -6,6 +6,7 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 
 **O quê:** a televisão da série Mana & Burn passa a incorporar a marca BINDER no chassis, como identificação de fabricante de um televisor antigo, e um ecrã analógico fora do ar com interferência animada sempre que estiver ligada sem conteúdo. O comportamento passa a ser padrão do motor da série. É proibido cortar a TV em qualquer plano (fundador, 02/11/2026, 19:03): sem zoom na tela e com o chassis inteiro no quadro.
 **Porquê:** pedido explícito do fundador para dar à televisão uma identidade visual própria e recorrente, reforçando a ligação da marca ao cenário sem ocupar a área de conteúdo transmitido.
+**Correção (19:59):** a interferência é o fundo das partes escuras do ecrã, por trás das informações, que ficam sempre visíveis.
 **Impacto:** motor reutilizável, episódios futuros de Mana & Burn e documentação técnica. Não altera outras frentes, episódios publicados, TV SAL, cartas ou fecho oficial. A regra anterior (só a tela inteira, zoom até 1,5) deixa de valer.
 
 ## 02/11/2026 · Especial "Precon em jogo": seguidor na tela e quadro do Conde

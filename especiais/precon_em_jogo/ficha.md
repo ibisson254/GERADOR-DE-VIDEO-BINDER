@@ -18,7 +18,7 @@
 - Kit: v2 com `patch.py` (opções EP.quadro, EP.comu, EP.clip, EP.subPre, "inicio" e "clip"); `slides.py` gera as fichas da TV. Áudio final: `_mix.wav` com loudnorm I=-14,3 TP=-2,5.
 - Quadro do Conde, por fala: 2 neutro · 5–7 desconfiado · 9 indignado · 11 admirado · 13–15 indignado · 17–18 desconfiado · 19–20 neutro. Assets oficiais de `conde/assets/`, sem animação, sem som.
 - Medidor: Comentômetro 100% ("1 comentário virou 1 episódio"), dado real do próprio episódio; sem Salt Score.
-- v2 (02/11, 19:03): TV sem corte em todos os planos, sem zoom; fichas refeitas com texto grande; fora do ar nas falas 2, 5–7, 9, 11, 13–15 e 17–20. Áudio, falas e montagem iguais. `patch.py` passou a aplicar-se sobre o motor novo.
+- v2 (02/11, 19:03): TV sem corte em todos os planos, sem zoom; fichas refeitas com texto grande. v3 (19:59): interferência por trás das informações em todo o episódio; fichas com fundo transparente. Áudio, falas e montagem iguais. `patch.py` passou a aplicar-se sobre o motor novo.
 - Easter egg: o quadro. Registado em `comum/easter_eggs.md`.
 
 ## Riscos e limitações

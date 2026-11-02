@@ -3,7 +3,7 @@ h=open('index.html',encoding='utf8').read()
 a=h.index('<!-- quadro torto com vidro rachado -->'); b=h.index('${fan}',a)
 h=h[:a]+"${EP.quadro?'':`"+h[a:b]+"`}\n "+h[b:]
 frame='<g transform="rotate(-2 372 420)"><path d="M372 318 L340 346 M372 318 L404 346" stroke="#2A2218" stroke-width="3"/><circle cx="372" cy="316" r="5" fill="#555"/><rect x="296" y="342" width="152" height="166" fill="#5A3A1E" stroke="#1B1B1B" stroke-width="5"/><rect x="304" y="350" width="136" height="150" fill="none" stroke="#B8934A" stroke-width="4"/><image id="condeimg" href="esp/conde/neutro.png" x="312" y="358" width="120" height="134" preserveAspectRatio="xMidYMid slice"/></g>'
-k="<g id=\"tvfx\"></g>${noiseSVG('W')}</g>"
+k="${noiseSVG('W')}<g id=\"tvfx\"></g></g>"
 assert k in h; h=h.replace(k,k+"${EP.quadro?`"+frame+"`:''}")
 # 2. render: expressão do quadro, frame do clip, cartão da comunidade, legenda do trecho
 k="function render(t){\n  const i=Math.max(0,lineAt(t)), P=POSE[i], tq=Math.floor(t*12)/12, shot=P[6];"

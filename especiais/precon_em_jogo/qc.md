@@ -11,3 +11,7 @@ bordas.py (regra nova): 2255 quadros, 1059 de TV, chassis entre 10 e 1070 px, qu
 testes_tv.py: 30 quadros consecutivos distintos; determinístico; ~19 ms por quadro.
 A olho, 16 quadros do ficheiro final: TV inteira ou fora do quadro; carta/fichas e TV SAL sem interferência; fora do ar nos planos de sala; fecho preservado.
 Placa BINDER: posição testada só em prévia, com logo_mark.png. Não está no vídeo.
+
+## v3 (02/11/2026, interferência por trás das informações)
+qc_video.py: 79,33 s, -14.8 LUFS, pico -2.3 dBTP, sem problemas mensuráveis. bordas.py: OK, 0 quadros com TV cortada. testes_tv.py: 30 quadros distintos, determinístico, ~18 ms por quadro.
+A olho, 10 quadros do ficheiro final: informações por cima, sinal só no fundo, fecho preservado. Nos planos abertos, o braço do sofá do cenário fica à frente do canto inferior esquerdo da TV.

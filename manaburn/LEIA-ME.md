@@ -59,9 +59,9 @@ Regra do fundador (02/11/2026): **é proibido cortar a TV.** Em cada quadro o ch
 
 - **Planos:** `tv`, `tvtext`, `tvtext2`, `tv2`: chassis inteiro (10 a 1070 px). `cuB`: mais aberto, TV inteira à direita. `cuM`: TV fora do quadro. `push`: aproximação limitada a 1,03. Texto na tela da TV precisa de ser grande (carta real entra inteira, fichas próprias em fonte ≥ 44 px no PNG de 744 px).
 - **Marca no chassis:** placa de fabricante no topo da grelha do altifalante (coordenadas do plano da TV: x 926–1018, y 694–786), a mesma nos dois enquadramentos. Ficheiro: `logo/binder_fabricante.png` (ou `EP.tvLogo`; `null` desliga). Sem o ficheiro a placa não aparece e nada é inventado.
-- **Fora do ar:** `noSignal(canvas, t, alfa)` em `index.html`. Desenha num canvas dentro de um `foreignObject` recortado ao vidro do CRT (`NS`, cantos de 58). Depende só de `t` (determinístico, 30 fps): listras rolantes com velocidades contínuas, estática, tracking de VHS, scanlines e oscilação de fósforo, em cinzento.
-- **Estados:** (1) ligada sem conteúdo: interferência no ecrã inteiro, nas falas de `EP.foraDoAr=[[ini,fim],...]` (0-based) ou quando não há imagem nenhuma; (2) conteúdo: a camada fica oculta, carta e TV SAL limpas; (3) transição: a interferência entra em 0,3 s sobre o conteúdo; o zapping (`staticSVG`) é outro efeito e tem prioridade; (4) desligar: sequência original, intocada.
-- **Compatibilidade:** episódios sem `foraDoAr` funcionam como antes; os publicados não se renderizam de novo. Só Mana & Burn.
+- **Sinal analógico de fundo:** `noSignal(canvas, t, alfa)` em `index.html`. É o fundo escuro do ecrã: fica por trás de TV SAL, cartas e fichas, sempre que a TV está ligada (correção do fundador, 02/11/2026, 19:59). Canvas dentro de um `foreignObject` recortado ao vidro do CRT (`NS`, cantos de 58). Depende só de `t` (determinístico, 30 fps): listras rolantes com velocidades contínuas, estática, tracking de VHS, scanlines e oscilação de fósforo, em cinzento.
+- **Estados:** (1) sem conteúdo: só o sinal; (2) com conteúdo: as informações ficam por cima, sem nada a tapá-las, e o sinal aparece nas partes escuras; (3) zapping (`staticSVG`): efeito próprio, tapa o sinal durante a troca; (4) desligar: sequência original, intocada. Fichas próprias da TV: PNG com fundo transparente e caixa escura por trás do texto. Textos da TV SAL com contorno escuro.
+- **Compatibilidade:** `EP.tvSinal=false` desliga o sinal; os publicados não se renderizam de novo. Só Mana & Burn.
 
 ## Regras que valem para todo episódio
 
