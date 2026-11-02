@@ -19,6 +19,7 @@ for c in m['cuts']:
     t=c['s']/30
     if c['tr']=='tear' and c['s']>0: rip(max(0,t-.02))
     slap(t,1 if c['e']-c['s']>=16 else .6)
+for p in m.get('pops',[]): rip(p/30,.05,.22)
 slap(16.1333,.9)
 out=out/np.abs(out).max()*10**(-6/20)
 print('pico dBFS',20*np.log10(np.abs(out).max()))

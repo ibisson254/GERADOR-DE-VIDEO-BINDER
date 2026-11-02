@@ -69,20 +69,20 @@ def card_img(n,w):
         im=Image.open(f'/home/claude/prod/cartas/{n}.png').convert('RGBA')
         _c[k]=im.resize((w,round(w*1040/744)),Image.LANCZOS)
     return _c[k]
-def card_poster(n,w,ang,seed,paper_color=PAPER,tear=14):
+def card_poster(n,w,ang,seed,paper_color=PAPER,tear=14,thin=False):
     """Cartaz: papel + carta inteira + fita só nos cantos de cima do papel, fora da carta. Devolve sprite e cantos da carta no sprite."""
     c=card_img(n,w); cw,ch=c.size
-    mx,mt,mb=max(30,w//11),max(40,w//8),max(24,w//14)
-    sp=paper(cw+2*mx,ch+mt+mb,paper_color,seed,margin=4,tornamp=tear,fiber=True)
+    mx,mt,mb=(max(30,w//11),max(40,w//8),max(24,w//14)) if not thin else (5,5,5)
+    sp=paper(cw+2*mx,ch+mt+mb,paper_color,seed,margin=4,tornamp=tear,fiber=not thin)
     M=4+tear; ox,oy=M+mx,M+mt
     sp.alpha_composite(c,(ox,oy))
-    if w>=300:
+    if w>=300 and not thin:
         sc=min(1,w/560)
         t1=tape(int(96*sc),int(32*sc),32,seed); t2=tape(int(96*sc),int(32*sc),-32,seed+1)
         tw,th=t1.size
         sp.alpha_composite(t1,(M-int(14*sc),M-int(16*sc)))
         sp.alpha_composite(t2,(sp.size[0]-M-tw+int(14*sc),M-int(16*sc)))
-    s=with_shadow(sp,(8,12),10)
+    s=with_shadow(sp,(4,6) if thin else (8,12),5 if thin else 10)
     e=40; corners=[(ox+e,oy+e),(ox+e+cw,oy+e),(ox+e+cw,oy+e+ch),(ox+e,oy+e+ch)]
     if ang:
         w0,h0=s.size; r=s.rotate(ang,expand=True,resample=Image.BICUBIC); w1,h1=r.size

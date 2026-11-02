@@ -62,8 +62,8 @@ def wall(col,seed):
         im.paste(s,((WW-s.size[0])//2+r.randint(-170,170),(WH-s.size[1])//2+r.randint(-140,100)),s)
     WALLS[k]=im; return im
 
-def item_card(key,w,ang,cx,cy,t=0,fx='slam',seed=None,drift=(0,0),pc=PAPER,tear=14):
-    n=K[key]; sp,co=card_poster(n,w,ang,seed or (hash(key+str(w))%9000+int(cx)),pc,tear)
+def item_card(key,w,ang,cx,cy,t=0,fx='slam',seed=None,drift=(0,0),pc=PAPER,tear=14,thin=False):
+    n=K.get(key,key); sp,co=card_poster(n,w,ang,seed or (sum(map(ord,key))*7+w+int(cx))%9000,pc,tear,thin)
     mx=sum(p[0] for p in co)/4; my=sum(p[1] for p in co)/4
     return dict(kind='card',sp=sp,x=round(cx-mx),y=round(cy-my),t=t,fx=fx,corners=co,n=n,drift=drift,w=w,ang=ang)
 def item_text(sp,cx,cy,t=0,fx='slam',drift=(0,0),label=''):
@@ -87,48 +87,53 @@ def build():
     shot(0,24,None,1,[item_fall('sky',420,300,620,240,3,21),item_fall('orange',300,420,30,1380,7,22),
         item_burst('rose',1050,470,860,0,24,5),item_text(ta,470,860,0,'slam',(0,0),'ATENÇÃO, TRIPULAÇÃO!'),
         item_scrap('red',700,120,160,1300,10,23,3,(0,380),6)],(1.02,1.10,0,0,0,-30,.5))
-    # BLOCO B · invasão (cortes sincopados)
-    b=[('kirk',700,-2,470,800,'red',28,'yellow'),('spock',640,3,500,770,'blue',16,None),('data',640,-3,440,850,'sky',16,None),
-       ('khan',700,2,470,790,'purple',28,'orange'),('ent',700,-2,470,800,'navy',24,'sky'),('jane',620,3,440,750,'yellow',16,None),
-       ('q',620,-3,500,860,'rose',16,None),('worf',680,2,470,800,'orange',20,'red')]
+    # BLOCO B1 · assinadas (7 cartas, 72 quadros)
+    sel=json.load(open('/home/claude/prod/selecao2.json'))
+    ids=lambda g:[x['id'] for x in sel[g]]
+    def label(t,seed,col='yellow',ink=INK):
+        return item_text(text_poster([(t,'Bangers.ttf',84)],POP[col],seed,720,-1,ink=ink,pad=(24,10)),470,286,0,'none',(0,0),t)
+    lab=label('ASSINADAS PELOS ATORES',200)
     f=24
-    for i,(k,w,a,cx,cy,col,d,bc) in enumerate(b):
-        it=[item_scrap(['yellow','sky','rose','orange'][i%4],520,170,-60 if i%2 else 620,250+i*90,2,40+i,(-1)**i*6,(-500 if i%2 else 500,0),6),
-            item_scrap(['blue','red','purple','yellow'][i%4],460,160,640 if i%2 else -40,1440-i*40,5,60+i,(-1)**i*-5,(420 if i%2 else -420,0),6)]
-        if bc: it.append(item_burst(bc,1180,cx,cy,0,d,70+i))
-        it.append(item_card(k,w,a,cx,cy,0,'slam' if d>=20 else 'nudge',800+i,(0,0)))
-        zs=(1.06,1.16) if i%2==0 else (1.2,1.1)
-        shot(f,f+d,col,10+i,it,(zs[0],zs[1],(-1)**i*30,(-1)**i*-20,(-1)**i*-30,(-1)**i*30,(-1)**i*.9),'tear' if i%3!=2 else 'cut',i%2); f+=d
-    # dupla final do bloco B
-    shot(f,f+16,'red',30,[item_burst('yellow',720,250,500,0,16,90),item_card('kirk',380,-3,250,500,0,'slam',830),
-        item_burst('sky',720,690,1160,2,14,91),item_card('spock',380,3,690,1160,2,'slam',831)],(1.12,1.2,0,0,20,20,-.6),'cut'); f+=16
-    assert f==204,f
+    for i,(k,d,col) in enumerate(zip(ids('assinadas'),[14,10,10,10,10,8,10],['red','purple','blue','sky','yellow','rose','orange'])):
+        it=[item_burst(['yellow','orange','sky','rose','blue','yellow','red'][i],1080,470,860,0,d,300+i),lab,
+            item_card(k,620,(-1)**i*2,470 if i%2 else 450,875,0,'slam',1000+i,tear=10)]
+        shot(f,f+d,col,50+i,it,((1.06,1.14) if i%2 else (1.18,1.08))+((-1)**i*30,0,(-1)**i*-30,20,(-1)**i*.8),'cut' if i else 'tear',i%2); f+=d
+    assert f==96,f
+    # BLOCO B2 · todas as naves (35)
+    nv=ids('naves'); lab2=label('TODAS AS NAVES',201,'sky')
+    w=160;h=224;xs=[107+q*176 for q in range(5)];ys=[460+q*236 for q in range(5)]
+    it=[lab2]
+    for q,k in enumerate(nv[:25]):
+        it.append(item_card(k,w,0,xs[q%5],ys[q//5],q*2,'pop',1100+q,tear=3,thin=True))
+    shot(96,152,'navy',60,it,(1.03,1.14,-20,10,20,-20,.6),'cut')
+    it=[lab2]; pos=[(xs2,500) for xs2 in (235,470,705)]+[(x,885) for x in (133,361,589,815)]+[(xs2,1270) for xs2 in (235,470,705)]
+    for q,(k,(x,y)) in enumerate(zip(nv[25:],pos)):
+        it.append(item_card(k,226,0,x,y,q*4,'pop',1130+q,tear=3,thin=True))
+    shot(152,204,'purple',61,it,(1.14,1.04,20,-20,-20,10,-.6),'tear',1)
     # BLOCO C · identidade
     t1=text_poster([('STAR TREK','Bangers.ttf',222),('× MAGIC','Bangers.ttf',222)],POP['red'],12,900,1.5,ink=PAPER,accent=INK)
-    top=[('khan',170),('ent',470),('jane',770)]; bot=[('data',170),('q',470),('worf',770)]
-    its=[item_scrap('sky',380,160,-30,600,8,120,4,(-400,0),6),item_scrap('yellow',360,150,720,1100,12,121,-4,(400,0),6)]
-    for j,(k,x) in enumerate(top): its.append(item_card(k,232,(-1)**j*2,x,400,6+j*6,'pop',840+j))
-    for j,(k,x) in enumerate(bot): its.append(item_card(k,232,(-1)**(j+1)*2,x,1368,24+j*6,'pop',850+j))
-    its.insert(2,item_text(t1,470,885,0,'slam',(0,0),'STAR TREK × MAGIC'))
-    shot(204,252,None,2,its,(1.04,1.12,-20,10,20,-20,.7),'tear',1)
-    its=[item_scrap('orange',380,160,700,580,4,122,-4,(400,0),6)]
-    for j,(k,x) in enumerate([('kirk',170),('spock',470),('q',770)]): its.append(item_card(k,232,(-1)**(j+1)*2,x,400,0+j*5,'pop',860+j))
-    for j,(k,x) in enumerate([('ent',170),('khan',470),('jane',770)]): its.append(item_card(k,232,(-1)**j*2,x,1368,14+j*5,'pop',870+j))
-    its.insert(1,item_text(t1,470,885,0,'none',(0,0),'STAR TREK × MAGIC'))
-    shot(252,300,'blue',31,its,(1.12,1.02,20,-20,-20,10,-.7),'cut')
-    # BLOCO D · convocação (2×2 acelerado)
-    g=[('worf','kirk','ent','jane'),('spock','khan','q','data'),('jane','worf','kirk','ent'),('data','q','khan','spock'),('ent','jane','worf','kirk'),('q','spock','data','khan')]
-    cols=['yellow','rose','sky','orange','purple','red']; f=300
-    for i,ks in enumerate(g):
-        d=[12,9,9,9,8,7][i]; ps=[(262,525),(678,525),(262,1110),(678,1110)]
-        it=[item_card(k,376,(-1)**(q)*1.5*(-1)**i,x,y,0,'none',900+i*4+q,tear=8) for q,(k,(x,y)) in enumerate(zip(ks,ps))]
-        shot(f,f+d,cols[i],40+i,it,(1.05+.03*i,1.12+.03*i,(-1)**i*30,0,(-1)**i*-30,20,(-1)**i*.8),'cut'); f+=d
+    its=[item_scrap('sky',380,160,-30,600,8,120,4,(-400,0),6),item_scrap('yellow',360,150,720,1100,12,121,-4,(400,0),6),item_text(t1,470,885,0,'slam',(0,0),'STAR TREK × MAGIC')]
+    for j,(k,x) in enumerate(zip(['trk-142','trk-74'.replace('trk-74','trk-1705'),'trk-227'],(170,470,770))): its.append(item_card(k,232,(-1)**j*2,x,400,4+j*5,'pop',840+j,tear=6))
+    for j,(k,x) in enumerate(zip(['trc-1','trk-273','trk-154'],(170,470,770))): its.append(item_card(k,232,(-1)**(j+1)*2,x,1368,20+j*5,'pop',850+j,tear=6))
+    shot(204,252,None,2,its,(1.04,1.14,-20,10,20,-20,.7),'tear',1)
+    # BLOCO C2 · comandantes (16)
+    cm=ids('comandantes'); it=[label('OS COMANDANTES',202,'orange')]
+    xs4=[117+q*235 for q in range(4)]; ys4=[490+q*296 for q in range(4)]
+    w4=202
+    for q,k in enumerate(cm):
+        it.append(item_card(k,w4,0,xs4[q%4],ys4[q//4],round(q*2.4),'pop',1200+q,tear=3,thin=True))
+    shot(252,312,'blue',31,it,(1.12,1.02,20,-20,-20,10,-.7),'cut')
+    # BLOCO D · mais comentadas (12, 2×2 acelerado)
+    cc=ids('comentadas'); lab3=label('AS MAIS COMENTADAS',203,'rose'); f=312
+    for i,col in enumerate(['yellow','sky','orange']):
+        d=[16,14,12][i]; ps=[(255,640),(685,640),(255,1205),(685,1205)]
+        it=[lab3]+[item_card(k,398,(-1)**(q+i)*1,x,y,0,'none',900+i*4+q,tear=5,thin=True) for q,(k,(x,y)) in enumerate(zip(cc[i*4:i*4+4],ps))]
+        shot(f,f+d,col,40+i,it,(1.05+.03*i,1.12+.03*i,(-1)**i*30,0,(-1)**i*-30,20,(-1)**i*.8),'cut'); f+=d
     assert f==354,f
     t2=text_poster([('A PRÓXIMA','Bangers.ttf',150),('MISSÃO','Bangers.ttf',185),('É NA MESA.','Bangers.ttf',150)],POP['yellow'],13,880,-1.5,accent=POP['rose'])
-    its=[]
-    for j,k in enumerate(['kirk','khan','ent','q']): its.append(item_card(k,180,(-1)**j*2,145+j*222,368,2+j*2,'pop',880+j,tear=7))
-    for j,k in enumerate(['spock','jane','worf','data']): its.append(item_card(k,180,(-1)**(j+1)*2,145+j*222,1400,10+j*2,'pop',890+j,tear=7))
-    its.insert(0,item_text(t2,470,890,0,'slam',(0,0),'A PRÓXIMA MISSÃO É NA MESA.'))
+    its=[item_text(t2,470,890,0,'slam',(0,0),'A PRÓXIMA MISSÃO É NA MESA.')]
+    for j,k in enumerate(['trk-1701','trk-1704','trk-227','trc-2']): its.append(item_card(k,180,(-1)**j*2,145+j*222,368,2+j*2,'pop',880+j,tear=5))
+    for j,k in enumerate(['trk-273','trc-1','trk-154','sds-11']): its.append(item_card(k,180,(-1)**(j+1)*2,145+j*222,1400,10+j*2,'pop',890+j,tear=5))
     shot(354,390,None,3,its,(1.04,1.14,0,-20,0,20,.5),'tear',0)
     # BLOCO E · chamada final (mais lento, para ler)
     t3=text_poster([('PRÉ-RELEASE','Bangers.ttf',240)],(5,10,16) if False else POP['rose'],14,900,-1.5,accent=PAPER)
@@ -224,4 +229,4 @@ if __name__=='__main__':
             r=[]; im,i=frame(f,r); p.stdin.write(im.tobytes()); man.append(dict(f=f,shot=i,items=r))
             if f%60==0: print(f,flush=True)
         p.stdin.close(); p.wait()
-        json.dump(dict(man=man,cuts=[dict(s=s['s'],e=s['e'],tr=s['tr'],col=s['col']) for s in S]),open('/home/claude/prod/render/manifest.json','w'))
+        json.dump(dict(man=man,pops=sorted({s['s']+i['t'] for s in S for i in s['items'] if i['kind']=='card' and i['t']>0}),cuts=[dict(s=s['s'],e=s['e'],tr=s['tr'],col=s['col']) for s in S]),open('/home/claude/prod/render/manifest.json','w'))

@@ -1,0 +1,710 @@
+{
+ "assinadas": [
+  {
+   "id": "trk-1701",
+   "set": "TRK",
+   "n": "1701",
+   "name": "Captain James T. Kirk",
+   "artist": "Chris Rallis",
+   "type": "Legendary Creature — Human Officer",
+   "scry": "https://scryfall.com/card/trk/1701/captain-james-t-kirk",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-1701D",
+   "set": "TRK",
+   "n": "1701D",
+   "name": "Captain Jean-Luc Picard",
+   "artist": "Irvin Rodriguez",
+   "type": "Legendary Creature — Human Officer",
+   "scry": "https://scryfall.com/card/trk/1701D/captain-jean-luc-picard",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-1702",
+   "set": "TRK",
+   "n": "1702",
+   "name": "Mr. Spock, Science Officer",
+   "artist": "Gal Or",
+   "type": "Legendary Creature — Vulcan Human Scientist",
+   "scry": "https://scryfall.com/card/trk/1702/mr-spock-science-officer",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-1703",
+   "set": "TRK",
+   "n": "1703",
+   "name": "Lieutenant Commander Data",
+   "artist": "Tyler Jacobson",
+   "type": "Legendary Artifact Creature — Android Scientist",
+   "scry": "https://scryfall.com/card/trk/1703/lieutenant-commander-data",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-1704",
+   "set": "TRK",
+   "n": "1704",
+   "name": "Captain Kathryn Janeway",
+   "artist": "Lie Setiawan",
+   "type": "Legendary Creature — Human Officer",
+   "scry": "https://scryfall.com/card/trk/1704/captain-kathryn-janeway",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-1705",
+   "set": "TRK",
+   "n": "1705",
+   "name": "Seven of Nine, Unassimilated",
+   "artist": "Jack Hughes",
+   "type": "Legendary Artifact Creature — Human Officer",
+   "scry": "https://scryfall.com/card/trk/1705/seven-of-nine-unassimilated",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-1706",
+   "set": "TRK",
+   "n": "1706",
+   "name": "Lt. Cmdr. Geordi La Forge",
+   "artist": "Tyler Jacobson",
+   "type": "Legendary Creature — Human Artificer",
+   "scry": "https://scryfall.com/card/trk/1706/lt-cmdr-geordi-la-forge",
+   "layout": "normal"
+  }
+ ],
+ "naves": [
+  {
+   "id": "trk-43",
+   "set": "TRK",
+   "n": "43",
+   "name": "U.S.S. Enterprise-A, Free Spirit",
+   "artist": "Evan Shipard",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/43/uss-enterprise-a-free-spirit",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-227",
+   "set": "TRK",
+   "n": "227",
+   "name": "Borg Cube",
+   "artist": "Alexander Forssberg",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/227/borg-cube",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-263",
+   "set": "TRK",
+   "n": "263",
+   "name": "Deep Space 9",
+   "artist": "Paolo Puggioni",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/263/deep-space-9",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-273",
+   "set": "TRK",
+   "n": "273",
+   "name": "U.S.S. Enterprise-D, Galaxy-Class",
+   "artist": "Pablo Mendoza",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/273/uss-enterprise-d-galaxy-class",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-221",
+   "set": "TRK",
+   "n": "221",
+   "name": "U.S.S. Discovery, at Black Alert",
+   "artist": "Kevin Glint",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/221/uss-discovery-at-black-alert",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-135",
+   "set": "TRK",
+   "n": "135",
+   "name": "U.S.S. Reliant, From Hell's Heart",
+   "artist": "Dofresh",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/135/uss-reliant-from-hells-heart",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-63",
+   "set": "TRK",
+   "n": "63",
+   "name": "H.M.S. Bounty, Unlikely Timeship",
+   "artist": "Jetfreak-7",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/63/hms-bounty-unlikely-timeship",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-44",
+   "set": "TRK",
+   "n": "44",
+   "name": "U.S.S. Excelsior, Cutting Edge",
+   "artist": "Jetfreak-7",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/44/uss-excelsior-cutting-edge",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-222",
+   "set": "TRK",
+   "n": "222",
+   "name": "U.S.S. Voyager, Lone Wanderer",
+   "artist": "Hector Ortiz",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/222/uss-voyager-lone-wanderer",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-272",
+   "set": "TRK",
+   "n": "272",
+   "name": "U.S.S. Cerritos, Following Up",
+   "artist": "Bruce Brenneise",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/272/uss-cerritos-following-up",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-58",
+   "set": "TRK",
+   "n": "58",
+   "name": "Enterprise NX-01",
+   "artist": "Colin Searle",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/58/enterprise-nx-01",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-26",
+   "set": "TRK",
+   "n": "26",
+   "name": "Oberth-Class Starship",
+   "artist": "Jessica Rossier",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/26/oberth-class-starship",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-83",
+   "set": "TRK",
+   "n": "83",
+   "name": "Suurok-Class Science Vessel",
+   "artist": "Pace Wilder",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/83/suurok-class-science-vessel",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-77",
+   "set": "TRK",
+   "n": "77",
+   "name": "Romulan Bird-of-Prey",
+   "artist": "Edouard",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/77/romulan-bird-of-prey",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-145",
+   "set": "TRK",
+   "n": "145",
+   "name": "D-7 Battle Cruiser",
+   "artist": "Kevin Glint",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/145/d-7-battle-cruiser",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-170",
+   "set": "TRK",
+   "n": "170",
+   "name": "Sarcophagus, Ship of the Dead",
+   "artist": "Joan Piqué Llorens",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/170/sarcophagus-ship-of-the-dead",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-259",
+   "set": "TRK",
+   "n": "259",
+   "name": "Class-F Shuttlecraft",
+   "artist": "William Phifer",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/259/class-f-shuttlecraft",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-34",
+   "set": "TRC",
+   "n": "34",
+   "name": "U.S.S. Enterprise-E, Sovereign",
+   "artist": "Jetfreak-7",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/34/uss-enterprise-e-sovereign",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-122",
+   "set": "TRC",
+   "n": "122",
+   "name": "Starship Enterprise",
+   "artist": "Dofresh",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/122/starship-enterprise",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-124",
+   "set": "TRC",
+   "n": "124",
+   "name": "U.S.S. Defiant, Mirror Migrant",
+   "artist": "Arthur Yuan",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/124/uss-defiant-mirror-migrant",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-125",
+   "set": "TRC",
+   "n": "125",
+   "name": "U.S.S. Defiant, Tough Little Ship",
+   "artist": "John Di Giovanni",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/125/uss-defiant-tough-little-ship",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-126",
+   "set": "TRC",
+   "n": "126",
+   "name": "U.S.S. Enterprise-C, Time-Tossed",
+   "artist": "Dofresh",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/126/uss-enterprise-c-time-tossed",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-127",
+   "set": "TRC",
+   "n": "127",
+   "name": "U.S.S. Farragut, Bold Explorer",
+   "artist": "Raymond Bonilla",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/127/uss-farragut-bold-explorer",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-128",
+   "set": "TRC",
+   "n": "128",
+   "name": "U.S.S. Prometheus, Prototype",
+   "artist": "Jetfreak-7",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/128/uss-prometheus-prototype",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-129",
+   "set": "TRC",
+   "n": "129",
+   "name": "U.S.S. Stargazer, Here and There",
+   "artist": "Alexander Forssberg",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/129/uss-stargazer-here-and-there",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-113",
+   "set": "TRC",
+   "n": "113",
+   "name": "I.K.S. Negh'Var, Imperial Flagship",
+   "artist": "Jetfreak-7",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/113/iks-neghvar-imperial-flagship",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-120",
+   "set": "TRC",
+   "n": "120",
+   "name": "S.S. Botany Bay",
+   "artist": "Miguel Iglesias",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/120/ss-botany-bay",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-28",
+   "set": "TRC",
+   "n": "28",
+   "name": "Shuttlecraft Galileo",
+   "artist": "Pierre Raveneau",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/28/shuttlecraft-galileo",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-118",
+   "set": "TRC",
+   "n": "118",
+   "name": "Queen's Diamond",
+   "artist": "Raymond Bonilla",
+   "type": "Legendary Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/118/queens-diamond",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-33",
+   "set": "TRC",
+   "n": "33",
+   "name": "Type-03 Borg Vessel",
+   "artist": "Florent Lebrun",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/33/type-03-borg-vessel",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-36",
+   "set": "TRC",
+   "n": "36",
+   "name": "Borg Scout Sphere",
+   "artist": "Lordigan",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/36/borg-scout-sphere",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-52",
+   "set": "TRC",
+   "n": "52",
+   "name": "Transwarp Hub",
+   "artist": "David Frasheski",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/52/transwarp-hub",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-110",
+   "set": "TRC",
+   "n": "110",
+   "name": "Class-4 Tactical Cube",
+   "artist": "Jetfreak-7",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/110/class-4-tactical-cube",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-115",
+   "set": "TRC",
+   "n": "115",
+   "name": "K't'inga-Class Battle Cruiser",
+   "artist": "Dofresh",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/115/ktinga-class-battle-cruiser",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-116",
+   "set": "TRC",
+   "n": "116",
+   "name": "K'Vort-Class Raider",
+   "artist": "Jetfreak-7",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trc/116/kvort-class-raider",
+   "layout": "normal"
+  }
+ ],
+ "comandantes": [
+  {
+   "id": "trc-1",
+   "set": "TRC",
+   "n": "1",
+   "name": "The Borg Queen",
+   "artist": "Jodie Muir",
+   "type": "Legendary Artifact Creature — Borg Noble",
+   "scry": "https://scryfall.com/card/trc/1/the-borg-queen",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-2",
+   "set": "TRC",
+   "n": "2",
+   "name": "Commander Spock",
+   "artist": "Sam Kennedy",
+   "type": "Legendary Creature — Vulcan Human Scientist",
+   "scry": "https://scryfall.com/card/trc/2/commander-spock",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-3",
+   "set": "TRC",
+   "n": "3",
+   "name": "Jean-Luc Picard, Luminary",
+   "artist": "Jason Pastrana",
+   "type": "Legendary Creature — Human Officer",
+   "scry": "https://scryfall.com/card/trc/3/jean-luc-picard-luminary",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-4",
+   "set": "TRC",
+   "n": "4",
+   "name": "Worf, Defiant Commander",
+   "artist": "Flavio Greco Paglia",
+   "type": "Legendary Creature — Klingon Warrior Officer",
+   "scry": "https://scryfall.com/card/trc/4/worf-defiant-commander",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-142",
+   "set": "TRK",
+   "n": "142",
+   "name": "Captain James T. Kirk",
+   "artist": "Jason Pastrana",
+   "type": "Legendary Creature — Human Officer",
+   "scry": "https://scryfall.com/card/trk/142/captain-james-t-kirk",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-7",
+   "set": "TRK",
+   "n": "7",
+   "name": "Captain Jean-Luc Picard",
+   "artist": "Anna Pavleeva",
+   "type": "Legendary Creature — Human Officer",
+   "scry": "https://scryfall.com/card/trk/7/captain-jean-luc-picard",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-6",
+   "set": "TRK",
+   "n": "6",
+   "name": "Captain Benjamin Sisko",
+   "artist": "Chris Rallis",
+   "type": "Legendary Creature — Human Officer",
+   "scry": "https://scryfall.com/card/trk/6/captain-benjamin-sisko",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-187",
+   "set": "TRK",
+   "n": "187",
+   "name": "Captain Kathryn Janeway",
+   "artist": "Jason Pastrana",
+   "type": "Legendary Creature — Human Officer",
+   "scry": "https://scryfall.com/card/trk/187/captain-kathryn-janeway",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-186",
+   "set": "TRK",
+   "n": "186",
+   "name": "Captain Jonathan Archer",
+   "artist": "Julia Metzger",
+   "type": "Legendary Creature — Human Officer",
+   "scry": "https://scryfall.com/card/trk/186/captain-jonathan-archer",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-188",
+   "set": "TRK",
+   "n": "188",
+   "name": "Captain Pike, Fullness of Time",
+   "artist": "Joel Chaim Holtzman",
+   "type": "Legendary Creature — Human Officer Scout",
+   "scry": "https://scryfall.com/card/trk/188/captain-pike-fullness-of-time",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-69",
+   "set": "TRK",
+   "n": "69",
+   "name": "Lieutenant Commander Data",
+   "artist": "Irvin Rodriguez",
+   "type": "Legendary Artifact Creature — Android Scientist",
+   "scry": "https://scryfall.com/card/trk/69/lieutenant-commander-data",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-82",
+   "set": "TRK",
+   "n": "82",
+   "name": "Subcommander T'Pol",
+   "artist": "Kieran Yanner",
+   "type": "Legendary Creature — Vulcan Scientist",
+   "scry": "https://scryfall.com/card/trk/82/subcommander-tpol",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-110",
+   "set": "TRK",
+   "n": "110",
+   "name": "Georgiou, Terran Emperor",
+   "artist": "Julia Metzger",
+   "type": "Legendary Creature — Human Rogue Noble",
+   "scry": "https://scryfall.com/card/trk/110/georgiou-terran-emperor",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-119",
+   "set": "TRK",
+   "n": "119",
+   "name": "Khan, Vengeful Heart",
+   "artist": "Sam Kennedy",
+   "type": "Legendary Creature — Human Warrior",
+   "scry": "https://scryfall.com/card/trk/119/khan-vengeful-heart",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-179",
+   "set": "TRK",
+   "n": "179",
+   "name": "Will Riker, First in the Field",
+   "artist": "Zezhou Chen",
+   "type": "Legendary Creature — Human Officer",
+   "scry": "https://scryfall.com/card/trk/179/will-riker-first-in-the-field",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-70",
+   "set": "TRK",
+   "n": "70",
+   "name": "Lt. Cmdr. Geordi La Forge",
+   "artist": "Julie Dillon",
+   "type": "Legendary Creature — Human Artificer",
+   "scry": "https://scryfall.com/card/trk/70/lt-cmdr-geordi-la-forge",
+   "layout": "normal"
+  }
+ ],
+ "comentadas": [
+  {
+   "id": "trk-154",
+   "set": "TRK",
+   "n": "154",
+   "name": "Khaaaaaaaaaaaannn!",
+   "artist": "Evan Shipard",
+   "type": "Instant",
+   "scry": "https://scryfall.com/card/trk/154/khaaaaaaaaaaaannn!",
+   "layout": "normal"
+  },
+  {
+   "id": "sds-11",
+   "set": "SDS",
+   "n": "11",
+   "name": "Khan, Engineered Evil",
+   "artist": "Nicky Barkla",
+   "type": "Legendary Creature — Phyrexian Praetor",
+   "scry": "https://scryfall.com/card/sds/11/sheoldred-the-apocalypse",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-437",
+   "set": "TRK",
+   "n": "437",
+   "name": "General Chang, Cold Warrior",
+   "artist": "Julia Vasilyeva",
+   "type": "Legendary Creature — Klingon Warrior Officer",
+   "scry": "https://scryfall.com/card/trk/437/general-chang-cold-warrior",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-220",
+   "set": "TRK",
+   "n": "220",
+   "name": "Test of Courage",
+   "artist": "Zoltan Boros",
+   "type": "Instant",
+   "scry": "https://scryfall.com/card/trk/220/test-of-courage",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-165",
+   "set": "TRK",
+   "n": "165",
+   "name": "Q, Stacking the Deck",
+   "artist": "Ryan Valle",
+   "type": "Legendary Creature — Q",
+   "scry": "https://scryfall.com/card/trk/165/q-stacking-the-deck",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-386",
+   "set": "TRK",
+   "n": "386",
+   "name": "Captain Kathryn Janeway",
+   "artist": "Jurijus Chitrovas",
+   "type": "Legendary Creature — Human Officer",
+   "scry": "https://scryfall.com/card/trk/386/captain-kathryn-janeway",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-415",
+   "set": "TRK",
+   "n": "415",
+   "name": "General Chang, Cold Warrior",
+   "artist": "Oliver Barrett",
+   "type": "Legendary Creature — Klingon Warrior Officer",
+   "scry": "https://scryfall.com/card/trk/415/general-chang-cold-warrior",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-62",
+   "set": "TRK",
+   "n": "62",
+   "name": "Highly Illogical",
+   "artist": "Joel Chaim Holtzman",
+   "type": "Instant",
+   "scry": "https://scryfall.com/card/trk/62/highly-illogical",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-158",
+   "set": "TRK",
+   "n": "158",
+   "name": "Munitions Enthusiast",
+   "artist": "Lucio Parrillo",
+   "type": "Creature — Klingon Warrior",
+   "scry": "https://scryfall.com/card/trk/158/munitions-enthusiast",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-41",
+   "set": "TRK",
+   "n": "41",
+   "name": "Troubling Tribbles",
+   "artist": "Filipe Pagliuso",
+   "type": "Creature — Tribble",
+   "scry": "https://scryfall.com/card/trk/41/troubling-tribbles",
+   "layout": "normal"
+  },
+  {
+   "id": "trk-227",
+   "set": "TRK",
+   "n": "227",
+   "name": "Borg Cube",
+   "artist": "Alexander Forssberg",
+   "type": "Artifact — Spacecraft",
+   "scry": "https://scryfall.com/card/trk/227/borg-cube",
+   "layout": "normal"
+  },
+  {
+   "id": "trc-2",
+   "set": "TRC",
+   "n": "2",
+   "name": "Commander Spock",
+   "artist": "Sam Kennedy",
+   "type": "Legendary Creature — Vulcan Human Scientist",
+   "scry": "https://scryfall.com/card/trc/2/commander-spock",
+   "layout": "normal"
+  }
+ ]
+}

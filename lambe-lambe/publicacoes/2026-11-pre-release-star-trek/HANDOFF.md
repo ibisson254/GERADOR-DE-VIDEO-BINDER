@@ -4,7 +4,7 @@ Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch producao/lambe-pre-re
 Objetivo atual: fechar a chamada do pré-release de Star Trek no Lambe-lambe antes de 6/11.
 
 Decisões tomadas nesta sessão:
-- Oito cartas, sem Picard (registada em nucleo/DECISOES.md? não: decisão de produção, pedido do fundador)
+- v2: 68 impressões (assinadas, naves, comandantes, comentadas), com Picard, a pedido do fundador (registada em nucleo/DECISOES.md? não: decisão de produção)
 - Peça marcada PRÉVIA — DIREITOS A CONFIRMAR, com master sem carimbo à parte (DECISOES.md? não)
 
 Documentos consultados:
@@ -19,6 +19,7 @@ Tarefas pendentes:
 - Confirmar direitos · depende de fundador
 - Confirmar a música na biblioteca da conta e alinhar os cortes · depende de fundador
 - Aceitar ou substituir a origem das imagens · depende de fundador
+- Confirmar o critério de comandantes e o rótulo AS MAIS COMENTADAS · depende de fundador
 - Rever e integrar a PR, sem merge automático · depende de fundador
 
 Próximo passo concreto: decidir os direitos; se liberar, publicar à mão o master sem carimbo com legenda.txt e alinhar pelo mapa_montagem_sincronizacao.md.
