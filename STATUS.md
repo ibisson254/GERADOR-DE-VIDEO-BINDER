@@ -41,7 +41,7 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 
 ## Depende do fundador
 
-- Meta em Curto EP04 (branch `meta-em-curto-ep04`): voz gerada no flow `b81YGxZSC7uRuJf820D0`; falta trazer o MP3 (computador ligado ou anexo) para render e QC.
+- Meta em Curto EP04 produzido e conferido (branch `meta-em-curto-ep04`): falta o fundador publicar, com `oraculo/legendas/ep04_jund_pequim_legenda.txt`; merge do PR depois do EP03 (PR #4).
 
 - Aprovar um esboço das expressões novas do Mana e do Burn (auditoria §4) antes de as desenhar no kit.
 - Enviar ou subir o motor que gerou o Giro (não há "giro" em `claude/gerador-manaburn/`).

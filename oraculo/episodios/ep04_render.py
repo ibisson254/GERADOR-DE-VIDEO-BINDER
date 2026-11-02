@@ -223,15 +223,19 @@ def scene_arquivo(t):
     d.text((80, 258), typed('  PEQUIM · STANDARD · 31/10–01/11/2026', t0 + .3, t), font=F(MONO, 30), fill=EM)
     d.line((80, 312, 1000, 312), fill=(16, 185, 129, 90), width=2)
     d.text((80, 345), '869', font=F(INTB, 120), fill=WHITE); d.text((340, 412), 'JOGADORES', font=F(MONOB, 40), fill=GREY)
-    if t >= ws(23) - .1:
-        k = eio((t - ws(23) + .1) / .35); x0 = 200
+    if t < ws(24) - .1:
+        for s_, i_, f_, c_, y_ in [('MAGIC SPOTLIGHT', 19, F(INTB, 92), WHITE, 620), ('FRACTURE', 21, F(INTB, 120), PH, 740),
+                                   ('PEQUIM', 22, F(MONOB, 72), WHITE, 930), ('STANDARD', 23, F(MONOB, 72), EM, 1040)]:
+            if t >= ws(i_) - .05: d.text((W / 2, y_), s_, font=f_, fill=c_, anchor='ma')
+    if t >= ws(24) - .1:
+        k = eio((t - ws(24) + .1) / .35); x0 = 200
         d.rounded_rectangle((x0, 510, x0 + 680, 1330), 18, outline=EM, width=3, fill=(8, 20, 18, 255))
         d.text((x0 + 28, 536), 'FICHA DE JOGADOR', font=F(MONOB, 28), fill=GREY)
         silhueta(d, x0 + 236, 590, col=PH)
         if k >= .5:
             d.text((x0 + 340, 790), 'mo que', font=F(INTB, 96), fill=WHITE, anchor='ma')
             d.text((x0 + 340, 915), '1.º LUGAR', font=F(MONOB, 44), fill=PH, anchor='ma')
-        if t >= ws(27): d.text((x0 + 340, 985), 'JUND SACRIFICE', font=F(CONDB, 56), fill=PH, anchor='ma')
+        if t >= ws(28): d.text((x0 + 340, 985), 'JUND SACRIFICE', font=F(CONDB, 56), fill=PH, anchor='ma')
         if t >= ws(30):
             kk = eio((t - ws(30)) / .3)
             d.text((x0 + 340, 1080), 'CAMPANHA', font=F(MONOB, 32), fill=GREY, anchor='ma')
@@ -270,14 +274,14 @@ def scene_lista(t):
     g = list(L['principal'].items()); cols = [g[:2], g[2:]]
     verde = t >= ws(96); fh = F(MONOB, 28); i = 0; ls = 46
     for ci, col in enumerate(cols):
-        x = 110 if ci == 0 else 610; y = 330
+        x = 110 if ci == 0 else 590; y = 330
         for nome_g, cartas in col:
             if t >= ws(86) + i * .02: d.text((x - 30, y), nome_g, font=fh, fill=GREY)
             y += ls; i += 1
             for n, nome in cartas:
                 if t >= ws(86) + i * .02:
                     key = verde and nome in L['chave']; s = f'{n} {nome}'
-                    d.text((x, y), s, font=fit(d, s, CONDB, 34, 440 if ci == 0 else 400), fill=(PH if key else (150, 190, 170)))
+                    d.text((x, y), s, font=fit(d, s, CONDB, 34, 430 if ci == 0 else 350), fill=(PH if key else (150, 190, 170)))
                     if key: d.text((x - 32, y + 3), '▶', font=F(MONOB, 26), fill=PH)
                 y += ls; i += 1
             y += 12
@@ -291,10 +295,10 @@ def scene_top8(t):
     for i, (p, nome, j) in enumerate(TOP8):
         if t >= ws(109) + i * .1:
             on = j and mark
-            if on: d.rounded_rectangle((70, y - 8, 1010, y + 76), 10, fill=(10, 52, 30, 255), outline=EM, width=3)
+            if on: d.rounded_rectangle((70, y - 8, 945, y + 76), 10, fill=(10, 52, 30, 255), outline=EM, width=3)
             d.text((100, y + 34), p, font=F(MONOB, 40), fill=(PH if on else GREY), anchor='lm')
             d.text((210, y + 34), nome, font=fit(d, nome, CONDB, 48, 700), fill=(WHITE if on else (150, 170, 175)), anchor='lm')
-            if i == 0 and t >= ws(122): d.text((990, y + 34), 'TROFÉU', font=F(MONOB, 34), fill=PH, anchor='rm')
+            if i == 0 and t >= ws(122): d.text((930, y + 34), 'TROFÉU', font=F(MONOB, 34), fill=PH, anchor='rm')
         y += 96
     if mark: d.text((W / 2, 1076), '3 DE 8', font=F(INTB, 130), fill=PH, anchor='ma')
     fontes(d, ['fonte: MTGGoldfish, dados do Melee (consulta 02/11/2026)', 'nomes dos arquétipos como no MTGGoldfish'], 1270)
@@ -318,13 +322,18 @@ T_Q = ws(138) - 0.1; T_SIG = ws(155) - 0.15
 def inside(t):
     if t < ws(34) - .1: return scene_arquivo(t)
     if t < ws(44) - .1: return scene_card(t, 'biotech_specialist', ws(34), '> O MOTOR · 1 de 2', [('ARTEFATO SACRIFICADO = 2 DE DANO', ws(41), EM)])
-    if t < ws(54) - .1: return scene_card(t, 'the_sackvillebagginses', ws(44), '> O MOTOR · 2 de 2', [('FICHA SACRIFICADA = OPONENTE PERDE 1', ws(50), EM)])
+    if t < ws(54) - .1: return scene_card(t, 'the_sackvillebagginses', ws(44), '> O MOTOR · 2 de 2', [('FICHA SACRIFICADA = OPONENTE PERDE 1', ws(52), EM)])
     if t < ws(67) - .1: return scene_conta(t)
     if t < ws(72) - .1: return scene_card(t, 'lively_dirge', ws(67), '> A RECUPERAÇÃO', [('DEVOLVE ATÉ 2 CRIATURAS · VM TOTAL ≤ 4', ws(69), EM)])
     if t < ws(78) - .1: return scene_card(t, 'umbral_collar_zealot', ws(72), '> O MOTOR PRECISA DE SAÍDA', [('SACRIFICA CRIATURA OU ARTEFATO', ws(75), EM)])
     if t < ws(86) - .1: return scene_card(t, 'obsessive_pursuit', ws(78), '> PRESSÃO NO ATAQUE', [('X = PERMANENTES SACRIFICADOS NO TURNO', ws(81), EM)])
     if t < ws(109) - .1: return scene_lista(t)
     return scene_top8(t)
+SUBY = 1530
+def note(d, s):
+    f = F(COND, 34); wd = d.textlength(s, font=f)
+    d.rounded_rectangle((W / 2 - wd / 2 - 16, 1418, W / 2 + wd / 2 + 16, 1468), 8, fill=(5, 10, 16, 215))
+    d.text((W / 2, 1443), s, font=f, fill=(170, 190, 195), anchor='mm')
 def frame(t):
     if t >= OUT: return outro(t - OUT)
     if t >= OUT - 0.2:
@@ -335,10 +344,10 @@ def frame_main(t):
         if t < DIVE:
             im = tubo_frame(t, 'desconfiado' if t < ws(8) else 'confiante', zoom=1.0 + 0.04 * eio(t / 3.0))
             d = ImageDraw.Draw(im, 'RGBA')
-            d.text((W / 2, 130), '869 JOGADORES', font=F(INTB, 104), fill=WHITE, anchor='ma')
-            if t >= ws(6): d.text((W / 2, 262), '1 CAMPEÃO', font=F(INTB, 84), fill=PH, anchor='ma')
-            d.text((80, 1500), 'fonte: PlayMTG no X · 31/10/2026', font=F(COND, 34), fill=(150, 170, 175, 235))
-            return subs(im, t, 1640)
+            d.text((W / 2, 225), '869 JOGADORES', font=F(INTB, 96), fill=WHITE, anchor='ma')
+            if t >= ws(6): d.text((W / 2, 335), '1 CAMPEÃO', font=F(INTB, 72), fill=PH, anchor='ma')
+            note(d, 'fonte: PlayMTG no X · 31/10/2026')
+            return subs(im, t, SUBY)
         k = eio((t - DIVE) / (DIVE_END - DIVE)); z = 1 + k * 4.2
         im = tubo_frame(t, 'analitico', zoom=z, cx=W / 2 + (SCX - W / 2) * min(1, k * 1.5), cy=H / 2 + (SCY - H / 2) * min(1, k * 1.5))
         if k > 0.6: im = Image.blend(im, scene_arquivo(t), (k - 0.6) / 0.4)
@@ -348,39 +357,39 @@ def frame_main(t):
         k = eio((t - EXIT) / (EXIT_END - EXIT)); z = 5.2 - 4.2 * k
         im = tubo_frame(t, 'confiante', zoom=z, cx=W / 2 + (SCX - W / 2) * (1 - k), cy=H / 2 + (SCY - H / 2) * (1 - k))
         if k < 0.35: im = Image.blend(inside(t), im, k / 0.35)
-        return subs(im, t, 1640)
+        return subs(im, t, SUBY)
     if t < T_Q:
         im = tubo_frame(t, 'confiante', zoom=1.0 + .03 * eio((t - EXIT_END) / 3))
         d = ImageDraw.Draw(im, 'RGBA')
-        if t >= ws(125): d.text((W / 2, 120), 'NÃO A MAIOR MESA.', font=fit(d, 'NÃO A MAIOR MESA.', INTB, 84, 920), fill=GREY, anchor='ma')
-        if t >= ws(132): d.text((W / 2, 230), 'O QUE SACRIFICAR.', font=fit(d, 'O QUE SACRIFICAR.', INTB, 96, 920), fill=PH, anchor='ma')
-        d.text((W / 2, 1500), 'leitura do TUBO, não regra do jogo', font=F(COND, 34), fill=(150, 170, 175, 235), anchor='ma')
-        return subs(im, t, 1640)
+        if t >= ws(125): d.text((W / 2, 225), 'NÃO A MAIOR MESA.', font=fit(d, 'NÃO A MAIOR MESA.', INTB, 76, 800), fill=GREY, anchor='ma')
+        if t >= ws(132): d.text((W / 2, 320), 'O QUE SACRIFICAR.', font=fit(d, 'O QUE SACRIFICAR.', INTB, 84, 800), fill=PH, anchor='ma')
+        note(d, 'leitura do TUBO, não regra do jogo')
+        return subs(im, t, SUBY)
     if t < T_SIG:
         im = tubo_frame(t, 'analitico', zoom=1.0); d = ImageDraw.Draw(im, 'RGBA')
-        im = top_card(im, [('Qual peça você remove primeiro?', F(INTB, 58), WHITE)], 1.0, 110)
+        im = top_card(im, [('Qual peça você remove primeiro?', F(INTB, 52), WHITE)], 1.0, 225)
         d = ImageDraw.Draw(im, 'RGBA')
-        d.text((W / 2, 220), 'GRAU DE CERTEZA', font=F(MONOB, 32), fill=GREY, anchor='ma')
+        d.text((W / 2, 292), 'GRAU DE CERTEZA', font=F(MONOB, 28), fill=GREY, anchor='ma')
         for i, (lab, n, val) in enumerate([('TEXTO DAS CARTAS', 5, 'ALTO'), ('PILOTAGEM (SEM VOD)', 1, 'BAIXO')]):
-            y = 272 + i * 66
-            d.text((90, y + 20), lab, font=F(CONDB, 32), fill=WHITE, anchor='lm')
+            y = 330 + i * 54
+            d.text((90, y + 20), lab, font=fit(d, lab, CONDB, 30, 315), fill=WHITE, anchor='lm')
             for s in range(5):
-                x = 500 + s * 66
+                x = 420 + s * 66
                 d.rounded_rectangle((x, y, x + 56, y + 40), 7, fill=(EM if s < n else None), outline=EM, width=3)
-            d.text((W - 80, y + 20), val, font=F(MONOB, 32), fill=EM, anchor='rm')
+            d.text((930, y + 20), val, font=F(MONOB, 30), fill=EM, anchor='rm')
         chips = [('A · BIOTECH', ws(146)), ('B · SACKVILLE', ws(149)), ('C · ZEALOT', ws(151))]
-        f = F(MONOB, 32); y = 1460
+        f = F(MONOB, 30); y = 1385
         wds = [d.textlength(s, font=f) + 44 for s, _ in chips]; x = (W - sum(wds) - 2 * 16) / 2
         for (s, tt), wd in zip(chips, wds):
             on = t >= tt
             d.rounded_rectangle((x, y, x + wd, y + 68), 34, fill=(EM if on else (15, 23, 42, 230)), outline=EM, width=3)
             d.text((x + wd / 2, y + 34), s, font=f, fill=(BG if on else EM), anchor='mm'); x += wd + 16
-        return subs(im, t, 1640)
+        return subs(im, t, SUBY)
     kz = eio((t - T_SIG) / 1.2)
     im = tubo_frame(t, 'confiante', zoom=1.0 + 0.22 * kz, cx=W / 2, cy=H / 2 + (SCY + 260 - H / 2) * kz)
     k = ease((t - T_SIG) / 0.4)
-    im = top_card(im, [('META EM CURTO', F(INTB, 96), WHITE), ('com TUBO · BINDER Originals', F(MONO, 34), EM)], k)
-    return subs(im, t, 1640)
+    im = top_card(im, [('META EM CURTO', F(INTB, 96), WHITE), ('com TUBO · BINDER Originals', F(MONO, 34), EM)], k, 225)
+    return subs(im, t, SUBY)
 if __name__ == '__main__':
     if len(sys.argv) > 2 and sys.argv[2] == 'capa':
         im = tubo_frame(12.0, 'confiante', zoom=1.0); d = ImageDraw.Draw(im, 'RGBA')

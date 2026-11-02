@@ -39,8 +39,18 @@ Scripts: `ep04_audio.py`, `ep04_render.py`. Dados: `ep04_roteiro.json`, `ep04_li
 - Jogador: ficha com silhueta. Sem fotos, sem transmissão. Contador ERROS HUMANOS não mostrado (sem valor registado).
 - Grau de certeza: texto das cartas ALTO, pilotagem BAIXO (sem VOD).
 
-## Estado
-- Scripts testados com voz provisória. **Falta o MP3 da voz** (domínio de download bloqueado na sessão; computador offline). Render, QC e `ep04_words.json` pendentes.
+## Controlo de qualidade (ficheiro final, 02/11/2026)
+| Critério | Resultado |
+|---|---|
+| Formato | 1080×1920, 30 fps; 64,4 s (60,5 s sem o fecho) |
+| Corte lateral | cropdetect 1080:1920:0:0 em amostra de 31 quadros; folha de contacto vista |
+| Loudness | −14,0 LUFS, pico −1,8 dBTP |
+| Fecho | `outro_binder_916.mp4` real, sem encurtar |
+| Lista | 24 + 6 + 5 + 3 + 22 = 60 |
+| qc_video.py | Sem problemas mensuráveis |
+| Áudio | Medido, não ouvido: pronúncia conferida pela transcrição Scribe |
+| Defeitos bloqueadores | Nenhum |
+- Texto fora do tubo reposicionado para dentro da zona segura; legenda fora do tubo sobe para y 1530.
 
 ## Depois de publicar
 - Métrica: guardados + partilhas; secundária respostas A/B/C.

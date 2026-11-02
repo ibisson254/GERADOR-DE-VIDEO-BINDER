@@ -69,10 +69,10 @@ for k in (113,): put(buzz(0.25), vt(W[k]['s']), 0.3)                    # «trê
 put(thump(0.4, 70), EXIT + 0.25, 0.35)
 mix = V + M + S
 sf.write('mix_raw.wav', mix, SR)
-m = subprocess.run(['ffmpeg', '-v', 'info', '-i', 'mix_raw.wav', '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr
+m = subprocess.run(['ffmpeg', '-v', 'info', '-i', 'mix_raw.wav', '-af', 'loudnorm=I=-14:TP=-2.0:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr
 js = json.loads(m[m.rfind('{'):m.rfind('}') + 1])
 subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', 'mix_raw.wav', '-af',
-                f"loudnorm=I=-14:TP=-1.5:LRA=11:measured_I={js['input_i']}:measured_TP={js['input_tp']}:measured_LRA={js['input_lra']}:measured_thresh={js['input_thresh']}:offset={js['target_offset']}:linear=true",
+                f"loudnorm=I=-14:TP=-2.0:LRA=11:measured_I={js['input_i']}:measured_TP={js['input_tp']}:measured_LRA={js['input_lra']}:measured_thresh={js['input_thresh']}:offset={js['target_offset']}:linear=true",
                 '-ar', str(SR), 'mix_final.wav'], check=True)
 json.dump(dict(TEMPO=TEMPO, LEAD=LEAD, OUT_START=OUT_START, TOTAL=TOTAL, DIVE=DIVE, EXIT=EXIT,
                REV0=REV0, REV1=REV1, RESUME=resume), open('tl.json', 'w'), indent=1)
