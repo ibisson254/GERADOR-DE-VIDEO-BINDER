@@ -6,6 +6,8 @@ const EP = {
   outro: { assinatura: 'Escaneie suas cartas e organize seus decks.' },
   card: { img: 'esp/slides/comu.png', cred: 'Conteúdo de fã não oficial.' },
   quadro: [[0,'neutro'],[3,'desconfiado'],[7,'indignado'],[9,'admirado'],[11,'indignado'],[15,'desconfiado'],[18,'neutro']],
+  foraDoAr: [[1,1],[4,6],[8,8],[10,10],[12,14],[16,19]],
+  tvLogo: 'logo/binder_fabricante.png',
   clip: { t0: 0.3, n: 99 },
   subPre: [[0.3,1.6,'*TUBO:* Commander, por diversão.'],[1.6,3.7,'*TUBO:* Fora do meu arquivo, não da minha atenção.']],
   comu: [ {line:2, px:42, q:'Tem que começar a calcular os eventos que envolvem Commander Precon.'},
@@ -13,10 +15,10 @@ const EP = {
   canais: [
     { de: 0, img: 'esp/clip/099.jpg', ch: 3, cred: 'Na TV: trecho original de Meta em Curto · EP03.' },
     { de: 2, img: 'esp/slides/comu.png', ch: 4, cred: 'Comentários reais de @diegoalencard no @binderthetrade.' },
-    { de: 7, hl: { tvtext: { rects: [[0.054, 0.578, 0.506, 0.047]], zoom: 1.5 } }, img: 'esp/slides/cosmic.png', ch: 5, cred: 'Exemplo de loja. Não vale como regra geral.' },
-    { de: 9, hl: { tvtext: { rects: [[0.054, 0.578, 0.388, 0.047]], zoom: 1.5 } }, img: 'esp/slides/laluna.png', ch: 6, cred: 'Evento de 11/04/2026. Prêmios anunciados pelo organizador.' },
-    { de: 11, hl: { tvtext: { rects: [[0.054, 0.578, 0.774, 0.047]], zoom: 1.5 } }, img: 'esp/slides/grande.png', ch: 7, cred: 'Tix: unidade de prêmio do evento. Grade do CommandFest SP (CCG Eventos).' },
-    { de: 15, hl: { tvtext: { rects: [[0.054, 0.457, 0.861, 0.047]], zoom: 1.5 } }, img: 'esp/slides/painel.png', ch: 8, cred: 'Commander Brackets, atualização de 21/10/2025.' },
+    { de: 7, hl: { tvtext: { rects: [[0.046, 0.465, 0.828, 0.088]], zoom: 1 } }, img: 'esp/slides/cosmic.png', ch: 5, cred: 'Exemplo de loja. Não vale como regra geral.' },
+    { de: 9, hl: { tvtext: { rects: [[0.046, 0.465, 0.634, 0.088]], zoom: 1 } }, img: 'esp/slides/laluna.png', ch: 6, cred: 'Evento de 11/04/2026. Prêmios anunciados pelo organizador.' },
+    { de: 11, hl: { tvtext: { rects: [[0.046, 0.463, 0.622, 0.088]], zoom: 1 } }, img: 'esp/slides/grande.png', ch: 7, cred: 'Tix: unidade de prêmio do evento. Grade do CommandFest SP (CCG Eventos).' },
+    { de: 15, hl: { tvtext: { rects: [[0.046, 0.382, 0.909, 0.164]], zoom: 1 } }, img: 'esp/slides/painel.png', ch: 8, cred: 'Commander Brackets, atualização de 21/10/2025.' },
   ],
   pose: [
     ['point_tv','x','screen','x','angry','x','tv'],              // 1 B Fora do arquivo

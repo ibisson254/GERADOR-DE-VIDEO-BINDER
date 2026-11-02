@@ -53,9 +53,19 @@ Python 3 (numpy, scipy, Pillow, playwright com Chromium, num2words) e ffmpeg.
 - Já estavam no v2 e faltaram no Giro: TV a desligar até ao ponto verde da logo (P1-9) e o braço do Burn a apontar a TV nos planos de TV (P1-2); nos planos do sofá a TV fica inteira no quadro (D-1).
 - Testado com o Ep. 2: `bordas.py` OK (490 quadros de TV, laterais entre 10 e 1068 px, topo a 300 px) e prévias a 1,5 · 13 · 16,5 · 22 · 30 · 36,95 · 38,3 s.
 
+## TV ANALÓGICA BINDER — PADRÃO VISUAL
+
+Regra do fundador (02/11/2026): **é proibido cortar a TV.** Em cada quadro o chassis inteiro está dentro do vídeo ou totalmente fora dele. `bordas.py` confere quadro a quadro, incluindo os planos da sala. Não há zoom na carta nem no texto: o campo `zoom` de `EP.hl` é ignorado e os destaques amarelos continuam a funcionar.
+
+- **Planos:** `tv`, `tvtext`, `tvtext2`, `tv2`: chassis inteiro (10 a 1070 px). `cuB`: mais aberto, TV inteira à direita. `cuM`: TV fora do quadro. `push`: aproximação limitada a 1,03. Texto na tela da TV precisa de ser grande (carta real entra inteira, fichas próprias em fonte ≥ 44 px no PNG de 744 px).
+- **Marca no chassis:** placa de fabricante no topo da grelha do altifalante (coordenadas do plano da TV: x 926–1018, y 694–786), a mesma nos dois enquadramentos. Ficheiro: `logo/binder_fabricante.png` (ou `EP.tvLogo`; `null` desliga). Sem o ficheiro a placa não aparece e nada é inventado.
+- **Fora do ar:** `noSignal(canvas, t, alfa)` em `index.html`. Desenha num canvas dentro de um `foreignObject` recortado ao vidro do CRT (`NS`, cantos de 58). Depende só de `t` (determinístico, 30 fps): listras rolantes com velocidades contínuas, estática, tracking de VHS, scanlines e oscilação de fósforo, em cinzento.
+- **Estados:** (1) ligada sem conteúdo: interferência no ecrã inteiro, nas falas de `EP.foraDoAr=[[ini,fim],...]` (0-based) ou quando não há imagem nenhuma; (2) conteúdo: a camada fica oculta, carta e TV SAL limpas; (3) transição: a interferência entra em 0,3 s sobre o conteúdo; o zapping (`staticSVG`) é outro efeito e tem prioridade; (4) desligar: sequência original, intocada.
+- **Compatibilidade:** episódios sem `foraDoAr` funcionam como antes; os publicados não se renderizam de novo. Só Mana & Burn.
+
 ## Regras que valem para todo episódio
 
 - Carta real, inteira, rodapé visível, nada por cima. Crédito: "Na TV: {carta} ({coleção}, {ano}), nº {n}. Arte: {artista}. © Wizards of the Coast."
-- A tela inteira da TV cabe sempre na largura do vídeo (zoom máximo ≈1,506, margem de 10 px); `bordas.py` confere.
+- A tela inteira da TV cabe sempre na largura do vídeo (sem zoom, chassis inteiro, margem de 10 px); `bordas.py` confere.
 - Medidor só com dado real e fonte na tela. Bloco do scanner só com gravação real do app.
 - Duração livre (constituição §6).
