@@ -108,3 +108,32 @@ Formato de 3 notícias da semana (sucessor do Zapping nº 1, 816 views em `comum
 - Este relatório; `nucleo/DECISOES.md`; `STATUS.md`.
 
 Nenhum asset mestre, voz, música, episódio publicado ou script de episódio foi alterado.
+
+## 9. Handoff
+
+```
+HANDOFF · 02/11/2026 · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch evolucao-visual-2026-11 · último commit fdc9848 (+ este handoff)
+
+Objetivo atual: evolução visual do BINDER Originals; auditoria do Giro de 01/11 feita, ferramentas de QC e memória implementadas, propostas identitárias a aguardar aprovação.
+
+Decisões tomadas nesta sessão:
+- Gravidade P0/P1/P2, bloco E da checklist, QC automático, memória de continuidade (registada em nucleo/DECISOES.md? sim)
+
+Documentos consultados:
+- ver §1 deste relatório
+
+Alterações realizadas:
+- comum/qc/qc_video.py, comum/qc/LEIA-ME.md · QC automático · fdc9848
+- nucleo/CHECKLIST_QUALIDADE.md · P0/P1/P2 + bloco E · fdc9848
+- comum/continuidade/ (4 ficheiros) · memória por série · fdc9848
+- nucleo/auditorias/2026-11-02_evolucao_visual.md, nucleo/DECISOES.md, STATUS.md · fdc9848
+
+Tarefas pendentes:
+- Aprovar propostas §4, §5, §7 e o merge da branch · depende de fundador
+- Motor que gerou o Giro (não está no repositório nem no projeto) · depende de fundador
+- Confirmar publicação do Giro de 01/11 para comum/historico.md · depende de fundador
+- Ler a bíblia do Mana & Burn no Drive antes de mexer nas personagens · depende de agente com acesso ao Drive
+
+Próximo passo concreto: com o motor do Giro, corrigir P0-1 e P1-1 a P1-6 e validar com python3 -I comum/qc/qc_video.py <video> --frente manaburn
+```
