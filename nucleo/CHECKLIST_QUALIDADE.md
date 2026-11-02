@@ -40,7 +40,8 @@ Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao ris
 
 ## E. Personagens, cena e montagem (ficheiro final, na folha de contacto)
 
-- [ ] P0 · Carta inteira em **todos** os planos, incluindo a TV ao fundo nos planos de conjunto.
+- [ ] P0 · Carta inteira nos planos de TV e nos zooms.
+- [ ] P1 (a confirmar pelo fundador) · Na TV ao fundo dos planos de conjunto, carta e programação não aparecem cortadas pela margem.
 - [ ] P1 · Nenhum texto (legenda, gancho) por cima de rosto, carta ou linha de fonte.
 - [ ] P1 · Linha de fonte com ≥ 24 px de altura no ficheiro final; texto que se quer ler ≥ 28 px.
 - [ ] P1 · Legendas e textos dentro da zona segura (folha de contacto: fora do vermelho).

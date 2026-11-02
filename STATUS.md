@@ -28,7 +28,7 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbit
 
 | Bloco | Estado | Onde |
 |---|---|---|
-| Auditoria do Giro de domingo (01/11) com timecodes | Concluído: 1 P0, 10 P1, 4 P2 | `nucleo/auditorias/2026-11-02_evolucao_visual.md` |
+| Auditoria do Giro de domingo (01/11) com timecodes, revista com a bíblia do Drive | Concluído: 0 P0, 10 P1, 4 P2, 1 decisão pendente | `nucleo/auditorias/2026-11-02_evolucao_visual.md` |
 | Controlo de qualidade automático | Implementado e testado | `comum/qc/` |
 | Checklist P0/P1/P2 + bloco E | Implementado | `nucleo/CHECKLIST_QUALIDADE.md` |
 | Memória de continuidade por série | Implementado (semente) | `comum/continuidade/` |
@@ -42,7 +42,8 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbit
 - Aprovar ou recusar as propostas da auditoria (§4, §5, §7) e o merge de `evolucao-visual-2026-11`.
 - Enviar ou subir o motor que gerou o Giro (não há "giro" em `claude/gerador-manaburn/`).
 - Confirmar se o Giro de 01/11 foi publicado (para o registar em `comum/historico.md`).
-- Acesso à bíblia do Mana & Burn no Drive para a próxima sessão (não lida nesta).
+- Decidir a TV ao fundo cortada (D-1) e a duração do Mana & Burn (perfil 35–45 s contra doc 05 do Drive 35–53 s).
+- Drive atualizado a 02/11 (notas de fonte de verdade na bíblia, no doc 05 e no Mapa do Drive; secção de estado na bíblia).
 
 ## Pendências técnicas (não bloqueiam a governação)
 
