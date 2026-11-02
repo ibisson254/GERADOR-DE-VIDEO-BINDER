@@ -30,7 +30,7 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Documentação | Bíblia: doc "BINDER Marketing — Série Mana & Burn" no Drive + skill `binder-mana-burn-episodio` · Perfil: `manaburn/PERFIL.md` · Técnica: `manaburn/LEIA-ME.md` |
 | Regras específicas | Putômetro = Salt Score do EDHREC ÷ 4 com fonte no ecrã; "Lê a carta" sempre conferido no Oracle; manchetes da TV SAL sem pessoas reais |
 | Território | Cultura e caos de Magic: cartas polémicas, Salt Score, hype e spoilers, preço noticiado, sazonais, reação da comunidade, notícias da Wizards |
-| Conteúdo produzido | Reel 9:16, 35–45 s; carrossel e Stories derivados (`formatos.py` do motor v2) |
+| Conteúdo produzido | Reel 9:16, duração livre (constituição §6); formato derivado Giro de domingo; carrossel e Stories derivados (`formatos.py` do motor v2) |
 | Relação com o BINDER Vision | Fecho do scanner; no "Comenta aí" o Mana pode segurar o celular com a marca (`fx.celular`) |
 
 ### Conde de Manaforte · O Tribunal Estético
@@ -44,7 +44,7 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Documentação | Bíblia: `conde/CONTEXTO.md` · Perfil: `conde/PERFIL.md` |
 | Regras específicas | Observação, interpretação e facto sempre separados; o alvo do humor é a arrogância do Conde, nunca o artista; sem memes |
 | Território | Ilustração: composição, luz, anatomia, perspectiva, simbolismo, técnica, bastidores, artistas |
-| Conteúdo produzido | Reel 9:16, ~42–48 s |
+| Conteúdo produzido | Reel 9:16, duração livre (constituição §6) |
 | Relação com o BINDER Vision | Fecho do scanner; verde BINDER só no fecho |
 
 ### Meta em Curto (personagem TUBO)

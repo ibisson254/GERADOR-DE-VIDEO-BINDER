@@ -24,11 +24,12 @@ from PIL import Image, ImageDraw
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FECHO = os.path.join(RAIZ, 'comum', 'outro', 'outro_binder_916.mp4')
 
-# Formato e duração por frente (constituição §6 e PERFIL.md de cada série). Duração sem o fecho.
+# Formato por frente (constituição §6). Duração: livre nas séries desde 02/11/2026 (só informativa);
+# o Órbita mantém o loop de 12 s. Duração contada sem o fecho.
 FRENTES = {
-    'manaburn': {'w': 1080, 'h': 1920, 'fps': 30, 'dur': (35, 45), 'fecho': True},
-    'tubo':     {'w': 1080, 'h': 1920, 'fps': 30, 'dur': (35, 45), 'fecho': True},
-    'conde':    {'w': 1080, 'h': 1920, 'fps': 30, 'dur': (42, 48), 'fecho': True},
+    'manaburn': {'w': 1080, 'h': 1920, 'fps': 30, 'dur': None, 'fecho': True},
+    'tubo':     {'w': 1080, 'h': 1920, 'fps': 30, 'dur': None, 'fecho': True},
+    'conde':    {'w': 1080, 'h': 1920, 'fps': 30, 'dur': None, 'fecho': True},
     'orbita':   {'w': 1080, 'h': 1350, 'fps': 30, 'dur': (12, 12), 'fecho': False},
     'lambe':    {'w': 1080, 'h': 1920, 'fps': 30, 'dur': None,     'fecho': True},
 }

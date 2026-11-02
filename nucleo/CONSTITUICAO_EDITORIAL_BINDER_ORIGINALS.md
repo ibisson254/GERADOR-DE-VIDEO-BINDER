@@ -1,6 +1,6 @@
 # Constituição editorial e operacional · BINDER Originals
 
-Versão 1.4 · 31/10/2026 (§1 bíblias do Órbita e do Lambe-lambe no repositório, §6 Órbita sem fecho) · 1.3 · 31/10/2026 (§1 hierarquia documental, §2 catálogo, §6 formatos por frente, §10 frase do easter egg) · 1.2 · 31/10/2026 (fonte de verdade, registo, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
+Versão 1.5 · 02/11/2026 (§6 duração livre nos episódios de série) · 1.4 · 31/10/2026 (§1 bíblias do Órbita e do Lambe-lambe no repositório, §6 Órbita sem fecho) · 1.3 · 31/10/2026 (§1 hierarquia documental, §2 catálogo, §6 formatos por frente, §10 frase do easter egg) · 1.2 · 31/10/2026 (fonte de verdade, registo, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
 
 Norma comum de **processo** para todas as frentes do @binderthetrade (séries, universo temático, formato espontâneo e especiais; ver `CATALOGO_EDITORIAL.md`). Não define personagens nem estética: isso vive na bíblia de cada frente. Não define o produto: só funções confirmadas (secção 9).
 
@@ -81,6 +81,7 @@ As 12 perguntas da orquestração (série, objetivo, interesse, investigação, 
 ## 6. Qualidade audiovisual
 
 - Formato da frente (catálogo): séries em Reel 9:16, 1080×1920, 30 fps; Órbita em Reel 4:5, 1080×1350; Lambe-lambe em post 4:5 ou Reel 9:16. Em qualquer formato, **sem corte lateral** (regra com historial de reclamações: conferir quadros reais do ficheiro final, não só a prévia).
+- **Duração livre nos episódios de série** (fundador, 02/11/2026): o episódio dura o necessário para reter o público sem destruir o entretenimento. Não há mínimo nem máximo; as durações dos perfis passam a referência histórica. Cada segundo tem de ganhar o seguinte: bloco que não segura a atenção corta-se (§5). O formato do Órbita (loop de 12 s) não muda.
 - Carta real, inteira, rodapé visível, nada por cima.
 - Texto legível no telemóvel; legenda dentro da zona segura.
 - Voz, música, efeitos e legendas conferidos no ficheiro final; -14 LUFS (ou o alvo do perfil), pico < -1 dBFS.

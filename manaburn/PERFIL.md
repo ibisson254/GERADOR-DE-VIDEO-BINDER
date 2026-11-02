@@ -29,7 +29,9 @@ Gancho: opinião quente do Burn. Fecho: pergunta do Burn (a mesma do comentário
 
 ## Formato
 
-35–45 s, 14 falas em bate-volta, -14 LUFS.
+Duração livre (constituição §6): a necessária para reter sem perder o ritmo. Referência histórica: 35–53 s nos episódios, 65 s no Giro de domingo. Bate-volta (14 falas no formato base), -14 LUFS.
+
+Formato derivado **Giro de domingo**: três notícias da semana na TV SAL, reação da dupla a cada uma, pergunta "Comenta 1, 2 ou 3" (primeiro publicado a 01/11/2026).
 
 ## Ponte para o BINDER
 

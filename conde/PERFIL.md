@@ -30,7 +30,7 @@ Abertura "Meus caros apreciadores do duvidoso…" e veredito/carimbo conforme `C
 
 ## Formato
 
-~42–48 s, -14 LUFS, layout e paleta de `CONTEXTO.md` §6 (a paleta da série é própria; o verde BINDER só no fecho).
+Duração livre (constituição §6); referência histórica ~42–48 s. -14 LUFS, layout e paleta de `CONTEXTO.md` §6 (a paleta da série é própria; o verde BINDER só no fecho).
 
 ## Ponte para o BINDER
 

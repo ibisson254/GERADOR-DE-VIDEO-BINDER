@@ -30,7 +30,7 @@ Gancho: frase seca com o dado ou a decisão surpreendente (fora do tubo, desconf
 
 ## Formato
 
-35–45 s **sem contar o fecho** do scanner (o EP01 teve 43,4 s + 3,9 s de fecho). Áudio alvo da trilha -16 LUFS (`CONTEXTO.md` §7.1); mix final -14 LUFS. Corte seco da trilha alinhado à revelação (não a um segundo fixo).
+Duração livre (constituição §6), contada sem o fecho do scanner. Referência histórica: EP01 43,4 s, EP02 45,0 s. Áudio alvo da trilha -16 LUFS (`CONTEXTO.md` §7.1); mix final -14 LUFS. Corte seco da trilha alinhado à revelação (não a um segundo fixo).
 
 ## Ponte para o BINDER
 
