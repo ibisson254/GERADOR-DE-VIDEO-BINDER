@@ -3,7 +3,7 @@ h=open('index.html',encoding='utf8').read()
 a=h.index('<!-- quadro torto com vidro rachado -->'); b=h.index('${fan}',a)
 h=h[:a]+"${EP.quadro?'':`"+h[a:b]+"`}\n "+h[b:]
 frame='<g transform="rotate(-2 372 420)"><path d="M372 318 L340 346 M372 318 L404 346" stroke="#2A2218" stroke-width="3"/><circle cx="372" cy="316" r="5" fill="#555"/><rect x="296" y="342" width="152" height="166" fill="#5A3A1E" stroke="#1B1B1B" stroke-width="5"/><rect x="304" y="350" width="136" height="150" fill="none" stroke="#B8934A" stroke-width="4"/><image id="condeimg" href="esp/conde/neutro.png" x="312" y="358" width="120" height="134" preserveAspectRatio="xMidYMid slice"/></g>'
-k='<g id="tvfx" transform="translate(648.95 290.47) scale(0.373)"></g>'
+k="<g id=\"tvfx\"></g>${noiseSVG('W')}</g>"
 assert k in h; h=h.replace(k,k+"${EP.quadro?`"+frame+"`:''}")
 # 2. render: expressão do quadro, frame do clip, cartão da comunidade, legenda do trecho
 k="function render(t){\n  const i=Math.max(0,lineAt(t)), P=POSE[i], tq=Math.floor(t*12)/12, shot=P[6];"
@@ -31,13 +31,15 @@ assert k in h
 h=h.replace(k,"""if(EP.comu){ const o=document.createElement('div'); o.id='comu'; o.innerHTML='<div class="tag">A COMUNIDADE FALOU</div><div class="row"><img src="esp/diego.png"><div><b>@diegoalencard</b><span>comentou no @binderthetrade</span></div></div><p></p>'; document.getElementById('stage').appendChild(o); }
 """+k,1)
 open('index.html','w',encoding='utf8').write(h)
-p=open('process.py',encoding='utf8').read()
-k="t = 0.35; lines = []"; assert k in p
-p=p.replace(k,"t = EPI.get('inicio', 0.35); lines = []")
-k="mix = m * g[:, None] + voice[:, None] + fxt"; assert k in p
-p=p.replace(k,k+"""
-if EPI.get('clip'):      # trecho original do TUBO na TV (som original, sem regenerar voz)
-    w_ = wave.open(EPI['clip']['wav']); c_ = np.frombuffer(w_.readframes(w_.getnframes()), '<i2').astype(np.float32).reshape(-1, 2) / 32768
-    c_ = c_ / (np.max(np.abs(c_)) + 1e-9) * EPI['clip'].get('nivel', 0.8); c_[-int(.05*SR):] *= np.linspace(1, 0, int(.05*SR))[:, None]
-    a_ = int(EPI['clip']['t0'] * SR); mix[a_:a_ + len(c_)] += c_""")
-open('process.py','w',encoding='utf8').write(p)
+import os
+if "EPI.get('inicio'" not in open('process.py',encoding='utf8').read():
+    p=open('process.py',encoding='utf8').read()
+    k="t = 0.35; lines = []"; assert k in p
+    p=p.replace(k,"t = EPI.get('inicio', 0.35); lines = []")
+    k="mix = m * g[:, None] + voice[:, None] + fxt"; assert k in p
+    p=p.replace(k,k+"""
+    if EPI.get('clip'):      # trecho original do TUBO na TV (som original, sem regenerar voz)
+        w_ = wave.open(EPI['clip']['wav']); c_ = np.frombuffer(w_.readframes(w_.getnframes()), '<i2').astype(np.float32).reshape(-1, 2) / 32768
+        c_ = c_ / (np.max(np.abs(c_)) + 1e-9) * EPI['clip'].get('nivel', 0.8); c_[-int(.05*SR):] *= np.linspace(1, 0, int(.05*SR))[:, None]
+        a_ = int(EPI['clip']['t0'] * SR); mix[a_:a_ + len(c_)] += c_""")
+    open('process.py','w',encoding='utf8').write(p)
