@@ -1,0 +1,19 @@
+Conde de Manaforte · Ep. 004 · Joven · fontes (consulta 03/11/2026)
+
+CARTA (dados, Oracle, flavor, imagens)
+https://api.scryfall.com/cards/named?exact=Joven&set=hml
+https://scryfall.com/card/hml/77/joven
+Imagens usadas: png e art_crop (cards.scryfall.io, id 0dabe3af-cd5b-461e-95a4-aad046646419).
+
+Dados confirmados: Joven, Homelands (hml), nº 77, 01/10/1995, arte de Douglas Shuler, {3}{R}{R}, Legendary Creature — Human Rogue, 3/3.
+Oracle: "{R}{R}{R}, {T}: Destroy target noncreature artifact."
+Flavor: "Joven, you're almost as good a thief as I. But Eron hates you even more." —Chandler
+
+PRODUÇÃO
+Voz: ElevenLabs, "Conde de Manaforte" (bbnQVGWT7UMdmoK4URLr), eleven_v4, 1 geração, 909 créditos. Flow "Conde Ep004 · Joven" (udY8JZnNuvhEfFVASwNM).
+Tempos por palavra: eleven_scribe_v1 (0 créditos).
+Música: conde/musica/tema.mp3 ("Verdict in Varnish and Vellum", ElevenLabs Music).
+Fecho: comum/outro/outro_binder_916.mp4.
+
+DIREITOS
+https://company.wizards.com/fancontentpolicy
