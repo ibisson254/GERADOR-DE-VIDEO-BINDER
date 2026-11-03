@@ -56,6 +56,10 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 
 `especiais/precon_em_jogo/`: vídeo final conferido (02/11), publicação prevista a 04/11/2026. Depende do fundador: ouvir, avisar @diegoalencard e publicar.
 
+## Especial "Precon em jogo" · V2 para impulsionamento (03/11/2026)
+
+Branch `especial/precon-em-jogo-v2` (a partir de `especial/precon-em-jogo`). V2 com luz e profundidade em pós-produção (`especiais/precon_em_jogo/polimento_v2.py`), áudio idêntico, QC sem problemas (`qc_v2.md`). Bloqueado: objetos novos e reenquadramento (faltam vozes, `data.js` e quadros do TUBO deste especial no repositório). Aguarda aprovação do fundador.
+
 ## Próximo passo concreto
 
 Próximo Giro ou episódio do Mana & Burn: produzir com o kit v2 de `manaburn/` (já corrigido) ou, se for com o motor do outro chat, aplicar-lhe as mesmas correções de `manaburn/LEIA-ME.md` ("Melhorias de 02/11"); validar com `python3 -I comum/qc/qc_video.py`. Produção normal continua a partir da `main`.
