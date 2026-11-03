@@ -28,3 +28,9 @@
 
 ## Fontes
 `fontes.md`.
+
+## V2 · polimento do cenário (03/11/2026, para impulsionamento)
+- Pedido do fundador: melhorias pontuais de cenário (luz, profundidade, objetos, enquadramento), sem mexer em personagens, identidade, áudio nem duração.
+- Feito em pós-produção sobre o ficheiro aprovado com `polimento_v2.py` (só este episódio; motor `manaburn/index.html` e assets mestres intocados): luz ambiente quente com sombras abertas, reflexo frio azul-esverdeado à volta da TV (segue o logo da TV SAL quadro a quadro e apaga com a tela), parede com um pouco menos de contraste, primeiro plano mais escuro com desfoque leve abaixo da zona das legendas, vinheta leve. Tela da TV, legendas, tarja e fecho ficam com os pixels da original. Áudio copiado sem recodificar.
+- Não feito (bloqueio): objetos novos (manta de crochê, benjamim, piso de taco) e ajustes de enquadramento exigem re-render pelo kit, e faltam no repositório as faixas de voz (burn/mana), o `data.js`/`trilha_final.wav` e os quadros do trecho do TUBO (`esp/clip/*.jpg`) deste especial. Regenerar vozes está fora do pedido. Com esses ficheiros, os objetos entram por `patch.py` (episódio), não pelo motor.
+- QC da V2: `qc_v2.md`.
