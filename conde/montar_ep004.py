@@ -4,6 +4,7 @@ Imagens: art.jpg (art_crop 582x467) e card.png (745x1040), Scryfall hml/77.
 Uso: python3 montar_ep004.py [saida.mp4] [--preview t1,t2,...] [--audio-only]
 """
 import sys, json, math, subprocess, os
+import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 
 BASE = os.path.dirname(os.path.abspath(__file__))           # .../conde
@@ -471,22 +472,65 @@ def frame_at(t):
     return render_frame(t) if t < DUR else outro_frame(t - DUR)
 
 # ------------------------------------------------------------------ áudio
-BEAT = 0.88236                        # 68 batidas/min (meio-tempo de ~136 BPM), medido no tema
-CUT_A = 22.09                         # ponto de emenda no grid do Ep. 002
-CUT_B = CUT_A - 20 * BEAT             # recuo de 20 batidas (como o Ep. 002): tema 44,16 s -> ~61,8 s (cobre episódio + fecho)
+BEAT = 60 / 68                        # grelha medida no tema: 136 BPM (pulso forte a cada 2 tempos), fase 0,03 s
+FASE = 0.03
+CUT_A = FASE + 25 * BEAT              # 22,09 s
+CUT_B = CUT_A - 16 * BEAT             # recuo de 16 pulsos: o fim real do tema cai sob o fecho
+XF = 0.25
+
+def pulso(k):
+    """Tempo do pulso k na música já emendada."""
+    return FASE + k * BEAT
+
+def ancoras():
+    """(tempo no vídeo, pulso da música): os pontos fortes da montagem caem num pulso."""
+    return [(T_REU, 4), (T_CARD, 23), (T_TEXTO, 36), (T_NOTAVEL + 0.05, 50), (T_EMITIDO, 58), (DUR, 61)]
+
+def build_music(path):
+    """Emenda o tema e ajusta o andamento entre âncoras (0,96-1,00), sem mudar a altura."""
+    TEMA = f"{BASE}/musica/tema.mp3"
+    SR = 48000
+    tmp = f"{EP}/audio/_tema_emendado.wav"
+    subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", TEMA, "-filter_complex",
+                    f"[0:a]atrim=0:{CUT_A + XF / 2},asetpts=PTS-STARTPTS[ma];[0:a]atrim={CUT_B - XF / 2},asetpts=PTS-STARTPTS[mb];"
+                    f"[ma][mb]acrossfade=d={XF}:c1=tri:c2=tri,aresample={SR},aformat=channel_layouts=stereo[o]",
+                    "-map", "[o]", tmp], check=True)
+    x = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-i", tmp, "-f", "f32le", "-ac", "2", "-ar", str(SR), "-"],
+                                     capture_output=True, check=True).stdout, np.float32).reshape(-1, 2).copy()
+    an = ancoras()
+    entrada = an[0][0] - pulso(an[0][1])           # a música entra atrasada para o 1.º pulso cair no carimbo
+    out = [np.zeros((int(entrada * SR), 2), np.float32), x[:int(pulso(an[0][1]) * SR)]]
+    fade = int(0.012 * SR)
+    for (t0, k0), (t1, k1) in zip(an, an[1:]):
+        m0, m1 = pulso(k0), pulso(k1)
+        r = (m1 - m0) / (t1 - t0)
+        seg = x[int(m0 * SR):int(m1 * SR) + SR // 2]
+        y = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-",
+                                          "-af", f"atempo={r:.5f}", "-f", "f32le", "-"], input=seg.tobytes(), capture_output=True,
+                                         check=True).stdout, np.float32).reshape(-1, 2).copy()
+        n = int(round(t1 * SR)) - sum(len(o) for o in out)
+        y = y[:n + fade]
+        cauda = out[-1][-fade:]
+        k = np.linspace(0, 1, fade)[:, None]
+        y[:fade] = y[:fade] * k + cauda * (1 - k)      # 12 ms de cruzamento na junção
+        out[-1] = out[-1][:-fade]
+        out.append(y)
+        print(f"{t0:6.2f} -> {t1:6.2f}  pulsos {k0}-{k1}  andamento {r:.3f}")
+    out.append(x[int(pulso(an[-1][1]) * SR):])         # sob o fecho: andamento original até ao fim do tema
+    y = np.concatenate(out)
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-", path], input=y.tobytes(), check=True)
+    os.remove(tmp)
 
 def stamps():
     return [T_REU, T_NOTAVEL + 0.05, T_EMITIDO]
 
 def build_audio(path):
-    TEMA = f"{BASE}/musica/tema.mp3"
-    XF = 0.25
+    mus = f"{EP}/audio/musica_sync.wav"
+    build_music(mus)
     st = stamps()
     rise = words[-1][2] + 0.1
     parts = [
-        f"[1:a]atrim=0:{CUT_A + XF / 2},asetpts=PTS-STARTPTS[ma]",
-        f"[1:a]atrim={CUT_B - XF / 2},asetpts=PTS-STARTPTS[mb]",
-        f"[ma][mb]acrossfade=d={XF}:c1=tri:c2=tri,aresample=48000,aformat=channel_layouts=stereo,volume=-3dB,apad=pad_dur=2[mus]",
+        "[1:a]aresample=48000,aformat=channel_layouts=stereo,volume=-3dB,apad=pad_dur=2[mus]",
         f"[0:a]aresample=48000,aformat=channel_layouts=stereo,apad=pad_dur={OUT_LEN + 3},asplit=2[vox][key]",
         "[mus][key]sidechaincompress=threshold=0.025:ratio=5:attack=25:release=450:makeup=1,"
         f"volume='1+min(max((t-{rise:.2f})/0.4,0),1)':eval=frame[bed]",
@@ -498,7 +542,7 @@ def build_audio(path):
     parts.append(f"[vox][bed]{mix}amix=inputs={len(st)+2}:normalize=0:duration=longest,"
                  f"atrim=0:{TOTAL},afade=t=out:st={TOTAL-0.6}:d=0.6,loudnorm=I=-14:TP=-2.2:LRA=11[a]")
     subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
-                    "-i", f"{EP}/audio/narracao.wav", "-i", TEMA,
+                    "-i", f"{EP}/audio/narracao.wav", "-i", mus,
                     "-filter_complex", ";".join(parts), "-map", "[a]", "-ar", "48000", "-ac", "2", path], check=True)
 
 def main():

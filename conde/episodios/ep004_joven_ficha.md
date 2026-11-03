@@ -40,7 +40,7 @@ Lista completa: `ep004_fontes.txt`.
 ## Produção
 - Recursos reutilizados: medalhão e 4 expressões, tema, layout e motor do Ep. 003, fecho oficial.
 - Voz: 1 geração, 909 créditos; take de 66,5 s. Grafia fonética no TTS para Joven, Chandler e Eron. atempo 1,15 (como o Ep. 003), sem cortar frases.
-- Música: emenda em 22,09 s, recuo de 20 batidas (como o Ep. 002), crossfade 0,25 s, sting em 3 carimbos.
+- Música (sincronia revista a 03/11): grelha medida no tema (136 BPM, fase 0,03 s); emenda em 22,09 s, recuo de 16 pulsos, crossfade 0,25 s; entrada 0,22 s depois do início; andamento ajustado entre âncoras (0,963–1,000, sem mudar a altura) para os pulsos caírem em RÉU, na entrada da habilidade, na entrada do texto de ambientação, em OBRA NOTÁVEL, em PARECER EMITIDO e no corte para o fecho (erro medido ≤ 24 ms). O fim real do tema cai sob o fade do fecho. Sting em 3 carimbos.
 - Arte: art_crop 582×467 → palco 1080×867, largura total.
 - Easter egg: nenhum.
 
@@ -57,7 +57,7 @@ Lista completa: `ep004_fontes.txt`.
 | `qc_video.py --frente conde` | sem problemas mensuráveis |
 | Formato | 1080×1920, 30 fps, H.264 + AAC 48 kHz |
 | Duração | 55,1 s + fecho = 58,97 s |
-| Loudness | −13,9 LUFS, pico −1,3 dBTP |
+| Loudness | −13,9 LUFS, pico −1,5 dBTP |
 | Fecho oficial | presente a partir de 55,1 s (dif. 0,06) |
 | Corte lateral | crop=1080:1920:0:0 nos 1653 quadros medidos do episódio |
 | Quadros vistos | folha de contacto (1 quadro/s) e quadros extraídos do MP4 final |
