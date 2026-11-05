@@ -1,0 +1,202 @@
+[
+ {
+  "par": "BR",
+  "nome": "Rakdos",
+  "plano": "Klingons e sacrifício",
+  "disponibilidade": 4.8,
+  "potencia": 4.8,
+  "consistencia": 3.9,
+  "flexibilidade": 3.8,
+  "total": 4.32,
+  "motor_T5": 64.6,
+  "remocao_pool": 5.75,
+  "p5rem": 69.7,
+  "payoffs_pool": 5.01,
+  "melhor_modelo": 17.58,
+  "banda": [
+   10.69,
+   30.52
+  ],
+  "confianca": "média-baixa"
+ },
+ {
+  "par": "BG",
+  "nome": "Golgari",
+  "plano": "Cemitério e recursão",
+  "disponibilidade": 4.4,
+  "potencia": 4.7,
+  "consistencia": 3.1,
+  "flexibilidade": 2.3,
+  "total": 3.62,
+  "motor_T5": 46.6,
+  "remocao_pool": 3.44,
+  "p5rem": 25.6,
+  "payoffs_pool": 4.28,
+  "melhor_modelo": 13.9,
+  "banda": [
+   7.81,
+   22.3
+  ],
+  "confianca": "baixa"
+ },
+ {
+  "par": "RG",
+  "nome": "Gruul",
+  "plano": "Landfall",
+  "disponibilidade": 3.7,
+  "potencia": 4.3,
+  "consistencia": 2.4,
+  "flexibilidade": 4.0,
+  "total": 3.6,
+  "motor_T5": 49.3,
+  "remocao_pool": 4.01,
+  "p5rem": 37.4,
+  "payoffs_pool": 2.99,
+  "melhor_modelo": 13.27,
+  "banda": [
+   7.28,
+   22.63
+  ],
+  "confianca": "baixa"
+ },
+ {
+  "par": "WB",
+  "nome": "Orzhov",
+  "plano": "Borg, criaturas artefato",
+  "disponibilidade": 1.5,
+  "potencia": 3.1,
+  "consistencia": 3.4,
+  "flexibilidade": 3.9,
+  "total": 2.97,
+  "motor_T5": 24.6,
+  "remocao_pool": 5.27,
+  "p5rem": 61.9,
+  "payoffs_pool": 2.5,
+  "melhor_modelo": 10.05,
+  "banda": [
+   3.65,
+   19.46
+  ],
+  "confianca": "baixa"
+ },
+ {
+  "par": "RW",
+  "nome": "Boros",
+  "plano": "Poder total 8+",
+  "disponibilidade": 1.2,
+  "potencia": 2.8,
+  "consistencia": 2.6,
+  "flexibilidade": 4.9,
+  "total": 2.88,
+  "motor_T5": 24.2,
+  "remocao_pool": 5.59,
+  "p5rem": 67.3,
+  "payoffs_pool": 2.22,
+  "melhor_modelo": 7.94,
+  "banda": [
+   4.27,
+   12.28
+  ],
+  "confianca": "baixa"
+ },
+ {
+  "par": "UR",
+  "nome": "Izzet",
+  "plano": "Cientistas, não-criaturas",
+  "disponibilidade": 3.4,
+  "potencia": 2.6,
+  "consistencia": 2.3,
+  "flexibilidade": 3.0,
+  "total": 2.82,
+  "motor_T5": 35.6,
+  "remocao_pool": 4.58,
+  "p5rem": 49.1,
+  "payoffs_pool": 2.49,
+  "melhor_modelo": 8.14,
+  "banda": [
+   3.64,
+   13.88
+  ],
+  "confianca": "baixa"
+ },
+ {
+  "par": "GW",
+  "nome": "Selesnya",
+  "plano": "Médicos e marcadores",
+  "disponibilidade": 1.4,
+  "potencia": 3.2,
+  "consistencia": 3.3,
+  "flexibilidade": 2.3,
+  "total": 2.56,
+  "motor_T5": 39.2,
+  "remocao_pool": 3.28,
+  "p5rem": 22.4,
+  "payoffs_pool": 2.48,
+  "melhor_modelo": 9.77,
+  "banda": [
+   4.75,
+   17.03
+  ],
+  "confianca": "baixa"
+ },
+ {
+  "par": "UB",
+  "nome": "Dimir",
+  "plano": "Dilemma",
+  "disponibilidade": 3.0,
+  "potencia": 2.9,
+  "consistencia": 1.7,
+  "flexibilidade": 2.2,
+  "total": 2.45,
+  "motor_T5": 14.9,
+  "remocao_pool": 4.01,
+  "p5rem": 37.2,
+  "payoffs_pool": 2.18,
+  "melhor_modelo": 8.03,
+  "banda": [
+   2.39,
+   14.94
+  ],
+  "confianca": "baixa"
+ },
+ {
+  "par": "GU",
+  "nome": "Simic",
+  "plano": "Strange New Worlds",
+  "disponibilidade": 3.4,
+  "potencia": 2.6,
+  "consistencia": 2.0,
+  "flexibilidade": 1.7,
+  "total": 2.4,
+  "motor_T5": 25.1,
+  "remocao_pool": 2.26,
+  "p5rem": 6.9,
+  "payoffs_pool": 2.49,
+  "melhor_modelo": 5.94,
+  "banda": [
+   2.28,
+   10.16
+  ],
+  "confianca": "baixa"
+ },
+ {
+  "par": "WU",
+  "nome": "Azorius",
+  "plano": "Spacecraft e artífices",
+  "disponibilidade": 2.2,
+  "potencia": 1.0,
+  "consistencia": 3.8,
+  "flexibilidade": 1.9,
+  "total": 2.2,
+  "motor_T5": 41.5,
+  "remocao_pool": 3.85,
+  "p5rem": 33.8,
+  "payoffs_pool": 2.87,
+  "melhor_modelo": 5.39,
+  "banda": [
+   1.95,
+   10.63
+  ],
+  "confianca": "baixa"
+ }
+]

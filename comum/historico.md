@@ -43,6 +43,19 @@ Print do próprio post (não do Insights), enviado pelo Ibisson. Entra no quadro
 
 - 03/11/2026 · Conde de Manaforte Ep. 004 (Joven, Homelands 1995, arte de Douglas Shuler). **Produzido, não publicado.** Render conferido (55,1 s + fecho, sem corte lateral, −13,9 LUFS, pico −1,5 dBTP): `conde/episodios/ep004_joven_ficha.md`. Sem easter egg. Hipótese em teste: pergunta A/B com dois réus concretos. Métricas: aguardam publicação.
 
+- 05/11/2026 · Meta em Curto EP05 "A Enterprise-A que você quer: 3,8% de abrir" (Star Trek, radar para o pré-release; Sealed). **Produzido, não publicado.** Render conferido (93,1 s + fecho, sem corte lateral, −14,0 LUFS, pico −1,9 dBTP; áudio medido, não ouvido): `oraculo/episodios/ep05_star_trek_ficha.md`. Dossiê: `oraculo/episodios/ep05_star_trek_dossie.md`. Branch `meta-em-curto-ep05`. Hipótese em teste: gráfico próprio aumenta guardados; pergunta A/B/C sobre decisão real gera respostas. Métricas: aguardam publicação.
+
+## Previsões registadas do TUBO
+
+| Data | Episódio | Previsão | Tipo | Confiança | Auditar | Resultado |
+|---|---|---|---|---|---|---|
+| 05/11/2026 | EP05 | Rakdos no top 3 de win rate do Sealed de Star Trek no 17Lands (todos os jogadores, pares de duas cores) | pública, marcada no ecrã | baixa (~35%) | 01/12/2026 | em aberto |
+| 05/11/2026 | EP05 | Azorius na metade de baixo do mesmo ranking | só registo | baixa | 01/12/2026 | em aberto |
+| 05/11/2026 | EP05 | Decks de 3+ cores abaixo dos de 2 cores no Sealed de Star Trek | só registo | média-baixa | 01/12/2026 | em aberto |
+| 05/11/2026 | EP05 | Ranking de Draft de Star Trek com Spearman < 0,7 contra o de Sealed | só registo | média-baixa | 01/12/2026 | em aberto |
+
+Erro numa previsão pública = "Erro de sistema" num episódio seguinte (`oraculo/CONTEXTO.md` §7.2.4).
+
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 
 - Especial de Halloween 2026 (Innistrad × Duskmourn): **publicado**. A música que acima aparece como "provisória" foi aprovada como está.

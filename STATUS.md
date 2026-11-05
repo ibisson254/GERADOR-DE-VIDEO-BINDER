@@ -52,10 +52,14 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 - `oraculo/episodios/ep01_render_v2.py` importa `render`, que não existe; `conde/montar_ep002.py` tem caminho absoluto. Não se mexe em scripts de episódios publicados sem necessidade.
 - Skills `binder-*` ainda mandam ler primeiro o Drive e dizem que o Scryfall não abre; alinhar com o repositório quando o fundador quiser.
 
+## Meta em Curto EP05 (05/11/2026)
+
+Star Trek, engenharia de um deck (Sealed, radar para o pré-release): **produzido, por publicar**. Branch `meta-em-curto-ep05`. Ficha `oraculo/episodios/ep05_star_trek_ficha.md`, dossiê `oraculo/episodios/ep05_star_trek_dossie.md`, análises em `oraculo/ep05/`, pacote em `oraculo/legendas/ep05_star_trek_legenda.txt`. Áudio medido, não ouvido. Previsão aberta: auditar a 01/12/2026 (`comum/historico.md`). Limite conhecido: sem listas completas nem grupo mediano, porque o 17Lands não está acessível nas sessões.
+
 ## Próximo passo concreto
 
-Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a pronúncia de "Joven", "Chandler" e "Eron" e publica o pacote (`conde/legendas/ep004_joven_legenda.txt`, ficha em `conde/episodios/ep004_joven_ficha.md`; o vídeo não está no repositório, recria-se com `python3 conde/montar_ep004.py`, desde que `conde/ep004/audio/narracao.wav` exista: se faltar, ver o flow ElevenLabs em `conde/episodios/ep004_fontes.txt`). Depois: próximo Giro ou episódio do Mana & Burn com o kit v2 de `manaburn/`; validar com `python3 -I comum/qc/qc_video.py`.
+O fundador ouve o áudio do EP05 (pronúncias e corte em ~36–40 s) e decide sobre os 93 s antes de publicar; o pré-release decorre de 6 a 12/11. Mantém-se de antes: Conde Ep. 004 (Joven) por publicar (`conde/legendas/ep004_joven_legenda.txt`, ficha em `conde/episodios/ep004_joven_ficha.md`; recria-se com `python3 conde/montar_ep004.py`). Depois: próximo Giro ou episódio do Mana & Burn com o kit v2 de `manaburn/`; validar com `python3 -I comum/qc/qc_video.py`.
 
 ## Handoff
 
-Ver o handoff de 02/11/2026 na mensagem de fecho da sessão e no fim de `nucleo/auditorias/2026-11-02_evolucao_visual.md`.
+Último: EP05, 05/11/2026, na mensagem de fecho da sessão. Anterior: 02/11/2026, no fim de `nucleo/auditorias/2026-11-02_evolucao_visual.md`.

@@ -1,0 +1,556 @@
+{
+ "abertura": {
+  "rara_especifica_booster": 1.286,
+  "rara_especifica_6": 7.47,
+  "mitica_especifica_booster": 0.639,
+  "mitica_especifica_6": 3.77,
+  "qualquer_mitica_booster_piso": 15.53,
+  "qualquer_mitica_6_piso": 63.68,
+  "qualquer_rara_ou_mitica_6": 100.0,
+  "booster_com_2+_raras_piso": 25.19,
+  "raras_miticas_esperadas_6_piso": 7.596,
+  "6boosters_0_extras_piso": 17.53,
+  "6boosters_2+_extras_piso": 47.06,
+  "stardates_6_boosters": 21.72,
+  "vaga_rara_mitica_mitica_oficial": 12.4,
+  "dual_especifico_6": 26.49
+ },
+ "copias": {
+  "jogando": {
+   "1": {
+    "mao": 17.5,
+    "T2": 20.0,
+    "T3": 22.5,
+    "T4": 25.0,
+    "T5": 27.5,
+    "T6": 30.0,
+    "T7": 32.5,
+    "T8": 35.0
+   },
+   "2": {
+    "mao": 32.31,
+    "T2": 36.41,
+    "T3": 40.38,
+    "T4": 44.23,
+    "T5": 47.95,
+    "T6": 51.54,
+    "T7": 55.0,
+    "T8": 58.33
+   },
+   "3": {
+    "mao": 44.78,
+    "T2": 49.8,
+    "T3": 54.5,
+    "T4": 58.91,
+    "T5": 63.02,
+    "T6": 66.84,
+    "T7": 70.39,
+    "T8": 73.68
+   },
+   "4": {
+    "mao": 55.22,
+    "T2": 60.65,
+    "T3": 65.57,
+    "T4": 70.01,
+    "T5": 74.01,
+    "T6": 77.6,
+    "T7": 80.8,
+    "T8": 83.64
+   },
+   "5": {
+    "mao": 63.93,
+    "T2": 69.4,
+    "T3": 74.18,
+    "T4": 78.34,
+    "T5": 81.95,
+    "T6": 85.06,
+    "T7": 87.73,
+    "T8": 90.0
+   },
+   "6": {
+    "mao": 71.14,
+    "T2": 76.39,
+    "T3": 80.82,
+    "T4": 84.53,
+    "T5": 87.62,
+    "T6": 90.18,
+    "T7": 92.29,
+    "T8": 94.0
+   },
+   "7": {
+    "mao": 77.09,
+    "T2": 81.95,
+    "T3": 85.9,
+    "T4": 89.08,
+    "T5": 91.63,
+    "T6": 93.65,
+    "T7": 95.24,
+    "T8": 96.47
+   },
+   "8": {
+    "mao": 81.95,
+    "T2": 86.32,
+    "T3": 89.74,
+    "T4": 92.39,
+    "T5": 94.42,
+    "T6": 95.96,
+    "T7": 97.11,
+    "T8": 97.97
+   }
+  },
+  "comprando": {
+   "1": {
+    "mao": 17.5,
+    "T2": 22.5,
+    "T3": 25.0,
+    "T4": 27.5,
+    "T5": 30.0,
+    "T6": 32.5,
+    "T7": 35.0,
+    "T8": 37.5
+   },
+   "2": {
+    "mao": 32.31,
+    "T2": 40.38,
+    "T3": 44.23,
+    "T4": 47.95,
+    "T5": 51.54,
+    "T6": 55.0,
+    "T7": 58.33,
+    "T8": 61.54
+   },
+   "3": {
+    "mao": 44.78,
+    "T2": 54.5,
+    "T3": 58.91,
+    "T4": 63.02,
+    "T5": 66.84,
+    "T6": 70.39,
+    "T7": 73.68,
+    "T8": 76.72
+   },
+   "4": {
+    "mao": 55.22,
+    "T2": 65.57,
+    "T3": 70.01,
+    "T4": 74.01,
+    "T5": 77.6,
+    "T6": 80.8,
+    "T7": 83.64,
+    "T8": 86.16
+   },
+   "5": {
+    "mao": 63.93,
+    "T2": 74.18,
+    "T3": 78.34,
+    "T4": 81.95,
+    "T5": 85.06,
+    "T6": 87.73,
+    "T7": 90.0,
+    "T8": 91.93
+   },
+   "6": {
+    "mao": 71.14,
+    "T2": 80.82,
+    "T3": 84.53,
+    "T4": 87.62,
+    "T5": 90.18,
+    "T6": 92.29,
+    "T7": 94.0,
+    "T8": 95.39
+   },
+   "7": {
+    "mao": 77.09,
+    "T2": 85.9,
+    "T3": 89.08,
+    "T4": 91.63,
+    "T5": 93.65,
+    "T6": 95.24,
+    "T7": 96.47,
+    "T8": 97.42
+   },
+   "8": {
+    "mao": 81.95,
+    "T2": 89.74,
+    "T3": 92.39,
+    "T4": 94.42,
+    "T5": 95.96,
+    "T6": 97.11,
+    "T7": 97.97,
+    "T8": 98.59
+   }
+  }
+ },
+ "terrenos": {
+  "16": {
+   "jogando": {
+    ">=2T_T2": 91.84,
+    ">=3T_T3": 80.03,
+    ">=4T_T4": 64.02,
+    ">=5T_T5": 46.68,
+    ">=6T_T6": 30.9,
+    "mao_2a5": 85.5
+   },
+   "comprando": {
+    ">=2T_T2": 95.22,
+    ">=3T_T3": 86.89,
+    ">=4T_T4": 73.93,
+    ">=5T_T5": 57.96,
+    ">=6T_T6": 41.53,
+    "mao_2a5": 85.5
+   }
+  },
+  "17": {
+   "jogando": {
+    ">=2T_T2": 93.94,
+    ">=3T_T3": 84.46,
+    ">=4T_T4": 70.69,
+    ">=5T_T5": 54.63,
+    ">=6T_T6": 38.79,
+    "mao_2a5": 87.85
+   },
+   "comprando": {
+    ">=2T_T2": 96.65,
+    ">=3T_T3": 90.36,
+    ">=4T_T4": 79.87,
+    ">=5T_T5": 65.95,
+    ">=6T_T6": 50.43,
+    "mao_2a5": 87.85
+   }
+  },
+  "18": {
+   "jogando": {
+    ">=2T_T2": 95.59,
+    ">=3T_T3": 88.17,
+    ">=4T_T4": 76.68,
+    ">=5T_T5": 62.31,
+    ">=6T_T6": 47.06,
+    "mao_2a5": 89.52
+   },
+   "comprando": {
+    ">=2T_T2": 97.71,
+    ">=3T_T3": 93.1,
+    ">=4T_T4": 84.89,
+    ">=5T_T5": 73.21,
+    ">=6T_T6": 59.2,
+    "mao_2a5": 89.52
+   }
+  }
+ },
+ "dois_drop_T2": {
+  "16T_3c2": {
+   "jogando": 44.32,
+   "comprando": 51.02
+  },
+  "16T_5c2": {
+   "jogando": 62.39,
+   "comprando": 69.87
+  },
+  "16T_7c2": {
+   "jogando": 74.23,
+   "comprando": 81.26
+  },
+  "16T_8c2": {
+   "jogando": 78.42,
+   "comprando": 85.04
+  },
+  "16T_9c2": {
+   "jogando": 81.73,
+   "comprando": 87.88
+  },
+  "17T_3c2": {
+   "jogando": 45.62,
+   "comprando": 52.0
+  },
+  "17T_5c2": {
+   "jogando": 64.1,
+   "comprando": 71.12
+  },
+  "17T_7c2": {
+   "jogando": 76.16,
+   "comprando": 82.63
+  },
+  "17T_8c2": {
+   "jogando": 80.42,
+   "comprando": 86.44
+  },
+  "17T_9c2": {
+   "jogando": 83.77,
+   "comprando": 89.3
+  },
+  "18T_3c2": {
+   "jogando": 46.67,
+   "comprando": 52.75
+  },
+  "18T_5c2": {
+   "jogando": 65.48,
+   "comprando": 72.06
+  },
+  "18T_7c2": {
+   "jogando": 77.7,
+   "comprando": 83.65
+  },
+  "18T_8c2": {
+   "jogando": 82.0,
+   "comprando": 87.48
+  },
+  "18T_9c2": {
+   "jogando": 85.38,
+   "comprando": 90.35
+  }
+ },
+ "duas_cores": {
+  "9+8+0d_jogando_T2": 76.7,
+  "9+8+0d_jogando_T3": 82.67,
+  "9+8+0d_jogando_T4": 87.29,
+  "9+8+0d_jogando_T5": 90.81,
+  "9+8+0d_comprando_T2": 82.67,
+  "9+8+0d_comprando_T3": 87.29,
+  "9+8+0d_comprando_T4": 90.81,
+  "9+8+0d_comprando_T5": 93.46,
+  "8+8+1d_jogando_T2": 80.12,
+  "8+8+1d_jogando_T3": 85.55,
+  "8+8+1d_jogando_T4": 89.67,
+  "8+8+1d_jogando_T5": 92.73,
+  "8+8+1d_comprando_T2": 85.55,
+  "8+8+1d_comprando_T3": 89.67,
+  "8+8+1d_comprando_T4": 92.73,
+  "8+8+1d_comprando_T5": 94.97,
+  "8+7+2d_jogando_T2": 82.77,
+  "8+7+2d_jogando_T3": 87.69,
+  "8+7+2d_jogando_T4": 91.36,
+  "8+7+2d_jogando_T5": 94.03,
+  "8+7+2d_comprando_T2": 87.69,
+  "8+7+2d_comprando_T3": 91.36,
+  "8+7+2d_comprando_T4": 94.03,
+  "8+7+2d_comprando_T5": 95.95,
+  "7+7+3d_jogando_T2": 85.42,
+  "7+7+3d_jogando_T3": 89.83,
+  "7+7+3d_jogando_T4": 93.05,
+  "7+7+3d_jogando_T5": 95.33,
+  "7+7+3d_comprando_T2": 89.83,
+  "7+7+3d_comprando_T3": 93.05,
+  "7+7+3d_comprando_T4": 95.33,
+  "7+7+3d_comprando_T5": 96.93,
+  "10+7+0d_jogando_T2": 74.97,
+  "10+7+0d_jogando_T3": 80.96,
+  "10+7+0d_jogando_T4": 85.67,
+  "10+7+0d_jogando_T5": 89.32,
+  "10+7+0d_comprando_T2": 80.96,
+  "10+7+0d_comprando_T3": 85.67,
+  "10+7+0d_comprando_T4": 89.32,
+  "10+7+0d_comprando_T5": 92.13
+ },
+ "fontes": {
+  "CC_7fontes_T4": {
+   "jogando": 57.23,
+   "comprando": 63.6
+  },
+  "CC_8fontes_T4": {
+   "jogando": 65.92,
+   "comprando": 72.09
+  },
+  "CC_9fontes_T4": {
+   "jogando": 73.36,
+   "comprando": 79.07
+  },
+  "CC_10fontes_T4": {
+   "jogando": 79.58,
+   "comprando": 84.64
+  },
+  "splash_2fontes": {
+   "T6": {
+    "jogando": 51.54,
+    "comprando": 55.0
+   },
+   "T8": {
+    "jogando": 58.33,
+    "comprando": 61.54
+   }
+  },
+  "splash_3fontes": {
+   "T6": {
+    "jogando": 66.84,
+    "comprando": 70.39
+   },
+   "T8": {
+    "jogando": 73.68,
+    "comprando": 76.72
+   }
+  },
+  "splash_4fontes": {
+   "T6": {
+    "jogando": 77.6,
+    "comprando": 80.8
+   },
+   "T8": {
+    "jogando": 83.64,
+    "comprando": 86.16
+   }
+  }
+ },
+ "sinergia": {
+  "T4_jogando": {
+   "bomba_1_copia": 25.0,
+   "combo_2pecas_1_1": 5.77,
+   "2_de_3_pecas_unicas": 14.88,
+   "2_de_4_pecas_unicas": 25.59,
+   "2_de_5": 36.69,
+   "2_de_7": 57.23,
+   "2_de_9": 73.36,
+   "unico_payoff_8_peças": 15.18,
+   "3_payoffs_8_peças": 36.64,
+   "4_payoffs_8_peças": 44.0,
+   "5_payoffs_8_peças": 49.68,
+   ">=1_de_7": 89.08,
+   ">=1_de_9": 94.77
+  },
+  "T4_comprando": {
+   "bomba_1_copia": 27.5,
+   "combo_2pecas_1_1": 7.05,
+   "2_de_3_pecas_unicas": 17.81,
+   "2_de_4_pecas_unicas": 30.03,
+   "2_de_5": 42.25,
+   "2_de_7": 63.6,
+   "2_de_9": 79.07,
+   "unico_payoff_8_peças": 18.61,
+   "3_payoffs_8_peças": 43.54,
+   "4_payoffs_8_peças": 51.58,
+   "5_payoffs_8_peças": 57.53,
+   ">=1_de_7": 91.63,
+   ">=1_de_9": 96.34
+  },
+  "T5_jogando": {
+   "bomba_1_copia": 27.5,
+   "combo_2pecas_1_1": 7.05,
+   "2_de_3_pecas_unicas": 17.81,
+   "2_de_4_pecas_unicas": 30.03,
+   "2_de_5": 42.25,
+   "2_de_7": 63.6,
+   "2_de_9": 79.07,
+   "unico_payoff_8_peças": 18.61,
+   "3_payoffs_8_peças": 43.54,
+   "4_payoffs_8_peças": 51.58,
+   "5_payoffs_8_peças": 57.53,
+   ">=1_de_7": 91.63,
+   ">=1_de_9": 96.34
+  },
+  "T5_comprando": {
+   "bomba_1_copia": 30.0,
+   "combo_2pecas_1_1": 8.46,
+   "2_de_3_pecas_unicas": 20.93,
+   "2_de_4_pecas_unicas": 34.58,
+   "2_de_5": 47.72,
+   "2_de_7": 69.4,
+   "2_de_9": 83.83,
+   "unico_payoff_8_peças": 22.13,
+   "3_payoffs_8_peças": 50.21,
+   "4_payoffs_8_peças": 58.7,
+   "5_payoffs_8_peças": 64.73,
+   ">=1_de_7": 93.65,
+   ">=1_de_9": 97.47
+  },
+  "T6_jogando": {
+   "bomba_1_copia": 30.0,
+   "combo_2pecas_1_1": 8.46,
+   "2_de_3_pecas_unicas": 20.93,
+   "2_de_4_pecas_unicas": 34.58,
+   "2_de_5": 47.72,
+   "2_de_7": 69.4,
+   "2_de_9": 83.83,
+   "unico_payoff_8_peças": 22.13,
+   "3_payoffs_8_peças": 50.21,
+   "4_payoffs_8_peças": 58.7,
+   "5_payoffs_8_peças": 64.73,
+   ">=1_de_7": 93.65,
+   ">=1_de_9": 97.47
+  },
+  "T6_comprando": {
+   "bomba_1_copia": 32.5,
+   "combo_2pecas_1_1": 10.0,
+   "2_de_3_pecas_unicas": 24.21,
+   "2_de_4_pecas_unicas": 39.19,
+   "2_de_5": 53.06,
+   "2_de_7": 74.6,
+   "2_de_9": 87.73,
+   "unico_payoff_8_peças": 25.7,
+   "3_payoffs_8_peças": 56.51,
+   "4_payoffs_8_peças": 65.23,
+   "5_payoffs_8_peças": 71.16,
+   ">=1_de_7": 95.24,
+   ">=1_de_9": 98.29
+  },
+  "T8_jogando": {
+   "bomba_1_copia": 35.0,
+   "combo_2pecas_1_1": 11.67,
+   "2_de_3_pecas_unicas": 27.63,
+   "2_de_4_pecas_unicas": 43.81,
+   "2_de_5": 58.2,
+   "2_de_7": 79.18,
+   "2_de_9": 90.86,
+   "unico_payoff_8_peças": 29.25,
+   "3_payoffs_8_peças": 62.35,
+   "4_payoffs_8_peças": 71.1,
+   "5_payoffs_8_peças": 76.77,
+   ">=1_de_7": 96.47,
+   ">=1_de_9": 98.86
+  },
+  "T8_comprando": {
+   "bomba_1_copia": 37.5,
+   "combo_2pecas_1_1": 13.46,
+   "2_de_3_pecas_unicas": 31.17,
+   "2_de_4_pecas_unicas": 48.41,
+   "2_de_5": 63.09,
+   "2_de_7": 83.17,
+   "2_de_9": 93.32,
+   "unico_payoff_8_peças": 32.74,
+   "3_payoffs_8_peças": 67.67,
+   "4_payoffs_8_peças": 76.27,
+   "5_payoffs_8_peças": 81.59,
+   ">=1_de_7": 97.42,
+   ">=1_de_9": 99.25
+  }
+ },
+ "mc_confirmacao": {
+  "T5_chave_jogando": 27.56,
+  "c2_T2_jogando": 76.07,
+  "curva_2_3_jogando": 51.66,
+  "4T_T4_jogando": 70.7,
+  "T5_chave_comprando": 30.07,
+  "c2_T2_comprando": 82.54,
+  "curva_2_3_comprando": 62.9,
+  "4T_T4_comprando": 79.88
+ },
+ "mulligan_17T_7chaves": {
+  "jogando": {
+   "mantem_7": 87.87,
+   "vai_a_6": 10.66,
+   "vai_a_5": 1.48,
+   "chave_ate_T5_com_mull": 91.28,
+   "chave_ate_T5_sem_mull_mesma_regra": 91.63
+  },
+  "comprando": {
+   "mantem_7": 87.85,
+   "vai_a_6": 10.68,
+   "vai_a_5": 1.47,
+   "chave_ate_T5_com_mull": 93.38,
+   "chave_ate_T5_sem_mull_mesma_regra": 93.65
+  }
+ },
+ "mulligan_17T_1chave": {
+  "jogando": {
+   "mantem_7": 87.87,
+   "vai_a_6": 10.66,
+   "vai_a_5": 1.48,
+   "chave_ate_T5_com_mull": 26.74,
+   "chave_ate_T5_sem_mull_mesma_regra": 27.5
+  },
+  "comprando": {
+   "mantem_7": 87.83,
+   "vai_a_6": 10.7,
+   "vai_a_5": 1.47,
+   "chave_ate_T5_com_mull": 29.31,
+   "chave_ate_T5_sem_mull_mesma_regra": 30.0
+  }
+ }
+}

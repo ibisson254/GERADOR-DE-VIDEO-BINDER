@@ -1,0 +1,62 @@
+{
+ "episodio": "Meta em Curto EP05 · Star Trek: engenharia de um deck vencedor (radar para o pré-release, Sealed)",
+ "nota": "Sintaxe: {legenda|fala}. Fora das chavetas a legenda e a fala são iguais. A fala é a grafia fonética enviada ao ElevenLabs; cada bloco {a|b} vira um só cartão de legenda com o tempo de todas as palavras faladas. A frase das sete cartas veio de uma correção (o take original dizia 91, arredondamento errado de 91,63%): ver ep05_audio.py.",
+ "blocos": [
+  {
+   "id": "gancho_a",
+   "onde": "fora",
+   "texto": "A {Enterprise-A|Énterpraiz Ei} que você quer: {3,8%|três vírgula oito por cento} de abrir."
+  },
+  {
+   "id": "gancho_b",
+   "onde": "dentro",
+   "texto": "Se abrir, {27,5%|vinte e sete e meio por cento} de ver até o turno cinco. Junte as duas: {1 jogo em 96.|um jogo em noventa e seis.} E você vai passar o {pré-release|pré-rilís} torcendo por ela."
+  },
+  {
+   "id": "arquivo",
+   "onde": "dentro",
+   "texto": "{Win rate|Uín rêit} de {Star Trek:|Star Trék:} zero partidas registradas. Dado que não existe, eu não invento. Então fui aos troféus."
+  },
+  {
+   "id": "trofeus",
+   "onde": "dentro",
+   "texto": "{69 listas de troféu|Sessenta e nove listas de troféu} de {Sealed,|Síld,} nove coleções. {58 com duas cores.|Cinquenta e oito com duas cores.} Com três, só uma em onze perdeu no máximo uma vez. É padrão, não é causa."
+  },
+  {
+   "id": "draft",
+   "onde": "dentro",
+   "texto": "E não copie o Mundial: lá é {Draft.|Dréft.} Em {Reality Fracture,|Riáliti Frátchur,} o terceiro par do {Draft|Dréft} foi o nono do {Sealed.|Síld.}"
+  },
+  {
+   "id": "conta",
+   "onde": "dentro",
+   "texto": "Agora a conta. Sete cartas com a mesma função, até o turno cinco: {92%.|noventa e dois por cento.} Um {payoff|pêiof} com oito peças: o motor liga em {19.|dezenove.} Quatro {payoffs:|pêiofs:} {52.|cinquenta e dois.}"
+  },
+  {
+   "id": "grafo",
+   "onde": "dentro",
+   "texto": "Cruzei as {306 cartas.|trezentas e seis cartas.} Nove mecanismos, três famílias. {Dilemma|Dilema} e Cemitério dividem dez cartas jogáveis. {Federation|Federêichon} e {Strange New Worlds|Strêinj Niú Uôrlds} ficam isolados."
+  },
+  {
+   "id": "pools",
+   "onde": "dentro",
+   "texto": "Simulei {40 mil pools|quarenta mil puls} com a colação oficial. Motor ligado até o turno cinco: {Rakdos, 65.|Rácdos, sessenta e cinco.} {Borg, 25.|Bórg, vinte e cinco.} {Dilemma, 15.|Dilema, quinze.} A {Wizards|Uízards} pede cinco remoções: {Rakdos|Rácdos} abre quase seis. {Simic,|Símic,} nem três. É modelo, não é jogo."
+  },
+  {
+   "id": "revelacao",
+   "onde": "fora",
+   "texto": "O deck que ganha não é o da maior bomba. É o que executa o próprio plano, jogo após jogo."
+  },
+  {
+   "id": "previsao",
+   "onde": "fora",
+   "texto": "Previsão registrada: {Rakdos|Rácdos} no top três do {Sealed|Síld} até primeiro de dezembro. Certeza baixa. Se eu errar, assumo."
+  },
+  {
+   "id": "pergunta",
+   "onde": "fora",
+   "texto": "Mítica fora do seu melhor par. A: joga a bomba. B: joga a estrutura. C: {splash.|splach.} Probabilidade calculada. Humanos, imprevisíveis."
+  }
+ ],
+ "fala": "A Énterpraiz Ei que você quer: três vírgula oito por cento de abrir. Se abrir, vinte e sete e meio por cento de ver até o turno cinco. Junte as duas: um jogo em noventa e seis. E você vai passar o pré-rilís torcendo por ela. Uín rêit de Star Trék: zero partidas registradas. Dado que não existe, eu não invento. Então fui aos troféus. Sessenta e nove listas de troféu de Síld, nove coleções. Cinquenta e oito com duas cores. Com três, só uma em onze perdeu no máximo uma vez. É padrão, não é causa. E não copie o Mundial: lá é Dréft. Em Riáliti Frátchur, o terceiro par do Dréft foi o nono do Síld. Agora a conta. Sete cartas com a mesma função, até o turno cinco: noventa e dois por cento. Um pêiof com oito peças: o motor liga em dezenove. Quatro pêiofs: cinquenta e dois. Cruzei as trezentas e seis cartas. Nove mecanismos, três famílias. Dilema e Cemitério dividem dez cartas jogáveis. Federêichon e Strêinj Niú Uôrlds ficam isolados. Simulei quarenta mil puls com a colação oficial. Motor ligado até o turno cinco: Rácdos, sessenta e cinco. Bórg, vinte e cinco. Dilema, quinze. A Uízards pede cinco remoções: Rácdos abre quase seis. Símic, nem três. É modelo, não é jogo. O deck que ganha não é o da maior bomba. É o que executa o próprio plano, jogo após jogo. Previsão registrada: Rácdos no top três do Síld até primeiro de dezembro. Certeza baixa. Se eu errar, assumo. Mítica fora do seu melhor par. A: joga a bomba. B: joga a estrutura. C: splach. Probabilidade calculada. Humanos, imprevisíveis."
+}

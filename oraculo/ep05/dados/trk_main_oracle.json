@@ -1,0 +1,5964 @@
+[
+{
+"n": "70,000 Light-Years from Home",
+"num": 1,
+"r": "U",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "Exile target creature or Spacecraft. Its controller may search their library for a basic land card, reveal it, put it into their hand, then shuffle.",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Ariel Orea",
+"prod": null
+},
+{
+"n": "Andromedan Automatons",
+"num": 2,
+"r": "C",
+"mc": "{2}{W}",
+"cmc": 3.0,
+"t": "Artifact Creature — Android",
+"o": "When this creature enters, you may search your library for any number of cards named Andromedan Automatons, reveal them, put them into your hand, then shuffle.",
+"p": "3",
+"q": "1",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Uzuri",
+"prod": null
+},
+{
+"n": "Antagonist Incorporator",
+"num": 3,
+"r": "R",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Artifact Creature — Borg",
+"o": "Artifact creatures you control have \"Whenever this creature deals combat damage to a player, you may pay {1}. If you do, create a 1/1 colorless Borg artifact creature token.\"",
+"p": "2",
+"q": "3",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Miklós Ligeti",
+"prod": null
+},
+{
+"n": "Assembly Specialist",
+"num": 4,
+"r": "U",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Artifact Creature — Borg",
+"o": "When this creature enters, create a 1/1 colorless Borg artifact creature token.",
+"p": "1",
+"q": "1",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Sean Vo",
+"prod": null
+},
+{
+"n": "Brad Boimler, Eager Ensign",
+"num": 5,
+"r": "U",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Legendary Creature — Human Officer",
+"o": "Lifelink\nWhenever Brad Boimler becomes tapped, until end of turn, if one or more counters would be put on a permanent you control, that many plus one of each of those kinds of counters are put on that permanent instead.",
+"p": "2",
+"q": "2",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Andreas Zafiratos",
+"prod": null
+},
+{
+"n": "Captain Benjamin Sisko",
+"num": 6,
+"r": "R",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Legendary Creature — Human Officer",
+"o": "At the beginning of your end step, create a 1/1 red Officer creature token for each dilemma you've faced this turn.\n{2}{W}{U}{B}{R}{G}, {T}: Exile the top five cards of your library. You may cast any number of spells with mana value less than or equal to the number of Officers you control from among those cards without paying their mana costs.",
+"p": "2",
+"q": "2",
+"cor": [
+"W"
+],
+"ci": [
+"B",
+"G",
+"R",
+"U",
+"W"
+],
+"art": "Chris Rallis",
+"prod": null
+},
+{
+"n": "Captain Jean-Luc Picard",
+"num": 7,
+"r": "M",
+"mc": "{2}{W}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Officer",
+"o": "Other creatures you control get +1/+1.\nWhenever you cast a creature or Spacecraft spell, create a 1/1 red Officer creature token.\nTap seven untapped Officers you control: Search your library for a Spacecraft card, put it onto the battlefield with seven charge counters on it, then shuffle.",
+"p": "2",
+"q": "3",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Anna Pavleeva",
+"prod": null
+},
+{
+"n": "Command Decision",
+"num": 8,
+"r": "C",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "Choose one —\n• Destroy target creature with power 4 or greater.\n• Draw a card.",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Raymond Bonilla",
+"prod": null
+},
+{
+"n": "Command Subadjunct",
+"num": 9,
+"r": "U",
+"mc": "{W}",
+"cmc": 1.0,
+"t": "Artifact Creature — Borg",
+"o": "Artifact creatures you control have vigilance.",
+"p": "2",
+"q": "1",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Alex Negrea",
+"prod": null
+},
+{
+"n": "Conquest Mission",
+"num": 10,
+"r": "U",
+"mc": "{2}{W}",
+"cmc": 3.0,
+"t": "Enchantment",
+"o": "Whenever a nontoken artifact you control enters, put a quest counter on this enchantment. Create a 1/1 colorless Borg artifact creature token. If this enchantment has six or more quest counters on it, create two of those tokens instead.",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Mark Spears",
+"prod": null
+},
+{
+"n": "Deanna Troi, Psychic Counsel",
+"num": 11,
+"r": "R",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Legendary Creature — Betazoid Human Advisor",
+"o": "Other creatures you control enter with an additional +1/+1 counter on them.",
+"p": "2",
+"q": "2",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Lie Setiawan",
+"prod": null
+},
+{
+"n": "DOT-7 Repair Squad",
+"num": 12,
+"r": "C",
+"mc": "{3}{W}",
+"cmc": 4.0,
+"t": "Artifact Creature — Robot",
+"o": "Flying\n{1}{W}: Untap target creature. Activate only as a sorcery and only once each turn.",
+"p": "3",
+"q": "3",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Colin Searle",
+"prod": null
+},
+{
+"n": "Dr. Beverly Crusher",
+"num": 13,
+"r": "M",
+"mc": "{2}{W}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Doctor",
+"o": "If you gaining life causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.\nWhenever you gain life, put a +1/+1 counter on Dr. Crusher.",
+"p": "2",
+"q": "2",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Mattia Rangoni",
+"prod": null
+},
+{
+"n": "Dr. McCoy, Surly Surgeon",
+"num": 14,
+"r": "U",
+"mc": "{2}{W}{W}",
+"cmc": 4.0,
+"t": "Legendary Creature — Human Doctor",
+"o": "When Dr. McCoy enters, put a +1/+1 counter on another target creature you control.\nIf another creature you control with a +1/+1 counter on it would be destroyed, instead remove all +1/+1 counters from it and all damage already dealt to it is healed.",
+"p": "2",
+"q": "2",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "David Robert Hovey",
+"prod": null
+},
+{
+"n": "Emergency Medical Hologram",
+"num": 15,
+"r": "C",
+"mc": "{W}",
+"cmc": 1.0,
+"t": "Artifact Creature — Illusion Doctor",
+"o": "When this creature enters, put a +1/+1 counter on target creature. You gain 1 life.",
+"p": "0",
+"q": "1",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Kirk DouPonce",
+"prod": null
+},
+{
+"n": "Excalbian Gamemaster",
+"num": 16,
+"r": "M",
+"mc": "{5}{W}",
+"cmc": 6.0,
+"t": "Creature — Excalbian",
+"o": "Strange new worlds — When this creature enters, create X 1/1 red Officer creature tokens, where X is the number of differently named lands you control.\nWhenever this creature or another creature you control dies, put a +1/+1 counter on target creature you control.",
+"p": "6",
+"q": "6",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Charles Chaisson",
+"prod": null
+},
+{
+"n": "Federation Field Medic",
+"num": 17,
+"r": "C",
+"mc": "{3}{W}",
+"cmc": 4.0,
+"t": "Creature — Human Doctor",
+"o": "Vigilance\nWhen this creature enters, choose one —\n• Put a +1/+1 counter on target creature. It gains vigilance until end of turn.\n• Draw a card if you control a permanent with a counter on it.",
+"p": "3",
+"q": "2",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Zoltan Boros",
+"prod": null
+},
+{
+"n": "Federation Resupply",
+"num": 18,
+"r": "R",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "Search your library for an Aura, Equipment, or Spacecraft card, reveal it, put it into your hand, then shuffle.\nBeam me up {3}{W} (You may cast this card from your graveyard for {3}{W} if you also return a creature you control to its owner's hand. Then exile this spell.)",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Ryan Valle",
+"prod": null
+},
+{
+"n": "Free Borg Revolutionaries",
+"num": 19,
+"r": "C",
+"mc": "{3}{W}{W}",
+"cmc": 5.0,
+"t": "Artifact Creature — Borg Rebel",
+"o": "When this creature enters, creatures you control get +1/+1 until end of turn.\nBasic landcycling {2} ({2}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)",
+"p": "4",
+"q": "5",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Smirtouille",
+"prod": null
+},
+{
+"n": "Ghost of Illyria",
+"num": 20,
+"r": "U",
+"mc": "{3}{W}",
+"cmc": 4.0,
+"t": "Creature — Elemental Spirit",
+"o": "Flying\nWhen this creature enters, exile up to one other target nonland permanent you control. Return that card to the battlefield under its owner's control at the beginning of the next end step.",
+"p": "3",
+"q": "3",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Pace Wilder",
+"prod": null
+},
+{
+"n": "Hologram Janeway",
+"num": 21,
+"r": "U",
+"mc": "{2}{W}",
+"cmc": 3.0,
+"t": "Legendary Artifact Creature — Illusion Officer",
+"o": "Whenever you attack while creatures you control have total power 8 or greater, put a +1/+1 counter on target creature.",
+"p": "3",
+"q": "3",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Khadijah Khatib",
+"prod": null
+},
+{
+"n": "Malfunctioning Holodeck",
+"num": 22,
+"r": "C",
+"mc": "{2}{W}",
+"cmc": 3.0,
+"t": "Artifact",
+"o": "Ward {2} (Whenever this artifact becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)\nWhen this artifact enters, exile target nonland permanent an opponent controls until this artifact leaves the battlefield.",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Pablo Mendoza",
+"prod": null
+},
+{
+"n": "The Measure of a Man",
+"num": 23,
+"r": "U",
+"mc": "{2}{W}",
+"cmc": 3.0,
+"t": "Enchantment — Saga",
+"o": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI — Exile up to one target nontoken artifact or creature.\nII — Investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nIII — Return the exiled card to the battlefield under its owner's control. You gain 2 life.",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Lazare Gvimradze",
+"prod": null
+},
+{
+"n": "Miles O'Brien, Transporter Ops",
+"num": 24,
+"r": "R",
+"mc": "{2}{W}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Artificer",
+"o": "When Miles O'Brien enters, return up to one other target creature or artifact you control to its owner's hand.\nAt the beginning of each end step, if a permanent was returned to your hand from the battlefield this turn, draw a card.",
+"p": "3",
+"q": "3",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "John Tyler Christopher",
+"prod": null
+},
+{
+"n": "The Needs of the Many",
+"num": 25,
+"r": "R",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Instant",
+"o": "As an additional cost to cast this spell, sacrifice a creature.\nCreatures you control gain hexproof and indestructible until end of turn. You gain hexproof until end of turn. Prevent all damage that would be dealt to you this turn. Exile The Needs of the Many.",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Carlos C Diaz",
+"prod": null
+},
+{
+"n": "Oberth-Class Starship",
+"num": 26,
+"r": "C",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Artifact — Spacecraft",
+"o": "When this Spacecraft enters, search your library for a basic Plains card, reveal it, put it into your hand, then shuffle.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 6+.)\n6+ | Flying",
+"p": "2",
+"q": "2",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Jessica Rossier",
+"prod": null
+},
+{
+"n": "Peace in Our Time",
+"num": 27,
+"r": "R",
+"mc": "{3}{W}",
+"cmc": 4.0,
+"t": "Enchantment",
+"o": "At the beginning of combat on each player's turn, that player may draw a card. If they do, they can't attack this turn and you put a peace counter on this enchantment.\nAt the beginning of your upkeep, if this enchantment has twelve or more peace counters on it, you win the game.",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Elizabeth Peiró",
+"prod": null
+},
+{
+"n": "Pet Sehlat",
+"num": 28,
+"r": "C",
+"mc": "{2}{W}",
+"cmc": 3.0,
+"t": "Creature — Bear",
+"o": "This creature can't attack alone.",
+"p": "4",
+"q": "3",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Narendra Bintara Adi",
+"prod": null
+},
+{
+"n": "Picard, Leading by Example",
+"num": 29,
+"r": "U",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Legendary Creature — Human Officer",
+"o": "{1}, {T}: Another target creature gets +X/+X until end of turn, where X is Picard's power. Activate only as a sorcery.",
+"p": "2",
+"q": "2",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Julie Dillon",
+"prod": null
+},
+{
+"n": "Primary Unimatrix Adjunct",
+"num": 30,
+"r": "R",
+"mc": "{3}{W}",
+"cmc": 4.0,
+"t": "Artifact Creature — Borg",
+"o": "Artifact creatures you control have double strike.",
+"p": "2",
+"q": "3",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Jodie Muir",
+"prod": null
+},
+{
+"n": "Pure Energy",
+"num": 31,
+"r": "C",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "Distribute two +1/+1 counters among one or two target creatures.\nBeam me up {2}{W} (You may cast this card from your graveyard for {2}{W} if you also return a creature you control to its owner's hand. Then exile this spell.)",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Evan Shipard",
+"prod": null
+},
+{
+"n": "Rutherford, Upgraded Ensign",
+"num": 32,
+"r": "U",
+"mc": "{2}{W}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Artificer",
+"o": "When Rutherford enters, look at the top six cards of your library. You may reveal an artifact card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.\nWhenever you cast a Spacecraft spell, put a +1/+1 counter on target creature.",
+"p": "2",
+"q": "2",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Charles Chaisson",
+"prod": null
+},
+{
+"n": "Saavik, Stoic Student",
+"num": 33,
+"r": "U",
+"mc": "{4}{W}",
+"cmc": 5.0,
+"t": "Legendary Creature — Vulcan Advisor",
+"o": "Flash\nFederation — When Saavik enters, she deals X damage to target attacking or blocking creature an opponent controls, where X is the number of creature types among non-Borg creatures you control.",
+"p": "2",
+"q": "2",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Mushk Rizvi",
+"prod": null
+},
+{
+"n": "Set Phasers to . . .",
+"num": 34,
+"r": "C",
+"mc": "{W}",
+"cmc": 1.0,
+"t": "Instant",
+"o": "Choose one —\n• Stun — Tap target creature and put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\n• Kill — This spell deals 3 damage to target attacking creature.",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Elizabeth Peiró",
+"prod": null
+},
+{
+"n": "Shields Up!",
+"num": 35,
+"r": "C",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Instant",
+"o": "Target artifact or creature you control gains hexproof and indestructible until end of turn. If it's a creature, put a +1/+1 counter on it. (It can't be the target of spells or abilities your opponents control. Damage and effects that say \"destroy\" don't destroy it.)",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Raymond Swanland",
+"prod": null
+},
+{
+"n": "Shuttle Ace",
+"num": 36,
+"r": "C",
+"mc": "{4}{W}",
+"cmc": 5.0,
+"t": "Creature — Kelpien Pilot",
+"o": "During your turn, this creature has flying.\nWhenever this creature becomes tapped, you gain 2 life.",
+"p": "4",
+"q": "4",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Joan Piqué Llorens",
+"prod": null
+},
+{
+"n": "Sulu, Space Swashbuckler",
+"num": 37,
+"r": "R",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Legendary Creature — Human Pilot",
+"o": "First strike\nWhenever Sulu becomes tapped, if an Equipment or Spacecraft entered the battlefield under your control this turn, draw a card.",
+"p": "2",
+"q": "2",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Micah Epstein",
+"prod": null
+},
+{
+"n": "Tactical Officer",
+"num": 38,
+"r": "C",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Creature — Human Officer",
+"o": "Whenever you attack while creatures you control have total power 8 or greater, put a +1/+1 counter on this creature. Untap it.",
+"p": "2",
+"q": "1",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Elizabeth Peiró",
+"prod": null
+},
+{
+"n": "Test of Conviction",
+"num": 39,
+"r": "U",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "Choose one —\n• Battle Stations — Put a +1/+1 counter on each creature you control.\n• Begin Negotiations — Target opponent draws a card. You draw two cards.",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "John Tyler Christopher",
+"prod": null
+},
+{
+"n": "There's Coffee in that Nebula",
+"num": 40,
+"r": "U",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "Look at the top five cards of your library. You may reveal a Plains card or nonland permanent card with mana value 3 or less from among them and put it into your hand. Put the rest on the bottom in a random order.\nBeam me up {2}{W} (You may cast this card from your graveyard for {2}{W} if you also return a creature you control to its owner's hand. Then exile this spell.)",
+"p": null,
+"q": null,
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Pauline Voss",
+"prod": null
+},
+{
+"n": "Troubling Tribbles",
+"num": 41,
+"r": "R",
+"mc": "{2}{W}",
+"cmc": 3.0,
+"t": "Creature — Tribble",
+"o": "This creature can't block.\nAt the beginning of your upkeep, create a token that's a copy of this creature.",
+"p": "0",
+"q": "1",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Filipe Pagliuso",
+"prod": null
+},
+{
+"n": "Una Chin-Riley, Number One",
+"num": 42,
+"r": "U",
+"mc": "{4}{W}",
+"cmc": 5.0,
+"t": "Legendary Creature — Illyrian Officer",
+"o": "Whenever you attack while creatures you control have total power 8 or greater, target attacking creature gets +2/+0 and gains first strike until end of turn.",
+"p": "4",
+"q": "5",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Josu Hernaiz",
+"prod": null
+},
+{
+"n": "U.S.S. Enterprise-A, Free Spirit",
+"num": 43,
+"r": "M",
+"mc": "{3}{W}{W}",
+"cmc": 5.0,
+"t": "Legendary Artifact — Spacecraft",
+"o": "Ward {2}\nWhen U.S.S. Enterprise-A enters, create three 1/1 red Officer creature tokens.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 6+.)\n6+ | Flying, lifelink",
+"p": "5",
+"q": "5",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Evan Shipard",
+"prod": null
+},
+{
+"n": "U.S.S. Excelsior, Cutting Edge",
+"num": 44,
+"r": "U",
+"mc": "{3}{W}",
+"cmc": 4.0,
+"t": "Legendary Artifact — Spacecraft",
+"o": "When U.S.S. Excelsior enters, destroy target tapped creature an opponent controls.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 8+.)\n8+ | Flying",
+"p": "4",
+"q": "4",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Jetfreak-7",
+"prod": null
+},
+{
+"n": "Vexing Drone",
+"num": 45,
+"r": "C",
+"mc": "{1}{W}",
+"cmc": 2.0,
+"t": "Artifact Creature — Borg",
+"o": "When this creature enters, tap target creature an opponent controls.",
+"p": "2",
+"q": "2",
+"cor": [
+"W"
+],
+"ci": [
+"W"
+],
+"art": "Kristina WermoongRey",
+"prod": null
+},
+{
+"n": "Anthropological Mission",
+"num": 46,
+"r": "U",
+"mc": "{2}{U}",
+"cmc": 3.0,
+"t": "Enchantment",
+"o": "Whenever you cast a noncreature spell, put a quest counter on this enchantment. Draw a card. Then discard a card unless this enchantment has three or more quest counters on it.",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Pablo Mendoza",
+"prod": null
+},
+{
+"n": "The Caretaker",
+"num": 47,
+"r": "R",
+"mc": "{5}{U}",
+"cmc": 6.0,
+"t": "Legendary Creature — Elemental",
+"o": "Vigilance, ward {2}\nAt the beginning of each end step, if you faced a dilemma this turn, target opponent exiles cards from the top of their library until they exile a nonland card. You may cast that card without paying its mana cost. (You face a dilemma as you choose one or more modes for a spell or ability.)",
+"p": "5",
+"q": "6",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Sam Kennedy",
+"prod": null
+},
+{
+"n": "Cetacean Ops",
+"num": 48,
+"r": "C",
+"mc": "{3}{U}",
+"cmc": 4.0,
+"t": "Creature — Whale Officer",
+"o": "Ward {1} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {1}.)\nWhenever you cast a noncreature spell, put a +1/+1 counter on this creature.",
+"p": "3",
+"q": "3",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Arthur Haas",
+"prod": null
+},
+{
+"n": "Cloak and Phaser",
+"num": 49,
+"r": "U",
+"mc": "{8}{U}",
+"cmc": 9.0,
+"t": "Sorcery",
+"o": "Strange new worlds — This spell costs {X} less to cast, where X is the number of differently named lands you control.\nCreate two 2/2 black Romulan creature tokens. Draw two cards, then discard a card.",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "David Szabo",
+"prod": null
+},
+{
+"n": "Cloistered Telepath",
+"num": 50,
+"r": "C",
+"mc": "{1}{U}",
+"cmc": 2.0,
+"t": "Creature — Talosian Advisor",
+"o": "Flash\nWhen this creature enters, draw a card, then discard a card.",
+"p": "2",
+"q": "1",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Monztre",
+"prod": null
+},
+{
+"n": "Consider the Prime Directive",
+"num": 51,
+"r": "C",
+"mc": "{2}{U}",
+"cmc": 3.0,
+"t": "Instant",
+"o": "Choose one —\n• Interfere — Counter target spell unless its controller pays {3}.\n• Observe — Tap up to one target creature and put a stun counter on it. Draw a card. (If a permanent with a stun counter would become untapped, remove one from it instead.)",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Zoltan Boros",
+"prod": null
+},
+{
+"n": "Data, New Life",
+"num": 52,
+"r": "U",
+"mc": "{1}{U}",
+"cmc": 2.0,
+"t": "Legendary Artifact Creature — Android Scientist",
+"o": "Whenever you draw a card, put a +1/+1 counter on Data.",
+"p": "0",
+"q": "1",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Kieran Yanner",
+"prod": null
+},
+{
+"n": "Deep Space Scan",
+"num": 53,
+"r": "R",
+"mc": "{4}{U}{U}",
+"cmc": 6.0,
+"t": "Sorcery",
+"o": "Strange new worlds — Draw X cards, where X is the number of differently named lands you control. You have no maximum hand size until your next turn.",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Andreia Ugrai",
+"prod": null
+},
+{
+"n": "Dominion Saboteur",
+"num": 54,
+"r": "U",
+"mc": "{4}{U}",
+"cmc": 5.0,
+"t": "Creature — Shapeshifter",
+"o": "You may have this creature enter as a copy of any artifact or creature on the battlefield, except it isn't legendary. If you do, it enters with additional counters on it equal to the same number and kinds of counters the copied permanent has on it.",
+"p": "3",
+"q": "3",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Alex Negrea",
+"prod": null
+},
+{
+"n": "Emergency Holographic Crew",
+"num": 55,
+"r": "C",
+"mc": "{3}{U}",
+"cmc": 4.0,
+"t": "Artifact Creature — Illusion Officer",
+"o": "When this creature enters, choose one —\n• Return target Spacecraft card from your graveyard to your hand.\n• Surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",
+"p": "3",
+"q": "4",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Thanh Tuấn",
+"prod": null
+},
+{
+"n": "Energize",
+"num": 56,
+"r": "U",
+"mc": "{1}{U}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "Return target creature an opponent controls to its owner's hand.\nBeam me up {3}{U} (You may cast this card from your graveyard for {3}{U} if you also return a creature you control to its owner's hand. Then exile this spell.)",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Carlos C Diaz",
+"prod": null
+},
+{
+"n": "Ensign Pavel Chekov",
+"num": 57,
+"r": "U",
+"mc": "{3}{U}",
+"cmc": 4.0,
+"t": "Legendary Creature — Human Pilot",
+"o": "Strange new worlds — When Ensign Chekov enters, each opponent exiles the top X cards of their library, where X is the number of differently named lands you control. For each opponent, choose a land card that player owns exiled this way. You may play the chosen cards for as long as they remain exiled.",
+"p": "1",
+"q": "5",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Gal Or",
+"prod": null
+},
+{
+"n": "Enterprise NX-01",
+"num": 58,
+"r": "U",
+"mc": "{3}{U}",
+"cmc": 4.0,
+"t": "Legendary Artifact — Spacecraft",
+"o": "When Enterprise NX-01 enters, tap target creature an opponent controls and put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 6+.)\n6+ | Flying, vigilance",
+"p": "4",
+"q": "3",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Colin Searle",
+"prod": null
+},
+{
+"n": "Federation Probe",
+"num": 59,
+"r": "C",
+"mc": "{U}",
+"cmc": 1.0,
+"t": "Artifact Creature — Construct",
+"o": "Flying\nWhen this creature enters, choose one —\n• Target creature gets +1/+1 until end of turn.\n• Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+"p": "1",
+"q": "1",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Racrufi",
+"prod": null
+},
+{
+"n": "Guidance Failure",
+"num": 60,
+"r": "C",
+"mc": "{3}{U}",
+"cmc": 4.0,
+"t": "Instant",
+"o": "This spell costs {1} less to cast if it targets an attacking creature.\nTarget creature or Spacecraft's owner puts it on their choice of the top or bottom of their library.",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "David Álvarez",
+"prod": null
+},
+{
+"n": "Gwyndala, the Progeny",
+"num": 61,
+"r": "R",
+"mc": "{1}{U}",
+"cmc": 2.0,
+"t": "Legendary Creature — Vau-N'Akat Advisor",
+"o": "When Gwyndala enters, create a colorless Equipment artifact token named Neuroflux Heirloom with \"Equipped creature gets +1/+1\" and equip {2}. Attach it to Gwyndala.\n{2}: Each Equipment token you control becomes a copy of target Equipment you control until end of turn.",
+"p": "1",
+"q": "1",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Pierre Raveneau",
+"prod": null
+},
+{
+"n": "Highly Illogical",
+"num": 62,
+"r": "U",
+"mc": "{1}{U}",
+"cmc": 2.0,
+"t": "Instant",
+"o": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nCounter target spell with mana value 2 or less. If this spell was kicked, instead counter target spell.",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Joel Chaim Holtzman",
+"prod": null
+},
+{
+"n": "H.M.S. Bounty, Unlikely Timeship",
+"num": 63,
+"r": "R",
+"mc": "{4}{U}",
+"cmc": 5.0,
+"t": "Legendary Artifact — Spacecraft",
+"o": "When H.M.S. Bounty enters, you may search your library for a Whale card, reveal it, put it into your hand, then shuffle.\nStation\n8+ | Flying\nWhenever H.M.S. Bounty deals combat damage to a player, draw a card. If you control a Whale and haven't begun an extra turn this game, take an extra turn after this one.",
+"p": "3",
+"q": "4",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Jetfreak-7",
+"prod": null
+},
+{
+"n": "Hoshi Sato, Exolinguist",
+"num": 64,
+"r": "U",
+"mc": "{4}{U}",
+"cmc": 5.0,
+"t": "Legendary Creature — Human Scientist",
+"o": "Federation — When Hoshi Sato enters, look at the top X cards of your library, where X is the number of creature types among non-Borg creatures you control. Put one of them into your hand and the rest on the bottom of your library in a random order.",
+"p": "3",
+"q": "3",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Jason Seiler",
+"prod": null
+},
+{
+"n": "Humpback Whales",
+"num": 65,
+"r": "C",
+"mc": "{4}{U}{U}",
+"cmc": 6.0,
+"t": "Creature — Whale",
+"o": "Vigilance, ward {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)\nBasic landcycling {2} ({2}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)",
+"p": "5",
+"q": "6",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Evan Shipard",
+"prod": null
+},
+{
+"n": "Interstellar Effigy",
+"num": 66,
+"r": "C",
+"mc": "{4}{U}",
+"cmc": 5.0,
+"t": "Artifact Creature — Construct",
+"o": "When this creature enters, return target creature an opponent controls to its owner's hand.",
+"p": "4",
+"q": "3",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Cliff Nielsen",
+"prod": null
+},
+{
+"n": "Jett Reno, Problem Solver",
+"num": 67,
+"r": "U",
+"mc": "{1}{U}",
+"cmc": 2.0,
+"t": "Legendary Creature — Human Artificer",
+"o": "Whenever Jett Reno becomes tapped, surveil 1. If her power is 4 or greater, instead draw a card.\nWhenever you face a dilemma, put a +1/+1 counter on Jett Reno. (You face a dilemma as you choose one or more modes for a spell or ability.)",
+"p": "1",
+"q": "2",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Riccardo Federici",
+"prod": null
+},
+{
+"n": "Kobayashi Maru Scenario",
+"num": 68,
+"r": "M",
+"mc": "{1}{U}{U}",
+"cmc": 3.0,
+"t": "Enchantment",
+"o": "At the beginning of your upkeep, choose one that hasn't been chosen —\n• Hail — Return up to one target creature an opponent controls with mana value 3 or less to its owner's hand.\n• Sensors — Draw two cards.\n• Transport — Create two 1/1 red Officer creature tokens.\n• Abandon Ship — You lose the game.",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Kevin Glint",
+"prod": null
+},
+{
+"n": "Lieutenant Commander Data",
+"num": 69,
+"r": "M",
+"mc": "{2}{U}",
+"cmc": 3.0,
+"t": "Legendary Artifact Creature — Android Scientist",
+"o": "Whenever a player casts a noncreature spell, put a +1/+1 counter on Lieutenant Commander Data.\n{1}, Remove three counters from among creatures you control: Draw a card.",
+"p": "2",
+"q": "2",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Irvin Rodriguez",
+"prod": null
+},
+{
+"n": "Lt. Cmdr. Geordi La Forge",
+"num": 70,
+"r": "R",
+"mc": "{2}{U}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Artificer",
+"o": "If you would put one or more charge counters on an artifact you control, put twice that many charge counters on that artifact instead.",
+"p": "3",
+"q": "2",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Julie Dillon",
+"prod": null
+},
+{
+"n": "Make It So",
+"num": 71,
+"r": "C",
+"mc": "{3}{U}",
+"cmc": 4.0,
+"t": "Sorcery",
+"o": "Choose one —\n• Untap target permanent you control. Target player draws two cards.\n• Create a 1/1 red Officer creature token and draw two cards.",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Javier Charro",
+"prod": null
+},
+{
+"n": "Marooned",
+"num": 72,
+"r": "C",
+"mc": "{U}",
+"cmc": 1.0,
+"t": "Enchantment — Aura",
+"o": "Enchant artifact or creature\nWhen this Aura enters, you may pay {3}. If you do, tap enchanted permanent.\nEnchanted permanent doesn't untap during its controller's untap step and can't be beamed up.",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Joel Chaim Holtzman",
+"prod": null
+},
+{
+"n": "Melkotian Adjudicator",
+"num": 73,
+"r": "C",
+"mc": "{2}{U}",
+"cmc": 3.0,
+"t": "Creature — Melkotian Advisor",
+"o": "Flying, vigilance\nWhenever you face a dilemma, put a +1/+1 counter on this creature. (You face a dilemma as you choose one or more modes for a spell or ability.)",
+"p": "2",
+"q": "1",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Jason Raish",
+"prod": null
+},
+{
+"n": "Mr. Spock, Science Officer",
+"num": 74,
+"r": "M",
+"mc": "{2}{U}{U}",
+"cmc": 4.0,
+"t": "Legendary Creature — Vulcan Human Scientist",
+"o": "If you would draw a card, draw two cards instead.",
+"p": "2",
+"q": "4",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Colin Boyer",
+"prod": null
+},
+{
+"n": "Nyota Uhura, Communications",
+"num": 75,
+"r": "R",
+"mc": "{2}{U}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Officer",
+"o": "Hailing Frequencies — As Nyota Uhura enters, choose a number between 0 and 10.\nOpen a Channel — Whenever an opponent casts a spell with mana value equal to the chosen number, you draw a card.",
+"p": "2",
+"q": "4",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Charles Chaisson",
+"prod": null
+},
+{
+"n": "Open Communications",
+"num": 76,
+"r": "C",
+"mc": "{U}",
+"cmc": 1.0,
+"t": "Sorcery",
+"o": "Draw a card.\nBeam me up {2}{U} (You may cast this card from your graveyard for {2}{U} if you also return a creature you control to its owner's hand. Then exile this spell.)",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "David Robert Hovey",
+"prod": null
+},
+{
+"n": "Romulan Bird-of-Prey",
+"num": 77,
+"r": "R",
+"mc": "{1}{U}",
+"cmc": 2.0,
+"t": "Artifact — Spacecraft",
+"o": "Cloaking Device — As long as this Spacecraft isn't a creature, it has hexproof.\nWhenever you cast a noncreature spell, if this Spacecraft isn't a creature, put two charge counters on it.\nStation\n8+ | Flying",
+"p": "4",
+"q": "4",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Edouard",
+"prod": null
+},
+{
+"n": "Rules of Acquisition",
+"num": 78,
+"r": "U",
+"mc": "{3}{U}{U}",
+"cmc": 5.0,
+"t": "Sorcery",
+"o": "Choose one —\n• Follow the 3rd Rule — Gain control of target nonland permanent an opponent controls. That opponent draws three cards.\n• Follow the 98th Rule — Target opponent gains control of target nonland permanent you control. If they do, you draw three cards.",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Racrufi",
+"prod": null
+},
+{
+"n": "Scotty, Miracle Worker",
+"num": 79,
+"r": "M",
+"mc": "{1}{U}{U}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Artificer",
+"o": "During your main phase, each card in your graveyard has beam me up. The beam me up cost is equal to that spell's mana cost. Scotty can't be beamed up to cast a spell this way. (Only instant and sorcery spells can be cast this way. You may cast a card from your graveyard for its beam me up cost if you also return another creature you control to its owner's hand. Then exile that spell.)",
+"p": "2",
+"q": "3",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Sam Kennedy",
+"prod": null
+},
+{
+"n": "Seven of Nine, Unassimilated",
+"num": 80,
+"r": "M",
+"mc": "{1}{U}",
+"cmc": 2.0,
+"t": "Legendary Artifact Creature — Human Officer",
+"o": "At the beginning of your first main phase, draw a card. Then discard a card unless you control five or more differently named lands.\n{6}{U}: Seven of Nine's base power and toughness become 7/9. Activate only if you control seven or more differently named lands.",
+"p": "0",
+"q": "4",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Toraji",
+"prod": null
+},
+{
+"n": "Starfleet Spanner Jockey",
+"num": 81,
+"r": "C",
+"mc": "{1}{U}",
+"cmc": 2.0,
+"t": "Creature — Human Artificer",
+"o": "Defender\nAs long as you've cast a noncreature spell this turn, this creature can attack as though it didn't have defender.",
+"p": "3",
+"q": "3",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Chris Rallis",
+"prod": null
+},
+{
+"n": "Subcommander T'Pol",
+"num": 82,
+"r": "R",
+"mc": "{2}{U}",
+"cmc": 3.0,
+"t": "Legendary Creature — Vulcan Scientist",
+"o": "Flash\nWhen Subcommander T'Pol enters, choose one —\n• Counter target activated or triggered ability.\n• Tap up to one target artifact or creature. Put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)",
+"p": "3",
+"q": "1",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Kieran Yanner",
+"prod": null
+},
+{
+"n": "Suurok-Class Science Vessel",
+"num": 83,
+"r": "C",
+"mc": "{2}{U}",
+"cmc": 3.0,
+"t": "Artifact — Spacecraft",
+"o": "When this Spacecraft enters, draw a card.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 5+.)\n5+ | Flying",
+"p": "3",
+"q": "2",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Pace Wilder",
+"prod": null
+},
+{
+"n": "Suus Mahna Practitioner",
+"num": 84,
+"r": "C",
+"mc": "{2}{U}",
+"cmc": 3.0,
+"t": "Creature — Vulcan Officer",
+"o": "Strange new worlds — {4}{U}, {T}: Tap target creature. This ability costs {X} less to activate, where X is the number of differently named lands you control.",
+"p": "3",
+"q": "2",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Lucas Durham",
+"prod": null
+},
+{
+"n": "Test of Priorities",
+"num": 85,
+"r": "U",
+"mc": "{1}{U}",
+"cmc": 2.0,
+"t": "Instant",
+"o": "Choose one —\n• Power to Engines — Surveil 2, then draw a card.\n• Power to Life Support — Exile target creature you control. Return that card to the battlefield under its owner's control at the beginning of the next end step.",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Paolo Puggioni",
+"prod": null
+},
+{
+"n": "Those Old Scientists",
+"num": 86,
+"r": "U",
+"mc": "{2}{U}",
+"cmc": 3.0,
+"t": "Enchantment — Saga",
+"o": "(As this Saga enters and after your draw\nstep, add a lore counter. Sacrifice after III.)\nI — Draw two cards, then discard two cards.\nII — Return up to one target artifact, instant, or sorcery card from your graveyard to your hand.\nIII — Choose up to two target cards in graveyards. The owners of those cards shuffle them into their libraries.",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Gregg Schigiel",
+"prod": null
+},
+{
+"n": "V'Ger, the Intruder",
+"num": 87,
+"r": "U",
+"mc": "{6}{U}",
+"cmc": 7.0,
+"t": "Legendary Artifact Creature — Construct",
+"o": "Flying\nWhenever V'Ger enters or attacks, choose one —\n• Look at target opponent's hand, then draw a card.\n• Creatures your opponents control get -1/-0 until your next turn.",
+"p": "5",
+"q": "7",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Jessica Rossier",
+"prod": null
+},
+{
+"n": "Vulcan Mind-Meld",
+"num": 88,
+"r": "U",
+"mc": "{U}",
+"cmc": 1.0,
+"t": "Sorcery",
+"o": "Target opponent looks at the top card of your library, then exiles it face down. You look at the top two cards of their library, then exile them face down. For each card exiled this way, the player who exiled it may play it for as long as it remains exiled. Mana of any type can be spent to cast spells this way.",
+"p": null,
+"q": null,
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Pavel Kolomeyets",
+"prod": null
+},
+{
+"n": "Wesley Crusher, Starfleet Cadet",
+"num": 89,
+"r": "R",
+"mc": "{2}{U}{U}",
+"cmc": 4.0,
+"t": "Legendary Creature — Human Officer",
+"o": "Flash\nWhen Wesley Crusher enters, choose two —\n• Counter target noncreature spell unless its controller pays {2}.\n• Return target creature with mana value 2 or less to its owner's hand.\n• Target creature can't be blocked this turn.\n• Target player draws two cards, then discards two cards.",
+"p": "2",
+"q": "2",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Nia Kovalevski",
+"prod": null
+},
+{
+"n": "Zefram Cochrane, Warp Pioneer",
+"num": 90,
+"r": "U",
+"mc": "{2}{U}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Pilot",
+"o": "You may look at the top card of your library any time.\nOnce during each of your turns, you may cast an artifact spell from the top of your library.\nSpacecraft you control enter with two additional charge counters on them.",
+"p": "2",
+"q": "3",
+"cor": [
+"U"
+],
+"ci": [
+"U"
+],
+"art": "Kieran Yanner",
+"prod": null
+},
+{
+"n": "Armus, Skin of Evil",
+"num": 91,
+"r": "R",
+"mc": "{5}{B}{B}",
+"cmc": 7.0,
+"t": "Legendary Creature — Ooze Horror",
+"o": "Menace\nAt the beginning of your end step, target opponent discards two cards.\n{2}{B}, Discard this card: Target creature gets -4/-4 until end of turn.",
+"p": "6",
+"q": "6",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Camille Alquier",
+"prod": null
+},
+{
+"n": "Assault Drone",
+"num": 92,
+"r": "C",
+"mc": "{3}{B}",
+"cmc": 4.0,
+"t": "Artifact Creature — Borg",
+"o": "Artifact creatures you control get +1/+0.",
+"p": "2",
+"q": "4",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Filipe Pagliuso",
+"prod": null
+},
+{
+"n": "Automated Warfare System",
+"num": 93,
+"r": "C",
+"mc": "{2}{B}",
+"cmc": 3.0,
+"t": "Artifact Creature — Construct",
+"o": "Flying\nWhenever this creature attacks, you may sacrifice another creature or artifact. If you do, draw a card.",
+"p": "2",
+"q": "2",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Pierre Raveneau",
+"prod": null
+},
+{
+"n": "Bat'leth",
+"num": 94,
+"r": "U",
+"mc": "{2}{B}",
+"cmc": 3.0,
+"t": "Artifact — Equipment",
+"o": "When this Equipment enters, target creature an opponent controls gets -2/-2 until end of turn.\nEquipped creature gets +2/+0.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Tony Foti",
+"prod": null
+},
+{
+"n": "Battle-Scarred Survivalist",
+"num": 95,
+"r": "C",
+"mc": "{1}{B}",
+"cmc": 2.0,
+"t": "Creature — Klingon Scout",
+"o": "Menace (This creature can't be blocked except by two or more creatures.)\nWhenever another creature dies, put a +1/+1 counter on this creature. This ability triggers only once each turn.",
+"p": "1",
+"q": "1",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "John Di Giovanni",
+"prod": null
+},
+{
+"n": "Blastoneuron",
+"num": 96,
+"r": "U",
+"mc": "{3}{B}",
+"cmc": 4.0,
+"t": "Creature — Jellyfish Leech",
+"o": "Flying\nWhen this creature enters, exile target creature card with mana value 3 or less from your graveyard. Create a token that's a copy of it. That token gains haste. Sacrifice it at the beginning of the next end step.\nWhenever one or more cards leave your graveyard, each opponent loses 1 life and you gain 1 life.",
+"p": "2",
+"q": "2",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Bastien L. Deharme",
+"prod": null
+},
+{
+"n": "Cha'DIch Investigator",
+"num": 97,
+"r": "C",
+"mc": "{4}{B}",
+"cmc": 5.0,
+"t": "Creature — Klingon Warrior",
+"o": "When this creature enters, create a 2/1 red Klingon Warrior creature token with haste.",
+"p": "4",
+"q": "4",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Javier Charro",
+"prod": null
+},
+{
+"n": "Collation Trimatrix",
+"num": 98,
+"r": "R",
+"mc": "{B}",
+"cmc": 1.0,
+"t": "Artifact Creature — Borg",
+"o": "Tap three untapped artifact creatures you control: You draw a card and lose 1 life.",
+"p": "1",
+"q": "1",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Bryan Sola",
+"prod": null
+},
+{
+"n": "Collective Drone",
+"num": 99,
+"r": "U",
+"mc": "{1}{B}",
+"cmc": 2.0,
+"t": "Artifact Creature — Borg",
+"o": "Collective Drone's power is equal to the number of artifact creatures you control.",
+"p": "*",
+"q": "2",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "José Parodi",
+"prod": null
+},
+{
+"n": "Commander Raffi Musiker",
+"num": 100,
+"r": "U",
+"mc": "{2}{B}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Officer",
+"o": "When Commander Musiker enters, choose one —\n• Exile up to one target card from a graveyard. You gain 2 life.\n• Investigate. You lose 2 life. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+"p": "3",
+"q": "2",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Runa I. Rosenberger",
+"prod": null
+},
+{
+"n": "D'Ghor Bloodletter",
+"num": 101,
+"r": "U",
+"mc": "{2}{B}",
+"cmc": 3.0,
+"t": "Creature — Klingon Assassin",
+"o": "When this creature enters, choose one —\n• All other creatures get -1/-1 until end of turn.\n• Each player sacrifices a creature of their choice.",
+"p": "2",
+"q": "2",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Patricia Pria",
+"prod": null
+},
+{
+"n": "Death Is Irrelevant",
+"num": 102,
+"r": "M",
+"mc": "{6}{B}{B}",
+"cmc": 8.0,
+"t": "Enchantment",
+"o": "Artifact creatures you control have indestructible.\nAt the beginning of your end step, assimilate target creature card from a graveyard. (Put it onto the battlefield under your control with a +1/+1 counter. It's a Borg artifact creature and loses all other creature types.)",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Narendra Bintara Adi",
+"prod": null
+},
+{
+"n": "The Destruction of Praxis",
+"num": 103,
+"r": "R",
+"mc": "{3}{B}{B}",
+"cmc": 5.0,
+"t": "Sorcery",
+"o": "Strange new worlds — All creatures get -X/-X until end of turn, where X is the number of differently named lands you control. If X is 6 or more, create two 2/1 red Klingon Warrior creature tokens with haste.",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Pace Wilder",
+"prod": null
+},
+{
+"n": "De-evolve",
+"num": 104,
+"r": "U",
+"mc": "{1}{B}",
+"cmc": 2.0,
+"t": "Enchantment — Aura",
+"o": "Enchant creature\nEnchanted creature gets -4/-0, can't block, and is a Salamander. (It loses all other creature types.)\nThreshold — At the beginning of each upkeep, if there are seven or more cards in your graveyard, exile enchanted creature.",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Néstor Ossandón Leal",
+"prod": null
+},
+{
+"n": "Eject the Warp Core",
+"num": 105,
+"r": "C",
+"mc": "{1}{B}",
+"cmc": 2.0,
+"t": "Instant",
+"o": "Kicker—Sacrifice an artifact or creature. (You may sacrifice an artifact or creature in addition to any other costs as you cast this spell.)\nTarget creature gets -2/-2 until end of turn. If this spell was kicked, that creature gets -6/-6 until end of turn instead.",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Pierre Raveneau",
+"prod": null
+},
+{
+"n": "Elim Garak, Simple Tailor",
+"num": 106,
+"r": "R",
+"mc": "{2}{B}",
+"cmc": 3.0,
+"t": "Legendary Creature — Cardassian Rogue",
+"o": "Menace\nWhenever you face a dilemma, each opponent loses 2 life and you gain 2 life. (You face a dilemma as you choose one or more modes for a spell or ability.)",
+"p": "3",
+"q": "3",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Alexander Gering",
+"prod": null
+},
+{
+"n": "Fugitive Listener",
+"num": 107,
+"r": "C",
+"mc": "{2}{B}",
+"cmc": 3.0,
+"t": "Creature — El-Aurian Scout",
+"o": "When this creature enters, each opponent discards a card.",
+"p": "3",
+"q": "1",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Bastien L. Deharme",
+"prod": null
+},
+{
+"n": "Gabriel Lorca, Mirror Menace",
+"num": 108,
+"r": "U",
+"mc": "{4}{B}",
+"cmc": 5.0,
+"t": "Legendary Creature — Human Rogue Officer",
+"o": "Menace\nWhenever you face a dilemma, you may pay {B}. If you do, return this card from your graveyard to your hand. (You face a dilemma as you choose one or more modes for a spell or ability.)",
+"p": "5",
+"q": "4",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Kevin Glint",
+"prod": null
+},
+{
+"n": "General Chang, Cold Warrior",
+"num": 109,
+"r": "R",
+"mc": "{B}",
+"cmc": 1.0,
+"t": "Legendary Creature — Klingon Warrior Officer",
+"o": "{1}, Sacrifice a creature: Put a +1/+1 counter on each Klingon you control.",
+"p": "1",
+"q": "2",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Cliff Nielsen",
+"prod": null
+},
+{
+"n": "Georgiou, Terran Emperor",
+"num": 110,
+"r": "M",
+"mc": "{4}{B}{B}",
+"cmc": 6.0,
+"t": "Legendary Creature — Human Rogue Noble",
+"o": "You don't lose the game for having 0 or less life.\nAt the beginning of your end step, you lose 3 life and draw a card. Then if your life total is 0 or less, create ten 1/1 red Officer creature tokens.",
+"p": "4",
+"q": "6",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Julia Metzger",
+"prod": null
+},
+{
+"n": "A Good Day to Die",
+"num": 111,
+"r": "C",
+"mc": "{B}",
+"cmc": 1.0,
+"t": "Instant",
+"o": "Target creature gets +2/+0 until end of turn. When that creature dies this turn, you draw a card.",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Monztre",
+"prod": null
+},
+{
+"n": "Grand Nagus Zek",
+"num": 112,
+"r": "R",
+"mc": "{2}{B}",
+"cmc": 3.0,
+"t": "Legendary Creature — Ferengi Noble",
+"o": "Grand Nagus Zek gets +1/+1 for each Treasure you control.\nWhenever another creature dies, create a Treasure token. This ability triggers only once each turn. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+"p": "1",
+"q": "1",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Wei Guan",
+"prod": [
+"B",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Gul Dukat, Colonial Prefect",
+"num": 113,
+"r": "M",
+"mc": "{4}{B}{B}{B}",
+"cmc": 7.0,
+"t": "Legendary Creature — Cardassian Rogue",
+"o": "Menace\nAt the beginning of each end step, each opponent loses life equal to the life that player lost this turn. You gain life equal to the life lost this way. (Damage causes loss of life.)",
+"p": "6",
+"q": "6",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Joel Chaim Holtzman",
+"prod": null
+},
+{
+"n": "He's Dead, Jim",
+"num": 114,
+"r": "C",
+"mc": "{3}{B}",
+"cmc": 4.0,
+"t": "Instant",
+"o": "Destroy target creature. Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Crystal Fae",
+"prod": null
+},
+{
+"n": "Hive Mind Coprocessor",
+"num": 115,
+"r": "U",
+"mc": "{4}{B}",
+"cmc": 5.0,
+"t": "Artifact Creature — Borg",
+"o": "Artifact creatures you control have \"Whenever this creature deals combat damage to a player, you may pay 1 life. If you do, draw a card.\"",
+"p": "4",
+"q": "4",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Andrey Kuzinskiy",
+"prod": null
+},
+{
+"n": "Impossible Choice",
+"num": 116,
+"r": "U",
+"mc": "{2}{B}",
+"cmc": 3.0,
+"t": "Instant",
+"o": "Choose one —\n• Surgical Separation — Destroy target creature. Its controller creates two 1/1 red Officer creature tokens.\n• Remain Fused — You draw two cards and each player loses 2 life.",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Douglas Shuler",
+"prod": null
+},
+{
+"n": "In the Pale Moonlight",
+"num": 117,
+"r": "U",
+"mc": "{3}{B}{B}",
+"cmc": 5.0,
+"t": "Enchantment — Saga",
+"o": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI — Each opponent sacrifices a nontoken creature of their choice.\nII — Investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nIII — You may sacrifice an artifact or creature. If you do, create two 2/2 black Romulan creature tokens.",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Charles Chaisson",
+"prod": null
+},
+{
+"n": "Kai Winn, Faithless Leader",
+"num": 118,
+"r": "R",
+"mc": "{1}{B}",
+"cmc": 2.0,
+"t": "Legendary Creature — Bajoran Cleric",
+"o": "As Kai Winn enters, choose a nonland card name.\nWhenever an opponent casts a spell with the chosen name or activates an ability of a source with the chosen name, that player loses 3 life.",
+"p": "3",
+"q": "1",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Wei Guan",
+"prod": null
+},
+{
+"n": "Khan, Vengeful Heart",
+"num": 119,
+"r": "M",
+"mc": "{2}{B}{B}",
+"cmc": 4.0,
+"t": "Legendary Creature — Human Warrior",
+"o": "When Khan enters, you may sacrifice another creature or artifact. If you do, draw two cards.\nYou may cast this card from exile.",
+"p": "5",
+"q": "3",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Sam Kennedy",
+"prod": null
+},
+{
+"n": "Obsidian Order Operative",
+"num": 120,
+"r": "C",
+"mc": "{3}{B}",
+"cmc": 4.0,
+"t": "Creature — Cardassian Officer Spy",
+"o": "Whenever you face a dilemma, each opponent loses 1 life and you gain 1 life. (You face a dilemma as you choose one or more modes for a spell or ability.)",
+"p": "2",
+"q": "5",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Wero Gallo",
+"prod": null
+},
+{
+"n": "Organic Avulsion Unit",
+"num": 121,
+"r": "U",
+"mc": "{2}{B}",
+"cmc": 3.0,
+"t": "Artifact Creature — Borg",
+"o": "{2}: Artifact creatures you control gain menace until end of turn. (A creature with menace can't be blocked except by two or more creatures.)",
+"p": "2",
+"q": "3",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Andrey Kuzinskiy",
+"prod": null
+},
+{
+"n": "Overflow Submatrix",
+"num": 122,
+"r": "R",
+"mc": "{2}{B}",
+"cmc": 3.0,
+"t": "Artifact Creature — Borg",
+"o": "Once during each of your turns, you may cast an artifact creature spell from your graveyard. If you cast a spell this way, that artifact creature enters with a finality counter on it. (If a creature with a finality counter on it would die, exile it instead.)",
+"p": "3",
+"q": "3",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Carlos Dattoli",
+"prod": null
+},
+{
+"n": "Pattern Buffer Preservation",
+"num": 123,
+"r": "C",
+"mc": "{1}{B}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "Look at the top two cards of your library. Put one of them into your hand and the other into your graveyard.\nBeam me up {1}{B} (You may cast this card from your graveyard for {1}{B} if you also return a creature you control to its owner's hand. Then exile this spell.)",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Alex Negrea",
+"prod": null
+},
+{
+"n": "Relentless Drednok",
+"num": 124,
+"r": "C",
+"mc": "{B}",
+"cmc": 1.0,
+"t": "Artifact Creature — Robot",
+"o": "Lifelink\n{2}{B}, Exile this card from your graveyard: You draw a card and lose 1 life.",
+"p": "1",
+"q": "1",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Edouard",
+"prod": null
+},
+{
+"n": "Resistance Is Futile",
+"num": 125,
+"r": "U",
+"mc": "{1}{B}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "Choose one —\n• Destroy target nonartifact creature.\n• Return target artifact creature card with mana value 3 or less from your graveyard to the battlefield.",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Matt Stewart",
+"prod": null
+},
+{
+"n": "Rogue Artificial Intelligence",
+"num": 126,
+"r": "C",
+"mc": "{4}{B}{B}",
+"cmc": 6.0,
+"t": "Artifact Creature — Construct",
+"o": "When this creature enters, choose one —\n• You gain 3 life.\n• Surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)\nBasic landcycling {2} ({2}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)",
+"p": "6",
+"q": "5",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "José Parodi",
+"prod": null
+},
+{
+"n": "Salt Vampire",
+"num": 127,
+"r": "R",
+"mc": "{1}{B}",
+"cmc": 2.0,
+"t": "Creature — Vampire Shapeshifter",
+"o": "Lifelink\nWhen this creature enters, look at target opponent's hand. You may choose a nonland card from it. If you do, that player exiles that card, then draws a card.",
+"p": "2",
+"q": "2",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Bastien L. Deharme",
+"prod": null
+},
+{
+"n": "Sela, Tal Shiar Paradox",
+"num": 128,
+"r": "R",
+"mc": "{3}{B}",
+"cmc": 4.0,
+"t": "Legendary Creature — Romulan Human Rogue",
+"o": "Whenever Sela attacks, exile up to one target card from a graveyard.\nWhenever one or more cards leave your graveyard, create a tapped 2/2 black Romulan creature token.",
+"p": "3",
+"q": "3",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Tony Foti",
+"prod": null
+},
+{
+"n": "Storied Veteran",
+"num": 129,
+"r": "U",
+"mc": "{B}",
+"cmc": 1.0,
+"t": "Creature — Klingon Advisor",
+"o": "This creature can't block.\nYou may cast this card from your graveyard. If you do, it enters with a finality counter on it.",
+"p": "2",
+"q": "1",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Ana Teresa Rivera",
+"prod": null
+},
+{
+"n": "Stray from History",
+"num": 130,
+"r": "C",
+"mc": "{2}{B}",
+"cmc": 3.0,
+"t": "Sorcery",
+"o": "Choose one —\n• Rewrite the Past — Return one or two target creature and/or Spacecraft cards from your graveyard to your hand.\n• Repair the Timeline — Target opponent reveals their hand. You choose a nonland card from it. Exile that card.",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Joel Chaim Holtzman",
+"prod": null
+},
+{
+"n": "Tal Shiar Operative",
+"num": 131,
+"r": "C",
+"mc": "{1}{B}",
+"cmc": 2.0,
+"t": "Creature — Romulan Officer Spy",
+"o": "Whenever this creature attacks, choose one —\n• Target creature you control gains deathtouch until end of turn.\n• Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+"p": "2",
+"q": "2",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Irina Nordsol",
+"prod": null
+},
+{
+"n": "Tell Me What You See",
+"num": 132,
+"r": "U",
+"mc": "{1}{B}",
+"cmc": 2.0,
+"t": "Enchantment",
+"o": "When this enchantment enters, target opponent may have you draw a card. If they don't, they lose 4 life and you surveil 1.\nWhenever you face a dilemma, you may return this enchantment to its owner's hand. (You face a dilemma as you choose one or more modes for a spell or ability.)",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Douglas Shuler",
+"prod": null
+},
+{
+"n": "Tenacious Drone",
+"num": 133,
+"r": "C",
+"mc": "{1}{B}",
+"cmc": 2.0,
+"t": "Artifact Creature — Borg",
+"o": "When this creature dies, create a 1/1 colorless Borg artifact creature token.",
+"p": "2",
+"q": "1",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Anton Solovianchyk",
+"prod": null
+},
+{
+"n": "Test of Loyalty",
+"num": 134,
+"r": "U",
+"mc": "{B}",
+"cmc": 1.0,
+"t": "Sorcery",
+"o": "Choose one —\n• Plain, Simple Garak — Exile target card from a graveyard. Draw a card.\n• Of the Obsidian Order — Return target creature card from your graveyard to your hand.",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Bartek Fedyczak",
+"prod": null
+},
+{
+"n": "U.S.S. Reliant, From Hell's Heart",
+"num": 135,
+"r": "R",
+"mc": "{2}{B}{B}",
+"cmc": 4.0,
+"t": "Legendary Artifact — Spacecraft",
+"o": "Whenever U.S.S. Reliant enters or deals combat damage to a player, return target creature card with mana value 4 or less from your graveyard to the battlefield with a finality counter on it.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 10+.)\n10+ | Flying",
+"p": "4",
+"q": "3",
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Dofresh",
+"prod": null
+},
+{
+"n": "Vengeance Mission",
+"num": 136,
+"r": "U",
+"mc": "{2}{B}",
+"cmc": 3.0,
+"t": "Enchantment",
+"o": "Whenever a creature dies, put a quest counter on this enchantment. Target opponent loses 1 life. That player loses 2 life instead if there are seven or more quest counters on this enchantment.",
+"p": null,
+"q": null,
+"cor": [
+"B"
+],
+"ci": [
+"B"
+],
+"art": "Daarken",
+"prod": null
+},
+{
+"n": "Academy Instructor",
+"num": 137,
+"r": "U",
+"mc": "{2}{R}",
+"cmc": 3.0,
+"t": "Creature — Bolian Officer",
+"o": "This creature gets +1/+0 for each Officer token you control.\nWhenever you cast a noncreature spell, create a 1/1 red Officer creature token.",
+"p": "0",
+"q": "3",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Josu Hernaiz",
+"prod": null
+},
+{
+"n": "Beckett Mariner, Impetuous Ensign",
+"num": 138,
+"r": "U",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Legendary Creature — Human Officer",
+"o": "First strike\nReckless Behavior — Whenever Beckett Mariner becomes tapped, put a promotion counter on her. Then if there are three or more promotion counters on her, remove those counters and she deals 2 damage to each opponent.",
+"p": "2",
+"q": "1",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Lucas Durham",
+"prod": null
+},
+{
+"n": "Boarding Action",
+"num": 139,
+"r": "C",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "Create a 2/1 red Klingon Warrior creature token with haste.\nBeam me up {2}{R} (You may cast this card from your graveyard for {2}{R} if you also return a creature you control to its owner's hand. Then exile this spell.)",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Douglas Shuler",
+"prod": null
+},
+{
+"n": "Brazen Bluff",
+"num": 140,
+"r": "R",
+"mc": "{R}{R}",
+"cmc": 2.0,
+"t": "Instant",
+"o": "Choose target noncreature spell an opponent controls. That player may exile it. If they don't, you may cast a noncreature spell from your hand without paying its mana cost.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Filipe Pagliuso",
+"prod": null
+},
+{
+"n": "Cantankerous Captain",
+"num": 141,
+"r": "C",
+"mc": "{2}{R}",
+"cmc": 3.0,
+"t": "Creature — Tellarite Officer",
+"o": "At the beginning of combat on your turn, target creature you control gets +1/+0 until end of turn. Then that creature gains menace until end of turn if creatures you control have total power 8 or greater. (It can't be blocked except by two or more creatures.)",
+"p": "2",
+"q": "3",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Edouard",
+"prod": null
+},
+{
+"n": "Captain James T. Kirk",
+"num": 142,
+"r": "M",
+"mc": "{2}{R}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Officer",
+"o": "Whenever Captain Kirk enters or attacks, choose one. If you have no cards in hand, choose one or more instead.\n• Discard a card, then draw a card.\n• Create a 1/1 red Officer creature token.\n• Creatures you control get +1/+0 until end of turn.",
+"p": "2",
+"q": "2",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Jason Pastrana",
+"prod": null
+},
+{
+"n": "Captain Michael Burnham",
+"num": 143,
+"r": "U",
+"mc": "{2}{R}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Officer",
+"o": "Trample\nLandfall — Whenever a land you control enters, Captain Burnham deals 1 damage to each opponent. If this is the second time this ability has resolved this turn, put a +1/+1 counter on Captain Burnham.",
+"p": "3",
+"q": "3",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Romana Kendelic",
+"prod": null
+},
+{
+"n": "Captain's Tutelage",
+"num": 144,
+"r": "C",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Enchantment — Aura",
+"o": "Flash\nEnchant creature\nWhen this Aura enters, enchanted creature gains first strike until end of turn.\nEnchanted creature gets +2/+0.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Mark Spears",
+"prod": null
+},
+{
+"n": "D-7 Battle Cruiser",
+"num": 145,
+"r": "R",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Artifact — Spacecraft",
+"o": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 8+.)\n3+ | At the beginning of combat on your turn, create a 2/1 red Klingon Warrior creature token with haste. Sacrifice it at the beginning of the next end step.\n8+ | Flying",
+"p": "3",
+"q": "3",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Kevin Glint",
+"prod": null
+},
+{
+"n": "Dahar Master",
+"num": 146,
+"r": "C",
+"mc": "{3}{R}",
+"cmc": 4.0,
+"t": "Creature — Klingon Warrior",
+"o": "When this creature enters, you may sacrifice another nonland permanent. When you do, this creature deals 2 damage to any target.",
+"p": "4",
+"q": "3",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Grant Griffin",
+"prod": null
+},
+{
+"n": "Dominion Infiltration",
+"num": 147,
+"r": "R",
+"mc": "{X}{R}{R}{R}",
+"cmc": 3.0,
+"t": "Sorcery",
+"o": "Choose X target creatures your opponents control. For each of them, create a token that's a copy of that creature, except it has changeling. Those tokens gain haste. Exile those tokens at the beginning of the next end step. (They're every creature type.)",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Jonathan Bartlett",
+"prod": null
+},
+{
+"n": "Encounter the Unknown",
+"num": 148,
+"r": "R",
+"mc": "{1}{R}{R}",
+"cmc": 3.0,
+"t": "Instant",
+"o": "Choose one —\n• Come in Peace — Exile the top two cards of your library. Until the end of your next turn, you may play those cards.\n• Shoot to Kill — Encounter the Unknown deals 2 damage to each creature and each player.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Neil Blevins",
+"prod": null
+},
+{
+"n": "Erica Ortegas, Plucky Pilot",
+"num": 149,
+"r": "U",
+"mc": "{3}{R}",
+"cmc": 4.0,
+"t": "Legendary Creature — Human Pilot",
+"o": "Haste\nWhenever Erica Ortegas becomes tapped, you may put a land card from your hand onto the battlefield. If you do, return a land you control to its owner's hand at the beginning of the next end step.",
+"p": "3",
+"q": "3",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Romana Kendelic",
+"prod": null
+},
+{
+"n": "Exploratory Mission",
+"num": 150,
+"r": "U",
+"mc": "{2}{R}{R}",
+"cmc": 4.0,
+"t": "Enchantment",
+"o": "Landfall — Whenever a land you control enters, put a quest counter on this enchantment. Then exile cards from the top of your library until you exile a nonland card. You may play that card this turn. If this enchantment has five or more quest counters on it, add {R}{R}.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Jason Pastrana",
+"prod": [
+"R"
+]
+},
+{
+"n": "Genesis Effect",
+"num": 151,
+"r": "C",
+"mc": "{4}{R}",
+"cmc": 5.0,
+"t": "Instant",
+"o": "Genesis Effect deals 6 damage to target creature. Destroy target land you control. Create a tapped Planet land token named New Planet with \"{T}: Add one mana of any color.\"",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Anthony Devine",
+"prod": [
+"B",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Horta",
+"num": 152,
+"r": "C",
+"mc": "{4}{R}{R}",
+"cmc": 6.0,
+"t": "Creature — Elemental",
+"o": "Trample\nBasic landcycling {2} ({2}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)",
+"p": "7",
+"q": "6",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Arthur Haas",
+"prod": null
+},
+{
+"n": "Infinite Diversity",
+"num": 153,
+"r": "M",
+"mc": "{7}{R}{R}",
+"cmc": 9.0,
+"t": "Sorcery",
+"o": "Federation — Exile target instant or sorcery card from your graveyard. Copy that card X times, where X is the number of creature types among non-Borg creatures you control. You may cast the copies without paying their mana costs. Exile Infinite Diversity.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Julie Dillon",
+"prod": null
+},
+{
+"n": "Khaaaaaaaaaaaannn!",
+"num": 154,
+"r": "U",
+"mc": "{X}{R}",
+"cmc": 1.0,
+"t": "Instant",
+"o": "Khaaaaaaaaaaaannn! deals twice X damage to target creature. If that creature would die this turn, exile it instead.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Evan Shipard",
+"prod": null
+},
+{
+"n": "Khan, Despot by Design",
+"num": 155,
+"r": "U",
+"mc": "{4}{R}",
+"cmc": 5.0,
+"t": "Legendary Creature — Human Rogue",
+"o": "Trample\nWhen Khan enters, he deals 1 damage to each opponent and each creature your opponents control.",
+"p": "5",
+"q": "4",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Kirk DouPonce",
+"prod": null
+},
+{
+"n": "La'An Noonien-Singh, Security",
+"num": 156,
+"r": "U",
+"mc": "{2}{R}{R}",
+"cmc": 4.0,
+"t": "Legendary Creature — Human Soldier",
+"o": "Whenever you attack while creatures you control have total power 8 or greater, target creature can't block this turn.",
+"p": "4",
+"q": "3",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Pauline Voss",
+"prod": null
+},
+{
+"n": "Lwaxana Troi, Charming Guest",
+"num": 157,
+"r": "R",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Legendary Creature — Betazoid Advisor",
+"o": "You may choose not to untap Lwaxana Troi during your untap step.\n{2}, {T}: Choose another target creature you control. For as long as Lwaxana Troi remains tapped, if a triggered ability of that creature triggers, that ability triggers an additional time.",
+"p": "2",
+"q": "2",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Marta Nael",
+"prod": null
+},
+{
+"n": "Munitions Enthusiast",
+"num": 158,
+"r": "U",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Creature — Klingon Warrior",
+"o": "Trample\nWhen this creature dies, it deals 1 damage to any target.",
+"p": "3",
+"q": "2",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Lucio Parrillo",
+"prod": null
+},
+{
+"n": "The Naked Time",
+"num": 159,
+"r": "U",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Enchantment — Saga",
+"o": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI — Search your library for a basic Mountain card, put it onto the battlefield tapped, then shuffle.\nII — Whenever a creature you control enters this turn, put a +1/+1 counter on it and it gains haste until end of turn.\nIII — Sacrifice a land.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Jason Raish",
+"prod": null
+},
+{
+"n": "Pah-Wraith",
+"num": 160,
+"r": "R",
+"mc": "{5}{R}{R}",
+"cmc": 7.0,
+"t": "Creature — Wraith",
+"o": "First strike, haste\nStrange new worlds — Whenever this creature attacks, creatures you control get +X/+0 until end of turn, where X is the number of differently named lands you control.",
+"p": "4",
+"q": "4",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Nino Vecia",
+"prod": null
+},
+{
+"n": "Perils of the Past",
+"num": 161,
+"r": "C",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Instant",
+"o": "Choose one —\n• Use the Relic — Target creature gets +3/+2 until end of turn.\n• Destroy the Relic — Destroy target artifact.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Zoltan Boros",
+"prod": null
+},
+{
+"n": "Planetary Bombardment",
+"num": 162,
+"r": "C",
+"mc": "{R}",
+"cmc": 1.0,
+"t": "Sorcery",
+"o": "Planetary Bombardment deals 2 damage to target creature. Planetary Bombardment deals 4 damage to that creature instead if a creature died this turn.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Smirtouille",
+"prod": null
+},
+{
+"n": "Planetary Patrol",
+"num": 163,
+"r": "C",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Creature — Scout",
+"o": "Landfall — Whenever a land you control enters, this creature gets +1/+1 until end of turn.",
+"p": "2",
+"q": "2",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Runa I. Rosenberger",
+"prod": null
+},
+{
+"n": "Plasma Cascade",
+"num": 164,
+"r": "C",
+"mc": "{2}{R}",
+"cmc": 3.0,
+"t": "Instant",
+"o": "Plasma Cascade deals 3 damage to any target. You may discard a card. If you do, draw a card.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Narendra Bintara Adi",
+"prod": null
+},
+{
+"n": "Q, Stacking the Deck",
+"num": 165,
+"r": "M",
+"mc": "{2}{R}{R}",
+"cmc": 4.0,
+"t": "Legendary Creature — Q",
+"o": "When Q enters, shuffle your library, then exile cards from the top of your library until you exile a nonland card. That nonland card gains \"Exile a card from your hand: Create a copy of this card. You may cast the copy. Activate only during your turn and only if this card is exiled.\"",
+"p": "4",
+"q": "4",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Ryan Valle",
+"prod": null
+},
+{
+"n": "Quark, Humble Proprietor",
+"num": 166,
+"r": "M",
+"mc": "{2}{R}",
+"cmc": 3.0,
+"t": "Legendary Creature — Ferengi Rogue",
+"o": "You can't sacrifice Treasure tokens.\nAt the beginning of each upkeep, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+"p": "1",
+"q": "2",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Alex Negrea",
+"prod": [
+"B",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Ravenous Cosmozoan",
+"num": 167,
+"r": "U",
+"mc": "{5}{R}",
+"cmc": 6.0,
+"t": "Creature — Fish",
+"o": "This spell costs {1} less to cast for each noncreature, nonland card in your graveyard.\nFlying, haste",
+"p": "3",
+"q": "3",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Bruce Brenneise",
+"prod": null
+},
+{
+"n": "Reckless Impulse",
+"num": 168,
+"r": "C",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "Exile the top two cards of your library. Until the end of your next turn, you may play those cards.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Simon Dominic",
+"prod": null
+},
+{
+"n": "Red Alert!",
+"num": 169,
+"r": "U",
+"mc": "{2}{R}",
+"cmc": 3.0,
+"t": "Instant",
+"o": "This spell costs {2} less to cast if a creature is attacking you.\nCreatures you control get +2/+0 until end of turn.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Carlos C Diaz",
+"prod": null
+},
+{
+"n": "Sarcophagus, Ship of the Dead",
+"num": 170,
+"r": "U",
+"mc": "{2}{R}",
+"cmc": 3.0,
+"t": "Legendary Artifact — Spacecraft",
+"o": "Other creatures you control get +1/+0.\nWhenever a creature dies, if Sarcophagus isn't a creature, put a charge counter on it.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 10+.)\n10+ | Flying",
+"p": "4",
+"q": "4",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Joan Piqué Llorens",
+"prod": null
+},
+{
+"n": "Savvy Profiteer",
+"num": 171,
+"r": "C",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Creature — Ferengi Rogue",
+"o": "{T}: Add {R}.\n{3}, {T}: Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+"p": "2",
+"q": "1",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Andreia Ugrai",
+"prod": [
+"B",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Silicate Surveyor",
+"num": 172,
+"r": "C",
+"mc": "{4}{R}",
+"cmc": 5.0,
+"t": "Creature — Tholian Scout",
+"o": "Reach\nWhen this creature enters, exile the top card of your library. Until the end of your next turn, you may play that card.",
+"p": "4",
+"q": "4",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Joan Piqué Llorens",
+"prod": null
+},
+{
+"n": "Starfleet Security",
+"num": 173,
+"r": "C",
+"mc": "{R}",
+"cmc": 1.0,
+"t": "Creature — Human Officer",
+"o": "Haste\nWhen this creature dies during your turn, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+"p": "1",
+"q": "1",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Edouard",
+"prod": null
+},
+{
+"n": "Tal Shiar Analyst",
+"num": 174,
+"r": "C",
+"mc": "{2}{R}",
+"cmc": 3.0,
+"t": "Creature — Romulan Scientist",
+"o": "{T}: This creature deals 1 damage to each opponent.\nWhenever you cast a noncreature spell, untap this creature.",
+"p": "3",
+"q": "2",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Lucas Durham",
+"prod": null
+},
+{
+"n": "Targ Wrangler",
+"num": 175,
+"r": "U",
+"mc": "{2}{R}",
+"cmc": 3.0,
+"t": "Creature — Klingon Warrior",
+"o": "Menace (This creature can't be blocked except by two or more creatures.)\nAt the beginning of your end step, if this creature attacked this turn, sacrifice a nonland permanent.",
+"p": "5",
+"q": "3",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Harkalé Linaï",
+"prod": null
+},
+{
+"n": "Tasha Yar, Out of Time",
+"num": 176,
+"r": "R",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Legendary Creature — Human Officer",
+"o": "Haste\nWhen Tasha Yar dies, exile the top card of your library. Until the end of your next turn, you may play that card.\n{2}{R}, Exile this card from your graveyard: Create a token that's a copy of this card. Sacrifice it at the beginning of the next end step. Activate only as a sorcery.",
+"p": "2",
+"q": "1",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Patricia Pria",
+"prod": null
+},
+{
+"n": "Test of Identity",
+"num": 177,
+"r": "U",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Instant",
+"o": "Choose one —\n• I Am Klingon — Target Klingon gets +1/+1 and gains double strike until end of turn.\n• I Am Starfleet — Discard a card. If you do, draw two cards.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Andrey Kuzinskiy",
+"prod": null
+},
+{
+"n": "Transporter Malfunction",
+"num": 178,
+"r": "U",
+"mc": "{1}{R}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "Transporter Malfunction deals 3 damage to any target.\nBeam me up {3}{R}{R}{R} (You may cast this card from your graveyard for {3}{R}{R}{R} if you also return a creature you control to its owner's hand. Then exile this spell.)",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Bartek Fedyczak",
+"prod": null
+},
+{
+"n": "Will Riker, First in the Field",
+"num": 179,
+"r": "R",
+"mc": "{3}{R}",
+"cmc": 4.0,
+"t": "Legendary Creature — Human Officer",
+"o": "At the beginning of combat on your turn, reveal cards from the top of your library until you reveal two land cards. Put those land cards onto the battlefield and the rest on the bottom of your library in a random order. Sacrifice those lands at the beginning of your next end step.",
+"p": "4",
+"q": "3",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Zezhou Chen",
+"prod": null
+},
+{
+"n": "Worf, Intelligence Contractor",
+"num": 180,
+"r": "R",
+"mc": "{2}{R}",
+"cmc": 3.0,
+"t": "Legendary Creature — Klingon Warrior Spy",
+"o": "When Worf enters, for each opponent, gain control of up to one target creature that player controls with mana value 3 or less until end of turn. Untap those creatures. Until end of turn, they become Warriors in addition to their other types and gain haste.",
+"p": "3",
+"q": "2",
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Jodie Muir",
+"prod": null
+},
+{
+"n": "The Wrath of Khan",
+"num": 181,
+"r": "R",
+"mc": "{2}{R}",
+"cmc": 3.0,
+"t": "Enchantment — Saga",
+"o": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI — This Saga deals 4 damage to target creature an opponent controls. At the beginning of the next combat this turn, gain control of that creature until end of turn. Untap it. It gains haste until end of turn.\nII — You may exile a card from your hand. If you do, draw a card.\nIII — Each opponent sacrifices a nontoken permanent of their choice.",
+"p": null,
+"q": null,
+"cor": [
+"R"
+],
+"ci": [
+"R"
+],
+"art": "Kirk DouPonce",
+"prod": null
+},
+{
+"n": "Adversary by Algorithm",
+"num": 182,
+"r": "U",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Sorcery",
+"o": "Create a 3/3 colorless Illusion artifact creature token.\nBeam me up {3}{G} (You may cast this card from your graveyard for {3}{G} if you also return a creature you control to its owner's hand. Then exile this spell.)",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Tony Foti",
+"prod": null
+},
+{
+"n": "Amok Time",
+"num": 183,
+"r": "U",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Enchantment — Saga",
+"o": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI — Target creature you control fights up to one target creature an opponent controls.\nII — You gain 3 life.\nIII — Return target creature card from your graveyard to your hand.",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Jason Raish",
+"prod": null
+},
+{
+"n": "Astute Terraformer",
+"num": 184,
+"r": "C",
+"mc": "{1}{G}",
+"cmc": 2.0,
+"t": "Creature — Vulcan Scientist",
+"o": "Strange new worlds — {6}: This creature gets +2/+2 until end of turn. This ability costs {X} less to activate, where X is the number of differently named lands you control. Activate only once each turn.",
+"p": "2",
+"q": "2",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Andreia Ugrai",
+"prod": null
+},
+{
+"n": "Branching Timeline",
+"num": 185,
+"r": "R",
+"mc": "{6}{G}{G}",
+"cmc": 8.0,
+"t": "Sorcery",
+"o": "Strange new worlds — Reveal the top X cards of your library, where X is the number of differently named lands you control. Put all permanent cards revealed this way onto the battlefield tapped and the rest on the bottom of your library in a random order.",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Borja Pindado",
+"prod": null
+},
+{
+"n": "Captain Jonathan Archer",
+"num": 186,
+"r": "R",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Officer",
+"o": "When Captain Archer enters, create Porthos, a legendary 1/1 green Dog creature token.\nFederation — {G}, {T}: Target creature you control gets +X/+X until end of turn, where X is the number of creature types among non-Borg creatures you control. Activate only as a sorcery.",
+"p": "3",
+"q": "3",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Julia Metzger",
+"prod": null
+},
+{
+"n": "Captain Kathryn Janeway",
+"num": 187,
+"r": "M",
+"mc": "{3}{G}",
+"cmc": 4.0,
+"t": "Legendary Creature — Human Officer",
+"o": "You may play an additional land on each of your turns.\nWhenever Captain Janeway or another creature you control enters, that creature explores. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on the creature, then put the card back or put it into your graveyard.)",
+"p": "2",
+"q": "3",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Jason Pastrana",
+"prod": null
+},
+{
+"n": "Captain Pike, Fullness of Time",
+"num": 188,
+"r": "R",
+"mc": "{1}{G}{G}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Officer Scout",
+"o": "Strange new worlds — Captain Pike's power and toughness are each equal to the number of differently named lands you control.\nYou may look at the top card of your library any time.\nYou may play lands from the top of your library.",
+"p": "*",
+"q": "*",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Joel Chaim Holtzman",
+"prod": null
+},
+{
+"n": "Cold-Blooded Crew",
+"num": 189,
+"r": "C",
+"mc": "{4}{G}{G}",
+"cmc": 6.0,
+"t": "Creature — Gorn Warrior",
+"o": "When this creature enters, put two +1/+1 counters on target creature.\nThis creature can't be blocked by creatures with power 2 or less.\nBasic landcycling {2} ({2}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)",
+"p": "4",
+"q": "4",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "John Tyler Christopher",
+"prod": null
+},
+{
+"n": "Common Goal",
+"num": 190,
+"r": "C",
+"mc": "{1}{G}",
+"cmc": 2.0,
+"t": "Sorcery",
+"o": "One or two target creatures you control each deal damage equal to their power to target creature an opponent controls.",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Ioannis Fiore",
+"prod": null
+},
+{
+"n": "Culber and Stamets, Star-Crossed",
+"num": 191,
+"r": "U",
+"mc": "{3}{G}",
+"cmc": 4.0,
+"t": "Legendary Creature — Human Doctor Artificer",
+"o": "When Culber and Stamets enter, choose one —\n• Put a +1/+1 counter on target creature.\n• Add two mana of any one color.",
+"p": "3",
+"q": "4",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Harkalé Linaï",
+"prod": [
+"B",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Dathon and Picard at El-Adrel",
+"num": 192,
+"r": "C",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Instant",
+"o": "Choose one —\n• Temba, His Arms Wide — Target creature gets +3/+3 and gains trample until end of turn.\n• Shaka, When the Walls Fell — Each opponent sacrifices a nontoken artifact or enchantment of their choice.",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Bartek Fedyczak",
+"prod": null
+},
+{
+"n": "David and Carol Marcus, Creators",
+"num": 193,
+"r": "U",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Scientist",
+"o": "When David and Carol Marcus enter, create a tapped Planet land token named New Planet with \"{T}: Add one mana of any color.\"",
+"p": "1",
+"q": "3",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "KarrahE",
+"prod": [
+"B",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Dominion Assault Force",
+"num": 194,
+"r": "C",
+"mc": "{3}{G}",
+"cmc": 4.0,
+"t": "Creature — Jem'Hadar Warrior",
+"o": "Vigilance\nWhen this creature enters, choose one —\n• Exile target card from a graveyard.\n• Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+"p": "4",
+"q": "4",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Ioannis Fiore",
+"prod": null
+},
+{
+"n": "Dominion Supervisor",
+"num": 195,
+"r": "C",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Creature — Vorta Doctor",
+"o": "When this creature enters, put a +1/+1 counter on target creature.\nCreatures you control with counters on them have trample.",
+"p": "3",
+"q": "1",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Kevin Glint",
+"prod": null
+},
+{
+"n": "Dr. Joseph M'Benga",
+"num": 196,
+"r": "M",
+"mc": "{2}{G}{G}",
+"cmc": 4.0,
+"t": "Legendary Creature — Human Doctor",
+"o": "Other creatures you control with counters on them have hexproof.\nIf you would put one or more counters on a creature you control, put twice that many of each of those kinds of counters on that creature instead.",
+"p": "3",
+"q": "3",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Romana Kendelic",
+"prod": null
+},
+{
+"n": "Dr. Leonard \"Bones\" McCoy",
+"num": 197,
+"r": "R",
+"mc": "{1}{G}{G}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Doctor",
+"o": "Flash\nWhen Dr. McCoy enters, choose one —\n• Return target non-Doctor permanent card from your graveyard to your hand.\n• Choose up to one other target creature. When it dies this turn, return that card to the battlefield under its owner's control with a +1/+1 counter on it at the beginning of the next end step.",
+"p": "3",
+"q": "2",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Sam Kennedy",
+"prod": null
+},
+{
+"n": "Final Frontier",
+"num": 198,
+"r": "C",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Sorcery",
+"o": "Search your library for a basic land card or Planet card, put it onto the battlefield tapped, then shuffle.\nBeam me up {1}{G} (You may cast this card from your graveyard for {1}{G} if you also return a creature you control to its owner's hand. Then exile this spell.)",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Jessica Rossier",
+"prod": null
+},
+{
+"n": "First Contact",
+"num": 199,
+"r": "C",
+"mc": "{1}{G}",
+"cmc": 2.0,
+"t": "Instant",
+"o": "Mill four cards. You may put a permanent card from among them into your hand. If this spell is the first spell you've cast this game, you gain 2 life. (To mill four cards, put the top four cards of your library into your graveyard.)",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Kieran Yanner",
+"prod": null
+},
+{
+"n": "Genesis Device",
+"num": 200,
+"r": "R",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Legendary Artifact",
+"o": "When Genesis Device enters, search your library for a basic land card or Planet card, put it onto the battlefield tapped, then shuffle.\n{3}{G}{G}, {T}, Sacrifice Genesis Device: Sacrifice any number of lands you control, then search your library for up to that many land cards, put them onto the battlefield tapped, then shuffle. Activate only as a sorcery.",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Cliff Nielsen",
+"prod": null
+},
+{
+"n": "Holo-Engineer",
+"num": 201,
+"r": "R",
+"mc": "{2}{G}{G}",
+"cmc": 4.0,
+"t": "Creature — Human Artificer",
+"o": "When this creature enters, create a 3/3 colorless Illusion artifact creature token.\nIf one or more tokens would be created under your control, that many 3/3 colorless Illusion artifact creature tokens are created instead.",
+"p": "3",
+"q": "3",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Josu Hernaiz",
+"prod": null
+},
+{
+"n": "Hologram Stalker",
+"num": 202,
+"r": "U",
+"mc": "{4}{G}{G}",
+"cmc": 6.0,
+"t": "Creature — Hirogen Warrior",
+"o": "When this creature enters, return target permanent card from your graveyard to your hand.\nWhenever a card leaves your graveyard, create a 3/3 colorless Illusion artifact creature token. This ability triggers only once each turn.",
+"p": "2",
+"q": "2",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Hector Ortiz",
+"prod": null
+},
+{
+"n": "I'm a Doctor, Not a . . .",
+"num": 203,
+"r": "C",
+"mc": "{G}",
+"cmc": 1.0,
+"t": "Instant",
+"o": "Put a +1/+1 counter on target creature you control. Untap it. Until end of turn, it gets +1/+1 and becomes a Doctor. (It loses all other creature types.)",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Joel Chaim Holtzman",
+"prod": null
+},
+{
+"n": "Jadzia Dax, Living Legacy",
+"num": 204,
+"r": "M",
+"mc": "{1}{G}",
+"cmc": 2.0,
+"t": "Legendary Creature — Trill Scientist",
+"o": "At the beginning of your first main phase, put a +1/+1 counter on Jadzia Dax, then add an amount of {G} equal to the number of counters on her.\nTransfer Symbiont — {2}{G}, Discard this card: Put two +1/+1 counters on target creature.",
+"p": "0",
+"q": "1",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "John Tyler Christopher",
+"prod": [
+"G"
+]
+},
+{
+"n": "Jake Sisko, War Correspondent",
+"num": 205,
+"r": "U",
+"mc": "{1}{G}",
+"cmc": 2.0,
+"t": "Legendary Creature — Human Citizen",
+"o": "Landfall — Whenever a land you control enters, you gain 1 life. If this is the second time this ability has resolved this turn, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+"p": "2",
+"q": "2",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Ariel Orea",
+"prod": null
+},
+{
+"n": "MACO Strike Team",
+"num": 206,
+"r": "R",
+"mc": "{G}",
+"cmc": 1.0,
+"t": "Creature — Human Soldier",
+"o": "Whenever a creature you control becomes the target of a spell or ability an opponent controls, create a tapped 1/1 red Officer creature token.",
+"p": "2",
+"q": "1",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Aaron J. Riley",
+"prod": null
+},
+{
+"n": "Moopsy",
+"num": 207,
+"r": "C",
+"mc": "{G}",
+"cmc": 1.0,
+"t": "Creature — Beast",
+"o": "Deathtouch\n{2}: This creature gains reach until end of turn.",
+"p": "1",
+"q": "1",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Brooklyn Smith",
+"prod": null
+},
+{
+"n": "Mugato",
+"num": 208,
+"r": "U",
+"mc": "{3}{G}{G}",
+"cmc": 5.0,
+"t": "Creature — Ape Beast",
+"o": "Reach, vigilance, deathtouch",
+"p": "6",
+"q": "6",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Chuck Lukacs",
+"prod": null
+},
+{
+"n": "Neelix, Moral Support",
+"num": 209,
+"r": "U",
+"mc": "{1}{G}",
+"cmc": 2.0,
+"t": "Legendary Creature — Talaxian Advisor",
+"o": "When Neelix enters, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")\nWhenever you gain life, put a +1/+1 counter on Neelix.",
+"p": "1",
+"q": "1",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "JB Casacop",
+"prod": null
+},
+{
+"n": "Photosynthetic Physician",
+"num": 210,
+"r": "C",
+"mc": "{4}{G}",
+"cmc": 5.0,
+"t": "Creature — Plant Doctor",
+"o": "Reach\n{G}, Exile this card from your graveyard: Create a 1/1 red Officer creature token. Activate only as a sorcery.",
+"p": "5",
+"q": "5",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Stella Spente",
+"prod": null
+},
+{
+"n": "Rok-Tahk, Budding Scientist",
+"num": 211,
+"r": "M",
+"mc": "{4}{G}{G}",
+"cmc": 6.0,
+"t": "Legendary Creature — Brikar Scientist",
+"o": "Creatures you control have \"{T}: Add {G}{G}.\"\nWhen Rok-Tahk enters, create Murf, a legendary 0/1 green Ooze Slug creature token with indestructible.",
+"p": "5",
+"q": "5",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Andreas Zafiratos",
+"prod": [
+"G"
+]
+},
+{
+"n": "Saru, Unthreatened",
+"num": 212,
+"r": "U",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Legendary Creature — Kelpien Officer",
+"o": "Flash\nWhen Saru enters, another target creature you control gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+"p": "3",
+"q": "2",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Ron Lemen",
+"prod": null
+},
+{
+"n": "Saurian Explorer",
+"num": 213,
+"r": "C",
+"mc": "{3}{G}",
+"cmc": 4.0,
+"t": "Creature — Dinosaur Scout",
+"o": "Landfall — Whenever a land you control enters, this creature gets +2/+2 until end of turn.\n{6}: Create a tapped Planet land token named New Planet with \"{T}: Add one mana of any color.\" Activate only as a sorcery.",
+"p": "4",
+"q": "3",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Bartek Fedyczak",
+"prod": [
+"B",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Species 8472",
+"num": 214,
+"r": "U",
+"mc": "{4}{G}{G}",
+"cmc": 6.0,
+"t": "Creature — Insect Beast",
+"o": "Strange new worlds — When this creature enters, you gain life equal to the number of differently named lands you control.\nThis creature can't be blocked by artifact creatures.\nThis creature can't be the target of abilities from artifact sources your opponents control.",
+"p": "7",
+"q": "5",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Néstor Ossandón Leal",
+"prod": null
+},
+{
+"n": "Stable Wormhole",
+"num": 215,
+"r": "R",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Enchantment",
+"o": "Whenever you attack, create a tapped Planet land token named New Planet with \"{T}: Add one mana of any color.\"",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Bruce Brenneise",
+"prod": [
+"B",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Support Mission",
+"num": 216,
+"r": "U",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Enchantment",
+"o": "Whenever a creature you control enters, put a quest counter on this enchantment. Put a +1/+1 counter on that creature. If this enchantment has five or more quest counters on it, instead put two +1/+1 counters on that creature.",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Nadia Hurianova",
+"prod": null
+},
+{
+"n": "Sylvia Tilly, Joy of Discovery",
+"num": 217,
+"r": "U",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Scientist Artificer",
+"o": "When Sylvia Tilly enters, surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)\nAt the beginning of combat on your turn, you may pay {1} and exile a card from your graveyard. When you do, put a +1/+1 counter on target creature.",
+"p": "2",
+"q": "2",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Ron Lemen",
+"prod": null
+},
+{
+"n": "Syndicate Liquidators",
+"num": 218,
+"r": "U",
+"mc": "{4}{G}",
+"cmc": 5.0,
+"t": "Creature — Orion Pirate",
+"o": "Trample\nLandfall — Whenever a land you control enters, put two +1/+1 counters on target creature you control.",
+"p": "4",
+"q": "4",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Carlos C Diaz",
+"prod": null
+},
+{
+"n": "Temporal Conqueror",
+"num": 219,
+"r": "C",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Creature — Na'kuhl Warrior",
+"o": "When this creature enters, mill three cards. Then return a land card from your graveyard to your hand. If you can't, create a Treasure token. (To mill three cards, put the top three cards from your library into your graveyard.)",
+"p": "2",
+"q": "3",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Douglas Shuler",
+"prod": null
+},
+{
+"n": "Test of Courage",
+"num": 220,
+"r": "U",
+"mc": "{G}",
+"cmc": 1.0,
+"t": "Instant",
+"o": "Choose one —\n• Alter the Past — Exile target card from a graveyard. You gain 2 life.\n• Obliterate the Transwarp Network — Destroy target artifact or enchantment with mana value 3 or less.",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Zoltan Boros",
+"prod": null
+},
+{
+"n": "U.S.S. Discovery, at Black Alert",
+"num": 221,
+"r": "R",
+"mc": "{3}{G}{G}",
+"cmc": 5.0,
+"t": "Legendary Artifact — Spacecraft",
+"o": "Whenever U.S.S. Discovery enters or attacks, discover 5. (Exile cards from the top of your library until you exile a nonland card with mana value 5 or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)\nStation\n6+ | Flying",
+"p": "5",
+"q": "5",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Kevin Glint",
+"prod": null
+},
+{
+"n": "U.S.S. Voyager, Lone Wanderer",
+"num": 222,
+"r": "U",
+"mc": "{3}{G}",
+"cmc": 4.0,
+"t": "Legendary Artifact — Spacecraft",
+"o": "When U.S.S. Voyager enters, reveal cards from the top of your library until you reveal two land cards. Put those land cards onto the battlefield tapped and the rest on the bottom of your library in a random order.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 8+.)\n8+ | Flying, vigilance",
+"p": "3",
+"q": "3",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Hector Ortiz",
+"prod": null
+},
+{
+"n": "Warp Speed",
+"num": 223,
+"r": "U",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Enchantment",
+"o": "Lands you control enter untapped.\nWhen this enchantment enters, search your library for a basic land card or Planet card, reveal it, put it into your hand, then shuffle.\nStrange new worlds — {7}{U}{U}, Sacrifice this enchantment: Draw two cards. This ability costs {X} less to activate, where X is the number of differently named lands you control.",
+"p": null,
+"q": null,
+"cor": [
+"G"
+],
+"ci": [
+"G",
+"U"
+],
+"art": "Raymond Swanland",
+"prod": null
+},
+{
+"n": "Xenobotanist",
+"num": 224,
+"r": "C",
+"mc": "{1}{G}",
+"cmc": 2.0,
+"t": "Creature — Vulcan Scientist",
+"o": "{T}: Add one mana of any color.",
+"p": "1",
+"q": "3",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Marta Nael",
+"prod": [
+"B",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Xindi Surveyors",
+"num": 225,
+"r": "C",
+"mc": "{2}{G}",
+"cmc": 3.0,
+"t": "Creature — Xindi Scientist",
+"o": "Landfall — Whenever a land you control enters, put a +1/+1 counter on this creature.",
+"p": "3",
+"q": "2",
+"cor": [
+"G"
+],
+"ci": [
+"G"
+],
+"art": "Joan Piqué Llorens",
+"prod": null
+},
+{
+"n": "All Good Things...",
+"num": 226,
+"r": "R",
+"mc": "{3}{G}{U}",
+"cmc": 5.0,
+"t": "Enchantment — Saga",
+"o": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after IV.)\nI, II, III — Draw two cards, then exile a card from your hand.\nIV — If all cards exiled with this Saga share a card type, you gain 10 life.",
+"p": null,
+"q": null,
+"cor": [
+"G",
+"U"
+],
+"ci": [
+"G",
+"U"
+],
+"art": "Lazare Gvimradze",
+"prod": null
+},
+{
+"n": "Borg Cube",
+"num": 227,
+"r": "M",
+"mc": "{5}{W}{B}",
+"cmc": 7.0,
+"t": "Artifact — Spacecraft",
+"o": "Affinity for artifact creatures\nWhenever this Spacecraft enters or attacks, assimilate a creature card exiled with it. If you can't, exile up to one target creature. (To assimilate a card, put it onto the battlefield under your control with a +1/+1 counter. It's a Borg artifact creature and loses all other creature types.)\nStation\n12+ | Artifact creatures you control have flying.",
+"p": "6",
+"q": "6",
+"cor": [
+"B",
+"W"
+],
+"ci": [
+"B",
+"W"
+],
+"art": "Alexander Forssberg",
+"prod": null
+},
+{
+"n": "The City on the Edge of Forever",
+"num": 228,
+"r": "R",
+"mc": "{3}{W}{B}",
+"cmc": 5.0,
+"t": "Enchantment — Saga",
+"o": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI — All artifacts and creatures phase out. Create a 0/1 white Human creature token with \"Permanents can't phase in.\" (Treat phased-out permanents and anything attached to them as though they don't exist.)\nII — You draw two cards and each player loses 2 life.\nIII — Sacrifice a creature token. If you do, you gain 5 life.",
+"p": null,
+"q": null,
+"cor": [
+"B",
+"W"
+],
+"ci": [
+"B",
+"W"
+],
+"art": "Peter Diamond",
+"prod": null
+},
+{
+"n": "Cleveland Booker, Empath",
+"num": 229,
+"r": "U",
+"mc": "{2}{R/G}{R/G}",
+"cmc": 4.0,
+"t": "Legendary Creature — Kwejian Rogue",
+"o": "Landfall — Whenever a land you control enters, create a 2/2 red and green Worm creature token with \"This token can't block.\"\n{8}: Creatures you control get +2/+0 until end of turn.",
+"p": "2",
+"q": "2",
+"cor": [
+"G",
+"R"
+],
+"ci": [
+"G",
+"R"
+],
+"art": "Kaitlyn McCulley",
+"prod": null
+},
+{
+"n": "Constable Odo",
+"num": 230,
+"r": "U",
+"mc": "{3}{W/U}{W/U}",
+"cmc": 5.0,
+"t": "Legendary Creature — Shapeshifter Detective",
+"o": "When Constable Odo enters, choose one —\n• Tap target creature an opponent controls. Put two stun counters on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\n• Investigate twice. (To investigate, create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+"p": "4",
+"q": "3",
+"cor": [
+"U",
+"W"
+],
+"ci": [
+"U",
+"W"
+],
+"art": "Jason Rainville",
+"prod": null
+},
+{
+"n": "Dal R'El, Augment Orphan",
+"num": 231,
+"r": "U",
+"mc": "{1}{R}{G}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Mutant Rogue",
+"o": "Landfall — Whenever a land you control enters, add {R} or {G}.\n{3}, Sacrifice a land: Draw a card.",
+"p": "3",
+"q": "3",
+"cor": [
+"G",
+"R"
+],
+"ci": [
+"G",
+"R"
+],
+"art": "Stella Spente",
+"prod": [
+"G",
+"R"
+]
+},
+{
+"n": "Daniels, Temporal Agent",
+"num": 232,
+"r": "U",
+"mc": "{2}{B/G}{B/G}",
+"cmc": 4.0,
+"t": "Legendary Creature — Human Advisor",
+"o": "When Daniels enters, return target creature card from your graveyard to your hand.\n{2}, Put this card from your graveyard on the bottom of your library: You gain 2 life.",
+"p": "3",
+"q": "1",
+"cor": [
+"B",
+"G"
+],
+"ci": [
+"B",
+"G"
+],
+"art": "Kaitlyn McCulley",
+"prod": null
+},
+{
+"n": "Dathon, His Heart Open",
+"num": 233,
+"r": "R",
+"mc": "{G}{U}{R}",
+"cmc": 3.0,
+"t": "Legendary Creature — Tamarian Officer",
+"o": "Whenever you cast an enchantment spell, draw a card. If it's a Saga spell, Dathon deals 2 damage to each opponent.\n{2}: Choose a counter on target enchantment you control. Put another counter of that kind on it. Activate only as a sorcery.",
+"p": "3",
+"q": "3",
+"cor": [
+"G",
+"R",
+"U"
+],
+"ci": [
+"G",
+"R",
+"U"
+],
+"art": "Dmitry Burmak",
+"prod": null
+},
+{
+"n": "The Doctor, EMH",
+"num": 234,
+"r": "U",
+"mc": "{3}{G/W}{G/W}",
+"cmc": 5.0,
+"t": "Legendary Artifact Creature — Illusion Doctor",
+"o": "When The Doctor enters, put a +1/+1 counter on target creature. Then put a +1/+1 counter on each creature you control with a counter on it.",
+"p": "3",
+"q": "3",
+"cor": [
+"G",
+"W"
+],
+"ci": [
+"G",
+"W"
+],
+"art": "David Robert Hovey",
+"prod": null
+},
+{
+"n": "The Duras Sisters",
+"num": 235,
+"r": "U",
+"mc": "{B/R}{B/R}",
+"cmc": 2.0,
+"t": "Legendary Creature — Klingon Warrior",
+"o": "When The Duras Sisters die, create a 2/1 red Klingon Warrior creature token with haste.",
+"p": "3",
+"q": "2",
+"cor": [
+"B",
+"R"
+],
+"ci": [
+"B",
+"R"
+],
+"art": "Harkalé Linaï",
+"prod": null
+},
+{
+"n": "D'Vana Tendi, Optimistic Ensign",
+"num": 236,
+"r": "U",
+"mc": "{1}{G/U}{G/U}",
+"cmc": 3.0,
+"t": "Legendary Creature — Orion Scientist",
+"o": "{T}: Untap another target permanent.\n{3}: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+"p": "2",
+"q": "4",
+"cor": [
+"G",
+"U"
+],
+"ci": [
+"G",
+"U"
+],
+"art": "Micah Epstein",
+"prod": null
+},
+{
+"n": "Gowron, Eager for Battle",
+"num": 237,
+"r": "R",
+"mc": "{2}{B}{R}",
+"cmc": 4.0,
+"t": "Legendary Creature — Klingon Warrior",
+"o": "Whenever another creature dies, put a +1/+1 counter on Gowron.\nSacrifice another creature: Gowron gains trample until end of turn. If you sacrificed a Klingon this way, you draw a card and lose 1 life.",
+"p": "3",
+"q": "3",
+"cor": [
+"B",
+"R"
+],
+"ci": [
+"B",
+"R"
+],
+"art": "Grant Griffin",
+"prod": null
+},
+{
+"n": "Gray and Adira, Forever Joined",
+"num": 238,
+"r": "U",
+"mc": "{2}{U/R}{U/R}",
+"cmc": 4.0,
+"t": "Legendary Creature — Trill Human Officer",
+"o": "At the beginning of combat on your turn, if you've cast a noncreature spell this turn, create a token that's a copy of target creature you control, except it isn't legendary. It gains haste until end of turn. Sacrifice it at the beginning of the next end step.",
+"p": "2",
+"q": "3",
+"cor": [
+"R",
+"U"
+],
+"ci": [
+"R",
+"U"
+],
+"art": "Julia Metzger",
+"prod": null
+},
+{
+"n": "Hemmer, Fixing What Is Broken",
+"num": 239,
+"r": "U",
+"mc": "{W}{U}",
+"cmc": 2.0,
+"t": "Legendary Creature — Aenar Artificer",
+"o": "During your turn, Spacecraft you control have hexproof. (They can't be the targets of spells or abilities your opponents control.)\nWhenever Hemmer becomes tapped, draw a card, then discard a card.",
+"p": "2",
+"q": "3",
+"cor": [
+"U",
+"W"
+],
+"ci": [
+"U",
+"W"
+],
+"art": "Riccardo Federici",
+"prod": null
+},
+{
+"n": "Hit It!",
+"num": 240,
+"r": "R",
+"mc": "{1}{R}{G}",
+"cmc": 3.0,
+"t": "Enchantment",
+"o": "Creatures you control have haste.\nWhen this enchantment enters, reveal the top five cards of your library. Put a land card from among them onto the battlefield tapped and the rest into your graveyard.",
+"p": null,
+"q": null,
+"cor": [
+"G",
+"R"
+],
+"ci": [
+"G",
+"R"
+],
+"art": "Aaron J. Riley",
+"prod": null
+},
+{
+"n": "The Inner Light",
+"num": 241,
+"r": "R",
+"mc": "{3}{G}{W}",
+"cmc": 5.0,
+"t": "Enchantment — Saga",
+"o": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI — Return target green or white creature card from your graveyard to the battlefield.\nII — Choose target creature. Whenever it deals combat damage to a player this turn, you draw that many cards.\nIII — You gain life equal to the greatest power among creatures you control. Create a Treasure token.",
+"p": null,
+"q": null,
+"cor": [
+"G",
+"W"
+],
+"ci": [
+"G",
+"W"
+],
+"art": "Marko Manev",
+"prod": null
+},
+{
+"n": "Kira Nerys, Firebrand",
+"num": 242,
+"r": "R",
+"mc": "{1}{R}{W}",
+"cmc": 3.0,
+"t": "Legendary Creature — Bajoran Soldier",
+"o": "Trample\nIf a creature you control would enter while you control an attacking creature, instead it enters tapped and attacking.\nWhenever another creature you control enters, it gets +1/+1 until end of turn.",
+"p": "4",
+"q": "3",
+"cor": [
+"R",
+"W"
+],
+"ci": [
+"R",
+"W"
+],
+"art": "Pauline Voss",
+"prod": null
+},
+{
+"n": "Kirk, Commanding Officer",
+"num": 243,
+"r": "U",
+"mc": "{1}{R}{W}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Officer",
+"o": "Whenever you attack while creatures you control have total power 8 or greater, exile the top card of your library. You may play that card this turn.\n{2}, Sacrifice Kirk: Destroy target artifact or enchantment.",
+"p": "3",
+"q": "3",
+"cor": [
+"R",
+"W"
+],
+"ci": [
+"R",
+"W"
+],
+"art": "Cliff Nielsen",
+"prod": null
+},
+{
+"n": "Live Long and Prosper",
+"num": 244,
+"r": "R",
+"mc": "{5}{W}{U}",
+"cmc": 7.0,
+"t": "Sorcery",
+"o": "This spell can't be countered.\nDouble your life total. Draw cards equal to the number of cards in your hand. You have no maximum hand size until your next turn.",
+"p": null,
+"q": null,
+"cor": [
+"U",
+"W"
+],
+"ci": [
+"U",
+"W"
+],
+"art": "Stella Spente",
+"prod": null
+},
+{
+"n": "Locutus, the One Who Speaks",
+"num": 245,
+"r": "U",
+"mc": "{W}{B}",
+"cmc": 2.0,
+"t": "Legendary Artifact Creature — Borg",
+"o": "Artifact creatures you control get +1/+1.\n{W}{B}, Discard this card: It deals 2 damage to target creature. You gain 2 life.",
+"p": "1",
+"q": "1",
+"cor": [
+"B",
+"W"
+],
+"ci": [
+"B",
+"W"
+],
+"art": "Ariel Orea",
+"prod": null
+},
+{
+"n": "Lore, Positronic Provocateur",
+"num": 246,
+"r": "U",
+"mc": "{1}{U/B}{U/B}",
+"cmc": 3.0,
+"t": "Legendary Artifact Creature — Android Rogue",
+"o": "When Lore enters, choose one —\n• Target creature gets +1/+0 until end of turn and can't be blocked this turn.\n• Surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",
+"p": "2",
+"q": "3",
+"cor": [
+"B",
+"U"
+],
+"ci": [
+"B",
+"U"
+],
+"art": "Wei Guan",
+"prod": null
+},
+{
+"n": "L'Rell, Fierce Visionary",
+"num": 247,
+"r": "U",
+"mc": "{1}{B}{R}",
+"cmc": 3.0,
+"t": "Legendary Creature — Klingon Warrior",
+"o": "At the beginning of combat on your turn, create a 2/1 red Klingon Warrior creature token with haste. Sacrifice it at the beginning of the next end step.\n{2}, Sacrifice another creature or artifact: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+"p": "1",
+"q": "4",
+"cor": [
+"B",
+"R"
+],
+"ci": [
+"B",
+"R"
+],
+"art": "Patricia Pria",
+"prod": null
+},
+{
+"n": "Mirror Universe Intrusion",
+"num": 248,
+"r": "R",
+"mc": "{1}{U}{B}",
+"cmc": 3.0,
+"t": "Sorcery",
+"o": "Kicker {4}{U}{B} (You may pay an additional 4 as you cast this spell.)\nCreate a token that's a copy of target creature an opponent controls, except it has menace. If this spell was kicked, instead for each creature target opponent controls, create a token that's a copy of that creature, except it has menace.",
+"p": null,
+"q": null,
+"cor": [
+"B",
+"U"
+],
+"ci": [
+"B",
+"U"
+],
+"art": "John Tyler Christopher",
+"prod": null
+},
+{
+"n": "Nog, Ambitious Cadet",
+"num": 249,
+"r": "R",
+"mc": "{B}{G}",
+"cmc": 2.0,
+"t": "Legendary Creature — Ferengi Rogue",
+"o": "Menace\n{1}: If Nog is a Rogue, he becomes a Ferengi Scout with base power and toughness 3/4 and gains \"Whenever Nog becomes tapped, surveil 2.\"\n{3}: If Nog is a Scout, he becomes a Ferengi Officer and gains \"You may play lands from your graveyard\" and \"You may play an additional land on each of your turns.\"",
+"p": "2",
+"q": "2",
+"cor": [
+"B",
+"G"
+],
+"ci": [
+"B",
+"G"
+],
+"art": "Darren Tan",
+"prod": null
+},
+{
+"n": "Phlox, Unorthodox Doctor",
+"num": 250,
+"r": "U",
+"mc": "{2}{G}{W}",
+"cmc": 4.0,
+"t": "Legendary Creature — Denobulan Doctor",
+"o": "Trample\nWhenever a creature you control with a counter on it deals combat damage to a player, draw a card.",
+"p": "3",
+"q": "4",
+"cor": [
+"G",
+"W"
+],
+"ci": [
+"G",
+"W"
+],
+"art": "Jason Seiler",
+"prod": null
+},
+{
+"n": "Sarek, Federation Ambassador",
+"num": 251,
+"r": "R",
+"mc": "{1}{G}{W}{U}",
+"cmc": 4.0,
+"t": "Legendary Creature — Vulcan Advisor",
+"o": "Federation — At the beginning of combat on your turn, draw a card for every five creature types among non-Borg creatures you control. If you draw three or more cards this way, put two +1/+1 counters on each creature you control.",
+"p": "0",
+"q": "5",
+"cor": [
+"G",
+"U",
+"W"
+],
+"ci": [
+"G",
+"U",
+"W"
+],
+"art": "Darren Tan",
+"prod": null
+},
+{
+"n": "Seven of Nine",
+"num": 252,
+"r": "U",
+"mc": "{2}{U}{B}",
+"cmc": 4.0,
+"t": "Legendary Artifact Creature — Human Scientist",
+"o": "Whenever you face a dilemma, draw a card. (You face a dilemma as you choose one or more modes for a spell or ability.)",
+"p": "2",
+"q": "4",
+"cor": [
+"B",
+"U"
+],
+"ci": [
+"B",
+"U"
+],
+"art": "Bastien L. Deharme",
+"prod": null
+},
+{
+"n": "Spock, Always Your Friend",
+"num": 253,
+"r": "U",
+"mc": "{U}{R}",
+"cmc": 2.0,
+"t": "Legendary Creature — Vulcan Human Scientist",
+"o": "When Spock enters, look at the top four cards of your library. You may reveal a noncreature, nonland card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+"p": "2",
+"q": "2",
+"cor": [
+"R",
+"U"
+],
+"ci": [
+"R",
+"U"
+],
+"art": "Chris Rallis",
+"prod": null
+},
+{
+"n": "The Traveler",
+"num": 254,
+"r": "U",
+"mc": "{G}{U}",
+"cmc": 2.0,
+"t": "Legendary Creature — Scout",
+"o": "Reach, vigilance\nStrange new worlds — The Traveler's power is equal to the number of differently named lands you control.",
+"p": "*",
+"q": "3",
+"cor": [
+"G",
+"U"
+],
+"ci": [
+"G",
+"U"
+],
+"art": "Ioannis Fiore",
+"prod": null
+},
+{
+"n": "Vash, Freelance Archaeologist",
+"num": 255,
+"r": "U",
+"mc": "{1}{B}{G}",
+"cmc": 3.0,
+"t": "Legendary Creature — Human Rogue Scientist",
+"o": "At the beginning of your upkeep, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\nWhenever a card leaves your graveyard, draw a card. This ability triggers only once each turn.",
+"p": "2",
+"q": "4",
+"cor": [
+"B",
+"G"
+],
+"ci": [
+"B",
+"G"
+],
+"art": "Nicky Barkla",
+"prod": null
+},
+{
+"n": "Worf, Honor-Bound Warrior",
+"num": 256,
+"r": "U",
+"mc": "{R/W}{R/W}",
+"cmc": 2.0,
+"t": "Legendary Creature — Klingon Warrior Officer",
+"o": "Whenever you attack while creatures you control have total power 8 or greater, double Worf's power until end of turn.\nTap two untapped artifacts and/or creatures you control: Put a +1/+1 counter on Worf. Activate only as a sorcery.",
+"p": "1",
+"q": "1",
+"cor": [
+"R",
+"W"
+],
+"ci": [
+"R",
+"W"
+],
+"art": "Alexander Mokhov",
+"prod": null
+},
+{
+"n": "Year of Hell",
+"num": 257,
+"r": "R",
+"mc": "{1}{U}{R}",
+"cmc": 3.0,
+"t": "Enchantment — Saga",
+"o": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI, II, III — Each player draws a card. This Saga deals 2 damage to each player.",
+"p": null,
+"q": null,
+"cor": [
+"R",
+"U"
+],
+"ci": [
+"R",
+"U"
+],
+"art": "Jonathan Bartlett",
+"prod": null
+},
+{
+"n": "Zero, Incorporeal Sensate",
+"num": 258,
+"r": "U",
+"mc": "{1}{W/B}{W/B}",
+"cmc": 3.0,
+"t": "Legendary Artifact Creature — Medusan Scientist",
+"o": "Lifelink\nWhen Zero enters, look at target opponent's hand. You may exile a nonland card from it. For as long as that card remains exiled, its owner may play it. A spell cast this way costs {2} more to cast.",
+"p": "2",
+"q": "2",
+"cor": [
+"B",
+"W"
+],
+"ci": [
+"B",
+"W"
+],
+"art": "Racrufi",
+"prod": null
+},
+{
+"n": "Class-F Shuttlecraft",
+"num": 259,
+"r": "C",
+"mc": "{3}",
+"cmc": 3.0,
+"t": "Artifact — Spacecraft",
+"o": "{T}: Add one mana of any color.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 6+.)\n6+ | Flying, vigilance",
+"p": "2",
+"q": "4",
+"cor": [],
+"ci": [],
+"art": "William Phifer",
+"prod": [
+"B",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Combadge",
+"num": 260,
+"r": "U",
+"mc": "{3}",
+"cmc": 3.0,
+"t": "Artifact — Communicator Equipment",
+"o": "When you cast this spell, copy it. (The copy becomes a token.)\nEquipped creature has \"Whenever this creature attacks while you control another creature with a Communicator attached to it, this creature can't be blocked this turn.\"\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "Paolo Puggioni",
+"prod": null
+},
+{
+"n": "Crystalline Entity",
+"num": 261,
+"r": "M",
+"mc": "{8}",
+"cmc": 8.0,
+"t": "Artifact Creature — Elemental",
+"o": "Flying\nWhen this creature enters, if you cast it, destroy all nonartifact creatures.",
+"p": "7",
+"q": "7",
+"cor": [],
+"ci": [],
+"art": "David Álvarez",
+"prod": null
+},
+{
+"n": "Cybernetic Specialist",
+"num": 262,
+"r": "C",
+"mc": "{2}",
+"cmc": 2.0,
+"t": "Artifact Creature — Human Scientist",
+"o": "When this creature enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\n{1}, {T}: Put target card from your graveyard on the bottom of your library.",
+"p": "2",
+"q": "1",
+"cor": [],
+"ci": [],
+"art": "Joan Piqué Llorens",
+"prod": null
+},
+{
+"n": "Deep Space 9",
+"num": 263,
+"r": "M",
+"mc": "{9}",
+"cmc": 9.0,
+"t": "Legendary Artifact — Spacecraft",
+"o": "When Deep Space 9 enters and at the beginning of your upkeep, exile the top four cards of your library. Put all permanent cards exiled this way onto the battlefield.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery.)\n9+ | Creatures you control get +3/+3.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "Paolo Puggioni",
+"prod": null
+},
+{
+"n": "Engineered Explosives",
+"num": 264,
+"r": "R",
+"mc": "{X}",
+"cmc": 0.0,
+"t": "Artifact",
+"o": "Sunburst (This artifact enters with a charge counter on it for each color of mana spent to cast it.)\n{2}, Sacrifice this artifact: Destroy each nonland permanent with mana value equal to the number of charge counters on this artifact.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "David Álvarez",
+"prod": null
+},
+{
+"n": "The Holodeck",
+"num": 265,
+"r": "R",
+"mc": "{7}",
+"cmc": 7.0,
+"t": "Legendary Artifact",
+"o": "Once during each of your turns, you may play a permanent card you own from outside the game or from your graveyard.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "Jessica Rossier",
+"prod": null
+},
+{
+"n": "Isolinear Processor",
+"num": 266,
+"r": "U",
+"mc": "{2}",
+"cmc": 2.0,
+"t": "Artifact",
+"o": "{T}: Add {C}. Spend this mana only to cast an artifact spell or activate an ability of an artifact source.\n{2}, {T}: Draw a card, then discard a card.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "David Álvarez",
+"prod": [
+"C"
+]
+},
+{
+"n": "Replicator",
+"num": 267,
+"r": "R",
+"mc": "{2}",
+"cmc": 2.0,
+"t": "Artifact",
+"o": "When this artifact enters, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")\n{2}, {T}: Create a tapped token that's a copy of target token you control.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "William Phifer",
+"prod": null
+},
+{
+"n": "Sickbay",
+"num": 268,
+"r": "U",
+"mc": "{5}",
+"cmc": 5.0,
+"t": "Artifact",
+"o": "Whenever a creature you control enters, you gain 1 life.\nAt the beginning of combat on your turn, put X +1/+1 counters on target creature you control, where X is one plus the amount of life you gained this turn.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "Joel Chaim Holtzman",
+"prod": null
+},
+{
+"n": "Tea, Earl Grey, Hot",
+"num": 269,
+"r": "C",
+"mc": "{2}",
+"cmc": 2.0,
+"t": "Artifact — Food",
+"o": "When this artifact enters, draw a card.\n{2}, {T}, Sacrifice this artifact: Choose one —\n• This artifact deals 2 damage to target opponent.\n• You gain 3 life.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "Raymond Bonilla",
+"prod": null
+},
+{
+"n": "Tricorder",
+"num": 270,
+"r": "C",
+"mc": "{1}",
+"cmc": 1.0,
+"t": "Artifact — Equipment",
+"o": "Equipped creature gets +1/+1.\nWhenever equipped creature attacks, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "Tony Foti",
+"prod": null
+},
+{
+"n": "Type-2 Phaser",
+"num": 271,
+"r": "U",
+"mc": "{2}",
+"cmc": 2.0,
+"t": "Artifact — Equipment",
+"o": "When this Equipment enters, tap target creature an opponent controls and put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nEquipped creature gets +3/+0.\nEquip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.)",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "Wero Gallo",
+"prod": null
+},
+{
+"n": "U.S.S. Cerritos, Following Up",
+"num": 272,
+"r": "U",
+"mc": "{5}",
+"cmc": 5.0,
+"t": "Legendary Artifact — Spacecraft",
+"o": "When U.S.S. Cerritos enters, create two 1/1 red Officer creature tokens.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 6+.)\n6+ | Flying",
+"p": "4",
+"q": "4",
+"cor": [],
+"ci": [],
+"art": "Bruce Brenneise",
+"prod": null
+},
+{
+"n": "U.S.S. Enterprise-D, Galaxy-Class",
+"num": 273,
+"r": "R",
+"mc": "{3}",
+"cmc": 3.0,
+"t": "Legendary Artifact — Spacecraft",
+"o": "Whenever one or more charge counters are put on U.S.S. Enterprise-D for the first time each turn, exile the top card of your library. You may play that card this turn.\nStation (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 7+.)\n7+ | Flying, vigilance",
+"p": "4",
+"q": "5",
+"cor": [],
+"ci": [],
+"art": "Pablo Mendoza",
+"prod": null
+},
+{
+"n": "Warp Core",
+"num": 274,
+"r": "C",
+"mc": "{2}",
+"cmc": 2.0,
+"t": "Artifact",
+"o": "When this artifact enters, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle.\n{1}, {T}: Put two charge counters on target Spacecraft. Activate only as a sorcery.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "Leon Tukker",
+"prod": null
+},
+{
+"n": "Andoria",
+"num": 275,
+"r": "C",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Planet",
+"o": "This land enters tapped.\nWhen this land enters, you gain 1 life.\n{T}: Add {U} or {R}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"R",
+"U"
+],
+"art": "Josu Hernaiz",
+"prod": [
+"R",
+"U"
+]
+},
+{
+"n": "Artificial Anomaly",
+"num": 276,
+"r": "U",
+"mc": "",
+"cmc": 0.0,
+"t": "Land",
+"o": "{T}: Add {C}.\n{3}{B}, {T}, Sacrifice this land: Each opponent loses 2 life and you gain 2 life. Create a tapped Planet land token named New Planet with \"{T}: Add one mana of any color.\"",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"B"
+],
+"art": "Jonas De Ro",
+"prod": [
+"B",
+"C",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Bajor",
+"num": 277,
+"r": "C",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Planet",
+"o": "This land enters tapped.\nWhen this land enters, you gain 1 life.\n{T}: Add {R} or {W}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"R",
+"W"
+],
+"art": "John Di Giovanni",
+"prod": [
+"R",
+"W"
+]
+},
+{
+"n": "Blood Crypt",
+"num": 278,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Swamp Mountain",
+"o": "({T}: Add {B} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"B",
+"R"
+],
+"art": "Jonas De Ro",
+"prod": [
+"B",
+"R"
+]
+},
+{
+"n": "Breeding Pool",
+"num": 279,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Forest Island",
+"o": "({T}: Add {G} or {U}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"G",
+"U"
+],
+"art": "Cliff Nielsen",
+"prod": [
+"G",
+"U"
+]
+},
+{
+"n": "Cardassia Prime",
+"num": 280,
+"r": "C",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Planet",
+"o": "This land enters tapped.\nWhen this land enters, you gain 1 life.\n{T}: Add {W} or {B}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"B",
+"W"
+],
+"art": "Alex Negrea",
+"prod": [
+"B",
+"W"
+]
+},
+{
+"n": "Earth, Sector 001",
+"num": 281,
+"r": "C",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Planet",
+"o": "This land enters tapped.\nWhen this land enters, you gain 1 life.\n{T}: Add {G} or {U}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"G",
+"U"
+],
+"art": "Colin Searle",
+"prod": [
+"G",
+"U"
+]
+},
+{
+"n": "Federation Outpost",
+"num": 282,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land",
+"o": "This land enters tapped unless you control two or more other lands.\nWhen this land enters untapped, choose one —\n• You gain 2 life.\n• Surveil 1.\n{T}: Add {W}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"W"
+],
+"art": "Edouard",
+"prod": [
+"W"
+]
+},
+{
+"n": "Ferenginar",
+"num": 283,
+"r": "C",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Planet",
+"o": "This land enters tapped.\nWhen this land enters, you gain 1 life.\n{T}: Add {B} or {G}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"B",
+"G"
+],
+"art": "Colin Searle",
+"prod": [
+"B",
+"G"
+]
+},
+{
+"n": "Gaseous Anomaly",
+"num": 284,
+"r": "U",
+"mc": "",
+"cmc": 0.0,
+"t": "Land",
+"o": "{T}: Add {C}.\n{5}{U}, {T}, Sacrifice this land: Draw two cards. Create a tapped Planet land token named New Planet with \"{T}: Add one mana of any color.\"",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"U"
+],
+"art": "Racrufi",
+"prod": [
+"B",
+"C",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Godless Shrine",
+"num": 285,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Plains Swamp",
+"o": "({T}: Add {W} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"B",
+"W"
+],
+"art": "John Thacker",
+"prod": [
+"B",
+"W"
+]
+},
+{
+"n": "Hallowed Fountain",
+"num": 286,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Plains Island",
+"o": "({T}: Add {W} or {U}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"U",
+"W"
+],
+"art": "Piotr Dura",
+"prod": [
+"U",
+"W"
+]
+},
+{
+"n": "Ni'Var Science Academy",
+"num": 287,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land",
+"o": "This land enters tapped unless you control two or more other lands.\nWhen this land enters untapped, choose one —\n• Target creature gains flying until end of turn.\n• Surveil 1.\n{T}: Add {U}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"U"
+],
+"art": "Raphael Lacoste",
+"prod": [
+"U"
+]
+},
+{
+"n": "Orion",
+"num": 288,
+"r": "C",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Planet",
+"o": "This land enters tapped.\nWhen this land enters, you gain 1 life.\n{T}: Add {R} or {G}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"G",
+"R"
+],
+"art": "Simon Dominic",
+"prod": [
+"G",
+"R"
+]
+},
+{
+"n": "Overgrown Tomb",
+"num": 289,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Swamp Forest",
+"o": "({T}: Add {B} or {G}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"B",
+"G"
+],
+"art": "Pavel Kolomeyets",
+"prod": [
+"B",
+"G"
+]
+},
+{
+"n": "Q Continuum",
+"num": 290,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land",
+"o": "This land enters tapped unless you control two or more other lands.\nWhen this land enters untapped, choose one —\n• Target creature gets +1/+1 and gains vigilance until end of turn.\n• Surveil 1.\n{T}: Add {G}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"G"
+],
+"art": "Jonas De Ro",
+"prod": [
+"G"
+]
+},
+{
+"n": "Qo'noS",
+"num": 291,
+"r": "C",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Planet",
+"o": "This land enters tapped.\nWhen this land enters, you gain 1 life.\n{T}: Add {B} or {R}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"B",
+"R"
+],
+"art": "Rockey Chen",
+"prod": [
+"B",
+"R"
+]
+},
+{
+"n": "Quark's Bar",
+"num": 292,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land",
+"o": "This land enters tapped unless you control two or more other lands.\nWhen this land enters untapped, choose one —\n• This land deals 1 damage to each opponent.\n• Surveil 1.\n{T}: Add {R}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"R"
+],
+"art": "Robin Olausson",
+"prod": [
+"R"
+]
+},
+{
+"n": "Risa",
+"num": 293,
+"r": "C",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Planet",
+"o": "This land enters tapped.\nWhen this land enters, you gain 1 life.\n{T}: Add {G} or {W}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"G",
+"W"
+],
+"art": "Colin Searle",
+"prod": [
+"G",
+"W"
+]
+},
+{
+"n": "Romulus",
+"num": 294,
+"r": "C",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Planet",
+"o": "This land enters tapped.\nWhen this land enters, you gain 1 life.\n{T}: Add {U} or {B}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"B",
+"U"
+],
+"art": "Carlos Dattoli",
+"prod": [
+"B",
+"U"
+]
+},
+{
+"n": "Sacred Foundry",
+"num": 295,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Mountain Plains",
+"o": "({T}: Add {R} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"R",
+"W"
+],
+"art": "Jessica Rossier",
+"prod": [
+"R",
+"W"
+]
+},
+{
+"n": "Spatial Anomaly",
+"num": 296,
+"r": "U",
+"mc": "",
+"cmc": 0.0,
+"t": "Land",
+"o": "{T}: Add {C}.\n{4}{R}, {T}, Sacrifice this land: It deals 2 damage to target creature. Create a tapped Planet land token named New Planet with \"{T}: Add one mana of any color.\"",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"R"
+],
+"art": "Pablo Mendoza",
+"prod": [
+"B",
+"C",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Starfleet Academy",
+"num": 297,
+"r": "M",
+"mc": "",
+"cmc": 0.0,
+"t": "Legendary Land",
+"o": "{T}: Add {C}.\nFederation — {5}, {T}: Choose a color. Add an amount of mana of that color equal to the number of creature types among non-Borg creatures you control.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "Robin Olausson",
+"prod": [
+"B",
+"C",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Steam Vents",
+"num": 298,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Island Mountain",
+"o": "({T}: Add {U} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"R",
+"U"
+],
+"art": "Shahab Alizadeh",
+"prod": [
+"R",
+"U"
+]
+},
+{
+"n": "Stomping Ground",
+"num": 299,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Mountain Forest",
+"o": "({T}: Add {R} or {G}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"G",
+"R"
+],
+"art": "Arthur Haas",
+"prod": [
+"G",
+"R"
+]
+},
+{
+"n": "Subspace Anomaly",
+"num": 300,
+"r": "U",
+"mc": "",
+"cmc": 0.0,
+"t": "Land",
+"o": "{T}: Add {C}.\n{4}{W}, {T}, Sacrifice this land: Create two 1/1 red Officer creature tokens. Create a tapped Planet land token named New Planet with \"{T}: Add one mana of any color.\"",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"W"
+],
+"art": "Bruce Brenneise",
+"prod": [
+"B",
+"C",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Temple Garden",
+"num": 301,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Forest Plains",
+"o": "({T}: Add {G} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"G",
+"W"
+],
+"art": "Shahab Alizadeh",
+"prod": [
+"G",
+"W"
+]
+},
+{
+"n": "Temporal Anomaly",
+"num": 302,
+"r": "U",
+"mc": "",
+"cmc": 0.0,
+"t": "Land",
+"o": "{T}: Add {C}.\n{3}{G}, {T}, Sacrifice this land: Mill four cards. You may put a permanent card from among them into your hand. Create a tapped Planet land token named New Planet with \"{T}: Add one mana of any color.\"",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"G"
+],
+"art": "Neil Blevins",
+"prod": [
+"B",
+"C",
+"G",
+"R",
+"U",
+"W"
+]
+},
+{
+"n": "Unexplored Territory",
+"num": 303,
+"r": "C",
+"mc": "",
+"cmc": 0.0,
+"t": "Land",
+"o": "{T}: Add {C}.\n{1}, {T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [],
+"art": "Raymond Bonilla",
+"prod": [
+"C"
+]
+},
+{
+"n": "The Unicomplex",
+"num": 304,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land",
+"o": "This land enters tapped unless you control two or more other lands.\nWhen this land enters untapped, choose one —\n• Put target creature card from your graveyard on top of your library.\n• Surveil 1.\n{T}: Add {B}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"B"
+],
+"art": "JB Casacop",
+"prod": [
+"B"
+]
+},
+{
+"n": "Vulcan",
+"num": 305,
+"r": "C",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Planet",
+"o": "This land enters tapped.\nWhen this land enters, you gain 1 life.\n{T}: Add {W} or {U}.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"U",
+"W"
+],
+"art": "John Di Giovanni",
+"prod": [
+"U",
+"W"
+]
+},
+{
+"n": "Watery Grave",
+"num": 306,
+"r": "R",
+"mc": "",
+"cmc": 0.0,
+"t": "Land — Island Swamp",
+"o": "({T}: Add {U} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+"p": null,
+"q": null,
+"cor": [],
+"ci": [
+"B",
+"U"
+],
+"art": "Raymond Bonilla",
+"prod": [
+"B",
+"U"
+]
+}
+]
