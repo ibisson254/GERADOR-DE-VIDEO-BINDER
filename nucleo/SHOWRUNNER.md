@@ -30,6 +30,7 @@ Antes de perguntar ao fundador, procurar a resposta nestes documentos. Só se pe
 |---|---|---|
 | Carta polémica, Salt Score, hype de set, spoilers, preço noticiado, reação da comunidade, notícia da Wizards | Mana & Burn | Território "cultura e caos" (`manaburn/PERFIL.md`) |
 | Torneio recente: decks, metagame, matchup, mulligan, sideboard, decisão de jogo | Meta em Curto | Território "competição" (`oraculo/PERFIL.md`) |
+| Coleção nova antes do pré-release: previsões, arquétipos, preparação para Sealed | Meta em Curto (Protocolo de Pré-Release) | `oraculo/PERFIL.md`, ativação; o hype e a reação aos spoilers continuam no Mana & Burn |
 | Torneio como *acontecimento* (polémica, reação, comportamento viral) | Mana & Burn | `DECISOES.md` 28/10, item 4: decisão e meta → TUBO; reação/polémica → Mana & Burn |
 | Ilustração: composição, técnica, simbolismo, bastidores, artista | Conde de Manaforte | Território "ilustração" (`conde/PERFIL.md`) |
 | Arte de uma carta como curiosidade rápida, sem crítica encenada | Lambe-lambe | Formato espontâneo (série "Artistas de Magic") |

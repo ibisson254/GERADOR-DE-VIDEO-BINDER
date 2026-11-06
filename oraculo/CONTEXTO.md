@@ -116,7 +116,7 @@ Tema oficial: `musica/tubo_tema.mp3` (40,6 s). Composição própria do Ibisson 
 3. **Limite do humor:** a arrogância visa decisões e probabilidades, nunca jogadores reais pelo nome em tom de deboche.
 
 **Episódios**
-4. **Previsões registadas:** antes de um torneio grande, o TUBO faz uma previsão marcada como opinião. Depois do evento, volta a ela e mostra acerto ou erro (erro = "Erro de sistema"). Registar cada previsão em `comum/historico.md`.
+4. **Previsões registadas:** antes de um torneio grande, o TUBO faz uma previsão marcada como opinião. Depois do evento, volta a ela e mostra acerto ou erro (erro = "Erro de sistema"). Registar cada previsão em `comum/historico.md`. Previsões de pré-release (coleção nova, Sealed/Limited) seguem `PROTOCOLO_PRE_RELEASE.md`.
 5. **"O TUBO julga o teu deck":** seguidores deixam a lista nos comentários; uma é analisada por semana. Pedir autorização ao autor e citar o @.
 6. **Crossovers:** TUBO vs Conde ("carta feia, mas presença real no meta", com número verificado) ou o TUBO a aparecer na TV do sofá de Mana & Burn. Um universo BINDER partilhado.
 
