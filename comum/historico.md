@@ -43,6 +43,8 @@ Print do próprio post (não do Insights), enviado pelo Ibisson. Entra no quadro
 
 - 03/11/2026 · Conde de Manaforte Ep. 004 (Joven, Homelands 1995, arte de Douglas Shuler). **Produzido, não publicado.** Render conferido (55,1 s + fecho, sem corte lateral, −13,9 LUFS, pico −1,5 dBTP): `conde/episodios/ep004_joven_ficha.md`. Sem easter egg. Hipótese em teste: pergunta A/B com dois réus concretos. Métricas: aguardam publicação.
 
+- 06/11/2026 · Mana & Burn · Especial pré-release Star Trek "BURN FOI ASSIMILADO!" (Magic: The Gathering | Star Trek; seis atos, seis cartas). **Produzido, não publicado.** Ficha, QC e fontes: `manaburn/episodios/esp03_startrek_prerelease/`. Easter egg: CH 47. Hipótese em teste: especial publicado no fim de semana do pré-release gera mais guardados por 1.000 views; pergunta A/B (Borg ou cinco cores). **Previsões registadas** (rever depois de 12/11 com dados reais): 1) Strange new worlds tem potencial em jogos longos (certeza média-baixa); 2) Borg pune decks lentos (média); 3) respostas a artefatos valem mais do que o normal (alta). Evidência e risco: `ficha_fontes.md`. Métricas: aguardam publicação.
+
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 
 - Especial de Halloween 2026 (Innistrad × Duskmourn): **publicado**. A música que acima aparece como "provisória" foi aprovada como está.
