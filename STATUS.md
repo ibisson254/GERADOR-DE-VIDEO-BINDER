@@ -39,10 +39,21 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 | Kit v2 no repositório + melhorias (legenda na zona segura, fonte do medidor, ventilador, antena, paninho) | Implementado e testado (bordas OK) | `manaburn/LEIA-ME.md` |
 | Duração livre nas séries | Implementado (constituição v1.5) | `nucleo/DECISOES.md` |
 
+## Protocolo de Pré-Release do TUBO (06/11/2026)
+
+| Bloco | Estado | Onde |
+|---|---|---|
+| Método (fases A–D, integridade estatística, estados, grau de certeza) | Implementado | `oraculo/PROTOCOLO_PRE_RELEASE.md` |
+| Modelo de ficha por coleção | Implementado | `nucleo/modelos/PREVISOES_PRE_RELEASE.md` → `oraculo/pre-release/` |
+| Ativação e router | Implementado | `oraculo/PERFIL.md`, `nucleo/SHOWRUNNER.md` §2.2 |
+| Registo histórico (IDs, estados, revisões, lições) | Implementado, vazio | `comum/historico.md` |
+| Migrar as 4 previsões do EP05 para `PR-TRK-01`–`04` | Pendente: EP05 fora de `main` | `nucleo/DECISOES.md` (06/11) |
+
 ## Depende do fundador
 
 - Aprovar um esboço das expressões novas do Mana e do Burn (auditoria §4) antes de as desenhar no kit.
 - Enviar ou subir o motor que gerou o Giro (não há "giro" em `claude/gerador-manaburn/`).
+- Protocolo de Pré-Release: aprovar o PR e decidir o «~35%» da previsão pública do EP05 (retirar ou dar fonte e método) antes de o integrar.
 - Drive atualizado a 02/11 (notas de fonte de verdade na bíblia, no doc 05 e no Mapa do Drive; secção de estado na bíblia).
 
 ## Pendências técnicas (não bloqueiam a governação)

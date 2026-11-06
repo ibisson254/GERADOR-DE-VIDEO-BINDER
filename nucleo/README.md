@@ -10,7 +10,7 @@ Um documento canónico por matéria. Este índice diz onde cada uma vive; nada s
 | Showrunner (classificação, router, briefing) | `SHOWRUNNER.md` |
 | Decisões do fundador e histórico de alterações | `DECISOES.md` |
 | Controlo de qualidade | `CHECKLIST_QUALIDADE.md` |
-| Modelos (ficha, perfil, handoff) | `modelos/` |
+| Modelos (ficha, perfil, handoff, previsões de pré-release) | `modelos/` |
 | Instruções para o projeto claude.ai e para o ChatGPT | `prompts/` |
 | Configuração técnica das frentes | `../series.yaml` |
 | Estado atual do estúdio | `../STATUS.md` |

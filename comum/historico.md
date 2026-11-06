@@ -43,6 +43,24 @@ Print do próprio post (não do Insights), enviado pelo Ibisson. Entra no quadro
 
 - 03/11/2026 · Conde de Manaforte Ep. 004 (Joven, Homelands 1995, arte de Douglas Shuler). **Produzido, não publicado.** Render conferido (55,1 s + fecho, sem corte lateral, −13,9 LUFS, pico −1,5 dBTP): `conde/episodios/ep004_joven_ficha.md`. Sem easter egg. Hipótese em teste: pergunta A/B com dois réus concretos. Métricas: aguardam publicação.
 
+## Previsões registadas do TUBO
+
+Registo único de previsões e estados (`oraculo/CONTEXTO.md` §7.2, item 4). Pré-release: método em `oraculo/PROTOCOLO_PRE_RELEASE.md`, texto original e auditoria na ficha da coleção (`oraculo/pre-release/`). Uma linha por ID, nunca apagada; o texto original não se edita, as mudanças vão para «Revisões». Estados: PENDENTE · CONFIRMADA · PARCIALMENTE CONFIRMADA · REFUTADA · INCONCLUSIVA. Grau de certeza 1–5, sem percentagem.
+
+| ID | Coleção | Data | Previsão (resumo) | Publicação | Grau | Auditar até | Estado | Ficha |
+|---|---|---|---|---|---|---|---|---|
+
+Revisões:
+
+| Data | ID | O que muda | Motivo | Nova evidência |
+|---|---|---|---|---|
+
+Lições para próximas coleções (da Fase D):
+
+- Nenhuma registada (06/11/2026).
+
+Erro numa previsão pública = "Erro de sistema" num episódio seguinte (`oraculo/CONTEXTO.md` §7.2, item 4).
+
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 
 - Especial de Halloween 2026 (Innistrad × Duskmourn): **publicado**. A música que acima aparece como "provisória" foi aprovada como está.

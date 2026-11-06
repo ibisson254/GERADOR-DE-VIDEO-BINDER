@@ -2,6 +2,13 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 06/11/2026 · Protocolo de Pré-Release do TUBO (Meta em Curto)
+
+**O quê:** (1) Novo `oraculo/PROTOCOLO_PRE_RELEASE.md`, canónico: quatro fases (investigação, previsões, acompanhamento, auditoria), integridade estatística, escala do grau de certeza e estados (PENDENTE, CONFIRMADA, PARCIALMENTE CONFIRMADA, REFUTADA, INCONCLUSIVA). (2) Novo modelo `nucleo/modelos/PREVISOES_PRE_RELEASE.md`; fichas por coleção em `oraculo/pre-release/`. (3) Ativação em `oraculo/PERFIL.md` e linha no router (`SHOWRUNNER.md` §2.2): previsões de pré-release passam a ser território do TUBO; hype e reação a spoilers continuam no Mana & Burn. (4) `comum/historico.md` ganha a secção «Previsões registadas do TUBO» (ID, estado, revisões, lições), que continua a ser o único histórico. (5) Remissões em `oraculo/CONTEXTO.md` §7.2 item 4, catálogo e `nucleo/README.md`; referência partida «§10» corrigida para «§7.2» em `comum/continuidade/`.
+**Porquê:** decisão editorial aprovada pelo fundador (prompt «Implementação do Protocolo de Pré-Release do TUBO», 06/11/2026): tornar as previsões de pré-release do EP05 uma metodologia permanente e verificável, independente de cada coleção.
+**Decisões técnicas:** um só documento de método e só remissões nos outros (sem duplicar regras); grau de certeza em 5 níveis, ligado ao medidor de 5 segmentos que já existe (`oraculo/CONTEXTO.md` §11), nunca em percentagem, com teto 3 antes do pré-release (não há dados de Sealed da coleção); o texto original da previsão não se edita e a auditoria compara sempre o original; previsão retrospectiva nunca entra como previsão.
+**Impacto:** identidade, voz, trilha, cenários, estrutura, fecho e episódios publicados não mudam. Resolve a «exceção de território» que o EP05 tinha de declarar. O EP05 (branch `meta-em-curto-ep05`, por publicar) não foi tocado: ao integrá-lo, a sua tabela de previsões tem conflito com esta secção e as 4 linhas convertem-se para `PR-TRK-01` a `04`; a coluna «Confiança» passa à escala 1–5 (arredondando para baixo: «baixa» → 2, «média-baixa» → 2) e o «~35%» da linha pública sai ou ganha fonte e método, por decisão do fundador.
+
 ## 02/11/2026 (01:27) · Merge da evolução visual para `main`
 
 **O quê:** a branch `evolucao-visual-2026-11` (auditoria, QC automático, checklist P0/P1/P2, memória de continuidade, duração livre, kit v2 do Mana & Burn) entra na `main` por PR.
