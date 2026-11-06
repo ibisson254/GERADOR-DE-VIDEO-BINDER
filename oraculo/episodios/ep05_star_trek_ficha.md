@@ -67,6 +67,9 @@ A proposta anterior não foi localizada (dossiê §2). O roteiro foi escrito dep
 | Auditoria matemática | `auditoria.py`: 17 de 17 |
 | Defeitos bloqueadores | Nenhum encontrado |
 
+## Carrossel derivado (06/11/2026)
+Guia de bolso do pré-release, 9 slides 1080×1350: `ep05_carrossel.py` (lê os mesmos resultados do vídeo; os números de controlo são verificados por `assert`). Pacote: `../legendas/ep05_carrossel_legenda.txt`. Previsão no formato do Protocolo de Pré-Release (PR-TRK-01, grau 2 de 5, sem o «~35%»). Sem easter egg. Métrica: guardados. Slides conferidos um a um (fontes com corpo 28, carta inteira, personagem inteiro).
+
 ## Depende do fundador
 - Ouvir o áudio: pronúncias e o corte da frase em ~36–40 s.
 - Aceitar ou não os 93 s.
