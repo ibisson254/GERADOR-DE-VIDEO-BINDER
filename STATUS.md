@@ -54,7 +54,7 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 
 ## Especial pré-release Star Trek (06/11/2026)
 
-"BURN FOI ASSIMILADO!" produzido e conferido (95,3 s com fecho, −14,0 LUFS, −1,5 dBTP, sem corte lateral, `bordas.py` OK). **Não publicado.** Pasta: `manaburn/episodios/esp03_startrek_prerelease/` (ficha, fontes, três previsões, legenda, comentário fixado, texto alternativo, .srt, data.js). Vozes no flow ElevenLabs uynVVRurU7AQlC3bwwc5 (2.171 créditos, 1 geração por voz). Falta o fundador ouvir a pronúncia e publicar; o vídeo fica fora do repositório (recriar pelo `LEIA-ME.md` da pasta). Rever as três previsões depois de 12/11.
+"BURN FOI ASSIMILADO!" produzido e conferido (95,3 s com fecho, −14,0 LUFS, −1,5 dBTP, sem corte lateral, `bordas.py` OK). **Não publicado.** Pasta: `manaburn/episodios/esp03_startrek_prerelease/` (ficha, fontes, três previsões, legenda, comentário fixado, texto alternativo, .srt, data.js). Vozes no flow ElevenLabs uynVVRurU7AQlC3bwwc5 (2.171 créditos, 1 geração por voz). Falta o fundador ouvir a pronúncia e publicar; o vídeo fica fora do repositório (recriar pelo `LEIA-ME.md` da pasta). Rever as três previsões depois de 12/11. Carrossel derivado "5 armadilhas do pré-release" (8 slides, guia para guardar) em `carrossel/` da mesma pasta, também não publicado.
 
 ## Próximo passo concreto
 
