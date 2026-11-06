@@ -1,0 +1,218 @@
+{
+ "schema": 2,
+ "chamada": "Burn foi assimilado",
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Mana! Abri um *Cubo Borg* no pré-release! Eu fui *assimilado*!",
+   "tts": "Mana! Abri um Cubo Bórg no pré-rilís! Eu fui assimilado!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Que bom. Faltam só as outras *trinta e nove* cartas."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Que deck? Eu tenho um *cubo espacial*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Lê a carta: artefato só ganha asa com *doze* marcadores."
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "Plano novo: *cinco cores*! Esse cara cresce com terreno!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Lê a carta: conta terreno de *nome diferente*. Três Florestas valem *uma*."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Então um de cada planeta! *Turnê galáctica*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[tired]",
+   "legenda": "Os dez planetas comuns *entram virados*. A turnê anda *devagar*."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Devagar?! Eu tô explorando *estranhos novos mundos*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "E o outro lado baixa *Locutus* no turno dois. Artefato dele ganha *+1/+1*.",
+   "tts": "E o outro lado baixa Locútus no turno dois. Artefato dele ganha mais um, mais um."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Fui explorar o universo e os Borg vieram *cobrar o aluguel*?!",
+   "tts": "Fui explorar o universo e os Bórg vieram cobrar o aluguel?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Quando o Traveler crescer, a sua vida já *encolheu*.",
+   "tts": "Quando o Tráveler crescer, a sua vida já encolheu."
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "Calma, eu tenho *nave*! A *Voyager* bota dois terrenos na mesa!",
+   "tts": "Calma, eu tenho nave! A Vóiajer bota dois terrenos na mesa!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Bota. Mas pra voar, você vira *outra criatura* e soma o *poder* dela. Até *oito*."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "A minha tripulação vai passar o jogo... *estacionando a nave*?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "E criatura virada *não bloqueia*. Duas ou três naves. Não uma *frota*."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Beleza. Remoção dos Borg: *Resistance Is Futile*! Eu *escolho o modo*!",
+   "tts": "Beleza. Remoção dos Bórg: Resistênce is Fiútail! Eu escolho o modo!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Lê a carta: destrói criatura *não artefato*."
+  },
+  {
+   "quem": "B",
+   "tags": "[confused]",
+   "legenda": "... E os Borg são...",
+   "tts": "E os Bórg são..."
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "*Artefato*. A carta dos Borg não mata Borg. O outro modo *traz Borg de volta*.",
+   "tts": "Artefato. A carta dos Bórg não mata Bórg. O outro modo traz Bórg de volta."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Resistência é inútil... menos *contra eles*?! Isso devia ser *banido*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Ou joga esta: *destrói um artefato*. Dois manas, *instantânea*."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Veredito, *Spock*! Quem ganha o pré-release?",
+   "tts": "Veredito, Spóc! Quem ganha o pré-rilís?"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Três apostas. Cinco cores ganha jogo *longo*. Borg pune quem *demora*. Remoção de artefato vale *ouro*.",
+   "tts": "Três apostas. Cinco cores ganha jogo longo. Bórg pune quem demora. Remoção de artefato vale ouro."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Errado! Eu vou de *Cubo*, cinco cores *e* três naves!"
+  },
+  {
+   "quem": "M",
+   "tags": "[tired]",
+   "legenda": "Isso não é deck. É *mudança interplanetária*."
+  },
+  {
+   "quem": "B",
+   "tags": "",
+   "legenda": "No pré, você vai de quê? *A*, Borg. *B*, cinco cores.",
+   "tts": "No pré, você vai de quê? Á, Bórg. Bê, cinco cores."
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Comenta aí."
+  }
+ ],
+ "gap": [
+  0,
+  0.04,
+  0.02,
+  0.04,
+  0.02,
+  0.04,
+  0.0,
+  0.06,
+  -0.06,
+  0.04,
+  0.02,
+  0.06,
+  0.02,
+  0.04,
+  0.0,
+  0.06,
+  0.02,
+  0.04,
+  0.1,
+  0.3,
+  0.02,
+  0.06,
+  0.02,
+  0.06,
+  -0.04,
+  0.1,
+  0.06,
+  0.38
+ ],
+ "ins": [
+  [
+   6,
+   0.35
+  ],
+  [
+   10,
+   0.3
+  ]
+ ],
+ "respiro_max": 0.14,
+ "tempo": {
+  "B": 1.06,
+  "M": 1.12
+ },
+ "mix": {
+  "intro_db": 0,
+  "fala_db": -14,
+  "pausa_db": -6,
+  "fecho_db": 0
+ },
+ "sfx": {
+  "tv": true,
+  "destaque": true,
+  "carta": "flick",
+  "raiva": true
+ },
+ "outro": {
+  "scanner": 0,
+  "hold": 2.75
+ }
+}
