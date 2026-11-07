@@ -15,6 +15,8 @@ Semente de 02/11/2026, só com o que está no repositório, no projeto claude.ai
 ## Acontecimentos
 - 01/11 · Giro de domingo (semana 26–31/10), publicado: 1 Collector Booster de Star Trek subiu no dia seguinte à morte de Sir Patrick Stewart (TheGamer 29/10, preço TCGplayer); 2 Dan Ayoub presidente da Wizards, assume a 2/11; 3 All Leylines' Eve até 5/11.
 
+- 02/11 · Especial Precon: Burn defende precon em campeonato grande; o quadro do Conde estreou na parede (só neste especial).
+
 ## Referências já usadas (não repetir a piada)
 - "Ex-Halo? Então a primeira missão é Commander de quatro no Arena" (Giro, 01/11).
 - "Então eu respondo a sua resposta… com a minha resposta… e ninguém joga nada!" (Giro, 01/11, Leyline of Anticipation).

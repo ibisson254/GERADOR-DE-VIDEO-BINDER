@@ -52,9 +52,17 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 - `oraculo/episodios/ep01_render_v2.py` importa `render`, que não existe; `conde/montar_ep002.py` tem caminho absoluto. Não se mexe em scripts de episódios publicados sem necessidade.
 - Skills `binder-*` ainda mandam ler primeiro o Drive e dizem que o Scryfall não abre; alinhar com o repositório quando o fundador quiser.
 
+## Especial em espera de publicação
+
+`especiais/precon_em_jogo/`: vídeo final conferido (02/11), publicação prevista a 04/11/2026. Depende do fundador: ouvir, avisar @diegoalencard e publicar.
+
+## Especial "Precon em jogo" · V2 para impulsionamento (03/11/2026)
+
+Branch `especial/precon-em-jogo-v2` (a partir de `especial/precon-em-jogo`). V2 com luz e profundidade em pós-produção (`especiais/precon_em_jogo/polimento_v2.py`), áudio idêntico, QC sem problemas (`qc_v2.md`). Bloqueado: objetos novos e reenquadramento (faltam vozes, `data.js` e quadros do TUBO deste especial no repositório). Aguarda aprovação do fundador.
+
 ## Luz padrão do Mana & Burn (07/11/2026)
 
-Aprovada pelo fundador (`nucleo/DECISOES.md`). Fase 1 implementada na branch `manaburn/luz-padrao`: `manaburn/luz.py` + `render.py` (por defeito), docs e checklist. Por aprovar: merge para `main`; fase 2 (luz no `index.html`); objetos novos e planos fixos; V2 do "Precon em jogo" (branch `especial/precon-em-jogo-v2`).
+Aprovada pelo fundador (`nucleo/DECISOES.md`). Fase 1 implementada e integrada na `main` (07/11, "Prossiga" do fundador): `manaburn/luz.py` + `render.py` (por defeito), docs e checklist. Por aprovar: fase 2 (luz no `index.html`); objetos novos e planos fixos. Especial "Precon em jogo" e V2 integrados na `main` no mesmo merge.
 
 ## Próximo passo concreto
 
