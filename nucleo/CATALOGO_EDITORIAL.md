@@ -2,11 +2,23 @@
 
 Documento canónico das frentes editoriais: o que existe, como se classifica, onde está a identidade de cada uma e em que estado está. Configuração técnica (pastas, vozes, trilhas, episódio de referência): `../series.yaml`. Regras comuns: `CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`.
 
-Atualizado a 31/10/2026, com as decisões do fundador nessa data (`DECISOES.md`). **Lacuna** = informação que não está documentada em nenhuma fonte e não deve ser preenchida por suposição.
+Atualizado a 31/10/2026, com as decisões do fundador nessa data (`DECISOES.md`); programação semanal e frente em desenvolvimento acrescentadas a 07/11/2026 (decisão de 06/11). **Lacuna** = informação que não está documentada em nenhuma fonte e não deve ser preenchida por suposição.
 
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 
 Tudo o que está no repositório foi testado, aprovado e lançado. O especial de Halloween 2026 e a sequência de Star Trek (Órbita) estão publicados. Vozes e músicas foram criadas pelo fundador e estão aprovadas. Não são tarefas pendentes nem se reabrem.
+
+## Programação semanal das séries (fundador, 06/11/2026)
+
+| Série | Reels por semana |
+|---|---|
+| Mana & Burn | 3 |
+| Meta em Curto (TUBO) | 2 |
+| Conde de Manaforte | 1 |
+| Vince Vault (em desenvolvimento; entra quando for ativada) | 1 |
+| **Total** | **7** |
+
+Os dias de publicação não estão definidos. Lacuna: se Órbita, Lambe-lambe e especiais contam dentro dos 7 (pergunta ao fundador em `../vince-vault/PROPOSTA.md` §8).
 
 ## Tipos de produção
 
@@ -104,6 +116,23 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Onde ficam | Especial de uma série: `<pasta da série>/episodios/espNN_<nome>/` · crossover: `especiais/<nome>/` |
 | Já produzidos | Homenagem a Sir Patrick Stewart (v1 `esp01_sir_patrick/`, não publicável; v2 `esp02_picard_v2/`) · Especial de Halloween 2026 Innistrad × Duskmourn (`especiais/halloween_2026/`, publicado) |
 | Relação com o BINDER Vision | Fecho do scanner, salvo exceção registada (ex.: homenagem a Sir Patrick) |
+
+## Frentes em desenvolvimento (não ativas)
+
+Não entram no router do Showrunner nem em `../series.yaml` até serem ativadas pelo fundador.
+
+### Vince Vault (nome de trabalho)
+
+| Campo | Valor |
+|---|---|
+| Classificação prevista | Série permanente · episódio de série |
+| Estado | **Em desenvolvimento** (proposta de 07/11/2026, branch `proposta/vince-vault`) |
+| Frequência | 1 Reel por semana (fundador, 06/11/2026); expansão só por decisão do fundador |
+| Objetivo editorial | Acompanhamento sistemático do mercado de cartas de Magic: valorização, desvalorização, procura, liquidez, tendências; previsões como opinião |
+| Identidade (proposta) | Corretor de Wall Street de 1989 a operar em 2026 (cartoon 3D estilizado), empresa fictícia Multiverse Capital, apelido "Vaultinho", assistente invisível fora de campo |
+| Documentação | `../vince-vault/PROPOSTA.md` (resumo e pendências) · `CONTEXTO.md` · `PERFIL.md` · `PRODUCAO.md` · `CHARACTER_PACK.md` |
+| Fronteira proposta | Pico de preço isolado, hype e reação → Mana & Burn (território intacto); medição sistemática do mercado → Vince Vault. A aprovar pelo fundador |
+| Por fechar | Nome, empresa, vozes, trilha, motor, ferramenta de imagem, dia de publicação |
 
 ## Frente nova
 

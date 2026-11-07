@@ -18,6 +18,9 @@ Alterações realizadas:
 - <caminho> · <o que mudou> · commit <hash>
   (sem acesso de escrita: texto exato da alteração em anexo)
 
+Propostas e hipóteses por aprovar (só quando a sessão trabalhou numa proposta):
+- <proposta ou hipótese> · onde está · quem decide
+
 Tarefas pendentes:
 - <tarefa> · depende de <fundador | agente | serviço>
 

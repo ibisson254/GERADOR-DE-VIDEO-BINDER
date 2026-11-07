@@ -2,6 +2,18 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 06/11/2026 (23:58) · Programação semanal das séries e nova frente Vince Vault (em desenvolvimento)
+
+**O quê (decisões do fundador):**
+1. Programação semanal global: **7 Reels** = Mana & Burn 3 · Meta em Curto (TUBO) 2 · Conde de Manaforte 1 · Vince Vault 1. Identidades e calendários editoriais das outras séries não mudam.
+2. Nova frente **Vince Vault** (slug de trabalho `vince-vault/`), **em desenvolvimento, não ativa**. Começa com **1 episódio por semana**; nada de infraestrutura para mais. Expansão só com retenção, partilhas, comentários e viabilidade, e nunca automática.
+3. Nome de trabalho preferido "Vince Vault" (não fechado); empresa fictícia "Multiverse Capital"; apelido comunitário "Vaultinho" como piada central (reação desproporcionada, personagem nunca infantil); assistente invisível fora de campo, calmo, que corrige Vince e não aparece na primeira fase.
+4. Direção visual cartoon (3D estilizado), Wall Street dos anos 80/90 a operar em 2026; informação atual, estética retro, nada futurista.
+5. Território: acompanhamento sistemático do mercado de cartas de Magic (valorização, desvalorização, procura, liquidez, tendências, previsões como opinião). O território do Mana & Burn (incluindo preço noticiado) não se apaga nem se reescreve; fronteira proposta: pico isolado/reação → Mana & Burn; medição sistemática → Vince Vault.
+6. Scryfall só para identificação e dados de carta; preços do Scryfall não se usam (já era regra, constituição §4).
+**Porquê:** missão do fundador "Vince Vault — consolidação editorial, identidade e plano de produção" (06/11/2026, 23:58).
+**Impacto:** proposta completa em `vince-vault/` (branch `proposta/vince-vault`, sem merge automático). Catálogo ganha a programação semanal e a frente em desenvolvimento, sem ativação. `series.yaml` não muda até nome, voz, trilha e motor estarem fechados. Perfil do Mana & Burn e `SHOWRUNNER.md` não mudam; a fronteira só entra neles depois da aprovação do fundador. Pendências do fundador: `vince-vault/PROPOSTA.md` §8 (inclui se Órbita, Lambe-lambe e especiais contam dentro dos 7 Reels).
+
 ## 02/11/2026 (01:27) · Merge da evolução visual para `main`
 
 **O quê:** a branch `evolucao-visual-2026-11` (auditoria, QC automático, checklist P0/P1/P2, memória de continuidade, duração livre, kit v2 do Mana & Burn) entra na `main` por PR.
