@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 07/11/2026 · Vince Vault: personagem em desenvolvimento e estratégia de créditos
+
+**O quê:** novo personagem Vince Vault (Multiverse Capital, "Buy the dip!"), com bíblia em `vince/BIBLIA_PERSONAGEM.md` e referências em `vince/referencias/`. Turnaround oficial fixado; voz desenhada no ElevenLabs (`L93SDe6kGQj79D6svMgA`). Estratégia de créditos: imagens fixas no app Gemini, ElevenLabs só para voz e lip sync, estimativa antes de cada geração, uma variação por pedido, lip sync só no gancho.
+**Porquê:** pedido do fundador (07/11/2026); a primeira ronda no ElevenLabs esgotou o saldo do plano.
+**Impacto:** ainda não é uma frente. Formato e catálogo dependem de decisão do fundador. Os preços ditos pelo Vince seguem a regra de não inventar factos.
+
 ## 02/11/2026 (01:27) · Merge da evolução visual para `main`
 
 **O quê:** a branch `evolucao-visual-2026-11` (auditoria, QC automático, checklist P0/P1/P2, memória de continuidade, duração livre, kit v2 do Mana & Burn) entra na `main` por PR.
