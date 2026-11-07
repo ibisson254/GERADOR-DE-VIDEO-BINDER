@@ -2,6 +2,25 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 07/11/2026 (17:54) · Merge da luz padrão e do especial "Precon em jogo" para `main`
+
+**O quê:** as branches `manaburn/luz-padrao` e `especial/precon-em-jogo-v2` (que inclui `especial/precon-em-jogo`) entram na `main`.
+**Porquê:** "Prossiga" do fundador (07/11/2026, 17:54), em resposta ao pedido de decisão sobre o merge e a V2.
+**Impacto:** `main` passa a renderizar o Mana & Burn com a luz padrão. Continuam por aprovar, com esboço próprio: fase 2 (luz no `index.html`), objetos novos e planos fixos.
+
+## 07/11/2026 (17:36) · Luz e profundidade padrão em todos os episódios do Mana & Burn
+
+**O quê:** as melhorias de cenário da V2 do especial "Precon em jogo" passam a padrão da série: luz ambiente quente com sombras abertas, reflexo frio azul-esverdeado à volta da TV (apaga com a tela), parede com menos contraste, primeiro plano mais escuro com desfoque leve abaixo das legendas, vinheta leve. Ficam intocados: tela da TV e carta, legendas, tarja, fecho e áudio. Implementação (fase 1): `manaburn/luz.py`, chamado por defeito no `render.py` (`--sem-luz` desliga); serve também para vídeos de outro motor (`--ate` = início do fecho).
+**Porquê:** fundador, 07/11/2026: "Todos episódios de mana burn deve manter as melhorias que foram feitas nesse episódio", e "Pode avançar" à proposta refinada.
+**Âmbito:** episódios novos e especiais do Mana & Burn. Publicados não se reabrem. Não vale para Conde, Meta em Curto nem Órbita.
+**Fica de fora (precisa de aprovação própria):** fase 2 (luz dentro do `index.html`, como camadas do cenário); objetos novos (manta de crochê, benjamim, piso de taco); planos fixos da auditoria §5.
+
+## 02/11/2026 · Especial "Precon em jogo": seguidor na tela e quadro do Conde
+
+**O quê:** o fundador autorizou (02/11, 18:16) usar a foto de @diegoalencard e os seus comentários no especial `especiais/precon_em_jogo/`. Retrato do Conde na sala como detalhe visual silencioso, só neste especial. Trecho original do TUBO na TV. Autorizou a produção imediata às 18:28.
+**Porquê:** missão de produção do especial (reconhecer a contribuição da comunidade).
+**Impacto:** só este episódio; a identidade da sala não muda. Opções do kit ficam em `especiais/precon_em_jogo/patch.py`, fora de `manaburn/`.
+
 ## 02/11/2026 (01:27) · Merge da evolução visual para `main`
 
 **O quê:** a branch `evolucao-visual-2026-11` (auditoria, QC automático, checklist P0/P1/P2, memória de continuidade, duração livre, kit v2 do Mana & Burn) entra na `main` por PR.

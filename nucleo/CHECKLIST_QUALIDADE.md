@@ -51,6 +51,8 @@ Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao ris
 - [ ] P1 · Assinatura da série no fim (ex.: TV desliga → ponto verde no Mana & Burn), depois o fecho.
 - [ ] P2 · Nenhum plano parado mais de ~5 s sem mudança de enquadramento ou de expressão.
 - [ ] P2 · Continuidade do cenário entre planos (objetos, luz, posição da TV).
+- [ ] P1 · Mana & Burn: luz padrão aplicada (render sem `--sem-luz`), sem costuras à volta da TV, das legendas ou da tarja; tela da TV e carta iguais à versão sem luz.
+- [ ] P1 · Mana & Burn: áudio do ficheiro final igual ao da montagem (a luz não recodifica o áudio).
 
 ## Defeitos bloqueadores (não publicar)
 
