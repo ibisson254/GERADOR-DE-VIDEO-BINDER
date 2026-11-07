@@ -141,6 +141,8 @@ Métricas por episódio (do print do Insights, registadas em `comum/historico.md
 - Visitas ao perfil e toques no link, quando o print os mostrar.
 - Tempo de produção e consumo do Pro.
 
+Lacuna encontrada na revisão: `comum/historico.md` regista views, curtidas, comentários e partilhas, mas **não regista guardados**. Para a comparação abaixo ser possível, os guardados têm de entrar no registo semanal de todas as séries a partir da estreia do Vince (pedido ao fundador no print do Insights). Sem esse dado, compara-se só por partilhas.
+
 **Marcos de decisão (semana 6) [PROPOSTA; constituição §12: um resultado isolado não muda a estratégia]:**
 - **Continuar a 1/semana** se a mediana de guardados+partilhas por 1.000 views estiver ao nível da mediana das outras séries no mesmo período e a produção couber no tempo semanal.
 - **Rever o formato** se a retenção ficar abaixo das outras séries em 4 de 6 episódios.

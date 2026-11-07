@@ -120,7 +120,9 @@ Radar de mercado (dados) → verificação → escolha da pauta (fundador aprova
 | 9 | O projeto é economicamente viável? | Sim, se o custo único do pacote de imagens for aprovado; por episódio o custo é a voz (créditos já usados pelo estúdio) e o tempo humano. | Custos e gargalos em `PRODUCAO.md` §6–7. |
 | 10 | Dá para retomar noutra sessão sem esta conversa? | Sim: decisões, pendências e próximo passo estão nesta pasta, em `nucleo/DECISOES.md`, no `STATUS.md` e no handoff. | Handoff no `STATUS.md` (formato de `nucleo/modelos/HANDOFF.md`). |
 
-Problema encontrado e corrigido na revisão: a primeira versão da paleta usava verde para "subiu" e vermelho para "caiu". Verde colide com o verde BINDER e com o TUBO. Corrigido: ▲ em dourado e ▼ em vermelho, sempre com seta e sinal (nunca só cor).
+Problema encontrado e corrigido na revisão: o histórico de desempenho não regista guardados, a métrica principal proposta; ficou registado em `PRODUCAO.md` §8 que passam a entrar no print semanal (sem eles, compara-se por partilhas).
+
+Outro problema corrigido: a primeira versão da paleta usava verde para "subiu" e vermelho para "caiu". Verde colide com o verde BINDER e com o TUBO. Corrigido: ▲ em dourado e ▼ em vermelho, sempre com seta e sinal (nunca só cor).
 
 ## 8. Decisões que dependem do fundador
 
@@ -133,7 +135,7 @@ Problema encontrado e corrigido na revisão: a primeira versão da paleta usava 
 7. **Voz do Vince e voz do assistente** (Voice Design no ElevenLabs, com créditos): perfil proposto em `CONTEXTO.md` §11; o género da voz do assistente fica com o fundador.
 8. **Trilha** (ElevenLabs Music, gerada pelo fundador como as outras): briefing proposto em `CONTEXTO.md` §11.
 9. **Origem da piada e mesa brasileira** (secção 3 e `CONTEXTO.md` §2): aprovar ou trocar.
-10. **Métricas e marcos da fase de validação** (`PRODUCAO.md` §8).
+10. **Métricas e marcos da fase de validação** (`PRODUCAO.md` §8), incluindo passar a enviar os guardados no print semanal do Insights.
 11. **Ativação**: só depois de 1–9, entrada técnica em `series.yaml`, `PERFIL.md` final e passagem a "Ativa" no catálogo.
 
 ## 9. Próxima ação concreta

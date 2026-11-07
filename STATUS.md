@@ -39,6 +39,21 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 | Kit v2 no repositório + melhorias (legenda na zona segura, fonte do medidor, ventilador, antena, paninho) | Implementado e testado (bordas OK) | `manaburn/LEIA-ME.md` |
 | Duração livre nas séries | Implementado (constituição v1.5) | `nucleo/DECISOES.md` |
 
+## Vince Vault (07/11/2026) · em desenvolvimento, não ativa
+
+Missão do fundador de 06/11/2026. Branch `proposta/vince-vault` (sem merge para `main`).
+
+| Bloco | Estado | Onde |
+|---|---|---|
+| Programação semanal: 7 Reels (M&B 3 · TUBO 2 · Conde 1 · Vince 1) | Registada | `nucleo/DECISOES.md` (06/11), `nucleo/CATALOGO_EDITORIAL.md` |
+| Proposta, bíblia, perfil, produção, character pack | Escritos e revistos (revisão crítica em `PROPOSTA.md` §7) | `vince-vault/` |
+| Catálogo: frente em desenvolvimento, sem ativação | Feito | `nucleo/CATALOGO_EDITORIAL.md` |
+| `series.yaml`, perfil do Mana & Burn, Showrunner, scripts | **Não alterados** (nome, voz, trilha e motor por fechar) | — |
+| Pacote da personagem | Prompts e especificações prontos; **nenhuma imagem gerada** (sem ferramenta de imagem nesta sessão, sem créditos autorizados) | `vince-vault/CHARACTER_PACK.md` |
+| Recomendação técnica | Opção C (2.5D com camadas no motor HTML do estúdio); D só depois da validação | `vince-vault/PRODUCAO.md` §2 |
+
+Depende do fundador (lista completa em `vince-vault/PROPOSTA.md` §8): nome e pronúncia; Multiverse Capital ou variante; fronteira com o Mana & Burn; se Órbita/Lambe-lambe/especiais contam nos 7 Reels; dia de publicação; ferramenta de imagem e custo; vozes; trilha; enviar guardados no print do Insights; aprovar o merge da proposta.
+
 ## Depende do fundador
 
 - Aprovar um esboço das expressões novas do Mana e do Burn (auditoria §4) antes de as desenhar no kit.
@@ -56,6 +71,46 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 
 Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a pronúncia de "Joven", "Chandler" e "Eron" e publica o pacote (`conde/legendas/ep004_joven_legenda.txt`, ficha em `conde/episodios/ep004_joven_ficha.md`; o vídeo não está no repositório, recria-se com `python3 conde/montar_ep004.py`, desde que `conde/ep004/audio/narracao.wav` exista: se faltar, ver o flow ElevenLabs em `conde/episodios/ep004_fontes.txt`). Depois: próximo Giro ou episódio do Mana & Burn com o kit v2 de `manaburn/`; validar com `python3 -I comum/qc/qc_video.py`.
 
+Vince Vault: o fundador responde às decisões 1, 2, 6 e 7 de `vince-vault/PROPOSTA.md` §8; depois gera-se o pacote com os prompts de `vince-vault/CHARACTER_PACK.md` §9 e monta-se o episódio 0 interno (`vince-vault/PRODUCAO.md` §8, fase 0).
+
 ## Handoff
 
-Ver o handoff de 02/11/2026 na mensagem de fecho da sessão e no fim de `nucleo/auditorias/2026-11-02_evolucao_visual.md`.
+Handoff anterior (02/11/2026): mensagem de fecho da sessão e fim de `nucleo/auditorias/2026-11-02_evolucao_visual.md`.
+
+```
+HANDOFF · 07/11/2026 · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch proposta/vince-vault · commit da proposta 8e2e4a5 (+ commit deste STATUS)
+
+Objetivo atual: consolidar a proposta da nova frente Vince Vault (1 Reel/semana) sem ativá-la.
+
+Decisões tomadas nesta sessão:
+- Programação semanal de 7 Reels e decisões confirmadas do Vince Vault (fundador, 06/11) (registada em nucleo/DECISOES.md? sim)
+
+Documentos consultados:
+- AGENTS.md, STATUS.md, nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md, nucleo/CATALOGO_EDITORIAL.md,
+  nucleo/SHOWRUNNER.md, nucleo/DECISOES.md, series.yaml, nucleo/modelos/HANDOFF.md, comum/historico.md,
+  comum/easter_eggs.md, manaburn/PERFIL.md, oraculo/PERFIL.md, conde/PERFIL.md, conde/CONTEXTO.md,
+  nucleo/modelos/PERFIL_SERIE.md, comum/continuidade/LEIA-ME.md, manaburn/LEIA-ME.md, comum/qc/qc_video.py
+
+Alterações realizadas:
+- vince-vault/PROPOSTA.md, CONTEXTO.md, PERFIL.md, PRODUCAO.md, CHARACTER_PACK.md · novos · 8e2e4a5 (+ revisão no commit seguinte)
+- nucleo/DECISOES.md · entrada de 06/11/2026 · 8e2e4a5
+- nucleo/CATALOGO_EDITORIAL.md · programação semanal + frentes em desenvolvimento · 8e2e4a5
+- nucleo/modelos/HANDOFF.md · campo opcional "propostas e hipóteses por aprovar" · 8e2e4a5
+- STATUS.md · secção Vince Vault, próximo passo e este handoff · commit seguinte
+
+Propostas e hipóteses por aprovar:
+- Fronteira Mana & Burn × Vince Vault (4 regras) · vince-vault/PROPOSTA.md §4 · fundador
+- Opção técnica C (2.5D) · vince-vault/PRODUCAO.md §2 · fundador
+- Assistente materializado pela impressora; nomes errados; bordão "Opinião minha. Dinheiro seu. Decisão sua." · vince-vault/CONTEXTO.md §5–6 · fundador
+- Métricas e marcos da validação de 6 semanas · vince-vault/PRODUCAO.md §8 · fundador
+
+Tarefas pendentes:
+- Fechar nome, empresa, vozes, trilha, dia, ferramenta de imagem · depende de fundador
+- Gerar o pacote da personagem · depende de fundador (ferramenta e custo) + serviço externo
+- Kit vince-vault/kit/ e episódio 0 interno · depende de agente, depois do pacote
+- Confirmar termos de uso da LigaMagic e da MTGJSON · depende de agente
+- Aprovar o merge de proposta/vince-vault para main · depende de fundador
+
+Próximo passo concreto: o fundador responde às decisões 1, 2, 6 e 7 de vince-vault/PROPOSTA.md §8.
+```
