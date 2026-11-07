@@ -43,6 +43,8 @@ Print do próprio post (não do Insights), enviado pelo Ibisson. Entra no quadro
 
 - 03/11/2026 · Conde de Manaforte Ep. 004 (Joven, Homelands 1995, arte de Douglas Shuler). **Produzido, não publicado.** Render conferido (55,1 s + fecho, sem corte lateral, −13,9 LUFS, pico −1,5 dBTP): `conde/episodios/ep004_joven_ficha.md`. Sem easter egg. Hipótese em teste: pergunta A/B com dois réus concretos. Métricas: aguardam publicação.
 
+- 07/11/2026 · Mana & Burn Ep. 10 "A febre do autógrafo" (cartas especiais de Star Trek, semana do pré-release; Kirk nº 1701, carta de autógrafo, arte de Chris Rallis). **Produzido, não publicado.** Render conferido (47,7 s + fecho, sem corte lateral, −14,5 LUFS, pico −1,7 dBTP): `manaburn/episodios/ep10_cartas_especiais/ficha.md`. Easter egg: relógio 17:01. Hipótese em teste: pergunta A/B sobre o produto (genial × loteria). Métricas: aguardam publicação.
+
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 
 - Especial de Halloween 2026 (Innistrad × Duskmourn): **publicado**. A música que acima aparece como "provisória" foi aprovada como está.

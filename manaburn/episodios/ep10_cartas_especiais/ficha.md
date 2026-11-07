@@ -1,6 +1,6 @@
 # Ficha · Mana & Burn · EP10 · A febre do autógrafo (cartas especiais de Star Trek)
 
-Estado (07/11/2026): **roteiro e kit prontos; vozes por gerar (aguarda autorização de créditos). Não publicado.** Prévia sem vozes renderizada e conferida (não publicável).
+Estado (07/11/2026, 12h): **vídeo final renderizado e conferido; aguarda aprovação e publicação pelo fundador. Não publicado.** Vozes geradas com autorização do fundador ("Ok prossiga", 07/11, 11:52).
 
 ## Classificação
 - Série: Mana & Burn · tarja "PLANTÃO DO PACOTE"
@@ -49,7 +49,7 @@ Gíria: máx. 2 por fala (mano; brotar; rachou). Sem palavrão. Bordões "Lê a 
 - TV SAL: sem Salt Score (carta nova) → **Assinômetro 0%** ("no Play Booster · Wizards · 20/10/2026"): facto, não probabilidade. Placar "Assinadas no mundo < 1.750" (7 × menos de 250). 8 manchetes (factos citados: 2/2, 1 em 25 Play Boosters, mesma carta, atraso do Collector na Europa, 13/11). "Plantão do Pacote: atrasou, mas chegou" cumpre a promessa aberta do Zapping nº 1 (TV SAL, 25/10: "Ter 3/11, 21h: Plantão do Pacote").
 - Easter egg: relógio da TV SAL em **17:01** = nº 1701 da carta (e NCC-1701). Implementado no `episode.js`, visível em todos os planos da TV na prévia. Regista-se em `comum/easter_eggs.md` quando o vídeo final for renderizado.
 - Pôster: `mago` (nenhum pôster do kit é capitão).
-- Vozes: **por gerar.** Texto pronto em `vozes_elevenlabs.txt` (Burn: Talis, 520 caracteres; Mana: Erik, 531 caracteres; eleven_v4; uma geração por voz). Grafias: pré-relíse, Plêi Búster, Colétor, Stardêite, Él-cars, búster, "Á, genial. Bê, loteria", números por extenso no feminino ("duzentas e cinquenta").
+- Vozes: ElevenLabs eleven_v4, flow "Mana & Burn — Ep. 10 (A febre do autógrafo)" (LIlbUJTIgrnM05abwheX). Burn: Talis (E9a8LlXPNWtyvvSoZzrb), 520 créditos; Mana: Erik (nfiLpQ54jEQninp3nNqL), 531 créditos; 1 geração cada (gerações G46TdgHaY91SCQJ6lM5J e j4XqZPtxSL8ssp9Y5ykj). Texto em `vozes_elevenlabs.txt`. Ritmo Burn ×1,06, Mana ×1,12, respiro 0,14 s. Sem transcrição Scribe (não pedida para gastar mais créditos): a pronúncia confere-se a ouvir. Grafias: pré-relíse, Plêi Búster, Colétor, Stardêite, Él-cars, búster, "Á, genial. Bê, loteria", números por extenso no feminino ("duzentas e cinquenta").
 - Fecho: `juntar_fecho.py` (cópia do Ep. 9 + limitador de pico depois do fade) + `comum/outro/outro_binder_916.mp4`.
 
 ## QC da prévia sem vozes (07/11/2026, ficheiro `PREVIA_Ep10_com_fecho.mp4`, não publicável)
@@ -72,12 +72,26 @@ Vozes substituídas por faixas de marcação com a duração estimada de cada fa
 
 Não testado (depende das vozes): sincronização das falas, mistura a −14 LUFS com voz, "Comenta aí" na parada seca, duração real.
 
+## QC do ficheiro final (07/11/2026, `ManaBurn_Ep10_CartasEspeciais_916.mp4`)
+| Critério | Alvo | Medido | OK |
+|---|---|---|---|
+| Resolução / fps | 1080×1920, 30 | 1080×1920, 30 | sim |
+| Duração | livre | 47,67 s + fecho 3,87 s = 51,53 s | sim |
+| Cortes do `process.py` | 14 falas | 14 trechos com durações coerentes com o texto (Burn 0,03–27,37 s; Mana 0,10–33,58 s) | sim |
+| Loudness / pico | −14 LUFS, < −1 dBTP | −14,5 LUFS, −1,7 dBTP | sim |
+| cropdetect (0–47 s) | 1080:1920:0:0 | 1413/1413 quadros | sim |
+| Bordas da TV (`bordas.py`) | laterais 0–1080, topo ≥ 295 | 337 quadros, 10–1068 px, topo 300 px · OK | sim |
+| Fecho do scanner | presente, inteiro | a partir de 47,67 s (dif. 0,07), 3,87 s | sim |
+| "Comenta aí" → pancada | parada seca | "Comenta aí" 46,10 s; TV desliga 47,35 s (tempos do kit) | sim |
+| Carta inteira, destaque, insert, medidor, tarja, legenda na zona segura | — | quadros 2,0 / 13,6 / 19,5 / 36,0 / 46,4 / 47,5 / 49,0 s + folha de contacto | sim |
+| `qc_video.py` | sem P0/P1 | "Sem problemas mensuráveis" | sim |
+
 ## Entregáveis
 - [x] Roteiro · [x] episode.json/js · [x] Cartas · [x] Legenda (671 caracteres) · [x] Comentário fixado (967) · [x] Texto alternativo · [x] Fontes · [x] Prévia e capa provisória (fora do repositório)
-- [ ] Vozes · [ ] Vídeo final · [ ] Capa final · [ ] QC do ficheiro final
+- [x] Vozes · [x] Vídeo final (fora do repositório) · [x] Capa (2,5 s, fala 1) · [x] QC do ficheiro final
 
 ## Depende do fundador
-1. Autorizar os créditos ElevenLabs (≈ 520 + 531 caracteres, 1 geração por voz) e enviar os dois MP3.
+1. Ouvir a pronúncia ("pré-release", "Play Booster", "Collector", "Stardate", "LCARS") e aprovar o vídeo; publicar.
 2. Confirmar que o Ep. 4 do Drive ("Autógrafos de Star Trek", Kirk 1701) não foi publicado; o tema toca no mesmo produto (ângulo novo, piadas diferentes).
 3. Aprovar o uso da tarja "PLANTÃO DO PACOTE" para cumprir a promessa do Zapping nº 1.
 

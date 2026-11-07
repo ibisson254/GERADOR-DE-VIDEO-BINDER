@@ -7,3 +7,4 @@
 | 29/10/2026 | Conde de Manaforte · Ep. 003 (Voldaren Pariah) | "III" em traços bordô = os três sacrifícios que transformam a carta | ~36,6–37,6 s, à direita do carimbo ACUSAÇÃO RETIRADA |
 | 29/10/2026 | Mana & Burn · Ep. 09 (Dack Fayden) | relógio da TV SAL em "02:10" = 02/10, dia de lançamento do precon Multiverse Reforged | canto inferior direito da TV, em todos os planos da TV (0–4 s, 11–17 s, 31–35 s) |
 | 31/10/2026 | Especial de Halloween (Innistrad × Duskmourn) | "13" na chuva de código do terminal = o custo da Emrakul, the Promised End | cena 5 (dentro do tubo), ~74–75 s, ao centro-direita |
+| 07/11/2026 | Mana & Burn · Ep. 10 (A febre do autógrafo) | relógio da TV SAL em "17:01" = nº 1701 da carta de autógrafo do Kirk (e NCC-1701) | canto inferior direito da TV, em todos os planos da TV (0–3,9 s, 12,3–15,4 s, 34,5–38,6 s) |

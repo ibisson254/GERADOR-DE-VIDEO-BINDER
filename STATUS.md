@@ -54,7 +54,7 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 
 ## Em produção (07/11/2026)
 
-Mana & Burn Ep. 10 "A febre do autógrafo" (cartas especiais de Star Trek, semana do pré-release): roteiro, `episode.json`/`episode.js`, cartas (Kirk nº 1701 e nº 142, Scryfall), legenda, comentário fixado, texto alternativo e fontes em `manaburn/episodios/ep10_cartas_especiais/` (ficha: `ficha.md`). Prévia sem vozes conferida (bordas OK, cropdetect OK, fecho presente). **Bloqueio:** vozes por gerar; precisam de autorização de créditos ElevenLabs (texto em `vozes_elevenlabs.txt`). Não publicado.
+Mana & Burn Ep. 10 "A febre do autógrafo" (cartas especiais de Star Trek, semana do pré-release): roteiro, `episode.json`/`episode.js`, cartas (Kirk nº 1701 e nº 142, Scryfall), legenda, comentário fixado, texto alternativo e fontes em `manaburn/episodios/ep10_cartas_especiais/` (ficha: `ficha.md`). Vozes geradas (autorização do fundador, 07/11, 11:52; 1.051 créditos), vídeo final renderizado e conferido (51,5 s com fecho, −14,5 LUFS, sem corte lateral, QC sem problemas). **Falta:** o fundador ouvir a pronúncia, aprovar e publicar. Vídeo fora do repositório; recria-se com o kit + `episode.*` + `juntar_fecho.py` e os MP3 do flow ElevenLabs LIlbUJTIgrnM05abwheX.
 
 ## Próximo passo concreto
 
