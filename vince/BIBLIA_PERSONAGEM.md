@@ -57,7 +57,7 @@ Flow no ElevenLabs com as referências e gerações: `https://elevenlabs.io/app/
 
 ## 5. Em falta
 
-1. Base para falar em **9:16** (prompt em §2 + "Vertical 9:16 medium shot from the waist up…"). Gerar no app Gemini, com o formato definido explicitamente.
+1. Base para falar em **9:16**: prompts prontos em `PROMPTS_GEMINI.md`.
 2. Mesa do Vince com o monitor central em ecrã verde, na estética roxa.
 3. Poses restantes: a apontar para a câmara, a comemorar, a reclamar, a pensar, ao telefone dourado, com o telemóvel em ecrã verde e com uma carta em ecrã verde.
 4. Decisão do fundador sobre o formato e a frente.
