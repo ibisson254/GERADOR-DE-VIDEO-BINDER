@@ -53,6 +53,14 @@ Python 3 (numpy, scipy, Pillow, playwright com Chromium, num2words) e ffmpeg.
 - Já estavam no v2 e faltaram no Giro: TV a desligar até ao ponto verde da logo (P1-9) e o braço do Burn a apontar a TV nos planos de TV (P1-2); nos planos do sofá a TV fica inteira no quadro (D-1).
 - Testado com o Ep. 2: `bordas.py` OK (490 quadros de TV, laterais entre 10 e 1068 px, topo a 300 px) e prévias a 1,5 · 13 · 16,5 · 22 · 30 · 36,95 · 38,3 s.
 
+## Luz padrão (07/11/2026, `nucleo/DECISOES.md`)
+
+- `render.py` passa o MP4 por `luz.py` antes de entregar (e aplica a mesma luz à capa). Ver o resultado em `--sem-luz` só para comparar.
+- O que faz: luz quente, reflexo frio da TV, parede com menos contraste, primeiro plano mais escuro (desfoque só abaixo das legendas), vinheta leve. Não toca na tela da TV, legendas, tarja, áudio nem no fecho.
+- A TV é localizada pelo logo verde da TV SAL em cada quadro. Se um episódio mudar o logo ou a sua posição, conferir a folha de contacto: sem logo, o reflexo usa a última posição conhecida.
+- Vídeo de outro motor (ex.: Giro): `python3 -I luz.py ENTRADA.mp4 SAIDA.mp4 --ate <início do fecho em s>`.
+- Tempo: ~0,35 s por quadro (≈ 6 min por minuto de vídeo).
+
 ## Regras que valem para todo episódio
 
 - Carta real, inteira, rodapé visível, nada por cima. Crédito: "Na TV: {carta} ({coleção}, {ano}), nº {n}. Arte: {artista}. © Wizards of the Coast."

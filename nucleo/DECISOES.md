@@ -2,6 +2,13 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 07/11/2026 (17:36) · Luz e profundidade padrão em todos os episódios do Mana & Burn
+
+**O quê:** as melhorias de cenário da V2 do especial "Precon em jogo" passam a padrão da série: luz ambiente quente com sombras abertas, reflexo frio azul-esverdeado à volta da TV (apaga com a tela), parede com menos contraste, primeiro plano mais escuro com desfoque leve abaixo das legendas, vinheta leve. Ficam intocados: tela da TV e carta, legendas, tarja, fecho e áudio. Implementação (fase 1): `manaburn/luz.py`, chamado por defeito no `render.py` (`--sem-luz` desliga); serve também para vídeos de outro motor (`--ate` = início do fecho).
+**Porquê:** fundador, 07/11/2026: "Todos episódios de mana burn deve manter as melhorias que foram feitas nesse episódio", e "Pode avançar" à proposta refinada.
+**Âmbito:** episódios novos e especiais do Mana & Burn. Publicados não se reabrem. Não vale para Conde, Meta em Curto nem Órbita.
+**Fica de fora (precisa de aprovação própria):** fase 2 (luz dentro do `index.html`, como camadas do cenário); objetos novos (manta de crochê, benjamim, piso de taco); planos fixos da auditoria §5. A V2 do "Precon em jogo" continua por aprovar na branch `especial/precon-em-jogo-v2`.
+
 ## 02/11/2026 (01:27) · Merge da evolução visual para `main`
 
 **O quê:** a branch `evolucao-visual-2026-11` (auditoria, QC automático, checklist P0/P1/P2, memória de continuidade, duração livre, kit v2 do Mana & Burn) entra na `main` por PR.
