@@ -52,6 +52,10 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 - `oraculo/episodios/ep01_render_v2.py` importa `render`, que não existe; `conde/montar_ep002.py` tem caminho absoluto. Não se mexe em scripts de episódios publicados sem necessidade.
 - Skills `binder-*` ainda mandam ler primeiro o Drive e dizem que o Scryfall não abre; alinhar com o repositório quando o fundador quiser.
 
+## Em produção (07/11/2026)
+
+Mana & Burn Ep. 10 "A febre do autógrafo" (cartas especiais de Star Trek, semana do pré-release): roteiro, `episode.json`/`episode.js`, cartas (Kirk nº 1701 e nº 142, Scryfall), legenda, comentário fixado, texto alternativo e fontes em `manaburn/episodios/ep10_cartas_especiais/` (ficha: `ficha.md`). Prévia sem vozes conferida (bordas OK, cropdetect OK, fecho presente). **Bloqueio:** vozes por gerar; precisam de autorização de créditos ElevenLabs (texto em `vozes_elevenlabs.txt`). Não publicado.
+
 ## Próximo passo concreto
 
 Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a pronúncia de "Joven", "Chandler" e "Eron" e publica o pacote (`conde/legendas/ep004_joven_legenda.txt`, ficha em `conde/episodios/ep004_joven_ficha.md`; o vídeo não está no repositório, recria-se com `python3 conde/montar_ep004.py`, desde que `conde/ep004/audio/narracao.wav` exista: se faltar, ver o flow ElevenLabs em `conde/episodios/ep004_fontes.txt`). Depois: próximo Giro ou episódio do Mana & Burn com o kit v2 de `manaburn/`; validar com `python3 -I comum/qc/qc_video.py`.
