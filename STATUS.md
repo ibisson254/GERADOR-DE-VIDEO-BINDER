@@ -43,6 +43,7 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 
 Personagem em desenvolvimento, ainda sem frente. Bíblia: `vince/BIBLIA_PERSONAGEM.md`. Na branch `vince-vault`, por aprovar em PR #11.
 Feito a 08/11: base para falar em 9:16, mesa com ecrã verde e uma pose extra no pregão, aprovadas no controlo de qualidade e guardadas em `vince/referencias/`. Proposta de formato em `vince/PROPOSTA_FORMATO.md`, revista pelo fundador: boletim semanal da bolsa de cartas. Piloto EP00 "Fechamento da semana" renderizado como animatic, sem voz (ficha `vince/episodios/ep00_fechamento_ficha.md`, motor `vince/episodios/ep00/`).
+Modelo 3D v01 no Blender (08/11): corpo, rosto, óculos com duas posições, rig de 20 ossos, 9 expressões e importador de lip sync do Rhubarb. Ficha `vince/MODELO_3D.md`, ferramentas `vince/blender/`; o .blend fica no PC do fundador. Usar o 3D em produção está por decidir (conflito com a ficha §10).
 Falta: o fundador aprovar o animatic e os 670 créditos da narração (saldo esgotado até à renovação); depois, estimar o lip sync do gancho. Poses restantes não são precisas para o teste.
 
 ## Depende do fundador
