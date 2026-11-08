@@ -1,0 +1,190 @@
+{
+ "schema": 2,
+ "chamada": "Giro de domingo 08/11",
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "TV SAL, giro de domingo, mano! *Três notícias*, a semana no BINDER e um *recado do TUBO*."
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Um. A *Maya Hawke*, de Stranger Things, entrou no *filme de Magic*.",
+   "tts": "Um. A Máia Róc, de Strêinjer Fíngs, entrou no filme de Médjic."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Filme de Magic?! Quero ver ela embaralhar *cem cartas* sem derrubar nenhuma!",
+   "tts": "Filme de Médjic?! Quero ver ela embaralhar cem cartas sem derrubar nenhuma!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "O papel *ainda é segredo*. Quem dirige é o *Matt Johnson*, de BlackBerry.",
+   "tts": "O papel ainda é segredo. Quem dirige é o Mét Djónson, de Blékberri."
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "Dois! Secret Lair novo, *Rise of the Polygons*: carta em *3D de videogame antigo*.",
+   "tts": "Dois! Sícret Lér novo, Ráiz óv dâ Pólígons: carta em três dê de videogame antigo."
+  },
+  {
+   "quem": "M",
+   "tags": "[calm]",
+   "legenda": "É o da Extra Life: *metade* do preço vai pra um *hospital infantil*. Venda de *16 a 30*.",
+   "tts": "É o da Ékstra Láif: metade do preço vai pra um hospital infantil. Venda de dezesseis a trinta."
+  },
+  {
+   "quem": "B",
+   "tags": "[confused]",
+   "legenda": "E que carta vem nisso aí?"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "*Young Pyromancer*. Lê a carta: cada *instantânea ou feitiço* que você conjura cria um *Elemental 1/1*.",
+   "tts": "Iâng Páiromânser. Lê a carta: cada instantânea ou feitiço que você conjura cria um Elemental um, um."
+  },
+  {
+   "quem": "B",
+   "tags": "[playful]",
+   "legenda": "Fichinha de graça e ainda *ajuda hospital*? Essa eu *não baniria*."
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Três. O *pré-release de Star Trek* vai até quinta, dia *12*. No Arena, dia *10*. Nas lojas, dia *13*.",
+   "tts": "Três. O pré-rilís de Star Trék vai até quinta, dia doze. No Arena, dia dez. Nas lojas, dia treze."
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "E a *semana no BINDER*, Mana? Começa pelo *Tribunal*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "O *Conde de Manaforte* julgou o Joven: braço cruzado, *não explica nada*. Parecer: *obra notável*.",
+   "tts": "O Conde de Manaforte julgou o Jóven: braço cruzado, não explica nada. Parecer: obra notável."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Notável?! O cara destrói artefato e *nem descruza o braço*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[tired]",
+   "legenda": "E aqui no sofá, você abriu um *Cubo Borg* e foi *assimilado*.",
+   "tts": "E aqui no sofá, você abriu um Cubo Bórg e foi assimilado."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "E a carta dos Borg *não mata Borg*! Isso devia ser *banido*!",
+   "tts": "E a carta dos Bórg não mata Bórg! Isso devia ser banido!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Tava escrito: destrói criatura *não artefato*. E Borg é *artefato*.",
+   "tts": "Tava escrito: destrói criatura não artefato. E Bórg é artefato."
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "E quinta o TUBO fez a conta: Enterprise-A, *3,8%* de abrir. *Recorde do canal*!",
+   "tts": "E quinta o TUBO fez a conta: Énterpraiz Ei, três vírgula oito por cento de abrir. Recorde do canal!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Mais de *cinco mil* visualizações. Com *impulsionamento pago*. Recorde com ajudinha."
+  },
+  {
+   "quem": "B",
+   "tags": "[playful]",
+   "legenda": "E ele deixou um recado. Lê aí, *igualzinho*."
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Palavras dele: “Previsão registrada: *Rakdos* no top três do *Sealed* até primeiro de dezembro. *Certeza baixa*. Se eu errar, assumo.”",
+   "tts": "Palavras dele: Previsão registrada: Rácdos no top três do Síld até primeiro de dezembro. Certeza baixa. Se eu errar, assumo."
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "E o fim de semana de pré-release *já rolou*! Ele acertou?",
+   "tts": "E o fim de semana de pré-rilís já rolou! Ele acertou?"
+  },
+  {
+   "quem": "M",
+   "tags": "[calm]",
+   "legenda": "Segunda, dia *9*, ele volta pra *prestar contas*. Onde acertou. E onde *errou*.",
+   "tts": "Segunda, dia nove, ele volta pra prestar contas. Onde acertou. E onde errou."
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "Qual foi a notícia da semana? Comenta *1, 2 ou 3*.",
+   "tts": "Qual foi a notícia da semana? Comenta um, dois ou três."
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Comenta aí."
+  }
+ ],
+ "gap": [
+  0,
+  0.04,
+  0.02,
+  0.04,
+  0.02,
+  0.04,
+  0.02,
+  0.04,
+  0.02,
+  0.04,
+  0.25,
+  0.04,
+  0.02,
+  0.04,
+  0.02,
+  0.04,
+  0.02,
+  0.04,
+  0.02,
+  0.1,
+  0.1,
+  0.04,
+  0.1,
+  0.38
+ ],
+ "ins": [],
+ "respiro_max": 0.14,
+ "tempo": {
+  "B": 1.06,
+  "M": 1.12
+ },
+ "mix": {
+  "intro_db": 0,
+  "fala_db": -14,
+  "pausa_db": -6,
+  "fecho_db": 0
+ },
+ "sfx": {
+  "tv": true,
+  "destaque": true,
+  "carta": "flick",
+  "raiva": true
+ },
+ "outro": {
+  "scanner": 0,
+  "hold": 2.75
+ }
+}

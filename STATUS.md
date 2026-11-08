@@ -5,7 +5,7 @@ Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `mai
 
 ## Estado editorial
 
-Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbita (temática); Lambe-lambe (espontânea); especiais. Tudo o que está no repositório está aprovado e lançado; Halloween 2026 e Star Trek publicados. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
+Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). Giro de 08/11 produzido, por aprovar (secção abaixo). Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbita (temática); Lambe-lambe (espontânea); especiais. Tudo o que está no repositório está aprovado e lançado; Halloween 2026 e Star Trek publicados. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
 
 ## Consolidação
 
@@ -42,7 +42,7 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 ## Depende do fundador
 
 - Aprovar um esboço das expressões novas do Mana e do Burn (auditoria §4) antes de as desenhar no kit.
-- Enviar ou subir o motor que gerou o Giro (não há "giro" em `claude/gerador-manaburn/`).
+- Motor do Giro de 01/11 encontrado na branch `giro/2026-11-01` (cena v1, anterior à sala v3); o Giro de 08/11 foi feito com o kit v2 da `main`. Decidir se a branch antiga se integra ou fica como histórico.
 - Drive atualizado a 02/11 (notas de fonte de verdade na bíblia, no doc 05 e no Mapa do Drive; secção de estado na bíblia).
 
 ## Pendências técnicas (não bloqueiam a governação)
@@ -68,9 +68,16 @@ Aprovada e aplicada no `manaburn/index.html`: mesa de Commander, mesa acima das 
 
 Aprovada pelo fundador (`nucleo/DECISOES.md`). Fase 1 implementada e integrada na `main` (07/11, "Prossiga" do fundador): `manaburn/luz.py` + `render.py` (por defeito), docs e checklist. Por aprovar: fase 2 (luz no `index.html`); objetos novos e planos fixos. Especial "Precon em jogo" e V2 integrados na `main` no mesmo merge.
 
+## Giro de domingo nº 2 (08/11/2026)
+
+**Produzido, por aprovar, não publicado.** Branch `giro/2026-11-08`, pasta `manaburn/giro/2026-11-08/` (ficha, fontes, legenda, `episode.*`, telas). 103,0 s com fecho, −14,2 LUFS, −2,5 dBTP, QC sem problemas. Vídeo fora do repositório; recria-se com o kit de `manaburn/` + os ficheiros da pasta + as vozes do flow ElevenLabs `gBn9kgrx6Gf3cgGdSSws` (ver `ficha.md`).
+Publicações da semana confirmadas pelo fundador (08/11): Conde Ep. 004, especial "Burn foi assimilado!", Meta em Curto EP05 (05/11, impulsionado, 5.334 visualizações). Índice da semana em `comum/historico.md`.
+
 ## Próximo passo concreto
 
-Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a pronúncia de "Joven", "Chandler" e "Eron" e publica o pacote (`conde/legendas/ep004_joven_legenda.txt`, ficha em `conde/episodios/ep004_joven_ficha.md`; o vídeo não está no repositório, recria-se com `python3 conde/montar_ep004.py`, desde que `conde/ep004/audio/narracao.wav` exista: se faltar, ver o flow ElevenLabs em `conde/episodios/ep004_fontes.txt`). Depois: próximo Giro ou episódio do Mana & Burn com o kit v2 de `manaburn/`; validar com `python3 -I comum/qc/qc_video.py`.
+1. Fundador: ouvir a pronúncia do Giro, aprovar e publicar até às 12h de 08/11 (sugestão 11h45 Lisboa = 08h45 Brasília); confirmar datas de publicação do Conde Ep. 004 e do "Burn foi assimilado!" e o valor do impulsionamento do EP05.
+2. Meta em Curto de 09/11 (prestação de contas da previsão do EP05). Atenção: o critério é o 17Lands até 01/12 e o Star Trek só chega ao Arena a 10/11.
+3. Integrar na `main` as branches com episódios publicados (`meta-em-curto-ep05`, `especial-startrek-prerelease`) para as fichas ficarem na fonte de verdade.
 
 ## Handoff
 

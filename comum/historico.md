@@ -42,10 +42,28 @@ Print do próprio post (não do Insights), enviado pelo Ibisson. Entra no quadro
 - 31/10 ou 1/11/2026 · BINDER Originals · Especial de Halloween "Innistrad × Duskmourn: O Julgamento do Horror" (crossover Mana & Burn + Conde + TUBO; tribunal 3 × 2 Innistrad contra o 3 × 2 Duskmourn da EDHREC de 29/10). Render final a 31/10 com as 4 vozes (97,6 s com fecho, sem corte lateral, −14,3 LUFS, pico −3,0 dBFS). Música provisória: temas do Conde e do TUBO; tema original por gerar. Pasta: `especiais/halloween_2026/`. Hipótese em teste: pergunta de uma letra (I ou D) e partilhas de tema sazonal. Métricas: aguardam o print do Insights.
 
 - 04/11/2026 (previsto) · Especial Mana & Burn "A comunidade falou: Precon em jogo": comentário de @diegoalencard, trecho de Meta em Curto EP03, quadro do Conde. Render conferido a 02/11 (79,33 s com fecho, −14,8 LUFS, pico −2,3 dBTP): `especiais/precon_em_jogo/`. Hipótese: comentário de seguidor na tela + pergunta A/B geram mais respostas por 1.000 views. Métricas: aguardam publicação.
-- 03/11/2026 · Conde de Manaforte Ep. 004 (Joven, Homelands 1995, arte de Douglas Shuler). **Produzido, não publicado.** Render conferido (55,1 s + fecho, sem corte lateral, −13,9 LUFS, pico −1,5 dBTP): `conde/episodios/ep004_joven_ficha.md`. Sem easter egg. Hipótese em teste: pergunta A/B com dois réus concretos. Métricas: aguardam publicação.
+- 03/11/2026 · Conde de Manaforte Ep. 004 (Joven, Homelands 1995, arte de Douglas Shuler). **Publicado** (confirmado pelo fundador a 08/11/2026; data exata por confirmar). Render conferido (55,1 s + fecho, sem corte lateral, −13,9 LUFS, pico −1,5 dBTP): `conde/episodios/ep004_joven_ficha.md`. Sem easter egg. Hipótese em teste: pergunta A/B com dois réus concretos. Métricas: por receber.
 
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 
 - Especial de Halloween 2026 (Innistrad × Duskmourn): **publicado**. A música que acima aparece como "provisória" foi aprovada como está.
 - Órbita · Star Trek: a sequência editorial está **publicada**.
 - Tudo o que está no repositório foi testado, aprovado e lançado; vozes e músicas foram criadas pelo fundador e estão aprovadas. As notas "pendente: licença" acima ficam resolvidas por esta confirmação.
+
+## Semana 02–08/11/2026 · índice (auditoria do Giro de 08/11)
+
+Fonte dos estados: respostas do fundador a 08/11/2026 (00:10–00:15) + fichas e branches. Produzido ≠ publicado: só é "publicado" o que o fundador confirmou.
+
+| Frente | Código | Título / assunto | Produção | Publicação | Estado | Desempenho confirmado | Ficha / materiais |
+|---|---|---|---|---|---|---|---|
+| Conde de Manaforte | CM-EP004 | Joven, o réu que não explica nada | 03/11 | entre 03 e 08/11 (data por confirmar) | publicado | por receber | `conde/episodios/ep004_joven_ficha.md` |
+| Mana & Burn (especial) | MB-ESP03 | "Burn foi assimilado!" (pré-release Star Trek) | 06/11 | entre 06 e 08/11 (data por confirmar) | publicado | por receber | branch `especial-startrek-prerelease`, `manaburn/episodios/esp03_startrek_prerelease/ficha.md` |
+| Meta em Curto | MC-EP05 | Star Trek: engenharia de um deck vencedor | 05/11 | 05/11 (quinta) | publicado, **impulsionado** (Instagram; valor por confirmar) | 5.334 visualizações (total, orgânico + pago, sem divisão), 100 curtidas, 13 guardados, 59 novos seguidores; mais visto do canal até 08/11 | branch `meta-em-curto-ep05`, `oraculo/episodios/ep05_star_trek_ficha.md` |
+| Mana & Burn (especial) | MB-ESP-PRECON | "A comunidade falou: Precon em jogo" | 02/11 (V2 03/11) | não confirmada (previsto 04/11) | produzido, aprovado (V2 na `main`) | — | `especiais/precon_em_jogo/` |
+| Meta em Curto | MC-EP03 | Arquivo Competitivo | 01/11 | não confirmada | produzido | — | branch `meta-em-curto-ep03` |
+| Meta em Curto | MC-EP04 | Jund em Pequim | 02/11 | não confirmada | produzido | — | branch `meta-em-curto-ep04` |
+| Mana & Burn | MB-EP10 | A febre do autógrafo | 07/11 | não confirmada | produzido | — | branch `ep10-cartas-especiais` |
+| Mana & Burn | MB-GIRO-2026-11-08 | Giro de domingo nº 2 | 08/11 | — | produzido, por aprovar | — | `manaburn/giro/2026-11-08/ficha.md` |
+
+Previsão pública aberta: MC-EP05, "Previsão registrada: Rakdos no top três do Sealed até primeiro de dezembro. Certeza baixa. Se eu errar, assumo." Critério: win rate de Sealed de Star Trek no 17Lands; auditoria final a 01/12/2026. O Giro de 08/11 anuncia a volta do TUBO a 09/11 para prestar contas. (Tabela completa das 4 previsões do EP05 na branch `meta-em-curto-ep05`.)
+
