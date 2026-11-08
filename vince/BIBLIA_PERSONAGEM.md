@@ -12,6 +12,8 @@ Estado: **personagem em desenvolvimento** (07/11/2026). Ainda não é uma frente
 
 Referência canónica: `referencias/01_turnaround_OFICIAL.jpg` (versão A da folha original). Em qualquer geração nova, anexar o turnaround como **referência 1**.
 
+Características visuais detalhadas (proporções, rosto, roupa, acessórios, paleta, expressões, regras do fantoche e lista de conferência): `FICHA_VISUAL.md`.
+
 Bloco fixo para prompts (copiar sem alterar):
 
 ```
