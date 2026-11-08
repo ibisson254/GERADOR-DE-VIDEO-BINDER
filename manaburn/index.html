@@ -464,7 +464,9 @@ function shot2Markup(st){
    <path d="M300 -200 L300 330" stroke="${K}" stroke-width="3"/><rect x="290" y="324" width="20" height="16" fill="#6B6A63" ${S(3)}/><path d="M282 342 Q282 384 300 388 Q318 384 318 342 Z" fill="#EFE6B8" ${S(3.5)}/>
    <path d="M-220 1315 L1300 1315 L1300 2140 L-220 2140 Z" fill="#5A4772" ${S(6)}/>
    <path d="M980 1315 l100 0 l0 60 Z" fill="#E8DFC4" ${S(4)}/>
-   ${burnFace(st,858,525,1.12)}
+   <!-- Burn atrás da TV: ombros e camisa (mesmo modelo do plano geral), cabeça 40 px acima para o pescoço e os ombros aparecerem -->
+   <g transform="translate(${858-485*1.12} ${485-630*1.12+(st.bob?-5:0)}) scale(1.12)">${burnTorso()}</g>
+   ${burnFace(st,858,485,1.12)}
   </g>
   <image href="tv_asset.png" x="-24" y="610" width="1126" height="713"/>
   <g filter="url(#rough2)"><rect x="-22" y="612" width="1122" height="709" rx="14" fill="none" ${S(7)}/></g>
@@ -482,7 +484,11 @@ const world=document.getElementById('world'), shot2=document.getElementById('sho
 const tvEl=document.getElementById('tv'), dotEl=document.getElementById('dot'), logo=document.getElementById('logo'), sub=document.getElementById('sub');
 world.innerHTML = defs + `<g id="cam">${luzDefs}<g filter="url(#rough)">${room}</g>${luzQuente}${tvSmall}<g filter="url(#rough)">${tvSmallLine}${tvTop}</g><g id="tvfx" transform="translate(648.95 290.47) scale(0.373)"></g>${tvSmallCard}<g filter="url(#rough)">${couchBack}${couchFront}</g>
   <g id="mana" filter="url(#rough2)"></g><g id="burn" filter="url(#rough2)"></g>${luzTV}<g filter="url(#rough)" transform="translate(-20 -96) scale(1.04)">${table}</g>${luzFrente}</g>`;
-shot2.innerHTML = defs + '<g id="s2cam"><g id="s2"></g></g>';
+// plano da TV com defs próprios (sufixo _2): com ids repetidos, url(#buzz) apontava para o mundo escondido
+// e os padrões (cabelo do Burn, xadrez, papel de parede) saíam transparentes. Corrigido a 08/11/2026.
+const DEF_IDS = [...defs.matchAll(/id="([\w-]+)"/g)].map(m=>m[1]);
+const so2 = s => DEF_IDS.reduce((a,id)=>a.split(`url(#${id})`).join(`url(#${id}_2)`), s);
+shot2.innerHTML = so2(defs.replace(/id="([\w-]+)"/g,'id="$1_2"')) + '<g id="s2cam"><g id="s2"></g></g>';
 fx.innerHTML = `<defs><radialGradient id="vig" cx="50%" cy="48%" r="70%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".45"/></radialGradient></defs>
   ${defs}<rect width="1080" height="1920" filter="url(#grain)" opacity=".5"/><rect width="1080" height="1920" fill="url(#vig)"/>`;
 const tvfxG=world.querySelector('#tvfx');
@@ -552,7 +558,7 @@ function render(t){
   const key=[i,mM,mB,bM,bB,clickOn,shot,hl,fxk,cs?[cs.k,cs.img,cs.burst,cs.osd,seed].join('|'):''].join();
   if(key!==last){ last=key;
     if(TVSHOTS.includes(shot)){ shot2.style.display='block'; world.style.display='none';
-      s2.innerHTML = shot2Markup({look:P[2],brow:P[4],mouth:mB,blink:bB,hl,hr:HRi,bob:bobB,fx,cs,seed}); }
+      s2.innerHTML = so2(shot2Markup({look:P[2],brow:P[4],mouth:mB,blink:bB,hl,hr:HRi,bob:bobB,fx,cs,seed})); }
     else { shot2.style.display='none'; world.style.display='block'; tvfxG.innerHTML=(cs&&cs.est?'':tvFX(fx,'w'))+staticSVG(cs,seed,'w');
       if(cs){ const sc=world.querySelector('#smallcard'); if(sc.getAttribute('href')!==(cs.img||'')){ sc.setAttribute('href',cs.img||''); } sc.style.display=cs.img?'':'none'; }
       manaG.innerHTML = manaHeadBack()+manaLegs()+manaTorso()+manaHead({look:P[3],brow:P[5],mouth:mM,blink:bM,bob:bobM})+manaArms(P[1],clickOn);

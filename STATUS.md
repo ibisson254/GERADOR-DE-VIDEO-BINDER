@@ -62,7 +62,7 @@ Branch `especial/precon-em-jogo-v2` (a partir de `especial/precon-em-jogo`). V2 
 
 ## Sala v3 do Mana & Burn (08/11/2026)
 
-Aprovada e aplicada no `manaburn/index.html`: mesa de Commander, mesa acima das legendas, taco, luz no cenário (`luz.py` passa a opcional). `bordas.py` OK com o Ep. 2 (laterais 10–1068 px, topo 300 px). Pendente: modelo do Burn no plano da TV (decisão do fundador); primeiro episódio completo com a sala v3.
+Aprovada e aplicada no `manaburn/index.html`: mesa de Commander, mesa acima das legendas, taco, luz no cenário (`luz.py` passa a opcional). `bordas.py` OK com o Ep. 2 (laterais 10–1068 px, topo 300 px). Burn no plano da TV corrigido (cabelo, camisa e ombros; 08/11, 00:05). Pendente: primeiro episódio completo com a sala v3.
 
 ## Luz padrão do Mana & Burn (07/11/2026)
 

@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 08/11/2026 (00:05) · Burn no plano da TV
+
+**O quê:** correção de um defeito de render, não de modelo: no plano da TV os padrões SVG (cabelo raspado do Burn, xadrez da camisa, papel de parede) saíam transparentes porque os ids repetidos apontavam para o mundo escondido. O plano da TV passa a ter defs próprios (sufixo `_2`). O Burn sobe 40 px atrás da TV e mostra pescoço e ombros com a mesma camisa do plano geral, ligando-se ao braço que aponta.
+**Porquê:** fundador, 08/11/2026: "Pode corrigir de forma eficaz e eficiente que faça sentido para o projeto."
+**Impacto:** nos episódios novos, o Burn do plano da TV fica igual ao do plano geral, e a parede desse plano volta a ter o papel listrado. `bordas.py` OK.
+
 ## 08/11/2026 (00:03) · Sala v3 do Mana & Burn no motor
 
 **O quê:** entra no `manaburn/index.html` o esboço de 07/11 (`nucleo/auditorias/2026-11-07_esboco_sala.md`): mesa de noite de Commander (decks com sleeves, cartas genéricas, d20, dados, deckboxes), mesa 96 px acima para sair da faixa das legendas no plano geral, piso de taco discreto entre rodapé e carpete, e a luz dentro do cenário (lâmpada quente, reflexo frio da TV que apaga com ela, primeiro plano mais escuro). Com a luz no cenário, o `luz.py` deixa de correr por defeito no `render.py` (`--luz-pos` liga); continua a servir vídeos de outro motor.
