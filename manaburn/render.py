@@ -1,7 +1,7 @@
 import pathlib, subprocess, json, sys
 from playwright.sync_api import sync_playwright
 root = pathlib.Path(__file__).parent.resolve()
-SEM_LUZ = '--sem-luz' in sys.argv; sys.argv = [a for a in sys.argv if a != '--sem-luz']   # luz padrão (DECISOES 07/11/2026)
+LUZ_POS = '--luz-pos' in sys.argv; sys.argv = [a for a in sys.argv if a != '--luz-pos']   # luz já vem do cenário (sala v3, 08/11/2026); luz.py só a pedido
 d = json.loads((root/'data.js').read_text().strip()[11:-1]); T_END = d['T_END']; FPS = 30
 out = root/(sys.argv[1] if len(sys.argv) > 1 else 'ManaBurn_Ep1_Q_916.mp4')
 CAPA = float(sys.argv[2]) if len(sys.argv) > 2 else 4.5
@@ -19,7 +19,7 @@ with sync_playwright() as p:
 subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate',str(FPS),'-i',str(frames/'%05d.jpg'),'-i',str(root/'trilha_final.wav'),
   '-c:v','libx264','-preset','veryfast','-crf','19','-pix_fmt','yuv420p','-r',str(FPS),'-c:a','aac','-b:a','192k','-shortest','-movflags','+faststart',str(out)],check=True)
 capa = frames/f'{int(CAPA*FPS):05d}.jpg'
-if not SEM_LUZ:
+if LUZ_POS:
     sys.path.insert(0, str(root)); import luz, numpy as np
     from PIL import Image
     bruto = out.with_name(out.stem + '_semluz.mp4'); out.replace(bruto)
