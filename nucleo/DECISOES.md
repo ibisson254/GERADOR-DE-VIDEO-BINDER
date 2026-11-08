@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 08/11/2026 · Vince Vault: boletim semanal e fonte de preços
+
+**O quê:** o formato proposto para o Vince passa a ser um boletim semanal (altas, baixas e oportunidades em cartas acessíveis, com vocabulário da bolsa). Preços sem Cardmarket. Fonte preferida: a plataforma BINDER; como a base ainda não guarda histórico de preços (F1 do Data Intelligence Master v1.2) e o valor de referência da app vem do Scryfall (termos proíbem republicar preços), a variação semanal vem de uma fonte que a publica, atribuída e datada no ecrã (piloto: MTGStocks, preços do TCGplayer). O BINDER Vision entra como chamada para ação (scanner + valor de referência).
+**Porquê:** pedido do fundador (08/11/2026).
+**Impacto:** quando a F1 existir, o boletim passa a usar os dados do BINDER. Sem previsões nem recomendação de compra; "Buy the dip!" é sempre desmentido em cena.
+
 ## 07/11/2026 · Vince Vault: personagem em desenvolvimento e estratégia de créditos
 
 **O quê:** novo personagem Vince Vault (Multiverse Capital, "Buy the dip!"), com bíblia em `vince/BIBLIA_PERSONAGEM.md` e referências em `vince/referencias/`. Turnaround oficial fixado; voz desenhada no ElevenLabs (`L93SDe6kGQj79D6svMgA`). Estratégia de créditos: imagens fixas no app Gemini, ElevenLabs só para voz e lip sync, estimativa antes de cada geração, uma variação por pedido, lip sync só no gancho.

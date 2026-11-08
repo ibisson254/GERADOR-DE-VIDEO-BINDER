@@ -42,8 +42,8 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 ## Vince Vault (08/11/2026)
 
 Personagem em desenvolvimento, ainda sem frente. Bíblia: `vince/BIBLIA_PERSONAGEM.md`. Na branch `vince-vault`, por aprovar em PR #11.
-Feito a 08/11: base para falar em 9:16, mesa com ecrã verde e uma pose extra no pregão, aprovadas no controlo de qualidade e guardadas em `vince/referencias/`. Proposta de formato e guião do Reel de teste em `vince/PROPOSTA_FORMATO.md`.
-Falta: o fundador ouvir a voz, decidir o formato e aprovar o guião; preços do Cardmarket no dia; estimativa do TTS e do lip sync quando o saldo do ElevenLabs renovar. Poses restantes não são precisas para o teste.
+Feito a 08/11: base para falar em 9:16, mesa com ecrã verde e uma pose extra no pregão, aprovadas no controlo de qualidade e guardadas em `vince/referencias/`. Proposta de formato em `vince/PROPOSTA_FORMATO.md`, revista pelo fundador: boletim semanal da bolsa de cartas. Piloto EP00 "Fechamento da semana" renderizado como animatic, sem voz (ficha `vince/episodios/ep00_fechamento_ficha.md`, motor `vince/episodios/ep00/`).
+Falta: o fundador aprovar o animatic e os 670 créditos da narração (saldo esgotado até à renovação); depois, estimar o lip sync do gancho. Poses restantes não são precisas para o teste.
 
 ## Depende do fundador
 

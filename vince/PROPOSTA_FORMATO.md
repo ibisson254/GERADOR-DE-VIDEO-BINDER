@@ -2,6 +2,8 @@
 
 Estado: **proposta, por aprovar pelo fundador** (08/11/2026). Nada aqui entra no catálogo nem em `series.yaml` antes do "ok".
 
+> **Revisto a 08/11/2026 (fundador):** o formato passa a ser um **boletim semanal** — o que valorizou, o que desvalorizou e as oportunidades da semana, em cartas que o espectador provavelmente tem ou consegue comprar, com o Vince a usar termos da bolsa. Preços sem Cardmarket. O piloto está em `episodios/ep00_fechamento_ficha.md`; as secções 2 e 3 abaixo (Ep. 0 "Qual deles?") ficam como histórico da primeira proposta.
+
 ## 1. Formato recomendado: série própria, curta, sobre o valor da coleção
 
 **Nome de trabalho:** "Pregão do Vince".
