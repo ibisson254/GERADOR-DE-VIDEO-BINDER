@@ -46,10 +46,15 @@ Cenários: pregão da bolsa à noite, como na folha original. Tons roxo e índig
 | `00_folha_original.png` | Referência | Folha de conceito inicial (5 versões, 5 expressões, 5 poses). |
 | `01_turnaround_OFICIAL.jpg` | ✅ Oficial | Frente, 3/4, perfil e costas. 1408×768. |
 | `02_expressoes_A.png` / `_C.png` | ✅ Aprovadas para uso | Grelha 3×3: neutro, confiante, a rir, furioso, chocado, desesperado, sarcástico, pensativo, eufórico. 1376×768: cada célula tem ~450 px, serve para inserções, não para ecrã inteiro. A versão A tem o rosto vermelho no "furioso". |
-| `03_base_falar_PROVISORIA_16x9.png` | ⚠️ Provisória | Correta (um par de óculos, boca fechada, fundo certo), mas saiu **16:9**. Refazer em 9:16 antes do lip sync final. |
+| `03_base_falar_PROVISORIA_16x9.png` | Substituída | Trocada pela versão 9:16 a 08/11. Mantida até o fundador autorizar apagar. |
+| `03_base_falar_916.jpg` | ✅ Base do lip sync | 768×1376 (9:16), app Gemini, 08/11. Frontal, olhar na lente, boca fechada, óculos no topete, fundo do pregão. Enquadramento até às coxas (pedido: cintura) e folga acima do topete ~15%: sobra margem para recortar. Anel nas duas mãos (desvio menor, aceite). |
 | `04_pose_andar.jpg`, `04_pose_piscadela.jpg` | ✅ | Corpo inteiro, fundo cinza. O anel está na mão do relógio (desvio menor, aceite). |
+| `04_pose_confiante_pregao.jpg` | ✅ Extra (não estava na lista) | 9:16, 08/11. Corpo inteiro no corredor do pregão, sorriso de lado, óculos no topete. Serve de plano de apresentação. Anel na mão do relógio (mesmo desvio aceite). |
 | `05_cenario_pregao_corredor.jpg` | ✅ Cenário principal | 9:16. |
 | `05_cenario_pregao_mesas.jpg` | ✅ Segundo fundo | 9:16. |
+| `06_mesa_ecra_verde.jpg` | ✅ Plano de inserção | 9:16, 08/11, sem personagem. Ecrã verde liso: média RGB (4, 178, 73), desvio < 1, perto de #00B140. O monitor ocupa o centro da mesa, por isso **não dá para pôr o Vince atrás**: usa-se como plano de inserção (dados e telas reais no ecrã), com o Vince noutro plano. A taça toca ~5 px na borda de baixo do verde (o recorte resolve). |
+
+Os ficheiros de 08/11 ficaram em `.jpg`, o formato que o Gemini entrega (converter para PNG não ganha qualidade).
 
 Rejeitados, não versionados: expressões da primeira ronda (sem fato e com outro rosto), folha de bocas (outro rosto; desnecessária, o lip sync dispensa-a), primeira base para falar (dois pares de óculos), mesa na estética verde antiga, palco roxo desfocado (refaz-se em código), expressões B (grelha 5×3 não pedida).
 
@@ -57,11 +62,11 @@ Flow no ElevenLabs com as referências e gerações: `https://elevenlabs.io/app/
 
 ## 5. Em falta
 
-1. Base para falar em **9:16**: prompts prontos em `PROMPTS_GEMINI.md`.
-2. Mesa do Vince com o monitor central em ecrã verde, na estética roxa.
-3. Poses restantes: a apontar para a câmara, a comemorar, a reclamar, a pensar, ao telefone dourado, com o telemóvel em ecrã verde e com uma carta em ecrã verde.
-4. Decisão do fundador sobre o formato e a frente.
-5. Primeiro teste de lip sync (gancho de 3–5 s), com o custo estimado antes.
+1. ~~Base para falar em 9:16~~ e ~~mesa com ecrã verde~~: feitas a 08/11.
+2. Poses restantes: a apontar para a câmara, a comemorar, a reclamar, a pensar, ao telefone dourado, com o telemóvel em ecrã verde e com uma carta em ecrã verde. Nenhuma é necessária para o Reel de teste.
+3. Fundador ouvir e validar a voz.
+4. Decisão do fundador sobre o formato e a frente: proposta em `PROPOSTA_FORMATO.md`.
+5. Primeiro teste de lip sync (gancho de 3–5 s), com o custo estimado antes; depende da renovação do saldo.
 
 ## 6. Estratégia de créditos (decidida a 07/11/2026)
 

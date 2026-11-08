@@ -39,10 +39,11 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 | Kit v2 no repositório + melhorias (legenda na zona segura, fonte do medidor, ventilador, antena, paninho) | Implementado e testado (bordas OK) | `manaburn/LEIA-ME.md` |
 | Duração livre nas séries | Implementado (constituição v1.5) | `nucleo/DECISOES.md` |
 
-## Vince Vault (07/11/2026)
+## Vince Vault (08/11/2026)
 
-Personagem em desenvolvimento, ainda sem frente. Bíblia: `vince/BIBLIA_PERSONAGEM.md` (visual, voz, assets, estratégia de créditos). Na branch `vince-vault`, por aprovar em PR.
-Falta: base para falar em 9:16, mesa com ecrã verde, poses restantes, decisão de formato, primeiro teste de lip sync. Saldo do ElevenLabs esgotado até à renovação.
+Personagem em desenvolvimento, ainda sem frente. Bíblia: `vince/BIBLIA_PERSONAGEM.md`. Na branch `vince-vault`, por aprovar em PR #11.
+Feito a 08/11: base para falar em 9:16, mesa com ecrã verde e uma pose extra no pregão, aprovadas no controlo de qualidade e guardadas em `vince/referencias/`. Proposta de formato e guião do Reel de teste em `vince/PROPOSTA_FORMATO.md`.
+Falta: o fundador ouvir a voz, decidir o formato e aprovar o guião; preços do Cardmarket no dia; estimativa do TTS e do lip sync quando o saldo do ElevenLabs renovar. Poses restantes não são precisas para o teste.
 
 ## Depende do fundador
 
@@ -63,4 +64,4 @@ Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a p
 
 ## Handoff
 
-Último: 07/11/2026, Vince Vault (ver a secção acima e `vince/BIBLIA_PERSONAGEM.md` §5). Anterior: handoff de 02/11/2026 na mensagem de fecho da sessão e no fim de `nucleo/auditorias/2026-11-02_evolucao_visual.md`.
+Último: 08/11/2026, Vince Vault (ver a secção acima e `vince/BIBLIA_PERSONAGEM.md` §5). Anterior: 07/11/2026, Vince Vault. Anterior: handoff de 02/11/2026 na mensagem de fecho da sessão e no fim de `nucleo/auditorias/2026-11-02_evolucao_visual.md`.
