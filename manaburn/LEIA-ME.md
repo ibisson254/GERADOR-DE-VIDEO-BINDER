@@ -55,11 +55,15 @@ Python 3 (numpy, scipy, Pillow, playwright com Chromium, num2words) e ffmpeg.
 
 ## Luz padrão (07/11/2026, `nucleo/DECISOES.md`)
 
-- `render.py` passa o MP4 por `luz.py` antes de entregar (e aplica a mesma luz à capa). Ver o resultado em `--sem-luz` só para comparar.
+- Desde a sala v3 (08/11/2026) a luz vem do próprio cenário no `index.html` (lâmpada quente, reflexo frio da TV, primeiro plano mais escuro). O `render.py` já não passa por `luz.py`; `--luz-pos` liga-o se for preciso.
 - O que faz: luz quente, reflexo frio da TV, parede com menos contraste, primeiro plano mais escuro (desfoque só abaixo das legendas), vinheta leve. Não toca na tela da TV, legendas, tarja, áudio nem no fecho.
 - A TV é localizada pelo logo verde da TV SAL em cada quadro. Se um episódio mudar o logo ou a sua posição, conferir a folha de contacto: sem logo, o reflexo usa a última posição conhecida.
 - Vídeo de outro motor (ex.: Giro): `python3 -I luz.py ENTRADA.mp4 SAIDA.mp4 --ate <início do fecho em s>`.
 - Tempo: ~0,35 s por quadro (≈ 6 min por minuto de vídeo).
+
+## Sala v3 (08/11/2026)
+
+Mesa de noite de Commander (decks com sleeves, cartas genéricas, d20, dados, deckboxes) subida 96 px para ficar acima das legendas no plano geral; piso de taco entre rodapé e carpete. Nunca pôr cartas reais na mesa sem crédito.
 
 ## Regras que valem para todo episódio
 

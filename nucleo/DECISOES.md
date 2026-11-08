@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 08/11/2026 (00:03) · Sala v3 do Mana & Burn no motor
+
+**O quê:** entra no `manaburn/index.html` o esboço de 07/11 (`nucleo/auditorias/2026-11-07_esboco_sala.md`): mesa de noite de Commander (decks com sleeves, cartas genéricas, d20, dados, deckboxes), mesa 96 px acima para sair da faixa das legendas no plano geral, piso de taco discreto entre rodapé e carpete, e a luz dentro do cenário (lâmpada quente, reflexo frio da TV que apaga com ela, primeiro plano mais escuro). Com a luz no cenário, o `luz.py` deixa de correr por defeito no `render.py` (`--luz-pos` liga); continua a servir vídeos de outro motor.
+**Porquê:** fundador, 08/11/2026: "Sim finalizei tudo", em resposta ao pedido de aprovação dos pontos 1 a 4 do esboço.
+**Fica de fora:** modelo do Burn no plano da TV (só cabeça, sem boné nem ombros): precisa de decisão própria.
+
 ## 07/11/2026 (17:54) · Merge da luz padrão e do especial "Precon em jogo" para `main`
 
 **O quê:** as branches `manaburn/luz-padrao` e `especial/precon-em-jogo-v2` (que inclui `especial/precon-em-jogo`) entram na `main`.

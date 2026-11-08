@@ -29,7 +29,7 @@ Gancho: opinião quente do Burn. Fecho: pergunta do Burn (a mesma do comentário
 
 ## Luz e cenário
 
-Luz padrão em todos os episódios novos (decisão de 07/11/2026): sala antiga com luz quente, reflexo frio da TV, primeiro plano mais escuro. Aplicada pelo kit (`manaburn/luz.py`); não se desliga para publicar sem decisão registada.
+Luz padrão em todos os episódios novos (decisão de 07/11/2026): sala antiga com luz quente, reflexo frio da TV, primeiro plano mais escuro. Desde 08/11/2026 vem do cenário (`index.html`, sala v3), com a mesa de noite de Commander; `luz.py` só para vídeos de outro motor.
 
 ## Formato
 
