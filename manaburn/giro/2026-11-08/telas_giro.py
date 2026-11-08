@@ -35,7 +35,7 @@ TELAS = {
   'giro_filme': """<div class="f"><span class="badge">1 · CINEMA</span>
     <div class="k">FILME DE MAGIC · LIVE-ACTION</div>
     <div class="t">MAYA HAWKE<br><em>NO ELENCO</em></div>
-    <ul><li>primeira atriz anunciada</li><li>papel ainda em segredo</li><li>direção: Matt Johnson</li></ul>
+    <ul><li>a Robin de <em style="font-style:normal;color:#FFD84A">Stranger Things</em></li><li>primeira atriz anunciada</li><li>papel ainda em segredo</li><li>direção: Matt Johnson, de <em style="font-style:normal;color:#FFD84A">BlackBerry</em></li></ul>
     <div class="fonte">Fontes: Deadline e TheWrap (04/11/2026). Legendary e Hasbro.</div></div>""",
   'giro_prerelease': """<div class="f"><span class="badge">3 · PRA JOGAR</span>
     <div class="k">MAGIC: THE GATHERING | STAR TREK</div>

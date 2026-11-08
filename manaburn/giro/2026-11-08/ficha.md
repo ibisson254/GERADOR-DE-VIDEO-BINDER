@@ -48,6 +48,7 @@ Ver `ficha_fontes.md`.
 - Corte: as `[long pause]` saíram curtas (~0,3 s) e o `cortes.py` trocou as fronteiras de três falas do Burn. `separar_falas.py` acrescenta 0,7 s de silêncio nas fronteiras certas (transcrição + silêncio real) antes do `process.py`; a voz não muda.
 - Música: midnight_throttle (`manaburn/musica.mp3`). Fecho: `comum/outro/outro_binder_916.mp4` por `juntar_fecho.py` (cópia do Ep. 10).
 - Easter egg: nenhum.
+- Revisão de 08/11 (02:06, pedido do fundador): calendário da parede em **1996** (`EP.calendario`, opção nova do kit; os outros episódios continuam com 2019). Tela do cinema com "a Robin de Stranger Things" e "Matt Johnson, de BlackBerry", para identificar as pessoas. Fotos dos atores: não entram (fotos de pessoas reais tiradas da internet não se usam nas peças).
 
 ## Riscos e limitações
 - Pronúncia: Scribe repete a grafia do prompt, por isso não prova a pronúncia. Ouvir: "Maya Hawke", "Stranger Things", "Matt Johnson", "BlackBerry", "Secret Lair", "Rise of the Polygons", "Young Pyromancer", "Joven", "Borg", "Enterprise-A", "Rakdos", "Sealed", "BINDER".

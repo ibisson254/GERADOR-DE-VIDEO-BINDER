@@ -10,6 +10,7 @@ const EP = {
   id: 'giro_2026-11-08',
   bug: 'TV SAL · GIRO DE DOMINGO',
   poster: 'artefato',
+  calendario: '1996',   // ano do calendário da parede (pedido do fundador, 08/11/2026, só neste episódio; o kit continua com 2019 por defeito)
   fx: { foco: true, tremor: true, poster: true, celular: true, scanner: false },
   outro: { assinatura: 'Escaneie suas cartas e organize seus decks.' },
   card: { img: 'cards/giro_abre.png', cred: 'TV SAL · notícias de 02 a 08/11/2026. Fontes na legenda.' },

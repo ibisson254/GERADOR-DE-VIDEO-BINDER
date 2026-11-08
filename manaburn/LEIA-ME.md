@@ -65,6 +65,10 @@ Python 3 (numpy, scipy, Pillow, playwright com Chromium, num2words) e ffmpeg.
 
 Mesa de noite de Commander (decks com sleeves, cartas genéricas, d20, dados, deckboxes) subida 96 px para ficar acima das legendas no plano geral; piso de taco entre rodapé e carpete. Nunca pôr cartas reais na mesa sem crédito.
 
+## Calendário da parede (08/11/2026)
+
+`EP.calendario` muda o ano do calendário velho da parede (por defeito "2019"). Usado no Giro de 08/11 ("1996"), a pedido do fundador.
+
 ## Regras que valem para todo episódio
 
 - Carta real, inteira, rodapé visível, nada por cima. Crédito: "Na TV: {carta} ({coleção}, {ano}), nº {n}. Arte: {artista}. © Wizards of the Coast."
