@@ -42,7 +42,7 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 ## Vince Vault (09/11/2026)
 
 Personagem em desenvolvimento, ainda sem frente. Bíblia: `vince/BIBLIA_PERSONAGEM.md`. Tudo na branch `vince-vault`, por aprovar em PR #11.
-**Vince 3D: começar por `vince/MODELO_3D.md` → secção "Retomar aqui".** Modelo v02 feito a 09/11 (noite): malha gerada pelo TRELLIS.2 local a partir da vista de frente em pose A, com rig de corpo, olhos, pálpebras, boca, queixo e sobrancelhas a funcionar, e óculos escondidos por ordem do fundador (`Documentos\Vince\vince_modelo_v02.blend`, no PC do fundador). Defeitos conhecidos listados no mesmo documento (botões a mais, colarinho, anel, dedos sem ossos). Próximo passo: o fundador vê os renders e decide entre corrigir este modelo ou gerar outra imagem.
+**Vince 3D: começar por `vince/MODELO_3D.md` → secção "Retomar aqui".** Modelo v02 feito a 09/11 (noite): malha gerada pelo TRELLIS.2 local a partir da vista de frente em pose A, com rig de corpo, olhos, pálpebras, boca, queixo e sobrancelhas a funcionar, e óculos escondidos por ordem do fundador (`Documentos\Vince\vince_modelo_v02.blend`, no PC do fundador). Defeitos conhecidos listados no mesmo documento (botões a mais, colarinho, anel, dedos sem ossos). **V03 (brief do fundador, 09/11): auditoria e plano em `vince/V03_PLANO.md`; a V02 é a base, sem óculos. Próximo passo: IK das pernas e Vince Swagger Walk (plano §3, etapas C1 e D1).**
 Fantoche 2D (08/11): base para falar 9:16, mesa com ecrã verde e pose extra em `vince/referencias/`; proposta de formato em `vince/PROPOSTA_FORMATO.md` (boletim semanal da bolsa de cartas); piloto EP00 em animatic, sem voz (`vince/episodios/ep00_fechamento_ficha.md`). Falta o fundador aprovar o animatic e os 670 créditos da narração.
 
 ## Depende do fundador
@@ -91,5 +91,5 @@ Tarefas pendentes:
 - Dedos com um osso cada, anel, botões, colarinho · agente
 - Aprovar o uso do 3D em produção e o PR #11 · fundador
 
-Próximo passo concreto: ler vince/MODELO_3D.md → "Retomar aqui".
+Próximo passo concreto: ler vince/V03_PLANO.md e executar C1 (IK das pernas) e D1 (caminhada).
 ```
