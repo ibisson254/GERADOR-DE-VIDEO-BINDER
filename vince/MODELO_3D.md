@@ -4,6 +4,8 @@ Fonte de verdade da criação do Vince em 3D. Qualquer sessão nova que trabalhe
 
 ## ▶ Retomar aqui
 
+**V03 (09/11, 21h):** o ficheiro de trabalho passou a ser `Documentos\Vince\vince_modelo_v03a.blend`: a V02 mais IK nas pernas e a caminhada de assinatura (`vince/blender/vince_andar.py`). Estado, medições e próximo passo em `vince/V03_PLANO.md` §5. O que se segue nesta secção descreve a V02, que é a base.
+
 **Estado (09/11, noite):** o modelo v02 existe, com rig de corpo, olhos, pálpebras, boca, queixo e sobrancelhas a funcionar; sem óculos. Ficheiro: `Documentos\Vince\vince_modelo_v02.blend` (o v01 ficou intacto). Renders de conferência: `Documentos\Vince\render_v02_corpo.png` e `render_v02_busto.png`.
 
 **Decisão do fundador (09/11):** a geometria do Vince é gerada por IA local (TRELLIS.2, licença MIT, uso comercial livre). O modelo feito à mão (v01) fica só como fonte do rig, do rosto e do lip sync.
@@ -50,6 +52,7 @@ Fonte de verdade da criação do Vince em 3D. Qualquer sessão nova que trabalhe
 | Workflow do ComfyUI | `vince/3d/comfyui/Vince_TRELLIS2_imagem_para_3D.json` (cópia em `E:\ComfyUI\user\default\workflows\`) |
 | Instalador reproduzível | `vince/3d/comfyui/instalar_comfyui_trellis2.bat` |
 | Ferramentas do rig (expressões, óculos, Rhubarb) | `vince/blender/vince_ferramentas.py` (também dentro do .blend, texto `vince_ferramentas.py`) |
+| Caminhada (V03): IK das pernas, Vince Swagger Walk, medição do deslizamento | `vince/blender/vince_andar.py` (também dentro do .blend). `A.gerar()`, `A.usar()`, `A.parar()`, `A.conferir()` |
 | Construção procedimental v01 (histórico) | `vince/blender/vince_blocking_v01.py` |
 
 ## Prompt da folha de modelação (Gemini)
@@ -115,7 +118,9 @@ Notas de trabalho com o Blender por MCP:
 - Cada chamada ao Blender tem de responder em menos de 60 s; esperas longas fazem-se fora do Blender.
 - Pesos automáticos falham em malhas de IA (abertas, cortadas nas costuras de UV): calcular num proxy com remesh por voxels e passar com o modificador Data Transfer.
 - `V.aplicar_expressao()` faz `frame_set`: aplicar a expressão antes de posar os ossos.
-- O texto `claude_util.py` dentro do .blend tem `conff()`, que grava vistas ortográficas de conferência em `_conf\`.
+- O texto `claude_util.py` dentro do .blend tem `conff()`, que grava vistas ortográficas de conferência em `_conf\`, e `folha()`, que grava uma folha de contacto (vistas × frames) num só JPEG.
+- Vídeo: render em segundo plano (`E:\blender.exe -b ficheiro -P _conf\render_walk.py`, registo em `_conf\render_walk.log`); a saída FFMPEG (H.264) funciona. EEVEE a 540×960 e 16 amostras: cerca de 0,5 s por frame.
+- O `result` devolvido ao MCP tem de ser um dicionário.
 - Rotação dos braços em eixos do mundo: `upper_arm.L` com Y positivo baixa o braço; no `.R` é o sinal contrário.
 
 ## Fluxo de lip sync

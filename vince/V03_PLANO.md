@@ -82,5 +82,12 @@ Renders de frente, lado e costas, corpo inteiro, close-up, folha de nove express
 - Riscas do fato (K1) e brilho do cabelo (K3) só melhoram a sério com texturas novas; ficam para o fim.
 
 ## 5. Estado
-- 09/11/2026: auditoria e plano feitos. Nada da V03 executado ainda. Base: `Documentos\Vince\vince_modelo_v02.blend`.
-- Próximo passo: Etapa C1 e D1 em primeiro lugar (a caminhada é o critério de sucesso), depois B e o resto de C.
+- 09/11/2026: auditoria e plano feitos. Base: `Documentos\Vince\vince_modelo_v02.blend`.
+- 09/11/2026 (21h): **C1 e D1 feitos, D2 medido.** Ficheiro `Documentos\Vince\vince_modelo_v03a.blend` (a V02 ficou intacta).
+  - C1: IK nas duas pernas (`ik_foot.L/R` → `roll_heel` → `roll_toe` → `ik_tgt`, polo `pole_knee.L/R`), rolamento por pivô no calcanhar e na biqueira, deslocação pelo osso `root`. Rig: 30 ossos. IK dos braços não feito (era opcional; os braços continuam em FK).
+  - D1: Vince Swagger Walk em `vince/blender/vince_andar.py` (texto `vince_andar.py` dentro do .blend). Ações `VINCE_swagger_lugar` e `VINCE_swagger_desloca`, 42 frames, loop por modificador. Passada de 0,70 m por ciclo (0,5 m/s). Todos os valores estão no dicionário `P` do módulo; `A.gerar(nome, PASSO=…, ANCA_TOMBO=…)` refaz o ciclo com outros valores.
+  - D2 (`A.conferir`): deslizamento máximo do pé de apoio 0,021 mm por frame; pé abaixo do chão 0,03 mm; erro do IK 0,04 mm; salto no loop 0,000 mm; extensão máxima da perna 99,7%.
+  - Vídeo de conferência: `Documentos\Vince\vince_v03_swagger_walk.mp4` (frente, lado e três quartos, dois ciclos cada, 540×960, EEVEE). Palco na coleção `V03_palco` (chão em xadrez que anda à velocidade da caminhada, câmaras `V03_cam_frente/lado/tq`); `anel_D` escondido (estava solto junto à mão).
+  - Achado: as pernas medem 0,52 m e os sapatos 0,35 m. Com a anca à altura natural, o joelho da frente pousa dobrado cerca de 35°; alongar mais a passada estica-o, mas tira o ar descontraído.
+  - Por conferir pelo fundador: se a caminhada "é o Vince". Ajustes prováveis: amplitude da anca e dos ombros, braço direito, queixo.
+- Próximo passo: o fundador vê o vídeo e pede ajustes; depois Etapa B (I5 cabeça e ombros, I6 mãos) e o resto de C (C2 dedos, C3 boca). C4 (pesos em passada) fica por rever nos renders de perto: anca e joelho aguentam, o ombro com o braço atrás ainda não foi visto em close.

@@ -42,7 +42,7 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 ## Vince Vault (09/11/2026)
 
 Personagem em desenvolvimento, ainda sem frente. Bíblia: `vince/BIBLIA_PERSONAGEM.md`. Tudo na branch `vince-vault`, por aprovar em PR #11.
-**Vince 3D: começar por `vince/MODELO_3D.md` → secção "Retomar aqui".** Modelo v02 feito a 09/11 (noite): malha gerada pelo TRELLIS.2 local a partir da vista de frente em pose A, com rig de corpo, olhos, pálpebras, boca, queixo e sobrancelhas a funcionar, e óculos escondidos por ordem do fundador (`Documentos\Vince\vince_modelo_v02.blend`, no PC do fundador). Defeitos conhecidos listados no mesmo documento (botões a mais, colarinho, anel, dedos sem ossos). **V03 (brief do fundador, 09/11): auditoria e plano em `vince/V03_PLANO.md`; a V02 é a base, sem óculos. Próximo passo: IK das pernas e Vince Swagger Walk (plano §3, etapas C1 e D1).**
+**Vince 3D: começar por `vince/MODELO_3D.md` → secção "Retomar aqui".** Modelo v02 feito a 09/11 (noite): malha gerada pelo TRELLIS.2 local a partir da vista de frente em pose A, com rig de corpo, olhos, pálpebras, boca, queixo e sobrancelhas a funcionar, e óculos escondidos por ordem do fundador (`Documentos\Vince\vince_modelo_v02.blend`, no PC do fundador). Defeitos conhecidos listados no mesmo documento (botões a mais, colarinho, anel, dedos sem ossos). **V03 (brief do fundador, 09/11): auditoria e plano em `vince/V03_PLANO.md`; a V02 é a base, sem óculos. Feito a 09/11 (21h): IK das pernas e Vince Swagger Walk (etapas C1 e D1), em `Documentos\Vince\vince_modelo_v03a.blend` e `vince/blender/vince_andar.py`; pés sem deslizar (0,021 mm por frame), loop sem salto. Vídeo de conferência: `Documentos\Vince\vince_v03_swagger_walk.mp4`. Próximo passo: o fundador vê o vídeo e diz se a caminhada "é o Vince"; depois Etapa B (cabeça, ombros, mãos) e o resto de C (dedos, boca).**
 Fantoche 2D (08/11): base para falar 9:16, mesa com ecrã verde e pose extra em `vince/referencias/`; proposta de formato em `vince/PROPOSTA_FORMATO.md` (boletim semanal da bolsa de cartas); piloto EP00 em animatic, sem voz (`vince/episodios/ep00_fechamento_ficha.md`). Falta o fundador aprovar o animatic e os 670 créditos da narração.
 
 ## Depende do fundador
@@ -64,32 +64,34 @@ Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a p
 
 ## Handoff
 
-Último: 09/11/2026 (noite), Vince Vault 3D v02 (handoff abaixo e `vince/MODELO_3D.md`). Anterior: 09/11/2026, Vince Vault 3D (pipeline).
+Último: 09/11/2026 (21h), Vince V03 · C1 e D1 (handoff abaixo e `vince/V03_PLANO.md` §5). Anterior: 09/11/2026 (noite), Vince Vault 3D v02.
 
 ```
-HANDOFF · 09/11/2026 20:50 · Claude
+HANDOFF · 09/11/2026 21:15 · Claude
 Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch vince-vault
 
-Objetivo atual: Vince Vault em 3D de nível profissional, com rig, expressões e lip sync.
+Objetivo atual: Vince V03, reconhecível pela caminhada antes de falar.
 
 Decisões tomadas nesta sessão:
-- Nenhuma decisão editorial nova. Técnica: o v02 vive num ficheiro novo (vince_modelo_v02.blend); o v01 não foi alterado.
+- Nenhuma decisão editorial. Técnica: a V03 vive em vince_modelo_v03a.blend; a V02 não foi alterada.
 
 Documentos consultados:
-- vince/MODELO_3D.md, vince/FICHA_VISUAL.md, vince/BIBLIA_PERSONAGEM.md, vince/blender/vince_ferramentas.py
+- AGENTS.md, STATUS.md, vince/V03_PLANO.md, vince/MODELO_3D.md, vince/blender/vince_ferramentas.py
 
 Alterações realizadas:
-- vince/MODELO_3D.md · estado do v02, defeitos conhecidos, geração sem navegador, notas de trabalho
-- vince/blender/vince_ferramentas.py · pose(), repouso(), piscar(), olhar()
+- vince/blender/vince_andar.py · novo: caminhada paramétrica, geração das ações, medição do deslizamento
+- vince/V03_PLANO.md · §5 com o estado de C1, D1 e D2 e as medições
+- vince/MODELO_3D.md · ficheiro de trabalho V03, ferramentas novas, notas de render em segundo plano
 - STATUS.md · secção Vince Vault e este handoff
-- No PC do fundador (fora do repositório): Vince_00002.glb, vince_modelo_v02.blend, renders em Documentos\Vince
+- No PC do fundador (fora do repositório): vince_modelo_v03a.blend, vince_v03_swagger_walk.mp4, vince_andar.py, folhas em Documentos\Vince\_conf
 
 Tarefas pendentes:
-- Ver os renders e escolher: corrigir o v02 (botões, colarinho, anel, dedos) ou gerar nova imagem · fundador
-- Dizer se os óculos saem de vez do personagem (a bíblia §2 trata-os como assinatura) · fundador
-- Teste de lip sync com fala real (precisa de .wav; ElevenLabs só com autorização) · fundador + agente
-- Dedos com um osso cada, anel, botões, colarinho · agente
-- Aprovar o uso do 3D em produção e o PR #11 · fundador
+- Ver o vídeo e dizer se a caminhada "é o Vince" (anca, ombros, braço direito, queixo, velocidade) · fundador
+- Etapa B: cabeça +12%, ombros mais estreitos, mãos −12%, colarinho, botões, anel, materiais · agente
+- C2 dedos, C3 boca, I3/I4 pálpebras e bochechas · agente
+- C5 lip sync com áudio real (.wav existente ou autorização para o ElevenLabs) · fundador + agente
+- Óculos fora de vez e lenço escuro: registar em nucleo/DECISOES.md quando a V03 for aprovada · fundador
+- Aprovar o PR #11 · fundador
 
-Próximo passo concreto: ler vince/V03_PLANO.md e executar C1 (IK das pernas) e D1 (caminhada).
+Próximo passo concreto: abrir vince_modelo_v03a.blend, `A = bpy.data.texts["vince_andar.py"].as_module()`, aplicar os ajustes do fundador com `A.gerar(...)` e seguir para a Etapa B1 (I5).
 ```
