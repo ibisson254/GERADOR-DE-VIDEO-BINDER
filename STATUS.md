@@ -42,7 +42,7 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 ## Vince Vault (09/11/2026)
 
 Personagem em desenvolvimento, ainda sem frente. Bíblia: `vince/BIBLIA_PERSONAGEM.md`. Tudo na branch `vince-vault`, por aprovar em PR #11.
-**Vince 3D: começar por `vince/MODELO_3D.md` → secção "Retomar aqui".** Pipeline de imagem→3D com TRELLIS.2 local (ComfyUI no PC do fundador, `E:\ComfyUI`) instalado e testado a 09/11. Próximo passo: o fundador gera no Gemini a vista de frente sem óculos e em pose A; depois, gerar o .glb e transferir o rig, o rosto e o lip sync.
+**Vince 3D: começar por `vince/MODELO_3D.md` → secção "Retomar aqui".** Modelo v02 feito a 09/11 (noite): malha gerada pelo TRELLIS.2 local a partir da vista de frente em pose A, com rig, óculos, boca e sobrancelhas a funcionar (`Documentos\Vince\vince_modelo_v02.blend`, no PC do fundador). Defeitos conhecidos listados no mesmo documento (botões a mais, colarinho, anel, olhos fixos). Próximo passo: o fundador vê os renders e decide entre corrigir este modelo ou gerar outra imagem.
 Fantoche 2D (08/11): base para falar 9:16, mesa com ecrã verde e pose extra em `vince/referencias/`; proposta de formato em `vince/PROPOSTA_FORMATO.md` (boletim semanal da bolsa de cartas); piloto EP00 em animatic, sem voz (`vince/episodios/ep00_fechamento_ficha.md`). Falta o fundador aprovar o animatic e os 670 créditos da narração.
 
 ## Depende do fundador
@@ -64,29 +64,30 @@ Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a p
 
 ## Handoff
 
-Último: 09/11/2026, Vince Vault 3D (handoff abaixo e `vince/MODELO_3D.md`). Anterior: 08/11/2026, Vince Vault.
+Último: 09/11/2026 (noite), Vince Vault 3D v02 (handoff abaixo e `vince/MODELO_3D.md`). Anterior: 09/11/2026, Vince Vault 3D (pipeline).
 
 ```
-HANDOFF · 09/11/2026 19:45 · Claude
+HANDOFF · 09/11/2026 20:30 · Claude
 Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch vince-vault
 
 Objetivo atual: Vince Vault em 3D de nível profissional, com rig, expressões e lip sync.
 
 Decisões tomadas nesta sessão:
-- Geometria por IA local (TRELLIS.2, MIT) em vez de modelação à mão ou serviços pagos (registada em vince/MODELO_3D.md; vai para nucleo/DECISOES.md quando o uso em produção for aprovado)
+- Nenhuma decisão editorial nova. Técnica: o v02 vive num ficheiro novo (vince_modelo_v02.blend); o v01 não foi alterado.
 
 Documentos consultados:
-- vince/FICHA_VISUAL.md, vince/BIBLIA_PERSONAGEM.md
+- vince/MODELO_3D.md, vince/FICHA_VISUAL.md, vince/BIBLIA_PERSONAGEM.md, vince/blender/vince_ferramentas.py
 
 Alterações realizadas:
-- vince/MODELO_3D.md · ficha do 3D com "Retomar aqui"
-- vince/3d/comfyui/ · workflow e instalador do TRELLIS.2
-- vince/blender/ · ferramentas do rig e construção v01
+- vince/MODELO_3D.md · estado do v02, defeitos conhecidos, geração sem navegador, notas de trabalho
+- STATUS.md · secção Vince Vault e este handoff
+- No PC do fundador (fora do repositório): Vince_00002.glb, vince_modelo_v02.blend, renders em Documentos\Vince
 
 Tarefas pendentes:
-- Folha de modelação no Gemini (sem óculos, boca fechada, pose A) · depende do fundador
-- Gerar o .glb final, retopologia, rig, rosto e lip sync · agente (precisa do Blender aberto com o servidor MCP ligado)
+- Ver os renders e escolher: corrigir o v02 (botões, colarinho, anel) ou gerar nova imagem · fundador
+- Teste de lip sync com fala real (precisa de .wav; ElevenLabs só com autorização) · fundador + agente
+- Queixo para a fala, pálpebras, dedos · agente, se o 3D for para produção
 - Aprovar o uso do 3D em produção e o PR #11 · fundador
 
-Próximo passo concreto: ler vince/MODELO_3D.md → "Retomar aqui", passo 1.
+Próximo passo concreto: ler vince/MODELO_3D.md → "Retomar aqui".
 ```
