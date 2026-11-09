@@ -1,0 +1,52 @@
+Conde de Manaforte · Ep. 005 · Hyalopterous Lemure · fontes (consulta 09/11/2026)
+
+FONTE PRIMÁRIA (bastidor)
+Mark Rosewater, "Make No Mistake", Making Magic, magic.wizards.com, 10/11/2003.
+https://magic.wizards.com/en/news/making-magic/make-no-mistake-2003-11-10-0
+Entrada "#14 - Biggest Mistake - Art - Misunderstanding the Card's Title - Hyalopterous Lemure". O artigo define o
+lemure como um espírito torturado dos mortos; diz que os designers de Ice Age o acharam uma criatura evocativa e que,
+quando a arte chegou, era um lemur, "a nocturnal, fuzzy mammal". Acrescenta que hoje o departamento de arte confere melhor.
+Nota de acesso: o domínio wizards.com está fora da lista de rede desta sessão; o texto foi lido pelo excerto indexado do
+próprio URL (pesquisa web restrita a magic.wizards.com, 09/11/2026). O fundador deve abrir o link antes de publicar.
+Atenção: o artigo escondia erros de propósito. A errata (Rosewater, "Up, Up and Away", 17/11/2003,
+https://magic.wizards.com/en/news/making-magic/and-away-2003-11-17) conta 1 erro na entrada do Lemure: o artista da
+anedota de Urza's Mine era Anson Maddocks, não Mark Tedin. A descrição do Lemure não foi corrigida. O episódio não usa a
+anedota de Urza's Mine (só o nome da carta, como opção B da pergunta final).
+Complementar Wizards: Mark Rosewater, "Get It?", 16/08/2004 (https://magic.wizards.com/en/news/feature/get-it-2004-08-16):
+chama ao Lemure o melhor exemplo de um engano real de arte em Magic.
+
+CARTA (dados, texto impresso, Oracle, imagens)
+https://scryfall.com/card/ice/133/hyalopterous-lemure
+https://api.scryfall.com/cards/ice/133
+Dados: Hyalopterous Lemure, Ice Age (ice), nº 133, 03/06/1995, arte de Richard Thomas, {4}{B}, 4/3.
+Linha de tipo impressa: "Summon Lemure". Oracle atual: Creature — Spirit; "{0}: This creature gets -1/-0 and gains flying until end of turn."
+Flavor: "The Lemures looked harmless, until they descended on my troops. Within moments, only bones remained."
+—Lucilde Fiksdotter, Leader of the Order of the White Shield
+Imagens usadas: png e art_crop da impressão ice/133 (id d2c9e037-f4d5-46fd-b439-56bee6fb2ad3) = arte ORIGINAL de 1995.
+NÃO usada: a arte nova de Dominaria Remastered (dmr/89, 13/01/2023, Pavel Kolomeyets).
+
+Referência Wizards posterior (no comentário fixado, não no vídeo):
+Viscid Lemures, Time Spiral (tsp/141), 06/10/2006, flavor "Lemurs? Is that all? Finally, something harmless . . ." —Norin the Wary
+https://scryfall.com/card/tsp/141/viscid-lemures
+
+ETIMOLOGIA E CONTEXTO HISTÓRICO (secundárias)
+Lemures (religião romana: espíritos dos mortos sem descanso; Lemuria a 9, 11 e 13 de maio; Ovídio, Fastos):
+https://en.wikipedia.org/wiki/Lemures
+Lineu e o nome "lemur" (catálogo do Museu do rei Adolfo Frederico, 1754; "andam sobretudo de noite… com passo lento"):
+https://www.etymonline.com/word/lemur (cita Dunkel et al., Lemur News 16, 2011-2012, p. 65)
+"Hyalopterous" = grego hýalos (vidro) + pterón (asa) — composição lexical; não encontrei verbete de dicionário de referência.
+Apoios: https://commandersherald.com/magic-cards-where-artists-misunderstood-the-brief/ ("transparent wings like a bug").
+
+Lidas e NÃO usadas como facto (secundárias, sem fonte primária para o que acrescentam):
+- magicuntapped.com (diz que o artista conhecia "hyalopterous" e confundiu "lemure"): intenção do artista não comprovada.
+- mtg.wiki/page/Lemure (cita posts do Blogatog de Rosewater, 2012–2017, não consultados diretamente).
+- mtgpics.com trivia 1088.
+
+PRODUÇÃO
+Voz: AINDA NÃO GERADA (aguarda aprovação do roteiro). Prevista: ElevenLabs, "Conde de Manaforte" (bbnQVGWT7UMdmoK4URLr), eleven_v4, 1 geração.
+Tempos por palavra: eleven_scribe_v1 depois da voz. A prévia usa tempos estimados (conde/ep005/tempos_previa.py).
+Música: conde/musica/tema.mp3 ("Verdict in Varnish and Vellum").
+Fecho: comum/outro/outro_binder_916.mp4.
+
+DIREITOS
+https://company.wizards.com/fancontentpolicy
