@@ -249,6 +249,67 @@ def logo_paste(size=520):
     return with_shadow(out, alpha=130)
 LOGO_PASTE = logo_paste(660)
 
+def printed_logo(size, rng):
+    """Logo como tinta impressa: grão do papel, falhas de tinta e leve desacerto de registo."""
+    lg = LOGO.resize((size, size), Image.LANCZOS)
+    a = np.asarray(lg.getchannel("A"), np.float32)
+    noise = np.asarray(grain(size, size, rng, 40), np.float32)
+    holes = (np.random.default_rng(rng.randint(0, 999)).random((size, size)) < 0.012)
+    a = a * np.clip(0.78 + (noise - 128) / 400, 0, 1); a[holes] *= 0.25
+    lg.putalpha(Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)))
+    ghost = lg.copy(); ghost.putalpha(lg.getchannel("A").point(lambda v: v * 22 // 100))
+    out = Image.new("RGBA", (size + 8, size + 8), (0, 0, 0, 0))
+    out.alpha_composite(ghost, (6, 5)); out.alpha_composite(lg, (2, 2))
+    return out
+
+def logo_poster(w, h, seed, label=True):
+    """Cartaz preto BINDER de lambe-lambe com a logo impressa (produto = cartaz preto)."""
+    rng = random.Random(seed)
+    p = Image.new("RGBA", (w, h), INK + (255,))
+    p = Image.blend(p.convert("RGB"), ImageChops.overlay(p.convert("RGB"), grain(w, h, rng, 34).convert("RGB")), 0.4).convert("RGBA")
+    ls = int(min(w, h * (0.72 if label else 0.9)) * 0.78)
+    lg = printed_logo(ls, rng)
+    ly = int(h * (0.08 if label else 0.06)) if label else (h - lg.height) // 2
+    p.alpha_composite(lg, ((w - lg.width) // 2, ly))
+    d = ImageDraw.Draw(p)
+    if label:
+        f = font(F_XB, int(w * 0.11)); t1, t2 = "BINDER ", "Vision"
+        tw = d.textlength(t1 + t2, font=f); x = (w - tw) / 2; y = ly + lg.height + h * 0.02
+        d.text((x, y), t1, font=f, fill=(245, 245, 240)); d.text((x + d.textlength(t1, font=f), y), t2, font=f, fill=EMER)
+    for _ in range(5):  # rugas da cola
+        x0 = rng.randint(0, w); d.line([(x0, 0), (x0 + rng.randint(-70, 70), h)], fill=(255, 255, 255, 20), width=2)
+    m = torn_mask(w, h, rng, 10, 7); c = int(min(w, h) * 0.14)
+    if rng.random() < 0.7:
+        ImageDraw.Draw(m).polygon([(w, h - c), (w, h), (w - c, h)], fill=0)
+        p.putalpha(m)
+        ImageDraw.Draw(p).polygon([(w - c, h), (w, h - c), (w - c - 7, h - c - 7)], fill=(232, 228, 218, 255))
+    else:
+        p.putalpha(m)
+    ImageDraw.Draw(p).line([(0, 2), (w, 2)], fill=(255, 255, 255, 60), width=3)
+    out = Image.new("RGBA", (w + 60, h + 60), (0, 0, 0, 0)); out.alpha_composite(p, (30, 30))
+    out.alpha_composite(tape(110, 38, rng, rng.uniform(-30, -18)), (0, 4)); out.alpha_composite(tape(110, 38, rng, rng.uniform(18, 30)), (w - 50, 4))
+    return with_shadow(out, alpha=140)
+
+def glue(img, wet):
+    """Brilho de cola molhada que seca em ~0,5 s."""
+    if wet <= 0: return img
+    g = Image.new("RGBA", img.size, (0, 0, 0, 0)); d = ImageDraw.Draw(g); r = random.Random(img.width)
+    for i in range(7):
+        x = r.randint(-100, img.width); d.line([(x, 0), (x + 220, img.height)], fill=(255, 255, 255, int(30 * wet)), width=r.randint(18, 40))
+    g.putalpha(ImageChops.multiply(g.getchannel("A"), img.getchannel("A")))
+    out = img.copy(); out.alpha_composite(g.filter(ImageFilter.GaussianBlur(6))); return out
+
+# cena 3: três cartazes BINDER colados por cima do caos
+LP3 = [(logo_poster(380, 470, 31), 300, 820, -5), (logo_poster(400, 490, 32), 770, 1260, 6), (logo_poster(360, 450, 33, False), 280, 1420, 3)]
+LP3_T = [4.55, 4.80, 5.05]
+# cena 5: campanha de lambe-lambe — a mesma peça repetida em grelha
+LP5 = []
+for i in range(6):
+    col, row = i % 2, i // 2
+    LP5.append((logo_poster(400, 470, 50 + i), 255 + col * 420 + random.Random(i).randint(-12, 12), 790 + row * 470 + random.Random(i + 9).randint(-10, 10), random.Random(i + 3).uniform(-4, 4)))
+LP5_T = [8.45 + i * 0.11 for i in range(6)]
+PL_SMALL = printed_logo(110, random.Random(77))
+
 H1 = headline(["Essa Sheoldred", "nem chegou às lojas…"], 74)
 H2 = headline(["…e já tem preço:", "R$ 396,42."], 82)
 H2b = headline(["Lança só dia 13/11."], 50, fg=(255, 255, 255), bg=INK)
@@ -265,9 +326,9 @@ REC_T0 = T4 + 0.12
 
 def frame(t):
     c = WALL.copy()
-    if t < T3 + 0.9:
+    if True:
         # cena 1–3: cartazes do hype (varridos pelo redemoinho na cena 3)
-        sweep = ease((t - T3) / 0.8) if t >= T3 else 0
+        sweep = 0
         for i, P in enumerate(HYPE_P):
             if t < SLAP_T[i]: continue
             k = ease((t - SLAP_T[i]) / 0.1)
@@ -285,31 +346,30 @@ def frame(t):
                 place(c, CP, 540 + sweep * 900, 1050 - sweep * 300, 2 + sweep * 300, (1.0 - 0.5 * sweep), 1 - 0.9 * sweep)
             else:
                 place(c, CP, 540, 1050, 2, 1.15 - 0.15 * k)
-    if T3 <= t < T4 + 0.25:
-        # cena 3: a logo entra como redemoinho e varre o muro
-        u = (t - T3) / (T4 - T3 + 0.25)
-        sc = 0.35 + 3.4 * ease(u) ** 1.6
-        ang = -(u * 720 + u * u * 540)
-        for j, (da, al) in enumerate([(0, 1.0), (14, 0.35), (28, 0.18)]):
-            place(c, LOGO, 540, 960, ang + da, sc, al * (1 - max(0, u - 0.8) * 5) if u > 0.8 else al)
+    if t >= T3:
+        # cena 3: cartazes pretos BINDER colados por cima do hype
+        for (P, x, y, a), ts in zip(LP3, LP3_T):
+            if t < ts: continue
+            k = ease((t - ts) / 0.1)
+            place(c, glue(P, 1 - (t - ts) / 0.45), x, y, a, 1.2 - 0.2 * k)
     if t >= T4:
         # cena 4: cartaz preto BINDER + tela real do app
         k = ease((t - T4) / 0.12)
-        place(c, BLACK, 540, 1000, -1.0, 1.1 - 0.1 * k)
-        if t >= REC_T0:
+        if t < T5: place(c, glue(BLACK, 1 - (t - T4) / 0.6), 540, 1000, -1.0, 1.1 - 0.1 * k)
+        if REC_T0 <= t < T5:
             idx = min(len(REC) - 1, int((t - REC_T0) * FPS))
             place(c, screen_card(REC[idx]), 470, 1030, 0.0, 0.95)
             place(c, SELO, 880, 1060, 0)
             place(c, NOTA, 470, 448, 0)
         if t < T5:
             put_headline(c, H3, T4 + 0.25, t, 60, 230)
-            lg = LOGO.resize((110, 110), Image.LANCZOS)
-            place(c, lg, 880, 640, ((t - T4) * 90) % 360)
+            place(c, PL_SMALL, 880, 650, 0)
     if t >= T5:
         # cena 5: muro limpo, logo colada como lambe-lambe, veredito
-        c = WALL.copy()
-        k = ease((t - T5) / 0.12)
-        place(c, LOGO_PASTE, 480, 1060, -3, 1.15 - 0.15 * k)
+        for (P, x, y, a), ts in zip(LP5, LP5_T):
+            if t < ts: continue
+            k = ease((t - ts) / 0.1)
+            place(c, glue(P, 1 - (t - ts) / 0.45), x, y, a, 1.2 - 0.2 * k)
         put_headline(c, H4, T5 + 0.15, t, 60, 300, -1.5)
         put_headline(c, H4b, T5 + 0.55, t, 90, 430, 1.0)
     if t < T2:

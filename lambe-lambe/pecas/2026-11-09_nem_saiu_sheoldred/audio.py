@@ -75,9 +75,8 @@ T2, T3, T4, T5, TEND = 2.55, 4.55, 5.45, 8.45, 10.55
 t = 0.0; notes = [55, 55, 65.4, 49]
 k = 0
 while t < TEND:
-    if not (T3 + 0.05 < t < T4 - 0.02):
-        add(kick(), t, 0.9)
-        add(bass(notes[(k // 4) % 4], B * 0.9), t, 0.32)
+    add(kick(), t, 0.9)
+    add(bass(notes[(k // 4) % 4], B * 0.9), t, 0.32)
     add(hat(), t + B / 2, 0.35, 0.3)
     if k % 2: add(hat(), t + B * 0.75, 0.2, -0.3)
     t += B; k += 1
@@ -90,10 +89,10 @@ while t < DUR - 0.3:
 for i in range(8): add(slap(), 0.05 + i * 0.22, 0.55, (-0.4, 0.4)[i % 2]); add(tapefx(), 0.09 + i * 0.22, 0.4)
 add(slap(), 0.0, 0.4); add(slap(), T2, 0.7); add(slap(), T2 + 0.5, 0.35)
 add(rip(), T2 + 1.62, 0.8)
-add(whoosh(), T3 - 0.05, 0.6)
+for ts in (4.55, 4.80, 5.05): add(slap(), ts, 0.75); add(tapefx(), ts + 0.05, 0.45)
 add(slap(), T4, 0.85); add(tapefx(), T4 + 0.05, 0.5); add(slap(), T4 + 0.25, 0.35)
-add(click(), 7.02, 0.8); add(chime(), 7.17, 0.6)
-add(slap(), T5, 0.85); add(slap(), T5 + 0.15, 0.4); add(slap(), T5 + 0.55, 0.5)
+add(click(), 6.95, 0.8); add(chime(), 7.10, 0.6)
+for i in range(6): add(slap(), T5 + i * 0.11, 0.7, (-0.3, 0.3)[i % 2])
 # fade final
 fade = np.ones(N); fl = int(0.6 * SR); fade[-fl:] = np.linspace(1, 0, fl)
 st = np.stack([L * fade, R * fade], 1)
