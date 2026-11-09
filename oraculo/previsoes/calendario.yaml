@@ -1,0 +1,27 @@
+# Calendário do ciclo semanal do TUBO. Só entra o que tem fonte. A quinta confirma e acrescenta.
+eventos:
+  - id: TRK-ARENA
+    nome: "Star Trek (TRK) no MTG Arena; Sealed 10/11–08/12"
+    inicio: 2026-11-10
+    fim: 2026-12-08
+    formatos: [Sealed, Draft]
+    fonte: "https://magic.wizards.com/en/news/mtg-arena/star-trek-event-schedule"
+  - id: TRK-PRERELEASE
+    nome: "Pré-release de Star Trek (papel)"
+    inicio: 2026-11-06
+    fim: 2026-11-12
+    formatos: [Sealed]
+    fonte: "https://wpn.wizards.com/en/event/prerelease-star-trek"
+  - id: WC32
+    nome: "Magic World Championship 32 (MagicCon: Atlanta)"
+    inicio: 2026-11-13
+    fim: 2026-11-15
+    formatos: [Star Trek Booster Draft, Standard]
+    notas: "listas de Standard entregues a 11/11 ao meio-dia (fonte secundária: gamertagmythras.com, a confirmar no magic.gg); sexta e sábado 3 rondas de Draft + 4 de Standard; domingo Top 8 em Standard"
+    fonte: "https://magic.gg/news/world-championship-32-fact-sheet-for-competitors"
+  - id: PR-TRK-AUDITORIA
+    nome: "Auditoria final das previsões PR-TRK-01..04"
+    inicio: 2026-12-01
+    fim: 2026-12-01
+    formatos: [Sealed]
+    fonte: "oraculo/previsoes/registo.yaml"

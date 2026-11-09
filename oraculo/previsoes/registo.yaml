@@ -1,0 +1,94 @@
+# Registo único de previsões do TUBO (Meta em Curto).
+# Método: oraculo/CICLO_SEMANAL.md e oraculo/PROTOCOLO_PRE_RELEASE.md.
+# Regras: texto_original nunca se edita depois de data_registo; conferências só acrescentam linhas;
+# grau de certeza 1–5 (sem percentagem); estado em PENDENTE | CONFIRMADA | PARCIALMENTE CONFIRMADA | REFUTADA | INCONCLUSIVA.
+#
+# PR-TRK-01..04 transcritas da tabela do EP05 (branch meta-em-curto-ep05, comum/historico.md) a 09/11/2026,
+# conforme nucleo/DECISOES.md de 06/11/2026: confiança "baixa" e "média-baixa" → grau 2; o "~35%" sai
+# (já tinha saído no carrossel de 06/11). O texto da hipótese é o original.
+
+previsoes:
+  - id: PR-TRK-01
+    episodio: MC-EP05
+    data_registo: 2026-11-05
+    publicacao: publica          # dita no vídeo e na legenda
+    texto_original: "Rakdos no top 3 de win rate do Sealed de Star Trek no 17Lands (todos os jogadores, pares de duas cores)"
+    fala_no_video: "Previsão registrada: Rakdos no top três do Sealed até primeiro de dezembro. Certeza baixa. Se eu errar, assumo."
+    grau_certeza: 2
+    evidencias: "modelo de 40 mil pools (motor ligado até T5: Rakdos 65, o mais alto) e remoções por pool (Rakdos 5,8, o mais alto); oraculo/ep05/resultados/ na branch meta-em-curto-ep05"
+    riscos: "modelo sem oponente; notas pré-lançamento; Sealed do Arena pode diferir do de papel"
+    criterio:
+      fonte: "17Lands, Sealed de Star Trek (TRK), todos os jogadores, win rate por par de duas cores"
+      fonte_espelho: "MTGMeta /limited/trk (dados 17Lands, CC BY 4.0), só se o recorte for o mesmo; dizer no ecrã"
+      confirma: "Rakdos em 1.º, 2.º ou 3.º"
+      parcial: "não definido na origem"
+      refuta: "Rakdos em 4.º ou abaixo"
+      inconclusiva: "ranking de Sealed TRK indisponível em 01/12/2026"
+    prazo: 2026-12-01
+    conferencias_marcadas: [2026-11-16, 2026-11-23, 2026-11-30]
+    conferencias:
+      - data: 2026-11-09
+        episodio: MC-EP06
+        dado: "0 jogos de Sealed de TRK no 17Lands: o set entra no Arena a 10/11 (calendário do Arena, Wizards)"
+        evidencia_recebida: "O · MTG Rocks (05/11, Early Access no Arena): Strange New Worlds acima do resto; Sealed puxa para cinco cores"
+        muda_estado: false
+        estado: PENDENTE
+    estado: PENDENTE
+    erro_de_sistema_se_refutada: true
+
+  - id: PR-TRK-02
+    episodio: MC-EP05
+    data_registo: 2026-11-05
+    publicacao: registo
+    texto_original: "Azorius na metade de baixo do mesmo ranking"
+    grau_certeza: 2
+    criterio:
+      fonte: "17Lands, Sealed TRK, todos os jogadores, win rate por par de duas cores"
+      confirma: "Azorius entre o 6.º e o 10.º"
+      parcial: "não definido na origem"
+      refuta: "Azorius entre o 1.º e o 5.º"
+      inconclusiva: "ranking indisponível em 01/12/2026"
+    prazo: 2026-12-01
+    conferencias_marcadas: [2026-11-16, 2026-11-23, 2026-11-30]
+    conferencias: []
+    estado: PENDENTE
+
+  - id: PR-TRK-03
+    episodio: MC-EP05
+    data_registo: 2026-11-05
+    publicacao: registo          # revelada no EP06 (09/11) como previsão de registo, sem mudar o texto
+    texto_original: "Decks de 3+ cores abaixo dos de 2 cores no Sealed de Star Trek"
+    grau_certeza: 2
+    criterio:
+      fonte: "17Lands, Sealed TRK, win rate agregado por número de cores (2 cores × 3+ cores)"
+      confirma: "win rate de 3+ cores menor que o de 2 cores"
+      parcial: "não definido na origem"
+      refuta: "win rate de 3+ cores igual ou maior"
+      inconclusiva: "17Lands sem recorte por número de cores em 01/12/2026"
+    prazo: 2026-12-01
+    conferencias_marcadas: [2026-11-16, 2026-11-23, 2026-11-30]
+    conferencias:
+      - data: 2026-11-09
+        episodio: MC-EP06
+        dado: "0 jogos"
+        evidencia_recebida: "O · MTG Rocks (05/11): Sealed recompensa ir para cinco cores (contra esta previsão)"
+        muda_estado: false
+        estado: PENDENTE
+    estado: PENDENTE
+
+  - id: PR-TRK-04
+    episodio: MC-EP05
+    data_registo: 2026-11-05
+    publicacao: registo
+    texto_original: "Ranking de Draft de Star Trek com Spearman < 0,7 contra o de Sealed"
+    grau_certeza: 2
+    criterio:
+      fonte: "17Lands, Premier Draft e Sealed TRK, win rate dos 10 pares; Spearman calculado por nós"
+      confirma: "Spearman < 0,7"
+      parcial: "não definido na origem"
+      refuta: "Spearman ≥ 0,7"
+      inconclusiva: "um dos dois rankings indisponível em 01/12/2026"
+    prazo: 2026-12-01
+    conferencias_marcadas: [2026-11-30]
+    conferencias: []
+    estado: PENDENTE

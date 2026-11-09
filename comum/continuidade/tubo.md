@@ -7,7 +7,7 @@ Semente de 02/11/2026. Previsões e resultados vivem em `comum/historico.md` (`o
 - EP02 · Magic Spotlight: Fracture (Hartford), Leitura da Final · `oraculo/episodios/ep02_hartford_ficha.md` · previsões: nenhuma.
 
 ## Previsões abertas
-- Nenhuma registada (02/11/2026).
+- Registo único: `oraculo/previsoes/registo.yaml` (desde 09/11/2026). Abertas: PR-TRK-01 (pública) a 04, auditoria a 01/12/2026, placar parcial às segundas.
 
 ## Contador "ERROS HUMANOS"
 - Lacuna: nenhum valor registado nas fichas. Confirmar no próximo episódio antes de o mostrar.
@@ -16,4 +16,5 @@ Semente de 02/11/2026. Previsões e resultados vivem em `comum/historico.md` (`o
 - Ver fichas do EP01 e EP02 (listas em `oraculo/episodios/ep02_listas.json`).
 
 ## Promessas ao público
-- Nenhuma registada.
+- EP05: «Se eu errar, assumo.» Giro de 08/11: o TUBO volta a 09/11 para prestar contas (cumprida pelo EP06, escrito a 09/11).
+- EP06 (se publicado): placar parcial toda segunda até 01/12; «Quinta: previsão do Mundial».

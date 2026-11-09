@@ -24,6 +24,10 @@ Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Identidade, visual, t
 - Jogadores reais: nome e resultado sim; deboche não (`CONTEXTO.md` §7.2.3). "O TUBO julga o teu deck" só com autorização do autor.
 - Contador `ERROS HUMANOS` = contagem real de episódios.
 
+## Ciclo semanal (09/11/2026)
+
+Quinta prevê, segunda presta contas: `CICLO_SEMANAL.md`. Toda previsão vai para `previsoes/registo.yaml` antes de gravar a voz; o briefing sai de `python3 -I oraculo/previsoes/ciclo.py segunda|quinta`.
+
 ## Gancho e fecho
 
 Gancho: frase seca com o dado ou a decisão surpreendente (fora do tubo, desconfiado). Fecho: pergunta competitiva + «Probabilidade calculada. Humanos, imprevisíveis.» + fecho do scanner.

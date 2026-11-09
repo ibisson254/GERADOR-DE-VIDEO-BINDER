@@ -14,6 +14,7 @@ Ponto de entrada para qualquer agente (Claude, ChatGPT ou outro). As instruçõe
    |---|---|---|---|
    | `manaburn` | Mana & Burn | Série | `manaburn/PERFIL.md` → doc da série no Drive / skill `binder-mana-burn-episodio` → `manaburn/LEIA-ME.md` |
    | `tubo` / `meta` / `oraculo` | Meta em Curto | Série | `oraculo/PERFIL.md` → `oraculo/CONTEXTO.md` |
+| `tubo segunda` / `tubo quinta` | Meta em Curto · ciclo semanal | Série | `oraculo/CICLO_SEMANAL.md` → `python3 -I oraculo/previsoes/ciclo.py segunda` ou `quinta` |
    | `conde` | Conde de Manaforte | Série | `conde/PERFIL.md` → `conde/CONTEXTO.md` |
    | `especial` | Especiais e homenagens | Pontual | constituição §14 + bíblias das séries envolvidas |
    | `orbita` | Órbita · Star Trek | Temática | `orbita/CONTEXTO.md` → `orbita/gerador/LEIA-ME.md` |

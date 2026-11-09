@@ -2,6 +2,13 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 09/11/2026 · Ciclo semanal do TUBO: quinta prevê, segunda presta contas
+
+**O quê:** (1) Novo `oraculo/CICLO_SEMANAL.md`: o episódio de quinta fecha previsões sobre o fim de semana; o de segunda volta a elas com dado. (2) Registo único e legível por máquina em `oraculo/previsoes/registo.yaml` (texto original, critério, prazo, conferências, estado) e calendário em `oraculo/previsoes/calendario.yaml`. (3) `oraculo/previsoes/ciclo.py` gera o briefing (`segunda`, `quinta`) e valida o registo (`validar`). (4) Palavras `tubo segunda` / `tubo quinta` no `AGENTS.md`. (5) `comum/historico.md` deixa de repetir a tabela de previsões e aponta para o registo. (6) PR-TRK-01..04 do EP05 transcritas para o registo, com a conversão prevista a 06/11 (grau 2; sem o «~35%»).
+**Porquê:** pedido do fundador (09/11/2026, 01:20): «tem que se tornar padrão salvar as previsões para assim que eu pedir o episódio de segunda tem que ser automático. Ele tem que buscar as previsões feita na quinta, e quando eu pedir episódio da quinta ele já tem que saber o que pesquisar.»
+**Decisões técnicas:** o registo fica em YAML porque a segunda tem de o ler sem interpretação; o histórico humano remete para ele, para não haver duas tabelas. A shell não chega ao 17Lands, magic.gg nem MTGMeta: o script não pesquisa, diz o quê e onde; o agente usa as ferramentas web. Previsões de prazo longo levam conferências marcadas às segundas (placar parcial, nunca auditoria).
+**Impacto:** identidade, voz, trilha e estrutura do TUBO não mudam. A `main` ainda não tem o `PROTOCOLO_PRE_RELEASE.md` (branch `protocolo-pre-release-tubo`) nem o EP05 (branch `meta-em-curto-ep05`); o ciclo remete para eles e funciona sem eles, mas a integração dessas branches fica por aprovar.
+
 ## 08/11/2026 (00:05) · Burn no plano da TV
 
 **O quê:** correção de um defeito de render, não de modelo: no plano da TV os padrões SVG (cabelo raspado do Burn, xadrez da camisa, papel de parede) saíam transparentes porque os ids repetidos apontavam para o mundo escondido. O plano da TV passa a ter defs próprios (sufixo `_2`). O Burn sobe 40 px atrás da TV e mostra pescoço e ombros com a mesma camisa do plano geral, ligando-se ao braço que aponta.
