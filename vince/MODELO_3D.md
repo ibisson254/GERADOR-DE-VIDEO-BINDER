@@ -50,3 +50,15 @@ Convenção de lados: frente = −Y; esquerda dele = +X (ossos `.L`). Nunca espe
 ## Por decidir (fundador)
 
 - Usar o 3D em produção. A ficha §10 limita o lip sync ao gancho (3–5 s) e o resto ao fantoche; com o rig isso deixa de ser limitação técnica. Se aprovado, registar em `nucleo/DECISOES.md` e atualizar a ficha.
+
+## Geração por IA local (TRELLIS.2 no ComfyUI) · 09/11/2026
+
+Decisão do fundador: geometria gerada por IA a partir de imagem (licença MIT, uso comercial livre), com o rig e o rosto deste ficheiro por cima.
+
+- Instalado no PC do fundador em `E:\ComfyUI` (ComfyUI 0.44.0, Python 3.12, PyTorch 2.14 cu126, RTX 3060 12 GB). Arranque: atalho "ComfyUI (TRELLIS 3D)" no ambiente de trabalho.
+- Modelos em `E:\ComfyUI\models` (suporte nativo do ComfyUI, sem extensões compiladas). O Pixal3D não foi descarregado; o ficheiro com esse nome é uma ligação ao TRELLIS.2 só para o workflow validar.
+- Workflow: `Vince_TRELLIS2_imagem_para_3D` (modelo oficial `3d_pixal3d_trellis2_image_to_model`, interruptor em TRELLIS.2). Imagem de entrada em `E:\ComfyUI\input\vince_frente.png`; saída em `E:\ComfyUI\output\3d\`.
+- Teste 1 (frente do turnaround oficial): `Vince_00001.glb`, ~395 mil vértices, ~10 min. Muito acima do modelo v01 feito à mão; traz óculos e sorriso gravados na textura e braços junto ao corpo.
+- Licenças: TRELLIS.2 MIT. Não usar Hunyuan3D (licença exclui a UE). Tripo gratuito é não comercial; Meshy gratuito exige atribuição (CC BY 4.0).
+
+Próximo passo: gerar no Gemini a vista de frente sem óculos, boca fechada e pose em A; correr o workflow; retopologia e encaixe do rig, rosto e lip sync.
