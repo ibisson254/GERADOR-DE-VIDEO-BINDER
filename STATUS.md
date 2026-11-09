@@ -70,40 +70,39 @@ Aprovada pelo fundador (`nucleo/DECISOES.md`). Fase 1 implementada e integrada n
 
 ## Conde Ep. 005 · Hyalopterous Lemure (09/11/2026)
 
-Branch `conde/ep005-lemure` (sem merge para `main`). **Em produção, roteiro por aprovar.** Pesquisa com fonte primária (Rosewater, "Make No Mistake", 10/11/2003), roteiro na fórmula, montador `conde/montar_ep005.py`, capa, legenda, comentário fixado, texto alternativo, fontes e ficha prontos. Prévia muda (tempos estimados) conferida com o QC automático e a folha de contacto. Bloqueado só pela voz: não se gastam créditos ElevenLabs sem o "aprovado" do roteiro. O roteiro de base do fundador não chegou na sessão; o texto da ficha foi escrito na fórmula e pode ser trocado.
+Branch `conde/ep005-lemure` (sem merge para `main`). **Produzido, não publicado.** Roteiro aprovado pelo fundador (09/11, 11:52, sem cortes); voz gerada (1 geração, 1 099 créditos); render final 69,1 s + fecho = 72,97 s, QC automático sem problemas (−13,8 LUFS, pico −1,5 dBTP, fecho completo), carta e arte inteiras conferidas no ficheiro final. Pacote editorial completo. Ficha: `conde/episodios/ep005_hyalopterous_lemure_ficha.md`. Único P1 aberto: pronúncia e equilíbrio voz/música por ouvir.
 
 ## Próximo passo concreto
 
-1. Fundador: aprovar (ou trocar) o roteiro do Conde Ep. 005 em `conde/episodios/ep005_hyalopterous_lemure_ficha.md` e autorizar 1 geração de voz (~1 000 créditos, estimativa pelo Ep. 004). Abrir o link do artigo de Rosewater (a sessão leu o excerto indexado, não a página).
-2. Agente: gerar a voz com o texto TTS da ficha, Scribe, `encurtar_narracao_ep005.py`, `python3 conde/montar_ep005.py`, `python3 conde/capa_ep005.py`, `python3 -I comum/qc/qc_video.py conde/saida/EP005_CONDE_LEMURE.mp4 --frente conde`, olho na folha de contacto, fecho da ficha.
-3. Continua pendente: Conde Ep. 004 (Joven) produzido e por publicar (pronúncia de "Joven", "Chandler" e "Eron" por ouvir; recria-se com `python3 conde/montar_ep004.py` se `conde/ep004/audio/narracao.wav` existir, senão ver o flow em `conde/episodios/ep004_fontes.txt`). Depois: próximo Giro ou episódio do Mana & Burn com o kit v2.
+1. Fundador: ouvir o `EP005_CONDE_LEMURE.mp4` (pronúncia de "Hyalopterous", "Lemure", "lemur", "Rosewater", "Wizards", "Ice Age" e equilíbrio voz/música), abrir o link do artigo de Rosewater, e aprovar o episódio e o merge da branch `conde/ep005-lemure`. Publicar é decisão do fundador.
+2. Se a pronúncia falhar: nova geração só com autorização (créditos); o resto do pipeline está pronto (`conde/encurtar_narracao_ep005.py` → `conde/montar_ep005.py`).
+3. Continua pendente: Conde Ep. 004 (Joven) produzido e por publicar (pronúncia de "Joven", "Chandler" e "Eron" por ouvir). Depois: próximo Giro ou episódio do Mana & Burn com o kit v2.
 
 ## Handoff
 
 Último: 09/11/2026, Conde Ep. 005 (abaixo). Anterior: 02/11/2026, no fim de `nucleo/auditorias/2026-11-02_evolucao_visual.md`.
 
 ```
-HANDOFF · 09/11/2026 ~12:00 Lisboa · Claude
+HANDOFF · 09/11/2026 ~12:15 Lisboa · Claude
 Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch conde/ep005-lemure · último commit: ver git log da branch
 
-Objetivo atual: Conde de Manaforte Ep. 005 (Hyalopterous Lemure, arte original de Richard Thomas) até vídeo final validado.
+Objetivo atual: Conde de Manaforte Ep. 005 (Hyalopterous Lemure, arte original de Richard Thomas): produzido; falta audição e aprovação do fundador.
 
 Decisões tomadas nesta sessão:
-- Nenhuma regra mudou (DECISOES.md não alterado). Escolhas de produção registadas na ficha: nenhum texto sobre a ilustração (painéis de papel), carimbos nas margens, pergunta A/B Sorrow's Path × Urza's Mine, sem easter egg.
+- Roteiro aprovado pelo fundador sem cortes (09/11, 11:52) → voz autorizada. Nenhuma regra mudou (DECISOES.md não alterado). Escolhas de produção na ficha: nenhum texto sobre a ilustração, carimbos nas margens, pergunta A/B Sorrow's Path × Urza's Mine, sem easter egg.
 
 Documentos consultados:
 - AGENTS.md, STATUS.md, nucleo/ (constituição, catálogo, SHOWRUNNER, DECISOES, CHECKLIST, modelos), conde/PERFIL.md, conde/CONTEXTO.md, comum/historico.md, comum/easter_eggs.md, comum/continuidade/conde.md, fichas e montadores dos Ep. 002–004.
 
 Alterações realizadas:
-- conde/montar_ep005.py, conde/capa_ep005.py, conde/ep005/ (art.jpg, card.png, roteiro.txt, tempos_previa.py, audio/words_previa.json)
+- conde/montar_ep005.py, conde/encurtar_narracao_ep005.py, conde/capa_ep005.py, conde/ep005/ (art.jpg, card.png, roteiro.txt, tempos_previa.py, audio/words_previa.json, audio/words_raw.json, audio/words_novo.json)
 - conde/episodios/ep005_hyalopterous_lemure_ficha.md, conde/episodios/ep005_fontes.txt, conde/legendas/ep005_lemure_legenda.txt
 - comum/historico.md, comum/continuidade/conde.md, STATUS.md
+- Não versionados (regra): EP005_CONDE_LEMURE.mp4, capa, narracao.wav/mp3. Take no flow ElevenLabs ORXBjdQIsTKsO0axku7X.
 
 Tarefas pendentes:
-- Aprovar o roteiro e autorizar a voz · depende do fundador
-- Voz, Scribe, encurtar, render final, capa, QC final e fecho da ficha · depende do agente, depois da aprovação
-- Ouvir a pronúncia das grafias fonéticas · depende do fundador
-- Merge para main e publicação · depende do fundador
+- Ouvir pronúncia e mistura (P1) · fundador
+- Aprovar o episódio, merge para main e publicação · fundador
 
-Próximo passo concreto: o fundador responde "roteiro aprovado, pode gerar a voz" (ou envia o seu roteiro); o agente segue STATUS.md, "Próximo passo concreto", ponto 2.
+Próximo passo concreto: o fundador ouve EP005_CONDE_LEMURE.mp4 e responde "aprovado" (→ merge e registo como aprovado) ou indica a palavra mal pronunciada (→ pedir autorização para nova geração).
 ```

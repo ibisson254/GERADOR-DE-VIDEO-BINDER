@@ -43,8 +43,9 @@ Lidas e NÃO usadas como facto (secundárias, sem fonte primária para o que acr
 - mtgpics.com trivia 1088.
 
 PRODUÇÃO
-Voz: AINDA NÃO GERADA (aguarda aprovação do roteiro). Prevista: ElevenLabs, "Conde de Manaforte" (bbnQVGWT7UMdmoK4URLr), eleven_v4, 1 geração.
-Tempos por palavra: eleven_scribe_v1 depois da voz. A prévia usa tempos estimados (conde/ep005/tempos_previa.py).
+Voz: ElevenLabs, "Conde de Manaforte" (bbnQVGWT7UMdmoK4URLr), eleven_v4, 1 geração, 1 099 créditos, 09/11/2026 (roteiro aprovado pelo fundador às 11:52).
+Flow "Conde Ep005 · Hyalopterous Lemure" (ORXBjdQIsTKsO0axku7X), take O2lbj2hrJrwUWr2facvx.
+Tempos por palavra: eleven_scribe_v1 (0 créditos), geração oztHp91A489zzUNANsbU.
 Música: conde/musica/tema.mp3 ("Verdict in Varnish and Vellum").
 Fecho: comum/outro/outro_binder_916.mp4.
 

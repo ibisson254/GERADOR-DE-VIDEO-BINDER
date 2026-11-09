@@ -1,7 +1,7 @@
 # Ficha · Conde de Manaforte · EP005 · Hyalopterous Lemure: o réu que errou de mitologia
 
-Estado a 09/11/2026: **em produção · roteiro por aprovar.** Existe uma prévia muda (tempos estimados, sem voz); **não é o episódio**. Voz, vídeo final e QC final dependem da aprovação do roteiro pelo fundador.
-Scripts: `conde/montar_ep005.py` (copiado de `montar_ep004.py`), `conde/capa_ep005.py`, `conde/ep005/tempos_previa.py`. Dados: `conde/ep005/`.
+Render final de 09/11/2026 (69,1 s sem o fecho; 72,97 s no total). **Produzido, não publicado.** Roteiro aprovado pelo fundador a 09/11/2026, 11:52 ("Está aprovado pode gerar a voz e não precisa cortar").
+Scripts: `conde/montar_ep005.py` (copiado de `montar_ep004.py`), `conde/encurtar_narracao_ep005.py`, `conde/capa_ep005.py`, `conde/ep005/tempos_previa.py` (só para a prévia). Dados: `conde/ep005/`.
 
 ## Classificação
 - Série: Conde de Manaforte · O Tribunal Estético
@@ -18,11 +18,11 @@ Scripts: `conde/montar_ep005.py` (copiado de `montar_ep004.py`), `conde/capa_ep0
 - Tese: a arte de 1995 acerta no "hyalopterous" e falha no "lemure"; o erro é de identidade, não de execução.
 - Gancho (0–3 s): "Meus caros apreciadores do duvidoso… O Tribunal recebe hoje um réu de 1995."
 
-## Roteiro (para aprovação)
+## Roteiro (aprovado a 09/11/2026, sem cortes)
 
-> **Nota:** a missão manda usar o roteiro fornecido pelo fundador como base. Esse roteiro **não veio anexado** e não está no repositório. Este texto foi escrito na fórmula de `conde/CONTEXTO.md` §3, cobrindo os 8 pontos pedidos (abertura, solenidade, análise verdadeira, revelação, facto, ferroada, veredito com carimbo, pergunta final). Se o fundador tiver o seu texto, troca-se em `conde/ep005/roteiro.txt` e corre-se `python3 conde/ep005/tempos_previa.py`; as cenas ancoram em palavras e ajustam-se.
+> O roteiro de base do fundador não veio anexado à missão; este texto foi escrito na fórmula de `conde/CONTEXTO.md` §3 e aprovado tal como está.
 
-Legendas (grafia real), 156 palavras, narração estimada ~65 s (+ fecho 3,87 s):
+Legendas (grafia real), narração final 67,8 s (+ 1,3 s de cauda + fecho 3,87 s):
 
 1. **Abertura** · Meus caros apreciadores do duvidoso... O Tribunal recebe hoje um réu de 1995. Hyalopterous Lemure.
 2. **Análise séria** · Observem a composição: uma diagonal de gelo e, ao centro, um olho âmbar que não pede licença. As asas, translúcidas, nervuradas como as de um inseto. Hyalopterous: asas de vidro. Nisso, a obra é irrepreensível.
@@ -39,15 +39,15 @@ Decisões de texto:
 - "Mamífero felpudo" parafraseia "nocturnal, fuzzy mammal" (Rosewater). O painel diz "paráfrase".
 - A ferroada usa o flavor completo: a primeira metade ("looked harmless") concorda com a arte; a segunda ("only bones remained") não. Daí "na primeira metade".
 - Ficaram fora da fala (vão para o comentário): Lineu e o nome dos primatas; Viscid Lemures (2006).
-- Duração: ~65 s, acima do Ep. 004 (55 s). Duração é livre (constituição §6). Se o fundador quiser encurtar, os cortes seguros são "Uma diagonal de gelo e," e "Até restarem só os ossos. Na primeira metade," (a ferroada fica "a ilustração concorda com a testemunha"), ~5 s.
+- Duração: 69,1 s + fecho, acima do Ep. 004 (55 s). Duração livre (constituição §6); o fundador pediu para não cortar.
 
-### Texto para o TTS (só depois da aprovação)
-Tags de `CONTEXTO.md` §4; grafia fonética a confirmar de ouvido (hipóteses, não testadas):
+### Texto enviado ao TTS (1 geração, 09/11/2026)
+Tags de `CONTEXTO.md` §4; grafia fonética **ainda não conferida de ouvido**:
 
 ```
 [calm, dry, aristocratic] Meus caros apreciadores do duvidoso... [pause] O Tribunal recebe hoje um réu de mil novecentos e noventa e cinco. Raialópterus Lêmiur. [pause] Observem a composição: uma diagonal de gelo e, ao centro, um olho âmbar que não pede licença. As asas, translúcidas, nervuradas como as de um inseto. Raialópterus: asas de vidro. Nisso, a obra é irrepreensível. [pause] [slow] Agora, o corpo. Pelagem densa. Máscara escura. Garras cravadas na rocha. [pause] [deadpan] Senhores... isto é um lêmure. [pause] Em inglês, lí-mur, sem "é", é o primata. Lêmiur, com "é", é um espírito dos mortos da Roma antiga. [pause] Em dois mil e três, Mark Rôuzuóter, da Uízards, contou que os criadores de Ais Eidj queriam um espírito atormentado. A arte chegou com um mamífero felpudo. [pause] O texto da carta jura que os Lêmiurs pareciam inofensivos. Até restarem só os ossos. [slow] Na primeira metade, [deadpan] a ilustração concorda com a testemunha. [pause] Parecer: obra notável. A asa está certa. O olhar também. A criatura só errou de mitologia. [pause] Qual réu o Tribunal julga a seguir?
 ```
-Depois: Scribe → copiar `encurtar_narracao_ep004.py` para `encurtar_narracao_ep005.py` (GRAFIA: Raialópterus→Hyalopterous, Lêmiur→Lemure, lí-mur→lemur, Rôuzuóter→Rosewater, Uízards→Wizards, Ais Eidj→Ice Age, "é"→"e", mil novecentos…→1995., dois mil e três→2003,) → `narracao.wav` + `words_novo.json` → `python3 conde/montar_ep005.py` (sai da prévia sozinho).
+Pipeline executado: take bruto 86,0 s → Scribe (0 créditos) → `encurtar_narracao_ep005.py` (atempo 1,15 como nos Ep. 003–004; pausas-alvo; nenhuma frase cortada; grafia real e fusão de "mil novecentos e noventa e cinco" → 1995, "dois mil e três" → 2003, "Ais Eidj" → Ice Age) → `narracao.wav` (67,8 s) + `words_novo.json` → `python3 conde/montar_ep005.py` → `python3 conde/capa_ep005.py`. As legendas finais coincidem palavra a palavra com o roteiro aprovado.
 
 ## Camadas
 | Camada | No episódio |
@@ -67,42 +67,56 @@ Depois: Scribe → copiar `encurtar_narracao_ep004.py` para `encurtar_narracao_e
 | Lineu deu o nome aos primatas por andarem de noite e devagar (só no comentário) | facto | etymonline (Dunkel et al., Lemur News 16) | consulta 09/11/2026 |
 Lista completa, notas de acesso e fontes rejeitadas: `ep005_fontes.txt`.
 
-## Plano visual (como está na prévia)
+## Plano visual (vídeo final)
 | # | Plano pedido | Trecho | Execução |
 |---|---|---|---|
-| 1 | Conde e Tribunal | 0–2,5 s | medalhão em escala, cabeçalho do Tribunal |
-| 2 | Entrada integral da carta | 2,5–6,9 s | carta inteira; "RÉU · 1995" na margem esquerda; nome destacado |
-| — | Composição | 6,9–13,2 s | arte inteira em largura total; seta de tinta pela diagonal; lupa no olho |
-| 3 | Asas translúcidas | 13,2–21,7 s | elipse na asa; inserto "admirado" sobre o gelo em "irrepreensível" |
-| 4 | Corpo da criatura | 21,7–29,5 s | elipses sucessivas: pelagem, máscara, garras; inserto "desconfiado" → "indignado" |
-| 5 | lemur ≠ lemure | 29,5–36,4 s | painel de papel (verbete) no lugar do palco; "e" em bordô |
-| 6 | Facto histórico | 36,4–45,8 s | painel "Make No Mistake · Mark Rosewater · 10/11/2003", paráfrase marcada |
-| — | Ferroada | 45,8–55,5 s | carta inteira; flavor destacado por partes; depois arte + 1.ª metade |
-| 7 | Veredito e carimbo | 55,5–62,4 s | carta inteira; destaques asa → olho → arte; "OBRA NOTÁVEL" na margem direita |
-| 8 | Fecho oficial | 62,4 s → | Conde + "PARECER EMITIDO" + A/B; depois `outro_binder_916.mp4` |
+| 1 | Conde e Tribunal | 0–2,6 s | medalhão em escala, cabeçalho do Tribunal |
+| 2 | Entrada integral da carta | 2,6–8,1 s | carta inteira; "RÉU · 1995" na margem esquerda; nome destacado |
+| — | Composição | 8,1–14,1 s | arte inteira em largura total; seta de tinta pela diagonal; lupa no olho |
+| 3 | Asas translúcidas | 14,1–22,8 s | elipse na asa; inserto "admirado" sobre o gelo em "irrepreensível" |
+| 4 | Corpo da criatura | 22,8–32,0 s | elipses sucessivas: pelagem, máscara, garras; inserto "desconfiado" → "indignado" |
+| 5 | lemur ≠ lemure | 32,0–38,9 s | painel de papel (verbete) no lugar do palco; "e" em bordô |
+| 6 | Facto histórico | 38,9–48,8 s | painel "Make No Mistake · Mark Rosewater · 10/11/2003", paráfrase marcada |
+| — | Ferroada | 48,8–59,6 s | carta inteira; flavor destacado por partes; depois arte + 1.ª metade |
+| 7 | Veredito e carimbo | 59,6–65,8 s | carta inteira; destaques asa → olho → arte; "OBRA NOTÁVEL" na margem direita |
+| 8 | Fecho oficial | 65,8 s → (fecho do scanner a partir de 69,1 s) | Conde + "PARECER EMITIDO" + A/B; depois `outro_binder_916.mp4` |
 
-Regras cumpridas por desenho: nenhum texto por cima da ilustração (rótulos passaram para painéis de papel; na arte só seta, elipses, lupa e o inserto do Conde sobre o gelo); carimbos nas margens da carta; arte e carta sempre inteiras (sem zoom). Tempos a reconfirmar com a voz real.
+Regras cumpridas por desenho: nenhum texto por cima da ilustração (rótulos passaram para painéis de papel; na arte só seta, elipses, lupa e o inserto do Conde sobre o gelo); carimbos nas margens da carta; arte e carta sempre inteiras (sem zoom). Tempos do vídeo final (cortes medidos pelo QC: 2,63 · 8,1 · 31,97 · 48,83 · 65,77 · 69,1 s).
 
 ## Produção
 - Recursos reutilizados: medalhão e 4 expressões (sem alteração), paleta e Lora, layout e motor do Ep. 004, tema "Verdict in Varnish and Vellum", fecho oficial.
-- Novo no motor (só neste script): painéis de papel; música com uma volta extra de 16 pulsos quando a narração passa do tema (a emenda é a mesma do Ep. 004); âncoras de música calculadas (andamento 0,94–1,03); modo prévia.
-- Música (prévia): 1 volta extra; pulsos em RÉU, verbete, Rosewater, flavor, OBRA NOTÁVEL, PARECER EMITIDO e no corte para o fecho. O trecho final corre a 0,943: conferir de ouvido com a voz real.
+- Novo no motor (só neste script): painéis de papel; voltas extra de 16 pulsos do tema quando a narração passa dele (mesma emenda do Ep. 004); âncoras de música calculadas; modo prévia.
+- Voz: ElevenLabs "Conde de Manaforte" (bbnQVGWT7UMdmoK4URLr), eleven_v4, **1 geração, 1 099 créditos**; flow "Conde Ep005 · Hyalopterous Lemure" (ORXBjdQIsTKsO0axku7X). Pico da voz tratada −1,5 dBFS antes da mistura.
+- Música: 2 voltas extra de 16 pulsos (emenda feita em numpy: o filtro do ffmpeg com várias cópias do mesmo trecho deixava as voltas do meio vazias; detetado na 1.ª tentativa do render final, que parou com erro; a prévia muda pode ter tido o mesmo defeito e não foi reconferida); pulsos em RÉU, verbete, Rosewater, flavor, OBRA NOTÁVEL, PARECER EMITIDO e no corte para o fecho; andamento entre âncoras 0,977–1,022; sting nos 3 carimbos; ducking por sidechain como no Ep. 004.
 - Easter egg: nenhum.
-- Riscos: pronúncia de "Hyalopterous", "Lemure", "lemur", "Rosewater" (hipóteses fonéticas acima); duração.
+- Riscos: pronúncia de "Hyalopterous", "Lemure", "lemur", "Rosewater", "Wizards", "Ice Age" (grafias fonéticas não ouvidas).
 
-## Controlo de qualidade da PRÉVIA (09/11/2026, não vale como QC final)
+## Controlo de qualidade (ficheiro final, 09/11/2026)
 | Critério | Resultado |
 |---|---|
 | `qc_video.py --frente conde` | sem problemas mensuráveis |
-| Formato | 1080×1920, 30 fps |
-| Duração | 66,0 s + fecho = 69,87 s (tempos estimados) |
-| Loudness | −13,8 LUFS, pico −1,9 dBTP (só música e carimbos: não representa a mistura com voz) |
-| Fecho oficial | presente a partir de 66,0 s (dif. 0,06) |
-| Folha de contacto | vista: carta e arte inteiras em todos os planos; legendas na zona segura; nenhum texto sobre a arte ou o rosto; arte em largura total entra nos 140 px da margem direita, como em todos os episódios do Conde |
-| Voz, sincronia, mistura | **não testáveis** (sem voz) |
+| Formato | 1080×1920, 30 fps, H.264 + AAC 48 kHz |
+| Duração | 69,1 s + fecho = 72,97 s |
+| Loudness | −13,8 LUFS, pico −1,5 dBTP (< −1) |
+| Fecho oficial | presente e completo a partir de 69,1 s (dif. 0,06) |
+| Carta e arte inteiras, sem corte lateral | conferido na folha de contacto (1 quadro/s) e em quadros extraídos do MP4 final (13,2 · 21,5 · 35 · 47 · 61,5 · 67,5 s) |
+| Texto sobre rosto ou ilustração | nenhum: rótulos em painéis de papel; na arte só seta, elipses, lupa e inserto do Conde sobre o gelo |
+| Legendas | dentro da zona segura; texto final igual ao roteiro aprovado |
+| Personagem | medalhão e 4 expressões dos recursos mestres, sem alteração |
+| Crédito | "Arte: Richard Thomas" + © Wizards + "Conteúdo de fã não oficial" em todos os planos da carta |
+| Voz sem cortes | nenhuma frase cortada no encurtamento; silêncios só nas pausas-alvo |
+| Pronúncia e equilíbrio voz/música | **não conferidos de ouvido** (sem audição nesta sessão; o Scribe recebeu o texto, não prova a pronúncia) |
+
+### Defeitos
+| Gravidade | Defeito | Estado |
+|---|---|---|
+| P1 | Pronúncia das grafias fonéticas e equilíbrio voz/música por ouvir | depende do fundador: ouvir e aceitar, ou pedir nova geração |
+| P2 | ~1 s de painel só com "VERBETE" antes de "lemur" (32,0–33,0 s) e ~4 s do painel de Rosewater só com o cabeçalho antes de "Queriam" (38,9–43 s) | aceite como ritmo de leitura; opcional |
+| P2 | A arte em largura total entra nos 140 px da margem direita da zona segura, como em todos os episódios do Conde | herdado da série |
+| corrigido | Voltas do meio da música vazias (render parava com erro) | emenda refeita em numpy; tema emendado com 86,5 s, como esperado |
 
 ## Entregáveis
-- [ ] Vídeo final (depende da voz) · [x] Prévia muda · [x] Capa `EP005_CONDE_LEMURE_capa.jpg` (gerada por `capa_ep005.py`; não versionada) · [x] Legenda · [x] Comentário fixado · [x] Texto alternativo · [x] Fontes
+- [x] Vídeo `EP005_CONDE_LEMURE.mp4` (não versionado; recria-se com `python3 conde/montar_ep005.py` se `conde/ep005/audio/narracao.wav` existir, senão o take está no flow ElevenLabs) · [x] Capa `EP005_CONDE_LEMURE_capa.jpg` (`capa_ep005.py`) · [x] Legenda · [x] Comentário fixado · [x] Texto alternativo · [x] Fontes
 
 ## Depois de publicar
 - Métrica principal: respostas A/B + guardados (comparar com o Ep. 004).

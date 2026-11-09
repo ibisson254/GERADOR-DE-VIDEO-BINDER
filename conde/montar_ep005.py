@@ -546,22 +546,21 @@ def build_music(path):
     """Emenda o tema (com voltas extra se for preciso) e ajusta o andamento entre âncoras, sem mudar a altura."""
     TEMA = f"{BASE}/musica/tema.mp3"
     SR = 48000
-    tmp = f"{EP}/audio/_tema_emendado.wav"
     n = voltas()
+    # emenda em numpy (o filtro do ffmpeg com várias cópias do mesmo trecho deixava as voltas do meio vazias)
+    t = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-i", TEMA, "-f", "f32le", "-ac", "2", "-ar", str(SR), "-"],
+                                     capture_output=True, check=True).stdout, np.float32).reshape(-1, 2)
     segs = [(0, CUT_A + XF / 2)] + [(CUT_B - XF / 2, CUT_A + XF / 2)] * n + [(CUT_B - XF / 2, None)]
-    fc = []
-    for i, (a, b) in enumerate(segs):
-        fc.append(f"[0:a]atrim={a}" + (f":{b}" if b else "") + f",asetpts=PTS-STARTPTS[s{i}]")
-    cur = "s0"
-    for i in range(1, len(segs)):
-        fc.append(f"[{cur}][s{i}]acrossfade=d={XF}:c1=tri:c2=tri[x{i}]")
-        cur = f"x{i}"
-    fc.append(f"[{cur}]aresample={SR},aformat=channel_layouts=stereo[o]")
-    subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", TEMA, "-filter_complex", ";".join(fc),
-                    "-map", "[o]", tmp], check=True)
-    print(f"tema: {n} volta(s) extra")
-    x = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-i", tmp, "-f", "f32le", "-ac", "2", "-ar", str(SR), "-"],
-                                     capture_output=True, check=True).stdout, np.float32).reshape(-1, 2).copy()
+    xf = int(XF * SR)
+    rampa = np.linspace(0, 1, xf)[:, None]
+    x = None
+    for a_, b_ in segs:
+        seg = t[int(a_ * SR):(int(b_ * SR) if b_ else len(t))].copy()
+        if x is None:
+            x = seg
+        else:
+            x = np.concatenate([x[:-xf], x[-xf:] * (1 - rampa) + seg[:xf] * rampa, seg[xf:]])
+    print(f"tema: {n} volta(s) extra, {len(x) / SR:.2f} s")
     an = ancoras()
     entrada = an[0][0] - pulso(an[0][1])           # a música entra atrasada para o 1.º pulso cair no carimbo
     out = [np.zeros((int(entrada * SR), 2), np.float32), x[:int(pulso(an[0][1]) * SR)]]
@@ -584,7 +583,6 @@ def build_music(path):
     out.append(x[int(pulso(an[-1][1]) * SR):])         # sob o fecho: andamento original até ao fim do tema
     y = np.concatenate(out)
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-", path], input=y.tobytes(), check=True)
-    os.remove(tmp)
 
 def stamps():
     return [T_REU, T_NOTAVEL + 0.05, T_EMITIDO]
