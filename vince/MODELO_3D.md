@@ -4,31 +4,36 @@ Fonte de verdade da criação do Vince em 3D. Qualquer sessão nova que trabalhe
 
 ## ▶ Retomar aqui
 
-**Estado (09/11, noite):** o modelo v02 existe, com rig, óculos, boca e sobrancelhas a funcionar. Ficheiro: `Documentos\Vince\vince_modelo_v02.blend` (o v01 ficou intacto). Renders de conferência: `Documentos\Vince\render_v02_corpo.png` e `render_v02_busto.png`.
+**Estado (09/11, noite):** o modelo v02 existe, com rig de corpo, olhos, pálpebras, boca, queixo e sobrancelhas a funcionar; sem óculos. Ficheiro: `Documentos\Vince\vince_modelo_v02.blend` (o v01 ficou intacto). Renders de conferência: `Documentos\Vince\render_v02_corpo.png` e `render_v02_busto.png`.
 
 **Decisão do fundador (09/11):** a geometria do Vince é gerada por IA local (TRELLIS.2, licença MIT, uso comercial livre). O modelo feito à mão (v01) fica só como fonte do rig, do rosto e do lip sync.
 
 **O que está feito no v02:**
 - Malha `VINCE_corpo` (83 mil vértices, 90 mil triângulos), gerada de `E:\ComfyUI\input\vince_frente_B.png` → `Vince_00002.glb`. Original de 396 mil vértices guardado na cena `Vince_v02` (`VINCE_hi`).
-- `VINCE_rig` reajustado às proporções novas (pose A). Pesos automáticos calculados num proxy fechado (`VINCE_proxy_pesos`, remesh por voxels) e transferidos para a malha; cabeça 100% no osso `head`.
-- Óculos (`OCULOS_ctrl`, escala 1,07) na cara e no topete.
-- Boca: as três tiras do v01, 2,4 cm mais acima, projetadas sobre `VINCE_corpo`. As 9 expressões e as formas A–H do Rhubarb respondem.
-- Sobrancelhas: são geometria da malha nova; `sobr_E/D_sobe` e `sobr_E/D_zanga` passaram a shape keys de `VINCE_corpo`, com os mesmos controlos em `VINCE_rosto`.
-- As peças do v01 (corpo, cabeça, cabelo, olhos, roupa) ficam escondidas na cena `Scene`, não apagadas.
+- `VINCE_rig` (20 ossos) reajustado às proporções novas (pose A). Pesos automáticos calculados num proxy fechado (`VINCE_proxy_pesos`, remesh por voxels) e transferidos para a malha; cabeça 100% no osso `head`.
+- **Óculos escondidos** por ordem do fundador (09/11, "não está bem, tira"). Os objetos `oculos_*` e o `OCULOS_ctrl` continuam no ficheiro, ajustados à cabeça nova; basta reativar a visibilidade. Atenção: a bíblia §2 e a ficha tratam os óculos como elemento de assinatura; falta o fundador dizer se saem de vez ou se quer um par novo.
+- Olhos: escleras e íris do v01 recolocadas sobre os olhos pintados (centro em x ±0,037, z 1,603), com `olhar_x/z`. Pálpebras novas (`palpebra_obj_E/D`, material `V2_pele` com a cor tirada da textura) ligadas a `palpebra_E/D`.
+- Boca: tiras `boca` e `dentes_sup` do v01, 2,4 cm mais acima, projetadas sobre `VINCE_corpo`; ficam invisíveis quando todas as `boca_*` estão a zero (vê-se a boca esculpida). `dentes_inf` escondido.
+- Queixo: shape key `queixo` em `VINCE_corpo`, ligada às formas abertas (B–H, riso, choque).
+- Sobrancelhas: shape keys `sobr_E/D_sobe` e `sobr_E/D_zanga` em `VINCE_corpo`, com os mesmos controlos em `VINCE_rosto`.
+- Ferramentas novas em `vince_ferramentas.py`: `pose(nome)` (A, neutra, braco_ao_lado, bracos_abertos, aceno), `repouso()`, `piscar(frame)`, `olhar(x, z)`.
+- Folha das 9 expressões conferida em render (`Documentos\Vince\_conf\x9_*.jpg`).
+- As peças do v01 (corpo, cabeça, cabelo, roupa) ficam escondidas na cena `Scene`, não apagadas.
 
 **Defeitos conhecidos do v02 (por resolver):**
 1. O casaco saiu com 8 a 9 botões; a ficha pede 6. Corrigir na textura ou gerar de novo.
 2. Rebordo irregular entre o queixo e o colarinho (malha fundida pela IA).
 3. Sem anel na mão direita: a geração perdeu-o. O `anel_D` do v01 está escondido, por reposicionar num dedo.
-4. Olhos esculpidos e pintados: `palpebra_E/D` e `olhar_x/z` não fazem nada no v02. Com os óculos na cara não se nota.
-5. A boca é uma tira por cima do rosto: o queixo não desce ao falar.
-6. Mãos sem ossos nos dedos (ficam abertas).
-7. A cabeça mede 22% da altura (turnaround: cerca de 22%), mas os ombros saíram mais largos do que no turnaround.
+4. Dedos sem ossos: as mãos ficam abertas. Uma tentativa de fechar os quatro dedos com dois ossos por mão amassou a malha e foi desfeita; é preciso um osso por dedo, com as articulações marcadas à mão.
+5. A boca continua a ser uma tira sobre o rosto (com queixo a acompanhar); não há interior de boca nem língua.
+6. Com as sobrancelhas levantadas (chocado, desesperado, eufórico) vê-se o rebordo das pálpebras.
+7. Ombros mais largos e cabeça mais pequena do que no turnaround e na base para falar (`03_base_falar_916.jpg`).
+8. Lip sync ainda não testado com áudio real.
 
 **Próximo passo concreto:**
-1. O fundador vê os dois renders e decide: seguir com este modelo e corrigir os defeitos 1 a 3 no Blender, ou gerar outra imagem no Gemini (ombros mais estreitos, 6 botões, anel na mão direita).
+1. O fundador vê `render_v02_corpo.png`, `render_v02_busto.png` e a folha de expressões, e decide: seguir com este modelo ou gerar outra imagem no Gemini (cabeça maior, ombros mais estreitos, 6 botões, anel na mão direita).
 2. Teste de lip sync com uma fala real (precisa de um `.wav`; gerar no ElevenLabs gasta créditos e exige autorização).
-3. Shape key de queixo para a fala e, se o 3D for para produção, pálpebras.
+3. Dedos (um osso por dedo), anel, botões e colarinho.
 
 **Por decidir (fundador):** usar o 3D em produção. A ficha §10 limita o lip sync ao gancho (3–5 s); com o rig deixa de haver limite técnico. Se aprovado, registar em `nucleo/DECISOES.md` e atualizar a ficha.
 
@@ -88,16 +93,17 @@ Testes:
 | Tripo gratuito | Não (só uso não comercial; o Pro é pago) |
 | Hunyuan3D | Não: a licença exclui a UE |
 
-## Rig e rosto (feitos no v01, a transferir para o modelo gerado)
+## Rig e rosto do v02
 
 | Parte | Como funciona |
 |---|---|
-| Rig | `VINCE_rig`: 20 ossos (root, hips, spine, chest, neck, head, shoulder/upper_arm/forearm/hand `.L/.R`, thigh/shin/foot `.L/.R`). Peças rígidas presas por empties `PIV_<osso>` com mundo = identidade em repouso, para os drivers continuarem absolutos |
-| Óculos | Um par; `OCULOS_ctrl["no_topete"]` 0 = cara, 1 = topete (drivers de posição e rotação) |
-| Rosto | `VINCE_rosto`: `boca_A…boca_H` (Rhubarb), `boca_sorriso/riso/furia/triste/choque/sarcasmo/pensativo`, `sobr_E/D_sobe`, `sobr_E/D_zanga`, `palpebra_E/D`, `olhar_x/z` |
-| Boca | Três tiras (`boca`, `dentes_sup`, `dentes_inf`) com shape keys e Shrinkwrap projetado em Y sobre a cabeça; transferem para qualquer cabeça nova trocando o alvo |
+| Rig | `VINCE_rig`: 20 ossos (root, hips, spine, chest, neck, head, shoulder/upper_arm/forearm/hand `.L/.R`, thigh/shin/foot `.L/.R`). `VINCE_corpo` deforma com o modificador Armature; as peças rígidas do rosto estão presas ao empty `PIV_head` (mundo = identidade em repouso) |
+| Controlo do rosto | `VINCE_rosto`: `boca_A…boca_H` (Rhubarb), `boca_sorriso/riso/furia/triste/choque/sarcasmo/pensativo`, `sobr_E/D_sobe`, `sobr_E/D_zanga`, `palpebra_E/D`, `olhar_x/z` |
+| Boca | Tiras `boca` e `dentes_sup` com shape keys e Shrinkwrap projetado em Y sobre `VINCE_corpo`; shape key `queixo` na malha |
+| Olhos | `esclera_E/D`, `iris_E/D`, `palpebra_obj_E/D`, com drivers |
 | Expressões | As 9 da ficha §8 em `vince_ferramentas.py` → `aplicar_expressao(nome, frame)` |
-| Cena | Câmara 9:16 1080×1920, 30 fps (como o resto do estúdio), luz de pregão, EEVEE |
+| Corpo | `pose(nome)`, `repouso()`; aplicar sempre depois da expressão |
+| Cena | Câmaras `VINCE_cam` (corpo) e `VINCE_cam_busto`, 9:16 1080×1920, 30 fps, luz de pregão, EEVEE, fundo índigo |
 
 Convenção de lados: frente = −Y; esquerda dele = +X (ossos `.L`). Nunca espelhar (ficha §10).
 
@@ -119,8 +125,8 @@ Notas de trabalho com o Blender por MCP:
 3. No Blender, separador Scripting:
    ```python
    V = bpy.data.texts["vince_ferramentas.py"].as_module()
-   V.oculos(no_topete=True, frame=1)
    V.aplicar_expressao("confiante", frame=1, manter_boca=True)
+   V.pose("neutra", frame=1)
    V.importar_rhubarb(r"C:\...\fala.tsv", frame_inicio=1)
    ```
 4. Render em PNG com fundo transparente ou com o cenário, e montar no pipeline do estúdio.
@@ -129,4 +135,4 @@ Notas de trabalho com o Blender por MCP:
 
 - 08/11: blocking e modelo v01 procedimental no Blender (corpo, rosto, óculos, fato, mãos), rig, 9 expressões, importador do Rhubarb. O fundador avaliou-o como amador; diagnóstico: as formas geradas por código têm um teto baixo.
 - 09/11: escolhida a geração por IA. TRELLIS.2 instalado localmente (gratuito, MIT) em vez de serviços pagos. Teste 1 aprovado como direção.
-- 09/11 (noite): folha de modelação gerada pelo fundador no Gemini (segunda tentativa), modelo v02 gerado e com rig, óculos, boca e sobrancelhas transferidos.
+- 09/11 (noite): folha de modelação gerada pelo fundador no Gemini (segunda tentativa), modelo v02 gerado e com rig. A pedido do fundador, óculos retirados e rosto refinado: olhos e pálpebras de geometria, boca invisível em repouso, queixo, poses de corpo.

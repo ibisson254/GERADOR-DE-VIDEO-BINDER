@@ -4,7 +4,7 @@ Uso no separador Scripting do Blender (este texto já vem dentro do .blend):
     import bpy
     V = bpy.data.texts["vince_ferramentas.py"].as_module()
     V.aplicar_expressao("confiante", frame=1)
-    V.oculos(no_topete=True, frame=1)            # olhos à vista para o lip sync
+    V.pose("neutra")                             # corpo (v02), depois da expressão
     V.importar_rhubarb(r"C:\\...\\gancho.tsv", frame_inicio=1)
 
 Expressões aprovadas (FICHA_VISUAL §8): neutro, confiante, rindo, furioso,
@@ -125,3 +125,95 @@ def _fcurves(ad):
             if cb:
                 out.extend(cb.fcurves)
     return out
+
+
+# ---------------------------------------------------------------- corpo (v02)
+# Convenção: "E" = esquerda dele (+X, ossos .L); "D" = direita dele (ossos .R).
+import math
+from mathutils import Matrix, Vector
+
+RIG = "VINCE_rig"
+_SUF = {"E": ".L", "D": ".R"}
+
+
+def _rig():
+    return bpy.data.objects[RIG]
+
+
+def _girar(osso, eixo, graus):
+    """Roda um osso em eixos do mundo (eixo: 'X','Y','Z' ou vetor), a somar à pose."""
+    pb = _rig().pose.bones[osso]
+    pb.rotation_mode = "QUATERNION"
+    m = pb.bone.matrix_local.to_3x3()
+    if isinstance(eixo, str):
+        R = Matrix.Rotation(math.radians(graus), 3, eixo)
+    else:
+        R = Matrix.Rotation(math.radians(graus), 3, Vector(eixo).normalized())
+    pb.rotation_quaternion = (m.inverted() @ R @ m).to_quaternion() @ pb.rotation_quaternion
+
+
+def _chave(ossos, frame):
+    if frame is None:
+        return
+    for n in ossos:
+        _rig().pose.bones[n].keyframe_insert("rotation_quaternion", frame=frame)
+
+
+def repouso(frame=None):
+    """Volta à pose em A (a pose em que o modelo foi gerado)."""
+    r = _rig()
+    for pb in r.pose.bones:
+        pb.rotation_mode = "QUATERNION"
+        pb.rotation_quaternion = (1, 0, 0, 0)
+        pb.location = (0, 0, 0)
+    _chave([pb.name for pb in r.pose.bones], frame)
+    bpy.context.view_layer.update()
+
+
+# Cada pose: lista de (osso, eixo do mundo, graus). Nos braços, Y positivo no
+# lado E baixa o braço; no lado D é o sinal contrário.
+POSES = {
+    "A": [],
+    "neutra": [("upper_arm.L", "Y", 20), ("upper_arm.R", "Y", -20),
+               ("forearm.L", "X", -12), ("forearm.R", "X", -12)],
+    "braco_ao_lado": [("upper_arm.L", "Y", 20), ("forearm.L", "X", -12),
+                   ("upper_arm.R", "Y", 10), ("upper_arm.R", "Z", -35),
+                   ("forearm.R", "X", -70), ("head", "Z", 10)],
+    "bracos_abertos": [("upper_arm.L", "Y", -25), ("upper_arm.R", "Y", 25),
+                       ("forearm.L", "X", -25), ("forearm.R", "X", -25),
+                       ("chest", "X", -6)],
+    "aceno": [("upper_arm.L", "Y", 20), ("forearm.L", "X", -12),
+               ("upper_arm.R", "Y", -15), ("upper_arm.R", "X", -35),
+               ("forearm.R", "X", -110), ("head", "Z", 8), ("head", "X", 6)],
+}
+
+
+def pose(nome, frame=None):
+    """Aplica uma pose de corpo. Chamar depois de aplicar_expressao()."""
+    repouso()
+    for osso, eixo, graus in POSES[nome]:
+        _girar(osso, eixo, graus)
+    _chave([pb.name for pb in _rig().pose.bones], frame)
+    bpy.context.view_layer.update()
+
+
+def piscar(frame, duracao=4):
+    """Pestanejo: fecha e abre as duas pálpebras em `duracao` frames."""
+    r = _rosto()
+    for k in ("palpebra_E", "palpebra_D"):
+        base = float(r[k])
+        for f, v in ((frame, base), (frame + duracao // 2, 1.0), (frame + duracao, base)):
+            r[k] = v
+            r.keyframe_insert(data_path=f'["{k}"]', frame=f)
+        r[k] = base
+    _atualizar()
+
+
+def olhar(x=0.0, z=0.0, frame=None):
+    """Direção do olhar: x de -1 (direita dele) a 1 (esquerda dele); z de -1 a 1."""
+    r = _rosto()
+    for k, v in (("olhar_x", x), ("olhar_z", z)):
+        r[k] = float(v)
+        if frame is not None:
+            r.keyframe_insert(data_path=f'["{k}"]', frame=frame)
+    _atualizar()
