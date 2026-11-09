@@ -68,6 +68,10 @@ Aprovada e aplicada no `manaburn/index.html`: mesa de Commander, mesa acima das 
 
 Aprovada pelo fundador (`nucleo/DECISOES.md`). Fase 1 implementada e integrada na `main` (07/11, "Prossiga" do fundador): `manaburn/luz.py` + `render.py` (por defeito), docs e checklist. Por aprovar: fase 2 (luz no `index.html`); objetos novos e planos fixos. Especial "Precon em jogo" e V2 integrados na `main` no mesmo merge.
 
+## Lambe-lambe "Nem saiu e já tem preço" (09/11/2026)
+
+Reel 9:16 de crítica à especulação (Sheoldred, versão Khan do Stardates: lança a 13/11 e já tem R$ 396,42 de valor de referência no app). Produzido e com QC sem problemas, **por publicar**. Ficha, legenda, comentário fixado, texto alternativo, fontes e scripts em `lambe-lambe/pecas/2026-11-09_nem_saiu_sheoldred/`. Tem de sair antes de 13/11, senão o gancho deixa de ser verdade.
+
 ## Próximo passo concreto
 
 Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a pronúncia de "Joven", "Chandler" e "Eron" e publica o pacote (`conde/legendas/ep004_joven_legenda.txt`, ficha em `conde/episodios/ep004_joven_ficha.md`; o vídeo não está no repositório, recria-se com `python3 conde/montar_ep004.py`, desde que `conde/ep004/audio/narracao.wav` exista: se faltar, ver o flow ElevenLabs em `conde/episodios/ep004_fontes.txt`). Depois: próximo Giro ou episódio do Mana & Burn com o kit v2 de `manaburn/`; validar com `python3 -I comum/qc/qc_video.py`.
