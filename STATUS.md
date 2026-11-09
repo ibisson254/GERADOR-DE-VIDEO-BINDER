@@ -39,12 +39,11 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 | Kit v2 no repositório + melhorias (legenda na zona segura, fonte do medidor, ventilador, antena, paninho) | Implementado e testado (bordas OK) | `manaburn/LEIA-ME.md` |
 | Duração livre nas séries | Implementado (constituição v1.5) | `nucleo/DECISOES.md` |
 
-## Vince Vault (08/11/2026)
+## Vince Vault (09/11/2026)
 
-Personagem em desenvolvimento, ainda sem frente. Bíblia: `vince/BIBLIA_PERSONAGEM.md`. Na branch `vince-vault`, por aprovar em PR #11.
-Feito a 08/11: base para falar em 9:16, mesa com ecrã verde e uma pose extra no pregão, aprovadas no controlo de qualidade e guardadas em `vince/referencias/`. Proposta de formato em `vince/PROPOSTA_FORMATO.md`, revista pelo fundador: boletim semanal da bolsa de cartas. Piloto EP00 "Fechamento da semana" renderizado como animatic, sem voz (ficha `vince/episodios/ep00_fechamento_ficha.md`, motor `vince/episodios/ep00/`).
-Modelo 3D v01 no Blender (08/11): corpo, rosto, óculos com duas posições, rig de 20 ossos, 9 expressões e importador de lip sync do Rhubarb. Ficha `vince/MODELO_3D.md`, ferramentas `vince/blender/`; o .blend fica no PC do fundador. Usar o 3D em produção está por decidir (conflito com a ficha §10).
-Falta: o fundador aprovar o animatic e os 670 créditos da narração (saldo esgotado até à renovação); depois, estimar o lip sync do gancho. Poses restantes não são precisas para o teste.
+Personagem em desenvolvimento, ainda sem frente. Bíblia: `vince/BIBLIA_PERSONAGEM.md`. Tudo na branch `vince-vault`, por aprovar em PR #11.
+**Vince 3D: começar por `vince/MODELO_3D.md` → secção "Retomar aqui".** Pipeline de imagem→3D com TRELLIS.2 local (ComfyUI no PC do fundador, `E:\ComfyUI`) instalado e testado a 09/11. Próximo passo: o fundador gera no Gemini a vista de frente sem óculos e em pose A; depois, gerar o .glb e transferir o rig, o rosto e o lip sync.
+Fantoche 2D (08/11): base para falar 9:16, mesa com ecrã verde e pose extra em `vince/referencias/`; proposta de formato em `vince/PROPOSTA_FORMATO.md` (boletim semanal da bolsa de cartas); piloto EP00 em animatic, sem voz (`vince/episodios/ep00_fechamento_ficha.md`). Falta o fundador aprovar o animatic e os 670 créditos da narração.
 
 ## Depende do fundador
 
@@ -65,4 +64,29 @@ Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a p
 
 ## Handoff
 
-Último: 08/11/2026, Vince Vault (ver a secção acima e `vince/BIBLIA_PERSONAGEM.md` §5). Anterior: 07/11/2026, Vince Vault. Anterior: handoff de 02/11/2026 na mensagem de fecho da sessão e no fim de `nucleo/auditorias/2026-11-02_evolucao_visual.md`.
+Último: 09/11/2026, Vince Vault 3D (handoff abaixo e `vince/MODELO_3D.md`). Anterior: 08/11/2026, Vince Vault.
+
+```
+HANDOFF · 09/11/2026 19:45 · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch vince-vault
+
+Objetivo atual: Vince Vault em 3D de nível profissional, com rig, expressões e lip sync.
+
+Decisões tomadas nesta sessão:
+- Geometria por IA local (TRELLIS.2, MIT) em vez de modelação à mão ou serviços pagos (registada em vince/MODELO_3D.md; vai para nucleo/DECISOES.md quando o uso em produção for aprovado)
+
+Documentos consultados:
+- vince/FICHA_VISUAL.md, vince/BIBLIA_PERSONAGEM.md
+
+Alterações realizadas:
+- vince/MODELO_3D.md · ficha do 3D com "Retomar aqui"
+- vince/3d/comfyui/ · workflow e instalador do TRELLIS.2
+- vince/blender/ · ferramentas do rig e construção v01
+
+Tarefas pendentes:
+- Folha de modelação no Gemini (sem óculos, boca fechada, pose A) · depende do fundador
+- Gerar o .glb final, retopologia, rig, rosto e lip sync · agente (precisa do Blender aberto com o servidor MCP ligado)
+- Aprovar o uso do 3D em produção e o PR #11 · fundador
+
+Próximo passo concreto: ler vince/MODELO_3D.md → "Retomar aqui", passo 1.
+```
