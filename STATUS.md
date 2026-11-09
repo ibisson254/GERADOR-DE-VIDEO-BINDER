@@ -70,7 +70,7 @@ Aprovada pelo fundador (`nucleo/DECISOES.md`). Fase 1 implementada e integrada n
 
 ## Conde Ep. 005 · Hyalopterous Lemure (09/11/2026)
 
-Branch `conde/ep005-lemure` (sem merge para `main`). **Produzido, não publicado.** Roteiro aprovado pelo fundador (09/11, 11:52, sem cortes); voz gerada (1 geração, 1 099 créditos); render final 69,1 s + fecho = 72,97 s, QC automático sem problemas (−13,8 LUFS, pico −1,5 dBTP, fecho completo), carta e arte inteiras conferidas no ficheiro final. Pacote editorial completo. Ficha: `conde/episodios/ep005_hyalopterous_lemure_ficha.md`. Único P1 aberto: pronúncia e equilíbrio voz/música por ouvir.
+Branch `conde/ep005-lemure` (sem merge para `main`). **Produzido, não publicado.** Roteiro aprovado pelo fundador (09/11, 11:52, sem cortes); voz gerada (1 geração, 1 099 créditos); render final 69,1 s + fecho = 72,97 s, refeito às 12:10 depois de o fundador apontar a música (o 1.º render tinha ruído no lugar do tema por um erro de tipo na emenda; corrigido e verificado); QC automático sem problemas (−14,0 LUFS, pico −1,8 dBTP, fecho completo), carta e arte inteiras conferidas no ficheiro final. Pacote editorial completo. Ficha: `conde/episodios/ep005_hyalopterous_lemure_ficha.md`. Único P1 aberto: pronúncia e equilíbrio voz/música por ouvir.
 
 ## Próximo passo concreto
 

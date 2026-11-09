@@ -1,6 +1,6 @@
 # Ficha · Conde de Manaforte · EP005 · Hyalopterous Lemure: o réu que errou de mitologia
 
-Render final de 09/11/2026 (69,1 s sem o fecho; 72,97 s no total). **Produzido, não publicado.** Roteiro aprovado pelo fundador a 09/11/2026, 11:52 ("Está aprovado pode gerar a voz e não precisa cortar").
+Render final de 09/11/2026, refeito às 12:10 com a música corrigida (69,1 s sem o fecho; 72,97 s no total). **Produzido, não publicado.** Roteiro aprovado pelo fundador a 09/11/2026, 11:52 ("Está aprovado pode gerar a voz e não precisa cortar").
 Scripts: `conde/montar_ep005.py` (copiado de `montar_ep004.py`), `conde/encurtar_narracao_ep005.py`, `conde/capa_ep005.py`, `conde/ep005/tempos_previa.py` (só para a prévia). Dados: `conde/ep005/`.
 
 ## Classificação
@@ -87,7 +87,7 @@ Regras cumpridas por desenho: nenhum texto por cima da ilustração (rótulos pa
 - Recursos reutilizados: medalhão e 4 expressões (sem alteração), paleta e Lora, layout e motor do Ep. 004, tema "Verdict in Varnish and Vellum", fecho oficial.
 - Novo no motor (só neste script): painéis de papel; voltas extra de 16 pulsos do tema quando a narração passa dele (mesma emenda do Ep. 004); âncoras de música calculadas; modo prévia.
 - Voz: ElevenLabs "Conde de Manaforte" (bbnQVGWT7UMdmoK4URLr), eleven_v4, **1 geração, 1 099 créditos**; flow "Conde Ep005 · Hyalopterous Lemure" (ORXBjdQIsTKsO0axku7X). Pico da voz tratada −1,5 dBFS antes da mistura.
-- Música: 2 voltas extra de 16 pulsos (emenda feita em numpy: o filtro do ffmpeg com várias cópias do mesmo trecho deixava as voltas do meio vazias; detetado na 1.ª tentativa do render final, que parou com erro; a prévia muda pode ter tido o mesmo defeito e não foi reconferida); pulsos em RÉU, verbete, Rosewater, flavor, OBRA NOTÁVEL, PARECER EMITIDO e no corte para o fecho; andamento entre âncoras 0,977–1,022; sting nos 3 carimbos; ducking por sidechain como no Ep. 004.
+- Música: 2 voltas extra de 16 pulsos (emenda feita em numpy: o filtro do ffmpeg com várias cópias do mesmo trecho deixava as voltas do meio vazias; detetado na 1.ª tentativa do render final, que parou com erro; a prévia muda pode ter tido o mesmo defeito e não foi reconferida. A 1.ª versão da emenda em numpy tinha um erro de tipo (float64 gravado como float32) que pôs **ruído no lugar do tema** no render entregue às ~12:00 (commit be13b5e); o fundador pediu a correção e o render foi refeito com o tema verificado (correlação 1,0 com `tema.mp3`; 0,98 no ficheiro final nos trechos sem voz)); pulsos em RÉU, verbete, Rosewater, flavor, OBRA NOTÁVEL, PARECER EMITIDO e no corte para o fecho; andamento entre âncoras 0,977–1,022; sting nos 3 carimbos; ducking por sidechain como no Ep. 004.
 - Easter egg: nenhum.
 - Riscos: pronúncia de "Hyalopterous", "Lemure", "lemur", "Rosewater", "Wizards", "Ice Age" (grafias fonéticas não ouvidas).
 
@@ -97,7 +97,7 @@ Regras cumpridas por desenho: nenhum texto por cima da ilustração (rótulos pa
 | `qc_video.py --frente conde` | sem problemas mensuráveis |
 | Formato | 1080×1920, 30 fps, H.264 + AAC 48 kHz |
 | Duração | 69,1 s + fecho = 72,97 s |
-| Loudness | −13,8 LUFS, pico −1,5 dBTP (< −1) |
+| Loudness | −14,0 LUFS, pico −1,8 dBTP (< −1) |
 | Fecho oficial | presente e completo a partir de 69,1 s (dif. 0,06) |
 | Carta e arte inteiras, sem corte lateral | conferido na folha de contacto (1 quadro/s) e em quadros extraídos do MP4 final (13,2 · 21,5 · 35 · 47 · 61,5 · 67,5 s) |
 | Texto sobre rosto ou ilustração | nenhum: rótulos em painéis de papel; na arte só seta, elipses, lupa e inserto do Conde sobre o gelo |
@@ -105,11 +105,14 @@ Regras cumpridas por desenho: nenhum texto por cima da ilustração (rótulos pa
 | Personagem | medalhão e 4 expressões dos recursos mestres, sem alteração |
 | Crédito | "Arte: Richard Thomas" + © Wizards + "Conteúdo de fã não oficial" em todos os planos da carta |
 | Voz sem cortes | nenhuma frase cortada no encurtamento; silêncios só nas pausas-alvo |
-| Pronúncia e equilíbrio voz/música | **não conferidos de ouvido** (sem audição nesta sessão; o Scribe recebeu o texto, não prova a pronúncia) |
+| Música | tema original verificado no ficheiro final (correlação 0,98 com a faixa sincronizada nos trechos sem voz); sem saltos de amostra (máx. 0,35, igual ao tema) |
+| Equilíbrio voz/música (medido) | voz ~13 dB acima da música durante a fala (mediana); a música sobe ~10 dB nas pausas; parâmetros de ducking do Ep. 004 |
+| Pronúncia | **não conferida de ouvido** (sem audição nesta sessão; o Scribe recebeu o texto, não prova a pronúncia) |
 
 ### Defeitos
 | Gravidade | Defeito | Estado |
 |---|---|---|
+| P0 corrigido | Música de fundo substituída por ruído no 1.º render final (erro de tipo na emenda) | corrigido e verificado por medição; render refeito |
 | P1 | Pronúncia das grafias fonéticas e equilíbrio voz/música por ouvir | depende do fundador: ouvir e aceitar, ou pedir nova geração |
 | P2 | ~1 s de painel só com "VERBETE" antes de "lemur" (32,0–33,0 s) e ~4 s do painel de Rosewater só com o cabeçalho antes de "Queriam" (38,9–43 s) | aceite como ritmo de leitura; opcional |
 | P2 | A arte em largura total entra nos 140 px da margem direita da zona segura, como em todos os episódios do Conde | herdado da série |

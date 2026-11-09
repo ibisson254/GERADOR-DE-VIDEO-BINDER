@@ -552,7 +552,7 @@ def build_music(path):
                                      capture_output=True, check=True).stdout, np.float32).reshape(-1, 2)
     segs = [(0, CUT_A + XF / 2)] + [(CUT_B - XF / 2, CUT_A + XF / 2)] * n + [(CUT_B - XF / 2, None)]
     xf = int(XF * SR)
-    rampa = np.linspace(0, 1, xf)[:, None]
+    rampa = np.linspace(0, 1, xf, dtype=np.float32)[:, None]   # float32: um float64 aqui estragava o áudio inteiro
     x = None
     for a_, b_ in segs:
         seg = t[int(a_ * SR):(int(b_ * SR) if b_ else len(t))].copy()
@@ -560,6 +560,7 @@ def build_music(path):
             x = seg
         else:
             x = np.concatenate([x[:-xf], x[-xf:] * (1 - rampa) + seg[:xf] * rampa, seg[xf:]])
+    x = x.astype(np.float32)
     print(f"tema: {n} volta(s) extra, {len(x) / SR:.2f} s")
     an = ancoras()
     entrada = an[0][0] - pulso(an[0][1])           # a música entra atrasada para o 1.º pulso cair no carimbo
@@ -575,13 +576,14 @@ def build_music(path):
         n_ = int(round(t1 * SR)) - sum(len(o) for o in out)
         y = y[:n_ + fade]
         cauda = out[-1][-fade:]
-        k = np.linspace(0, 1, fade)[:, None]
+        k = np.linspace(0, 1, fade, dtype=np.float32)[:, None]
         y[:fade] = y[:fade] * k + cauda * (1 - k)      # 12 ms de cruzamento na junção
         out[-1] = out[-1][:-fade]
         out.append(y)
         print(f"{t0:6.2f} -> {t1:6.2f}  pulsos {k0}-{k1}  andamento {r:.3f}")
     out.append(x[int(pulso(an[-1][1]) * SR):])         # sob o fecho: andamento original até ao fim do tema
-    y = np.concatenate(out)
+    y = np.concatenate(out).astype(np.float32)
+    assert y.dtype == np.float32
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-", path], input=y.tobytes(), check=True)
 
 def stamps():
