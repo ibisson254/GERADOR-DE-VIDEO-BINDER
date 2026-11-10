@@ -4,6 +4,10 @@ v1 · 09/11/2026 · pedido do fundador registado em `../nucleo/DECISOES.md` (09/
 
 Os dois episódios semanais do TUBO formam um ciclo fechado: **quinta prevê, segunda presta contas.** Toda previsão fica guardada antes de ir ao ar, com o critério e a data de conferência, para que o episódio de segunda saia sem perguntas ao fundador. Não muda nada da identidade (`CONTEXTO.md`). Para coleções novas, o método das previsões é o `PROTOCOLO_PRE_RELEASE.md` (branch `protocolo-pre-release-tubo`, ainda fora da `main`); este documento só define o ritmo.
 
+## 0. Regra geral (10/11/2026)
+
+**Toda previsão do TUBO entra em `previsoes/registo.yaml`**, em qualquer dia e em qualquer peça (episódio, especial, Giro, carrossel, legenda ou comentário fixado), antes de gravar a voz. E **toda produção do TUBO começa por ler o registo**: `python3 -I oraculo/previsoes/ciclo.py continuacao` (igual a `segunda`, serve em qualquer dia). O fundador não tem de dizer que previsões estão abertas nem de que episódio é a continuação: está no registo. Pedidos como «continuação», «prestação de contas» ou o envio de um episódio antigo seguem a secção 3.
+
 ## 1. Ficheiros
 
 | Ficheiro | Função |

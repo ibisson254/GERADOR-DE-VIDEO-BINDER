@@ -50,3 +50,18 @@ Roteiro e storyboard: `ep06_prestacao_contas_roteiro.md`. Fontes: `ep06_prestaca
 ## Depois de publicar
 - Métrica principal: guardados + partilhas · secundária: respostas A/B/C.
 - Próxima conferência: 16/11 (placar parcial de PR-TRK-01..03).
+
+## Atualização de 10/11/2026 (briefing da continuação do EP05)
+
+O fundador enviou o EP05 e pediu a continuação. Estado: EP06 continua escrito e não produzido. O que mudou desde 09/11:
+
+| Novidade | Tipo | Efeito no roteiro |
+|---|---|---|
+| TRK entra hoje no Arena | facto (Wizards) | Blocos 1, 3 e 4: «zero jogos» deixa de valer. Trocar por «o 17Lands ainda não publicou ranking» (sem número de jogos, que não temos) |
+| Draftsim, 09/11: preto-vermelho agressivo funciona; branco-preto destacado; sopa viva pelo fixing, melhor com verde | relato/opinião (uma loja, sem contagem) | Bloco 5: já são dois relatos. Um a favor de PR-TRK-01, dois contra PR-TRK-03. Não muda estado |
+| 17Lands sem win rate por par de TRK; datasets públicos ~2 semanas depois | facto de fonte terciária | Bloco 10: o placar parcial de 16/11 pode vir pequeno ou vazio; dizer a amostra |
+| Qualifier do Arena em Sealed de TRK: 14/11 (Play-In) e 21–22/11 | facto (Wizards) | Gancho possível para quinta e para a segunda de 23/11 |
+
+Gancho revisto (proposta, por aprovar): «Quinta, eu cravei Rakdos. Dois relatos do pré-release. Um me dá razão. O outro diz: sopa. Ranking oficial: ainda nenhum.»
+
+Não muda: texto original, critério, grau 2/5, pergunta A/B/C, carta The Traveler, custo de voz (~1.000–1.100 créditos por tomada, por autorizar).

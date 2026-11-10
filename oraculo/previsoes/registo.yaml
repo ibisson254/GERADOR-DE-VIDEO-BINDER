@@ -33,6 +33,13 @@ previsoes:
         evidencia_recebida: "O · MTG Rocks (05/11, Early Access no Arena): Strange New Worlds acima do resto; Sealed puxa para cinco cores"
         muda_estado: false
         estado: PENDENTE
+      - data: 2026-11-10
+        episodio: "sem episódio (briefing da continuação do EP05)"
+        dado: "sem ranking: o Sealed de TRK abre no Arena hoje (Wizards, anúncios do Arena de 02/11); o 17Lands ainda não publica win rate por par de cores de TRK (README de github.com/Aviouslyy/trk-early-access-data-analysis, fonte terciária, lido a 10/11)"
+        evidencia_recebida: "R/O · Draftsim, Peter Smith, 09/11 (uma loja + relatos online, sem contagem): preto-vermelho agressivo funciona como desenhado (a favor); branco-preto destacado; sopa viva pelo fixing"
+        nota_recorte: "a tabela Deck Color Data do 17Lands separa decks com splash; para 'pares de duas cores' valem as 10 linhas de guilda sem splash. Fixado a 10/11, antes de existir qualquer dado"
+        muda_estado: false
+        estado: PENDENTE
     estado: PENDENTE
     erro_de_sistema_se_refutada: true
 
@@ -72,6 +79,13 @@ previsoes:
         episodio: MC-EP06
         dado: "0 jogos"
         evidencia_recebida: "O · MTG Rocks (05/11): Sealed recompensa ir para cinco cores (contra esta previsão)"
+        muda_estado: false
+        estado: PENDENTE
+      - data: 2026-11-10
+        episodio: "sem episódio (briefing da continuação do EP05)"
+        dado: "sem dados medidos de TRK"
+        evidencia_recebida: "R/O · Draftsim, 09/11: sopa 'viva' por causa do fixing, as melhores com verde, muitas por necessidade do pool (contra esta previsão; sem contagem)"
+        nota_recorte: "no 17Lands comparar a linha agregada 'Two-color' com as de três ou mais cores (Three-color, Four-color, Five-color), ponderadas pelos jogos. Fixado a 10/11, antes de existir qualquer dado"
         muda_estado: false
         estado: PENDENTE
     estado: PENDENTE

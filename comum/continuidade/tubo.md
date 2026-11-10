@@ -7,7 +7,7 @@ Semente de 02/11/2026. Previsões e resultados vivem em `comum/historico.md` (`o
 - EP02 · Magic Spotlight: Fracture (Hartford), Leitura da Final · `oraculo/episodios/ep02_hartford_ficha.md` · previsões: nenhuma.
 
 ## Previsões abertas
-- Registo único: `oraculo/previsoes/registo.yaml` (desde 09/11/2026). Abertas: PR-TRK-01 (pública) a 04, auditoria a 01/12/2026, placar parcial às segundas.
+- Registo único: `oraculo/previsoes/registo.yaml` (desde 09/11/2026). Abertas: PR-TRK-01 (pública) a 04, auditoria a 01/12/2026, placar parcial às segundas. Conferência extra a 10/11 (PENDENTE). Antes de qualquer roteiro: `python3 -I oraculo/previsoes/ciclo.py continuacao`.
 
 ## Contador "ERROS HUMANOS"
 - Lacuna: nenhum valor registado nas fichas. Confirmar no próximo episódio antes de o mostrar.

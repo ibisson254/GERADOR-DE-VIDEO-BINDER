@@ -131,6 +131,8 @@ if __name__ == "__main__":
         segunda(hoje(args))
     elif cmd == "quinta":
         quinta(hoje(args))
+    elif cmd in ("continuacao", "abertas"):  # qualquer dia: o mesmo briefing da segunda
+        segunda(hoje(args))
     elif cmd == "validar":
         sys.exit(validar())
     else:

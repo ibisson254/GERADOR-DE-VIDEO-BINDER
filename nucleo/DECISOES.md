@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 10/11/2026 · Toda previsão do TUBO conta no registo, em qualquer dia
+
+**O quê:** (1) `oraculo/CICLO_SEMANAL.md` §0: qualquer previsão do TUBO, em qualquer peça e dia, entra em `oraculo/previsoes/registo.yaml` antes da voz; qualquer produção do TUBO começa por ler o registo. (2) `ciclo.py continuacao` (igual a `segunda`, para qualquer dia). (3) Linha no `AGENTS.md` §2. (4) Recorte das PR-TRK-01 e 03 no 17Lands fixado antes de haver dados (linhas de guilda sem splash; «Two-color» contra três ou mais cores).
+**Porquê:** pedido do fundador (10/11/2026, 09:54), ao enviar o EP05: «sempre que der uma previsão tem que contar nos históricos de previsão do personagem no Github para quando o personagem for fazer episódio já saber qual é que ele tem que produzir sem eu ter que falar toda vez».
+**Impacto:** só vale em sessões novas depois de a branch `meta-em-curto/ep06-ciclo-semanal` entrar na `main` (as sessões clonam a `main`). Identidade do TUBO sem alterações.
+
 ## 09/11/2026 · Ciclo semanal do TUBO: quinta prevê, segunda presta contas
 
 **O quê:** (1) Novo `oraculo/CICLO_SEMANAL.md`: o episódio de quinta fecha previsões sobre o fim de semana; o de segunda volta a elas com dado. (2) Registo único e legível por máquina em `oraculo/previsoes/registo.yaml` (texto original, critério, prazo, conferências, estado) e calendário em `oraculo/previsoes/calendario.yaml`. (3) `oraculo/previsoes/ciclo.py` gera o briefing (`segunda`, `quinta`) e valida o registo (`validar`). (4) Palavras `tubo segunda` / `tubo quinta` no `AGENTS.md`. (5) `comum/historico.md` deixa de repetir a tabela de previsões e aponta para o registo. (6) PR-TRK-01..04 do EP05 transcritas para o registo, com a conversão prevista a 06/11 (grau 2; sem o «~35%»).

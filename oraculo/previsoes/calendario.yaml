@@ -19,6 +19,18 @@ eventos:
     formatos: [Star Trek Booster Draft, Standard]
     notas: "listas de Standard entregues a 11/11 ao meio-dia (fonte secundária: gamertagmythras.com, a confirmar no magic.gg); sexta e sábado 3 rondas de Draft + 4 de Standard; domingo Top 8 em Standard"
     fonte: "https://magic.gg/news/world-championship-32-fact-sheet-for-competitors"
+  - id: ARENA-QUALI-PLAYIN-BO1
+    nome: "Arena Qualifier Play-In (Bo1), Sealed de Star Trek"
+    inicio: 2026-11-14
+    fim: 2026-11-14
+    formatos: [Sealed]
+    fonte: "https://magic.wizards.com/en/news/mtg-arena/announcements-november-2-2026"
+  - id: ARENA-QUALI-WEEKEND
+    nome: "Arena Qualifier Weekend, Sealed de Star Trek (Play-In Bo3 a 20/11)"
+    inicio: 2026-11-21
+    fim: 2026-11-22
+    formatos: [Sealed]
+    fonte: "https://magic.wizards.com/en/news/mtg-arena/announcements-november-2-2026"
   - id: PR-TRK-AUDITORIA
     nome: "Auditoria final das previsões PR-TRK-01..04"
     inicio: 2026-12-01

@@ -31,6 +31,8 @@ Ponto de entrada para qualquer agente (Claude, ChatGPT ou outro). As instruçõe
 3. Entregar: vídeo, capa, legenda, comentário fixado, texto alternativo, fontes, e as limitações reais.
 4. Commit: ficha/roteiro, legenda, fontes, histórico, easter egg. Nunca vídeos renderizados.
 
+Previsões do TUBO: toda produção de Meta em Curto começa por `python3 -I oraculo/previsoes/ciclo.py continuacao` e toda previsão nova entra em `oraculo/previsoes/registo.yaml` antes da voz (`oraculo/CICLO_SEMANAL.md` §0).
+
 Regras que nunca mudam: não inventar factos nem funções/telas do app; todo vídeo termina com `comum/outro/outro_binder_916.mp4` (exceto Órbita e exceções registadas em especiais); sem corte lateral no formato da frente, conferido no ficheiro final.
 
 Frente nova: fim de `nucleo/CATALOGO_EDITORIAL.md`. Mudança de regra: `nucleo/DECISOES.md`. Conteúdos publicados ou aprovados não se reabrem.
