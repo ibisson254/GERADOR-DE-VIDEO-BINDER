@@ -13,6 +13,10 @@ FACTOS
   · Mono-Green Landfall 12,7% / 53,4% · Dimir Midrange 8,9% / 54,5% · Dimir Uldaros 8,3% / 49,2% · Izzet Spellementals 7,5% / 44,3% · Jund Sacrifice 7,4% / 57,6% (IC 95% acima de 50%) · Orzhov Life Gain 6,9% / 53,6%.
   · Jund Sacrifice venceu os dois Spotlight: Fracture (Hartford: EP02; Pequim: EP04). Star Trek legal no Standard do WC32.
 
+LISTAS NO ECRÃ (v2)
+- Mono-Green Landfall: lista agregada de Karsten no mesmo artigo (ligação para melee.gg/Decklist/View/9e6521d6-7bb8-4ab1-941a-b4f3009ede25). Tipos conferidos no Scryfall. Ficheiro: ep07_listas.json.
+- Jund Sacrifice: Alexander von Stange, 1.º Hartford (Star City Games, já em ep02_listas.json) e Que Mo, 1.º Pequim (MTGGoldfish/Melee, já em ep04_lista.json da branch do EP04). 7 cartas com 4 cópias nas duas.
+
 CÁLCULO NOSSO
 - P(≥ 1 brasileiro no Top 8 | Top 8 sorteado entre 134) = 1 − C(128,8)/C(134,8) = 0,3139 → "31%". Modelo sem habilidade; dito no ecrã como "não é previsão". Não considera desistências, corte do dia 1 (12+ pontos após a ronda 7) nem habilidade.
 
@@ -27,4 +31,4 @@ EASTER EGG
 PRODUÇÃO
 - Voz: ElevenLabs "Antonio de Jesus" (MK5tXPmT83J5SUlpUo4K), eleven_v4, 1 geração, 954 créditos. Flow "Meta em Curto EP07 · WC32" (It48hFJZKeBXw6amQpY0). Tempos por palavra: eleven_scribe_v1 (0 créditos), 160 = 160 palavras do roteiro.
 - Trilha: oraculo/musica/tubo_tema_original.mp3, corte seco de 1,2 s depois de «Não escolhem quem pilota.».
-- Sem fotos de jogadores (silhuetas; a regra da foto do campeão não se aplica: ainda não há campeão).
+- Fotos dos 6 brasileiros autorizadas pelo fundador a 10/11 (oraculo/autorizacoes/2026-11-10_ep07_fotos_brasileiros.md); ficheiros a fornecer por ele.

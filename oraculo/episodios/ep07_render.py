@@ -3,7 +3,7 @@
 #   python3 ep07_render.py /caminho/do/kit             -> EP07_META_EM_CURTO.mp4
 #   python3 ep07_render.py /caminho/do/kit stills 3 10 -> still_03.00.png ...
 # O fecho é o ficheiro real comum/outro/outro_binder_916.mp4 (sem áudio; a trilha do episódio continua por baixo).
-import json, math, subprocess, sys, numpy as np
+import os, json, math, subprocess, sys, numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 K = (sys.argv[1] if len(sys.argv) > 1 else '../..').rstrip('/') + '/'
 W, H, FPS = 1080, 1920, 30
@@ -181,6 +181,17 @@ BRA = [('DIEGO ALMEIDA', 'RC · América do Sul', False), ('MARCELO CAVALCANTE',
        ('JOÃO QUEGE', 'RC · América do Sul', False), ('JOÃO JORGE SALES JUNIOR', 'RC · América do Sul', False)]
 META = [('Mono-Green Landfall', 12.7, 53.4), ('Dimir Midrange', 8.9, 54.5), ('Dimir Uldaros', 8.3, 49.2),
         ('Izzet Spellementals', 7.5, 44.3), ('Jund Sacrifice', 7.4, 57.6), ('Orzhov Life Gain', 6.9, 53.6)]
+LISTAS = json.load(open(K + 'oraculo/episodios/ep07_listas.json'))
+SLUG = ['diego_almeida', 'marcelo_cavalcante', 'isael_feitosa', 'rafael_kenji_marques_nishiyama', 'joao_quege', 'joao_jorge_sales_junior']
+def _foto(sl):
+    for ext in ('jpg', 'jpeg', 'png', 'webp'):
+        f = K + f'oraculo/ep07/fotos/{sl}.{ext}'
+        if os.path.exists(f): return Image.open(f).convert('RGB')
+    return None
+FOTOS = [_foto(sl) for sl in SLUG]   # fotos fornecidas pelo fundador (oraculo/autorizacoes/2026-11-10_ep07_fotos_brasileiros.md); sem ficheiro → silhueta
+def foto_quadrada(im_, lado):
+    w, h = im_.size; m = min(w, h); x = (w - m) // 2; y = max(0, int((h - m) * 0.25))
+    return im_.crop((x, y, x + m, y + m)).resize((lado, lado), Image.LANCZOS)
 SIL = ["......####......", ".....######.....", "....########....", "....########....", "....########....",
        ".....######.....", "......####......", "...##########...", "..############..", ".##############.",
        ".##############.", "################", "################"]
@@ -236,7 +247,10 @@ def scene_brasileiros(t):
         cx, cy = 80 + (i % 2) * 470, 330 + (i // 2) * 335
         hi = (ac_on and arena) or (rc_on and not arena and not ac_on)
         d.rounded_rectangle((cx, cy, cx + 450, cy + 310), 14, outline=(EM if hi else (40, 80, 70)), width=(4 if hi else 2), fill=(8, 20, 18, 255))
-        silhueta(d, cx + 160, cy + 20, 8)
+        if FOTOS[i] is not None:
+            ph = foto_quadrada(FOTOS[i], 112); im.paste(ph, (cx + 169, cy + 14)); d = ImageDraw.Draw(im, 'RGBA')
+            d.rectangle((cx + 167, cy + 12, cx + 283, cy + 128), outline=(EM if hi else (40, 80, 70)), width=3)
+        else: silhueta(d, cx + 160, cy + 20, 8)
         f = F(CONDB, 38); ls = wrap2(d, nome, f, 410)
         f = fit(d, max(ls, key=len), CONDB, 38, 410)
         for k, s in enumerate(ls): d.text((cx + 225, cy + 140 + k * 44), s, font=f, fill=WHITE, anchor='ma')
@@ -286,14 +300,12 @@ def scene_meta(t):
     d.text((80, 200), '> RELATÓRIO DO META · STANDARD', font=F(MONOB, 36), fill=PH)
     d.text((80, 252), '  1.810 listas · AC13 + Spotlight Fracture ×2', font=F(MONO, 28), fill=EM)
     d.line((80, 300, 1000, 300), fill=(16, 185, 129, 90), width=2)
-    bars(d, t, 330, 'REPRESENTAÇÃO · % do field', 1, 13.0, 'Mono-Green Landfall', ws(78), ws(91) - .05, '%')
+    bars(d, t, 330, 'REPRESENTAÇÃO · % do field', 1, 13.0, 'Mono-Green Landfall', ws(78), ws(86) - .05, '%')
     if t >= ws(98) - .1:
         y = bars(d, t, 750, 'DESEMPENHO · % de vitórias', 2, 60.0, 'Jund Sacrifice', ws(98) - .1, ws(103) - .05, '%')
         x50 = 450 + 50 / 60 * 400
         for yy in range(800, 1130, 14): d.line((x50, yy, x50, yy + 7), fill=(255, 176, 32, 200), width=2)
         d.text((x50, 1140), '50%', font=F(MONO, 24), fill=AMBER, anchor='ma')
-    if t >= ws(114) - .05: stamp(d, 'JUND: 2 TÍTULOS · HARTFORD E PEQUIM', PH, ws(114) - .05, t, 1230, 34)
-    if t >= ws(120) - .05: d.text((W / 2, 1290), 'arquivo: META EM CURTO EP02 e EP04', font=F(MONO, 28), fill=GREY, anchor='ma')
     fontes(d, ['Frank Karsten, magic.gg · 05/11/2026', 'vitórias por partida, sem espelhos, byes e empates'], 1384)
     hud(d, t); return term_finish(im)
 
@@ -309,6 +321,46 @@ def outro(t):
     if OUTRO is None: OUTRO = load_outro()
     return OUTRO[min(len(OUTRO) - 1, int(t * FPS))].copy()
 
+def lista_col(d, t, x, y, grupos, t0, wmax, verde=(), ls=40, fs=32):
+    i = 0
+    for g, cartas in grupos:
+        if t >= t0 + i * .015: d.text((x - 26, y), g, font=F(MONOB, 26), fill=GREY)
+        y += ls; i += 1
+        for n, nome in cartas:
+            if t >= t0 + i * .015:
+                on = nome in verde; s_ = f'{n} {nome}'
+                d.text((x, y), s_, font=fit(d, s_, CONDB, fs, wmax), fill=(PH if on else (150, 190, 170)))
+                if on: d.text((x - 28, y + 3), '▶', font=F(MONOB, 22), fill=PH)
+            y += ls; i += 1
+        y += 10
+    return y
+def scene_lista_landfall(t):
+    im, d = term_base(t, 12); L = LISTAS['landfall']['principal']; g = list(L.items())
+    d.text((80, 200), '> LISTA · MONO-GREEN LANDFALL', font=F(MONOB, 36), fill=PH)
+    d.text((80, 252), '  lista agregada · 12,7% do field · 53,4%', font=F(MONO, 28), fill=EM)
+    d.line((80, 300, 1000, 300), fill=(16, 185, 129, 90), width=2)
+    t0 = ws(91) - .1
+    lista_col(d, t, 110, 330, g[:2], t0, 420, fs=34, ls=46)
+    lista_col(d, t, 600, 330, g[2:], t0 + .2, 380, fs=34, ls=46)
+    if t >= ws(93) - .05: d.text((W / 2, 1190), '26 TERRENOS', font=F(INTB, 92), fill=WHITE, anchor='ma')
+    fontes(d, ['lista agregada de Frank Karsten, magic.gg · 05/11/2026', '60 cartas no principal · reserva no comentário fixado'], 1384)
+    hud(d, t); return term_finish(im)
+def naoterrenos(lista): return [(g, c) for g, c in lista['principal'].items() if not g.startswith('TERRENOS')]
+def scene_jund2(t):
+    im, d = term_base(t, 12)
+    d.text((80, 200), '> OS DOIS TÍTULOS · JUND SACRIFICE', font=fit(d, '> OS DOIS TÍTULOS · JUND SACRIFICE', MONOB, 36, 920), fill=PH)
+    d.text((80, 252), '  não-terrenos · a verde: 4 cópias nas duas', font=F(MONO, 28), fill=EM)
+    d.line((80, 300, 1000, 300), fill=(16, 185, 129, 90), width=2)
+    t0 = ws(114) - .1; verde = set(LISTAS['chave_jund']) if t >= ws(116) else set()
+    for x, tit, sub, k, dt in [(100, 'HARTFORD', 'A. von Stange · 1.º', 'jund_hartford', 0), (580, 'PEQUIM', 'Que Mo · 1.º', 'jund_pequim', .25)]:
+        if t < t0 + dt: continue
+        d.text((x - 26, 322), tit, font=F(INTB, 48), fill=WHITE)
+        d.text((x - 26, 382), sub, font=F(MONO, 26), fill=GREY)
+        lista_col(d, t, x, 430, naoterrenos(LISTAS[k]), t0 + dt, 400, verde, ls=38, fs=30)
+    if verde: stamp(d, '7 PEÇAS IGUAIS · 2 TÍTULOS', PH, ws(116), t, 1250, 36)
+    if t >= ws(120) - .05: d.text((W / 2, 1310), 'arquivo: META EM CURTO EP02 e EP04', font=F(MONO, 28), fill=GREY, anchor='ma')
+    fontes(d, ['Hartford: Star City Games · Pequim: MTGGoldfish (dados do Melee)'], 1400)
+    hud(d, t); return term_finish(im)
 # ---------- timeline ----------
 DIVE = TL['DIVE']; DIVE_END = DIVE + 0.45; EXIT = TL['EXIT']; EXIT_END = EXIT + 0.75
 T_REV = ws(138) - 0.1; T_Q = ws(147) - 0.1; T_SIG = ws(156) - 0.15
@@ -316,7 +368,10 @@ def inside(t):
     if t < ws(38) - .1: return scene_arquivo(t)
     if t < ws(52) - .1: return scene_brasileiros(t)
     if t < ws(78) - .1: return scene_sorteio(t)
-    return scene_meta(t)
+    if t < ws(91) - .1: return scene_meta(t)
+    if t < ws(98) - .1: return scene_lista_landfall(t)
+    if t < ws(114) - .1: return scene_meta(t)
+    return scene_jund2(t)
 SUBY = 1530
 def note(d, s):
     f = F(COND, 34); wd = d.textlength(s, font=f)
@@ -380,7 +435,11 @@ def frame_main(t):
             x, y = 70 + (i % 2) * 480, 296 + (i // 2) * 62
             on = t >= ws(153) - .05
             d.rounded_rectangle((x, y, x + 460, y + 52), 26, fill=((10, 52, 30, 255) if on else (15, 23, 42, 230)), outline=EM, width=3)
-            d.text((x + 230, y + 26), n, font=fit(d, n, CONDB, 32, 420), fill=(PH if on else WHITE), anchor='mm')
+            if FOTOS[i] is not None:
+                th = foto_quadrada(FOTOS[i], 44); mk = Image.new('L', (44, 44), 0); ImageDraw.Draw(mk).ellipse((0, 0, 43, 43), fill=255)
+                im.paste(th, (x + 5, y + 4), mk); d = ImageDraw.Draw(im, 'RGBA')
+                d.text((x + 255, y + 26), n, font=fit(d, n, CONDB, 32, 380), fill=(PH if on else WHITE), anchor='mm')
+            else: d.text((x + 230, y + 26), n, font=fit(d, n, CONDB, 32, 420), fill=(PH if on else WHITE), anchor='mm')
         if t >= ws(153) - .05: note(d, 'comente o nome')
         return subs(im, t, SUBY)
     kz = eio((t - T_SIG) / 1.2)

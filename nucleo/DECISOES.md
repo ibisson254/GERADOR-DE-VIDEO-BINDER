@@ -159,3 +159,7 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - C · Conde comenta uma obra → `conde/PERFIL.md` (observação / interpretação / facto separados). OK.
 - D · Série nova → `modelos/PERFIL_SERIE.md` + linha na tabela §2; constituição intacta. OK.
 - E · Fonte, ferramenta ou autorização indisponível → constituição §11. OK; o próprio teste revelou o bloqueador 8.
+
+## 10/11/2026 · Meta em Curto EP07: fotos dos brasileiros e listas no ecrã
+**O quê:** o fundador autorizou fotos reais dos 6 brasileiros convidados ao WC32 nas fichas do EP07 e assumiu a responsabilidade pelos direitos (registo em `oraculo/autorizacoes/2026-11-10_ep07_fotos_brasileiros.md`). Exceção só deste episódio; a regra geral do CONTEXTO §6.4 mantém-se (foto do campeão por defeito; restantes jogadores com silhueta). Pediu também as listas dos decks citados: entram a lista agregada de Mono-Green Landfall (Karsten, magic.gg) e as duas listas campeãs de Jund Sacrifice (Hartford e Pequim), com pausas de voz novas em vez de voz regenerada.
+**Porquê:** pedido do fundador (10/11, 17:06): «Coloque as fotos dos jogadores brasileiros, eu assumo a responsabilidade e coloque algumas listas de cartas que você citou no episódio». Os ficheiros das fotos têm de vir do fundador: os agentes não descarregam fotos de pessoas da web.

@@ -1,6 +1,6 @@
 # Ficha · Meta em Curto · EP07 · Mundial 32: seis brasileiros e a primeira previsão
 
-Render de 10/11/2026: 61,2 s com o fecho, 57,4 s sem o fecho. Scripts: `ep07_audio.py`, `ep07_render.py`. Dados: `ep07_roteiro.json`, `ep07_words.json`. Fontes: `ep07_mundial_fontes.txt`. Legenda: `../legendas/ep07_mundial_legenda.txt`.
+Render v2 de 10/11/2026: 64,1 s com o fecho, 60,3 s sem o fecho (v1: 57,4 s, sem listas). Scripts: `ep07_audio.py`, `ep07_render.py`. Dados: `ep07_roteiro.json`, `ep07_words.json`. Fontes: `ep07_mundial_fontes.txt`. Legenda: `../legendas/ep07_mundial_legenda.txt`.
 
 ## Classificação
 - Série: Meta em Curto (TUBO) · episódio de previsão do ciclo semanal (`../CICLO_SEMANAL.md` §4), produzido numa terça por pedido do fundador (texto da legenda enviado por ele a 10/11).
@@ -22,7 +22,10 @@ Seis brasileiros. Cento e trinta e quatro convidados. Oito vagas no Top 8. Mundi
 | 5,3–13,9 s | Mergulho → dentro | Arquivo WC32: 134, 8, formatos (Star Trek "lança 13/11"; Standard, Top 8 em Standard) |
 | 13,9–19,5 s | Dentro | 6 fichas de jogador com silhueta e origem do convite (5 RC, 1 Arena Championship 11); egg "2002" |
 | 19,5–26,6 s | Dentro | Modelo sem habilidade: 134 pontos, 6 verdes, 8 vagas → 31%; carimbo MUNDIAL NÃO É SORTEIO |
-| 26,6–41,5 s | Dentro | Relatório do Meta: representação e desempenho separados; Landfall 12,7%; Jund 57,6% com linha de 50%; "2 títulos" e remissão para EP02/EP04 |
+| 26,6–30,6 s | Dentro | Relatório do Meta: representação (Landfall 12,7% em destaque) |
+| 30,6–35,0 s | Dentro | Lista agregada do Mono-Green Landfall (60), "26 TERRENOS" (pausa de voz 1,6 s) |
+| 35,0–39,9 s | Dentro | Desempenho separado da representação; Jund 57,6% com linha de 50% |
+| 39,9–44,1 s | Dentro | Os dois títulos: não-terrenos de von Stange (Hartford) e Que Mo (Pequim), 7 iguais a verde; remissão EP02/EP04 (pausa 1,8 s) |
 | 41,5–47,8 s | Fora | Cartão PREVISÃO REGISTRADA · PR-WC32-01, GRAU DE CERTEZA 3 de 5, conferência 16/11 |
 | 47,8–51,0 s | Fora | "Os dados escolhem o deck. Não quem pilota." (leitura do TUBO); corte seco da trilha 50,7–51,9 s |
 | 51,0–53,6 s | Fora | Pergunta + 6 nomes em chips |
@@ -34,14 +37,14 @@ Seis brasileiros. Cento e trinta e quatro convidados. Oito vagas no Top 8. Mundi
 |---|---|
 | `qc_video.py --frente tubo` | Sem problemas mensuráveis |
 | 1080×1920, 30 fps | OK |
-| Corte lateral | cropdetect 1080:1920:0:0 em 1835 de 1835 quadros medidos |
-| Loudness | −14,0 LUFS, pico −1,3 dBTP |
+| Corte lateral | cropdetect 1080:1920:0:0 em todos os quadros medidos (v2: 1922) |
+| Loudness | −14,0 LUFS, pico −1,6 dBTP (v2) |
 | Fecho | Presente a partir de 57,37 s |
 | Folha de contacto | Vista do início ao fim; textos fora das linhas de fonte; legendas na faixa habitual da série |
-| Fotos de pessoas | Nenhuma (silhuetas) |
+| Fotos de pessoas | Autorizadas pelo fundador a 10/11 (ver `oraculo/autorizacoes/`); entram quando os ficheiros chegarem a `oraculo/ep07/fotos/`, até lá silhuetas |
 | Representação × desempenho | Em blocos separados, com a definição de win rate na linha de fonte |
 | Previsão | Marcada no ecrã, registada antes da voz, `ciclo.py validar` OK |
-| P2 | O Relatório do Meta fica 15 s no mesmo enquadramento (as barras e carimbos mudam, a câmara não) |
+| P2 (v1) | Relatório do Meta parado 15 s → resolvido na v2 com as listas |
 
 ## Limitações
 - Não ouvi o áudio: confirmar a pronúncia de "Regional Championships", "Arena Championship", "Spotlight" e "Mono-Green Landfall".
