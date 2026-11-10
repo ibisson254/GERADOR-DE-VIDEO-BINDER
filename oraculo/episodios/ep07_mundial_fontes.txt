@@ -1,0 +1,30 @@
+META EM CURTO EP07 · FONTES E VERIFICAÇÃO (acedido a 10/11/2026)
+Classe: Previsão (opinião registada) + Relatório do Meta. Previsões em oraculo/previsoes/registo.yaml (PR-WC32-01..03), registadas antes da voz.
+
+FACTOS
+- https://magic.gg/news/world-championship-32-fact-sheet-for-competitors (28/07/2026)
+  · WC32 no MagicCon: Atlanta, 13–15/11/2026. Formatos: Star Trek Booster Draft e Standard Constructed. 14 rondas suíças; Top 8 em Standard, melhor de 5. Listas de Standard no Melee até 11/11, 12:00 de Atlanta. Prémios: 1 000 000 USD, 100 000 ao 1.º.
+- https://magic.gg/news/magic-world-championship-32-invitation-list
+  · 134 convidados (contagem nossa da tabela). 6 do Brasil: Diego Almeida (Top 2 RC, ronda PT MSH, América do Sul), Marcelo Cavalcante (Top 2 Arena Championship 11), Isael Feitosa (Top 2 RC, ronda PT SOS), Rafael Kenji Marques Nishiyama (Top 2 RC, ronda PT MSH), Joao Quege (Top 2 RC, ronda PT SOS; no ecrã "João"), João Jorge Sales Junior (Top 2 RC, ronda PT ECL).
+  · magic.gg (Viewer's Guide, ~03/11) diz que a lista está sujeita a alterações → no ecrã e na legenda: "convidados", não "confirmados".
+- https://magic.wizards.com/en/news/feature/collecting-star-trek · lançamento global de Star Trek a 13/11/2026 (= dia 1 do Mundial); Arena a 10/11.
+- https://www.magic.gg/news/metagame-mentor-mapping-the-standard-frontier-before-magic-world-championship-32 (Frank Karsten, 05/11/2026)
+  · 1.810 listas: Arena Championship 13 + Spotlight: Fracture Hartford + Pequim. Win rate por partida sem espelhos, byes e empates.
+  · Mono-Green Landfall 12,7% / 53,4% · Dimir Midrange 8,9% / 54,5% · Dimir Uldaros 8,3% / 49,2% · Izzet Spellementals 7,5% / 44,3% · Jund Sacrifice 7,4% / 57,6% (IC 95% acima de 50%) · Orzhov Life Gain 6,9% / 53,6%.
+  · Jund Sacrifice venceu os dois Spotlight: Fracture (Hartford: EP02; Pequim: EP04). Star Trek legal no Standard do WC32.
+
+CÁLCULO NOSSO
+- P(≥ 1 brasileiro no Top 8 | Top 8 sorteado entre 134) = 1 − C(128,8)/C(134,8) = 0,3139 → "31%". Modelo sem habilidade; dito no ecrã como "não é previsão". Não considera desistências, corte do dia 1 (12+ pontos após a ronda 7) nem habilidade.
+
+OPINIÃO / PREVISÃO (TUBO)
+- PR-WC32-01 (pública, certeza 3/5): Jund Sacrifice com pelo menos 1 jogador no Top 8. Critério e prazo (16/11) no registo.
+- PR-WC32-02 e 03 (registo): Jund entre os 3 mais jogados; Izzet Spellementals abaixo de 5%.
+- "Os dados escolhem o deck. Não quem pilota." = leitura do TUBO.
+
+EASTER EGG
+- "2002" na vertical na chuva de código, durante as fichas dos brasileiros: ano em que Carlos Romão ganhou o Mundial, primeiro brasileiro campeão (mtg.wiki, Carlos Romão; magic.gg "The Top 9 Magic World Championship Moments").
+
+PRODUÇÃO
+- Voz: ElevenLabs "Antonio de Jesus" (MK5tXPmT83J5SUlpUo4K), eleven_v4, 1 geração, 954 créditos. Flow "Meta em Curto EP07 · WC32" (It48hFJZKeBXw6amQpY0). Tempos por palavra: eleven_scribe_v1 (0 créditos), 160 = 160 palavras do roteiro.
+- Trilha: oraculo/musica/tubo_tema_original.mp3, corte seco de 1,2 s depois de «Não escolhem quem pilota.».
+- Sem fotos de jogadores (silhuetas; a regra da foto do campeão não se aplica: ainda não há campeão).

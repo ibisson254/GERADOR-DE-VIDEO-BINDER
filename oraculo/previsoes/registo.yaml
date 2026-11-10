@@ -106,3 +106,59 @@ previsoes:
     conferencias_marcadas: [2026-11-30]
     conferencias: []
     estado: PENDENTE
+
+  # --- MC-EP07 · Mundial 32 (WC32), registadas a 10/11/2026 antes de gravar a voz ---
+  # Base: Frank Karsten, magic.gg, 05/11/2026 (1.810 listas de AC13 + Spotlight Fracture Hartford e Pequim;
+  # win rate sem espelhos, byes e empates). Lista oficial de convidados: magic.gg (134; 6 do Brasil).
+  - id: PR-WC32-01
+    episodio: MC-EP07
+    data_registo: 2026-11-10
+    publicacao: publica
+    texto_original: "Jund Sacrifice terá pelo menos um jogador no Top 8 do Magic World Championship 32"
+    fala_no_video: "Previsão registrada: Jund Sacrifice no Top 8. Certeza três de cinco. Segunda eu confiro."
+    grau_certeza: 3
+    evidencias: "maior win rate do Standard pré-Mundial (57,6%, intervalo de 95% acima de 50%) e os dois títulos do Spotlight: Fracture (Hartford e Pequim); Karsten chama-lhe 'arguably the deck to beat'"
+    riscos: "7,4% do field antes do Mundial; alvo declarado (os pros preparam-se contra ele); cartas de Star Trek entram no Standard a 13/11 e o field do Mundial é pequeno (134 convidados)"
+    criterio:
+      fonte: "magic.gg, Top 8 do World Championship 32 com as listas de Standard (anúncio de sábado 14/11 ou cobertura de domingo 15/11)"
+      confirma: "pelo menos 1 deck do Top 8 classificado como Jund Sacrifice (ou nome equivalente: Jund Biotech, Jund Sac; lista com Biotech Specialist + The Sackville-Bagginses)"
+      parcial: "nenhum Jund no Top 8, mas Jund Sacrifice com o maior win rate do Standard do torneio na análise oficial de magic.gg"
+      refuta: "nenhum deck Jund Sacrifice no Top 8 e não é o melhor win rate do Standard do torneio"
+      inconclusiva: "Top 8 ou listas de Standard não publicados até 16/11/2026"
+    prazo: 2026-11-16
+    conferencias: []
+    estado: PENDENTE
+    erro_de_sistema_se_refutada: true
+
+  - id: PR-WC32-02
+    episodio: MC-EP07
+    data_registo: 2026-11-10
+    publicacao: registo
+    texto_original: "Jund Sacrifice será um dos 3 arquétipos mais jogados no Standard do World Championship 32"
+    grau_certeza: 3
+    criterio:
+      fonte: "magic.gg, análise do metagame do Standard do World Championship 32 (listas publicadas na ronda 4, 13/11)"
+      confirma: "Jund Sacrifice em 1.º, 2.º ou 3.º por número de jogadores"
+      parcial: "empatado no 3.º lugar com outro arquétipo"
+      refuta: "Jund Sacrifice em 4.º ou abaixo"
+      inconclusiva: "análise do metagame não publicada até 16/11/2026"
+    prazo: 2026-11-16
+    conferencias: []
+    estado: PENDENTE
+
+  - id: PR-WC32-03
+    episodio: MC-EP07
+    data_registo: 2026-11-10
+    publicacao: registo
+    texto_original: "Izzet Spellementals terá menos de 5% do Standard do World Championship 32"
+    grau_certeza: 3
+    evidencias: "44,3% de win rate em 7,5% do field pré-Mundial; Karsten 'surpreendido' se for popular (opinião atribuída)"
+    criterio:
+      fonte: "magic.gg, análise do metagame do Standard do World Championship 32"
+      confirma: "Izzet Spellementals abaixo de 5% dos jogadores"
+      parcial: "entre 5% e 7,5% (abaixo da quota pré-Mundial)"
+      refuta: "7,5% ou mais"
+      inconclusiva: "análise do metagame não publicada até 16/11/2026"
+    prazo: 2026-11-16
+    conferencias: []
+    estado: PENDENTE

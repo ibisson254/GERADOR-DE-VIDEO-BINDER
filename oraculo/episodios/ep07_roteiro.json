@@ -1,0 +1,55 @@
+{
+ "episodio": "Meta em Curto EP07 · Mundial 32: seis brasileiros e a primeira previsão (Previsão + Relatório do Meta)",
+ "nota": "texto = legenda no ecrã; fala = grafia fonética enviada ao ElevenLabs. Mesmo número de palavras por bloco.",
+ "blocos": [
+  {
+   "id": "gancho",
+   "onde": "fora",
+   "texto": "Seis brasileiros. Cento e trinta e quatro convidados. Oito vagas no Top 8.",
+   "fala": "Seis brasileiros. Cento e trinta e quatro convidados. Oito vagas no Tóp óito."
+  },
+  {
+   "id": "arquivo",
+   "onde": "dentro",
+   "texto": "Mundial trinta e dois. Atlanta, de treze a quinze de novembro. Draft de Star Trek, coleção que chega às lojas no primeiro dia, e Standard.",
+   "fala": "Mundial trinta e dois. Atlanta, de treze a quinze de novembro. Dráft de Stár Trék, coleção que chega às lojas no primeiro dia, e Stândard."
+  },
+  {
+   "id": "brasileiros",
+   "onde": "dentro",
+   "texto": "Na lista oficial, seis brasileiros. Cinco vieram dos Regional Championships. Um, do Arena Championship.",
+   "fala": "Na lista oficial, seis brasileiros. Cinco vieram dos Rídjonal Tchâmpionchips. Um, do Arena Tchâmpionchip."
+  },
+  {
+   "id": "sorteio",
+   "onde": "dentro",
+   "texto": "Se o Top 8 fosse sorteio, a chance de pelo menos um brasileiro entrar seria de trinta e um por cento. Mas Mundial não é sorteio.",
+   "fala": "Se o Tóp óito fosse sorteio, a chance de pelo menos um brasileiro entrar seria de trinta e um por cento. Mas Mundial não é sorteio."
+  },
+  {
+   "id": "meta",
+   "onde": "dentro",
+   "texto": "Mil oitocentas e dez listas de três torneios. O deck mais jogado é Mono-Green Landfall: doze vírgula sete por cento. O que mais vence é Jund Sacrifice: cinquenta e sete vírgula seis por cento das partidas. E os dois títulos do Spotlight. Analisei os dois aqui.",
+   "fala": "Mil oitocentas e dez listas de três torneios. O déc mais jogado é Mono-Grín Lândfól: doze vírgula sete por cento. O que mais vence é Jund Sácrifais: cinquenta e sete vírgula seis por cento das partidas. E os dois títulos do Spótlait. Analisei os dois aqui."
+  },
+  {
+   "id": "previsao",
+   "onde": "fora",
+   "texto": "Previsão registrada: Jund Sacrifice no Top 8. Certeza três de cinco. Segunda eu confiro.",
+   "fala": "Previsão registrada: Jund Sácrifais no Tóp óito. Certeza três de cinco. Segunda eu confiro."
+  },
+  {
+   "id": "revelacao",
+   "onde": "fora",
+   "texto": "Os dados escolhem o deck. Não escolhem quem pilota.",
+   "fala": "Os dados escolhem o déc. Não escolhem quem pilota."
+  },
+  {
+   "id": "pergunta",
+   "onde": "fora",
+   "texto": "Qual brasileiro chega ao Top 8? Comente o nome. Probabilidade calculada. Humanos, imprevisíveis.",
+   "fala": "Qual brasileiro chega ao Tóp óito? Comente o nome. Probabilidade calculada. Humanos, imprevisíveis."
+  }
+ ],
+ "fala": "Seis brasileiros. Cento e trinta e quatro convidados. Oito vagas no Tóp óito. Mundial trinta e dois. Atlanta, de treze a quinze de novembro. Dráft de Stár Trék, coleção que chega às lojas no primeiro dia, e Stândard. Na lista oficial, seis brasileiros. Cinco vieram dos Rídjonal Tchâmpionchips. Um, do Arena Tchâmpionchip. Se o Tóp óito fosse sorteio, a chance de pelo menos um brasileiro entrar seria de trinta e um por cento. Mas Mundial não é sorteio. Mil oitocentas e dez listas de três torneios. O déc mais jogado é Mono-Grín Lândfól: doze vírgula sete por cento. O que mais vence é Jund Sácrifais: cinquenta e sete vírgula seis por cento das partidas. E os dois títulos do Spótlait. Analisei os dois aqui. Previsão registrada: Jund Sácrifais no Tóp óito. Certeza três de cinco. Segunda eu confiro. Os dados escolhem o déc. Não escolhem quem pilota. Qual brasileiro chega ao Tóp óito? Comente o nome. Probabilidade calculada. Humanos, imprevisíveis."
+}

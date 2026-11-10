@@ -74,6 +74,10 @@ Branch `meta-em-curto/ep06-ciclo-semanal`. Novo ciclo «quinta prevê, segunda p
 
 Atualização de 10/11/2026: regra geral no `oraculo/CICLO_SEMANAL.md` §0 (toda previsão do TUBO vai ao registo; toda produção começa por `ciclo.py continuacao`). Conferência de 10/11 registada em PR-TRK-01 e 03 (PENDENTE, sem ranking no 17Lands). EP06: «zero jogos» venceu hoje; ajustes na ficha (secção de 10/11). Depende do fundador: aprovar o merge desta branch (sem isso as sessões novas, que clonam a `main`, não veem o registo), aprovar o gancho revisto e autorizar a voz.
 
+## Meta em Curto EP07 · Mundial 32 (10/11/2026)
+
+Branch `meta-em-curto/ep07-wc32` (a partir de `meta-em-curto/ep06-ciclo-semanal`, que ainda não entrou na `main`). Produzido, não publicado: 57,4 s + fecho, QC sem problemas, −14,0 LUFS, sem corte lateral. Ficha `oraculo/episodios/ep07_mundial_ficha.md`, legenda `oraculo/legendas/ep07_mundial_legenda.txt`. Previsões PR-WC32-01 (pública) a 03 registadas antes da voz; conferência na segunda 16/11 (`ciclo.py segunda`). O vídeo não está no repositório: recria-se com `ep07_audio.py` + `ep07_render.py` a partir de `voz.mp3` (flow ElevenLabs em `ep07_mundial_fontes.txt`). Depende do fundador: ouvir a pronúncia, publicar (de preferência antes de 13/11, dia 1 do Mundial) e aprovar o merge das branches do TUBO.
+
 ## Próximo passo concreto
 
 Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a pronúncia de "Joven", "Chandler" e "Eron" e publica o pacote (`conde/legendas/ep004_joven_legenda.txt`, ficha em `conde/episodios/ep004_joven_ficha.md`; o vídeo não está no repositório, recria-se com `python3 conde/montar_ep004.py`, desde que `conde/ep004/audio/narracao.wav` exista: se faltar, ver o flow ElevenLabs em `conde/episodios/ep004_fontes.txt`). Depois: próximo Giro ou episódio do Mana & Burn com o kit v2 de `manaburn/`; validar com `python3 -I comum/qc/qc_video.py`.

@@ -5,9 +5,10 @@ Semente de 02/11/2026. Previsões e resultados vivem em `comum/historico.md` (`o
 ## Episódios
 - EP01 · AC13, Relatório do Meta · `oraculo/episodios/ep01_ac13_ficha.md` · previsões: nenhuma.
 - EP02 · Magic Spotlight: Fracture (Hartford), Leitura da Final · `oraculo/episodios/ep02_hartford_ficha.md` · previsões: nenhuma.
+- EP07 · Mundial 32: seis brasileiros e a primeira previsão · `oraculo/episodios/ep07_mundial_ficha.md` · previsões: PR-WC32-01 (pública) a 03, conferência 16/11. Refere EP02 e EP04 (os dois títulos de Jund).
 
 ## Previsões abertas
-- Registo único: `oraculo/previsoes/registo.yaml` (desde 09/11/2026). Abertas: PR-TRK-01 (pública) a 04, auditoria a 01/12/2026, placar parcial às segundas. Conferência extra a 10/11 (PENDENTE). Antes de qualquer roteiro: `python3 -I oraculo/previsoes/ciclo.py continuacao`.
+- Registo único: `oraculo/previsoes/registo.yaml` (desde 09/11/2026). Abertas: PR-TRK-01 (pública) a 04, auditoria a 01/12/2026, placar parcial às segundas. Conferência extra a 10/11 (PENDENTE). PR-WC32-01 (pública) a 03 do EP07, prazo 16/11. Antes de qualquer roteiro: `python3 -I oraculo/previsoes/ciclo.py continuacao`.
 
 ## Contador "ERROS HUMANOS"
 - Lacuna: nenhum valor registado nas fichas. Confirmar no próximo episódio antes de o mostrar.
@@ -17,4 +18,5 @@ Semente de 02/11/2026. Previsões e resultados vivem em `comum/historico.md` (`o
 
 ## Promessas ao público
 - EP05: «Se eu errar, assumo.» Giro de 08/11: o TUBO volta a 09/11 para prestar contas (cumprida pelo EP06, escrito a 09/11).
-- EP06 (se publicado): placar parcial toda segunda até 01/12; «Quinta: previsão do Mundial».
+- EP06 (se publicado): placar parcial toda segunda até 01/12; «Quinta: previsão do Mundial» (cumprida pelo EP07, produzido a 10/11).
+- EP07: «Segunda eu confiro.» → episódio de segunda 16/11 com PR-WC32-01..03.
