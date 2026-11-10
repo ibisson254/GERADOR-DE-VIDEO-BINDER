@@ -9,9 +9,9 @@
 
 | Jogador | Ficheiro | Fonte / crédito |
 |---|---|---|
-| Diego Almeida | pendente | — |
-| Marcelo Cavalcante | pendente | — |
-| Isael Feitosa | pendente | — |
-| Rafael Kenji Marques Nishiyama | pendente | — |
-| João Quege | pendente | — |
-| João Jorge Sales Junior | pendente | — |
+| Diego Almeida | `diego_almeida.jpg` | captura de ecrã enviada pelo fundador a 10/11, 17:24 (miniaturas de uma resposta do ChatGPT; origem original das imagens não indicada), recortada ao rosto, 240×240 |
+| Marcelo Cavalcante | `marcelo_cavalcante.jpg` | captura de ecrã enviada pelo fundador a 10/11, 17:24 (miniaturas de uma resposta do ChatGPT; origem original das imagens não indicada), recortada ao rosto, 240×240 |
+| Isael Feitosa | `isael_feitosa.jpg` | captura de ecrã enviada pelo fundador a 10/11, 17:24 (miniaturas de uma resposta do ChatGPT; origem original das imagens não indicada), recortada ao rosto, 240×240 |
+| Rafael Kenji Marques Nishiyama | `rafael_kenji_marques_nishiyama.jpg` | captura de ecrã enviada pelo fundador a 10/11, 17:24 (miniaturas de uma resposta do ChatGPT; origem original das imagens não indicada), recortada ao rosto, 240×240 |
+| João Quege | `joao_quege.jpg` | captura de ecrã enviada pelo fundador a 10/11, 17:24 (miniaturas de uma resposta do ChatGPT; origem original das imagens não indicada), recortada ao rosto, 240×240 |
+| João Jorge Sales Junior | sem foto (silhueta) | a miniatura recebida mostra um salão de torneio, sem rosto identificável |

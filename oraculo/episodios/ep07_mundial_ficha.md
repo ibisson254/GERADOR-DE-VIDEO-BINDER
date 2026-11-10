@@ -41,7 +41,7 @@ Seis brasileiros. Cento e trinta e quatro convidados. Oito vagas no Top 8. Mundi
 | Loudness | −14,0 LUFS, pico −1,6 dBTP (v2) |
 | Fecho | Presente a partir de 57,37 s |
 | Folha de contacto | Vista do início ao fim; textos fora das linhas de fonte; legendas na faixa habitual da série |
-| Fotos de pessoas | Autorizadas pelo fundador a 10/11 (ver `oraculo/autorizacoes/`); entram quando os ficheiros chegarem a `oraculo/ep07/fotos/`, até lá silhuetas |
+| Fotos de pessoas | Autorizadas pelo fundador a 10/11 (ver `oraculo/autorizacoes/`); 5 fotos recortadas da captura enviada pelo fundador (17:24); João Jorge Sales Junior com silhueta (miniatura sem rosto) |
 | Representação × desempenho | Em blocos separados, com a definição de win rate na linha de fonte |
 | Previsão | Marcada no ecrã, registada antes da voz, `ciclo.py validar` OK |
 | P2 (v1) | Relatório do Meta parado 15 s → resolvido na v2 com as listas |
