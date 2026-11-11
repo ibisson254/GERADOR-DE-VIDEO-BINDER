@@ -32,6 +32,8 @@
 | Sol Ring (C21 263, 2021), arte Mike Bierek | Facto | https://scryfall.com/card/c21/263 | 11/11/2026 |
 
 ## Produção
+- **v2 (11/11/2026, 16:06, a pedido do fundador: "melhore a nível profissional") é a versão a publicar.** HTML/CSS renderizado no Chrome sem interface (`v2/render.py`, 2× e reduzido para 1080×1350): rasgo por ruído fractal (filtros SVG), papel com rugas e grão, concreto por baixo da tinta, cartazes antigos desbotados, fita translúcida, tipografia Anton (cartaz pop), Geist (marca) e Permanent Marker (etiquetas); telas do app maiores, com contador 01/02. Assets a pôr na pasta `v2/` (não versionados): PNG das cartas do Scryfall (`bolt`, `counter`, `elves`, `solring`), `logo_mark.png`, `scan.png` e `result.png` (recortes 150,120–930,1620 dos quadros 018 e 041), woff2 de Geist, Anton e Permanent Marker (@fontsource). Comando: `python3 -I v2/render.py v2 <saida>`.
+- v1 (`carrossel.py`, Pillow) fica como histórico; reprovada pelo fundador.
 - Gerador: `carrossel.py` (Pillow). `python3 -I carrossel.py <assets> <saida>`. Assets: PNG das cartas (Scryfall), `manaburn/logo/logo_mark.png`, recortes 150,120–930,1620 dos quadros 018 e 041, fontes Geist, Bangers e Permanent Marker (convertidas de woff2).
 - Cartas limpas e inteiras, fita só nos cantos de cima, rodapé com artista e © visível. Marca em preto #050A10 e esmeralda #10B981.
 - Easter egg: 0.

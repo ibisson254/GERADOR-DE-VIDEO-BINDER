@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Geist;src:url(Geist-Bold.woff2);font-weight:700}
+@font-face{font-family:Geist;src:url(Geist-Medium.woff2);font-weight:500}
+@font-face{font-family:Anton;src:url(anton-latin-400-normal.woff2)}
+@font-face{font-family:Marker;src:url(permanent-marker-latin-400-normal.woff2)}
+:root{--preto:#050A10;--ardosia:#0F172A;--esm:#10B981;--rosa:#EC7FA9;--amarelo:#FFE04A;--papel:#F4EFE4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#222}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--rosa);display:none}
+.slide.on{display:block}
+/* muro: concreto por baixo da tinta + grão */
+.muro::before{content:"";position:absolute;inset:0;background:url(tex_concreto.svg);mix-blend-mode:multiply;opacity:.55;z-index:0}
+.slide::after{content:"";position:absolute;inset:0;background:url(tex_grao.svg);mix-blend-mode:overlay;opacity:.5;pointer-events:none;z-index:50}
+.vinheta{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 45%,transparent 55%,rgba(60,0,25,.22));z-index:49;pointer-events:none}
+/* papel rasgado: fibra branca por trás + folha por cima, cada uma com o seu filtro */
+.papel{position:absolute;z-index:2}
+.papel .fibra{position:absolute;inset:-5px;background:#FBF8F1}
+.papel .folha{position:absolute;inset:0;background-blend-mode:multiply}
+.papel .conteudo{position:relative;height:100%}
+.papel.sombra .fibra{box-shadow:0 2px 3px rgba(60,10,30,.18)}
+.textura{background-image:url(tex_rugas.svg),url(tex_grao.svg)}
+.resto{opacity:.8;mix-blend-mode:multiply}
+.resto .folha{background-color:#EFE8DA}
+.resto span{font-family:Anton;color:#D8B8C2;position:absolute;line-height:.9;white-space:nowrap}
+/* cartaz pop */
+.pop .folha{background-color:var(--amarelo)}
+.pop.branco .folha{background-color:var(--papel)}
+.pop h1{font-family:Anton;font-weight:400;color:#111;text-transform:uppercase;line-height:.92;letter-spacing:.5px;position:relative}
+.pop h1 em{font-style:normal;color:#E0337A}
+.reticula{position:absolute;inset:0;background-image:radial-gradient(rgba(224,51,122,.55) 1.4px,transparent 1.8px);background-size:9px 9px;
+  -webkit-mask-image:linear-gradient(135deg,transparent 58%,#000 100%);mask-image:linear-gradient(135deg,transparent 58%,#000 100%);opacity:.7}
+/* cartaz BINDER */
+.binder .folha{background-color:var(--preto)}
+.binder .fibra{background:#E9E6DF}
+.binder .conteudo{color:#F3F5F7;font-family:Geist}
+.marca{display:flex;align-items:center;gap:16px;font-family:Geist;font-weight:700;font-size:34px;letter-spacing:-.3px}
+.marca img{width:58px;height:58px}
+.passo{font-family:Geist;font-weight:500;font-size:24px;color:#7C8796;letter-spacing:3px}
+.passo b{color:var(--esm);font-weight:700}
+.titulo{font-family:Geist;font-weight:700;letter-spacing:-2.5px;line-height:.98;color:#fff}
+.sub{font-family:Geist;font-weight:500;color:#A9B4C2;letter-spacing:-.3px;line-height:1.28}
+.traco{width:72px;height:6px;background:var(--esm);border-radius:3px}
+.nota{font-family:Geist;font-weight:500;font-size:21px;color:#6B7686}
+.tel{position:absolute;filter:drop-shadow(0 30px 50px rgba(16,185,129,.16)) drop-shadow(0 12px 24px rgba(0,0,0,.6))}
+.tel img{display:block;width:100%;clip-path:inset(2.5% 4.3% 2.4% 4.5% round 7.5%)}
+/* cartas e fita */
+.carta{position:absolute;z-index:5;filter:drop-shadow(0 3px 2px rgba(50,0,20,.28)) drop-shadow(0 14px 18px rgba(50,0,20,.22))}
+.carta img{display:block;width:100%}
+.fita{position:absolute;z-index:6;height:44px;background:linear-gradient(180deg,rgba(255,252,240,.72),rgba(236,228,206,.62));
+  box-shadow:0 1px 2px rgba(0,0,0,.12);
+  clip-path:polygon(0 6%,3% 0,6% 9%,9% 1%,12% 6%,88% 4%,91% 0,94% 8%,97% 2%,100% 7%,100% 93%,97% 100%,94% 92%,91% 99%,88% 95%,12% 96%,9% 100%,6% 91%,3% 99%,0 94%)}
+.fita::after{content:"";position:absolute;inset:0;background:url(tex_grao.svg);opacity:.25;mix-blend-mode:multiply}
+/* etiquetas à mão */
+.etq{position:absolute;z-index:8}
+.etq .folha{background-color:#FBF8F1}
+.etq .conteudo{font-family:Marker;color:#121212;display:flex;align-items:center;justify-content:center;white-space:nowrap}
+.selo{position:absolute;z-index:9}
+.selo .folha{background-color:var(--esm)}
+.selo .fibra{display:none}
+.selo .conteudo{font-family:Geist;font-weight:700;color:var(--preto);display:flex;align-items:center;justify-content:center;gap:10px;letter-spacing:1.5px;font-size:22px}
+.selo .ponto{width:12px;height:12px;border-radius:50%;background:var(--preto)}
+.creditos{position:absolute;z-index:8}
+.creditos .folha{background-color:#FBF8F1}
+.creditos .conteudo{font-family:Geist;font-weight:500;font-size:17.5px;line-height:1.5;color:#3A3A40;padding:16px 24px}
+.btn{display:inline-flex;align-items:center;gap:14px;background:var(--esm);color:var(--preto);font-family:Geist;font-weight:700;border-radius:999px}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+ <defs>
+  <!-- rasgo: ruído fractal desloca o contorno; seeds diferentes por peça -->
+  <filter id="r1" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="5" seed="3"/><feDisplacementMap in="SourceGraphic" scale="9" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="r2" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="5" seed="11"/><feDisplacementMap in="SourceGraphic" scale="14" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="r3" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="5" seed="27"/><feDisplacementMap in="SourceGraphic" scale="11" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="r4" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="4" seed="41"/><feDisplacementMap in="SourceGraphic" scale="6" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="r5" x="-8%" y="-8%" width="116%" height="116%"><feTurbulence type="fractalNoise" baseFrequency=".02" numOctaves="5" seed="58"/><feDisplacementMap in="SourceGraphic" scale="40" xChannelSelector="R" yChannelSelector="G"/></filter>
+ </defs>
+</svg>
+<div id="raiz"></div>
+<script>
+const P = (o) => { // papel rasgado
+  const f = o.f||'r1', ff = o.ff||'r2';
+  return `<div class="papel ${o.cls||''}" style="left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;transform:rotate(${o.r||0}deg);${o.st||''}">
+   <div class="fibra" style="filter:url(#${ff})"></div>
+   <div class="folha textura" style="filter:url(#${f})"></div>
+   <div class="conteudo">${o.c||''}</div></div>`;
+};
+const F = (x,y,w,r) => `<div class="fita" style="left:${x-w/2}px;top:${y-22}px;width:${w}px;transform:rotate(${r}deg)"></div>`;
+const C = (src,cx,cy,w,r) => { // carta inteira + fita só nos cantos de cima
+  const h = w*1.3954, a = r*Math.PI/180;
+  const canto = (sx)=>{const dx=sx*(w/2-16), dy=-(h/2-4); return [cx+dx*Math.cos(a)-dy*Math.sin(a), cy+dx*Math.sin(a)+dy*Math.cos(a)];};
+  const [x1,y1]=canto(-1),[x2,y2]=canto(1);
+  return `<div class="carta" style="left:${cx-w/2}px;top:${cy-h/2}px;width:${w}px;transform:rotate(${r}deg)"><img src="${src}.png"></div>`
+    + F(x1,y1,118,r-40) + F(x2,y2,118,r+40);
+};
+const E = (txt,cx,cy,r,t=44,bg='') => { const w = txt.length*t*.62+56, h=t*1.75;
+  return P({cls:'etq sombra',x:cx-w/2,y:cy-h/2,w,h,r,f:'r4',ff:'r4',st:bg,c:`<div class="conteudo" style="font-size:${t}px;height:100%">${txt}</div>`}) + F(cx,cy-h/2+4,84,r+3); };
+const restos = (s) => [ // cartazes antigos colados por baixo
+  P({cls:'resto',x:-80,y:-60+s*7,w:520,h:420,r:-2,f:'r5',ff:'r5',c:`<span style="left:40px;top:60px;font-size:150px">SHOW</span>`}),
+  P({cls:'resto',x:640,y:-90,w:560,h:380,r:3,f:'r5',ff:'r5',c:`<span style="left:30px;top:170px;font-size:120px">SÁBADO</span>`}),
+  P({cls:'resto',x:-120,y:880,w:480,h:560,r:4,f:'r5',ff:'r5',c:`<span style="left:150px;top:80px;font-size:110px">VENDE</span>`}),
+  P({cls:'resto',x:720,y:1010,w:520,h:420,r:-3,f:'r5',ff:'r5',c:`<span style="left:40px;top:40px;font-size:130px">HOJE</span>`}),
+].join('');
+const base = (inner, s) => `<div class="muro" style="position:absolute;inset:0"></div>${restos(s)}${inner}<div class="vinheta"></div>`;
+const BLOGO = `<div class="marca"><img src="logo_mark.png"><span>BINDER Vision</span></div>`;
+
+const slides = [];
+// 1 · capa
+slides.push(base(
+  P({cls:'pop sombra',x:64,y:78,w:952,h:520,r:-1.6,f:'r1',ff:'r2',c:`<div class="reticula"></div>
+     <h1 style="font-size:168px;padding:58px 0 0 64px">Sua coleção<br>parece este<br><em>muro?</em></h1>`})
+ + C('bolt',214,960,300,-5) + C('counter',540,905,300,1.5) + C('solring',866,975,300,5.5)
+ + E('arrasta →',870,1248,-3,40)
+,1));
+// 2 · o problema
+slides.push(base(
+  P({cls:'pop branco sombra',x:70,y:64,w:940,h:360,r:1.2,f:'r3',ff:'r1',c:`<div class="reticula"></div>
+     <h1 style="font-size:104px;padding:68px 0 0 58px;white-space:nowrap">Toda carta vem<br>com uma <em>pergunta.</em></h1>`})
+ + C('elves',300,800,360,-3) + C('bolt',785,790,360,3.5)
+ + E('Já tenho essa?',260,535,-5) + E('Qual edição?',830,520,4) + E('Quanto vale?',545,1085,-2,46,'')
+ + P({cls:'creditos sombra',x:70,y:1176,w:940,h:112,r:0,f:'r4',ff:'r4',c:`<div class="conteudo">Lightning Bolt (STA, 2021) arte Anato Finnstark · Llanowar Elves (DOM, 2018) arte Chris Rahn ·
+     Counterspell (MH2, 2021) arte Zack Stella · Sol Ring (C21, 2021) arte Mike Bierek. © Wizards of the Coast. Conteúdo de fã não oficial.</div>`})
+,2));
+// 3 e 4 · produto (tela real)
+const app = (n, tit, sub, img, nota) => base(
+  P({cls:'binder sombra',x:52,y:56,w:976,h:1238,r:-.6,f:'r1',ff:'r3',c:`
+    <div style="position:absolute;left:64px;top:60px;right:64px;display:flex;justify-content:space-between;align-items:center">${BLOGO}<div class="passo"><b>0${n}</b> / 02</div></div>
+    <div style="position:absolute;left:64px;top:220px;width:380px">
+      <div class="titulo" style="font-size:70px;white-space:nowrap">${tit}</div>
+      <div class="traco" style="margin:40px 0 34px"></div>
+      <div class="sub" style="font-size:34px">${sub}</div>
+    </div>
+    ${nota?`<div class="nota" style="position:absolute;left:64px;bottom:150px;width:380px;line-height:1.35">${nota}</div>`:''}
+    <div class="tel" style="left:470px;top:180px;width:470px"><img src="${img}.png"></div>`})
+ + F(140,82,150,-33) + F(940,74,150,33)
+ + P({cls:'selo',x:96,y:1188,w:330,h:58,r:-2.5,f:'r4',ff:'r4',c:`<div class="conteudo" style="height:100%"><span class="ponto"></span>TELA REAL DO APP</div>`})
+,n+2);
+slides.push(app(1,'Aponte<br>a câmera.','O BINDER Vision ajuda a identificar a carta.','scan'));
+slides.push(app(2,'Escolha a<br>impressão.','E veja um valor de referência da carta.','result','Valor estimado, não é oferta de compra.'));
+// 5 · CTA
+slides.push(base(
+  C('counter',230,1150,230,-7) + C('elves',850,1155,230,6)
+ + P({cls:'binder sombra',x:110,y:96,w:860,h:860,r:.8,f:'r3',ff:'r1',c:`
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+      <img src="logo_mark.png" style="width:220px;height:220px;margin-bottom:30px">
+      <div class="titulo" style="font-size:96px">BINDER Vision</div>
+      <div class="sub" style="font-size:40px;margin:26px 0 54px">Escaneie suas cartas<br>e organize seus decks.</div>
+      <div class="btn" style="font-size:36px;padding:28px 54px">Baixe a beta para Android</div>
+      <div class="nota" style="margin-top:28px;font-size:26px;color:#8A95A4">Google Play · link na bio</div>
+    </div>`})
+ + F(180,118,160,-35) + F(900,126,160,35)
+,5));
+document.getElementById('raiz').innerHTML = slides.map((s,i)=>`<div class="slide" id="s${i+1}">${s}</div>`).join('');
+</script>
+</body></html>
