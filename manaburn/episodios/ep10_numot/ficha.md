@@ -39,8 +39,12 @@ Faixas para o ElevenLabs (Talis/Erik, eleven_v4): `faixas_elevenlabs.txt`.
 - Riscos: pronúncia de "Numot", "Devastator" e "Wildfire" (grafia fonética no `tts`); conferir na escuta.
 
 ## Estado (11/11/2026)
-- Roteiro, dados do episódio, cartas e pacote de texto prontos.
-- **Bloqueado:** vozes (ElevenLabs, créditos) aguardam aprovação do roteiro pelo fundador. Sem vozes não há `data.js`, render, QC nem capa.
+- Roteiro aprovado pelo fundador (11/11, 14:19). Vozes geradas (Talis/Erik, eleven_v4, 1 tomada cada, 1.154 créditos).
+- Vídeo renderizado e conferido: 54,7 s com fecho, −14,5 LUFS, pico −1,8 dBTP, sem corte lateral. QC: `qc.md`.
+- **Não publicado.** Falta: escuta do fundador (pronúncias) e publicação manual.
 
 ## Entregáveis
-- [ ] Vídeo · [ ] Capa · [x] Legenda · [x] Comentário fixado · [x] Texto alternativo · [x] Fontes
+- [x] Vídeo · [x] Capa · [x] Legenda · [x] Comentário fixado · [x] Texto alternativo · [x] Fontes
+
+## Depois de publicar
+- Métrica principal: respostas A/B por 1.000 views. Secundária: partilhas.

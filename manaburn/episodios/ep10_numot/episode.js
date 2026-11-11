@@ -43,7 +43,7 @@ const EP = {
   tv: {
     channel: 'TV SAL', clock: '06:06',   // easter egg: 6/6, a resistência que o deixa sobreviver ao Wildfire
     // sem Salt Score do Numot no EDHREC (11/11/2026): o medidor mostra o dado do próprio Oracle
-    meter: { title: 'DEMOLIÔMETRO', value: '2', fill: 1, calc: ['terrenos por ataque', 'texto Oracle (Scryfall)', '11/11/2026'],
+    meter: { title: 'DEMOLIÔMETRO', value: '2', fill: 1, calc: ['por ataque', 'Oracle', '11/11/2026'],
              levels: [['DEVASTADOR', '#FF5A4E'], ['CHATO', '#F4B414'], ['DE BOA', '#6FB487']] },
     table: { label: ['JOGADORES', 'PUTOS'], value: '3 DE 4', note: ['o quarto é', 'o dono do dragão'] },
     news: [
