@@ -153,3 +153,6 @@ Revisão aplicada: o valor saiu da promessa principal (fica só como nota com fo
 - Repositório do estúdio: `comum/outro/LEIA-ME.md` (origem da gravação do scanner).
 
 Fontes: copiar Geist-*.woff2 de manaburn/node_modules/geist/dist/fonts/geist-sans/ para src/ antes de correr build.py.
+
+## v2 (11/11/2026, pedido do fundador)
+Paleta clara (papel #F2EEE6, tinta #0A0F14, esmeralda #0E9F6E, ouro #E0A526), 6 slides, `src/build_v2.py`, textos em `publicacao_v2.txt`. A LigaMagic aparece como destino da exportação e onde se confere o preço da Liga; o valor do app fica como referência (Scryfall). Telas novas do Perfil cortadas sem rostos nem nomes de terceiros.
