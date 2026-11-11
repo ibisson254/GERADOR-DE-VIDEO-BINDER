@@ -2,6 +2,8 @@
 Uso: python3 build_v2.py -> ../png_v2/
 Telas reais: scan.png (gravação 24/10), top3.png (Perfil, 11/11), sem rostos nem nomes de outros usuários."""
 import pathlib, asyncio
+BADGE='<div style="display:inline-flex;align-items:center;gap:22px;background:#000;border:3px solid #A6A6A6;border-radius:22px;padding:0 38px 0 30px;height:130px;color:#fff;text-align:left"><svg viewBox="0 0 24 24" width="70" height="70"><path fill="#FBBC04" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#4285F4" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#34A853" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#EA4335" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><div><div style="font-size:22px;font-weight:500;letter-spacing:.06em">DISPONÍVEL NO</div><div style="font-size:52px;font-weight:500;letter-spacing:-.01em;line-height:1">Google Play</div></div></div>'
+BADGE_S='<div style="display:inline-flex;align-items:center;gap:13px;background:#000;border:2px solid #A6A6A6;border-radius:13px;padding:0 23px 0 18px;height:80px;color:#fff;text-align:left"><svg viewBox="0 0 24 24" width="43" height="43"><path fill="#FBBC04" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#4285F4" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#34A853" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#EA4335" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><div><div style="font-size:13px;font-weight:500;letter-spacing:.06em">DISPONÍVEL NO</div><div style="font-size:32px;font-weight:500;letter-spacing:-.01em;line-height:1">Google Play</div></div></div>'
 from playwright.async_api import async_playwright
 
 HERE = pathlib.Path(__file__).parent
@@ -49,7 +51,7 @@ SLIDES = {
 <div class=pad style="top:360px">
 <h1>Seu fichário<br>tem 300 cartas.</h1>
 <h1 style="margin-top:44px;line-height:1.12">Vai digitar<br><span class=hl>uma por uma?</span></h1>
-</div><div class=arrow>arraste →</div>"""),
+</div><div style="position:absolute;left:80px;bottom:52px">"""+BADGE_S+"""</div><div class=arrow>arraste →</div>"""),
 
 "02_dor": page(2, """
 <div class=pad style="top:270px">
@@ -91,12 +93,14 @@ SLIDES = {
 <div class=foot>Exportação no formato aceito pela LigaMagic. O BINDER não tem parceria com a LigaMagic.</div>"""),
 
 "06_cta": page(6, """
-<div class=pad style="top:300px;text-align:center">
+<div class=pad style="top:250px;text-align:center">
 <h1>Escaneie aqui.<br><span class=e>Venda</span> <span class=o>lá.</span></h1>
-<p class=sub style="margin-top:48px">BINDER Vision · beta para Android</p>
-<div style="margin-top:70px"><span class=btn>Baixe no Google Play · link na bio</span></div>
+<p class=sub style="margin-top:56px;color:#F2EEE6;font-size:44px;font-weight:700">Baixe o BINDER Vision agora</p>
+<p class=sub style="margin-top:14px">e escaneie sua primeira carta hoje.</p>
+<div style="margin-top:60px">"""+BADGE+"""</div>
+<p class=sub style="margin-top:40px;color:#0E9F6E;font-weight:700">Link na bio ↑</p>
 </div>
-<div class=foot style="text-align:center">Só Android. Valores de referência são estimativas.</div>""", cls="ink"),
+<div class=foot style="text-align:center">Beta para Android. Valores de referência são estimativas. Google Play e o logótipo do Google Play são marcas da Google LLC.</div>""", cls="ink"),
 }
 
 async def main():
