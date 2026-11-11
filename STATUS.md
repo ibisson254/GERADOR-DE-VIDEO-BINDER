@@ -70,7 +70,7 @@ Aprovada pelo fundador (`nucleo/DECISOES.md`). Fase 1 implementada e integrada n
 
 ## Mana & Burn Ep. 10 "97 terrenos" · Padrão v3 (11/11/2026)
 
-Branch `manaburn/ep10-97-terrenos`. Episódio produzido e conferido (41,4 s em loop, −14,2 LUFS; variante com fecho 45,3 s, só para comparação). Ganchos v3 no motor (quadro do Conde, folhinha, pilha, loop) ligados por campos do episódio; decisão em `nucleo/DECISOES.md`. Ficha: `manaburn/episodios/ep10_97_terrenos/ficha.md`. Depende do fundador: ouvir a pronúncia de "Sanar", "Treasure Hunt" e "Magmakin Artillerist", conferir o preço na LigaMagic se quiser o gancho A, aprovar o merge e publicar. Vídeos não estão no repositório; recriam-se com `process.py voz/… && render.py` (vozes em `manaburn/burn.mp3`/`mana.mp3`).
+Branch `manaburn/ep10-97-terrenos`. Episódio produzido e conferido: 45,8 s com o fecho do scanner, −14,1 LUFS; pilha de terrenos retirada (revisão do fundador, 11/11, 21:22). Ganchos v3 no motor (quadro do Conde, folhinha, pilha, loop) ligados por campos do episódio; decisão em `nucleo/DECISOES.md`. Ficha: `manaburn/episodios/ep10_97_terrenos/ficha.md`. Depende do fundador: ouvir a pronúncia de "Sanar", "Treasure Hunt" e "Magmakin Artillerist", conferir o preço na LigaMagic se quiser o gancho A, aprovar o merge e publicar. Vídeos não estão no repositório; recriam-se com `process.py voz/… && render.py` (vozes em `manaburn/burn.mp3`/`mana.mp3`).
 
 ## Próximo passo concreto
 

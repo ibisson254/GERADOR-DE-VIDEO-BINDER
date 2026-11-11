@@ -69,7 +69,7 @@ A LigaMagic não abriu nesta sessão (falha do site; o Ibisson pode conferir no 
 - Vozes: ElevenLabs eleven_v4, flow "Mana & Burn — Ep. 10 (97 terrenos)" (Jafw0fuWuxBiWOCOilnr). Burn: Talis (E9a8LlXPNWtyvvSoZzrb), 290 créditos. Mana: Erik (nfiLpQ54jEQninp3nNqL), 524 créditos. Total 814. Uma geração cada, sem repetição. Grafias: Sanár, Tréjer Rânt, Mégmaquin Artílerist. Ritmo Burn ×1,06, Mana ×1,0.
 - Motor: kit v2 + ganchos v3 (`manaburn/kit/v3/patch_index_v3.py`, todos ligados por campos do episódio), `ordem_livre` e `loop` em `roteiro.py`/`process.py`. Episódios antigos: quadro do Ep. 2 igual antes/depois (diferença de 3×6 px na TV).
 - Conde de Manaforte: inventário em `conde/assets/`: neutro, desconfiado, indignado, admirado, medalhão (este é o retrato oval, não uma expressão; não usado). Mapa: 1–2 neutro · 3 desconfiado (ceticismo) · 4–6 indignado (desdém e impaciência, repetida) · 7–9 admirado (surpresa e surpresa maior, repetida) · 10 indignado (desdém) · 11–12 neutro. Interpretação: a expressão de cada plano é a da fala desse plano.
-- Easter egg: uma lata a mais em cima da pilha de terrenos do Burn (0–3,9 s). Só um.
+- Easter egg: nenhum (a lata ia na pilha de terrenos, que saiu na revisão de 11/11).
 
 ## 8. Controlo de qualidade (11/11/2026)
 | Critério | Resultado |
@@ -83,3 +83,8 @@ A LigaMagic não abriu nesta sessão (falha do site; o Ibisson pode conferir no 
 | Loop | Fim (−42 dB) → início (música entra em 0,15 s); sem estalo |
 | Capa e quadro 0 a 25% | Legíveis |
 | Fecho | QC acusa "fecho ausente" na versão loop: exceção pedida pelo fundador (prompt §11) |
+
+## 9. Revisão do fundador (11/11/2026, 21:22): "Coloque o vídeo que era padrão no final desse vídeo e tire essa pilha de carta de cima da mesa e da mão do Mana"
+- Fecho do scanner (`comum/outro/outro_binder_916.mp4`) no fim da versão a publicar. O loop deixa de ser o fim: depois de "...Quantos terrenos?" a imagem apaga até ao ponto verde (`EP.desliga`, estalo de TV de tubo) e entra o fecho, com a pancada final da música por baixo (`kit/v3/juntar_fecho_v3.py`). A versão sem fecho e a variante "vinheta" deixam de ser entregues.
+- Pilha de terrenos retirada da mesa e da mão do Mana (sai também a lata, que era o easter egg). Abertura passa para o close do Burn (cuB) com o texto do gancho; na fala 8 o Mana levanta o dedo.
+- QC: 45,83 s (41,97 s + fecho), −14,1 LUFS, pico −2,0 dBTP, fecho presente (dif. 0,07), `bordas.py` OK, trocas do quadro do Conde todas em corte.

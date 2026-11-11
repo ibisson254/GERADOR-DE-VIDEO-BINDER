@@ -101,7 +101,10 @@ OUTRO = EPI.get('outro', {})
 T_SCAN = round(T_SLAM + 0.44, 3) if OUTRO.get('scanner') else None   # bloco do scanner logo depois que a TV apaga
 SCAN_DUR = OUTRO.get('scanner') or 0
 T_END = round(T_SLAM + 2.0 + SCAN_DUR + (OUTRO.get('hold') or 0), 2)
-if LOOP: T_END = round(last['start'] + last['dur'] + LOOP.get('cauda', 0.12), 2)   # corte seco para o início   # hold: mais tempo para ler a assinatura
+if LOOP: T_END = round(last['start'] + last['dur'] + LOOP.get('cauda', 0.12), 2)   # corte seco para o início
+T_OFF = None
+if LOOP and LOOP.get('desliga'):   # imagem apaga no fim (fecho do scanner a seguir)
+    T_OFF = round(last['start'] + last['dur'] + LOOP['desliga'], 3); T_END = round(T_OFF + 0.70, 2)   # hold: mais tempo para ler a assinatura
 
 # ---------- eventos: os mesmos horários para a imagem (data.js) e para o som ----------
 js = open('episode.js', encoding='utf-8').read()
@@ -174,6 +177,8 @@ SFX = EPI.get('sfx', {})
 fxt = sfx.track(n, SR, lines, T_SLAM, ins_t, cuts, sh,
                 destaques=destaques if SFX.get('destaque') else (), raiva=raiva if SFX.get('raiva') else (),
                 carta=SFX.get('carta', 'pop'), tv=SFX.get('tv', True), zaps=zaps, zaps_leves=zaps_leves)
+if T_OFF is not None:
+    co_ = sfx.crt_off(SR); a_ = int(T_OFF * SR); fxt[a_:a_ + len(co_)] += co_[:max(0, n - a_), None] if co_.ndim == 1 else co_[:max(0, n - a_)]
 mix = m * g[:, None] + voice[:, None] + fxt
 mix /= np.max(np.abs(mix)) * 1.05
 with wave.open('_mix.wav', 'wb') as o:

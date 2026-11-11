@@ -12,6 +12,7 @@ EP.gancho     {html, fala}: texto grande do gancho desde o primeiro quadro até 
 EP.marca      {fala: N}: logo do BINDER no canto do ecrã da TV SAL a partir dessa fala.
 EP.loop       true: sem o efeito de ligar a TV no início, sem colapso da imagem, ponto, logo nem fade no fim.
               Na pancada só o ecrã da TV da sala apaga (fica a logo); as legendas continuam depois dela.
+EP.desliga    {apos}: no fim da última fala a imagem apaga até ao ponto verde (para colar o fecho do scanner).
 canal.subir   segundos que o medidor desse canal leva a subir (contador de dano).
 """
 import pathlib
@@ -107,5 +108,6 @@ troca("{ const lz=world.querySelector('#luztv'); if(lz) lz.style.opacity = op*Ma
 troca("  if(t>=T_LOGO+0.30){", "  if(t>=T_LOGO+0.30 && !EP.loop){")
 troca("const fade=clamp((t-(T_END-0.3))/0.3);", "const fade=EP.loop?0:clamp((t-(T_END-0.3))/0.3);")
 
+troca('  // bloco do scanner: gravação real do app (EP.outro.frames), entre a TV apagar e a logo\n', '  if(EP.desliga){ const L_=LINES[LINES.length-1], T_OFF=L_.start+L_.dur+(EP.desliga.apos||0.15);\n    if(t>=T_OFF){ const a=clamp((t-T_OFF)/0.24), b=clamp((t-T_OFF-0.24)/0.18);\n      tvEl.style.transform=`scale(${1-0.985*ease(b)},${Math.max(0.004,1-ease(a))})`; tvEl.style.filter=`brightness(${1+5*a})`; tvEl.style.opacity=t>T_OFF+0.44?0:1;\n      const u=clamp((t-T_OFF-0.40)/0.12); if(t>=T_OFF+0.40) dotEl.innerHTML=`<circle cx="540" cy="960" r="${8+6*u}" fill="${u<0.5?\'#FFFFFF\':\'#10B981\'}"/>`; } }\n  // bloco do scanner: gravação real do app (EP.outro.frames), entre a TV apagar e a logo\n')
 p.write_text(h, encoding='utf8')
 print('ganchos v3 aplicados em', p)

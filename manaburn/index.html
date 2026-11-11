@@ -636,6 +636,10 @@ function render(t){
   { const lz=world.querySelector('#luztv'); if(lz) lz.style.opacity = EP.loop ? 1-clamp((t-T_SLAM)/0.24) : op*Math.min(1,sy); }  // reflexo da TV apaga com ela
   tvEl.style.transform=`scale(${sx},${sy})`; tvEl.style.filter=`brightness(${br})`; tvEl.style.opacity=op;
   dotEl.innerHTML=''; logo.style.opacity=0;
+  if(EP.desliga){ const L_=LINES[LINES.length-1], T_OFF=L_.start+L_.dur+(EP.desliga.apos||0.15);
+    if(t>=T_OFF){ const a=clamp((t-T_OFF)/0.24), b=clamp((t-T_OFF-0.24)/0.18);
+      tvEl.style.transform=`scale(${1-0.985*ease(b)},${Math.max(0.004,1-ease(a))})`; tvEl.style.filter=`brightness(${1+5*a})`; tvEl.style.opacity=t>T_OFF+0.44?0:1;
+      const u=clamp((t-T_OFF-0.40)/0.12); if(t>=T_OFF+0.40) dotEl.innerHTML=`<circle cx="540" cy="960" r="${8+6*u}" fill="${u<0.5?'#FFFFFF':'#10B981'}"/>`; } }
   // bloco do scanner: gravação real do app (EP.outro.frames), entre a TV apagar e a logo
   if(scanEl){ const on = FX.scanner && T_SCAN!==null && t>=T_SCAN && t<T_SCAN+SCAN_DUR;
     scanEl.style.opacity = on ? Math.min(clamp((t-T_SCAN)/0.12), clamp((T_SCAN+SCAN_DUR-t)/0.12)) : 0;

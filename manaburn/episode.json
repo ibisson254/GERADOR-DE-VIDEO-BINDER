@@ -88,7 +88,8 @@
   "quebra": 0.75,
   "gap_pos": 0.55,
   "silencio": 0.55,
-  "cauda": 0.15
+  "cauda": 0.15,
+  "desliga": 0.15
  },
  "respiro_max": 0.14,
  "tempo": {

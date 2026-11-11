@@ -12,25 +12,24 @@ const EP = {
   bug: 'PLANTÃO DO IMPOSSÍVEL',
   poster: 'mago',          // Sanar é Goblin Sorcerer
   fx: { foco: true, tremor: true, poster: true, celular: false, scanner: false },
-  loop: true,              // versão a publicar: fim corta seco para o início (sem fecho do scanner)
+  loop: true,              // sem colapso da imagem na pancada: só a TV da sala apaga; a fala 12 fica no silêncio
+  desliga: { apos: 0.15 }, // depois da última fala: a imagem apaga até ao ponto verde e entra o fecho do scanner (11/11, pedido do fundador)
   card: { img: 'cards/sanar.png', cred: SANAR },
   pose: [
-    ['point_cam', 'rest', 'cam', 'other', 'angry', 'flat', 'pilha'],   // 1 B Esse deck tem 97 terrenos. E ganha no turno cinco.
+    ['point_cam', 'rest', 'cam', 'other', 'angry', 'flat', 'cuB'],     // 1 B Esse deck tem 97 terrenos. E ganha no turno cinco.
     ['rest', 'rest', 'other', 'cam', 'normal', 'flat', 'cuM'],         // 2 M E só três cartas de verdade.
     ['shrug', 'rest', 'other', 'other', 'up', 'flat', 'wide'],         // 3 B Mentira. Três cartas não ganham de ninguém.
     ['point_tv', 'finger', 'left', 'x', 'up', 'x', 'tvtext'],          // 4 M 1/3 Sanar
     ['point_tv', 'finger', 'left', 'x', 'up', 'x', 'tvtext'],          // 5 M 2/3 Treasure Hunt
     ['arms_up', 'rest', 'cam', 'other', 'angry', 'flat', 'cuB'],       // 6 B Não sobrou nenhuma. Travou.
     ['point_tv', 'x', 'screen', 'x', 'up', 'x', 'tvtext2'],            // 7 M Lê a carta. Tudo o que revelou vai pra mão.
-    ['rest', 'rest', 'other', 'cam', 'normal', 'flat', 'cuM'],         // 8 M Mais de oitenta terrenos... O resto, descarta. (pilha na mão)
+    ['rest', 'finger', 'other', 'cam', 'normal', 'up', 'cuM'],        // 8 M Mais de oitenta terrenos... O resto, descarta.
     ['point_tv', 'x', 'screen', 'x', 'angry', 'x', 'tvtext'],          // 9 M 3/3 Magmakin Artillerist (contador de dano)
     ['arms_up', 'rest', 'cam', 'other', 'angry', 'flat', 'cuB'],       // 10 B Isso devia ser banido! ...Mato a Sanar.
     ['rest', 'finger', 'other', 'cam', 'normal', 'up', 'wide'],        // 11 M Tarde demais. Mas uma carta para. Qual?  (pancada depois)
     ['shrug', 'rest', 'cam', 'other', 'up', 'flat', 'cuB'],            // 12 B ...Quantos terrenos?  (silêncio, corta para a fala 1)
   ],
-  cams: { pilha: { s: 2.2, cx: 450, cy: 1040, tx: 540, ty: 1060 } },
   gancho: { html: '97 TERRENOS.<br><span style="color:#fff">GANHA NO TURNO 5.</span>', fala: 0 },
-  pilha: { x: 445, y: 1132, lata: true, mao: 7 },
   marca: { fala: 10 },
   // Conde de Manaforte: uma expressão por fala; só muda no início de cada plano (ver patch_index_v3.py)
   quadroDir: 'kit/v3/conde/',
