@@ -2,6 +2,13 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+
+## 11/11/2026 (15:14) · Ritmo da v2 do Ep. 10 passa a padrão do Mana & Burn
+
+**O quê:** o ritmo da v2 do Ep. 10 (Numot) vira o padrão da série: falas aceleradas (Burn ×1,10, Mana ×1,15), silêncios ≤ 0,10 s, réplicas do Burn por cima, picos de reação a cada 2–3 falas do Burn (caixa alta ou braços para cima → tremor e som) e corte para a carta com destaque em cada prova do Mana. Valores em `manaburn/PERFIL.md` (Formato).
+**Porquê:** fundador, 11/11/2026: "A partir de agora esse ritmo tem que se tornar padrão."
+**Impacto:** episódios novos do Mana & Burn. Publicados não se reabrem. O motor não muda: os valores vão no `episode.json` de cada episódio.
+
 ## 08/11/2026 (00:05) · Burn no plano da TV
 
 **O quê:** correção de um defeito de render, não de modelo: no plano da TV os padrões SVG (cabelo raspado do Burn, xadrez da camisa, papel de parede) saíam transparentes porque os ids repetidos apontavam para o mundo escondido. O plano da TV passa a ter defs próprios (sufixo `_2`). O Burn sobe 40 px atrás da TV e mostra pescoço e ombros com a mesma camisa do plano geral, ligando-se ao braço que aponta.

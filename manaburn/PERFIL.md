@@ -35,6 +35,8 @@ Luz padrão em todos os episódios novos (decisão de 07/11/2026): sala antiga c
 
 Duração livre (constituição §6): a necessária para reter sem perder o ritmo. Referência histórica: 35–53 s nos episódios, 65 s no Giro de domingo. Bate-volta (14 falas no formato base), -14 LUFS.
 
+**Ritmo padrão (desde 11/11/2026, Ep. 10 v2):** no `episode.json`, `tempo` Burn 1,10 e Mana 1,15; `respiro_max` 0,10; `gap` negativo (−0,06 a −0,10) quando o Burn responde ao Mana, para ele entrar por cima; nenhum plano parado mais de ~4 s. Picos de reação: 1 palavra em CAIXA ALTA ou fala de braços para cima a cada 2–3 falas do Burn (dispara tremor e som). Recompensa visual: cada facto que o Mana prova tem corte para a carta com destaque no ponto exato (texto, custo, força/resistência). Referência: `manaburn/episodios/ep10_numot/`.
+
 Formato derivado **Giro de domingo**: três notícias da semana na TV SAL, reação da dupla a cada uma, pergunta "Comenta 1, 2 ou 3" (primeiro publicado a 01/11/2026).
 
 ## Ponte para o BINDER
