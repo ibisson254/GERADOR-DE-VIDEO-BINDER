@@ -70,7 +70,7 @@ Aprovada pelo fundador (`nucleo/DECISOES.md`). Fase 1 implementada e integrada n
 
 ## Mana & Burn Ep. 10 · Numot (11/11/2026)
 
-Branch `manaburn/ep10-numot`. Roteiro de 14 falas, `episode.json`/`episode.js`, cartas (Numot, Wildfire, Augustin IV, Dwarven Miner), legenda, comentário fixado, texto alternativo e fontes prontos em `manaburn/episodios/ep10_numot/`. Bloqueado: vozes no ElevenLabs aguardam aprovação do roteiro pelo fundador; depois `process.py` → `preview.py`/`bordas.py` → `render.py` → fecho → `comum/qc/qc_video.py` → capa.
+Branch `manaburn/ep10-numot`. Roteiro de 14 falas, `episode.json`/`episode.js`, cartas (Numot, Wildfire, Augustin IV, Dwarven Miner), legenda, comentário fixado, texto alternativo e fontes prontos em `manaburn/episodios/ep10_numot/`. Vídeo renderizado e conferido a 11/11 (54,7 s com fecho, −14,5 LUFS, pico −1,8 dBTP, bordas OK, QC sem problemas: `qc.md`). **Produzido, não publicado:** o fundador ouve as pronúncias (Numot, Devastator, Wildfire) e publica.
 
 ## Próximo passo concreto
 
