@@ -9,16 +9,16 @@ const EP = {
           cred: 'Na TV: Numot, the Devastator (Commander 2011), nº 215. Arte: Dan Dos Santos.<br>© Wizards of the Coast.' },
   pose: [
     ['point_tv', 'x', 'screen', 'x', 'angry', 'x', 'tv'],            // 1 B dragão que come terreno
-    ['point_tv', 'rest', 'tv', 'other', 'angry', 'flat', 'tvtext2'],   // 2 M seis de mana, mais três pra destruir
+    ['point_tv', 'rest', 'tv', 'other', 'angry', 'flat', 'tv2'],       // 2 M seis de mana, mais três pra destruir
     ['arms_up', 'rest', 'cam', 'other', 'angry', 'flat', 'cuB'],       // 3 B flanelinha
     ['point_tv', 'finger', 'left', 'x', 'up', 'x', 'tvtext'],          // 4 M Lê a carta
     ['point_tv', 'rest', 'tv', 'other', 'angry', 'flat', 'wide'],      // 5 B Wildfire (insert)
     ['rest', 'finger', 'other', 'cam', 'normal', 'up', 'cuM'],         // 6 M sacrifica, não destrói
-    ['shrug', 'rest', 'other', 'other', 'up', 'flat', 'push'],         // 7 B morre junto?
-    ['rest', 'rest', 'other', 'cam', 'normal', 'flat', 'cuM'],         // 8 M seis por seis
+    ['arms_up', 'rest', 'cam', 'other', 'up', 'flat', 'cuB'],         // 7 B morre junto?
+    ['point_tv', 'finger', 'left', 'x', 'up', 'x', 'tvtext2'],          // 8 M seis por seis (destaque no 6/6)
     ['arms_up', 'rest', 'cam', 'other', 'angry', 'flat', 'wide'],      // 9 B Augustin (insert)
     ['rest', 'chip', 'other', 'other', 'normal', 'flat', 'push'],      // 10 M um a mais / branca e azul um a menos
-    ['point_tv', 'rest', 'tv', 'other', 'angry', 'flat', 'wide'],      // 11 B anão (insert)
+    ['arms_up', 'rest', 'cam', 'other', 'angry', 'flat', 'cuB'],       // 11 B anão (insert)
     ['rest', 'rest', 'other', 'cam', 'normal', 'up', 'cuM'],           // 12 M só não básico
     ['point_cam', 'rest', 'cam', 'other', 'angry', 'flat', 'cuB'],     // 13 B pergunta A/B
     ['rest', 'remote', 'other', 'cam', 'normal', 'up', 'cuM'],         // 14 M Comenta aí (TV desliga)
@@ -37,7 +37,7 @@ const EP = {
                        [0.103, 0.791, 0.796, 0.032],     // "you may pay {2}{R}. If you do, destroy"
                        [0.103, 0.827, 0.490, 0.032]],    // "up to two target lands."
                zoom: 1.5 },
-    tvtext2: { rects: [[0.103, 0.791, 0.430, 0.032]],    // "you may pay {2}{R}."
+    tvtext2: { rects: [[0.745, 0.893, 0.180, 0.050]],    // "6/6" (resistência que sobrevive ao Wildfire)
                zoom: 1.5 },
   },
   tv: {

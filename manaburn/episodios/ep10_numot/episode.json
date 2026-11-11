@@ -5,7 +5,7 @@
   {
    "quem": "B",
    "tags": "[shouting]",
-   "legenda": "Mano, tem um *dragão* que come terreno! Cada pancada dele, somem *dois*!"
+   "legenda": "Mano, tem um *dragão* que come terreno! Cada pancada dele, somem *DOIS*!"
   },
   {
    "quem": "M",
@@ -58,7 +58,7 @@
   {
    "quem": "B",
    "tags": "[outraged]",
-   "legenda": "E tem um *anão* que explode terreno por *três manas*! Isso é *crime*!"
+   "legenda": "E tem um *anão* que explode terreno por *três manas*! Isso é *CRIME*!"
   },
   {
    "quem": "M",
@@ -79,18 +79,18 @@
  ],
  "gap": [
   0,
-  0.04,
-  0.02,
-  0.04,
+  0.0,
   -0.06,
-  0.06,
+  0.0,
+  -0.1,
   0.02,
-  0.06,
-  -0.06,
-  0.06,
+  -0.08,
+  0.0,
+  -0.1,
   0.02,
-  0.06,
-  0.06,
+  -0.08,
+  0.02,
+  0.0,
   0.38
  ],
  "ins": [
@@ -107,13 +107,13 @@
    0.3
   ]
  ],
- "respiro_max": 0.14,
+ "respiro_max": 0.1,
  "respiro_fala": {
   "7": 0.45
  },
  "tempo": {
-  "B": 1.06,
-  "M": 1.12
+  "B": 1.1,
+  "M": 1.15
  },
  "mix": {
   "intro_db": 0,
