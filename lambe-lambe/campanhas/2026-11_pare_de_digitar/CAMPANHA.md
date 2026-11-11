@@ -156,3 +156,6 @@ Fontes: copiar Geist-*.woff2 de manaburn/node_modules/geist/dist/fonts/geist-san
 
 ## v2 (11/11/2026, pedido do fundador)
 Paleta clara (papel #F2EEE6, tinta #0A0F14, esmeralda #0E9F6E, ouro #E0A526), 6 slides, `src/build_v2.py`, textos em `publicacao_v2.txt`. A LigaMagic aparece como destino da exportação e onde se confere o preço da Liga; o valor do app fica como referência (Scryfall). Telas novas do Perfil cortadas sem rostos nem nomes de terceiros.
+
+## v3 (11/11/2026, "refina essa ideia")
+Capa com Sol Ring, The One Ring e Rhystic Study (Scryfall); grade de 6 staples na dor; scanner em painel escuro; R$ 396 como herói; tela real do Binder com o botão Exportar (sem a linha Investido/Lucro); CTA com selo. `src/build_v3.py`; as imagens das cartas baixam-se de novo com `cartas/creditos.json`. Textos: `publicacao_v3.txt`.
