@@ -1,0 +1,114 @@
+{
+ "schema": 2,
+ "chamada": "97 terrenos",
+ "ordem_livre": true,
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Esse deck tem *97 terrenos*. E ganha no *turno cinco*."
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "E só três cartas de verdade."
+  },
+  {
+   "quem": "B",
+   "tags": "",
+   "legenda": "Mentira. Três cartas não ganham de ninguém."
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Primeira: *Sanar*. Revira o deck até achar duas cartas que não são terreno. E só tem duas.",
+   "tts": "Primeira: Sanár. Revira o deck até achar duas cartas que não são terreno. E só tem duas."
+  },
+  {
+   "quem": "M",
+   "tags": "",
+   "legenda": "Segunda: *Treasure Hunt*. Revela até achar uma que não é terreno.",
+   "tts": "Segunda: Tréjer Rânt. Revela até achar uma que não é terreno."
+  },
+  {
+   "quem": "B",
+   "tags": "",
+   "legenda": "Não sobrou nenhuma. *Travou.*"
+  },
+  {
+   "quem": "M",
+   "tags": "[tired]",
+   "legenda": "*Lê a carta.* Tudo o que revelou vai pra mão."
+  },
+  {
+   "quem": "M",
+   "tags": "",
+   "legenda": "*Mais de oitenta terrenos*. O limite é sete. O resto, descarta."
+  },
+  {
+   "quem": "M",
+   "tags": "",
+   "legenda": "Terceira: *Magmakin Artillerist*. Cada carta descartada, um de dano. Em *cada* oponente.",
+   "tts": "Terceira: Mégmaquin Artílerist. Cada carta descartada, um de dano. Em cada oponente."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "*Isso devia ser banido!* ...Não. Eu paro isso. *Mato a Sanar.*",
+   "tts": "Isso devia ser banido! ... Não. Eu paro isso. Mato a Sanár."
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Tarde demais. Mas *uma carta* para. Qual?"
+  },
+  {
+   "quem": "B",
+   "tags": "",
+   "legenda": "...Quantos terrenos?",
+   "tts": "... Quantos terrenos?"
+  }
+ ],
+ "gap": [
+  0,
+  0.08,
+  0.04,
+  0.12,
+  0.1,
+  0.06,
+  0.12,
+  0.18,
+  0.22,
+  0.06,
+  0.12,
+  0
+ ],
+ "loop": {
+  "apos": 10,
+  "quebra": 0.75,
+  "gap_pos": 0.55,
+  "silencio": 0.55,
+  "cauda": 0.15
+ },
+ "respiro_max": 0.14,
+ "tempo": {
+  "B": 1.06,
+  "M": 1.0
+ },
+ "mix": {
+  "intro_db": 0,
+  "fala_db": -14,
+  "pausa_db": -6,
+  "fecho_db": 0
+ },
+ "sfx": {
+  "tv": true,
+  "destaque": true,
+  "carta": "flick",
+  "raiva": true
+ },
+ "outro": {
+  "scanner": 0,
+  "hold": 0
+ }
+}

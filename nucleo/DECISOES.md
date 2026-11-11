@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 11/11/2026 · Mana & Burn Padrão v3 (Ep. 10 "97 terrenos"): ganchos v3, ordem livre, loop sem fecho, quadro do Conde e folhinha fixos
+
+**O quê:** (1) Novo esqueleto da série aprovado pelo fundador: promessa impossível com números, resposta em três degraus, objeção dita em voz alta, fim que encaixa no início (loop). (2) `manaburn/index.html` ganha ganchos ligados só por campos do `episode.js` (`kit/v3/patch_index_v3.py`): `quadro` (retrato do Conde de Manaforte na parede, expressões já existentes, troca só no corte), `calendario` (folhinha dos anos 90 com uma data verificada), `pilha` (terrenos genéricos na mesa e na mão do Mana), `cams`, `gancho` (texto desde o quadro 0), `marca` (logo do BINDER no ecrã da TV SAL), `loop` e `canal.subir`. (3) `roteiro.py`/`process.py`: `ordem_livre` (falas seguidas do mesmo personagem) e `loop` (pancada depois de uma fala escolhida, falas seguintes em silêncio, fim sem fade). (4) A versão a publicar do Ep. 10 não tem o fecho do scanner (desfaz o loop); a variante com `comum/outro/outro_binder_916.mp4` fica só para comparação. (5) Quadro do Conde e folhinha passam a fixos na série; ninguém os menciona.
+**Porquê:** prompt do fundador "Mana & Burn · Ep. 10 '97 terrenos' (Padrão v3)", aprovado a 11/11/2026, com execução contínua sem pausas de aprovação.
+**Impacto:** episódios antigos saem iguais (sem os campos novos; Ep. 2 conferido). A regra "todo vídeo termina com o fecho" (AGENTS.md §2) tem exceção registada para os episódios em loop do Padrão v3. O QC acusa "fecho ausente" nessas versões: é esperado.
+
 ## 08/11/2026 (00:05) · Burn no plano da TV
 
 **O quê:** correção de um defeito de render, não de modelo: no plano da TV os padrões SVG (cabelo raspado do Burn, xadrez da camisa, papel de parede) saíam transparentes porque os ids repetidos apontavam para o mundo escondido. O plano da TV passa a ter defs próprios (sufixo `_2`). O Burn sobe 40 px atrás da TV e mostra pescoço e ombros com a mesma camisa do plano geral, ligando-se ao braço que aponta.

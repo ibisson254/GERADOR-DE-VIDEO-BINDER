@@ -1,0 +1,12 @@
+{
+ "name": "Treasure Hunt",
+ "set_name": "Commander 2018",
+ "set": "c18",
+ "collector_number": "109",
+ "released_at": "2018-08-10",
+ "artist": "Daren Bader",
+ "oracle_text": "Reveal cards from the top of your library until you reveal a nonland card, then put all cards revealed this way into your hand.",
+ "scryfall_uri": "https://scryfall.com/card/c18/109/treasure-hunt?utm_source=api",
+ "border_color": "black",
+ "frame_effects": null
+}

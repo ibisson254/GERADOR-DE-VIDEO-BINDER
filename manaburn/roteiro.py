@@ -60,6 +60,7 @@ def carrega(path='episode.json'):
     if e.get('schema', 1) >= 2:
         falas = e['falas']
         for k, f in enumerate(falas):
+            if e.get('ordem_livre'): break             # Ep. 10 (11/11/2026): falas na ordem do roteiro, sem bate-volta obrigatório
             esperado = 'B' if k % 2 == 0 else 'M'
             if f['quem'] != esperado:
                 raise SystemExit(f'fala {k + 1}: era a vez do {esperado} (as falas alternam Burn e Mana)')
@@ -73,7 +74,7 @@ def carrega(path='episode.json'):
         e['falas'] = falas
     for f in e['falas']:
         f['tts_final'] = ((f.get('tags') or '') + ' ' + fonetico(f.get('tts') or f['legenda'])).strip()
-    if len(e['B']) != len(e['M']):
+    if len(e['B']) != len(e['M']) and not e.get('ordem_livre'):
         raise SystemExit('o Burn e o Mana precisam do mesmo número de falas')
     if len(e.get('gap', [])) not in (0, len(e['falas'])):
         raise SystemExit(f'gap tem {len(e["gap"])} valores para {len(e["falas"])} falas')

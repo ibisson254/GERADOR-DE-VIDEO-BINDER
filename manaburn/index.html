@@ -39,6 +39,7 @@ svg{position:absolute;left:0;top:0}
   <div id="bug"><span class="a">MANA &amp; BURN</span><span class="b">PLANTÃO DO BANIMENTO</span></div>
   <div id="ins"></div>
   <div id="sub"></div>
+  <div id="gancho" style="display:none;position:absolute;left:60px;right:160px;top:360px;text-align:center;font:400 112px/1.02 Bangers;letter-spacing:2px;color:#FFD84A;-webkit-text-stroke:14px #050A10;paint-order:stroke fill"></div>
   <div id="cred">Na TV: Q, Stacking the Deck (Magic: The Gathering | Star Trek, 2026), nº 165. Arte: Ryan Valle.<br>© Wizards of the Coast. Star Trek © CBS.</div>
  </div>
 </div>
@@ -192,6 +193,40 @@ const luzQuente = `<rect x="-400" y="-260" width="1880" height="1300" fill="url(
 const luzTV = `<g id="luztv" mask="url(#lzM)"><rect x="-400" y="-260" width="1880" height="1700" fill="url(#lzTV)" style="mix-blend-mode:screen"/></g>`;
 const luzFrente = `<rect x="-400" y="1120" width="1880" height="900" fill="url(#lzF)"/>`;
 // ---------- sala gasta ----------
+
+// ---------- ganchos v3 (Ep. 10, 11/11/2026): quadro do Conde, folhinha, pilha de terrenos ----------
+function quadroConde(){ return `<g transform="rotate(-2 372 420)"><path d="M372 318 L340 346 M372 318 L404 346" stroke="#2A2218" stroke-width="3"/><circle cx="372" cy="316" r="5" fill="#555"/>
+  <rect x="296" y="342" width="152" height="166" fill="#7A5A24" stroke="#1B1B1B" stroke-width="5"/><rect x="302" y="348" width="140" height="154" fill="none" stroke="#B8934A" stroke-width="5"/>
+  <path d="M300 346 l10 0 M436 504 l-12 0 M300 470 l0 20" stroke="#5A3E18" stroke-width="3"/>
+  <image id="condeimg" href="${EP.quadroDir}${EP.quadro[0]}.png" x="312" y="358" width="120" height="134" preserveAspectRatio="xMidYMid slice" opacity=".86"/>
+  <rect x="312" y="358" width="120" height="134" fill="#8F855E" opacity=".16"/></g>`; }
+function folhinha(c){ const x=34, y=452;
+  return `<g transform="rotate(-5 ${x+50} ${y+70})">
+  <path d="M${x+50} ${y-14} L${x+30} ${y+2} M${x+50} ${y-14} L${x+70} ${y+2}" stroke="#2A2218" stroke-width="2.5"/><circle cx="${x+50}" cy="${y-15}" r="4" fill="#555"/>
+  <rect x="${x}" y="${y}" width="100" height="58" fill="#E9D58A" ${S(3.5)}/>
+  <text x="${x+50}" y="${y+22}" text-anchor="middle" font-family="Bangers" font-size="17" letter-spacing="1" fill="#A8473A">${c.loja}</text>
+  <text x="${x+50}" y="${y+38}" text-anchor="middle" font-family="Geist" font-weight="700" font-size="9" fill="#5A4A2A">${c.frase}</text>
+  <text x="${x+50}" y="${y+51}" text-anchor="middle" font-family="Geist" font-weight="500" font-size="8" fill="#5A4A2A">${c.rodape||''}</text>
+  <rect x="${x+12}" y="${y+58}" width="76" height="84" fill="#EFE6CE" ${S(3)}/>
+  <text x="${x+50}" y="${y+73}" text-anchor="middle" font-family="Geist" font-weight="700" font-size="10" letter-spacing="1" fill="#2A2218">${c.mes} ${c.ano}</text>
+  <text x="${x+50}" y="${y+120}" text-anchor="middle" font-family="Bangers" font-size="50" fill="#2A2218">${c.dia}</text>
+  <text x="${x+50}" y="${y+136}" text-anchor="middle" font-family="Geist" font-weight="700" font-size="9" letter-spacing="1" fill="#A8473A">${c.semana}</text>
+  <path d="M${x+88} ${y+122} L${x+74} ${y+142} L${x+88} ${y+142} Z" fill="#D6CBAA" ${S(2.5)}/>
+  <rect x="${x}" y="${y}" width="100" height="142" fill="#C9B47A" opacity=".18"/></g>`; }
+function cartaTerra(x,y,r,k){ const ilha=k%2===0, c=ilha?'#5D86A8':'#B5603E';
+  return `<g transform="rotate(${r} ${x} ${y})"><rect x="${x-26}" y="${y-36}" width="52" height="72" rx="4" fill="#EDE3C8" ${S(2.5)}/>
+   <rect x="${x-20}" y="${y-28}" width="40" height="36" fill="${c}"/>
+   ${ilha?`<path d="M${x-16} ${y-6} q8 -6 16 0 q8 6 16 0" stroke="#EDE3C8" stroke-width="2.5" fill="none"/>`:`<path d="M${x-16} ${y+4} L${x-4} ${y-18} L${x+4} ${y-6} L${x+10} ${y-14} L${x+18} ${y+4} Z" fill="#7A3A22"/>`}
+   <rect x="${x-20}" y="${y+14}" width="40" height="5" fill="#C9BE9C"/></g>`; }
+function pilhaTerras(cx,base,n,lata){ let s=`<ellipse cx="${cx}" cy="${base+4}" rx="46" ry="10" fill="#2A2218" opacity=".35"/>`;
+  for(let k=0;k<n;k++) s+=cartaTerra(cx+(R(k+300)-.5)*14, base-30-k*6, (R(k+400)-.5)*22, k);
+  if(lata) s+=`<g transform="rotate(8 ${cx+6} ${base-30-n*6-40})"><rect x="${cx-10}" y="${base-30-n*6-66}" width="32" height="50" rx="5" fill="#C8352B" ${S(3)}/>
+    <rect x="${cx-10}" y="${base-30-n*6-50}" width="32" height="12" fill="#F2EBDA"/><ellipse cx="${cx+6}" cy="${base-30-n*6-66}" rx="16" ry="5" fill="#B9B6AA" ${S(2.5)}/></g>`;
+  return s; }
+function pilhaMarkup(i){ const P=EP.pilha; if(!P) return '';
+  if(P.mao!=null && i>=P.mao) return `<g transform="translate(150 862) rotate(-12) scale(.9) translate(-150 -862)">${pilhaTerras(150,900,13,false)}</g>`;
+  const x=P.x||440, y=P.y||1140; return `<g transform="translate(${x} ${y}) scale(1.3) translate(${-x} ${-y})">${pilhaTerras(x, y, 16, P.lata)}</g>`; }
+
 const room = `
  <rect x="-400" y="-260" width="1880" height="1270" fill="url(#wall)"/>
  <rect x="-400" y="-260" width="1880" height="1270" filter="url(#blotch)" opacity=".75"/>
@@ -211,18 +246,20 @@ const room = `
  <path d="M120 -40 L150 40 L132 90 L176 160 L160 220 L200 300 M150 40 L190 70 M176 160 L214 150" fill="none" stroke="${K}" stroke-width="3"/>
  <!-- marca de quadro que caiu + prego -->
  <rect x="880" y="120" width="120" height="150" fill="#C3BA94" opacity=".6"/><circle cx="940" cy="112" r="5" fill="#555" ${S(2.5)}/>
- <!-- quadro torto com vidro rachado -->
+ ${EP.quadro?quadroConde():`<!-- quadro torto com vidro rachado -->
  <g transform="rotate(7 370 485)"><rect x="318" y="430" width="104" height="104" fill="#6E4A2A" ${S(5)}/>
   <rect x="330" y="442" width="80" height="80" fill="#C98A45"/><rect x="330" y="488" width="80" height="34" fill="#4E7392"/>
   <circle cx="368" cy="486" r="13" fill="#E2C25A"/><path d="M344 522 Q350 492 358 472 M358 472 q-14 2 -20 10 M358 472 q14 -2 20 8" stroke="#2A2218" stroke-width="3.5" fill="none"/>
   <path d="M334 446 L372 494 L406 470 M372 494 L360 520" stroke="#F2EEDC" stroke-width="2" fill="none" opacity=".8"/></g>
+ `}
  ${fan}
- <!-- calendário velho -->
+ ${EP.calendario?folhinha(EP.calendario):`<!-- calendário velho -->
  <g transform="rotate(-6 84 530)"><rect x="40" y="470" width="88" height="118" fill="#E8DFC4" ${S(4)}/>
   <rect x="40" y="470" width="88" height="32" fill="#A8473A" ${S(4)}/>
   <text x="84" y="495" text-anchor="middle" font-family="Bangers" font-size="24" fill="#F2EBDA">2019</text>
   ${[0,1,2,3].map(r=>[0,1,2,3].map(c=>`<rect x="${50+c*19}" y="${512+r*17}" width="12" height="9" fill="#B9AA8C"/>`).join('')).join('')}
   <path d="M128 560 L112 588 L128 588 Z" fill="#CFC5A6" ${S(3)}/></g>
+ `}
  <!-- tomada com benjamim -->
  <rect x="1040" y="930" width="34" height="46" rx="4" fill="#E0D8C0" ${S(3.5)}/><rect x="1032" y="944" width="50" height="20" fill="#F0EADA" ${S(3.5)}/>
  <path d="M1040 964 Q1000 990 1010 1040 M1064 964 Q1076 1010 1050 1060" stroke="${K}" stroke-width="4" fill="none"/>
@@ -451,11 +488,12 @@ function tvFX(fx,uid){ if(!TVP||!fx) return '';
    <text x="700" y="1102" text-anchor="middle" font-family="Bangers" font-size="38" fill="#FF5A4E">${fx.m>=1?tb.value:'…'}</text>
    ${tb.note.map((l,k)=>`<text x="700" y="${1126+k*16}" text-anchor="middle" font-family="Geist" font-weight="500" font-size="13" fill="#D8D2C0">${l}</text>`).join('')}`:''}
    <text x="700" y="1212" text-anchor="middle" font-family="Geist" font-weight="700" font-size="22" fill="#9AA3B2">${TVP.clock}</text>
+   ${fx.mk?'<image href="logo/logo_mark.png" x="621" y="1168" width="48" height="48" opacity=".95"/>':''}
   </g>`; }
 // relógio da TV: conta só o tempo em que a TV está em primeiro plano, para cada plano mostrar manchetes novas
 const TVSEG=[]; { let b=0; LINES.forEach((l,k)=>{ if(!TVSHOTS_ALL.includes(POSE[k][6])) return; const D=(k+1<LINES.length?LINES[k+1].start:T_SLAM)-l.start, c=Math.max(1,Math.round(D/NEWS_T)); TVSEG[k]={b,c,D}; b+=c; }); }
 function tvState(t,i,shot){ const big=TVSHOTS_ALL.includes(shot)&&TVSEG[i], g=TVSEG[i];
-  return {c:canalIdx(i), n:big?g.b+Math.max(0,Math.min(g.c-1,Math.floor((t-LINES[i].start)/g.D*g.c))):Math.floor(t/NEWS_T), live:Math.floor(t*2)%2===0, m:big?Math.round(ease(clamp((t-LINES[i].start)/(i===0&&FX.foco?2.0:0.9)))*10)/10:1}; }
+  return {c:canalIdx(i), n:big?g.b+Math.max(0,Math.min(g.c-1,Math.floor((t-LINES[i].start)/g.D*g.c))):Math.floor(t/NEWS_T), live:Math.floor(t*2)%2===0, mk:!!(EP.marca&&i>=EP.marca.fala), m:big?(su=>Math.round(ease(clamp((t-LINES[i].start)/(su||(i===0&&FX.foco?2.0:0.9))))*(su?60:10))/(su?60:10))(CANAIS&&CANAIS[canalIdx(i)].subir):1}; }
 function shot2Markup(st){
   return `
   <g filter="url(#rough)">
@@ -482,8 +520,8 @@ function shot2Markup(st){
 // ---------- montagem ----------
 const world=document.getElementById('world'), shot2=document.getElementById('shot2'), fx=document.getElementById('fx');
 const tvEl=document.getElementById('tv'), dotEl=document.getElementById('dot'), logo=document.getElementById('logo'), sub=document.getElementById('sub');
-world.innerHTML = defs + `<g id="cam">${luzDefs}<g filter="url(#rough)">${room}</g>${luzQuente}${tvSmall}<g filter="url(#rough)">${tvSmallLine}${tvTop}</g><g id="tvfx" transform="translate(648.95 290.47) scale(0.373)"></g>${tvSmallCard}<g filter="url(#rough)">${couchBack}${couchFront}</g>
-  <g id="mana" filter="url(#rough2)"></g><g id="burn" filter="url(#rough2)"></g>${luzTV}<g filter="url(#rough)" transform="translate(-20 -96) scale(1.04)">${table}</g>${luzFrente}</g>`;
+world.innerHTML = defs + `<g id="cam">${luzDefs}<g filter="url(#rough)">${room}</g>${luzQuente}${tvSmall}<g filter="url(#rough)">${tvSmallLine}${tvTop}</g><g id="tvfx" transform="translate(648.95 290.47) scale(0.373)"></g>${tvSmallCard}<g id="tvoffw" transform="translate(648.95 290.47) scale(0.373)"></g><g filter="url(#rough)">${couchBack}${couchFront}</g>
+  <g id="mana" filter="url(#rough2)"></g><g id="burn" filter="url(#rough2)"></g>${luzTV}<g filter="url(#rough)" transform="translate(-20 -96) scale(1.04)">${table}</g><g id="pilha" filter="url(#rough2)"></g>${luzFrente}</g>`;
 // plano da TV com defs próprios (sufixo _2): com ids repetidos, url(#buzz) apontava para o mundo escondido
 // e os padrões (cabelo do Burn, xadrez, papel de parede) saíam transparentes. Corrigido a 08/11/2026.
 const DEF_IDS = [...defs.matchAll(/id="([\w-]+)"/g)].map(m=>m[1]);
@@ -537,6 +575,7 @@ function speaking(who,t){ // fala ativa daquele personagem (permite sobreposiç�
   let k=-1; LINES.forEach((l,i)=>{ if(l.who===who && t>=l.start && t<l.start+l.dur) k=i; }); return k; }
 function blinking(arr,t){return arr.some(b=>t>=b&&t<b+0.12);}
 function camera(t,shot){
+  if(EP.cams&&EP.cams[shot]) return EP.cams[shot];
   const W={s:1,cx:540,cy:675,tx:540,ty:875};
   if(shot==='cuM') return {s:1.45,cx:235,cy:650,tx:520,ty:922};
   if(shot==='cuB') return {s:1.5,cx:485,cy:700,tx:560,ty:832};
@@ -548,6 +587,11 @@ function camera(t,shot){
 let last='';
 function render(t){
   const i=Math.max(0,lineAt(t)), P=POSE[i], tq=Math.floor(t*12)/12, shot=P[6];
+  if(EP.quadro){ let r=i; while(r>0&&POSE[r-1][6]===shot) r--; const im=document.getElementById('condeimg'), u=EP.quadroDir+EP.quadro[r]+'.png'; if(im&&im.getAttribute('href')!==u) im.setAttribute('href',u); }
+  if(EP.pilha){ const pe=world.querySelector('#pilha'), pk=(EP.pilha.mao!=null&&i>=EP.pilha.mao)?'m':'t'; if(pe.dataset.k!==pk){ pe.innerHTML=pilhaMarkup(i); pe.dataset.k=pk; } }
+  if(EP.loop){ const off=world.querySelector('#tvoffw'), a=t>=T_SLAM?clamp((t-T_SLAM)/0.24):0, ok=String(Math.round(a*10));
+    if(off.dataset.k!==ok){ off.dataset.k=ok; off.innerHTML=a>0?`<rect x="79" y="682" width="704" height="562" rx="18" fill="#07090C" opacity="${a}"/>`+(EP.marca?`<image href="logo/logo_mark.png" x="621" y="1168" width="48" height="48" opacity="${0.55*a}"/>`:''):''; } }
+  if(EP.gancho){ const g=document.getElementById('gancho'), l=LINES[EP.gancho.fala||0], on=t<l.start+l.dur+0.1; if(g.innerHTML!==EP.gancho.html) g.innerHTML=EP.gancho.html; g.style.display=on?'block':'none'; }
   const kM=speaking('M',tq), kB=speaking('B',tq);
   const mM=mouthFor(kM,tq), mB=mouthFor(kB,tq), clickOn=t>=T_CLICK && t<T_CLICK+0.16;
   const bM=blinking(BLINK_M,tq), bB=blinking(BLINK_B,tq);
@@ -581,22 +625,22 @@ function render(t){
   // legenda estilo TV: a fala de quem está falando agora
   const ks=[kM,kB].filter(k=>k>=0); const k=ks.length?Math.max(...ks):-1;
   let txt=''; if(k>=0) txt=LINES[k].text; else { const j=lineAt(t); if(j>=0 && t<LINES[j].start+LINES[j].dur+0.25) txt=LINES[j].text; }
-  if(t>=T_SLAM) txt='';
+  if(t>=T_SLAM && !EP.loop) txt='';
   const html=txt.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\*([^*]+)\*/g,'<span class="k">$1</span>');
   if(sub.dataset.h!==html){ sub.innerHTML=html; sub.dataset.h=html; }
   // liga e desliga a TV
   let sx=1, sy=1, br=1, op=1;
-  if(t<0.22){ const p=clamp(t/0.22); sy=Math.max(0.006,ease(p)); sx=p<0.35?0.6+p:1; br=1+3*(1-p); }
-  if(t>=T_SLAM){ const a=clamp((t-T_SLAM)/0.24), b=clamp((t-T_SLAM-0.24)/0.18);
+  if(t<0.22 && !EP.loop){ const p=clamp(t/0.22); sy=Math.max(0.006,ease(p)); sx=p<0.35?0.6+p:1; br=1+3*(1-p); }
+  if(t>=T_SLAM && !EP.loop){ const a=clamp((t-T_SLAM)/0.24), b=clamp((t-T_SLAM-0.24)/0.18);
     sy=Math.max(0.004,1-ease(a)); sx=1-0.985*ease(b); br=1+5*a; op = t>T_SLAM+0.44 ? 0 : 1; }
-  { const lz=world.querySelector('#luztv'); if(lz) lz.style.opacity = op*Math.min(1,sy); }  // reflexo da TV apaga com ela
+  { const lz=world.querySelector('#luztv'); if(lz) lz.style.opacity = EP.loop ? 1-clamp((t-T_SLAM)/0.24) : op*Math.min(1,sy); }  // reflexo da TV apaga com ela
   tvEl.style.transform=`scale(${sx},${sy})`; tvEl.style.filter=`brightness(${br})`; tvEl.style.opacity=op;
   dotEl.innerHTML=''; logo.style.opacity=0;
   // bloco do scanner: gravação real do app (EP.outro.frames), entre a TV apagar e a logo
   if(scanEl){ const on = FX.scanner && T_SCAN!==null && t>=T_SCAN && t<T_SCAN+SCAN_DUR;
     scanEl.style.opacity = on ? Math.min(clamp((t-T_SCAN)/0.12), clamp((T_SCAN+SCAN_DUR-t)/0.12)) : 0;
     if(on){ const fr=Math.min(SCAN_N-1, Math.floor((t-T_SCAN)*SCAN_FPS)); const src=SCAN_SRC(fr); if(scanImg.dataset.src!==src){ scanImg.src=src; scanImg.dataset.src=src; } } }
-  if(t>=T_LOGO+0.30){
+  if(t>=T_LOGO+0.30 && !EP.loop){
     const u=clamp((t-T_LOGO-0.36)/0.22), v=clamp((t-T_LOGO-0.50)/0.38);
     const cy=960-120*ease(u), r=8+22*ease(u), col=u<0.5?'#FFFFFF':'#10B981';
     if(v<0.6) dotEl.innerHTML=`<g opacity="${1-v/0.6}"><circle cx="540" cy="${cy}" r="${r+14*(1-u)}" fill="${col}" opacity=".25"/><circle cx="540" cy="${cy}" r="${r}" fill="${col}"/></g>`;
@@ -606,7 +650,7 @@ function render(t){
   let shk=''; if(FX.tremor && t<T_SLAM){ const e=EV.raiva.find(e=>t>=e && t<e+0.15);
     if(e!==undefined){ const P4=[[4,-3],[-4,3],[3,4],[-3,-4],[2,-2]], j=P4[Math.floor((t-e)*30)%5]; shk=`translate(${j[0]}px,${j[1]}px) scale(1.012)`; } }
   if(stageEl.style.transform!==shk) stageEl.style.transform=shk;
-  const fade=clamp((t-(T_END-0.3))/0.3); document.body.style.filter = fade>0?`brightness(${1-fade})`:'';
+  const fade=EP.loop?0:clamp((t-(T_END-0.3))/0.3); document.body.style.filter = fade>0?`brightness(${1-fade})`:'';
 }
 const backOut=x=>{const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2);};
 function drawLogo(v,q,r){

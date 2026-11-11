@@ -71,3 +71,10 @@ Mesa de noite de Commander (decks com sleeves, cartas genéricas, d20, dados, de
 - A tela inteira da TV cabe sempre na largura do vídeo (zoom máximo ≈1,506, margem de 10 px); `bordas.py` confere.
 - Medidor só com dado real e fonte na tela. Bloco do scanner só com gravação real do app.
 - Duração livre (constituição §6).
+
+## Padrão v3 (11/11/2026, Ep. 10)
+
+- Ganchos novos no `index.html`, todos ligados por campos do `episode.js` (descrição em `kit/v3/patch_index_v3.py`): `quadro` + `quadroDir` (Conde de Manaforte, expressões em `kit/v3/conde/`), `calendario`, `pilha`, `cams`, `gancho`, `marca`, `loop`, `canal.subir`.
+- `episode.json`: `"ordem_livre": true` deixa falas seguidas do mesmo personagem; `"loop": {"apos": N, "quebra", "gap_pos", "silencio", "cauda"}` põe a pancada depois da fala N e corta seco no fim.
+- Áudio final: `trilha_final.wav` → loudnorm em duas passagens (I −14, TP −1,5) → limitador antes do AAC (o ruído das trocas de canal passava de 0 dBTP no AAC). Comandos na ficha do Ep. 10.
+- Quadro do Conde: conferir com um varrimento quadro a quadro que cada troca cai num corte (ficha do Ep. 10, §8).

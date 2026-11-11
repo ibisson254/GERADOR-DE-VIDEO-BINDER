@@ -68,6 +68,10 @@ Aprovada e aplicada no `manaburn/index.html`: mesa de Commander, mesa acima das 
 
 Aprovada pelo fundador (`nucleo/DECISOES.md`). Fase 1 implementada e integrada na `main` (07/11, "Prossiga" do fundador): `manaburn/luz.py` + `render.py` (por defeito), docs e checklist. Por aprovar: fase 2 (luz no `index.html`); objetos novos e planos fixos. Especial "Precon em jogo" e V2 integrados na `main` no mesmo merge.
 
+## Mana & Burn Ep. 10 "97 terrenos" · Padrão v3 (11/11/2026)
+
+Branch `manaburn/ep10-97-terrenos`. Episódio produzido e conferido (41,4 s em loop, −14,2 LUFS; variante com fecho 45,3 s, só para comparação). Ganchos v3 no motor (quadro do Conde, folhinha, pilha, loop) ligados por campos do episódio; decisão em `nucleo/DECISOES.md`. Ficha: `manaburn/episodios/ep10_97_terrenos/ficha.md`. Depende do fundador: ouvir a pronúncia de "Sanar", "Treasure Hunt" e "Magmakin Artillerist", conferir o preço na LigaMagic se quiser o gancho A, aprovar o merge e publicar. Vídeos não estão no repositório; recriam-se com `process.py voz/… && render.py` (vozes em `manaburn/burn.mp3`/`mana.mp3`).
+
 ## Próximo passo concreto
 
 Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a pronúncia de "Joven", "Chandler" e "Eron" e publica o pacote (`conde/legendas/ep004_joven_legenda.txt`, ficha em `conde/episodios/ep004_joven_ficha.md`; o vídeo não está no repositório, recria-se com `python3 conde/montar_ep004.py`, desde que `conde/ep004/audio/narracao.wav` exista: se faltar, ver o flow ElevenLabs em `conde/episodios/ep004_fontes.txt`). Depois: próximo Giro ou episódio do Mana & Burn com o kit v2 de `manaburn/`; validar com `python3 -I comum/qc/qc_video.py`.

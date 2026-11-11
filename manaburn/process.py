@@ -68,12 +68,22 @@ def level(seg, target=0.11):
     return np.tanh(y * 1.6) / 1.6          # segura os picos sem achatar a voz
 burn = [level(x) for x in burn]; mana = [level(x) for x in mana]
 order = []
-for k in range(len(TEXT['B'])):
-    order.append(('B', burn[k], TEXT['B'][k])); order.append(('M', mana[k], TEXT['M'][k]))
+if EPI.get('ordem_livre'):      # Ep. 10 (11/11/2026): segue a ordem das falas do episode.json (duas falas seguidas do mesmo personagem)
+    nk = {'B': 0, 'M': 0}; seg_ = {'B': burn, 'M': mana}
+    for f in EPI['falas']:
+        q = f['quem']; order.append((q, seg_[q][nk[q]], TEXT[q][nk[q]])); nk[q] += 1
+else:
+    for k in range(len(TEXT['B'])):
+        order.append(('B', burn[k], TEXT['B'][k])); order.append(('M', mana[k], TEXT['M'][k]))
+LOOP = EPI.get('loop')          # {"apos": fala da pancada (0-based), "quebra": s antes do fim dessa fala em que a música para,
+                                #  "gap_pos": silêncio entre a pancada e a fala seguinte, "silencio": s de pancada antes do silêncio, "cauda": s no fim}
 
-t = 0.35; lines = []
+t = 0.35; lines = []; T_SLAM = None
 for i, (who, seg, txt) in enumerate(order):
     if i: t = lines[-1]['start'] + lines[-1]['dur'] + GAP[i]
+    if LOOP and i == LOOP['apos'] + 1:          # a pancada cai depois da fala "apos"; as falas seguintes ficam no silêncio
+        L_ = lines[LOOP['apos']]; COMENTA = L_['start'] + L_['dur'] - LOOP.get('quebra', 1.0)
+        T_SLAM = trilha.slam_time(MUSIC, COMENTA); t = max(t, T_SLAM + LOOP.get('gap_pos', 0.35))
     dur = len(seg) / SR
     hop = SR // 12; e = np.array([np.sqrt((seg[j:j + hop] ** 2).mean()) for j in range(0, len(seg) - hop // 2, hop)])
     e = np.clip(e / (np.percentile(e, 90) + 1e-6), 0, 1)
@@ -81,12 +91,17 @@ for i, (who, seg, txt) in enumerate(order):
     print(f'{i+1:2d} {who} {t:6.2f}s +{dur:4.2f}s  {txt}')
 
 last = lines[-1]
-T_SLAM = trilha.slam_time(MUSIC, last['start'])
-assert last['start'] + last['dur'] < T_SLAM - 0.05, 'o "Comenta aí" passou da pancada'
+if LOOP:
+    assert T_SLAM is not None and lines[LOOP['apos']]['start'] + lines[LOOP['apos']]['dur'] < T_SLAM - 0.05, 'a fala da pancada passou da pancada'
+else:
+    COMENTA = last['start']
+    T_SLAM = trilha.slam_time(MUSIC, COMENTA)
+    assert last['start'] + last['dur'] < T_SLAM - 0.05, 'o "Comenta aí" passou da pancada'
 OUTRO = EPI.get('outro', {})
 T_SCAN = round(T_SLAM + 0.44, 3) if OUTRO.get('scanner') else None   # bloco do scanner logo depois que a TV apaga
 SCAN_DUR = OUTRO.get('scanner') or 0
-T_END = round(T_SLAM + 2.0 + SCAN_DUR + (OUTRO.get('hold') or 0), 2)   # hold: mais tempo para ler a assinatura
+T_END = round(T_SLAM + 2.0 + SCAN_DUR + (OUTRO.get('hold') or 0), 2)
+if LOOP: T_END = round(last['start'] + last['dur'] + LOOP.get('cauda', 0.12), 2)   # corte seco para o início   # hold: mais tempo para ler a assinatura
 
 # ---------- eventos: os mesmos horários para a imagem (data.js) e para o som ----------
 js = open('episode.js', encoding='utf-8').read()
@@ -124,7 +139,7 @@ voice = np.zeros(n, np.float32)
 for l, (_, seg, _) in zip(lines, order):
     a = int(l['start'] * SR); voice[a:a + len(seg)] += seg[:max(0, n - a)]
 voice /= np.max(np.abs(voice)) + 1e-9; voice *= 0.85
-m, mdesc = trilha.bed(MUSIC, last['start'], T_SLAM, T_END, SR)
+m, mdesc = trilha.bed(MUSIC, COMENTA, T_SLAM, T_END, SR)
 tt = np.arange(n) / SR
 MIX = EPI.get('mix')
 REF = 0.42                                       # 0 dB da música = o volume da abertura
@@ -150,7 +165,10 @@ else:
     g = 0.125 * duck
     op = np.clip((lines[0]['start'] - tt) / 0.25, 0, 1); g = g * (1 - op) + REF * op
     up = np.clip((tt - T_SLAM) / 0.2, 0, 1); g = g * (1 - up) + 0.62 * up
-g *= np.clip(tt / 0.15, 0, 1) * np.clip((T_END - tt) / 0.45, 0, 1)
+if LOOP:     # sem fade no fim (loop); depois da pancada, silêncio seco
+    g *= np.clip(tt / 0.15, 0, 1) * np.clip((T_SLAM + LOOP.get('silencio', 0.5) - tt) / 0.12, 0, 1)
+else:
+    g *= np.clip(tt / 0.15, 0, 1) * np.clip((T_END - tt) / 0.45, 0, 1)
 import sfx
 SFX = EPI.get('sfx', {})
 fxt = sfx.track(n, SR, lines, T_SLAM, ins_t, cuts, sh,

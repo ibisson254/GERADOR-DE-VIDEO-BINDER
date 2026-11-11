@@ -1,0 +1,123 @@
+{
+ "schema": 2,
+ "chamada": "o ladrão que virou Papai Noel",
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Plantão do Banimento, mano! O maior *ladrão* do Magic virou *Papai Noel*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Dack Fayden. Veio no *precon* do Jace. Outubro."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Ele *dá* criatura pros adversários, véi! Isso é jogada?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Lê a carta: revela até achar *uma criatura por adversário*. Cada um ganha *uma*."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "E o presente ainda vem *obrigado a atacar*?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Goad. Ele bate nos *outros*. Não em você."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Amigo secreto onde o presente *morde a visita*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "E o gatilho de entrada... continua *teu*."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "A criatura é deles e quem *mira* sou eu?! Sacanagem!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Por isso já ganhou torneio de *cEDH*. Pegou a visão?"
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "E o presente *hypou*: dinossauro de precon subiu *327%*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[tired]",
+   "legenda": "Ninguém quer ganhar o presente. Todo mundo quer *dar*."
+  },
+  {
+   "quem": "B",
+   "tags": "",
+   "legenda": "Isso devia ser banido. Ou não? *A*, bane. *B*, aceita o presente.",
+   "tts": "Isso devia ser banido. Ou não? Á, bane. Bê, aceita o presente."
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Comenta aí."
+  }
+ ],
+ "gap": [
+  0,
+  0.04,
+  0.02,
+  0.04,
+  -0.1,
+  0.06,
+  0.02,
+  0.06,
+  -0.06,
+  0.06,
+  0.02,
+  0.06,
+  0.06,
+  0.38
+ ],
+ "ins": [
+  [
+   10,
+   0.3
+  ]
+ ],
+ "respiro_max": 0.14,
+ "respiro_fala": {
+  "8": 0.45
+ },
+ "tempo": {
+  "B": 1.06,
+  "M": 1.12
+ },
+ "mix": {
+  "intro_db": 0,
+  "fala_db": -14,
+  "pausa_db": -6,
+  "fecho_db": 0
+ },
+ "sfx": {
+  "tv": true,
+  "destaque": true,
+  "carta": "flick",
+  "raiva": true
+ },
+ "outro": {
+  "scanner": 0,
+  "hold": 2.75
+ }
+}
