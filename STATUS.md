@@ -68,6 +68,10 @@ Aprovada e aplicada no `manaburn/index.html`: mesa de Commander, mesa acima das 
 
 Aprovada pelo fundador (`nucleo/DECISOES.md`). Fase 1 implementada e integrada na `main` (07/11, "Prossiga" do fundador): `manaburn/luz.py` + `render.py` (por defeito), docs e checklist. Por aprovar: fase 2 (luz no `index.html`); objetos novos e planos fixos. Especial "Precon em jogo" e V2 integrados na `main` no mesmo merge.
 
+## Mana & Burn Ep. 10 · Numot (11/11/2026)
+
+Branch `manaburn/ep10-numot`. Roteiro de 14 falas, `episode.json`/`episode.js`, cartas (Numot, Wildfire, Augustin IV, Dwarven Miner), legenda, comentário fixado, texto alternativo e fontes prontos em `manaburn/episodios/ep10_numot/`. Bloqueado: vozes no ElevenLabs aguardam aprovação do roteiro pelo fundador; depois `process.py` → `preview.py`/`bordas.py` → `render.py` → fecho → `comum/qc/qc_video.py` → capa.
+
 ## Próximo passo concreto
 
 Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a pronúncia de "Joven", "Chandler" e "Eron" e publica o pacote (`conde/legendas/ep004_joven_legenda.txt`, ficha em `conde/episodios/ep004_joven_ficha.md`; o vídeo não está no repositório, recria-se com `python3 conde/montar_ep004.py`, desde que `conde/ep004/audio/narracao.wav` exista: se faltar, ver o flow ElevenLabs em `conde/episodios/ep004_fontes.txt`). Depois: próximo Giro ou episódio do Mana & Burn com o kit v2 de `manaburn/`; validar com `python3 -I comum/qc/qc_video.py`.

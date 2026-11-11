@@ -1,0 +1,11 @@
+Numot na sua mesa: A) mata o dragão ou B) vira amigo do dono? Responda só A ou B.
+
+Como a mesa fica sem terreno:
+1. Numot (6/6, voar) causa dano de combate a um jogador: o dono pode pagar {2}{R} e destruir até dois terrenos.
+2. Wildfire: cada jogador SACRIFICA quatro terrenos (não é destruir) e cada criatura leva 4 de dano. Com resistência 6, o Numot fica.
+3. Grand Arbiter Augustin IV: mágicas dos oponentes custam {1} a mais; as brancas e azuis do dono, {1} a menos.
+4. Dwarven Miner: {2}{R}, virar: destrói um terreno NÃO básico. Básico está salvo.
+
+Oracle do Numot: "Flying. Whenever Numot, the Devastator deals combat damage to a player, you may pay {2}{R}. If you do, destroy up to two target lands."
+Medidor: 2 terrenos por ataque, do próprio texto Oracle (o Numot não tem Salt Score no EDHREC em 11/11/2026).
+Tem um detalhe escondido na TV SAL. Diga o segundo.

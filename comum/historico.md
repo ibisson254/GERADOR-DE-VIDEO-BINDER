@@ -43,6 +43,7 @@ Print do próprio post (não do Insights), enviado pelo Ibisson. Entra no quadro
 
 - 04/11/2026 (previsto) · Especial Mana & Burn "A comunidade falou: Precon em jogo": comentário de @diegoalencard, trecho de Meta em Curto EP03, quadro do Conde. Render conferido a 02/11 (79,33 s com fecho, −14,8 LUFS, pico −2,3 dBTP): `especiais/precon_em_jogo/`. Hipótese: comentário de seguidor na tela + pergunta A/B geram mais respostas por 1.000 views. Métricas: aguardam publicação.
 - 03/11/2026 · Conde de Manaforte Ep. 004 (Joven, Homelands 1995, arte de Douglas Shuler). **Produzido, não publicado.** Render conferido (55,1 s + fecho, sem corte lateral, −13,9 LUFS, pico −1,5 dBTP): `conde/episodios/ep004_joven_ficha.md`. Sem easter egg. Hipótese em teste: pergunta A/B com dois réus concretos. Métricas: aguardam publicação.
+- 11/11/2026 · Mana & Burn Ep. 10 "O dragão flanelinha" (Numot, the Devastator; Wildfire, Augustin IV, Dwarven Miner). **Em produção:** roteiro pronto, vozes por aprovar. Easter egg previsto: relógio 06:06. Hipótese: pergunta A/B de ação. Pasta: `manaburn/episodios/ep10_numot/`.
 
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 

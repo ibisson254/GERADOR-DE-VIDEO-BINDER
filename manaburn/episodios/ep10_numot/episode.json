@@ -1,0 +1,134 @@
+{
+ "schema": 2,
+ "chamada": "o dragão flanelinha",
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Mano, tem um *dragão* que come terreno! Cada pancada dele, somem *dois*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Numot, the Devastator. *Seis* de mana. E ainda cobra *mais três* pra destruir.",
+   "tts": "Númot, de Devastêitor. Seis de mana. E ainda cobra mais três pra destruir."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Cobra pra destruir o *meu* terreno?! É flanelinha cobrando pra *riscar* teu carro!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Lê a carta: dano de combate *num jogador*, paga *dois e vermelho*, destrói até *dois terrenos*."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "E o deck ainda joga *Wildfire*! Isso *destrói* tudo!",
+   "tts": "E o deck ainda joga Uáiud fáier! Isso destrói tudo!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Não destrói. Cada jogador *sacrifica* quatro terrenos. E *quatro* de dano em cada criatura."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Então o dragão *morre junto*! Né?! Né?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Ele é *seis por seis*. Sai do incêndio *sorrindo*."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Sobrou dois terrenos e o *Augustin* ainda me cobra *imposto*!",
+   "tts": "Sobrou dois terrenos e o Augustin ainda me cobra imposto!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Mágica de oponente custa *um a mais*. Branca e azul do dono, *um a menos*."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "E tem um *anão* que explode terreno por *três manas*! Isso é *crime*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[tired]",
+   "legenda": "Só terreno *não básico*. Tua Floresta sobrevive. Tua dual *de grife*, não."
+  },
+  {
+   "quem": "B",
+   "tags": "",
+   "legenda": "Numot na mesa: *A*, mata o dragão. *B*, vira amigo do dono.",
+   "tts": "Númot na mesa: Á, mata o dragão. Bê, vira amigo do dono."
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Comenta aí."
+  }
+ ],
+ "gap": [
+  0,
+  0.04,
+  0.02,
+  0.04,
+  -0.06,
+  0.06,
+  0.02,
+  0.06,
+  -0.06,
+  0.06,
+  0.02,
+  0.06,
+  0.06,
+  0.38
+ ],
+ "ins": [
+  [
+   4,
+   0.3
+  ],
+  [
+   8,
+   0.3
+  ],
+  [
+   10,
+   0.3
+  ]
+ ],
+ "respiro_max": 0.14,
+ "respiro_fala": {
+  "7": 0.45
+ },
+ "tempo": {
+  "B": 1.06,
+  "M": 1.12
+ },
+ "mix": {
+  "intro_db": 0,
+  "fala_db": -14,
+  "pausa_db": -6,
+  "fecho_db": 0
+ },
+ "sfx": {
+  "tv": true,
+  "destaque": true,
+  "carta": "flick",
+  "raiva": true
+ },
+ "outro": {
+  "scanner": 0,
+  "hold": 2.75
+ }
+}
