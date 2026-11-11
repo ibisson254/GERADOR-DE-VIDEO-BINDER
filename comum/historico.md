@@ -43,6 +43,7 @@ Print do próprio post (não do Insights), enviado pelo Ibisson. Entra no quadro
 
 - 04/11/2026 (previsto) · Especial Mana & Burn "A comunidade falou: Precon em jogo": comentário de @diegoalencard, trecho de Meta em Curto EP03, quadro do Conde. Render conferido a 02/11 (79,33 s com fecho, −14,8 LUFS, pico −2,3 dBTP): `especiais/precon_em_jogo/`. Hipótese: comentário de seguidor na tela + pergunta A/B geram mais respostas por 1.000 views. Métricas: aguardam publicação.
 - 03/11/2026 · Conde de Manaforte Ep. 004 (Joven, Homelands 1995, arte de Douglas Shuler). **Produzido, não publicado.** Render conferido (55,1 s + fecho, sem corte lateral, −13,9 LUFS, pico −1,5 dBTP): `conde/episodios/ep004_joven_ficha.md`. Sem easter egg. Hipótese em teste: pergunta A/B com dois réus concretos. Métricas: aguardam publicação.
+- 11/11/2026 · Mana & Burn EP10 "O gato zumbi que cobra a mesa" (Olag and Miau, New Friends · Mystery Booster Commander Edition, 2026, nº 48, arte de Steve Argyle; insert Wand of Orcus AFC nº 297). **Produzido, não aprovado, não publicado.** Primeiro episódio completo com a sala v3 e o fecho oficial do repositório. Render conferido (65,97 s + fecho = 69,83 s, sem corte lateral, −14,1 LUFS, pico −1,4 dBTP): `manaburn/episodios/ep10_olag/ficha.md`. Hipótese: pergunta A/B concreta. Pendente: o fundador ouvir a pronúncia. Métricas: aguardam publicação.
 
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 

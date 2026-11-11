@@ -1,0 +1,15 @@
+Na sua mesa: A, montava Olag e Miau; ou B, removia antes do primeiro ronronar?
+
+A: montava Olag and Miau.
+B: removia antes do primeiro ronronar.
+
+Como a cobrança funciona:
+1. Entrou outro Zumbi seu? Um Gato seu ganha um marcador +1/+1.
+2. Entrou outro Gato seu? Um Zumbi seu ganha um marcador +1/+1.
+3. No começo da sua etapa final, cada oponente perde vida igual ao número de Gatos e Zumbis que você controla e que estão virados.
+4. Importante: uma criatura que seja Gato e Zumbi conta apenas uma vez.
+
+Oracle: "Whenever another Zombie you control enters, put a +1/+1 counter on target Cat you control. Whenever another Cat you control enters, put a +1/+1 counter on target Zombie you control. At the beginning of your end step, each opponent loses life equal to the number of tapped Cats and/or Zombies you control."
+
+Fonte: Wizards of the Coast — Mystery Booster Commander Edition Release Notes.
+Tem um detalhe escondido na TV SAL. Diga o segundo.

@@ -8,3 +8,4 @@
 | 29/10/2026 | Mana & Burn · Ep. 09 (Dack Fayden) | relógio da TV SAL em "02:10" = 02/10, dia de lançamento do precon Multiverse Reforged | canto inferior direito da TV, em todos os planos da TV (0–4 s, 11–17 s, 31–35 s) |
 | 31/10/2026 | Especial de Halloween (Innistrad × Duskmourn) | "13" na chuva de código do terminal = o custo da Emrakul, the Promised End | cena 5 (dentro do tubo), ~74–75 s, ao centro-direita |
 | 02/11/2026 | Especial · A comunidade falou: Precon em jogo | retrato do Conde de Manaforte na parede muda de expressão a cada regresso à sala | planos de sala, a partir de ~7 s |
+| 11/11/2026 | Mana & Burn · EP10 (Olag and Miau) | relógio da TV SAL em "00:48" = nº 48 da carta na Mystery Booster Commander Edition | canto inferior direito da TV, em todos os planos da TV |

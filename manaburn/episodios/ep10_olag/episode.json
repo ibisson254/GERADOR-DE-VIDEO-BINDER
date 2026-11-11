@@ -1,0 +1,123 @@
+{
+ "schema": 2,
+ "chamada": "o gato zumbi que cobra a mesa",
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "O Magic lançou um *gato zumbi* que cobra vida da mesa no fim do turno. Quem deixou o *síndico* entrar?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Olag and Miau, New Friends. *Três manas*, três cores, um corpo *3/3*. Criatura lendária, Zumbi e Gato.",
+   "tts": "Ólag én Miáu, Niú Fréndis. Três manas, três cores, um corpo três por três. Criatura lendária, Zumbi e Gato."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Gato e zumbi no mesmo corpo? Isso devia ser banido. Do *sofá*, pelo menos!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Lê a carta. Entrou outro *Zumbi*? Um Gato seu ganha *marcador*. Entrou outro *Gato*? Um Zumbi seu ganha marcador."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Um alimenta o outro! É um *abrigo de animais* administrado pelo *necrotério*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "E no começo da sua *etapa final*, cada oponente perde vida igual ao número de Gatos e Zumbis seus que estiverem *virados*."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Três criaturas viradas? Cada adversário perde *três*! O gato virou *cobrador* em grupo!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "A habilidade conta a *quantidade*, não o tamanho. Vale quem continua *virado* quando ela resolve."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "E se o bicho for Gato *e* Zumbi, vale dois? Fraude no *censo felino*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Não. A Wizards esclarece: uma criatura que seja dos dois tipos conta *uma vez* só.",
+   "tts": "Não. A Uízards esclarece: uma criatura que seja dos dois tipos conta uma vez só."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "E a *Wand of Orcus* entra no baile: se a equipada causa dano de combate a um jogador, cria *Zumbis*!",
+   "tts": "E a Uónd óf Órcus entra no baile: se a equipada causa dano de combate a um jogador, cria Zumbis!"
+  },
+  {
+   "quem": "M",
+   "tags": "[tired]",
+   "legenda": "Cada Zumbi que entra pode fortalecer um Gato. As duas tribos dividem o *mesmo pote*."
+  },
+  {
+   "quem": "B",
+   "tags": "",
+   "legenda": "Na sua mesa: *A*, montava Olag e Miau; ou *B*, removia antes do primeiro *ronronar*?",
+   "tts": "Na sua mesa: Á, montava Ólag e Miáu; ou Bê, removia antes do primeiro ronronar?"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Comenta aí."
+  }
+ ],
+ "gap": [
+  0,
+  0.04,
+  0.02,
+  0.04,
+  -0.06,
+  0.06,
+  0.02,
+  0.06,
+  -0.04,
+  0.06,
+  0.02,
+  0.06,
+  0.06,
+  0.38
+ ],
+ "ins": [
+  [
+   10,
+   0.3
+  ]
+ ],
+ "respiro_max": 0.14,
+ "tempo": {
+  "B": 1.06,
+  "M": 1.12
+ },
+ "mix": {
+  "intro_db": 0,
+  "fala_db": -14,
+  "pausa_db": -6,
+  "fecho_db": 0
+ },
+ "sfx": {
+  "tv": true,
+  "destaque": true,
+  "carta": "flick",
+  "raiva": true
+ },
+ "outro": {
+  "scanner": 0,
+  "hold": 2.75
+ }
+}

@@ -18,6 +18,7 @@ Semente de 02/11/2026, só com o que está no repositório, no projeto claude.ai
 - 02/11 · Especial Precon: Burn defende precon em campeonato grande; o quadro do Conde estreou na parede (só neste especial).
 
 ## Referências já usadas (não repetir a piada)
+- "Abrigo de animais administrado pelo necrotério", "fraude no censo felino", "o gato virou cobrador em grupo" (EP10 Olag and Miau, 11/11, por publicar).
 - "Ex-Halo? Então a primeira missão é Commander de quatro no Arena" (Giro, 01/11).
 - "Então eu respondo a sua resposta… com a minha resposta… e ninguém joga nada!" (Giro, 01/11, Leyline of Anticipation).
 
