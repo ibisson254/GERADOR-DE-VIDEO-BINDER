@@ -29,7 +29,7 @@ svg{position:absolute;left:0;top:0}
 #logo .cta .tag{display:block;font:700 34px/1.3 Geist;color:#F4F1E8;margin-bottom:14px}
 #logo .show{position:absolute;left:0;right:0;top:560px;text-align:center;font:400 54px/1 Bangers;letter-spacing:3px;
   color:#E0B43A;-webkit-text-stroke:4px #111;paint-order:stroke fill}
-</style></head>
+#s2 text,#tvfx text{paint-order:stroke;stroke:#050A10;stroke-width:4px;stroke-linejoin:round}</style></head>
 <body>
 <div id="tv">
  <div id="stage">
@@ -91,6 +91,30 @@ function staticSVG(cs,seed,uid){ if(!cs||cs.burst<=0) return '';
     <feComponentTransfer><feFuncR type="linear" slope="2.2" intercept="-0.55"/><feFuncG type="linear" slope="2.2" intercept="-0.55"/><feFuncB type="linear" slope="2.2" intercept="-0.5"/><feFuncA type="linear" slope="0" intercept="1"/></feComponentTransfer></filter></defs>
     <rect x="${X}" y="${Y}" width="${W}" height="${H}" fill="#222"/><rect x="${X}" y="${Y}" width="${W}" height="${H}" filter="url(#tvn${uid}${seed})"/>${bands}${osd}</g>`; }
 const CARD={x:742,y:554.6,w:136.3,h:190};
+// ---------- TV ANALÓGICA BINDER (manaburn/LEIA-ME.md): marca no chassis e sinal fora do ar ----------
+const TVLOGO=EP.tvLogo===undefined?'logo/binder_fabricante.png':EP.tvLogo; let LOGO_OK=false, LOGO_DONE=!TVLOGO;
+const NS={x:82,y:684,w:698,h:558,rx:58,W:349,H:279};           // vidro do CRT (coordenadas do plano da TV), um pouco para dentro da moldura
+const plateSVG=()=>LOGO_OK?`<image href="${TVLOGO}" x="926" y="694" width="92" height="92"/>`:'';   // símbolo verde, fundo transparente, direto no chassis
+const noiseSVG=(id)=>`<foreignObject x="${NS.x}" y="${NS.y}" width="${NS.w}" height="${NS.h}" id="nf${id}" style="display:none"><canvas xmlns="http://www.w3.org/1999/xhtml" id="nc${id}" width="${NS.W}" height="${NS.H}" style="display:block;width:${NS.w}px;height:${NS.h}px;border-radius:${NS.rx}px;image-rendering:auto"></canvas></foreignObject>`;
+function rng(a){ return ()=>{ a|=0; a=a+0x6D2B79F5|0; let t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+const NSIMG={}; const nsCtx=c=>{ const x=c.getContext('2d'); return [x,NSIMG[c.id]||(NSIMG[c.id]=x.createImageData(NS.W,NS.H))]; };
+// quadro determinístico: só depende de t. Listras rolantes (velocidade contínua), estática, tracking de VHS, scanlines e fósforo.
+function noSignal(c,t,a){ const [x,im]=nsCtx(c), d=im.data, W=NS.W, H=NS.H, f=Math.round(t*30), r=rng(f*2654435761+7);
+  const flick=0.95+0.05*Math.sin(t*7.3)+0.03*Math.sin(t*19.1);
+  const B=[[0.19,46,70],[0.083,28,-38],[0.31,16,52]].map(([v,w,g],k)=>[((t*v+k*.37)%1)*(H+2*w)-w,w,g]);
+  const T=(t*0.11+.2)%1*H, T2=(t*0.047+.65)%1*H, jit=(r()<0.12?(r()-.5)*26:0);
+  for(let y=0;y<H;y++){ let g0=62; B.forEach(([b,w,g])=>{ const q=(y-b)/w; g0+=g*Math.exp(-q*q); });
+    const dT=Math.abs(y-T), dT2=Math.abs(y-T2), tear=dT<7?1-dT/7:(dT2<3?.6:0), sh=Math.round(tear*(10+r()*30)+jit*(dT<40?1:0)), sl=y%2?0.84:1;
+    const vy=(y/H-.5)*2, st=(r()-.5)*(tear?30:12);
+    for(let i=0;i<W;i++){ const i2=(i+sh+W)%W, vx=(i2/W-.5)*2, vig=1-.36*(vx*vx+vy*vy)*.5*(1+vx*vx*vy*vy);
+      let n=(r()-.5)*96+st; if(tear&&r()<.22*tear) n+=120; const v=Math.max(0,(g0+n)*flick*sl*vig), p=(y*W+i)*4;
+      d[p]=v; d[p+1]=v*.985; d[p+2]=v*.94; d[p+3]=255; } }
+  x.putImageData(im,0,0); c.style.opacity=a; }
+// o sinal é o FUNDO do ecrã: fica por trás de TV SAL, cartas e fichas, sempre que a TV está ligada (EP.tvSinal=false desliga)
+function foraAlpha(t){ return (EP.tvSinal===false||t>=T_SLAM+.44)?0:1; }
+function drawFora(t,i,cs,tvs){ const a=(cs&&cs.burst>=1)?0:foraAlpha(t), id=tvs?'S':'W', o=tvs?'W':'S';
+  const f=document.getElementById('nf'+id), g=document.getElementById('nf'+o); if(g) g.style.display='none';
+  if(!f) return; if(a<=0){ f.style.display='none'; return; } f.style.display=''; noSignal(document.getElementById('nc'+id),t,a); }
 const K='#221C17';
 const S=(a)=>`stroke="${K}" stroke-width="${a||4.5}" stroke-linejoin="round" stroke-linecap="round"`;
 function tube(pts,col,w,ol=9){const d='M'+pts.map(p=>p.join(' ')).join(' L ');
@@ -439,9 +463,11 @@ function shot2Markup(st){
   </g>
   <image href="tv_asset.png" x="-24" y="610" width="1126" height="713"/>
   <g filter="url(#rough2)"><rect x="-22" y="612" width="1122" height="709" rx="14" fill="none" ${S(7)}/></g>
+  <g id="nsslotS"></g>
   ${st.cs&&st.cs.est?'':tvFX(st.fx,'s2')}
   ${(st.cs?st.cs.img:EP.card.img)?`<image href="${st.cs?st.cs.img:EP.card.img}" x="245" y="703" width="373" height="520" clip-path="url(#cardclip2)"/>`:''}
   ${st.hl>0&&st.hr?st.hr.rects.map(r=>`<rect x="${r.x-3}" y="${r.y-2}" width="${r.w+6}" height="${r.h+4}" rx="4" fill="none" stroke="#FFD84A" stroke-width="2.5" filter="url(#glow)" pathLength="100" stroke-dasharray="${100*st.hl} 100"/>`).join(""):""}
+  ${plateSVG()}
   ${staticSVG(st.cs,st.seed,'s')}
   <g filter="url(#rough2)">
    ${tube([[1100,1005],[1010,985],[920,969]],'#A4473B',58)}
@@ -451,9 +477,9 @@ function shot2Markup(st){
 // ---------- montagem ----------
 const world=document.getElementById('world'), shot2=document.getElementById('shot2'), fx=document.getElementById('fx');
 const tvEl=document.getElementById('tv'), dotEl=document.getElementById('dot'), logo=document.getElementById('logo'), sub=document.getElementById('sub');
-world.innerHTML = defs + `<g id="cam"><g filter="url(#rough)">${room}</g>${tvSmall}<g filter="url(#rough)">${tvSmallLine}${tvTop}</g><g id="tvfx" transform="translate(648.95 290.47) scale(0.373)"></g>${tvSmallCard}<g filter="url(#rough)">${couchBack}${couchFront}</g>
+world.innerHTML = defs + `<g id="cam"><g filter="url(#rough)">${room}</g>${tvSmall}<g filter="url(#rough)">${tvSmallLine}${tvTop}</g><g transform="translate(648.95 290.47) scale(0.373)"><g id="plateW"></g>${noiseSVG('W')}<g id="tvfx"></g></g>${tvSmallCard}<g filter="url(#rough)">${couchBack}${couchFront}</g>
   <g id="mana" filter="url(#rough2)"></g><g id="burn" filter="url(#rough2)"></g><g filter="url(#rough)">${table}</g></g>`;
-shot2.innerHTML = defs + '<g id="s2cam"><g id="s2"></g></g>';
+shot2.innerHTML = defs + `<g id="s2cam"><g id="s2"></g></g><svg id="nshold" style="display:none">${noiseSVG('S')}</svg>`;
 fx.innerHTML = `<defs><radialGradient id="vig" cx="50%" cy="48%" r="70%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".45"/></radialGradient></defs>
   ${defs}<rect width="1080" height="1920" filter="url(#grain)" opacity=".5"/><rect width="1080" height="1920" fill="url(#vig)"/>`;
 const tvfxG=world.querySelector('#tvfx');
@@ -471,7 +497,8 @@ const credEl=document.getElementById('cred'), CRED_BASE=EP.card.cred;
 if(EP.bug) document.querySelector('#bug .b').textContent=EP.bug;   // tarja do quadro: "PLANTÃO DO PREÇO", "ESPECIAL DE HALLOWEEN"…
 INSERTS.forEach((c,i)=>{const im=new Image(); im.onload=()=>{INS_OK[i]=true;}; im.onerror=()=>{INS_OK[i]=false;}; im.src=c.file; c.el=document.createElement('img'); c.el.src=c.file; insEl.appendChild(c.el);});
 {const g=new Image(); g.onload=()=>{document.getElementById('gplay').style.display='block';}; g.src='cards/google_play.png';}
-window.READY=()=>INSERTS.every((c,i)=>i in INS_OK) && (!(FX.scanner&&SCAN) || [...Array(SCAN_N).keys()].every(k=>k in SCAN_OK));
+if(TVLOGO){ const im=new Image(); im.onload=()=>{ LOGO_OK=true; LOGO_DONE=true; document.getElementById('plateW').innerHTML=plateSVG(); last=''; }; im.onerror=()=>{ LOGO_DONE=true; }; im.src=TVLOGO; }
+window.READY=()=>LOGO_DONE && INSERTS.every((c,i)=>i in INS_OK) && (!(FX.scanner&&SCAN) || [...Array(SCAN_N).keys()].every(k=>k in SCAN_OK));
 const TVSHOTS=['tv','tvtext','tvtext2','tv2'];
 // enquadramento dos planos da TV: a tela da TV (x 79–783) nunca sai do vídeo nas laterais nem sobe por baixo dos créditos
 const SCR={x:79,y:682,w:704,h:562}, MARG=10, FIT=(1080-2*MARG)/SCR.w;   // FIT ≈ 1,506: tela inteira na largura, com margem
@@ -479,16 +506,10 @@ function encaixa(c){ const s=Math.min(c.s,FIT); let cx=c.cx;
   const L=c.tx+s*(SCR.x-cx), R=c.tx+s*(SCR.x+SCR.w-cx);
   if(L<MARG) cx=SCR.x-(MARG-c.tx)/s; else if(R>1080-MARG) cx=SCR.x+SCR.w-(1080-MARG-c.tx)/s;
   return {s, cx, cy:c.cy, tx:c.tx, ty:c.ty}; }
-function s2Target(k,t){ const sh=POSE[k][6], l=LINES[k], p=clamp((t-l.start)/Math.max(.5,l.dur));
-  // zoom no texto: a tela inteira da TV ocupa a largura do vídeo (carta e TV SAL sem cortes), logo abaixo dos créditos
-  const HR=hlAt(k,sh); if(HR) { const r=HR, z=Math.min(r.zoom,FIT), c={s:z,cx:SCR.x+SCR.w/2,cy:SCR.y,tx:540,ty:300};
-    if(!FX.foco) return c;
-    // oracle_focus: quando o amarelo acende, aproxima devagar 7% (ease-out) e TERMINA no enquadramento acima:
-    // começa em z/1,07 e chega em z, com o topo da TV parado logo abaixo dos créditos. Nada sai pelas laterais.
-    const q=clamp((t-l.start-0.45)/Math.max(1.2,l.dur-0.45)), f=1+0.07*(1-Math.pow(1-q,3));
-    return {s:z/1.07*f, cx:c.cx, cy:c.cy, tx:c.tx, ty:c.ty}; }
-  if(sh==='tv2') return {s:1.12+0.04*p,cx:560,cy:963,tx:540,ty:960};
-  return {s:1+0.06*p,cx:432,cy:963,tx:432,ty:963}; }
+// REGRA DO FUNDADOR (02/11/2026): é proibido cortar a TV. O chassis inteiro (x -24 a 1102) cabe no vídeo em todos os planos da TV;
+// não há zoom na carta nem no texto (EP.hl continua a desenhar os destaques, o campo zoom é ignorado).
+const TV_S=(1080-2*MARG)/1126, TV_C={cx:539,cy:966,tx:540,ty:872};
+function s2Target(k,t){ const l=LINES[k], p=clamp((t-l.start)/Math.max(.5,l.dur)); return {s:TV_S*(0.975+0.025*p),...TV_C}; }
 function s2Cam(i,t){ let c=s2Target(i,t); const l=LINES[i];
   if(i>0 && TVSHOTS.includes(POSE[i-1][6]) && t-l.start<0.4){ const a=s2Target(i-1,l.start), q=ease(clamp((t-l.start)/0.4));
     c={s:a.s+(c.s-a.s)*q,cx:a.cx+(c.cx-a.cx)*q,cy:a.cy+(c.cy-a.cy)*q,tx:a.tx+(c.tx-a.tx)*q,ty:a.ty+(c.ty-a.ty)*q}; }
@@ -504,10 +525,10 @@ function blinking(arr,t){return arr.some(b=>t>=b&&t<b+0.12);}
 function camera(t,shot){
   const W={s:1,cx:540,cy:675,tx:540,ty:875};
   if(shot==='cuM') return {s:1.45,cx:235,cy:650,tx:520,ty:922};
-  if(shot==='cuB') return {s:1.5,cx:485,cy:700,tx:560,ty:832};
+  if(shot==='cuB') return {s:1.16,cx:485,cy:700,tx:404,ty:812};   // TV inteira no quadro (fundador, 02/11/2026)
   if(shot==='push'){ const i0=lineAt(t); let s0=i0, s1=i0; while(s0>0&&POSE[s0-1][6]==='push') s0--; while(s1<LINES.length-1&&POSE[s1+1][6]==='push') s1++;
     const a=LINES[s0].start, b=LINES[s1].start+LINES[s1].dur, p=clamp((t-a)/(b-a));
-    const P={s:1.12,cx:400,cy:760,tx:540,ty:1003}; return {s:W.s+(P.s-W.s)*p,cx:W.cx+(P.cx-W.cx)*p,cy:W.cy+(P.cy-W.cy)*p,tx:W.tx,ty:W.ty+(P.ty-W.ty)*p}; }
+    const P={s:1.03,cx:540,cy:760,tx:540,ty:960}; return {s:W.s+(P.s-W.s)*p,cx:W.cx+(P.cx-W.cx)*p,cy:W.cy+(P.cy-W.cy)*p,tx:W.tx,ty:W.ty+(P.ty-W.ty)*p}; }
   return W;
 }
 let last='';
@@ -523,12 +544,13 @@ function render(t){
   const key=[i,mM,mB,bM,bB,clickOn,shot,hl,fxk,cs?[cs.k,cs.img,cs.burst,cs.osd,seed].join('|'):''].join();
   if(key!==last){ last=key;
     if(TVSHOTS.includes(shot)){ shot2.style.display='block'; world.style.display='none';
-      s2.innerHTML = shot2Markup({look:P[2],brow:P[4],mouth:mB,blink:bB,hl,hr:HRi,bob:bobB,fx,cs,seed}); }
+      const nf=document.getElementById('nfS'); s2.innerHTML = shot2Markup({look:P[2],brow:P[4],mouth:mB,blink:bB,hl,hr:HRi,bob:bobB,fx,cs,seed}); document.getElementById('nsslotS').appendChild(nf); }
     else { shot2.style.display='none'; world.style.display='block'; tvfxG.innerHTML=(cs&&cs.est?'':tvFX(fx,'w'))+staticSVG(cs,seed,'w');
       if(cs){ const sc=world.querySelector('#smallcard'); if(sc.getAttribute('href')!==(cs.img||'')){ sc.setAttribute('href',cs.img||''); } sc.style.display=cs.img?'':'none'; }
       manaG.innerHTML = manaHeadBack()+manaLegs()+manaTorso()+manaHead({look:P[3],brow:P[5],mouth:mM,blink:bM,bob:bobM})+manaArms(P[1],clickOn);
       burnG.innerHTML = burnLegs()+burnTorso()+burnHead({look:P[2],brow:P[4],mouth:mB,blink:bB,bob:bobB})+burnArms(P[0]); }
   }
+  drawFora(t,i,cs,TVSHOTS.includes(shot));
   if(TVSHOTS.includes(shot)){ const q=s2Cam(i,t); s2cam.setAttribute('transform',`translate(${q.tx} ${q.ty}) scale(${q.s}) translate(${-q.cx} ${-q.cy})`); }
   // cartas citadas entram ao lado do Q
   let extra='';

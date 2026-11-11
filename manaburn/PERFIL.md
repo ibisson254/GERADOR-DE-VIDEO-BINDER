@@ -44,8 +44,8 @@ Respostas à pergunta do comentário fixado (o histórico de 26/10 mostra coment
 ## Critérios de aceitação próprios
 
 - [ ] Gíria: máx. 2 por fala, entendida no Brasil inteiro, sem palavrão; bordões intactos.
-- [ ] Carta inteira na TV, também nos zooms; destaques alinhados ao texto.
-- [ ] TV SAL sem cortes nos zooms; putômetro com conta e fonte.
+- [ ] TV nunca cortada (chassis inteiro; `bordas.py`); carta inteira; destaques alinhados ao texto.
+- [ ] TV SAL legível; putômetro com conta e fonte.
 - [ ] "Comenta aí" na parada seca da música.
 - [ ] Vozes geradas no plano com licença comercial.
 

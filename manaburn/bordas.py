@@ -7,11 +7,14 @@ with sync_playwright() as p:
     pg.goto(pathlib.Path('index.html').resolve().as_uri()); pg.evaluate('document.fonts.ready'); pg.wait_for_timeout(300)
     pg.wait_for_function('window.READY()')
     for i in range(int(d['T_SLAM'] * 30)):
-        r = pg.evaluate(f"""(()=>{{ render({i / 30}); if(document.getElementById('shot2').style.display!=='block') return null;
-          const m=document.getElementById('s2cam').getAttribute('transform').match(/translate\\(([-\\d.]+) ([-\\d.]+)\\) scale\\(([-\\d.]+)\\) translate\\(([-\\d.]+) ([-\\d.]+)\\)/);
-          const [tx,ty,s,cx,cy]=m.slice(1).map(Number); return [tx+s*(79+cx), tx+s*(783+cx), ty+s*(682+cy)]; }})()""")
-        if r: pts.append(r)
+        r = pg.evaluate(f"""(()=>{{ render({i / 30}); const tv=document.getElementById('shot2').style.display==='block';
+          const m=document.getElementById(tv?'s2cam':'cam').getAttribute('transform').match(/translate\\(([-\\d.]+) ([-\\d.]+)\\) scale\\(([-\\d.]+)\\) translate\\(([-\\d.]+) ([-\\d.]+)\\)/);
+          const [tx,ty,s,cx,cy]=m.slice(1).map(Number); const X=x=>tx+s*(x+cx), Y=y=>ty+s*(y+cy);
+          return tv?[X(-24),X(1102),Y(610),Y(1323),1]:[X(640),X(1060),Y(518),Y(784),0]; }})()""")
+        pts.append(r)
     b.close()
-l, rr, top = min(x[0] for x in pts), max(x[1] for x in pts), min(x[2] for x in pts)
-print(f'{len(pts)} quadros de TV · laterais entre {l:.0f} e {rr:.0f} px · topo da TV a partir de {top:.0f} px')
-print('OK' if l >= 0 and rr <= 1080 and top >= 295 else 'FALHA')
+# regra: é proibido cortar a TV. Em cada quadro, o chassis inteiro está dentro do vídeo ou totalmente fora dele.
+ruim = [p for p in pts if not ((p[0] >= 0 and p[1] <= 1080) or p[0] >= 1080 or p[1] <= 0)]
+tv = [p for p in pts if p[4]]
+print(f'{len(pts)} quadros · {len(tv)} de TV · chassis nos planos da TV entre {min(p[0] for p in tv):.0f} e {max(p[1] for p in tv):.0f} px · quadros com TV cortada: {len(ruim)}')
+print('OK' if not ruim and min(p[2] for p in tv) >= 295 else 'FALHA')
