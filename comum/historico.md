@@ -54,6 +54,7 @@ Print do próprio post (não do Insights), enviado pelo Ibisson. Entra no quadro
 ## Previsões registadas do TUBO
 
 Fonte canónica única: `oraculo/previsoes/registo.yaml` (decisão de 09/11/2026, `nucleo/DECISOES.md`: este histórico não repete a tabela, só remete). Método de pré-release: `oraculo/PROTOCOLO_PRE_RELEASE.md`. Briefing em qualquer dia: `python3 -I oraculo/previsoes/ciclo.py continuacao`. Erro numa previsão pública = "Erro de sistema" num episódio seguinte (`oraculo/CONTEXTO.md` §7.2, item 4).
+- 06/11/2026 · Mana & Burn · Especial pré-release Star Trek "BURN FOI ASSIMILADO!" (Magic: The Gathering | Star Trek; seis atos, seis cartas). **Produzido, não publicado.** Ficha, QC e fontes: `manaburn/episodios/esp03_startrek_prerelease/`. Easter egg: CH 47. Hipótese em teste: especial publicado no fim de semana do pré-release gera mais guardados por 1.000 views; pergunta A/B (Borg ou cinco cores). **Previsões registadas** (rever depois de 12/11 com dados reais): 1) Strange new worlds tem potencial em jogos longos (certeza média-baixa); 2) Borg pune decks lentos (média); 3) respostas a artefatos valem mais do que o normal (alta). Evidência e risco: `ficha_fontes.md`. Métricas: aguardam publicação.
 
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 

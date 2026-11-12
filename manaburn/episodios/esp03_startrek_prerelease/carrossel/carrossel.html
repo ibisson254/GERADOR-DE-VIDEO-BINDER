@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<!-- Carrossel 1080x1350 · Mana & Burn · Especial pré-release Star Trek ("Burn foi assimilado!")
+     Personagens e TV: recortes do próprio render do especial (nada redesenhado). Cartas: PNGs reais do Scryfall.
+     Destaques: os mesmos retângulos medidos para o vídeo (episode.js). -->
+<style>
+@font-face{font-family:Bangers;src:url(../node_modules/@fontsource/bangers/files/bangers-latin-400-normal.woff2)}
+@font-face{font-family:Geist;font-weight:700;src:url(../node_modules/geist/dist/fonts/geist-sans/Geist-Bold.woff2)}
+@font-face{font-family:Geist;font-weight:500;src:url(../node_modules/geist/dist/fonts/geist-sans/Geist-Medium.woff2)}
+html,body{margin:0;background:#000}
+.S{position:relative;width:1080px;height:1350px;overflow:hidden;background:#17120D;font-family:Geist;color:#F4F1E8}
+.S.parede::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 34px,rgba(0,0,0,.05) 34px 70px),
+  radial-gradient(120% 80% at 30% 10%,#3A2E20 0%,#1B150F 60%,#0E0B08 100%);}
+.abs{position:absolute}
+.k{color:#FFD84A}
+.bug .a{display:inline-block;background:rgba(20,18,16,.92);color:#F2EBDA;font:400 34px/1 Bangers;letter-spacing:2px;padding:8px 14px 5px}
+.bug .b{display:block;width:max-content;background:#2E8C8A;color:#fff;font:700 18px/1 Geist;letter-spacing:1.5px;padding:6px 14px 5px}
+.ttl{font:400 84px/0.98 Bangers;color:#F2EBDA;-webkit-text-stroke:6px #111;paint-order:stroke fill;letter-spacing:2px}
+.fala{font:700 40px/1.18 Geist;color:#fff;-webkit-text-stroke:9px #000;paint-order:stroke fill}
+.pill{font:700 24px/1 Geist;color:#050A10;background:#FFD84A;border-radius:999px;padding:11px 20px;letter-spacing:.5px}
+.pill.esc{background:rgba(5,10,16,.85);color:#fff}
+.num{font:400 30px/1 Bangers;letter-spacing:2px;color:#050A10;background:#FFD84A;padding:9px 16px 6px;border-radius:6px}
+.moldura{border-radius:20px;overflow:hidden;box-shadow:0 0 0 5px #221C17,0 10px 0 rgba(0,0,0,.45)}
+.med{width:170px;height:190px;border-radius:18px;overflow:hidden;box-shadow:0 0 0 5px #221C17,0 8px 0 rgba(0,0,0,.45);background:#C9B98F}
+.med img{display:block}
+.med img.b{width:290px;margin:-27px 0 0 -60px}
+.med img.m{width:340px;margin:-74px 0 0 -85px}
+.card{border-radius:18px;box-shadow:0 0 0 5px #221C17,0 12px 0 rgba(0,0,0,.45);display:block}
+.panel{background:#0F172A;border:3px solid #FFD84A;border-radius:12px;overflow:hidden}
+.panel h4{margin:0;background:#FFD84A;color:#050A10;font:400 30px/1 Bangers;letter-spacing:2px;padding:8px 14px 5px}
+.panel ul{margin:0;padding:12px 16px 14px 40px}
+.panel li{font:700 25px/1.28 Geist;margin:4px 0}
+.cred{font:500 17px/1.35 Geist;color:#CFC6AE}
+.quem{font:400 26px/1 Bangers;letter-spacing:2px;color:#FFD84A;margin-bottom:6px}
+.brand{font:700 60px/1 Geist;color:#fff;white-space:nowrap}.brand span{color:#10B981}
+.bar{height:22px;border-radius:11px;background:#16202E;border:3px solid #050A10;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#6FB487,#F4B414,#E3361D)}
+</style></head><body><div id="root"></div>
+<script>
+const CR='© Wizards of the Coast. Star Trek © CBS. Conteúdo de fã não oficial.';
+const cred=(n,num,a)=>`${n} (Magic: The Gathering | Star Trek, 2026), nº ${num}. Arte: ${a}. ${CR}`;
+const mark=s=>s.replace(/\*([^*]+)\*/g,'<span class="k">$1</span>');
+const AR=1040/744;
+// recorte do texto da carta (linha de tipo até o fim da caixa) com os destaques do vídeo
+function texto(img,faixa,rects,w){
+  const x0=.045,x1=.955,vb=[x0,faixa[0]*AR,x1-x0,(faixa[1]-faixa[0])*AR],h=Math.round(w*vb[3]/vb[2]);
+  const hl=rects.map(r=>`<rect x="${r[0]-.008}" y="${(r[1]-.004)*AR}" width="${r[2]+.016}" height="${(r[3]+.008)*AR}" rx=".008" fill="#FFD84A" fill-opacity=".30" stroke="#FFD84A" stroke-width=".006"/>`).join('');
+  return {h,html:`<svg width="${w}" height="${h}" viewBox="${vb.join(' ')}"><rect x="0" y="0" width="1" height="${AR}" fill="#fff"/><image href="${img}" x="0" y="0" width="1" height="${AR}"/>${hl}</svg>`};
+}
+function bug(t){return `<div class="bug"><span class="a">MANA &amp; BURN</span><span class="b">${t}</span></div>`}
+
+const ARM=[
+ {n:1,ttl:'A RARA NÃO É O DECK',img:'../cards/borgcube.png',cr:cred('Borg Cube',227,'Alexander Forssberg'),
+  faixa:[.555,.905],rects:[[.105,.864,.645,.027]],
+  burn:'Abri um *Cubo Borg*! O deck é ele!',
+  regra:['Sealed: 6 boosters e deck de 40, com uns 17 terrenos (guia oficial).','O Cubo só dá voar aos seus artefatos com *12 marcadores*.'],
+  mana:'Faltam só as outras *39* cartas.',mimg:'mana.jpg'},
+ {n:2,ttl:'CINCO CORES CONTA NOME, NÃO TERRENO',img:'../cards/traveler.png',cr:cred('The Traveler',254,'Ioannis Fiore'),
+  faixa:[.555,.80],rects:[[.090,.690,.767,.027],[.089,.721,.769,.021],[.089,.751,.333,.021]],
+  burn:'Um de cada planeta! *Turnê galáctica*!',
+  regra:['Três Florestas valem *1*. Dois tokens "New Planet" também valem 1.','Os *10 planetas comuns* entram virados (e dão 1 de vida).'],
+  mana:'A turnê anda *devagar*.',mimg:'mana_dedo.jpg'},
+ {n:3,ttl:'OS BORG CHEGAM NO TURNO 2',img:'../cards/locutus.png',cr:cred('Locutus, the One Who Speaks',245,'Ariel Orea'),
+  faixa:[.555,.70],rects:[[.087,.634,.712,.032],[.091,.671,.138,.022]],
+  burn:'Os Borg vieram *cobrar o aluguel*?!',
+  regra:['Locutus custa *2 manas* (branco + preto).','Toda criatura artefato sua ganha *+1/+1*, e os drones custam 2.'],
+  mana:'Quando o Traveler crescer, a sua vida já *encolheu*.',mimg:'mana.jpg'},
+ {n:4,ttl:'A NAVE PRENDE A TRIPULAÇÃO',img:'../cards/voyager.png',cr:cred('U.S.S. Voyager, Lone Wanderer',222,'Hector Ortiz'),
+  faixa:[.555,.905],rects:[[.090,.751,.766,.022],[.089,.776,.755,.022],[.089,.801,.696,.022]],
+  burn:'Minha tripulação vai passar o jogo... *estacionando a nave*?!',
+  regra:['Station: vire outra criatura sua e ponha marcadores igual ao poder dela. Só como feitiço.','Quem estaciona fica virado e *não bloqueia*.'],
+  mana:'Duas ou três naves. Não uma *frota*.',mimg:'mana_dedo.jpg'},
+ {n:5,ttl:'A CARTA DOS BORG NÃO MATA BORG',img:'../cards/resistance.png',cr:cred('Resistance Is Futile',125,'Matt Stewart'),
+  faixa:[.555,.875],rects:[[.090,.723,.767,.032]],
+  burn:'Isso devia ser *banido*!',
+  regra:['Destrói só criatura *não artefato*. Todo Borg do set é artefato.','Escolher o modo é *encarar um dilema*: o gatilho resolve antes da mágica, mesmo anulada.'],
+  mana:'O outro modo *traz Borg de volta*.',mimg:'mana.jpg'},
+];
+
+const S=[];
+// 1 · capa
+S.push(`<div class="S parede">
+ <div class="abs" style="left:40px;top:40px">${bug('ESPECIAL PRÉ-RELEASE STAR TREK')}</div>
+ <div class="abs ttl" style="left:40px;top:150px;width:1000px;font-size:118px">BURN FOI<br><span class="k">ASSIMILADO!</span></div>
+ <div class="abs fala" style="left:40px;top:395px;width:1000px;font-size:44px">5 armadilhas do pré-release de Star Trek. E como não cair.</div>
+ <div class="abs moldura" style="left:142px;top:510px;width:796px;height:660px"><img src="assets/capa_tv.jpg" style="height:660px;display:block"></div>
+ <div class="abs pill" style="left:40px;bottom:40px">Salve antes de ir pra loja</div>
+ <div class="abs pill esc" style="right:40px;bottom:40px">Arrasta pro lado &rarr;</div>
+ <div class="abs cred" style="left:40px;top:1196px;width:1000px;text-align:center">Na TV: ${cred('Borg Cube',227,'Alexander Forssberg')}</div>
+</div>`);
+// 2-6 · armadilhas
+ARM.forEach(a=>{
+  const t=texto(a.img,a.faixa,a.rects,560);
+  S.push(`<div class="S parede">
+  <div class="abs" style="left:40px;top:36px">${bug('ESPECIAL PRÉ-RELEASE STAR TREK')}</div>
+  <div class="abs num" style="right:40px;top:40px">ARMADILHA ${a.n} DE 5</div>
+  <div class="abs ttl" style="left:40px;top:118px;width:1000px;font-size:${a.ttl.length>24?66:80}px">${a.ttl}</div>
+  <div class="abs med" style="left:40px;top:${a.ttl.length>24?268:230}px"><img class="b" src="assets/${a.n%2?'burn_bravo':'burn_bracos'}.jpg"></div>
+  <div class="abs" style="left:240px;top:${a.ttl.length>24?280:242}px;width:800px"><div class="quem">BURN</div><div class="fala">${mark(a.burn)}</div></div>
+  <img class="abs card" src="${a.img}" style="left:40px;top:490px;width:400px;height:${Math.round(400*AR)}px">
+  <div class="abs moldura" style="left:480px;top:490px;width:560px;height:${t.h}px;background:#fff">${t.html}</div>
+  <div class="abs panel" style="left:480px;top:${490+t.h+22}px;width:560px"><h4>A REGRA</h4><ul>${a.regra.map(r=>`<li>${mark(r)}</li>`).join('')}</ul></div>
+  <div class="abs med" style="left:40px;top:1090px;width:150px;height:170px"><img class="m" src="assets/${a.mimg}"></div>
+  <div class="abs" style="left:220px;top:1105px;width:820px"><div class="quem">MANA</div><div class="fala">${mark(a.mana)}</div></div>
+  <div class="abs cred" style="left:40px;top:1290px;width:1000px">Na imagem: ${a.cr}</div>
+ </div>`);
+});
+// 7 · veredito
+const AP=[['Cinco cores ganha jogo *longo*','Escala com cada nome de terreno.','Planetas entram virados.',0.33,'média-baixa'],
+          ['Borg pune quem *demora*','Locutus e drones a 2 manas.','No Sealed, depende de abrir artefatos.',0.55,'média'],
+          ['Remoção de artefato vale *ouro*','Borg e naves são artefatos; o guia oficial pede uma Perils of the Past a mais.','Morta contra deck sem artefato.',0.85,'alta']];
+S.push(`<div class="S parede">
+ <div class="abs" style="left:40px;top:36px">${bug('ESPECIAL PRÉ-RELEASE STAR TREK · O VEREDITO')}</div>
+ <div class="abs ttl" style="left:40px;top:118px;width:1000px;font-size:80px">AS 3 APOSTAS DO MANA</div>
+ <div class="abs cred" style="left:40px;top:205px;width:1000px;font-size:21px;color:#E9E2CF">Previsões, não resultados: o pré-release começou em 06/11 e ainda não há dados de jogo. A certeza é a opinião do Mana.</div>
+ ${AP.map((p,i)=>`<div class="abs panel" style="left:40px;top:${270+i*215}px;width:640px"><h4>${i+1}. ${p[0].replace(/\*/g,'')}</h4>
+   <ul style="padding-left:36px"><li style="font-size:22px">Evidência: ${p[1]}</li><li style="font-size:22px">Risco: ${p[2]}</li></ul>
+   <div style="display:flex;align-items:center;gap:14px;padding:0 16px 14px"><span style="font:700 20px Geist;color:#9AA3B2;width:92px">CERTEZA</span><div class="bar" style="flex:1"><i style="width:${p[3]*100}%"></i></div><span style="font:400 26px Bangers;letter-spacing:1px;color:#FFD84A;width:128px;text-align:right">${p[4].toUpperCase()}</span></div></div>`).join('')}
+ <img class="abs card" src="../cards/perils.png" style="left:710px;top:270px;width:330px;height:${Math.round(330*AR)}px">
+ <div class="abs cred" style="left:710px;top:${270+Math.round(330*AR)+14}px;width:330px;font-size:20px;color:#E9E2CF">Resposta barata: <b style="color:#FFD84A">destrói um artefato</b>. {1}{R}, instantânea.</div>
+ <div class="abs med" style="left:40px;top:1000px;width:150px;height:170px"><img class="b" src="assets/burn_bravo.jpg"></div>
+ <div class="abs" style="left:220px;top:1015px;width:820px"><div class="quem">BURN DISCORDA</div><div class="fala">Errado! Eu vou de *Cubo*, cinco cores *e* três naves!</div></div>
+ <div class="abs cred" style="left:40px;top:1210px;width:1000px">Fontes: notas de lançamento e guia de pré-release da Wizards (30/10 e 06/11/2026); Oracle via Scryfall (06/11/2026).<br>Na imagem: ${cred('Perils of the Past',161,'Zoltan Boros')}</div>
+</div>`.replace(/\*([^*]+)\*/g,'$1'));
+// 8 · pergunta + CTA
+S.push(`<div class="S" style="background:#050A10">
+ <div class="abs fala" style="left:40px;top:50px;width:1000px;text-align:center;font-size:52px">No pré, você vai de quê?<br><span class="k">A</span>, Borg. <span class="k">B</span>, cinco cores.</div>
+ <div class="abs cred" style="left:40px;top:200px;width:1000px;text-align:center;font-size:24px;color:#9AA3B2">Responda nos comentários. O Mana guarda as apostas para conferir depois do pré.</div>
+ <div class="abs moldura" style="left:150px;top:260px;width:780px;height:${Math.round(780*900/1080)}px"><img src="assets/sofa.jpg" style="width:100%;display:block"></div>
+ <div class="abs moldura" style="left:60px;top:950px;width:200px;height:356px"><img src="assets/scan.jpg" style="width:100%;display:block"></div>
+ <div class="abs" style="left:300px;top:965px;width:740px">
+   <div style="display:flex;align-items:center;gap:16px"><img src="../logo/logo_mark.png" style="width:80px;height:80px"><div class="brand">BINDER <span>Vision</span></div></div>
+   <div style="font:700 30px/1.3 Geist;margin-top:22px">Voltou do pré com o pool? Aponte a câmera para cada carta: o BINDER Vision ajuda a identificar e mostra um valor de referência (estimativa).</div>
+   <div style="font:500 24px/1.3 Geist;color:#9AA3B2;margin-top:14px">Android · Google Play · link na bio</div>
+   <div style="font:500 17px/1.3 Geist;color:#6B7486;margin-top:10px">À esquerda: gravação real do scanner do app.</div>
+ </div>
+</div>`);
+document.getElementById('root').innerHTML=S.map((s,i)=>`<div id="s${i+1}">${s}</div>`).join('');
+window.N=S.length;
+</script></body></html>
