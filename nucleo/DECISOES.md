@@ -2,9 +2,17 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 12/11/2026 · Reconciliação: uma só frente para o Vince Vault
+
+**O quê:** a pasta `vinci/`, criada a 12/11, passa a ser `vince/` e absorve a proposta do PR #11 (branch `vince-vault`, 07–08/11). Existiam duas frentes para o mesmo personagem.
+**Porquê:** erro de origem — o pedido do fundador era adaptar o Vince Vault, que já tinha bíblia e assets, a um traço 2D mais barato; em vez disso foi desenhado um personagem novo com outro nome. Detetado pelo fundador a 12/11.
+**Decisões do fundador na reconciliação:** fica o traço 2D de 12/11 (o 3D era complexo e caro); fica o cenário da sala com o telefone; fica a voz antiga `L93SDe6kGQj79D6svMgA`. O turnaround 3D, as expressões, as poses e os cenários do pregão ficam arquivados no ramo `vince-vault` e não se usam. O PR #11 fecha sem merge, com nota a apontar para o PR #17.
+**O que se mantém da bíblia antiga:** nome Vince Vault, casa fictícia e nome da série Multiverse Capital, persona de corretor narcisista e hiperativo, bordão "Buy the dip!" sempre cortado ou desmentido, e a regra de preço da constituição §4 (fonte e data, "estimativa, não oferta de compra", nunca republicar preço do Scryfall).
+**Impacto:** `series.yaml`, catálogo, `AGENTS.md` e os documentos da frente passam a apontar para `vince/`. Nenhuma outra série muda.
+
 ## 12/11/2026 · Frente nova em desenvolvimento: Multiverse Capital (personagem Vinci)
 
-**O quê:** pasta `vinci/` (palavras de arranque `vinci`, `mercado`, `preco`): série sobre preço de cartas, com causa, fonte e data. Inclui `CONTEXTO.md` (bíblia), `PERFIL.md` e `audio/` com o sintetizador da voz da Fonte. Entradas novas no catálogo, em `series.yaml` e no `AGENTS.md`.
+**O quê:** pasta `vince/` (palavras de arranque `vince`, `mercado`, `preco`): série sobre preço de cartas, com causa, fonte e data. Inclui `CONTEXTO.md` (bíblia), `PERFIL.md` e `audio/` com o sintetizador da voz da Fonte. Entradas novas no catálogo, em `series.yaml` e no `AGENTS.md`.
 **Porquê:** pedido do fundador (11–12/11/2026). O plano original era uma personagem 3D, descartada por custo: em 3D o custo não baixa com o tempo, e nesta série o que muda a cada episódio é o número, a carta e a causa — texto e uma imagem do Scryfall. Decidiu-se character design 2D desenhado uma vez e composto em camadas, com o método de planos parados cortados a cada 3–6 s.
 **Nome público (fundador, 12/11):** Multiverse Capital. Voz do Vinci desenhada no ElevenLabs (`nDJxgaKfMo1DDJJqNg0f`), grave e rouca de fumador, enérgica — desenhada pelo timbre, sem clonar nem imitar voz de pessoa real.
 **Impacto:** nenhuma série existente muda; preço continua a poder ser remate cómico em Mana & Burn e notícia no Giro. Três regras novas próprias desta frente: nunca prever preço nem recomendar compra ou venda; todo o número com fonte e data no ecrã; a Fonte (personagem do telefone) nunca aparece, nunca fala palavras e nunca é legendada, e quando não há fonte verificada não atende. O som da Fonte é sintetizado localmente, sem créditos de serviços externos.

@@ -1,7 +1,7 @@
 {
   "nota": "Caixas medidas no recorte. A boca e os olhos sao colados pela cabeca; o simbolo do BINDER assenta no centro do disco do telefone.",
   "pecas": {
-    "vinci_pose_pitch": {
+    "vince_pose_pitch": {
       "largura": 876,
       "altura": 480,
       "origem": "poses.png",
@@ -12,7 +12,7 @@
         516
       ]
     },
-    "vinci_pose_aponta": {
+    "vince_pose_aponta": {
       "largura": 670,
       "altura": 476,
       "origem": "poses.png",
@@ -23,7 +23,7 @@
         508
       ]
     },
-    "vinci_pose_choque": {
+    "vince_pose_choque": {
       "largura": 603,
       "altura": 461,
       "origem": "poses.png",
@@ -34,7 +34,7 @@
         509
       ]
     },
-    "vinci_pose_bracos": {
+    "vince_pose_bracos": {
       "largura": 488,
       "altura": 471,
       "origem": "poses.png",
@@ -45,7 +45,7 @@
         988
       ]
     },
-    "vinci_pose_testa": {
+    "vince_pose_testa": {
       "largura": 628,
       "altura": 455,
       "origem": "poses.png",
@@ -56,7 +56,7 @@
         988
       ]
     },
-    "vinci_pose_confidencia": {
+    "vince_pose_confidencia": {
       "largura": 592,
       "altura": 441,
       "origem": "poses.png",
@@ -67,7 +67,7 @@
         992
       ]
     },
-    "vinci_pose_dinheiro": {
+    "vince_pose_dinheiro": {
       "largura": 534,
       "altura": 489,
       "origem": "poses.png",
@@ -78,7 +78,7 @@
         1501
       ]
     },
-    "vinci_pose_pega_telefone": {
+    "vince_pose_pega_telefone": {
       "largura": 766,
       "altura": 471,
       "origem": "poses.png",
@@ -89,7 +89,7 @@
         1501
       ]
     },
-    "vinci_pose_ao_telefone": {
+    "vince_pose_ao_telefone": {
       "largura": 590,
       "altura": 490,
       "origem": "poses.png",
@@ -100,7 +100,7 @@
         1495
       ]
     },
-    "vinci_cabeca_neutra": {
+    "vince_cabeca_neutra": {
       "largura": 449,
       "altura": 559,
       "origem": "pecas.png",
@@ -111,7 +111,7 @@
         663
       ]
     },
-    "vinci_boca_a": {
+    "vince_boca_a": {
       "largura": 455,
       "altura": 572,
       "origem": "pecas.png",
@@ -122,7 +122,7 @@
         670
       ]
     },
-    "vinci_boca_o": {
+    "vince_boca_o": {
       "largura": 452,
       "altura": 562,
       "origem": "pecas.png",
@@ -133,7 +133,7 @@
         662
       ]
     },
-    "vinci_olhos_fechados": {
+    "vince_olhos_fechados": {
       "largura": 456,
       "altura": 560,
       "origem": "pecas.png",
@@ -144,7 +144,7 @@
         659
       ]
     },
-    "vinci_olhos_lado": {
+    "vince_olhos_lado": {
       "largura": 454,
       "altura": 561,
       "origem": "pecas.png",

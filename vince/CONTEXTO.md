@@ -1,14 +1,18 @@
-# Multiverse Capital — bíblia da série e da personagem (Vinci)
+# Multiverse Capital — bíblia da série e do personagem (Vince Vault)
 
-Frente nova do BINDER Originals (@binderthetrade), **em desenvolvimento**: nome público **Multiverse Capital** (fundador, 12/11/2026); traço, cenário e voz fechados a 11–12/11/2026; falta a cadência. Ler antes de produzir qualquer peça do Vinci. O que estiver marcado **(proposta)** ainda não foi aprovado.
+Frente do BINDER Originals (@binderthetrade), **em desenvolvimento**. Série **Multiverse Capital**, apresentada pelo **Vince Vault**.
+
+> **Reconciliação de 12/11/2026.** Esta frente substitui e absorve a proposta anterior do PR #11 (branch `vince-vault`, 07–08/11), que tinha o mesmo personagem num visual 3D. Decisões do fundador a 12/11: fica o **traço 2D** desta versão (o 3D era complexo e caro, foi esse o motivo do redesenho); fica o **cenário da sala com o telefone**; fica a **voz antiga** `L93SDe6kGQj79D6svMgA`. O turnaround 3D, as folhas de expressões, as poses e os cenários do pregão ficam arquivados nesse ramo e não se usam. Fechar o PR #11 sem merge, com nota a apontar para aqui. Ler antes de produzir qualquer peça do Vinci. O que estiver marcado **(proposta)** ainda não foi aprovado.
 
 ---
 
 ## 1. O que é
 
-**Multiverse Capital** é a frente que fala do **mercado das cartas**, apresentada pelo **Vinci**: o que subiu, o que caiu, porquê, e o que isso significa para quem tem aquela carta na pasta.
+**Multiverse Capital** é a frente que fala do **mercado das cartas**, apresentada pelo **Vince Vault**: o que subiu, o que caiu, porquê, e o que isso significa para quem tem aquela carta na pasta.
 
-- **Personagem:** meio vendedor de feira, meio corretor. Fala depressa, sabe os números, e o fato é um tamanho acima do que ele consegue pagar.
+- **Personagem:** **Vince Vault**, corretor da bolsa com alma de vendedor de feira. Narcisista, hiperativo, informado. Fala depressa, sabe os números, e o fato é um tamanho acima do que ele consegue pagar. Apelido: "Vaultinho".
+- **Casa fictícia e nome da série:** Multiverse Capital. Vince Vault e a Multiverse Capital são personagens e empresa fictícios, e isso é dito na legenda.
+- **Bordão:** "Buy the dip!" — é piada sobre a ganância dele e aparece **sempre cortado ou desmentido em cena**, nunca como conselho a sério.
 - **Público:** jogador brasileiro adulto com cartas guardadas.
 - **Promessa:** em 40 segundos ficas a saber porque é que aquela carta mudou de preço.
 - **Relação com o BINDER Vision:** direta. Quem acabou de ver uma carta subir quer saber quanto vale a pasta dele.
@@ -65,7 +69,7 @@ Vertical 9:16, de frente, plano fixo de palco. Mesa escura pesada a atravessar o
 
 Trombone com surdina de êmbolo a fazer de fala: metal abafado, com contorno de frase e nenhuma palavra. A técnica é antiga e genérica; esta voz é desenhada de raiz para o Vinci e não imita o motivo sonoro de nenhuma obra existente.
 
-**Gerado localmente, custo zero:** `vinci/audio/fonte.py` sintetiza tudo (sem ElevenLabs, sem banco de sons). Frase nova = mais uma entrada no dicionário `FRASES` e correr o script. Ficheiros em `vinci/audio/saida/`.
+**Gerado localmente, custo zero:** `vince/audio/fonte.py` sintetiza tudo (sem ElevenLabs, sem banco de sons). Frase nova = mais uma entrada no dicionário `FRASES` e correr o script. Ficheiros em `vince/audio/saida/`.
 
 | Ficheiro | Intenção |
 |---|---|
@@ -84,15 +88,15 @@ Trombone com surdina de êmbolo a fazer de fala: metal abafado, com contorno de 
 
 | Peça | Estado |
 |---|---|
-| Base do personagem | **Pronta** — folha em `vinci/folhas/` |
-| Nove poses recortadas | **Prontas** — `vinci/kit/v1/vinci_pose_*.png` |
-| Cabeça, bocas e olhos | **Prontos** — `vinci/kit/v1/vinci_cabeca_neutra.png`, `vinci_boca_a`, `vinci_boca_o`, `vinci_olhos_fechados`, `vinci_olhos_lado` |
+| Base do personagem | **Pronta** — folha em `vince/folhas/` |
+| Nove poses recortadas | **Prontas** — `vince/kit/v1/vince_pose_*.png` |
+| Cabeça, bocas e olhos | **Prontos** — `vince/kit/v1/vince_cabeca_neutra.png`, `vince_boca_a`, `vince_boca_o`, `vince_olhos_fechados`, `vince_olhos_lado` |
 | Telefone em dois estados | **Pronto** — `prop_telefone_descanso`, `prop_telefone_fora` |
-| Som da Fonte | **Pronto** — `vinci/audio/` |
+| Som da Fonte | **Pronto** — `vince/audio/` |
 | Cenário com telefone | Escolhido pelo fundador a 12/11; por descarregar e integrar |
 | Voz do Vinci | **Pronta** — ElevenLabs `nDJxgaKfMo1DDJJqNg0f` ("Vinci — Multiverse Capital") |
 
-Recortes feitos por `vinci/recortar.py` (remove o fundo por preenchimento desde as bordas, isola por componentes ligados). Refazer: `python3 recortar.py --folha-poses folhas/poses.png --folha-pecas folhas/pecas.png`.
+Recortes feitos por `vince/recortar.py` (remove o fundo por preenchimento desde as bordas, isola por componentes ligados). Refazer: `python3 recortar.py --folha-poses folhas/poses.png --folha-pecas folhas/pecas.png`.
 
 **Poses:** pitch de braços abertos · aponta · choque a recuar · braços cruzados · palma na testa · confidência · contar dinheiro invisível · pegar no auscultador · ao telefone a ouvir.
 

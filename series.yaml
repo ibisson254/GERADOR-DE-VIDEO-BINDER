@@ -87,18 +87,18 @@ series:
     vozes: {}
     trilha: []
 
-  - slug: vinci
-    nome: Multiverse Capital (personagem Vinci) — em desenvolvimento
-    palavras: [vinci, mercado, preco, capital]
+  - slug: vince
+    nome: Multiverse Capital (personagem Vince Vault) — em desenvolvimento
+    palavras: [vince, vault, mercado, preco, capital]
     formato: reel_9x16                         # 1080x1920, 30 fps, 30-45 s
-    pasta: vinci/
-    perfil: vinci/PERFIL.md
-    identidade: vinci/CONTEXTO.md
-    assets: vinci/kit/v1/                      # por criar: recortes PNG + ancoras.json
-    audio_fonte: vinci/audio/                  # voz da Fonte e sons do telefone, sintetizados (fonte.py), custo zero
+    pasta: vince/
+    perfil: vince/PERFIL.md
+    identidade: vince/CONTEXTO.md
+    assets: vince/kit/v1/                      # por criar: recortes PNG + ancoras.json
+    audio_fonte: vince/audio/                  # voz da Fonte e sons do telefone, sintetizados (fonte.py), custo zero
     vozes:
       vinci: {fornecedor: elevenlabs, nome: "Vinci — Multiverse Capital", voice_id: nDJxgaKfMo1DDJJqNg0f, modelo: eleven_v3}   # voz desenhada a 12/11/2026
-      fonte: {fornecedor: local, nome: "trombone com surdina", ficheiro: vinci/audio/fonte.py}
+      fonte: {fornecedor: local, nome: "trombone com surdina", ficheiro: vince/audio/fonte.py}
     trilha: []                                 # por decidir
     referencia: null
 

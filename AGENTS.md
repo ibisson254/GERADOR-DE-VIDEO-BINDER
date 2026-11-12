@@ -15,7 +15,7 @@ Ponto de entrada para qualquer agente (Claude, ChatGPT ou outro). As instruçõe
    | `manaburn` | Mana & Burn | Série | `manaburn/PERFIL.md` → doc da série no Drive / skill `binder-mana-burn-episodio` → `manaburn/LEIA-ME.md` |
    | `tubo` / `meta` / `oraculo` | Meta em Curto | Série | `oraculo/PERFIL.md` → `oraculo/CONTEXTO.md` |
    | `conde` | Conde de Manaforte | Série | `conde/PERFIL.md` → `conde/CONTEXTO.md` |
-   | `vinci` / `mercado` / `preco` / `capital` | Multiverse Capital (personagem Vinci) · em desenvolvimento | Série | `vinci/PERFIL.md` → `vinci/CONTEXTO.md` → `vinci/EDICAO.md` → `vinci/PROMPT_EPISODIO.md` |
+   | `vince` / `vault` / `mercado` / `preco` / `capital` | Multiverse Capital (personagem Vince Vault) · em desenvolvimento | Série | `vince/PERFIL.md` → `vince/CONTEXTO.md` → `vince/EDICAO.md` → `vince/PROMPT_EPISODIO.md` |
    | `especial` | Especiais e homenagens | Pontual | constituição §14 + bíblias das séries envolvidas |
    | `orbita` | Órbita · Star Trek | Temática | `orbita/CONTEXTO.md` → `orbita/gerador/LEIA-ME.md` |
    | `lambe` / `post` | Lambe-lambe | Espontânea | `lambe-lambe/CONTEXTO.md` → skill `binder-posts-instagram` |

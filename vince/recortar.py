@@ -12,7 +12,7 @@ colunas, e gravado com o nome que o gerador de video espera.
 Uso:
     python3 recortar.py --folha-poses folhas/poses.png --folha-pecas folhas/pecas.png
 
-Saida: vinci/kit/v1/*.png + ancoras.json
+Saida: vince/kit/v1/*.png + ancoras.json
 """
 
 import argparse
@@ -23,13 +23,13 @@ from PIL import Image
 from scipy import ndimage
 
 NOMES_POSES = [
-    "vinci_pose_pitch", "vinci_pose_aponta", "vinci_pose_choque",
-    "vinci_pose_bracos", "vinci_pose_testa", "vinci_pose_confidencia",
-    "vinci_pose_dinheiro", "vinci_pose_pega_telefone", "vinci_pose_ao_telefone",
+    "vince_pose_pitch", "vince_pose_aponta", "vince_pose_choque",
+    "vince_pose_bracos", "vince_pose_testa", "vince_pose_confidencia",
+    "vince_pose_dinheiro", "vince_pose_pega_telefone", "vince_pose_ao_telefone",
 ]
 NOMES_PECAS = [
-    "vinci_cabeca_neutra", "vinci_boca_a", "vinci_boca_o",
-    "vinci_olhos_fechados", "vinci_olhos_lado",
+    "vince_cabeca_neutra", "vince_boca_a", "vince_boca_o",
+    "vince_olhos_fechados", "vince_olhos_lado",
     "prop_telefone_descanso", "prop_telefone_fora",
 ]
 

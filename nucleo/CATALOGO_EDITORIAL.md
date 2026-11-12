@@ -107,15 +107,15 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 
 ## Em desenvolvimento
 
-### Multiverse Capital (personagem: Vinci)
+### Multiverse Capital (personagem: Vince Vault)
 
 | Campo | Valor |
 |---|---|
 | Classificação | Série · episódio de série |
 | Estado | Em desenvolvimento (12/11/2026): nome público, traço, cenário, kit recortado, voz e som da Fonte fechados; falta a cadência; sem peças publicáveis |
 | Objetivo editorial | Explicar por que razão o preço de uma carta mudou, com causa única, fonte e data; dizer o que isso significa para quem tem a carta |
-| Identidade | Analista do mercado de cartas, meio vendedor de feira meio corretor; silhueta de ombros largos e pernas curtas, fato grande de mais, gravata vermelha como única cor saturada; cenário de mesa, parede suja e painel de cotações vazio; telefone de disco com o símbolo do BINDER no mostrador |
-| Documentação | Bíblia: `vinci/CONTEXTO.md` · Perfil: `vinci/PERFIL.md` · Som: `vinci/audio/fonte.py` |
+| Identidade | Vince Vault, corretor da Multiverse Capital (casa fictícia), bordão "Buy the dip!" sempre desmentido em cena; meio vendedor de feira meio corretor; silhueta de ombros largos e pernas curtas, fato grande de mais, gravata vermelha como única cor saturada; cenário de mesa, parede suja e painel de cotações vazio; telefone de disco com o símbolo do BINDER no mostrador |
+| Documentação | Bíblia: `vince/CONTEXTO.md` · Perfil: `vince/PERFIL.md` · Som: `vince/audio/fonte.py` |
 | Regras específicas | Nunca prever preço nem recomendar compra ou venda; todo o número com fonte e data no ecrã; a Fonte nunca aparece, nunca fala palavras e nunca é legendada; sem fonte verificada, a Fonte não atende |
 | Território | Preço e o que o move. Humor sobre cartas → Mana & Burn; notícia da semana → Giro; resultado competitivo → Meta em Curto; arte → Conde |
 | Conteúdo produzido | Nenhum ainda (formato previsto: Reel 9:16, 30–45 s) |
