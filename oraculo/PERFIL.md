@@ -62,6 +62,6 @@ Guardados + partilhas (conteúdo de referência). Secundária: respostas à perg
 
 ## Lacunas conhecidas
 
-Ver `CONTEXTO.md` §12. Episódios: EP01 (AC13, Relatório do Meta) — `episodios/ep01_ac13_ficha.md`; EP02 (Spotlight Fracture, Leitura da Final) — `episodios/ep02_hartford_ficha.md`.
+Ver `CONTEXTO.md` §12. Episódios: EP01 (AC13, Relatório do Meta) — `episodios/ep01_ac13_ficha.md`; EP02 (Spotlight Fracture, Leitura da Final) — `episodios/ep02_hartford_ficha.md`; EP03 (Arquivo Competitivo, boletim do fim de semana) — `episodios/ep03_arquivo_ficha.md`.
 
 Evidência visual obrigatória (lista, carta, ficha de jogador sem foto): `CONTEXTO.md` §6.4.
