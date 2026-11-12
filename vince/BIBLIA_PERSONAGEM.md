@@ -1,3 +1,5 @@
+> **ARQUIVO (12/11/2026):** a direção ativa da frente é a 2D — bíblia em `CONTEXTO.md`, perfil em `PERFIL.md`. Este documento e o material 3D (FICHA_VISUAL, MODELO_3D, V03_PLANO, referencias/) ficam como arquivo.
+
 # Vince Vault · Bíblia do personagem
 
 Estado: **personagem em desenvolvimento** (07/11/2026). Ainda não é uma frente: falta o fundador decidir o formato (série própria, convidado do Mana & Burn ou outro). Até lá não entra em `nucleo/CATALOGO_EDITORIAL.md` nem em `series.yaml`.

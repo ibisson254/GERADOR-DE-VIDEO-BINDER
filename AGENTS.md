@@ -19,7 +19,7 @@ Ponto de entrada para qualquer agente (Claude, ChatGPT ou outro). As instruçõe
    | `especial` | Especiais e homenagens | Pontual | constituição §14 + bíblias das séries envolvidas |
    | `orbita` | Órbita · Star Trek | Temática | `orbita/CONTEXTO.md` → `orbita/gerador/LEIA-ME.md` |
    | `lambe` / `post` | Lambe-lambe | Espontânea | `lambe-lambe/CONTEXTO.md` → skill `binder-posts-instagram` |
-   | `vince` | Vince Vault (personagem em desenvolvimento) | Personagem | `vince/BIBLIA_PERSONAGEM.md` → `vince/FICHA_VISUAL.md`; 3D: `vince/MODELO_3D.md` → `vince/V03_PLANO.md` |
+   | `vince` / `vinci` / `mercado` / `preco` | Vince Vault · Multiverse Capital (frente aprovada 12/11, em desenvolvimento) | Série | `vince/PERFIL.md` → `vince/CONTEXTO.md` (direção 2D; o material 3D é arquivo: `vince/MODELO_3D.md`, `vince/V03_PLANO.md`) |
 
 6. `comum/REGISTRO_EDITORIAL.md` (memória editorial de todas as frentes) e `comum/easter_eggs.md`: não repetir tema, objeto nem egg. Auditoria de originalidade em `nucleo/SHOWRUNNER.md` §2.3.
 7. Domingo, com prints do Instagram Insights: `comum/insights/LEIA-ME.md`.

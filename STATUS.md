@@ -7,19 +7,19 @@ Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `mai
 
 Auditoria integral, matriz de integração, sistema de previsões do TUBO corrigido e testado, validador de integridade, memória editorial e protocolo de pré-release reconciliados — tudo na `main` (PRs #18, #19, #20; autorização de 01:32). Às 05:54 o fundador fechou os episódios («Todos episódios dê como fechados menos o tubo de segunda. Vince vault»): 12 pacotes de conteúdo integrados e CONCLUÍDOS, MC-EP06 aberto, frente Vince Vault aprovada (`nucleo/DECISOES.md`, 12/11). Relatório: `nucleo/auditorias/2026-11-12_missao_master.md` · Matriz: `2026-11-12_matriz_integracao.md`.
 
-- **PRs** (12/11, fim da sessão): abertos só #2 (Pequeno Mestre), #7 (TV analógica, rebaseado) e #17 (Vinci). #3, #9 integrados reconciliados; #4, #8, #10, #11, #15, #16 integrados pelo fecho de 05:54; #18, #19, #20 e o PR de integração merged.
+- **PRs** (12/11, fim da sessão): abertos só #2 (Pequeno Mestre) e #7 (TV analógica, rebaseado). #3, #9, #17 integrados reconciliados; #4, #8, #10, #11, #15, #16 integrados pelo fecho de 05:54; #18–#22 merged.
 - **Sistema de previsões do TUBO** (`oraculo/previsoes/` + `oraculo/CICLO_SEMANAL.md`, origem: branch `meta-em-curto/ep07-wc32`, PR #16) integrado nesta branch com correções: `ciclo.py continuacao` agora funciona em qualquer dia e mostra **todas** as previsões abertas e as promessas ao público (antes só mostrava a janela semanal); validação reforçada (datas de conferência, coerência de estado); 15 testes automatizados em `oraculo/previsoes/test_ciclo.py`, todos a passar. Registo canónico: `oraculo/previsoes/registo.yaml` (7 previsões, todas PENDENTE).
 - **Motor do Giro encontrado**: está na branch `giro/2026-11-01` (`manaburn/giro/2026-11-01/`: `processar.py`, `previa.py`, `quadros.py`, `giro.html`, `cena_giro.js`); integrado nesta branch como arquivo do episódio publicado. A pendência "enviar ou subir o motor que gerou o Giro" (abaixo) fica resolvida quando esta branch entrar na `main`.
 - **Integridade**: `python3 -I comum/ferramentas/validar_repo.py` — caminhos do `series.yaml`, sintaxe Python, imports locais, vídeos versionados, links internos e segredos. Resultado a 12/11: 0 problemas (3 limitações conhecidas documentadas e aceites). Nenhum segredo versionado.
 
 ## Estado editorial
 
-Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vince Vault (série, aprovada a 12/11, em desenvolvimento)**; Órbita (temática); Lambe-lambe (espontânea); especiais. Estados por conteúdo: `comum/REGISTRO_EDITORIAL.md` (86 conteúdos). Fecho de 12/11: MC-EP03/04/05/07, MB-ESP03, MB-EP10, MB-GIRO02, CM-EP004/005, LL-PRETRK, LL-SHEOL, LL-DIVCAR, LL-CAMPBR fechados; **MC-EP06 (episódio de segunda) aberto**. Pequeno Mestre (PR #2) e Vinci (PR #17) em desenvolvimento, sem aprovação. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
+Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vince Vault (série, aprovada a 12/11, em desenvolvimento)**; Órbita (temática); Lambe-lambe (espontânea); especiais. Estados por conteúdo: `comum/REGISTRO_EDITORIAL.md` (86 conteúdos). Fecho de 12/11: MC-EP03/04/05/07, MB-ESP03, MB-EP10, MB-GIRO02, CM-EP004/005, LL-PRETRK, LL-SHEOL, LL-DIVCAR, LL-CAMPBR fechados; **MC-EP06 (episódio de segunda) aberto**. Pequeno Mestre (PR #2) em desenvolvimento, sem aprovação; o PR #17 era a direção 2D do próprio Vince Vault (integrado, reconciliado). Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
 
 ## Em produção
 
 - **MC-EP06 «Prestação de contas: placar zero»** (o TUBO de segunda): escrito, não produzido; a prestação de contas real é segunda 16/11 (`python3 -I oraculo/previsoes/ciclo.py segunda`).
-- **Vince Vault VV-EP00**: personagem 3D em evolução (Operação V03, `vince/V03_PLANO.md`).
+- **Vince Vault (Multiverse Capital)**: direção 2D ativa (PR #17, decisões de 11–12/11; 3D arquivado). Bíblia `vince/CONTEXTO.md`, som da Fonte `vince/audio/fonte.py`. **Em falta:** o kit 2D (16 PNG), `recortar.py`, `EDICAO.md` e `PROMPT_EPISODIO.md` descritos no PR #17 não chegaram à branch — pedir à sessão de origem ou refazer com aprovação.
 
 ## Consolidação
 
@@ -77,7 +77,7 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 
 - Aprovar um esboço das expressões novas do Mana e do Burn (auditoria §4) antes de as desenhar no kit.
 - ~~Enviar ou subir o motor que gerou o Giro~~ → encontrado na branch `giro/2026-11-01` e integrado na `main` (PR #18, 12/11).
-- ~~Ep. 10, frentes novas e pacotes de conteúdo~~ → resolvido a 12/11 (05:54): MB-EP10 = «A febre do autógrafo»; Vince Vault aprovada; pacotes integrados. Continuam com o fundador: Pequeno Mestre (PR #2) e Vinci (PR #17); PR #7 (TV analógica, rebaseado para `main`); publicações por confirmar (datas dos posts já no ar e dos CONCLUÍDOS que vierem a sair).
+- ~~Ep. 10, frentes novas e pacotes de conteúdo~~ → resolvido a 12/11 (05:54): MB-EP10 = «A febre do autógrafo»; Vince Vault aprovada; pacotes integrados. Continuam com o fundador: Pequeno Mestre (PR #2); PR #7 (TV analógica, rebaseado para `main`); publicações por confirmar; fontes de preço do Vince (decisão de 08/11 sem Cardmarket × corpo do PR #17 com Cardmarket — qual vale?); kit 2D do Vince em falta (refazer ou recuperar).
 - ~~Protocolo de Pré-Release: aprovar o PR e decidir o «~35%»~~ → integrado a 12/11 («Escolha as melhores opções e pode prosseguir»); o «~35%» já tinha saído conforme a decisão de 06/11 (aplicado em `oraculo/previsoes/registo.yaml`).
 - Memória editorial (`comum/REGISTRO_EDITORIAL.md`): confirmar as lacunas do fim do registo (30 linhas `POR AUDITAR`) e dizer quais dois vídeos levaram os R$ 11 de impulsionamento de 26/10 (e se o valor é total ou por vídeo).
 - Drive atualizado a 02/11 (notas de fonte de verdade na bíblia, no doc 05 e no Mapa do Drive; secção de estado na bíblia).

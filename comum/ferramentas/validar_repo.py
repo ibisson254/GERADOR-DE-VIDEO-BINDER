@@ -33,6 +33,11 @@ ACEITES = {
 }
 MODULOS_LOCAIS = {"render", "formatos", "copys", "roteiro", "scryfall", "montar", "lote",
                   "testes", "cortes", "trilha", "bordas", "luz", "patch", "lib"}
+# Caminhos do series.yaml que ainda não existem de propósito (ausência registada em STATUS.md/DECISOES.md).
+# Saem desta lista quando o ficheiro chegar.
+CAMINHOS_PENDENTES = {
+    "vince/kit/v1/",  # kit 2D do Vince Vault descrito no PR #17; não chegou à branch (12/11/2026)
+}
 SEGREDOS = [
     re.compile(r"sk-[A-Za-z0-9_-]{20,}"),
     re.compile(r"gh[pousr]_[A-Za-z0-9]{30,}"),
@@ -80,7 +85,10 @@ def main():
         dados = yaml.safe_load(sy.read_text(encoding="utf-8"))
         for c in set(caminhos_yaml(dados)):
             if not (raiz / c).exists():
-                add("P1", f"series.yaml aponta para caminho inexistente: {c}")
+                if c in CAMINHOS_PENDENTES:
+                    add("P2", f"series.yaml: caminho pendente documentado, ainda em falta: {c}")
+                else:
+                    add("P1", f"series.yaml aponta para caminho inexistente: {c}")
     else:
         add("P1", "series.yaml não encontrado")
 

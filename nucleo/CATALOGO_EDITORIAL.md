@@ -105,19 +105,19 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Já produzidos | Homenagem a Sir Patrick Stewart (v1 `esp01_sir_patrick/`, não publicável; v2 `esp02_picard_v2/`) · Especial de Halloween 2026 Innistrad × Duskmourn (`especiais/halloween_2026/`, publicado) |
 | Relação com o BINDER Vision | Fecho do scanner, salvo exceção registada (ex.: homenagem a Sir Patrick) |
 
-## Vince Vault (Multiverse Capital)
+## Vince Vault · Multiverse Capital (o mercado das cartas)
 
 | Campo | Valor |
 |---|---|
-| Classificação | Série permanente · episódio de série (boletim semanal) |
-| Estado | Aprovada pelo fundador (12/11/2026); em desenvolvimento — personagem 3D em evolução (Operação V03) |
-| Objetivo editorial | Boletim semanal do mercado de cartas: o que subiu, o que caiu, oportunidades acessíveis, com vocabulário de bolsa |
-| Identidade | Vince Vault, corretor anos 80/90 da Multiverse Capital, "Buy the dip!" (sempre desmentido em cena); voz própria no ElevenLabs |
-| Documentação | Bíblia: `vince/BIBLIA_PERSONAGEM.md` · Visual: `vince/FICHA_VISUAL.md` · 3D: `vince/MODELO_3D.md` → `vince/V03_PLANO.md` |
-| Regras específicas | Preços sem Cardmarket; fonte publicada, atribuída e datada no ecrã (piloto: MTGStocks/TCGplayer) até a F1 do BINDER existir; sem previsões nem recomendação de compra (decisões de 07–08/11/2026) |
-| Território | Mercado de cartas: variações de preço semanais, reprints, spikes, oportunidades |
-| Conteúdo produzido | Em preparação (`vince/episodios/ep00_fechamento_ficha.md`) |
-| Relação com o BINDER Vision | Chamada para ação: scanner + valor de referência |
+| Classificação | Série permanente · episódio de série |
+| Estado | Frente aprovada pelo fundador (12/11/2026, 05:54: «Vince vault»); em desenvolvimento — direção 2D ativa (decisão de 11–12/11: o 3D foi descartado por custo); kit de recortes por fechar; sem calendário |
+| Objetivo editorial | Explicar por que razão o preço de uma carta mudou, com causa única, fonte e data; dizer o que isso significa para quem tem a carta |
+| Identidade | Vince Vault, corretor da Multiverse Capital, "Buy the dip!" (sempre cortado ou desmentido em cena); traço 2D em camadas, planos parados cortados a cada 3–6 s; a Fonte (telefone) nunca aparece, nunca diz palavras, nunca é legendada; voz ElevenLabs antiga (`L93SDe6kGQj79D6svMgA`) |
+| Documentação | Bíblia: `vince/CONTEXTO.md` · Perfil: `vince/PERFIL.md` · Som da Fonte: `vince/audio/fonte.py` · Arquivo 3D (não ativo): `vince/BIBLIA_PERSONAGEM.md`, `vince/FICHA_VISUAL.md`, `vince/MODELO_3D.md`, `vince/V03_PLANO.md`, `vince/referencias/` |
+| Regras específicas | Nunca prever preço nem recomendar compra ou venda; todo o número com fonte e data no ecrã e nota «estimativa, não oferta de compra»; sem Cardmarket e sem preços do Scryfall (decisão de 08/11; constituição §4); sem fonte verificada, a Fonte não atende |
+| Território | Preço e o que o move. Humor sobre cartas → Mana & Burn; notícia da semana → Giro; resultado competitivo → Meta em Curto |
+| Conteúdo produzido | Nenhum ainda (formato previsto: Reel 9:16, 30–45 s); piloto antigo 3D arquivado em `vince/episodios/` |
+| Relação com o BINDER Vision | Direta: o fecho do scanner é continuação do conteúdo, não interrupção |
 
 ## Frente nova
 
