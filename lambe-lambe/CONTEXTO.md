@@ -17,10 +17,22 @@ O muro de lambe-lambe pop é o caos da coleção; o BINDER Vision é a lente que
 - Etiquetas: "Quem pintou?" (nome do artista a marcador), "Do Brasil" (verde) e "De Portugal" (vermelha) para artistas lusófonos, "ARTE" com o nome do artista nas peças em vídeo, selo "TELA REAL DO APP" nas demonstrações.
 - Cartazes pop desenhados para ilustrar a curiosidade sem copiar a arte da carta; lupas com detalhes ampliados ao lado da carta, que fica inteira.
 
+### Padrão oficial de carrossel (aprovado pelo fundador a 12/11/2026)
+
+Referências de direção de arte: as duas composições enviadas pelo fundador a 12/11/2026 (cartaz de paisagem e cartaz editorial de John Avon). São referência estética, não modelo: os textos factuais delas tinham erros (nome "Jhon", "desde 1998", "mais de 200 cartas") e não se publicam.
+
+- Formato 4:5, 1080×1350 por slide; todos os slides parecem capítulos da mesma publicação de rua.
+- Muro rosa, cartazes rasgados e sobrepostos, colagem física; tipografia editorial grande (Anton, Geist, Permanent Marker).
+- Slide 1 com gancho visual forte; slides do meio com informação e narrativa; último slide com pergunta e o cartaz preto BINDER.
+- Ilustração de capa original e genérica (vetorial). Não copiar obras nem retratar artistas reais: sem fotos nem rostos gerados de pessoas reais.
+- Cartas reais inteiras, créditos no slide e na legenda. Factos, datas, números e créditos sempre verificados.
+- Implementação de referência: `lambe-lambe/carrosseis_artistas/` (LL-ART13 a LL-ART18).
+
 ## 3. Formatos já usados
 
 | Formato | Descrição |
 |---|---|
+| Carrossel 4:5 (5 × 1080×1350) | Padrão oficial desde 12/11/2026: capa ilustrada, 3 slides de história com cartas reais, pergunta + cartaz BINDER |
 | Post avulso 4:5 (1080×1350) | Uma curiosidade ou um artista por post ("Curiosidades de Magic", "Artistas de Magic") |
 | Reel do scanner 9:16 | Gravação de tela real; gancho → problema → linha de scan esmeralda → app real → cartaz BINDER → CTA (~23 s) |
 | "Pause e descubra" 9:16 | Colagens de 0,2 s no muro, cada carta várias vezes sem repetir num intervalo curto; fecho com cartaz preto BINDER |
