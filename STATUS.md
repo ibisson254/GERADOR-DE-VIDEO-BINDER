@@ -3,6 +3,15 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
+## Missão Master (12/11/2026) · branch `consolidacao/2026-11-12-missao-master`
+
+Auditoria integral do repositório, matriz de integração de todas as branches e PRs, sistema de previsões do TUBO corrigido e testado, ferramenta de integridade do repositório. **Nada entrou na `main`: aguarda aprovação do fundador.** Relatório: `nucleo/auditorias/2026-11-12_missao_master.md` · Matriz: `nucleo/auditorias/2026-11-12_matriz_integracao.md`.
+
+- **Estado real dos PRs** (12/11): abertos #2, #3, #4, #7, #8, #9, #10, #11, #15, #16, #17 (a missão citava só 6). 36 branches; ~20 alteram os mesmos ficheiros de registo (STATUS, histórico, continuidade) → integração de conteúdos tem de ser sequencial.
+- **Sistema de previsões do TUBO** (`oraculo/previsoes/` + `oraculo/CICLO_SEMANAL.md`, origem: branch `meta-em-curto/ep07-wc32`, PR #16) integrado nesta branch com correções: `ciclo.py continuacao` agora funciona em qualquer dia e mostra **todas** as previsões abertas e as promessas ao público (antes só mostrava a janela semanal); validação reforçada (datas de conferência, coerência de estado); 15 testes automatizados em `oraculo/previsoes/test_ciclo.py`, todos a passar. Registo canónico: `oraculo/previsoes/registo.yaml` (7 previsões, todas PENDENTE).
+- **Motor do Giro encontrado**: está na branch `giro/2026-11-01` (`manaburn/giro/2026-11-01/`: `processar.py`, `previa.py`, `quadros.py`, `giro.html`, `cena_giro.js`); integrado nesta branch como arquivo do episódio publicado. A pendência "enviar ou subir o motor que gerou o Giro" (abaixo) fica resolvida quando esta branch entrar na `main`.
+- **Integridade**: `python3 -I comum/ferramentas/validar_repo.py` — caminhos do `series.yaml`, sintaxe Python, imports locais, vídeos versionados, links internos e segredos. Resultado a 12/11: 0 problemas (3 limitações conhecidas documentadas e aceites). Nenhum segredo versionado.
+
 ## Estado editorial
 
 Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbita (temática); Lambe-lambe (espontânea); especiais. Tudo o que está no repositório está aprovado e lançado; Halloween 2026 e Star Trek publicados. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
@@ -42,7 +51,8 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 ## Depende do fundador
 
 - Aprovar um esboço das expressões novas do Mana e do Burn (auditoria §4) antes de as desenhar no kit.
-- Enviar ou subir o motor que gerou o Giro (não há "giro" em `claude/gerador-manaburn/`).
+- ~~Enviar ou subir o motor que gerou o Giro~~ → encontrado na branch `giro/2026-11-01` e integrado em `consolidacao/2026-11-12-missao-master` (12/11).
+- Decisões da Missão Master (ver secção F de `nucleo/auditorias/2026-11-12_missao_master.md`): qual das 4 branches é o Ep. 10 do Mana & Burn; frentes novas (Pequeno Mestre, Vince Vault, Vinci); merge da branch de consolidação; ordem de integração dos pacotes de conteúdo (EP03–EP07, Giro nº 2, Conde EP005, especiais, lambes); reconciliação dos PRs #3 e #9.
 - Drive atualizado a 02/11 (notas de fonte de verdade na bíblia, no doc 05 e no Mapa do Drive; secção de estado na bíblia).
 
 ## Pendências técnicas (não bloqueiam a governação)
