@@ -1,12 +1,12 @@
-# Vinci — bíblia da personagem e da série
+# Multiverse Capital — bíblia da série e da personagem (Vinci)
 
-Frente nova do BINDER Originals (@binderthetrade), **em desenvolvimento**: traço e cenário definidos pelo fundador a 11–12/11/2026; voz, nome público e cadência ainda por decidir. Ler antes de produzir qualquer peça do Vinci. O que estiver marcado **(proposta)** ainda não foi aprovado.
+Frente nova do BINDER Originals (@binderthetrade), **em desenvolvimento**: nome público **Multiverse Capital** (fundador, 12/11/2026); traço, cenário e voz fechados a 11–12/11/2026; falta a cadência. Ler antes de produzir qualquer peça do Vinci. O que estiver marcado **(proposta)** ainda não foi aprovado.
 
 ---
 
 ## 1. O que é
 
-O Vinci é a frente que fala do **mercado das cartas**: o que subiu, o que caiu, porquê, e o que isso significa para quem tem aquela carta na pasta.
+**Multiverse Capital** é a frente que fala do **mercado das cartas**, apresentada pelo **Vinci**: o que subiu, o que caiu, porquê, e o que isso significa para quem tem aquela carta na pasta.
 
 - **Personagem:** meio vendedor de feira, meio corretor. Fala depressa, sabe os números, e o fato é um tamanho acima do que ele consegue pagar.
 - **Público:** jogador brasileiro adulto com cartas guardadas.
@@ -90,7 +90,7 @@ Trombone com surdina de êmbolo a fazer de fala: metal abafado, com contorno de 
 | Telefone em dois estados | **Pronto** — `prop_telefone_descanso`, `prop_telefone_fora` |
 | Som da Fonte | **Pronto** — `vinci/audio/` |
 | Cenário com telefone | Escolhido pelo fundador a 12/11; por descarregar e integrar |
-| Voz do Vinci | Três desenhos de voz gerados a 12/11; por escolher e guardar |
+| Voz do Vinci | **Pronta** — ElevenLabs `nDJxgaKfMo1DDJJqNg0f` ("Vinci — Multiverse Capital") |
 
 Recortes feitos por `vinci/recortar.py` (remove o fundo por preenchimento desde as bordas, isola por componentes ligados). Refazer: `python3 recortar.py --folha-poses folhas/poses.png --folha-pecas folhas/pecas.png`.
 
@@ -127,7 +127,7 @@ Limite honesto: um gesto verdadeiramente desenhado (o braço a varrer o ar) exig
 
 ## 10. Por decidir pelo fundador
 
-1. Voz do Vinci: três desenhos gerados a 12/11 a partir da descrição do fundador (voz grave e rouca de fumador, enérgica, de vendedor). Falta escolher um e guardar na biblioteca. Nota: desenhada pela descrição do timbre; não se clona nem se imita a voz de nenhuma pessoa real.
-2. Nome público da série: **por definir** — não há nenhum nome guardado no projeto nem no repositório. "Vinci" é o nome da personagem.
-3. Cadência e dia de publicação.
+1. ~~Voz do Vinci~~ — **fechada a 12/11**: voz desenhada no ElevenLabs, `voice_id` `nDJxgaKfMo1DDJJqNg0f`, nome na biblioteca "Vinci — Multiverse Capital". Timbre grave e rouco de fumador, enérgico, de vendedor. Desenhada pela descrição do timbre; não clona nem imita a voz de nenhuma pessoa real.
+2. ~~Nome público~~ — **fechado a 12/11**: Multiverse Capital.
+3. Cadência e dia de publicação: **por decidir**.
 4. Easter egg do fio do telefone: entra ou não.

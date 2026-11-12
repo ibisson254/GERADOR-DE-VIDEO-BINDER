@@ -1,4 +1,4 @@
-# Perfil operacional · Vinci (o mercado das cartas)
+# Perfil operacional · Multiverse Capital (personagem: Vinci)
 
 Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Aqui só o que é próprio da série. Identidade criativa (personagem, voz, visual, fórmula) vive em `vinci/CONTEXTO.md` e não se repete aqui.
 
@@ -19,4 +19,4 @@ Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Aqui só o que é pr�
   - Legenda com a linha fixa de que não é conselho de investimento.
   - No máximo um telefonema à Fonte por episódio; a Fonte nunca é vista, ouvida em palavras, legendada nem nomeada.
   - Moeda em reais e centavos.
-- **Lacunas conhecidas:** voz do Vinci por escolher no ElevenLabs; cadência de publicação por decidir; kit visual v1 em curso (ver `vinci/CONTEXTO.md` §7).
+- **Lacunas conhecidas:** cadência de publicação por decidir. Voz, nome público e kit visual v1 fechados a 12/11/2026 (ver `vinci/CONTEXTO.md` §7 e §10).

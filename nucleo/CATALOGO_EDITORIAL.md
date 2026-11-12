@@ -107,12 +107,12 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 
 ## Em desenvolvimento
 
-### Vinci (o mercado das cartas)
+### Multiverse Capital (personagem: Vinci)
 
 | Campo | Valor |
 |---|---|
 | Classificação | Série · episódio de série |
-| Estado | Em desenvolvimento (12/11/2026): traço, cenário e som da Fonte definidos; kit de recortes por fechar; sem voz, sem cadência, sem peças publicáveis |
+| Estado | Em desenvolvimento (12/11/2026): nome público, traço, cenário, kit recortado, voz e som da Fonte fechados; falta a cadência; sem peças publicáveis |
 | Objetivo editorial | Explicar por que razão o preço de uma carta mudou, com causa única, fonte e data; dizer o que isso significa para quem tem a carta |
 | Identidade | Analista do mercado de cartas, meio vendedor de feira meio corretor; silhueta de ombros largos e pernas curtas, fato grande de mais, gravata vermelha como única cor saturada; cenário de mesa, parede suja e painel de cotações vazio; telefone de disco com o símbolo do BINDER no mostrador |
 | Documentação | Bíblia: `vinci/CONTEXTO.md` · Perfil: `vinci/PERFIL.md` · Som: `vinci/audio/fonte.py` |

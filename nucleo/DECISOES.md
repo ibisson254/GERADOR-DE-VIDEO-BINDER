@@ -2,10 +2,11 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
-## 12/11/2026 · Frente nova em desenvolvimento: Vinci (o mercado das cartas)
+## 12/11/2026 · Frente nova em desenvolvimento: Multiverse Capital (personagem Vinci)
 
 **O quê:** pasta `vinci/` (palavras de arranque `vinci`, `mercado`, `preco`): série sobre preço de cartas, com causa, fonte e data. Inclui `CONTEXTO.md` (bíblia), `PERFIL.md` e `audio/` com o sintetizador da voz da Fonte. Entradas novas no catálogo, em `series.yaml` e no `AGENTS.md`.
 **Porquê:** pedido do fundador (11–12/11/2026). O plano original era uma personagem 3D, descartada por custo: em 3D o custo não baixa com o tempo, e nesta série o que muda a cada episódio é o número, a carta e a causa — texto e uma imagem do Scryfall. Decidiu-se character design 2D desenhado uma vez e composto em camadas, com o método de planos parados cortados a cada 3–6 s.
+**Nome público (fundador, 12/11):** Multiverse Capital. Voz do Vinci desenhada no ElevenLabs (`nDJxgaKfMo1DDJJqNg0f`), grave e rouca de fumador, enérgica — desenhada pelo timbre, sem clonar nem imitar voz de pessoa real.
 **Impacto:** nenhuma série existente muda; preço continua a poder ser remate cómico em Mana & Burn e notícia no Giro. Três regras novas próprias desta frente: nunca prever preço nem recomendar compra ou venda; todo o número com fonte e data no ecrã; a Fonte (personagem do telefone) nunca aparece, nunca fala palavras e nunca é legendada, e quando não há fonte verificada não atende. O som da Fonte é sintetizado localmente, sem créditos de serviços externos.
 
 ## 08/11/2026 (00:05) · Burn no plano da TV
