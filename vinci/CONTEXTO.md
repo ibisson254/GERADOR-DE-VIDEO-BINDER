@@ -84,16 +84,33 @@ Trombone com surdina de êmbolo a fazer de fala: metal abafado, com contorno de 
 
 | Peça | Estado |
 |---|---|
-| Base do personagem (desenho aprovado, limpo) | Escolhida com o fundador a 12/11; por integrar |
-| Cenário com telefone | Escolhido com o fundador a 12/11; por integrar |
-| Folha de nove poses | Gerada; por escolher e recortar |
-| Bocas (fechada, "a", "o") e olhos (abertos, fechados) | Gerados; por escolher e recortar |
-| Recortes PNG com transparência + `ancoras.json` | Por fazer |
-| Som da Fonte | **Pronto** (`vinci/audio/`) |
+| Base do personagem | **Pronta** — folha em `vinci/folhas/` |
+| Nove poses recortadas | **Prontas** — `vinci/kit/v1/vinci_pose_*.png` |
+| Cabeça, bocas e olhos | **Prontos** — `vinci/kit/v1/vinci_cabeca_neutra.png`, `vinci_boca_a`, `vinci_boca_o`, `vinci_olhos_fechados`, `vinci_olhos_lado` |
+| Telefone em dois estados | **Pronto** — `prop_telefone_descanso`, `prop_telefone_fora` |
+| Som da Fonte | **Pronto** — `vinci/audio/` |
+| Cenário com telefone | Escolhido pelo fundador a 12/11; por descarregar e integrar |
+| Voz do Vinci | Três desenhos de voz gerados a 12/11; por escolher e guardar |
 
-**Poses previstas:** pitch de braços abertos · aponta o painel · choque a recuar · braços cruzados · palma na testa · confidência · contar dinheiro invisível · pegar no auscultador · ao telefone a ouvir.
+Recortes feitos por `vinci/recortar.py` (remove o fundo por preenchimento desde as bordas, isola por componentes ligados). Refazer: `python3 recortar.py --folha-poses folhas/poses.png --folha-pecas folhas/pecas.png`.
 
-**Movimento permitido, e só este:** piscar; empurrão de 2% na escala no primeiro quadro de cada pose nova; o número do painel a contar até ao valor final, uma vez por episódio. Tudo o resto é corte.
+**Poses:** pitch de braços abertos · aponta · choque a recuar · braços cruzados · palma na testa · confidência · contar dinheiro invisível · pegar no auscultador · ao telefone a ouvir.
+
+## 7B. Movimento: como se consegue fluidez sem animar quadro a quadro
+
+Decisão do fundador a 12/11: o movimento tem de ser fluido. Fluidez aqui não se compra com mais desenhos — compra-se com tempo e peso. O gerador é HTML + Playwright a 30 fps, por isso tudo o que está abaixo é movimento verdadeiro, interpolado a cada quadro, e **não acrescenta um único desenho ao kit**.
+
+1. **Nada fica parado.** Respiração contínua no corpo: escala vertical de 1,000 a 1,012 e volta, em ciclos de 2,4 s, sempre a correr por baixo de tudo o resto.
+2. **Deriva lenta de câmara.** O plano inteiro aproxima ou desloca 1 a 2 % ao longo de 10 s. É o que separa "vídeo" de "slideshow"; o olho não dá por ela, mas sente.
+3. **Antecipação e assentamento na troca de pose.** A pose nova entra 3 % maior e assenta em 120 ms com desaceleração. O corte deixa de ser seco e passa a ter peso.
+4. **Atraso do secundário.** Cabeça, braço e gravata movem-se 60 a 80 ms depois do corpo. É este desfasamento que o olho lê como animação a sério.
+5. **Boca sincronizada à sílaba**, com as três bocas, e fecho nas pausas — nunca a abrir e fechar ao calhas.
+6. **Piscar com intenção:** dois quadros, a cada 4 a 6 s, e sempre um piscar antes de uma pose de reação.
+7. **O fio do telefone baloiça** quando o auscultador sai do descanso: curva desenhada em código, uma oscilação amortecida de 0,6 s.
+8. **O número do painel conta** até ao valor final em 0,8 s, uma vez por episódio, com desaceleração no fim.
+9. **Os cortes caem na batida** da música.
+
+Limite honesto: um gesto verdadeiramente desenhado (o braço a varrer o ar) exige desenhos intermédios e isto não os dá. Se um episódio precisar mesmo disso, acrescentam-se dois ou três intermédios **a um só gesto**, e esse gesto passa a ser a assinatura da série. Antes disso, aplicar os nove pontos acima — resolvem quase tudo e custam zero.
 
 ## 8. Fórmula do episódio (30–45 s)
 
@@ -110,7 +127,7 @@ Trombone com surdina de êmbolo a fazer de fala: metal abafado, com contorno de 
 
 ## 10. Por decidir pelo fundador
 
-1. Voz do Vinci no ElevenLabs (descrição e autorização de créditos).
-2. Nome público da série.
+1. Voz do Vinci: três desenhos gerados a 12/11 a partir da descrição do fundador (voz grave e rouca de fumador, enérgica, de vendedor). Falta escolher um e guardar na biblioteca. Nota: desenhada pela descrição do timbre; não se clona nem se imita a voz de nenhuma pessoa real.
+2. Nome público da série: **por definir** — não há nenhum nome guardado no projeto nem no repositório. "Vinci" é o nome da personagem.
 3. Cadência e dia de publicação.
 4. Easter egg do fio do telefone: entra ou não.

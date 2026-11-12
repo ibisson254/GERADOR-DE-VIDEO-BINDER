@@ -1,0 +1,181 @@
+{
+  "nota": "Caixas medidas no recorte. A boca e os olhos sao colados pela cabeca; o simbolo do BINDER assenta no centro do disco do telefone.",
+  "pecas": {
+    "vinci_pose_pitch": {
+      "largura": 876,
+      "altura": 480,
+      "origem": "poses.png",
+      "caixa_na_folha": [
+        74,
+        36,
+        950,
+        516
+      ]
+    },
+    "vinci_pose_aponta": {
+      "largura": 670,
+      "altura": 476,
+      "origem": "poses.png",
+      "caixa_na_folha": [
+        1029,
+        32,
+        1699,
+        508
+      ]
+    },
+    "vinci_pose_choque": {
+      "largura": 603,
+      "altura": 461,
+      "origem": "poses.png",
+      "caixa_na_folha": [
+        1926,
+        48,
+        2529,
+        509
+      ]
+    },
+    "vinci_pose_bracos": {
+      "largura": 488,
+      "altura": 471,
+      "origem": "poses.png",
+      "caixa_na_folha": [
+        263,
+        517,
+        751,
+        988
+      ]
+    },
+    "vinci_pose_testa": {
+      "largura": 628,
+      "altura": 455,
+      "origem": "poses.png",
+      "caixa_na_folha": [
+        1042,
+        533,
+        1670,
+        988
+      ]
+    },
+    "vinci_pose_confidencia": {
+      "largura": 592,
+      "altura": 441,
+      "origem": "poses.png",
+      "caixa_na_folha": [
+        1920,
+        551,
+        2512,
+        992
+      ]
+    },
+    "vinci_pose_dinheiro": {
+      "largura": 534,
+      "altura": 489,
+      "origem": "poses.png",
+      "caixa_na_folha": [
+        201,
+        1012,
+        735,
+        1501
+      ]
+    },
+    "vinci_pose_pega_telefone": {
+      "largura": 766,
+      "altura": 471,
+      "origem": "poses.png",
+      "caixa_na_folha": [
+        969,
+        1030,
+        1735,
+        1501
+      ]
+    },
+    "vinci_pose_ao_telefone": {
+      "largura": 590,
+      "altura": 490,
+      "origem": "poses.png",
+      "caixa_na_folha": [
+        1935,
+        1005,
+        2525,
+        1495
+      ]
+    },
+    "vinci_cabeca_neutra": {
+      "largura": 449,
+      "altura": 559,
+      "origem": "pecas.png",
+      "caixa_na_folha": [
+        104,
+        104,
+        553,
+        663
+      ]
+    },
+    "vinci_boca_a": {
+      "largura": 455,
+      "altura": 572,
+      "origem": "pecas.png",
+      "caixa_na_folha": [
+        605,
+        98,
+        1060,
+        670
+      ]
+    },
+    "vinci_boca_o": {
+      "largura": 452,
+      "altura": 562,
+      "origem": "pecas.png",
+      "caixa_na_folha": [
+        1129,
+        100,
+        1581,
+        662
+      ]
+    },
+    "vinci_olhos_fechados": {
+      "largura": 456,
+      "altura": 560,
+      "origem": "pecas.png",
+      "caixa_na_folha": [
+        1651,
+        99,
+        2107,
+        659
+      ]
+    },
+    "vinci_olhos_lado": {
+      "largura": 454,
+      "altura": 561,
+      "origem": "pecas.png",
+      "caixa_na_folha": [
+        2170,
+        100,
+        2624,
+        661
+      ]
+    },
+    "prop_telefone_descanso": {
+      "largura": 972,
+      "altura": 630,
+      "origem": "pecas.png",
+      "caixa_na_folha": [
+        185,
+        793,
+        1157,
+        1423
+      ]
+    },
+    "prop_telefone_fora": {
+      "largura": 1049,
+      "altura": 744,
+      "origem": "pecas.png",
+      "caixa_na_folha": [
+        1322,
+        690,
+        2371,
+        1434
+      ]
+    }
+  }
+}
