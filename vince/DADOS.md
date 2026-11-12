@@ -67,3 +67,21 @@ O Giro do Mana & Burn sai ao domingo e dá notícia da semana. O Vince sai ao **
 - **Variação de preço com causa e números** é do Vince.
 - O que o Vince deu no sábado **não se repete** no Giro no domingo; se for grande de mais para ignorar, o Giro refere em uma linha e manda ver o episódio do Vince.
 - A pesquisa de sábado à tarde do Giro passa a ler primeiro o episódio do Vince desse dia.
+
+## 6. O flash do Vince no Giro de Domingo
+
+Decisão do fundador a 12/11: o Vince entra no Giro como **notícia rápida**, como já acontece com outras personagens.
+
+**Como entra.** A meio do Giro, a TV SAL corta para ele — é a própria televisão da sala do Mana & Burn a mudar de canal. O Vince aparece dentro do ecrã da TV, não na sala. Fica enquadrado como um direto: "Multiverse Capital, ao vivo." O Burn reage; o Mana continua o Giro.
+
+**Duração:** 5 a 8 segundos, uma fala do Vince e uma reação. Nunca mais do que isso — é um flash, não um bloco.
+
+**Regras**
+1. **Uma aparição por Giro, no máximo**, e só quando houver mesmo um número de mercado que valha a pena. Se não houver, não aparece. Uma personagem que aparece sempre deixa de ser acontecimento.
+2. **Nunca repete o que já deu no sábado.** Ou é o desfecho do que ele disse na véspera ("aquela carta de ontem? Já caiu metade"), ou é um número novo. Repetir queima as duas peças.
+3. **O número do flash segue as mesmas regras de sempre:** praça, data e "estimativa, não oferta de compra" no ecrã, mesmo em cinco segundos.
+4. **Não dá conselho nem no flash.** Se usar o bordão, fica cortado pelo Burn.
+5. **Não rouba o fecho.** O flash entra entre notícias, nunca no gancho dos primeiros três segundos nem no fecho — essas posições são do Giro.
+6. Serve de chamada para o episódio de sábado seguinte sem o anunciar em voz alta: quem gostou procura.
+
+**Produção:** reaproveita as poses já recortadas e o enquadramento da TV SAL que o Giro já usa; a única peça nova é a moldura de "direto" dentro do ecrã da TV. Zero assets novos de personagem.

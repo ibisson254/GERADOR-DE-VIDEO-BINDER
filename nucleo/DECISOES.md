@@ -2,6 +2,13 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 12/11/2026 · O Vince entra no Giro de Domingo como flash
+
+**O quê:** o Vince Vault passa a poder aparecer no Giro de Domingo do Mana & Burn como notícia rápida de 5 a 8 segundos, dentro do ecrã da TV SAL, como um direto da Multiverse Capital. Regras em `vince/DADOS.md` §6.
+**Porquê:** pedido do fundador a 12/11, em linha com o que já se faz com outras personagens.
+**Limites:** no máximo uma aparição por Giro e só havendo número que a justifique; nunca repete o episódio de sábado; o número leva praça, data e "estimativa, não oferta de compra" mesmo em cinco segundos; não entra no gancho nem no fecho do Giro.
+**Impacto:** nenhum asset novo de personagem; só uma moldura de "direto" dentro do ecrã da TV.
+
 ## 12/11/2026 · Multiverse Capital ao sábado, com rubricas de dados
 
 **O quê:** a série passa a boletim semanal **ao sábado**, com três rubricas: a que mais valorizou, a que mais desvalorizou e a mais procurada. Fontes, limites e faseamento em `vince/DADOS.md`.
