@@ -114,3 +114,35 @@ Com a autorização do fundador sobre a secção F, foram executadas as recomend
 | F.2 Ep. 10 (4 candidatos) · F.6 frentes novas · F.3 merges de conteúdo | **Não executado — continuam com o fundador** (editorial/identitário; a autorização genérica não substitui estas escolhas) |
 
 Testes da 2ª fase: `memoria.py validar` OK (72 conteúdos, 30 POR AUDITAR) · `test_memoria.py` 17/17 · `test_ciclo.py` 15/15 · `validar_repo.py` 0 problemas.
+
+
+---
+
+## Adendo · 3ª fase (12/11/2026, 05:54): «Todos episódios dê como fechados menos o tubo de segunda. Vince vault»
+
+Leitura executada: fechar todos os pacotes de episódios produzidos; o «tubo de segunda» é o **MC-EP06 «Prestação de contas: placar zero»** (a própria ficha o classifica como «episódio de segunda do ciclo semanal»; escrito, não produzido), que fica aberto; «Vince vault» aprova a frente.
+
+Integrados na `main` (branch `integracao/2026-11-12-episodios-fechados`, um merge por pacote, por ordem cronológica de produção): MC-EP03, MC-EP04, LL-PRETRK, MC-EP05+carrossel, MB-ESP03, MB-GIRO02, **MB-EP10 «A febre do autógrafo»** (branch `ep10-cartas-especiais` — escolhida pelo índice semanal que o fundador confirmou a 08/11, 00:10–00:15; `ep10-97-terrenos`, `ep10-numot` e `ep10-olag` ficam como rascunhos não integrados), MC-EP07 (+ roteiro do EP06), CM-EP005, LL-SHEOL, LL-DIVCAR, LL-CAMPBR, e a frente **Vince Vault** (branch `vince-vault`/PR #11, pasta `vince/`; a `proposta/vince-vault` de 07/11 fica como proposta substituída). Registo editorial: 86 conteúdos, estados pelo fecho de 05:54 e pelo índice de 08/11 (`PUBLICADO` só com confirmação: MC-EP05, MB-ESP03, CM-EP004). Decisões das branches preservadas no `DECISOES.md` (02/11 foto do campeão, 08/11 calendário, 07–08/11 Vince, 10/11 fotos EP07).
+
+Testes no fim: `memoria.py validar` OK (86) · `test_memoria.py` 17/17 · `test_ciclo.py` 15/15 · `validar_repo.py` 0 problemas.
+
+### Handoff final (substitui o da secção H)
+
+```
+HANDOFF · 12/11/2026, ~06h30 Lisboa · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main · PRs #18, #19, #20 e integração de episódios merged
+
+Objetivo atual: estúdio consolidado; produção corrente.
+
+Decisões tomadas nesta sessão: ver nucleo/DECISOES.md, entradas de 12/11 (01:32 e 05:54).
+
+Tarefas pendentes:
+- Segunda 16/11: prestação de contas do TUBO (python3 -I oraculo/previsoes/ciclo.py segunda) · agente, com pedido do fundador
+- MC-EP06: autorizar a voz ou deixar o episódio de 16/11 substituí-lo · fundador
+- Publicações por confirmar (datas dos CONCLUÍDOS; 30 linhas POR AUDITAR; R$ 11 de 26/10) · fundador
+- Pequeno Mestre (PR #2), Vinci (PR #17), PR #7 (TV analógica) · fundador
+- Vince Vault: Operação V03 (rosto/expressões + Vince Swagger Walk) · agente, quando o fundador pedir
+
+Próximo passo concreto: quinta 12/11 é dia de episódio de previsão (tubo quinta) — mas o EP07 (Mundial 32)
+já cobre o fim de semana; publicar o EP07 antes de 13/11 e segunda 16/11 correr o ciclo de prestação de contas.
+```

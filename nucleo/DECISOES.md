@@ -2,11 +2,20 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
-## 12/11/2026 · Missão Master: merge da consolidação e integração do protocolo de pré-release
+## 12/11/2026 (05:54) · Todos os episódios fechados, menos o TUBO de segunda; Vince Vault aprovada
 
+**O quê:** (1) Entram na `main`, fechados (CONCLUÍDO; PUBLICADO onde o índice de 08/11 já o confirmava): MC-EP03, MC-EP04, MC-EP05 (+carrossel), MC-EP07, MB-ESP03, MB-EP10 («A febre do autógrafo», branch `ep10-cartas-especiais`, conforme o índice semanal confirmado pelo fundador a 08/11 — as branches `ep10-97-terrenos`, `ep10-numot` e `ep10-olag` ficam como rascunhos não integrados), MB-GIRO02, CM-EP004 (registo), CM-EP005, LL-PRETRK, LL-SHEOL, LL-DIVCAR e LL-CAMPBR. (2) **MC-EP06 («Prestação de contas: placar zero», o episódio de segunda) fica ABERTO**: escrito, não produzido; a prestação de contas é segunda, 16/11. (3) **Vince Vault aprovada como frente** (pasta `vince/`, branch `vince-vault`/PR #11; a `proposta/vince-vault` de 07/11 fica como proposta substituída); secção no catálogo. Pequeno Mestre (PR #2) e Vinci (PR #17) continuam em desenvolvimento, sem aprovação.
+**Porquê:** fundador, 12/11/2026 (05:54): «Todos episódios dê como fechados menos o tubo de segunda. Vince vault».
+**Impacto:** registo editorial atualizado (86 conteúdos); nenhum conteúdo publicado reaberto; `PUBLICADO` só onde havia confirmação (índice de 08/11); o resto fica `CONCLUÍDO` com publicação por confirmar.
+
+## 12/11/2026 · Missão Master: merge da consolidação e integração do protocolo de pré-release
 **O quê:** (1) A branch `consolidacao/2026-11-12-missao-master` entra na `main` (PR #18): matriz de integração, sistema de previsões do TUBO (de `meta-em-curto/ep07-wc32`, PR #16) com `ciclo.py continuacao` corrigido (mostra TODAS as previsões abertas em qualquer dia, não só a janela semanal) e 15 testes, `comum/ferramentas/validar_repo.py`, motor do Giro nº 1 arquivado de `giro/2026-11-01`, STATUS ao estado real. (2) A branch `protocolo-pre-release-tubo` (PR #9, decisão de 06/11 abaixo) entra reconciliada: a secção de previsões de `comum/historico.md` passa a remissão para `oraculo/previsoes/registo.yaml` (fonte canónica única, decisão de 09/11 abaixo); as entradas de 06/11, 09/11 e 10/11 entram neste registo de decisões. (3) A branch `feature/memoria-editorial-insights` (PR #3, decisão de 01/11 abaixo) entra reconciliada: constituição v1.6, registo editorial, encerramento obrigatório (`SHOWRUNNER.md` §6) e `comum/insights/`; o registo editorial fica marcado como desatualizado desde 01/11. (4) PR #7 passa a ter base `main` (a base anterior já foi integrada).
 **Porquê:** fundador, 12/11/2026 (01:32): «Escolha as melhores opções e pode prosseguir», em resposta à secção F de `nucleo/auditorias/2026-11-12_missao_master.md`.
 **Fica de fora (decisão própria do fundador):** qual das 4 branches é o Ep. 10 do Mana & Burn; frentes novas (Pequeno Mestre, Vince Vault, Vinci); merge dos pacotes de conteúdo (EP03–EP07, Giro nº 2, Conde EP005, especiais, lambes).
+
+## 10/11/2026 · Meta em Curto EP07: fotos dos brasileiros e listas no ecrã
+**O quê:** o fundador autorizou fotos reais dos 6 brasileiros convidados ao WC32 nas fichas do EP07 e assumiu a responsabilidade pelos direitos (registo em `oraculo/autorizacoes/2026-11-10_ep07_fotos_brasileiros.md`). Exceção só deste episódio; a regra geral do CONTEXTO §6.4 mantém-se (foto do campeão por defeito; restantes jogadores com silhueta). Pediu também as listas dos decks citados: entram a lista agregada de Mono-Green Landfall (Karsten, magic.gg) e as duas listas campeãs de Jund Sacrifice (Hartford e Pequim), com pausas de voz novas em vez de voz regenerada.
+**Porquê:** pedido do fundador (10/11, 17:06): «Coloque as fotos dos jogadores brasileiros, eu assumo a responsabilidade e coloque algumas listas de cartas que você citou no episódio». Os ficheiros das fotos têm de vir do fundador: os agentes não descarregam fotos de pessoas da web.
 
 ## 10/11/2026 · Toda previsão do TUBO conta no registo, em qualquer dia
 
@@ -21,6 +30,17 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **Decisões técnicas:** o registo fica em YAML porque a segunda tem de o ler sem interpretação; o histórico humano remete para ele, para não haver duas tabelas. A shell não chega ao 17Lands, magic.gg nem MTGMeta: o script não pesquisa, diz o quê e onde; o agente usa as ferramentas web. Previsões de prazo longo levam conferências marcadas às segundas (placar parcial, nunca auditoria).
 **Impacto:** identidade, voz, trilha e estrutura do TUBO não mudam. A `main` ainda não tem o `PROTOCOLO_PRE_RELEASE.md` (branch `protocolo-pre-release-tubo`) nem o EP05 (branch `meta-em-curto-ep05`); o ciclo remete para eles e funciona sem eles, mas a integração dessas branches fica por aprovar.
 
+## 08/11/2026 · Vince Vault: boletim semanal e fonte de preços
+
+**O quê:** o formato proposto para o Vince passa a ser um boletim semanal (altas, baixas e oportunidades em cartas acessíveis, com vocabulário da bolsa). Preços sem Cardmarket. Fonte preferida: a plataforma BINDER; como a base ainda não guarda histórico de preços (F1 do Data Intelligence Master v1.2) e o valor de referência da app vem do Scryfall (termos proíbem republicar preços), a variação semanal vem de uma fonte que a publica, atribuída e datada no ecrã (piloto: MTGStocks, preços do TCGplayer). O BINDER Vision entra como chamada para ação (scanner + valor de referência).
+**Porquê:** pedido do fundador (08/11/2026).
+**Impacto:** quando a F1 existir, o boletim passa a usar os dados do BINDER. Sem previsões nem recomendação de compra; "Buy the dip!" é sempre desmentido em cena.
+
+## 08/11/2026 (02:06) · Calendário da parede configurável (Mana & Burn)
+**O quê:** o ano do calendário velho da sala passa a vir de `EP.calendario` (por defeito "2019"). O Giro de 08/11 usa "1996".
+**Porquê:** fundador, 08/11/2026: "mude o calendário na parede para 1996".
+**Impacto:** só o Giro de 08/11 muda; os outros episódios e a sala v3 ficam iguais. Se o fundador quiser 1996 em todos, basta mudar o valor por defeito no `index.html`.
+
 ## 08/11/2026 (00:05) · Burn no plano da TV
 
 **O quê:** correção de um defeito de render, não de modelo: no plano da TV os padrões SVG (cabelo raspado do Burn, xadrez da camisa, papel de parede) saíam transparentes porque os ids repetidos apontavam para o mundo escondido. O plano da TV passa a ter defs próprios (sufixo `_2`). O Burn sobe 40 px atrás da TV e mostra pescoço e ombros com a mesma camisa do plano geral, ligando-se ao braço que aponta.
@@ -32,6 +52,12 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **O quê:** entra no `manaburn/index.html` o esboço de 07/11 (`nucleo/auditorias/2026-11-07_esboco_sala.md`): mesa de noite de Commander (decks com sleeves, cartas genéricas, d20, dados, deckboxes), mesa 96 px acima para sair da faixa das legendas no plano geral, piso de taco discreto entre rodapé e carpete, e a luz dentro do cenário (lâmpada quente, reflexo frio da TV que apaga com ela, primeiro plano mais escuro). Com a luz no cenário, o `luz.py` deixa de correr por defeito no `render.py` (`--luz-pos` liga); continua a servir vídeos de outro motor.
 **Porquê:** fundador, 08/11/2026: "Sim finalizei tudo", em resposta ao pedido de aprovação dos pontos 1 a 4 do esboço.
 **Fica de fora:** modelo do Burn no plano da TV (só cabeça, sem boné nem ombros): precisa de decisão própria.
+
+## 07/11/2026 · Vince Vault: personagem em desenvolvimento e estratégia de créditos
+
+**O quê:** novo personagem Vince Vault (Multiverse Capital, "Buy the dip!"), com bíblia em `vince/BIBLIA_PERSONAGEM.md` e referências em `vince/referencias/`. Turnaround oficial fixado; voz desenhada no ElevenLabs (`L93SDe6kGQj79D6svMgA`). Estratégia de créditos: imagens fixas no app Gemini, ElevenLabs só para voz e lip sync, estimativa antes de cada geração, uma variação por pedido, lip sync só no gancho.
+**Porquê:** pedido do fundador (07/11/2026); a primeira ronda no ElevenLabs esgotou o saldo do plano.
+**Impacto:** ainda não é uma frente. Formato e catálogo dependem de decisão do fundador. Os preços ditos pelo Vince seguem a regra de não inventar factos.
 
 ## 07/11/2026 (17:54) · Merge da luz padrão e do especial "Precon em jogo" para `main`
 
@@ -156,6 +182,12 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **O quê:** o especial `manaburn/episodios/esp01_sir_patrick/` não segue quatro regras da série e da constituição: (1) sem fecho do scanner (`outro_binder_916.mp4`); o vídeo termina no ponto verde e na assinatura "BINDER Originals", sem "Disponível no Google Play"; (2) legenda sem "baixe o BINDER Vision" nem CTA do app; (3) comentário fixado sem "Tem um detalhe escondido. Diga o segundo." e sem easter egg; (4) formato fora do perfil: 54,8 s, locução contínua do Mana + uma fala do Burn, em vez de 14 falas em bate-volta e 35–45 s.
 **Porquê:** pedido explícito do Ibisson no brief do especial (nível 1 da hierarquia, §1): homenagem sem promoção do app, sem humor e sem parecer exploração comercial do luto.
 **Impacto:** só este episódio. As regras voltam a valer no episódio seguinte. Cena própria (`homenagem.html`) feita com os desenhos do `manaburn/index.html` sem alterá-lo; trilha original sintetizada (`musica.py`) em vez da trilha rock da série.
+
+## 02/11/2026 · Meta em Curto: foto real do campeão passa a padrão
+
+**O quê:** `oraculo/CONTEXTO.md` §6.4: o campeão aparece com foto real na ficha, em vez da silhueta. Altera a regra de 29/10, que exigia autorização registada em `oraculo/autorizacoes/`. Outros jogadores mantêm a silhueta.
+**Porquê:** pedido do fundador (02/11/2026, EP04).
+**Impacto:** risco aceite pelo fundador: a foto tem direitos do autor ou do organizador e o direito de imagem do jogador; pode haver denúncia de direitos. Mitigação: só foto oficial, com crédito.
 
 ## 29/10/2026 · Meta em Curto EP02 e regra de evidência visual
 

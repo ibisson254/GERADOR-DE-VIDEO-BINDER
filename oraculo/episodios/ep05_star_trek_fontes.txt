@@ -1,0 +1,37 @@
+Meta em Curto EP05 · Star Trek, engenharia de um deck · fontes (consultadas a 05/11/2026)
+
+STAR TREK: PRODUTO E COLAÇÃO (fonte primária)
+- Wizards, guia de pré-release (30/10/2026): https://magic.wizards.com/en/news/feature/star-trek-prerelease-guide
+  Pré-release desde 06/11, lançamento 13/11; 6 Play Boosters, promo foil, deck box, dado; 40 cartas; curva sugerida; "at least five removal spells"; artifact removal "especially valuable"; 10 arquétipos.
+- Wizards, Collecting Star Trek: https://magic.wizards.com/en/news/feature/collecting-star-trek
+  14 cartas + ficha; 6–7 comuns (81), 3 incomuns (110), coringa, rara/mítica, foil, terreno; taxas por vaga; Stardates 1 em 25; promo "1 traditional foil rare or mythic rare card".
+- Wizards, guia do comprador: https://magic.wizards.com/en/news/feature/star-trek-buyers-guide
+- Wizards, calendário do Arena: https://magic.wizards.com/en/news/mtg-arena/star-trek-event-schedule (Arena 10/11; Sealed 10/11–08/12; Traditional Sealed 10–24/11).
+- magic.gg, Worlds 32: https://magic.gg/news/world-championship-32-fact-sheet-for-competitors (Atlanta, 13–15/11/2026; Star Trek Booster Draft + Standard).
+
+CARTAS
+- Scryfall API, set trk (586 impressões; 306 do set principal: 91 C, 110 U, 80 R, 25 M), 05/11/2026. Extraído para oraculo/ep05/dados/trk_main_oracle.json.
+- U.S.S. Enterprise-A, Free Spirit, TRK 43, mítica, arte de Evan Shipard: oraculo/ep05/cartas/uss_enterprise_a.json.
+- Spacecraft de Edge of Eternities: Scryfall, set:eoe t:spacecraft (22 cartas; 12 C/U).
+
+CRÍTICA PRÉ-LANÇAMENTO (opinião, não resultado)
+- MTG Arena Zone, J2SJosh, Star Trek (TRK) Limited Set Review, 02/11/2026: Multicolor https://mtgazone.com/star-trek-trk-limited-set-review-multicolor/ · Artifacts and Lands https://mtgazone.com/star-trek-trk-limited-set-review-artifacts-and-lands/ · Blue https://mtgazone.com/star-trek-trk-limited-set-review-blue/ · Red https://mtgazone.com/star-trek-trk-limited-set-review-red/ · Black https://mtgazone.com/star-trek-trk-limited-set-review-black/ · White https://mtgazone.com/?p=265468 · Green https://mtgazone.com/?p=265757
+  Notas em oraculo/ep05/dados/notas_limited_trk.csv. O texto legível do White acaba em Troubling Tribbles e o do Black não traz Vengeance Mission.
+- Draftsim, Andrew Quinn, The Ultimate MTG Star Trek Limited Set Review: https://draftsim.com/mtg-trk-limited-set-review/ (5 notas ÷ 2 para as cartas em falta; arquétipos; "spacecraft were simply not good" em EOE).
+- U.S.S. Reliant, From Hell's Heart: sem nota lida em nenhuma fonte; o modelo usa 2,5 neutro.
+
+SEALED E DRAFT DE SETS ANTERIORES (método, não prova sobre TRK)
+- Untapped.gg, páginas Sealed Trophy Decks: https://mtga.untapped.gg/limited/sealed/secrets-of-strixhaven/trophy-decks · final-fantasy · edge-of-eternities · lorwyn-eclipsed · aetherdrift · teenage-mutant-ninja-turtles · bloomburrow · foundations · duskmourn-house-of-horror. 69 listas, em oraculo/ep05/dados/trofeus_sealed_untapped.csv. Campos fiáveis: cores, recorde, terrenos. O resto da página veio sem rótulos.
+- Reality Fracture, 10 pares, Draft × Sealed: カナメ, note.com, 18/10/2026, https://note.com/kaname_edh/n/n831b3a02b5fc?hl=en (Draft: 17Lands via Portent Lab, 29/09–15/10; Sealed: MTGMeta, 16/10). Spearman Draft × Sealed = 0,50 (n = 10, p = 0,14), cálculo nosso.
+- Portent Lab, Reality Fracture archetypes: https://portentlab.com/articles/reality-fracture-draft-archetypes (725.657 jogos de Premier Draft).
+- MTGMeta: https://mtgmeta.com/limited/trk (sem jogos de TRK) · /limited/eoe · /limited/fra · /limited/sos · /limited/dft (só Draft legível; dados 17Lands, CC BY 4.0).
+- 16 × 17 terrenos, Draft, seis sets: https://jackjosephwright.github.io/mtg_16_17_land_website/ (~4 milhões de jogos; 16 terrenos à frente, mas é Draft e controlos parciais). Não usado no vídeo.
+- MTG Rocks, Hobbit Sealed: https://mtgrocks.com/mtg-hobbit-sealed/ (17/08/2026; remoção preta). Contexto.
+- Listas completas lidas (n = 2): Allen Wu, GP Cleveland 2019, Sealed 9-0 no dia 1 https://article.hareruyamtg.com/article/22263/?lang=en · Draftsim "ARENA Direct 7-1" (autodeclarado, SOS) https://draftsim.com/decks/arena-direct-7-1/
+
+NÃO ACESSÍVEL NESTA SESSÃO
+- 17Lands: páginas de dados e S3 fora da lista de acesso; deck pages com robots_disallowed; deck_color_data sem corpo.
+- Untapped.gg: páginas com ?eventType e algumas localizadas falham; set-guide sem valores.
+- magic.wizards.com/en/events/coverage (GP, listas 9-0 do dia 1): falha no site; web.archive.org fora da lista.
+- Reddit: não lido.
+- TheGamer, Star City Games, Channel Fireball: nada usado.

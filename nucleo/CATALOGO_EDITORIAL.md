@@ -105,6 +105,20 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Já produzidos | Homenagem a Sir Patrick Stewart (v1 `esp01_sir_patrick/`, não publicável; v2 `esp02_picard_v2/`) · Especial de Halloween 2026 Innistrad × Duskmourn (`especiais/halloween_2026/`, publicado) |
 | Relação com o BINDER Vision | Fecho do scanner, salvo exceção registada (ex.: homenagem a Sir Patrick) |
 
+## Vince Vault (Multiverse Capital)
+
+| Campo | Valor |
+|---|---|
+| Classificação | Série permanente · episódio de série (boletim semanal) |
+| Estado | Aprovada pelo fundador (12/11/2026); em desenvolvimento — personagem 3D em evolução (Operação V03) |
+| Objetivo editorial | Boletim semanal do mercado de cartas: o que subiu, o que caiu, oportunidades acessíveis, com vocabulário de bolsa |
+| Identidade | Vince Vault, corretor anos 80/90 da Multiverse Capital, "Buy the dip!" (sempre desmentido em cena); voz própria no ElevenLabs |
+| Documentação | Bíblia: `vince/BIBLIA_PERSONAGEM.md` · Visual: `vince/FICHA_VISUAL.md` · 3D: `vince/MODELO_3D.md` → `vince/V03_PLANO.md` |
+| Regras específicas | Preços sem Cardmarket; fonte publicada, atribuída e datada no ecrã (piloto: MTGStocks/TCGplayer) até a F1 do BINDER existir; sem previsões nem recomendação de compra (decisões de 07–08/11/2026) |
+| Território | Mercado de cartas: variações de preço semanais, reprints, spikes, oportunidades |
+| Conteúdo produzido | Em preparação (`vince/episodios/ep00_fechamento_ficha.md`) |
+| Relação com o BINDER Vision | Chamada para ação: scanner + valor de referência |
+
 ## Frente nova
 
 Criar a pasta, `PERFIL.md` (modelo em `modelos/PERFIL_SERIE.md`) e a bíblia (`CONTEXTO.md`), acrescentar uma secção aqui e uma entrada em `../series.yaml`, e registar em `DECISOES.md`. A constituição não muda.

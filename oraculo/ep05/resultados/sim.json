@@ -1,0 +1,339 @@
+{
+ "snw": {
+  "9F+8I": {
+   "T4": {
+    "media": 1.872,
+    "p3": 0.0,
+    "p4": 0.0
+   },
+   "T6": {
+    "media": 1.934,
+    "p3": 0.0,
+    "p4": 0.0
+   },
+   "T8": {
+    "media": 1.968,
+    "p3": 0.0,
+    "p4": 0.0
+   }
+  },
+  "pool_4_nomes": {
+   "T4": {
+    "media": 2.707,
+    "p3": 58.47,
+    "p4": 18.61
+   },
+   "T6": {
+    "media": 3.04,
+    "p3": 71.18,
+    "p4": 29.46
+   },
+   "T8": {
+    "media": 3.305,
+    "p3": 80.34,
+    "p4": 40.39
+   }
+  },
+  "pool_mais_basicos": {
+   "T4": {
+    "media": 3.022,
+    "p3": 72.2,
+    "p4": 34.52
+   },
+   "T6": {
+    "media": 3.548,
+    "p3": 83.94,
+    "p4": 50.63
+   },
+   "T8": {
+    "media": 3.937,
+    "p3": 91.15,
+    "p4": 64.54
+   }
+  },
+  "cores_T3": {
+   "9F+8I": 82.65,
+   "pool_4_nomes": 76.79,
+   "pool_mais_basicos": 69.16
+  }
+ },
+ "federation": {
+  "tipos_media_por_n_criaturas": {
+   "1": 1.942,
+   "2": 3.681,
+   "3": 5.269,
+   "4": 6.716,
+   "5": 8.061
+  },
+  "media_tipos_por_criatura": 1.941,
+  "n": 101,
+  "comuns": [
+   [
+    "Human",
+    31
+   ],
+   [
+    "Officer",
+    21
+   ],
+   [
+    "Scientist",
+    14
+   ],
+   [
+    "Warrior",
+    11
+   ],
+   [
+    "Klingon",
+    10
+   ],
+   [
+    "Doctor",
+    8
+   ],
+   [
+    "Rogue",
+    7
+   ],
+   [
+    "Artificer",
+    6
+   ]
+  ]
+ },
+ "poder8_poder_medio_por_custo": {
+  "1": 1.0,
+  "2": 1.909,
+  "3": 2.8,
+  "4": 3.143,
+  "5": 3.833,
+  "6": 5.0
+ },
+ "poder8_n_corpos": {
+  "1": 3,
+  "2": 11,
+  "3": 10,
+  "4": 7,
+  "5": 6,
+  "6": 2
+ },
+ "poder8_goldfish_jogando": {
+  "T3": 0.0,
+  "T4": 1.92,
+  "T5": 59.57,
+  "T6": 77.21,
+  "T7": 86.91,
+  "T8": 92.83
+ },
+ "poder8_goldfish_comprando": {
+  "T3": 0.0,
+  "T4": 2.58,
+  "T5": 74.9,
+  "T6": 87.15,
+  "T7": 92.84,
+  "T8": 96.06
+ },
+ "poder8_goldfish_lento": {
+  "T3": 0.0,
+  "T4": 0.11,
+  "T5": 49.55,
+  "T6": 71.39,
+  "T7": 83.12,
+  "T8": 90.48
+ },
+ "naves": [
+  {
+   "n": "Oberth-Class Starship",
+   "r": "C",
+   "cmc": 2.0,
+   "lim": [
+    6
+   ],
+   "etb": true,
+   "nota": 2.0
+  },
+  {
+   "n": "U.S.S. Enterprise-A, Free Spirit",
+   "r": "M",
+   "cmc": 5.0,
+   "lim": [
+    6
+   ],
+   "etb": true,
+   "nota": 5.0
+  },
+  {
+   "n": "U.S.S. Excelsior, Cutting Edge",
+   "r": "U",
+   "cmc": 4.0,
+   "lim": [
+    8
+   ],
+   "etb": true,
+   "nota": 3.0
+  },
+  {
+   "n": "Enterprise NX-01",
+   "r": "U",
+   "cmc": 4.0,
+   "lim": [
+    6
+   ],
+   "etb": true,
+   "nota": 2.0
+  },
+  {
+   "n": "H.M.S. Bounty, Unlikely Timeship",
+   "r": "R",
+   "cmc": 5.0,
+   "lim": [
+    8
+   ],
+   "etb": true,
+   "nota": 1.5
+  },
+  {
+   "n": "Romulan Bird-of-Prey",
+   "r": "R",
+   "cmc": 2.0,
+   "lim": [
+    8
+   ],
+   "etb": false,
+   "nota": 3.0
+  },
+  {
+   "n": "Suurok-Class Science Vessel",
+   "r": "C",
+   "cmc": 3.0,
+   "lim": [
+    5
+   ],
+   "etb": true,
+   "nota": 2.0
+  },
+  {
+   "n": "U.S.S. Reliant, From Hell's Heart",
+   "r": "R",
+   "cmc": 4.0,
+   "lim": [
+    10
+   ],
+   "etb": true,
+   "nota": null
+  },
+  {
+   "n": "D-7 Battle Cruiser",
+   "r": "R",
+   "cmc": 2.0,
+   "lim": [
+    3,
+    8
+   ],
+   "etb": false,
+   "nota": 4.0
+  },
+  {
+   "n": "Sarcophagus, Ship of the Dead",
+   "r": "U",
+   "cmc": 3.0,
+   "lim": [
+    10
+   ],
+   "etb": false,
+   "nota": 2.5
+  },
+  {
+   "n": "U.S.S. Discovery, at Black Alert",
+   "r": "R",
+   "cmc": 5.0,
+   "lim": [
+    6
+   ],
+   "etb": true,
+   "nota": 4.5
+  },
+  {
+   "n": "U.S.S. Voyager, Lone Wanderer",
+   "r": "U",
+   "cmc": 4.0,
+   "lim": [
+    8
+   ],
+   "etb": true,
+   "nota": 2.0
+  },
+  {
+   "n": "Borg Cube",
+   "r": "M",
+   "cmc": 7.0,
+   "lim": [
+    12
+   ],
+   "etb": true,
+   "nota": 4.0
+  },
+  {
+   "n": "Class-F Shuttlecraft",
+   "r": "C",
+   "cmc": 3.0,
+   "lim": [
+    6
+   ],
+   "etb": false,
+   "nota": 1.5
+  },
+  {
+   "n": "Deep Space 9",
+   "r": "M",
+   "cmc": 9.0,
+   "lim": [
+    9
+   ],
+   "etb": true,
+   "nota": 1.5
+  },
+  {
+   "n": "U.S.S. Cerritos, Following Up",
+   "r": "U",
+   "cmc": 5.0,
+   "lim": [
+    6
+   ],
+   "etb": true,
+   "nota": 2.0
+  },
+  {
+   "n": "U.S.S. Enterprise-D, Galaxy-Class",
+   "r": "R",
+   "cmc": 3.0,
+   "lim": [
+    7
+   ],
+   "etb": false,
+   "nota": 4.5
+  }
+ ],
+ "remocao_cu": {
+  "total": 27,
+  "acerta_nave_parada": [
+   "70,000 Light-Years from Home",
+   "Malfunctioning Holodeck",
+   "Guidance Failure",
+   "Marooned",
+   "Rules of Acquisition"
+  ]
+ },
+ "anti_art_cu": [
+  "70,000 Light-Years from Home",
+  "Malfunctioning Holodeck",
+  "Guidance Failure",
+  "Marooned",
+  "Rules of Acquisition",
+  "Perils of the Past",
+  "Dathon and Picard at El-Adrel",
+  "Test of Courage",
+  "Kirk, Commanding Officer"
+ ]
+}

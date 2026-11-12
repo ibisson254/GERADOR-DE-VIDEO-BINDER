@@ -1,0 +1,57 @@
+# Ficha · Meta em Curto · EP04 · Jund em Pequim (Magic Spotlight: Fracture, Standard)
+
+Scripts: `ep04_audio.py`, `ep04_render.py`. Dados: `ep04_roteiro.json`, `ep04_lista.json`, `ep04_words.json`. Fontes: `ep04_jund_pequim_fontes.txt`. Pacote: `../legendas/ep04_jund_pequim_legenda.txt`.
+
+## Classificação
+- Série: Meta em Curto (TUBO) · Episódio regular · Classe: Relatório do Meta / Leitura de campeão, sem VOD
+- Complexidade: alta · Estratégia: análise de dados + Oracle
+- Continuidade: cumpre a promessa do EP03 (votação vencedora: B, Standard, indicada pelo fundador).
+
+## Editorial
+- Objetivo: explicar por que o campeão ganhou e o que o Top 8 revela.
+- Proposta de valor: o Jund Sacrifice transforma cada sacrifício em dano, e o mesmo núcleo já tinha ganho Hartford.
+- Público: competitivo e Commander. Hipótese: pergunta de escolher peça (A/B/C) gera respostas.
+- Tese (leitura do TUBO): não era sobre a maior mesa, era sobre o que sacrificar.
+- Gancho: «Oitocentos e sessenta e nove jogadores. Um campeão. E o deck dele não precisava vencer a guerra pela mesa.»
+
+## Alterações ao roteiro do ChatGPT (aprovado pelo fundador a 02/11 com «crie esse episódio»)
+| Rascunho | Final | Porquê |
+|---|---|---|
+| 859 jogadores | 869 | Número já publicado no EP03, com fonte legível |
+| Final: 2–1 | só no ecrã e na legenda | Confirmado na chave oficial enviada pelo fundador |
+| «Mostrar a lista» | + «Tirando os terrenos, as sete cartas com quatro cópias são as mesmas da lista que venceu Hartford» | EP02 já explicou o motor; sem isto o episódio repetia-o. Cálculo verificável nas duas listas |
+| Fontes DeckSnipe/Merlion | MTGGoldfish, PlayMTG, Scryfall | O que foi lido nesta sessão |
+
+## Fontes e evidências
+| Afirmação | Tipo | Fonte | Data |
+|---|---|---|---|
+| Que Mo 1.º, final 2–1 | facto | chave oficial Spotlight Series (fundador) | 02/11/2026 |
+| 16-2, lista | facto | MTGGoldfish (Melee) | 02/11/2026 |
+| 3 Jund no Top 8 (1.º, 3.º, 8.º) | facto | chave oficial + MTGGoldfish | 02/11/2026 |
+| 869 jogadores | facto atribuído | PlayMTG | 31/10/2026 |
+| 7 não-terrenos com 4 cópias iguais a Hartford | cálculo nosso | ep04_lista.json + ep02_listas.json | 02/11/2026 |
+| 2 + 1 = 3 | cálculo nosso | Oracle | 02/11/2026 |
+| «Não era sobre a maior mesa…» | opinião do TUBO | marcada no ecrã | — |
+
+## Produção
+- Voz: ElevenLabs "Antonio de Jesus", eleven_v4, 2 tomadas (998 créditos cada), atempo 1,10. Flow: "Meta em Curto EP04 · Jund em Pequim" (`b81YGxZSC7uRuJf820D0`).
+- Trilha: `tubo_tema_original.mp3`, corte seco de 1,2 s depois de «troféu.»
+- Easter egg: «BOLSÃO» na vertical na chuva de código, à direita da carta The Sackville-Bagginses = a casa que eles cobiçam em O Hobbit.
+- Campeão: ficha com foto real (estreia do padrão, CONTEXTO §6.4). Sem imagens de transmissão. Contador ERROS HUMANOS não mostrado (sem valor registado).
+- Grau de certeza: texto das cartas ALTO, pilotagem BAIXO (sem VOD).
+
+## Controlo de qualidade (ficheiro final, 02/11/2026)
+| Critério | Resultado |
+|---|---|
+| Formato | 1080×1920, 30 fps; 64,4 s (60,5 s sem o fecho) |
+| Corte lateral | cropdetect 1080:1920:0:0 em amostra de 31 quadros; folha de contacto vista |
+| Loudness | −14,0 LUFS, pico −1,8 dBTP |
+| Fecho | `outro_binder_916.mp4` real, sem encurtar |
+| Lista | 24 + 6 + 5 + 3 + 22 = 60 |
+| qc_video.py | Sem problemas mensuráveis |
+| Áudio | Medido, não ouvido: pronúncia conferida pela transcrição Scribe |
+| Defeitos bloqueadores | Nenhum |
+- Texto fora do tubo reposicionado para dentro da zona segura; legenda fora do tubo sobe para y 1530.
+
+## Depois de publicar
+- Métrica: guardados + partilhas; secundária respostas A/B/C.

@@ -1,0 +1,36 @@
+CARROSSEL v3 "300 CARTAS. ZERO DIGITAÇÃO." · 6 slides · 11/11/2026
+Link: https://play.google.com/store/apps/details?id=com.binderstudios.vision&referrer=utm_source%3Dinstagram%26utm_medium%3Dcarrossel%26utm_campaign%3Dpare_de_digitar
+
+=== LEGENDA ===
+300 cartas no fichário e nenhuma cadastrada? A gente sabe por quê: digitar carta por carta, com nome em inglês e edição certa, ninguém aguenta.
+
+No BINDER Vision você aponta a câmera, a carta entra no seu Binder com um valor de referência em reais, e no fim você exporta a coleção inteira pra LigaMagic: em lista pro Cadastro por Lista ou em planilha CSV. Lá você confere o preço da Liga e anuncia.
+
+Escaneie aqui, venda lá. Beta para Android: baixe o BINDER Vision no Google Play, link na bio.
+
+#magicthegathering #mtgbrasil #commanderbrasil #ligamagic #mtgcollection
+
+=== COMENTÁRIO FIXADO ===
+Você já cadastrou sua coleção na LigaMagic? 👇 Sim, toda / Só um pedaço / Nunca tive paciência
+
+Passo a passo: 1) escaneie as cartas no BINDER Vision; 2) abra o seu Binder e toque em Exportar para LigaMagic; 3) escolha Texto Rápido (Cadastro por Lista) ou Planilha CSV (Importar Coleção); 4) cole no site. O valor no app é uma referência; o preço da Liga você confere lá. O BINDER não tem parceria com a LigaMagic.
+
+=== TEXTO ALTERNATIVO ===
+01: Sol Ring, The One Ring e Rhystic Study em leque sobre fundo claro. "300 cartas. Zero digitação." Escaneie a coleção com a câmera e leve tudo pra LigaMagic. Selo Disponível no Google Play.
+02: Seis cartas de Commander em grade (Arcane Signet, Command Tower, Cultivate, Cyclonic Rift, Smothering Tithe, Swords to Plowshares). "Cadastrar coleção é a pior parte de colecionar. Nome em inglês. Edição. Foil. 6 de 300…"
+03: Painel escuro com a tela real do scanner identificando Iron Man Armor. "Aponte. Pronto."
+04: Tela real do Binder com Sheoldred, the Apocalypse e R$ 396,42. "Cada carta com valor em reais. R$ 396."
+05: Tela real do Binder: Meu Patrimônio R$ 1.940,82 e o botão Exportar destacado. "Um toque. Coleção na LigaMagic." Opções Texto rápido (Cadastro por Lista) e Planilha CSV (Importar Coleção).
+06: Fundo escuro com Sol Ring, The One Ring e Rhystic Study. "Escaneie aqui. Venda lá. Baixe o BINDER Vision agora." Selo Disponível no Google Play, link na bio.
+
+=== CRÉDITOS DAS CARTAS (imagens do Scryfall, conferidas a 11/11/2026) ===
+- Sol Ring (Reality Fracture Commander, 2026), nº 21. Arte: Titus Lunter. https://scryfall.com/card/frc/21/sol-ring?utm_source=api
+- Rhystic Study (Jumpstart 2022, 2022), nº 114. Arte: Tatiana Kirgetova. https://scryfall.com/card/j22/114/rhystic-study?utm_source=api
+- The One Ring (The Lord of the Rings: Tales of Middle-earth, 2023), nº 246. Arte: Veli Nyström. https://scryfall.com/card/ltr/246/the-one-ring?utm_source=api
+- Smothering Tithe (Commander Masters, 2023), nº 57. Arte: Mark Behm. https://scryfall.com/card/cmm/57/smothering-tithe?utm_source=api
+- Cyclonic Rift (Ravnica Remastered, 2024), nº 40. Arte: Isis. https://scryfall.com/card/rvr/40/cyclonic-rift?utm_source=api
+- Arcane Signet (Reality Fracture Commander, 2026), nº 20. Arte: Josu Solano. https://scryfall.com/card/frc/20/arcane-signet?utm_source=api
+- Command Tower (Reality Fracture Commander, 2026), nº 22. Arte: Josu Solano. https://scryfall.com/card/frc/22/command-tower?utm_source=api
+- Swords to Plowshares (Reality Fracture Commander, 2026), nº 37. Arte: Jesper Ejsing. https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api
+- Cultivate (Marvel Super Heroes Commander, 2026), nº 172. Arte: Darius Zablockis. https://scryfall.com/card/msc/172/cultivate?utm_source=api
+© Wizards of the Coast. Star Trek © CBS. Marvel ©.
