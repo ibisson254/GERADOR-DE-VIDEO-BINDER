@@ -20,7 +20,7 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 
 - **MC-EP06 «Prestação de contas: placar zero»** (o TUBO de segunda): escrito, não produzido; a prestação de contas real é segunda 16/11 (`python3 -I oraculo/previsoes/ciclo.py segunda`).
 - **Vince Vault (Multiverse Capital)**: direção 2D ativa (PR #17, decisões de 11–12/11; 3D arquivado). Bíblia `vince/CONTEXTO.md`, som da Fonte `vince/audio/fonte.py`. **Em falta:** o kit 2D (16 PNG), `recortar.py`, `EDICAO.md` e `PROMPT_EPISODIO.md` descritos no PR #17 não chegaram à branch — pedir à sessão de origem ou refazer com aprovação.
-- **VV-EP01 «O Pregão de Véspera»** (12/11, 17h): produzido e CONCLUÍDO na branch `vince/ep01-pregao-vespera` com o kit 2D da branch `vince/kit-v1` (PR #23, por integrar — o kit existe lá). Vídeo entregue ao fundador na conversa; ficha `vince/episodios/ep01_pregao_vespera/ficha.md`. Depende do fundador: confirmar no TCGplayer que o #535 continua com uma só venda, ouvir a voz, licença da faixa e publicar (o ângulo «de véspera» vale até 13/11).
+- **VV-EP01 «O Pregão de Véspera» v2** (12/11, 18h): auditado e reconstruído na branch `vince/ep01-pregao-vespera` (PR #24), com o kit 2D da branch `vince/kit-v1` (PR #23, por integrar). QC `--frente vince` sem problemas. Ficha `vince/episodios/ep01_pregao_vespera/ficha.md`. Depende do fundador: aprovar a v2, ouvir a voz, licença da faixa, integrar o PR #23 e publicar (números de 12/11; atualizar se publicar depois de 13/11).
 
 ## Consolidação
 

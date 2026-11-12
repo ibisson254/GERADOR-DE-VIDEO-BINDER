@@ -1,77 +1,85 @@
-# Ficha · Multiverse Capital (Vince Vault) · VV-EP01 · O Pregão de Véspera
+# Ficha · Vince Vault (Multiverse Capital) · VV-EP01 · O Pregão de Véspera
 
-Estado: **CONCLUÍDO** (12/11/2026, 17h Lisboa) — produzido e conferido; publicação por decidir pelo fundador.
-Ordem de produção: fundador, 12/11/2026 16:34 — «Comece a produção do vídeo e só pare quando terminar» (lido como aprovação da pauta e da voz; registado em `nucleo/DECISOES.md`).
+Versão **v2** (12/11/2026, 18h Lisboa): auditoria factual e reconstrução editorial da v1 (16h–17h), por missão do fundador de 12/11, 17:22. A v1 não foi publicada e fica substituída; os scripts dela estão no histórico do Git (commit b2f6624).
 
 ## Classificação
-- Série: Multiverse Capital, apresentada pelo Vince Vault (frente aprovada a 12/11)
+- Série: Vince Vault · Multiverse Capital (frente aprovada a 12/11; direção 2D)
 - Classe de conteúdo: mercado
 - Complexidade: média
-- Estratégia: explicar um número que parece grande e mostrar o que está por trás dele (causa única: preço de pré-venda assente numa venda)
+- Estratégia: ensinar a ler um número. Sem causa comprovada para o preço, o episódio trata da limitação de mercado que os dados provam: o preço de mercado do #535 assenta em vendas insuficientes e está muito acima do anúncio mais barato
 
 ## Editorial
-- Objetivo: estreia da série com o sistema de edição «Pregão» (`vince/EDICAO.md`, branch `vince/kit-v1`)
-- Proposta de valor numa frase: o Spock de US$ 299,98 tem esse preço por causa de uma venda; antes do lançamento, preço é o que o vendedor pede
-- Público: jogador brasileiro adulto que abre Collector Booster ou guarda cartas
-- Hipótese a testar: o arco euforia → telefonema → lucidez segura a retenção aos 3 s e gera guardados (o pagamento é útil)
-- Gancho (0–3 s): «Trezentos dólares!» falado e escrito no painel, a contar, desde o primeiro quadro
-- Fecho: `comum/outro/outro_binder_916.mp4`
+- Objetivo: estreia da série; levar o espectador de «que preço!» a «agora entendi o que esse preço significa»
+- Proposta de valor numa frase: US$ 299,98 é a última venda de uma carta com vendas insuficientes para medir volatilidade, e o anúncio mais barato está bem abaixo; em pré-venda, isso ainda não é um preço formado
+- Público: jogador brasileiro adulto que abriu ou pensa abrir Collector Booster de Star Trek
+- Hipótese a testar: um episódio que desmonta um número (em vez de o celebrar) gera guardados por 1.000 views acima da média do perfil
+- Gancho (0–3 s): «Trezentos dólares!», falado; no painel, o contador chega a US$ 299,98 ≈ R$ 1.673,89, com «preço de mercado · TCGplayer (EUA)», data e hora
+- Causa do preço: **nenhuma comprovada**; não se atribui causa
 - Easter egg: nenhum
+- Fecho: `comum/outro/outro_binder_916.mp4` (demonstração real do scanner com Iron Man Armor; não existe gravação real do scanner com o Mr. Spock, por isso a carta da demonstração não foi trocada)
 
-## Roteiro definitivo (voz do Vince, PT-BR)
+## Auditoria de originalidade
+`memoria.py pauta --objeto "Mr. Spock, Science Officer #535 Borderless Surge Foil"` → BLOQUEIA por ORB-17. Comparação:
 
-| Vídeo | Fala | Plano |
-|---|---|---|
-| 0,0 | Trezentos dólares! | Cena · aponta · painel US$ 299,98 (contador 0,8 s) |
-| 1,9 | Num Spock de Star Trek que nem saiu da caixa. | Carta #535 (drop aos 1,71 s) → placa NEM SAIU DA CAIXA → pitch |
-| 5,6 | Primeiro lugar do ranking! | Placa 1º NO RANKING |
-| 7,3 | E a carta só chega nas lojas dia treze. | Cena · painel com top 3 → placa 13/11 |
-| 10,4 | Trezentos dólares, meu amigo. É o pregão do século! | Grande plano (boca sincronizada) → dinheiro → placa PREGÃO DO SÉCULO |
-| 15,6 | Buy the d— | Placa BUY THE D— · cortado pelo toque (bordão desmentido em cena) |
-| 16,3 | (toque) | A bateria pára · choque → pega no telefone |
-| 17,3 | Fala. / …Quantas vendas? / …Uma? | Ao telefone · Fonte: `fonte_hesita`, `fonte_confirma`, `telefone_pousa` |
-| 21,6 | Uma venda. Uma. | Placa vermelha 1 VENDA |
-| 23,9 | O preço de mercado é essa venda. | Testa → painel PREÇO DE MERCADO = 1 VENDA |
-| 26,2 | E o anúncio mais barato hoje? Cento e sessenta. | Grande plano → braços → placa US$ 159,98 ≈ R$ 893 |
-| 30,2 | Pré-venda não é mercado. O preço de verdade nasce quando a carta chega. | Confidência → placa PRÉ-VENDA ≠ MERCADO → grande plano |
-| 35,2 | Quer saber quanto vale a sua pasta? Escaneia no BINDER Vision. | Painel QUANTO VALE A SUA PASTA? → placa CTA |
-| 40,0 | — | Fecho do scanner (3,87 s) |
+| | ORB-17 | ORB-18 | VV-EP01 |
+|---|---|---|---|
+| Objeto | Spock autografado, n.º 1702 (Headliner) | Commander Spock, n.º 2 (deck Commander) | Mr. Spock, Science Officer, n.º 535 (Showcase Surge Foil) |
+| Frente | Órbita (estética) | Órbita (estética) | Vince Vault (mercado) |
+| Ângulo | «Mais um autógrafo» | «Fascinante» | o que um preço de pré-venda significa |
+
+Impressões diferentes, frentes diferentes, ângulos sem sobreposição: sem conflito editorial. O alerta vem do nome comum da carta. Decisão do fundador registada em `nucleo/DECISOES.md` (12/11, 16:34).
+
+## Auditoria factual (12/11/2026, 17h30 Lisboa)
+
+| # | Ponto | Resultado | Fonte |
+|---|---|---|---|
+| 1 | Impressão | Star Trek (TRK) #535, mítica, arte de Grant Griffin | Scryfall API `cards/trk/535` |
+| 2 | Acabamento | Showcase (moldura Classic Enterprise), borda preta, só surge foil. O TCGplayer cataloga como «(Borderless) (Surge Foil)»; os dados de preço são do produto 725123, que é o #535 | Scryfall; Face to Face Games («[535] [Showcase] [Classic Enterprise] [Surge Foil]»); TCGplayer |
+| 3 | Preço de mercado | US$ 299,98, igual à venda mais recente | TCGplayer, produto 725123 |
+| 4 | Menor anúncio | US$ 154,99 (MyTCGValue, conferido pelo fundador a 12/11; a página não abre deste ambiente); o TCGplayer mostrava US$ 159,98 noutro momento. Anúncios mudam a toda a hora; o vídeo mostra os dois com a fonte | MyTCGValue; TCGplayer |
+| 5 | Quantidade de vendas | **Não há prova direta do número.** Prova direta do limite: o TCGplayer diz que o produto não teve vendas suficientes para calcular a volatilidade; venda mais baixa = mais alta = mais recente = US$ 299,98. A v1 dizia «uma venda»: **retirado** | TCGplayer |
+| 6 | Ranking | O TCGIndex ordena as cartas do set por preço de mercado do TCGplayer e põe o #535 em 1.º; outro rastreador (The Hobby Bin) põe o #353 foil acima. O ranking depende do rastreador: **retirado do episódio** (não sustenta a tese) | TCGIndex; The Hobby Bin |
+| 7 | Data e hora | consulta de 12/11/2026, 17h30 (Lisboa) | — |
+| 8 | Moeda | dólar (praça dos EUA). Sem preço brasileiro do #535 encontrado. Conversão documentada: dólar comercial de fecho de 10/11/2026, R$ 5,58 (último fecho encontrado) | Metrópoles |
+| 9 | Mercado × anúncios | mercado US$ 299,98; mediana dos anúncios US$ 193,98; 21 cópias de 14 vendedores; menor anúncio ~US$ 155–160 | TCGplayer |
+| 10 | Calendário | pré-lançamento 6–12/11 (lojas WPN podem vender todos os produtos nessa semana); lançamento global 13/11. A v1 dizia «só chega nas lojas dia 13»: **retirado** | WPN, «Star Trek Dates and Details» |
+
+## Roteiro definitivo (voz existente da v1, sem nova geração)
+
+| Tempo | Plano (função) | Voz do Vince | Painel / ecrã |
+|---|---|---|---|
+| 0,0–3,4 | Painel · impacto | Trezentos dólares! | US$ 299,98 (contador, única vez) ≈ R$ 1.673,89 · preço de mercado · TCGplayer (EUA) · 12/11/2026, 17h30 · conversão: dólar de 10/11, R$ 5,58 |
+| 3,4–7,3 | Carta · identificação | Trezentos dólares, meu amigo. | Carta oficial inteira; créditos por baixo: #535 · Showcase · Surge Foil · Grant Griffin · Scryfall · © WotC · © CBS |
+| 7,3–10,3 | Conjunto · discurso (pitch) | É o pregão do século! … Buy the d— | — (o toque corta o bordão: desmentido em cena) |
+| 10,3–14,0 | Telefone · conflito (pega no auscultador) | Fala. … Quantas vendas? | toque; a bateria da faixa pára |
+| 14,0–17,6 | Próximo · a resposta (ao telefone) | — | Fonte: `fonte_ma_noticia`; `telefone_pousa` |
+| 17,6–21,0 | Próximo · reação (palma na testa) | — | quem ouve reage |
+| 21,0–25,5 | Painel · o dado | O preço de mercado é essa venda. | PREÇO DE MERCADO US$ 299,98 = ÚLTIMA VENDA · TCGplayer: vendas insuficientes para medir a volatilidade |
+| 25,5–29,0 | Conjunto · objeção (braços cruzados) | E o anúncio mais barato hoje? | — |
+| 29,0–32,8 | Painel · o dado | — | MENOR ANÚNCIO US$ 154,99 ≈ R$ 864,84 · MyTCGValue · anúncio é pedido, não venda · TCGplayer: US$ 159,98 |
+| 32,8–36,5 | Conjunto · conclusão (confidência) | Pré-venda não é mercado. | TEM A CARTA? US$ 299,98 é a última venda, não uma oferta. NÃO TEM? O preço ainda não se formou. |
+| 36,5–40,9 | Conjunto · ponte (aponta) | Quer saber quanto vale a sua pasta? Escaneia no BINDER Vision. | QUANTO VALE A SUA PASTA? |
+| 40,9–44,8 | Fecho oficial | — | scanner real do BINDER Vision |
+
+Frases da v1 retiradas por falta de sustentação: «nem saiu da caixa», «primeiro lugar do ranking», «só chega nas lojas dia treze», «Uma?», «Uma venda. Uma.», «Cento e sessenta», «O preço de verdade nasce quando a carta chega».
+
+A Fonte: um telefonema; não aparece, não fala palavras, não é legendada. A resposta é o som aprovado `fonte_ma_noticia` e a reação do Vince.
 
 ## Fontes e evidências
-
-| Afirmação | Tipo | Fonte | Data |
-|---|---|---|---|
-| #535 = Mr. Spock, Science Officer, mítica, Showcase, só surge foil, arte de Grant Griffin, lança 13/11/2026 | facto | Scryfall API `cards/trk/535` | 12/11/2026 |
-| Preço de mercado US$ 299,98; venda mais baixa = venda mais alta = US$ 299,98; 12 anúncios, o mais barato a US$ 159,98; item de pré-venda com envio previsto a 13/11 | facto | TCGplayer, produto 725123 (página lida via índice de pesquisa; a página direta exige JavaScript) | 12/11/2026 |
-| O US$ 299,98 corresponde a uma venda | facto (fonte secundária) | NerdSnack, «MTG Star Trek Chase Cards», tabela de 06/11: «$299.98 (1 sale)» | 06/11/2026 |
-| Ranking: 1º Spock #535 US$ 299,98 · 2º Picard #497 US$ 297,99 · 3º Kirk #542 US$ 168,99 (preços TCGplayer) | facto | TCGIndex, página do set Star Trek | 12/11/2026 |
-| Conversão ≈ R$ 893 (US$ 159,98 × R$ 5,58) | cálculo | dólar comercial de fecho de 10/11/2026, R$ 5,58 (Metrópoles) | 10/11/2026 |
-| Lançamento a 13/11/2026 | facto | Scryfall (released_at) e TCGplayer (envio previsto) | 12/11/2026 |
-
-Não entra no vídeo (decisão do briefing v2): a taxa de 1 % do slot de Collector Booster (é de uma categoria, não do #535) e «a carta mais cara de Star Trek» (outros rastreadores dão valores maiores ao #353 foil; diz-se só «primeiro do ranking»).
-
-**Verificar antes de publicar (P1):** abrir no navegador a página do TCGplayer do #535 e confirmar em «Latest Sales» que continua a haver uma só venda. Se houver mais, as falas «Uma venda. Uma.» e a placa 1 VENDA deixam de ser verdade e o episódio não sai assim.
+Tabela acima; ligações em `fontes.md`.
 
 ## Produção
-- Kit: `vince/kit/v1/` da branch `vince/kit-v1` (PR #23, sem merge). O render lê o kit por argumento.
-- Montagem: `render.py` (PIL → ffmpeg, 1080×1920, 30 fps) e `mistura.py` (voz no relógio do vídeo, Fonte, efeitos, faixa, −14 LUFS, fecho). Divergência do `PROMPT_EPISODIO.md`: não se reaproveitou o motor HTML do Mana & Burn; o Vince é composição de camadas 2D e um renderizador Python dedicado foi mais simples e determinístico.
-- Música: `sweat_on_the_walls.mp3`, escolhida e enviada pelo fundador; 140 BPM; trecho 53,24–97,11 s da faixa (beat-map em `beatmap.json`). A bateria pára aos 16,28 s do vídeo, onde entra o telefonema. Não versionada.
-- Voz do Vince: ElevenLabs `nDJxgaKfMo1DDJJqNg0f`, `eleven_v3`, uma geração (37,6 s, 578 créditos). Flow `1OZhISAeTjWGjnkig55F`, geração `I1pCHshxN0tr5PkoKjHb`. Cortada em 19 frases por deteção de silêncio e reposicionada na batida. Não versionada (`voz.mp3` recupera-se do flow).
-- Fonte e telefone: `vince/audio/fonte.py` (custo zero). A Fonte não fala palavras nem tem legenda.
-- Movimento (bíblia §7B): respiração, entrada a 3 % com assentamento de 120 ms, deriva de câmara, contador do painel uma vez, boca sincronizada ao envelope da voz nos grandes planos, piscar.
-- Cenário sem telefone (`assets/cenario_sem_telefone.png`): o telefone da mesa retirado do `cenario_916.png` para os planos em que ele está na mão do Vince.
+Ficha técnica: `producao.md`. Controlo de qualidade: `qc.md`, `qc.json`, `folha_contacto.jpg`.
 
-## Controlo de qualidade (ficheiro final)
-`python3 -I comum/qc/qc_video.py … --frente lambe` (o QC ainda não tem perfil `vince`; o formato é o mesmo 9:16): 1080×1920 · 30 fps · 43,87 s (40,0 s + fecho) · −14,0 LUFS · pico −1,6 dBTP · fecho presente aos 40,0 s · **sem problemas mensuráveis**. `cropdetect`: 1080:1920:0:0 em todos os quadros (sem corte lateral). Folha de contacto conferida a olho: legenda, placas e carta dentro da zona segura; nenhuma tipografia por cima da carta; um só plano com flash vermelho (1 VENDA). Detalhe em `qc.json`.
+## Controlo de qualidade
+`python3 -I comum/qc/qc_video.py … --frente vince`: 1080×1920 · 30 fps · 44,77 s (40,9 s + fecho) · −14,3 LUFS · pico −1,3 dBTP · fecho presente · sem problemas mensuráveis · sem corte lateral (`cropdetect` 1080:1920:0:0). Folha de contacto conferida a olho. Detalhe e correções em `qc.md`.
 
-A conferir pelo fundador: pronúncia da voz (sem transcrição automática disponível neste ambiente) e a verificação P1 acima.
-
-## Ficheiros finais (fora do Git)
-- `MultiverseCapital_Ep01_PregaoDeVespera_916.mp4` e `capa.png`: entregues ao fundador na conversa de 12/11/2026 (claude.ai, projeto Binder Marketing). A capa também está nesta pasta.
-- Recriar: `python3 render.py --kit <vince/kit/v1> --assets assets --saida mudo.mp4` e `python3 mistura.py final --assets <pasta com voz.mp3> --fonte vince/audio/saida --musica sweat_on_the_walls.mp3 --video mudo.mp4 --fecho comum/outro/outro_binder_916.mp4 --saida final.mp4` (antes: `mistura.py voz` para gerar `env_voz.npy`).
+## Ficheiros finais
+- Vídeo: `MultiverseCapital_Ep01_PregaoDeVespera_v2_916.mp4`, entregue ao fundador na conversa de 12/11/2026 (claude.ai, projeto Binder Marketing). Fora do Git.
+- Capa: `capa.jpg` (nesta pasta).
 
 ## Entregáveis
-- [x] Vídeo · [x] Capa · [x] Legenda (`legenda.txt`) · [x] Comentário fixado (`comentario_fixado.txt`) · [x] Texto alternativo (`texto_alternativo.txt`) · [x] Fontes (esta ficha)
+- [x] Vídeo · [x] Capa · [x] Legenda (`legenda.txt`) · [x] Comentário fixado (`comentario_fixado.txt`) · [x] Texto alternativo (`texto_alternativo.txt`) · [x] Fontes (`fontes.md`) · [x] Ficha técnica (`producao.md`) · [x] Relatório de QC (`qc.md`) · [x] Folha de contacto (`folha_contacto.jpg`)
 
 ## Depois de publicar
 - Métrica principal: guardados por 1.000 views; secundária: retenção aos 3 s.

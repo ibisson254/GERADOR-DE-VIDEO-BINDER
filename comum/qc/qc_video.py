@@ -13,7 +13,7 @@ Não substitui o olho: personagens, legendas tapadas e cartas cortadas confere-s
 Classificação dos problemas: P0 impede publicação, P1 qualidade importante, P2 refinamento.
 
 Uso:
-  python3 -I comum/qc/qc_video.py VIDEO.mp4 [--frente manaburn|tubo|conde|orbita|lambe] [--sem-fecho] [--saida PASTA]
+  python3 -I comum/qc/qc_video.py VIDEO.mp4 [--frente manaburn|tubo|conde|orbita|lambe|vince] [--sem-fecho] [--saida PASTA]
 
 Depende só de ffmpeg/ffprobe, numpy e Pillow. Não altera o vídeo.
 """
@@ -32,6 +32,8 @@ FRENTES = {
     'conde':    {'w': 1080, 'h': 1920, 'fps': 30, 'dur': None, 'fecho': True},
     'orbita':   {'w': 1080, 'h': 1350, 'fps': 30, 'dur': (12, 12), 'fecho': False},
     'lambe':    {'w': 1080, 'h': 1920, 'fps': 30, 'dur': None,     'fecho': True},
+    'vince':    {'w': 1080, 'h': 1920, 'fps': 30, 'dur': (30, 45), 'fecho': True},   # vince/PERFIL.md: 30–45 s
+    'vince':    {'w': 1080, 'h': 1920, 'fps': 30, 'dur': (30, 45), 'fecho': True},
 }
 LUFS_ALVO, LUFS_TOL, PICO_MAX = -14.0, 1.0, -1.0
 

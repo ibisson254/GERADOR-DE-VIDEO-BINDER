@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 12/11/2026 (17:22) · VV-EP01 v2: auditoria factual e ritmo da bíblia
+
+**O quê:** (1) O VV-EP01 é reconstruído (v2) sobre a voz já gerada, sem gastar créditos: retiradas as afirmações sem prova («só chega nas lojas dia 13» — o pré-lançamento de 6–12/11 permite venda nas lojas WPN; «uma venda»; «cento e sessenta»; ranking; «nem saiu da caixa»). A tese passa a ser o limite que os dados provam: preço de mercado = última venda, com vendas insuficientes para medir volatilidade (TCGplayer), e menor anúncio bem abaixo. (2) O ritmo volta à bíblia em vigor na `main`: imagens paradas, cortes a cada 3–6 s, movimento só no empurrão de 2 % e no contador único; sem placas pretas, flashes nem sincronia labial. A entrada de 12/11 (16:34) sobre a «gramática acelerada» fica **suspensa** para este episódio, e o `vince/EDICAO.md` do PR #23 não é aplicado enquanto o fundador não o integrar. (3) Reais como valor principal ao lado da referência em dólares, com conversão documentada. (4) Perfil `vince` no `comum/qc/qc_video.py` (1080×1920, 30 fps, 30–45 s, fecho).
+**Porquê:** missão do fundador, 12/11/2026 17:22 («Auditoria, reconstrução editorial e finalização do episódio Mr. Spock #535»).
+**Impacto:** v1 substituída (não publicada). v2 CONCLUÍDA, à espera de aprovação. Vídeo fora do Git.
+
 ## 12/11/2026 (16:34) · VV-EP01: Spock #535 apesar do aviso da auditoria (ORB-17) e gramática acelerada do Vince
 
 **O quê:** (1) A auditoria (`memoria.py pauta`) bloqueou a pauta por semelhança com ORB-17 (Spock autógrafo n.º 1702, Órbita). A pauta avança: impressão diferente (#535, Showcase Surge Foil), frente diferente (preço, não estética) e ângulo novo (preço de pré-venda assente numa venda ≠ mercado). (2) Estreia com montagem de alta cadência na faixa escolhida pelo fundador (`sweat_on_the_walls.mp3`, 140 BPM): cortes em múltiplos da batida (1 batida nos impactos, 2 nas reações, 1 compasso nas placas com números), seguindo `vince/EDICAO.md` (branch `vince/kit-v1`). (3) Preço em dólares (TCGplayer) com conversão em reais marcada como conversão, porque não há preço brasileiro do #535 antes do lançamento.

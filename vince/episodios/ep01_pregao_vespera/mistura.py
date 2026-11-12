@@ -12,12 +12,13 @@ import soundfile as sf
 import librosa
 
 sys.path.insert(0, str(Path(__file__).parent))
-from render import FRASES, DUR  # noqa: E402
+from render import FRASES, DUR, TOQUE  # noqa: E402
 
 SR = 48000
-JANELA_MUSICA = 53.243        # início do trecho da faixa (beat-map)
-PARA_BATERIA = 16.278         # paragem da bateria no relógio do vídeo
-VOLTA_BATERIA = 18.211
+JANELA_MUSICA = 59.221        # início do trecho: a bateria pára (69,52 s da faixa) quando o telefone toca
+PARA_BATERIA = 10.30          # o telefone toca; a bateria pára
+VOLTA_BATERIA = 12.233
+FIM_CHAMADA = 17.60
 FECHO = 116 / 30           # outro_binder_916.mp4 não tem áudio: a trilha sobe por baixo dele
 TOTAL = DUR + FECHO
 
@@ -37,26 +38,19 @@ def faixa_voz(assets):
         seg = voz[int((a - 0.03) * SR): int((b + 0.06) * SR)].copy()
         f = int(0.008 * SR); seg[:f] *= np.linspace(0, 1, f); seg[-f:] *= np.linspace(1, 0, f)
         poe(tr, seg, t0 - 0.03)
-    # "Buy the d—" é cortado pelo toque: corte seco em 16,25
-    i = int(16.25 * SR); tr[i:i + int(0.05 * SR)] *= np.linspace(1, 0, int(0.05 * SR)); tr[i + int(0.05 * SR): int(16.9 * SR)] = 0
+    # "Buy the d—" é cortado pelo toque
+    i = int((TOQUE - 0.03) * SR); r = int(0.03 * SR)
+    tr[i:i + r] *= np.linspace(1, 0, r); tr[i + r: int((TOQUE + 0.9) * SR)] = 0
     return tr
 
 def efeitos(fonte):
+    """Só o telefone e a Fonte (sons aprovados de vince/audio/fonte.py). Sem efeitos decorativos."""
     fonte = Path(fonte); tr = np.zeros(int(DUR * SR))
-    toque = carrega(fonte / "telefone_toque.wav")
-    poe(tr, toque[: int(0.62 * SR)] * np.r_[np.ones(int(0.57 * SR)), np.linspace(1, 0, int(0.62 * SR) - int(0.57 * SR))], 16.28, 0.9)
-    poe(tr, carrega(fonte / "fonte_hesita.wav"), 19.25, 0.85)
-    poe(tr, carrega(fonte / "fonte_confirma.wav"), 20.72, 0.9)
-    poe(tr, carrega(fonte / "telefone_pousa.wav"), 21.45, 1.0)
-    # tique seco nas palavras-chave (placas) e whoosh curto nas mudanças de secção
-    rng = np.random.default_rng(7)
-    tique = np.sin(2 * np.pi * 2200 * np.arange(int(0.025 * SR)) / SR) * np.exp(-np.arange(int(0.025 * SR)) / (0.004 * SR))
-    for t in (3.42, 5.55, 8.96, 12.40, 15.50, 19.90, 28.20, 31.00):
-        poe(tr, tique, t, 0.35)
-    n = int(0.28 * SR); env = np.sin(np.linspace(0, np.pi, n)) ** 2
-    ruido = np.convolve(rng.standard_normal(n), np.ones(24) / 24, "same") * env
-    for t in (1.62, 21.52, 37.40):
-        poe(tr, ruido, t - 0.14, 0.25)
+    toque = carrega(fonte / "telefone_toque.wav")[: int(0.62 * SR)].copy()
+    toque[-int(0.05 * SR):] *= np.linspace(1, 0, int(0.05 * SR))
+    poe(tr, toque, TOQUE, 0.9)
+    poe(tr, carrega(fonte / "fonte_ma_noticia.wav"), 14.25, 0.9)
+    poe(tr, carrega(fonte / "telefone_pousa.wav"), 17.30, 1.0)
     return tr
 
 def musica(mp3):
@@ -92,7 +86,7 @@ def main():
     m *= ganho_para(m, -20.0)
     # ducking extra durante o telefonema (bateria parada + conversa)
     duck = np.ones_like(m)
-    i0, i1 = int(PARA_BATERIA * SR), int(21.6 * SR)
+    i0, i1 = int(PARA_BATERIA * SR), int(FIM_CHAMADA * SR)
     duck[i0:i1] = 0.35
     r = int(0.15 * SR); duck[i1:i1 + r] = np.linspace(0.35, 1, r)
     # no fecho a música sobe (sem narração por cima)
@@ -113,7 +107,7 @@ def main():
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", a.video, "-i", a.fecho, "-i", str(corpo), "-filter_complex",
                     "[0:v]fps=30,format=yuv420p,setsar=1[v0];[1:v]fps=30,scale=1080:1920,format=yuv420p,setsar=1[v1];"
                     "[v0][v1]concat=n=2:v=1:a=0[v]",
-                    "-map", "[v]", "-map", "2:a", "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p",
+                    "-map", "[v]", "-map", "2:a", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p",
                     "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", "-shortest", a.saida], check=True)
     print("final", a.saida)
 

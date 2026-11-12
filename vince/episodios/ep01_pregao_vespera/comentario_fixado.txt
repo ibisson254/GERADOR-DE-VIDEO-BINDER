@@ -1,8 +1,8 @@
-Você pagaria US$ 300 numa carta antes de ela existir na loja?
+Você já tinha visto esse "preço de mercado" assim, por dentro?
 
-Números do vídeo (estimativa, não oferta de compra):
-- Preço de mercado do #535: US$ 299,98 (TCGplayer, 12/11/2026). Venda mais baixa = venda mais alta = US$ 299,98; em 06/11 era uma venda só (NerdSnack).
-- Anúncio mais barato: US$ 159,98 (TCGplayer, 12/11/2026), cerca de R$ 893 com o dólar comercial de 10/11 (R$ 5,58). Conversão, não preço no Brasil.
-- Ranking (TCGIndex, preços TCGplayer, 12/11/2026): 1º Spock #535 US$ 299,98 · 2º Picard #497 US$ 297,99 · 3º Kirk #542 US$ 168,99.
-- Lançamento de Star Trek: 13/11/2026.
-Os preços de pré-venda mudam rápido; confira antes de comprar ou vender.
+Números do vídeo (consulta de 12/11/2026, 17h30 de Lisboa; estimativa, não oferta de compra):
+- Preço de mercado do #535: US$ 299,98, igual à venda mais recente (TCGplayer). O TCGplayer informa que não houve vendas suficientes para calcular a volatilidade.
+- Anúncios: o mais barato estava em US$ 154,99 (MyTCGValue); no TCGplayer, a partir de US$ 159,98, com mediana de US$ 193,98. Anúncio é preço pedido, não venda.
+- Em reais: conversão pelo dólar comercial de 10/11/2026 (R$ 5,58). Não é preço de loja no Brasil.
+- Calendário: pré-lançamento de 6 a 12/11 (lojas WPN podem vender nessa semana) e lançamento global em 13/11 (Wizards of the Coast).
+Preços de pré-venda mudam rápido. Confira na fonte antes de qualquer decisão.
