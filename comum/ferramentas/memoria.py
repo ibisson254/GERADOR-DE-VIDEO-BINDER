@@ -28,8 +28,8 @@ NAO_BLOQUEIAM = {'REJEITADO'}
 COLUNAS = ['ID', 'Tema central', 'Objeto', 'Tese · ângulo', 'Gancho', 'Estado', 'Fonte do estado',
            'Aprovação', 'Publicação', 'Ficha', 'Relações', 'Originalidade']
 PREFIXOS = {'MB': 'Mana & Burn', 'MC': 'Meta em Curto', 'CM': 'Conde de Manaforte', 'ESP': 'Especiais',
-            'ORB': 'Órbita', 'LL': 'Lambe-lambe', 'PM': 'Pequeno Mestre'}
-RE_ID = re.compile(r'^(MB|MC|CM|ESP|ORB|LL|PM)-[A-Z0-9-]+$')
+            'ORB': 'Órbita', 'LL': 'Lambe-lambe', 'PM': 'Pequeno Mestre', 'VV': 'Vince Vault'}
+RE_ID = re.compile(r'^(MB|MC|CM|ESP|ORB|LL|PM|VV)-[A-Z0-9-]+$')
 PROMOCAO = {'SIM', 'NÃO', 'PARCIAL', 'A CONFIRMAR'}
 CSV_COLUNAS = ['semana_fim', 'periodo', 'id_editorial', 'frente', 'post_ref', 'formato', 'idade',
                'visualizacoes', 'alcance', 'impressoes', 'curtidas', 'comentarios', 'guardados',
