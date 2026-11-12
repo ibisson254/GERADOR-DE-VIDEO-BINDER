@@ -13,7 +13,7 @@ Colar como primeira mensagem de um chat novo do executor. Serve para qualquer ep
 Repositório: `ibisson254/GERADOR-DE-VIDEO-BINDER`, branch `vinci/kit-v1` (PR #17, ainda sem merge).
 `git clone --depth 1 -b vinci/kit-v1 https://github.com/ibisson254/GERADOR-DE-VIDEO-BINDER`
 
-1. `AGENTS.md` 2. `STATUS.md` 3. `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md` 4. `vinci/PERFIL.md` 5. `vinci/CONTEXTO.md` (bíblia — manda em tudo o que é identidade) 6. `vinci/kit/v1/ancoras.json` 7. `manaburn/LEIA-ME.md` (motor de vídeo HTML + Playwright + ffmpeg: **reaproveitar, não reconstruir**).
+1. `AGENTS.md` 2. `STATUS.md` 3. `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md` 4. `vinci/PERFIL.md` 5. `vinci/CONTEXTO.md` (bíblia — manda em tudo o que é identidade) 5b. `vinci/EDICAO.md` (sistema de edição "Pregão" — manda no ritmo, na tipografia e no som) 6. `vinci/kit/v1/ancoras.json` 7. `manaburn/LEIA-ME.md` (motor de vídeo HTML + Playwright + ffmpeg: **reaproveitar, não reconstruir**).
 Se este prompt e o repositório divergirem num detalhe de implementação, vale o repositório; regista a divergência no relatório.
 
 **2. O que já está feito e não se refaz**
@@ -51,12 +51,14 @@ Voz do Vinci: português do Brasil, rouca e enérgica, frases curtas, aquece nos
 
 Compõe por camadas a partir de `cenario_916.png` e das poses; o painel da parede é **preenchido por dados**, nunca texto pintado no desenho: recebe `{carta, preco_antes, preco_agora, variacao, fonte, data}` e escreve por cima. Verde sobe, vermelho desce, e enquanto o número está no ecrã nenhuma outra cor saturada aparece.
 
+**Edição — segue `vinci/EDICAO.md` à risca:** nada parado mais de 1,5 s; alternância obrigatória entre plano de cena e placa de tipografia; uma palavra por vez (a que o Vinci acentua), com desfoque direcional à entrada; só três flashes de cor (branco, preto, vermelho) e o verde reservado a subida de preço; só três transições (corte, zoom-blur, wipe de blocos), zero fades; o corte cai na sílaba tónica; uma única pausa longa antes do pagamento final.
+
 **Movimento — a série tem de ser fluida, não um slideshow.** Aplica tudo isto (está em `vinci/CONTEXTO.md` §7B e não precisa de desenhos novos):
 respiração contínua no corpo (escala 1,000→1,012 em 2,4 s, sempre a correr) · deriva de câmara de 1–2 % ao longo de 10 s · pose nova entra 3 % maior e assenta em 120 ms com desaceleração · cabeça e braço movem-se 60–80 ms depois do corpo · boca sincronizada à sílaba, fechada nas pausas · piscar de dois quadros a cada 4–6 s e sempre antes de uma pose de reação · fio do telefone a baloiçar 0,6 s quando o auscultador sai · número do painel a contar em 0,8 s · cortes na batida da música.
 
 **7. Critérios de aceitação**
 
-Gancho falado e escrito até aos 3 s · nenhum número no ecrã sem fonte e data · nenhum trecho acima de 6 s sem troca de plano · lábios em sincronia nas três bocas · a mesma cara em todos os planos · sem corte lateral · 30–45 s · −14 LUFS (±0,5) · capa legível a 25 % do tamanho · nenhuma frase que recomende comprar ou vender.
+Gancho falado e escrito até aos 3 s · nenhum número no ecrã sem fonte e data · **nenhum trecho acima de 1,5 s sem acontecimento visual** · nenhuma tipografia por cima da carta · no máximo um flash de ecrã inteiro a cada 4 s · lábios em sincronia nas três bocas · a mesma cara em todos os planos · sem corte lateral · 30–45 s · −14 LUFS (±0,5) · capa legível a 25 % do tamanho · nenhuma frase que recomende comprar ou vender.
 
 **8. Entregáveis**
 
