@@ -1,0 +1,164 @@
+# Registo único de previsões do TUBO (Meta em Curto).
+# Método: oraculo/CICLO_SEMANAL.md e oraculo/PROTOCOLO_PRE_RELEASE.md.
+# Regras: texto_original nunca se edita depois de data_registo; conferências só acrescentam linhas;
+# grau de certeza 1–5 (sem percentagem); estado em PENDENTE | CONFIRMADA | PARCIALMENTE CONFIRMADA | REFUTADA | INCONCLUSIVA.
+#
+# PR-TRK-01..04 transcritas da tabela do EP05 (branch meta-em-curto-ep05, comum/historico.md) a 09/11/2026,
+# conforme nucleo/DECISOES.md de 06/11/2026: confiança "baixa" e "média-baixa" → grau 2; o "~35%" sai
+# (já tinha saído no carrossel de 06/11). O texto da hipótese é o original.
+
+previsoes:
+  - id: PR-TRK-01
+    episodio: MC-EP05
+    data_registo: 2026-11-05
+    publicacao: publica          # dita no vídeo e na legenda
+    texto_original: "Rakdos no top 3 de win rate do Sealed de Star Trek no 17Lands (todos os jogadores, pares de duas cores)"
+    fala_no_video: "Previsão registrada: Rakdos no top três do Sealed até primeiro de dezembro. Certeza baixa. Se eu errar, assumo."
+    grau_certeza: 2
+    evidencias: "modelo de 40 mil pools (motor ligado até T5: Rakdos 65, o mais alto) e remoções por pool (Rakdos 5,8, o mais alto); oraculo/ep05/resultados/ na branch meta-em-curto-ep05"
+    riscos: "modelo sem oponente; notas pré-lançamento; Sealed do Arena pode diferir do de papel"
+    criterio:
+      fonte: "17Lands, Sealed de Star Trek (TRK), todos os jogadores, win rate por par de duas cores"
+      fonte_espelho: "MTGMeta /limited/trk (dados 17Lands, CC BY 4.0), só se o recorte for o mesmo; dizer no ecrã"
+      confirma: "Rakdos em 1.º, 2.º ou 3.º"
+      parcial: "não definido na origem"
+      refuta: "Rakdos em 4.º ou abaixo"
+      inconclusiva: "ranking de Sealed TRK indisponível em 01/12/2026"
+    prazo: 2026-12-01
+    conferencias_marcadas: [2026-11-16, 2026-11-23, 2026-11-30]
+    conferencias:
+      - data: 2026-11-09
+        episodio: MC-EP06
+        dado: "0 jogos de Sealed de TRK no 17Lands: o set entra no Arena a 10/11 (calendário do Arena, Wizards)"
+        evidencia_recebida: "O · MTG Rocks (05/11, Early Access no Arena): Strange New Worlds acima do resto; Sealed puxa para cinco cores"
+        muda_estado: false
+        estado: PENDENTE
+      - data: 2026-11-10
+        episodio: "sem episódio (briefing da continuação do EP05)"
+        dado: "sem ranking: o Sealed de TRK abre no Arena hoje (Wizards, anúncios do Arena de 02/11); o 17Lands ainda não publica win rate por par de cores de TRK (README de github.com/Aviouslyy/trk-early-access-data-analysis, fonte terciária, lido a 10/11)"
+        evidencia_recebida: "R/O · Draftsim, Peter Smith, 09/11 (uma loja + relatos online, sem contagem): preto-vermelho agressivo funciona como desenhado (a favor); branco-preto destacado; sopa viva pelo fixing"
+        nota_recorte: "a tabela Deck Color Data do 17Lands separa decks com splash; para 'pares de duas cores' valem as 10 linhas de guilda sem splash. Fixado a 10/11, antes de existir qualquer dado"
+        muda_estado: false
+        estado: PENDENTE
+    estado: PENDENTE
+    erro_de_sistema_se_refutada: true
+
+  - id: PR-TRK-02
+    episodio: MC-EP05
+    data_registo: 2026-11-05
+    publicacao: registo
+    texto_original: "Azorius na metade de baixo do mesmo ranking"
+    grau_certeza: 2
+    criterio:
+      fonte: "17Lands, Sealed TRK, todos os jogadores, win rate por par de duas cores"
+      confirma: "Azorius entre o 6.º e o 10.º"
+      parcial: "não definido na origem"
+      refuta: "Azorius entre o 1.º e o 5.º"
+      inconclusiva: "ranking indisponível em 01/12/2026"
+    prazo: 2026-12-01
+    conferencias_marcadas: [2026-11-16, 2026-11-23, 2026-11-30]
+    conferencias: []
+    estado: PENDENTE
+
+  - id: PR-TRK-03
+    episodio: MC-EP05
+    data_registo: 2026-11-05
+    publicacao: registo          # revelada no EP06 (09/11) como previsão de registo, sem mudar o texto
+    texto_original: "Decks de 3+ cores abaixo dos de 2 cores no Sealed de Star Trek"
+    grau_certeza: 2
+    criterio:
+      fonte: "17Lands, Sealed TRK, win rate agregado por número de cores (2 cores × 3+ cores)"
+      confirma: "win rate de 3+ cores menor que o de 2 cores"
+      parcial: "não definido na origem"
+      refuta: "win rate de 3+ cores igual ou maior"
+      inconclusiva: "17Lands sem recorte por número de cores em 01/12/2026"
+    prazo: 2026-12-01
+    conferencias_marcadas: [2026-11-16, 2026-11-23, 2026-11-30]
+    conferencias:
+      - data: 2026-11-09
+        episodio: MC-EP06
+        dado: "0 jogos"
+        evidencia_recebida: "O · MTG Rocks (05/11): Sealed recompensa ir para cinco cores (contra esta previsão)"
+        muda_estado: false
+        estado: PENDENTE
+      - data: 2026-11-10
+        episodio: "sem episódio (briefing da continuação do EP05)"
+        dado: "sem dados medidos de TRK"
+        evidencia_recebida: "R/O · Draftsim, 09/11: sopa 'viva' por causa do fixing, as melhores com verde, muitas por necessidade do pool (contra esta previsão; sem contagem)"
+        nota_recorte: "no 17Lands comparar a linha agregada 'Two-color' com as de três ou mais cores (Three-color, Four-color, Five-color), ponderadas pelos jogos. Fixado a 10/11, antes de existir qualquer dado"
+        muda_estado: false
+        estado: PENDENTE
+    estado: PENDENTE
+
+  - id: PR-TRK-04
+    episodio: MC-EP05
+    data_registo: 2026-11-05
+    publicacao: registo
+    texto_original: "Ranking de Draft de Star Trek com Spearman < 0,7 contra o de Sealed"
+    grau_certeza: 2
+    criterio:
+      fonte: "17Lands, Premier Draft e Sealed TRK, win rate dos 10 pares; Spearman calculado por nós"
+      confirma: "Spearman < 0,7"
+      parcial: "não definido na origem"
+      refuta: "Spearman ≥ 0,7"
+      inconclusiva: "um dos dois rankings indisponível em 01/12/2026"
+    prazo: 2026-12-01
+    conferencias_marcadas: [2026-11-30]
+    conferencias: []
+    estado: PENDENTE
+
+  # --- MC-EP07 · Mundial 32 (WC32), registadas a 10/11/2026 antes de gravar a voz ---
+  # Base: Frank Karsten, magic.gg, 05/11/2026 (1.810 listas de AC13 + Spotlight Fracture Hartford e Pequim;
+  # win rate sem espelhos, byes e empates). Lista oficial de convidados: magic.gg (134; 6 do Brasil).
+  - id: PR-WC32-01
+    episodio: MC-EP07
+    data_registo: 2026-11-10
+    publicacao: publica
+    texto_original: "Jund Sacrifice terá pelo menos um jogador no Top 8 do Magic World Championship 32"
+    fala_no_video: "Previsão registrada: Jund Sacrifice no Top 8. Certeza três de cinco. Segunda eu confiro."
+    grau_certeza: 3
+    evidencias: "maior win rate do Standard pré-Mundial (57,6%, intervalo de 95% acima de 50%) e os dois títulos do Spotlight: Fracture (Hartford e Pequim); Karsten chama-lhe 'arguably the deck to beat'"
+    riscos: "7,4% do field antes do Mundial; alvo declarado (os pros preparam-se contra ele); cartas de Star Trek entram no Standard a 13/11 e o field do Mundial é pequeno (134 convidados)"
+    criterio:
+      fonte: "magic.gg, Top 8 do World Championship 32 com as listas de Standard (anúncio de sábado 14/11 ou cobertura de domingo 15/11)"
+      confirma: "pelo menos 1 deck do Top 8 classificado como Jund Sacrifice (ou nome equivalente: Jund Biotech, Jund Sac; lista com Biotech Specialist + The Sackville-Bagginses)"
+      parcial: "nenhum Jund no Top 8, mas Jund Sacrifice com o maior win rate do Standard do torneio na análise oficial de magic.gg"
+      refuta: "nenhum deck Jund Sacrifice no Top 8 e não é o melhor win rate do Standard do torneio"
+      inconclusiva: "Top 8 ou listas de Standard não publicados até 16/11/2026"
+    prazo: 2026-11-16
+    conferencias: []
+    estado: PENDENTE
+    erro_de_sistema_se_refutada: true
+
+  - id: PR-WC32-02
+    episodio: MC-EP07
+    data_registo: 2026-11-10
+    publicacao: registo
+    texto_original: "Jund Sacrifice será um dos 3 arquétipos mais jogados no Standard do World Championship 32"
+    grau_certeza: 3
+    criterio:
+      fonte: "magic.gg, análise do metagame do Standard do World Championship 32 (listas publicadas na ronda 4, 13/11)"
+      confirma: "Jund Sacrifice em 1.º, 2.º ou 3.º por número de jogadores"
+      parcial: "empatado no 3.º lugar com outro arquétipo"
+      refuta: "Jund Sacrifice em 4.º ou abaixo"
+      inconclusiva: "análise do metagame não publicada até 16/11/2026"
+    prazo: 2026-11-16
+    conferencias: []
+    estado: PENDENTE
+
+  - id: PR-WC32-03
+    episodio: MC-EP07
+    data_registo: 2026-11-10
+    publicacao: registo
+    texto_original: "Izzet Spellementals terá menos de 5% do Standard do World Championship 32"
+    grau_certeza: 3
+    evidencias: "44,3% de win rate em 7,5% do field pré-Mundial; Karsten 'surpreendido' se for popular (opinião atribuída)"
+    criterio:
+      fonte: "magic.gg, análise do metagame do Standard do World Championship 32"
+      confirma: "Izzet Spellementals abaixo de 5% dos jogadores"
+      parcial: "entre 5% e 7,5% (abaixo da quota pré-Mundial)"
+      refuta: "7,5% ou mais"
+      inconclusiva: "análise do metagame não publicada até 16/11/2026"
+    prazo: 2026-11-16
+    conferencias: []
+    estado: PENDENTE

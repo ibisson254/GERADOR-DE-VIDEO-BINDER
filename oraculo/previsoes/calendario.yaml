@@ -1,0 +1,39 @@
+# Calendário do ciclo semanal do TUBO. Só entra o que tem fonte. A quinta confirma e acrescenta.
+eventos:
+  - id: TRK-ARENA
+    nome: "Star Trek (TRK) no MTG Arena; Sealed 10/11–08/12"
+    inicio: 2026-11-10
+    fim: 2026-12-08
+    formatos: [Sealed, Draft]
+    fonte: "https://magic.wizards.com/en/news/mtg-arena/star-trek-event-schedule"
+  - id: TRK-PRERELEASE
+    nome: "Pré-release de Star Trek (papel)"
+    inicio: 2026-11-06
+    fim: 2026-11-12
+    formatos: [Sealed]
+    fonte: "https://wpn.wizards.com/en/event/prerelease-star-trek"
+  - id: WC32
+    nome: "Magic World Championship 32 (MagicCon: Atlanta)"
+    inicio: 2026-11-13
+    fim: 2026-11-15
+    formatos: [Star Trek Booster Draft, Standard]
+    notas: "listas de Standard no Melee até 11/11, 12:00 de Atlanta (confirmado no fact sheet do magic.gg a 10/11); publicadas no magic.gg na ronda 4 (13/11, fonte secundária); sexta e sábado 3 rondas de Draft + 4 de Standard; 12+ pontos após a ronda 7 passam ao sábado; domingo Top 8 em Standard (melhor de 5). Previsões PR-WC32-01..03 (EP07)."
+    fonte: "https://magic.gg/news/world-championship-32-fact-sheet-for-competitors"
+  - id: ARENA-QUALI-PLAYIN-BO1
+    nome: "Arena Qualifier Play-In (Bo1), Sealed de Star Trek"
+    inicio: 2026-11-14
+    fim: 2026-11-14
+    formatos: [Sealed]
+    fonte: "https://magic.wizards.com/en/news/mtg-arena/announcements-november-2-2026"
+  - id: ARENA-QUALI-WEEKEND
+    nome: "Arena Qualifier Weekend, Sealed de Star Trek (Play-In Bo3 a 20/11)"
+    inicio: 2026-11-21
+    fim: 2026-11-22
+    formatos: [Sealed]
+    fonte: "https://magic.wizards.com/en/news/mtg-arena/announcements-november-2-2026"
+  - id: PR-TRK-AUDITORIA
+    nome: "Auditoria final das previsões PR-TRK-01..04"
+    inicio: 2026-12-01
+    fim: 2026-12-01
+    formatos: [Sealed]
+    fonte: "oraculo/previsoes/registo.yaml"
