@@ -12,6 +12,16 @@ Auditoria integral do repositório, matriz de integração de todas as branches 
 - **Motor do Giro encontrado**: está na branch `giro/2026-11-01` (`manaburn/giro/2026-11-01/`: `processar.py`, `previa.py`, `quadros.py`, `giro.html`, `cena_giro.js`); integrado nesta branch como arquivo do episódio publicado. A pendência "enviar ou subir o motor que gerou o Giro" (abaixo) fica resolvida quando esta branch entrar na `main`.
 - **Integridade**: `python3 -I comum/ferramentas/validar_repo.py` — caminhos do `series.yaml`, sintaxe Python, imports locais, vídeos versionados, links internos e segredos. Resultado a 12/11: 0 problemas (3 limitações conhecidas documentadas e aceites). Nenhum segredo versionado.
 
+## Memória editorial e insights (01/11/2026, branch `feature/memoria-editorial-insights`, PR #3 para `main` à espera de aprovação)
+
+| Bloco | Estado | Onde |
+|---|---|---|
+| Registo editorial universal | Criado; 72 conteúdos migrados; **inventário incompleto** (30 `POR AUDITAR`) | `comum/REGISTRO_EDITORIAL.md` |
+| Auditoria de originalidade | Ativa (script + regra) | `SHOWRUNNER.md` §2.3, `comum/ferramentas/memoria.py pauta` |
+| Encerramento obrigatório | Ativo | `SHOWRUNNER.md` §6, `modelos/FICHA_EPISODIO.md`, `memoria.py encerramento` |
+| Insights semanais | Ativo; snapshots de 21/10 e 26/10 migrados; outubro (1–31/10) registado a 01/11 | `comum/insights/` |
+| Testes A–F | 17 testes OK | `python3 -m unittest comum/ferramentas/test_memoria.py` |
+
 ## Estado editorial
 
 Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbita (temática); Lambe-lambe (espontânea); especiais. Tudo o que está no repositório está aprovado e lançado; Halloween 2026 e Star Trek publicados. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
@@ -58,12 +68,23 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 | Registo canónico (IDs, estados, conferências) | Implementado | `oraculo/previsoes/registo.yaml` (decisão de 09/11: o histórico remete para ele) |
 | Migrar as 4 previsões do EP05 para `PR-TRK-01`–`04` | Concluído (09/11, na branch do EP07; no registo desde o PR #18) | `oraculo/previsoes/registo.yaml` |
 
+## Memória editorial universal e insights (01/11/2026, integrado a 12/11)
+
+| Bloco | Estado | Onde |
+|---|---|---|
+| Registo editorial (ID e estado por conteúdo, todas as frentes) | Implementado; **desatualizado desde 01/11** (falta registar EP04–EP07, Giro nº 2, Conde EP004–005, especiais e lambes das branches) | `comum/REGISTRO_EDITORIAL.md` |
+| Auditoria de originalidade antes de cada pauta | Implementado | `python3 comum/ferramentas/memoria.py pauta --objeto "…" --tema "…"` |
+| Encerramento obrigatório em 12 passos | Implementado | `nucleo/SHOWRUNNER.md` §6 |
+| Insights semanais (snapshots, CSV, impulso SIM/NÃO/A CONFIRMAR) | Implementado | `comum/insights/` |
+| Constituição v1.6 (§10, §12, §13) | Aplicada | `nucleo/DECISOES.md` (01/11, integrada a 12/11) |
+
 ## Depende do fundador
 
 - Aprovar um esboço das expressões novas do Mana e do Burn (auditoria §4) antes de as desenhar no kit.
 - ~~Enviar ou subir o motor que gerou o Giro~~ → encontrado na branch `giro/2026-11-01` e integrado na `main` (PR #18, 12/11).
-- Decisões que continuam com o fundador (secção F de `nucleo/auditorias/2026-11-12_missao_master.md`): qual das 4 branches é o Ep. 10 do Mana & Burn; frentes novas (Pequeno Mestre, Vince Vault, Vinci); merge dos pacotes de conteúdo (EP03–EP07, Giro nº 2, Conde EP005, especiais, lambes); merge do PR #3 reconciliado.
+- Decisões que continuam com o fundador (secção F de `nucleo/auditorias/2026-11-12_missao_master.md`): qual das 4 branches é o Ep. 10 do Mana & Burn; frentes novas (Pequeno Mestre, Vince Vault, Vinci); merge dos pacotes de conteúdo (EP03–EP07, Giro nº 2, Conde EP005, especiais, lambes).
 - ~~Protocolo de Pré-Release: aprovar o PR e decidir o «~35%»~~ → integrado a 12/11 («Escolha as melhores opções e pode prosseguir»); o «~35%» já tinha saído conforme a decisão de 06/11 (aplicado em `oraculo/previsoes/registo.yaml`).
+- Memória editorial (`comum/REGISTRO_EDITORIAL.md`): confirmar as lacunas do fim do registo (30 linhas `POR AUDITAR`) e dizer quais dois vídeos levaram os R$ 11 de impulsionamento de 26/10 (e se o valor é total ou por vídeo).
 - Drive atualizado a 02/11 (notas de fonte de verdade na bíblia, no doc 05 e no Mapa do Drive; secção de estado na bíblia).
 
 ## Pendências técnicas (não bloqueiam a governação)
@@ -91,8 +112,8 @@ Aprovada pelo fundador (`nucleo/DECISOES.md`). Fase 1 implementada e integrada n
 
 ## Próximo passo concreto
 
-Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a pronúncia de "Joven", "Chandler" e "Eron" e publica o pacote (`conde/legendas/ep004_joven_legenda.txt`, ficha em `conde/episodios/ep004_joven_ficha.md`; o vídeo não está no repositório, recria-se com `python3 conde/montar_ep004.py`, desde que `conde/ep004/audio/narracao.wav` exista: se faltar, ver o flow ElevenLabs em `conde/episodios/ep004_fontes.txt`). Depois: próximo Giro ou episódio do Mana & Burn com o kit v2 de `manaburn/`; validar com `python3 -I comum/qc/qc_video.py`.
+Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a pronúncia de "Joven", "Chandler" e "Eron" e publica o pacote (`conde/legendas/ep004_joven_legenda.txt`, ficha em `conde/episodios/ep004_joven_ficha.md`; o vídeo não está no repositório, recria-se com `python3 conde/montar_ep004.py`, desde que `conde/ep004/audio/narracao.wav` exista: se faltar, ver o flow ElevenLabs em `conde/episodios/ep004_fontes.txt`). **Segunda 16/11 é prestação de contas obrigatória do TUBO** (`python3 -I oraculo/previsoes/ciclo.py segunda`): prazo das PR-WC32-01..03 e conferência das PR-TRK-01..03, com o Mundial 32 a acabar a 15/11.
 
 ## Handoff
 
-Ver o handoff de 02/11/2026 na mensagem de fecho da sessão e no fim de `nucleo/auditorias/2026-11-02_evolucao_visual.md`.
+Ver o handoff de 12/11/2026 no fim de `nucleo/auditorias/2026-11-12_missao_master.md`.

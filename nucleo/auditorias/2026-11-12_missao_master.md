@@ -74,33 +74,43 @@ Fundador decide F.1 (merge da consolidação). Com o merge feito, a próxima ses
 ## H. Handoff
 
 ```
-HANDOFF · 12/11/2026 · Claude
-Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch consolidacao/2026-11-12-missao-master · último commit: ver git log
+HANDOFF · 12/11/2026, ~02h Lisboa · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (PRs #18, #19 e reconciliação do #3 integrados) · último commit: ver git log
 
-Objetivo atual: Missão Master — auditoria integral, consolidação do GitHub, sistema de previsões do TUBO operacional.
+Objetivo atual: Missão Master concluída — consolidação, previsões do TUBO, protocolo pré-release, memória editorial e validador na main.
 
 Decisões tomadas nesta sessão:
-- Nenhuma regra mudou (nada em nucleo/DECISOES.md). Tudo o que exige decisão está na secção F deste relatório.
+- Merges dos PRs #18, #19 e do PR #3 reconciliado; PR #7 rebaseado para main (registado em nucleo/DECISOES.md, 12/11: sim — autorização «Escolha as melhores opções e pode prosseguir»)
 
-Documentos consultados:
-- AGENTS.md, STATUS.md, nucleo/CONSTITUICAO (v1.5), nucleo/CATALOGO_EDITORIAL.md, nucleo/SHOWRUNNER.md,
-  nucleo/DECISOES.md, comum/historico.md, comum/continuidade/*, series.yaml, comum/qc/qc_video.py,
-  todas as 36 branches e 17 PRs (git + API GitHub).
+Documentos consultados: AGENTS, STATUS, constituição, catálogo, SHOWRUNNER, DECISOES, historico, continuidade, series.yaml, qc_video.py, as 36 branches e 17 PRs.
 
-Alterações realizadas (todas nesta branch, nada na main):
-- nucleo/auditorias/2026-11-12_matriz_integracao.md · matriz de integração · novo
-- nucleo/auditorias/2026-11-12_missao_master.md · este relatório · novo
-- oraculo/previsoes/{registo,calendario}.yaml, ciclo.py, oraculo/CICLO_SEMANAL.md · integrados de ep07-wc32; ciclo.py corrigido (continuacao real, validar reforçado)
-- oraculo/previsoes/test_ciclo.py · 15 testes, todos OK · novo
-- comum/ferramentas/validar_repo.py · integridade do repositório · novo
-- manaburn/giro/2026-11-01/ · motor e pacote do Giro nº 1, integrados de giro/2026-11-01
-- STATUS.md · secção da missão, motor do Giro corrigido, estado real dos PRs
+Alterações realizadas: ver secções B e o adendo acima; tudo na main via PRs #18 e #19 e o merge da reconciliação do #3.
 
 Tarefas pendentes:
-- Merge desta branch · depende do fundador
-- Decisões F.2–F.7 · dependem do fundador
-- Reconciliação dos PRs #3 e #9, rebase do #7 · dependem do fundador (execução: agente)
+- Ep. 10 do Mana & Burn (4 candidatos) · fundador
+- Frentes novas: Pequeno Mestre (#2), Vince Vault (#11, duas branches divergentes), Vinci (#17) · fundador
+- Merge dos pacotes de conteúdo, por ordem cronológica, um de cada vez (EP03 → EP04 → EP05+carrossel → EP06/EP07 → Giro nº 2 → Conde EP005 → especiais/lambes) · fundador aprova, agente executa
+- Atualizar comum/REGISTRO_EDITORIAL.md com os conteúdos pós-01/11 · agente, na próxima sessão
+- 30 linhas POR AUDITAR do registo + quais dois vídeos levaram os R$ 11 · fundador
 
-Próximo passo concreto: fundador responde à secção F; depois, segunda 16/11:
-python3 -I oraculo/previsoes/ciclo.py segunda  (prestação de contas do Mundial 32)
+Próximo passo concreto: segunda 16/11, prestação de contas do TUBO:
+python3 -I oraculo/previsoes/ciclo.py segunda
+(prazo das PR-WC32-01..03 e conferência das PR-TRK-01..03; Mundial 32 acaba a 15/11)
 ```
+
+
+---
+
+## Adendo · 2ª fase (12/11/2026, 01:32): «Escolha as melhores opções e pode prosseguir»
+
+Com a autorização do fundador sobre a secção F, foram executadas as recomendações:
+
+| Decisão | Execução |
+|---|---|
+| F.1 Merge da consolidação | **Feito** — PR #18 merged na `main` |
+| F.5 PR #9 (protocolo pré-release) | **Feito** — PR #19 (reconciliado: registo canónico em `oraculo/previsoes/registo.yaml`, histórico só com remissão, decisões de 06/11, 09/11 e 10/11 em `DECISOES.md`); PR #9 fechado como integrado |
+| F.4 PR #3 (memória editorial) | **Feito** — reconciliado e integrado (branch `reconciliacao/pr3-memoria-editorial`): constituição **v1.6** (§10 registo editorial + encerramento, §12 insights, §13), `comum/REGISTRO_EDITORIAL.md`, `memoria.py` (17 testes OK), `comum/insights/`, SHOWRUNNER §2.3 e §6, AGENTS atualizado (inclui as linhas `tubo segunda`/`tubo quinta` das decisões de 09–10/11). Pendência nova: o registo editorial está desatualizado desde 01/11 (conteúdos das branches por registar) |
+| F.7 PR #7 | Base mudada para `main` |
+| F.2 Ep. 10 (4 candidatos) · F.6 frentes novas · F.3 merges de conteúdo | **Não executado — continuam com o fundador** (editorial/identitário; a autorização genérica não substitui estas escolhas) |
+
+Testes da 2ª fase: `memoria.py validar` OK (72 conteúdos, 30 POR AUDITAR) · `test_memoria.py` 17/17 · `test_ciclo.py` 15/15 · `validar_repo.py` 0 problemas.

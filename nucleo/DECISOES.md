@@ -4,9 +4,9 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 
 ## 12/11/2026 · Missão Master: merge da consolidação e integração do protocolo de pré-release
 
-**O quê:** (1) A branch `consolidacao/2026-11-12-missao-master` entra na `main` (PR #18): matriz de integração, sistema de previsões do TUBO (de `meta-em-curto/ep07-wc32`, PR #16) com `ciclo.py continuacao` corrigido (mostra TODAS as previsões abertas em qualquer dia, não só a janela semanal) e 15 testes, `comum/ferramentas/validar_repo.py`, motor do Giro nº 1 arquivado de `giro/2026-11-01`, STATUS ao estado real. (2) A branch `protocolo-pre-release-tubo` (PR #9, decisão de 06/11 abaixo) entra reconciliada: a secção de previsões de `comum/historico.md` passa a remissão para `oraculo/previsoes/registo.yaml` (fonte canónica única, decisão de 09/11 abaixo); as entradas de 06/11, 09/11 e 10/11 entram neste registo de decisões. (3) PR #7 passa a ter base `main` (a base anterior já foi integrada).
+**O quê:** (1) A branch `consolidacao/2026-11-12-missao-master` entra na `main` (PR #18): matriz de integração, sistema de previsões do TUBO (de `meta-em-curto/ep07-wc32`, PR #16) com `ciclo.py continuacao` corrigido (mostra TODAS as previsões abertas em qualquer dia, não só a janela semanal) e 15 testes, `comum/ferramentas/validar_repo.py`, motor do Giro nº 1 arquivado de `giro/2026-11-01`, STATUS ao estado real. (2) A branch `protocolo-pre-release-tubo` (PR #9, decisão de 06/11 abaixo) entra reconciliada: a secção de previsões de `comum/historico.md` passa a remissão para `oraculo/previsoes/registo.yaml` (fonte canónica única, decisão de 09/11 abaixo); as entradas de 06/11, 09/11 e 10/11 entram neste registo de decisões. (3) A branch `feature/memoria-editorial-insights` (PR #3, decisão de 01/11 abaixo) entra reconciliada: constituição v1.6, registo editorial, encerramento obrigatório (`SHOWRUNNER.md` §6) e `comum/insights/`; o registo editorial fica marcado como desatualizado desde 01/11. (4) PR #7 passa a ter base `main` (a base anterior já foi integrada).
 **Porquê:** fundador, 12/11/2026 (01:32): «Escolha as melhores opções e pode prosseguir», em resposta à secção F de `nucleo/auditorias/2026-11-12_missao_master.md`.
-**Fica de fora (decisão própria do fundador):** qual das 4 branches é o Ep. 10 do Mana & Burn; frentes novas (Pequeno Mestre, Vince Vault, Vinci); merge dos pacotes de conteúdo (EP03–EP07, Giro nº 2, Conde EP005, especiais, lambes); merge do PR #3 reconciliado (muda governação).
+**Fica de fora (decisão própria do fundador):** qual das 4 branches é o Ep. 10 do Mana & Burn; frentes novas (Pequeno Mestre, Vince Vault, Vinci); merge dos pacotes de conteúdo (EP03–EP07, Giro nº 2, Conde EP005, especiais, lambes).
 
 ## 10/11/2026 · Toda previsão do TUBO conta no registo, em qualquer dia
 
@@ -76,6 +76,27 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **O quê:** (1) `CHECKLIST_QUALIDADE.md`: classificação P0 (bloqueia) / P1 (corrige ou o fundador aceita por escrito) / P2 (opcional), novo bloco E (personagens, cena, montagem, TV SAL) e passo automático. (2) Novo `comum/qc/qc_video.py` (formato, duração, loudness, pico, fecho, cortes, folha de contacto com zona segura). (3) Nova pasta `comum/continuidade/`: uma memória por série/personagem + índice comum; previsões do TUBO continuam em `comum/historico.md`. (4) Auditoria do Giro de domingo de 01/11 e propostas de evolução visual em `nucleo/auditorias/2026-11-02_evolucao_visual.md` (nada identitário aplicado).
 **Porquê:** missão do fundador "Visual Evolution & Character Excellence" (02/11/2026), §9 (memória), §10 (checklist P0/P1/P2) e §8 (correções técnicas seguras).
 **Impacto:** nenhum episódio publicado, asset mestre, voz, música ou script de episódio mudou. A TV ao fundo cortada nos planos de conjunto fica como P1 a confirmar pelo fundador (a bíblia só exige a carta inteira nos planos de TV e nos zooms; episódios aprovados já tinham a TV ao fundo cortada). Propostas de personagens, cenário-mestre e formato "Giro de domingo" aguardam aprovação. Bíblia do Mana & Burn no Drive lida a 02/11 e atualizada só com uma nota de fonte de verdade e uma secção de estado (sem mudar a identidade); notas iguais no "05 · como produzir um episódio" e no "06 · Mapa do Drive".
+
+## 01/11/2026 · Memória editorial universal, encerramento obrigatório e insights (constituição v1.5)
+
+**O quê:**
+1. Novo `comum/REGISTRO_EDITORIAL.md`: um ID e uma linha por conteúdo de todas as frentes, com tema, objeto, tese, gancho, estado, fonte do estado, datas, ficha, relações e auditoria de originalidade. Estados `IDEIA → EM ANÁLISE → APROVADO → EM PRODUÇÃO → CONCLUÍDO → PUBLICADO`, mais `REJEITADO`, `PAUSADO`, `NÃO PUBLICÁVEL` e `POR AUDITAR` (este só para a migração retroativa).
+2. Originalidade: antes de propor uma pauta, comparar tema, objeto, tese, gancho e ângulo com o registo inteiro; mudar título, personagem, frente ou formato não elimina a duplicidade; na dúvida, bloquear até decisão do fundador (`SHOWRUNNER.md` §2.3, constituição §10).
+3. Encerramento obrigatório em 12 passos (`SHOWRUNNER.md` §6): pacote completo na pasta do episódio (roteiro, legenda, comentário fixado, texto alternativo, fontes, QC, localização do vídeo e da capa), registo, histórico, STATUS, handoff e commit conferido no GitHub. Nenhum episódio se declara arquivado antes disso. Ficha, handoff e checklist atualizados.
+4. Novo `comum/insights/` (LEIA-ME, MODELO_SEMANAL, `registo_posts.csv`, `semanas/`): um snapshot por domingo, nunca reescrito; impulsionamento SIM/NÃO/PARCIAL/A CONFIRMAR, nunca inferido pelas views; relatório separa facto, interpretação, hipótese e recomendação. Os números deixam de ir para `comum/historico.md`, que passa a ser só a cronologia.
+5. Ferramenta `comum/ferramentas/memoria.py` (validar, pauta, encerramento, semana, segredos) e testes A–F em `comum/ferramentas/test_memoria.py`.
+
+**Porquê:** missão de engenharia do fundador de 01/11/2026 ("Memória Editorial Universal e Inteligência de Audiência"): trocar de agente, plataforma ou sessão sem perder a memória, repetir episódios ou perder o histórico de audiência.
+
+**Impacto:**
+- Nenhum conteúdo publicado ou aprovado foi reaberto; nenhum script de episódio mudou.
+- Migração retroativa: 72 conteúdos (main, branches `giro/2026-11-01` e `pequeno-mestre/ep01`, projeto claude.ai). 30 ficam `POR AUDITAR` por falta de fonte: o inventário **não** está completo (lacunas no fim do registo).
+- Critério de estado aplicado sem inventar: `PUBLICADO` só com Insights, captura do perfil ou confirmação do fundador. A confirmação global de 31/10 (10:46, "tudo o que está no repositório foi aprovado e lançado") vale como publicação sem data, exceto MB-EP09 e CM-EP003, que estavam agendados para depois dessa hora: ficam `APROVADO` com publicação A CONFIRMAR.
+- Correção na migração dos insights de 26/10: o histórico marcava "não" no impulso de seis posts sem confirmação; passam a `A CONFIRMAR` (o fundador só disse "R$ 11 em dois vídeos").
+- Alerta de originalidade (não decidido, para o fundador): MB-GIRO01 (branch `giro/2026-11-01`, publicação prevista 01/11, 21h) repete no bloco 3 o evento, a carta e a regra do MB-EP07 (All Leylines' Eve).
+- O registo de 26/10 sobre o Q (MB-EP01 × ORB-11), Kirk e Picard mostra objetos repetidos entre frentes antes desta regra; ficam como precedentes, não se reabrem.
+
+*Reconciliação (12/11/2026):* a entrada acima previa a constituição v1.5; entre 01/11 e a integração a v1.5 passou a ser a duração livre (02/11), por isso estas alterações entram como **v1.6**. Os números já registados em `comum/historico.md` ficam como histórico; os novos vão para `comum/insights/`. O registo editorial está desatualizado desde 01/11 (conteúdos das branches por registar).
 
 ## 31/10/2026 · Fecho do scanner no repositório e merge da consolidação para `main`
 

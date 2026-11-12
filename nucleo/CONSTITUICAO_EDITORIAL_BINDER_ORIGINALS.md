@@ -1,6 +1,6 @@
 # Constituição editorial e operacional · BINDER Originals
 
-Versão 1.5 · 02/11/2026 (§6 duração livre nos episódios de série) · 1.4 · 31/10/2026 (§1 bíblias do Órbita e do Lambe-lambe no repositório, §6 Órbita sem fecho) · 1.3 · 31/10/2026 (§1 hierarquia documental, §2 catálogo, §6 formatos por frente, §10 frase do easter egg) · 1.2 · 31/10/2026 (fonte de verdade, registo, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
+Versão 1.6 · 12/11/2026 (§10 registo editorial e encerramento obrigatório, §12 sistema de insights, §13; decisão de 01/11, integrada a 12/11) · 1.5 · 02/11/2026 (§6 duração livre nos episódios de série) · 1.4 · 31/10/2026 (§1 bíblias do Órbita e do Lambe-lambe no repositório, §6 Órbita sem fecho) · 1.3 · 31/10/2026 (§1 hierarquia documental, §2 catálogo, §6 formatos por frente, §10 frase do easter egg) · 1.2 · 31/10/2026 (fonte de verdade, registo, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
 
 Norma comum de **processo** para todas as frentes do @binderthetrade (séries, universo temático, formato espontâneo e especiais; ver `CATALOGO_EDITORIAL.md`). Não define personagens nem estética: isso vive na bíblia de cada frente. Não define o produto: só funções confirmadas (secção 9).
 
@@ -120,7 +120,8 @@ Entregáveis: vídeo · capa · legenda limpa · comentário fixado · texto alt
 - **Comentário fixado:** pergunta fácil na 1.ª linha + complemento (passos, texto Oracle, fonte, VOD) + **"Tem um detalhe escondido. Diga o segundo."** quando o conteúdo tem easter egg (sem egg, a frase não entra)
 - **Texto alternativo:** descrição da imagem ou do vídeo e transcrição do texto que aparece no ecrã, para o campo "texto alternativo" do Instagram (regra da skill `binder-posts-instagram`, peça 4 do pacote).
 - **Easter egg:** no máximo 1 por episódio, registado em `comum/easter_eggs.md`.
-- **Commit no fim:** roteiro/ficha, legenda, fontes, histórico. Nunca vídeos.
+- **Registo editorial:** cada conteúdo tem um ID e uma linha em `comum/REGISTRO_EDITORIAL.md`, do `IDEIA` ao `PUBLICADO`. Antes de propor uma pauta, auditoria de originalidade contra o registo inteiro (tema, objeto, tese, gancho, ângulo); mudar título, personagem, frente ou formato não elimina a duplicidade; na dúvida, a pauta fica bloqueada até decisão do fundador. `PUBLICADO` só com confirmação (fundador, Insights ou link); nunca se estima uma data de publicação.
+- **Encerramento obrigatório:** um episódio só está arquivado quando briefing, roteiro definitivo, legenda, comentário fixado, texto alternativo, fontes, controlo de qualidade e a localização do vídeo e da capa estão na pasta do episódio, o registo, o histórico e (se mudou) o `STATUS.md` estão atualizados, há handoff e o commit está conferido no GitHub (protocolo em `SHOWRUNNER.md` §6). Nunca vídeos no Git.
 
 ## 11. Bloqueios (fonte, ferramenta ou autorização indisponível)
 
@@ -133,16 +134,17 @@ Entregáveis: vídeo · capa · legenda limpa · comentário fixado · texto alt
 
 ## 12. Depois da publicação · aprendizagem
 
-- Números do print semanal do Insights (Visão geral + Conteúdo) → `comum/historico.md`, com série e data.
-- Separar **observado** de **leitura**; uma aprendizagem acionável por semana, no máximo.
+- Números dos prints do Insights (domingo) → `comum/insights/` (snapshot novo em `semanas/AAAA-MM-DD.md` e linhas acrescentadas a `registo_posts.csv`, associadas ao ID editorial). Nunca se apaga nem se substitui um snapshot anterior; guardam-se números, não screenshots com dados pessoais.
+- Impulsionamento por publicação: SIM / NÃO / PARCIAL / A CONFIRMAR. Sem confirmação = A CONFIRMAR; nunca se infere pelo volume de visualizações, e alcance pago não se mistura com orgânico.
+- Separar **facto observado**, **interpretação**, **hipótese** e **recomendação**; uma aprendizagem acionável por semana, no máximo.
 - Um resultado isolado não muda a estratégia; uma regra nova precisa de padrão em 2+ semanas ou de decisão do Ibisson.
 - Sem limiares universais de sucesso: cada perfil diz que métrica olha.
 - Mudança na constituição ou num perfil → entrada em `DECISOES.md` (data, o quê, porquê, impacto).
 
 ## 13. O que o repositório guarda
 
-Guarda: regras aprovadas, perfis, modelos, fichas e fontes de episódios, legendas, aprendizagens verificadas, scripts reutilizáveis.
-Não guarda: transcrições de conversas, prompts temporários, resultados não verificados, mídia renderizada, segredos.
+Guarda: regras aprovadas, perfis, modelos, registo editorial, fichas e fontes de episódios, pacotes de publicação, métricas do Insights (números), aprendizagens verificadas, scripts reutilizáveis.
+Não guarda: transcrições de conversas, prompts temporários, resultados não verificados, mídia renderizada, screenshots do Insights, segredos.
 
 ## 14. Especiais e homenagens
 
