@@ -105,6 +105,22 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Já produzidos | Homenagem a Sir Patrick Stewart (v1 `esp01_sir_patrick/`, não publicável; v2 `esp02_picard_v2/`) · Especial de Halloween 2026 Innistrad × Duskmourn (`especiais/halloween_2026/`, publicado) |
 | Relação com o BINDER Vision | Fecho do scanner, salvo exceção registada (ex.: homenagem a Sir Patrick) |
 
+## Em desenvolvimento
+
+### Vinci (o mercado das cartas)
+
+| Campo | Valor |
+|---|---|
+| Classificação | Série · episódio de série |
+| Estado | Em desenvolvimento (12/11/2026): traço, cenário e som da Fonte definidos; kit de recortes por fechar; sem voz, sem cadência, sem peças publicáveis |
+| Objetivo editorial | Explicar por que razão o preço de uma carta mudou, com causa única, fonte e data; dizer o que isso significa para quem tem a carta |
+| Identidade | Analista do mercado de cartas, meio vendedor de feira meio corretor; silhueta de ombros largos e pernas curtas, fato grande de mais, gravata vermelha como única cor saturada; cenário de mesa, parede suja e painel de cotações vazio; telefone de disco com o símbolo do BINDER no mostrador |
+| Documentação | Bíblia: `vinci/CONTEXTO.md` · Perfil: `vinci/PERFIL.md` · Som: `vinci/audio/fonte.py` |
+| Regras específicas | Nunca prever preço nem recomendar compra ou venda; todo o número com fonte e data no ecrã; a Fonte nunca aparece, nunca fala palavras e nunca é legendada; sem fonte verificada, a Fonte não atende |
+| Território | Preço e o que o move. Humor sobre cartas → Mana & Burn; notícia da semana → Giro; resultado competitivo → Meta em Curto; arte → Conde |
+| Conteúdo produzido | Nenhum ainda (formato previsto: Reel 9:16, 30–45 s) |
+| Relação com o BINDER Vision | Direta: o fecho do scanner é continuação do conteúdo, não interrupção |
+
 ## Frente nova
 
 Criar a pasta, `PERFIL.md` (modelo em `modelos/PERFIL_SERIE.md`) e a bíblia (`CONTEXTO.md`), acrescentar uma secção aqui e uma entrada em `../series.yaml`, e registar em `DECISOES.md`. A constituição não muda.
