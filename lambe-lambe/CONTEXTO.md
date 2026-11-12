@@ -24,7 +24,7 @@ Referências de direção de arte: as duas composições enviadas pelo fundador 
 - Formato 4:5, 1080×1350 por slide; todos os slides parecem capítulos da mesma publicação de rua.
 - Muro rosa, cartazes rasgados e sobrepostos, colagem física; tipografia editorial grande (Anton, Geist, Permanent Marker).
 - Slide 1 com gancho visual forte; slides do meio com informação e narrativa; último slide com pergunta e o cartaz preto BINDER.
-- Ilustração de capa original e genérica (vetorial). Não copiar obras nem retratar artistas reais: sem fotos nem rostos gerados de pessoas reais.
+- Layout das referências (v2, 12/11 12:04): cartaz creme rasgado, selo azul sem símbolo de Magic, título condensado pesado + palavra-chave com risco rosa, imagem grande, faixa preta com o nome, chip amarelo. A imagem grande é um detalhe ampliado da arte real da carta (a carta inteira aparece no carrossel). Sem fotos nem rostos gerados de pessoas reais.
 - Cartas reais inteiras, créditos no slide e na legenda. Factos, datas, números e créditos sempre verificados.
 - Implementação de referência: `lambe-lambe/carrosseis_artistas/` (LL-ART13 a LL-ART18).
 

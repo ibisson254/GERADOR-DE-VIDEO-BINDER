@@ -1,20 +1,18 @@
-# Carrosséis "Artistas de Magic" · padrão oficial do Lambe-lambe (12/11/2026)
+# Carrosséis "Artistas de Magic" · padrão oficial do Lambe-lambe (v2, 12/11/2026)
 
 Seis carrosséis 4:5 (5 imagens 1080×1350 cada), LL-ART13 a LL-ART18: John Avon, Mark Poole, Kev Walker, Magali Villeneuve, Raymond Swanland e Seb McKinnon. Cada pasta tem `FICHA.md` (fontes), `legenda.txt`, `comentario_fixado.txt` e `texto_alternativo.txt`.
 
-## Estrutura fixa (5 slides)
-1. Capa: selo azul "Artistas de Magic", gancho em cartaz pop, ilustração vetorial original, nome do artista em faixa marinho, chip amarelo e linha de contexto, "arrasta →".
-2. "Quem pintou?": carta real inteira + nome a marcador + quem é.
-3. Número grande (cartaz amarelo) + carta real + frase.
-4. A história + carta real.
-5. Pergunta para os comentários + cartaz preto BINDER (ponte: scanner) + "Beta para Android · link na bio".
+**v2 (12/11, 12:04, pedido do fundador: «Tem que ser todos nesse padrão do ficheiro que lhe enviei»)**: segue as duas referências do fundador. Muro rosa áspero, cartaz creme rasgado a ocupar o slide, selo azul «Artistas de Magic» (sem o símbolo de Magic, marca da Wizards), gancho em letra condensada pesada com a palavra-chave em Archivo Black e risco rosa, imagem grande, faixa preta com o nome, linha creme e chip amarelo. A pintura grande é um **detalhe ampliado da arte real** da carta do artista (escolha do fundador), e a carta inteira aparece no carrossel. Sem retrato do artista: o da referência era um rosto gerado, não a pessoa real. A v1 (ilustração vetorial plana) foi reprovada e fica em `v1_reprovada/`.
 
-Créditos das cartas no rodapé dos slides 2–4. Cartas inteiras, fita só nos cantos de cima.
+## Estrutura (5 slides)
+1. Capa (referência «Quem transforma terrenos em paisagens?»).
+2. Editorial (referência «Jhon Avon», com a carta real no lugar do retrato): nome, frase manuscrita, número em papel, faixa preta.
+3. Número grande + arte + carta inteira + faixa preta.
+4. A história + arte + carta inteira.
+5. Pergunta para os comentários + cartaz preto BINDER (ponte: scanner) + «Beta para Android · link na bio».
 
 ## Gerar
-Na pasta `gerador/` acrescentar (não versionados): `cartas/<chave>.png` (PNG do Scryfall, chaves em `creditos.json`), `logo_mark.png` (`manaburn/logo/`), `Geist-Bold.woff2`, `Geist-Medium.woff2`, `anton-latin-400-normal.woff2`, `permanent-marker-latin-400-normal.woff2` (@fontsource). Depois:
+Em `gerador/` (não versionados): `cartas/<chave>.png` e `hd/<chave>.jpg` (art_crop do Scryfall ampliado 2,4× com Lanczos), `logo_mark.png`, woff2 de Archivo Black, Barlow Condensed 600/800, Kalam 700 e Geist 500/700 (@fontsource), e as texturas (`python3 -I texturas.py`). Depois:
 
     python3 -I render.py . <saida> avon poole walker magali swanland seb
     python3 -I pacotes.py cartas/creditos.json <saida_pacotes>
-
-Artista novo: entrada em `conteudo.js` (textos), em `ilustracoes.js` (SVG original) e as cartas em `creditos.json`.

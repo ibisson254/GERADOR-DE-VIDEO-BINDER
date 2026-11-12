@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><style>
+@font-face{font-family:Geist;src:url(Geist-Bold.woff2);font-weight:700}
+@font-face{font-family:Geist;src:url(Geist-Medium.woff2);font-weight:500}
+@font-face{font-family:Anton;src:url(anton-latin-400-normal.woff2)}
+@font-face{font-family:Marker;src:url(permanent-marker-latin-400-normal.woff2)}
+:root{--preto:#050A10;--ardosia:#0F172A;--esm:#10B981;--rosa:#EC7FA9;--amarelo:#FFE04A;--papel:#F4EFE4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#222}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--rosa);display:none}
+.slide.on{display:block}
+/* muro: concreto por baixo da tinta + grão */
+.muro::before{content:"";position:absolute;inset:0;background:url(tex_concreto.svg);mix-blend-mode:multiply;opacity:.55;z-index:0}
+.slide::after{content:"";position:absolute;inset:0;background:url(tex_grao.svg);mix-blend-mode:overlay;opacity:.5;pointer-events:none;z-index:50}
+.vinheta{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 45%,transparent 55%,rgba(60,0,25,.22));z-index:49;pointer-events:none}
+/* papel rasgado: fibra branca por trás + folha por cima, cada uma com o seu filtro */
+.papel{position:absolute;z-index:2}
+.papel .fibra{position:absolute;inset:-5px;background:#FBF8F1}
+.papel .folha{position:absolute;inset:0;background-blend-mode:multiply}
+.papel .conteudo{position:relative;height:100%}
+.papel.sombra .fibra{box-shadow:0 2px 3px rgba(60,10,30,.18)}
+.textura{background-image:url(tex_rugas.svg),url(tex_grao.svg)}
+.resto{opacity:.8;mix-blend-mode:multiply}
+.resto .folha{background-color:#EFE8DA}
+.resto span{font-family:Anton;color:#D8B8C2;position:absolute;line-height:.9;white-space:nowrap}
+/* cartaz pop */
+.pop .folha{background-color:var(--amarelo)}
+.pop.branco .folha{background-color:var(--papel)}
+.pop h1{font-family:Anton;font-weight:400;color:#111;text-transform:uppercase;line-height:.92;letter-spacing:.5px;position:relative}
+.pop h1 em{font-style:normal;color:#E0337A}
+.reticula{position:absolute;inset:0;background-image:radial-gradient(rgba(224,51,122,.55) 1.4px,transparent 1.8px);background-size:9px 9px;
+  -webkit-mask-image:linear-gradient(135deg,transparent 58%,#000 100%);mask-image:linear-gradient(135deg,transparent 58%,#000 100%);opacity:.7}
+/* cartaz BINDER */
+.binder .folha{background-color:var(--preto)}
+.binder .fibra{background:#E9E6DF}
+.binder .conteudo{color:#F3F5F7;font-family:Geist}
+.marca{display:flex;align-items:center;gap:16px;font-family:Geist;font-weight:700;font-size:34px;letter-spacing:-.3px}
+.marca img{width:58px;height:58px}
+.passo{font-family:Geist;font-weight:500;font-size:24px;color:#7C8796;letter-spacing:3px}
+.passo b{color:var(--esm);font-weight:700}
+.titulo{font-family:Geist;font-weight:700;letter-spacing:-2.5px;line-height:.98;color:#fff}
+.sub{font-family:Geist;font-weight:500;color:#A9B4C2;letter-spacing:-.3px;line-height:1.28}
+.traco{width:72px;height:6px;background:var(--esm);border-radius:3px}
+.nota{font-family:Geist;font-weight:500;font-size:21px;color:#6B7686}
+.tel{position:absolute;filter:drop-shadow(0 30px 50px rgba(16,185,129,.16)) drop-shadow(0 12px 24px rgba(0,0,0,.6))}
+.tel img{display:block;width:100%;clip-path:inset(2.5% 4.3% 2.4% 4.5% round 7.5%)}
+/* cartas e fita */
+.carta{position:absolute;z-index:5;filter:drop-shadow(0 3px 2px rgba(50,0,20,.28)) drop-shadow(0 14px 18px rgba(50,0,20,.22))}
+.carta img{display:block;width:100%}
+.fita{position:absolute;z-index:6;height:44px;background:linear-gradient(180deg,rgba(255,252,240,.72),rgba(236,228,206,.62));
+  box-shadow:0 1px 2px rgba(0,0,0,.12);
+  clip-path:polygon(0 6%,3% 0,6% 9%,9% 1%,12% 6%,88% 4%,91% 0,94% 8%,97% 2%,100% 7%,100% 93%,97% 100%,94% 92%,91% 99%,88% 95%,12% 96%,9% 100%,6% 91%,3% 99%,0 94%)}
+.fita::after{content:"";position:absolute;inset:0;background:url(tex_grao.svg);opacity:.25;mix-blend-mode:multiply}
+/* etiquetas à mão */
+.etq{position:absolute;z-index:8}
+.etq .folha{background-color:#FBF8F1}
+.etq .conteudo{font-family:Marker;color:#121212;display:flex;align-items:center;justify-content:center;white-space:nowrap}
+.selo{position:absolute;z-index:9}
+.selo .folha{background-color:var(--esm)}
+.selo .fibra{display:none}
+.selo .conteudo{font-family:Geist;font-weight:700;color:var(--preto);display:flex;align-items:center;justify-content:center;gap:10px;letter-spacing:1.5px;font-size:22px}
+.selo .ponto{width:12px;height:12px;border-radius:50%;background:var(--preto)}
+.creditos{position:absolute;z-index:8}
+.creditos .folha{background-color:#FBF8F1}
+.creditos .conteudo{font-family:Geist;font-weight:500;font-size:17.5px;line-height:1.5;color:#3A3A40;padding:16px 24px}
+.btn{display:inline-flex;align-items:center;gap:14px;background:var(--esm);color:var(--preto);font-family:Geist;font-weight:700;border-radius:999px}
+</style><style>
+.selo-azul{position:absolute;z-index:9}
+.selo-azul .folha{background-color:#2C6BFF}
+.selo-azul .fibra{background:#E8EEFF}
+.selo-azul .conteudo{font-family:Anton;color:#FFF7EA;display:flex;align-items:center;justify-content:center;letter-spacing:1px;line-height:.95;text-align:center}
+.marinho .folha{background-color:#23286B}
+.marinho .fibra{background:#E9E6F5}
+.nome{font-family:Anton;color:#FFF1D6;line-height:.9;letter-spacing:1px}
+.risco{height:9px;background:#FF5FA8;border-radius:5px;transform:rotate(-1deg)}
+.txt{font-family:Geist;font-weight:500;color:#1A1820;line-height:1.3;letter-spacing:-.2px}
+.txt b{font-weight:700;color:#C21E66}
+.ilu{position:absolute;inset:18px;overflow:hidden;border:5px solid #15131A}
+.chip .folha{background-color:#FFD23F}
+.chip .conteudo{font-family:Geist;font-weight:700;color:#15131A;display:flex;align-items:center;justify-content:center;gap:16px}
+.chip .conteudo i{color:#C21E66;font-style:normal}
+.marc{font-family:Marker;color:#15131A}
+.slide{display:block}
+</style></head><body><svg width="0" height="0" style="position:absolute">
+ <defs>
+  <!-- rasgo: ruído fractal desloca o contorno; seeds diferentes por peça -->
+  <filter id="r1" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="5" seed="3"/><feDisplacementMap in="SourceGraphic" scale="9" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="r2" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="5" seed="11"/><feDisplacementMap in="SourceGraphic" scale="14" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="r3" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="5" seed="27"/><feDisplacementMap in="SourceGraphic" scale="11" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="r4" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="4" seed="41"/><feDisplacementMap in="SourceGraphic" scale="6" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="r5" x="-8%" y="-8%" width="116%" height="116%"><feTurbulence type="fractalNoise" baseFrequency=".02" numOctaves="5" seed="58"/><feDisplacementMap in="SourceGraphic" scale="40" xChannelSelector="R" yChannelSelector="G"/></filter>
+ </defs>
+</svg>
+<div id="raiz"></div>
+<script src="ilustracoes.js"></script><script src="conteudo.js"></script>
+<script>
+const P = (o) => { // papel rasgado
+  const f = o.f||'r1', ff = o.ff||'r2';
+  return `<div class="papel ${o.cls||''}" style="left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;transform:rotate(${o.r||0}deg);${o.st||''}">
+   <div class="fibra" style="filter:url(#${ff})"></div>
+   <div class="folha textura" style="filter:url(#${f})"></div>
+   <div class="conteudo">${o.c||''}</div></div>`;
+};
+const F = (x,y,w,r) => `<div class="fita" style="left:${x-w/2}px;top:${y-22}px;width:${w}px;transform:rotate(${r}deg)"></div>`;
+const C = (src,cx,cy,w,r) => { // carta inteira + fita só nos cantos de cima
+  const h = w*1.3954, a = r*Math.PI/180;
+  const canto = (sx)=>{const dx=sx*(w/2-16), dy=-(h/2-4); return [cx+dx*Math.cos(a)-dy*Math.sin(a), cy+dx*Math.sin(a)+dy*Math.cos(a)];};
+  const [x1,y1]=canto(-1),[x2,y2]=canto(1);
+  return `<div class="carta" style="left:${cx-w/2}px;top:${cy-h/2}px;width:${w}px;transform:rotate(${r}deg)"><img src="${src}.png"></div>`
+    + F(x1,y1,118,r-40) + F(x2,y2,118,r+40);
+};
+const E = (txt,cx,cy,r,t=44,bg='') => { const w = txt.length*t*.62+56, h=t*1.75;
+  return P({cls:'etq sombra',x:cx-w/2,y:cy-h/2,w,h,r,f:'r4',ff:'r4',st:bg,c:`<div class="conteudo" style="font-size:${t}px;height:100%">${txt}</div>`}) + F(cx,cy-h/2+4,84,r+3); };
+const restos = (s) => [ // cartazes antigos colados por baixo
+  P({cls:'resto',x:-80,y:-60+s*7,w:520,h:420,r:-2,f:'r5',ff:'r5',c:`<span style="left:40px;top:60px;font-size:150px">SHOW</span>`}),
+  P({cls:'resto',x:640,y:-90,w:560,h:380,r:3,f:'r5',ff:'r5',c:`<span style="left:30px;top:170px;font-size:120px">SÁBADO</span>`}),
+  P({cls:'resto',x:-120,y:880,w:480,h:560,r:4,f:'r5',ff:'r5',c:`<span style="left:150px;top:80px;font-size:110px">VENDE</span>`}),
+  P({cls:'resto',x:720,y:1010,w:520,h:420,r:-3,f:'r5',ff:'r5',c:`<span style="left:40px;top:40px;font-size:130px">HOJE</span>`}),
+].join('');
+const base = (inner, s) => `<div class="muro" style="position:absolute;inset:0"></div>${restos(s)}${inner}<div class="vinheta"></div>`;
+const BLOGO = `<div class="marca"><img src="logo_mark.png"><span>BINDER Vision</span></div>`;
+
+
+const ID = new URLSearchParams(location.search).get('c');
+const D = CONT[ID];
+const CR = JSON.parse(document.getElementById('cr')?.textContent||'{}');
+</script>
+<script src="creditos.js"></script>
+<script src="montar.js"></script>
+</body></html>

@@ -2,6 +2,11 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 12/11/2026 (12:04) · Carrosséis de artistas refeitos no layout das referências
+
+**O quê:** a v1 (ilustração vetorial plana) foi reprovada: «Tem que ser todos nesse padrão do ficheiro que lhe enviei refaça». A v2 segue o layout das duas referências. Imagem grande = detalhe ampliado da arte real da carta (opção escolhida pelo fundador, entre arte real, geração no ElevenLabs ou geração no ChatGPT). Mantém-se sem retrato do artista e sem o símbolo de Magic no selo.
+**Impacto:** `lambe-lambe/carrosseis_artistas/gerador/` passa à v2; a v1 fica em `v1_reprovada/`.
+
 ## 12/11/2026 (11:43) · Padrão visual oficial dos carrosséis do Lambe-lambe
 
 **O quê:** o fundador aprovou como padrão permanente dos carrosséis do Lambe-lambe a estética das duas referências que enviou (muro rosa, cartazes rasgados, tipografia grande, unidade entre slides). Regras em `lambe-lambe/CONTEXTO.md` §2 («Padrão oficial de carrossel»). Pedido: «Terminei esses carrocel e faça mais uns 5 com artistas mais conhecidos do Magic».

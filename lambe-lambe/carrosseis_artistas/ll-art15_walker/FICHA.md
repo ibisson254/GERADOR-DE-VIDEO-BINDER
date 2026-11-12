@@ -13,8 +13,8 @@
 - Métrica principal: salvamentos ÷ alcance; secundária: visitas ao perfil.
 
 ## Slides
-1. Capa: gancho + ilustração pop original + nome do artista + selo azul "Artistas de Magic".
-2. "Quem pintou?": carta real inteira + quem é.
+1. Capa: selo azul, gancho, detalhe ampliado da arte real (a carta inteira aparece no carrossel), faixa preta com o nome, linha creme e chip amarelo.
+2. Editorial: nome grande, frase manuscrita, carta real inteira colada, papel com o número, faixa preta.
 3. Número grande + carta real.
 4. A história + carta real.
 5. Pergunta para os comentários + cartaz preto BINDER ("Achou o nome no rodapé? Aponte a câmera…", beta para Android, link na bio).
@@ -32,7 +32,7 @@
 ## Produção
 - Gerador: `lambe-lambe/carrosseis_artistas/gerador/` (`render.py`, HTML/CSS no Chrome sem interface). PNG das cartas do Scryfall e fontes woff2 não versionados (ver LEIA-ME).
 - Cartas inteiras, sem filtro; fita só nos cantos de cima; rodapé com artista e © livre. Marca em preto e esmeralda.
-- Ilustração da capa: desenho vetorial original, genérico; não copia arte de carta nem retrata o artista.
+- Imagens: detalhe ampliado da arte real da carta (art_crop do Scryfall), sempre com a carta inteira no mesmo slide ou no carrossel; sem fotos nem rostos gerados do artista.
 - Sem foto do artista (decisão: não publicar retratos de pessoas reais nem imagens geradas que imitem o rosto delas).
 - Easter egg: 0.
 

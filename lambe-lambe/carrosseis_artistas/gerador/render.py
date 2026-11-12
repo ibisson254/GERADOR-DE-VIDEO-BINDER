@@ -10,7 +10,7 @@ async def main():
         pg = await b.new_page(viewport={"width": 1080, "height": 1350}, device_scale_factor=2)
         for cid in ids:
             await pg.goto("file://" + os.path.join(src, "artistas.html") + "?c=" + cid)
-            await pg.evaluate("document.fonts.ready"); await pg.wait_for_timeout(900)
+            await pg.wait_for_selector("body[data-ok]"); await pg.wait_for_timeout(700)
             for i in range(1, 6):
                 f = os.path.join(out, f"_{cid}{i}.png")
                 await pg.locator(f"#s{i}").screenshot(path=f)
