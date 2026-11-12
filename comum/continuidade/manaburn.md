@@ -9,6 +9,7 @@ Semente de 02/11/2026, só com o que está no repositório, no projeto claude.ai
 - 01/11 · Giro de domingo: "A agenda tá na tela. Guarda o vídeo." (5/11 fim do All Leylines' Eve; 6/11 pré-lançamento Star Trek; 10/11 Star Trek no MTG Arena; 13/11 Star Trek nas lojas) · fonte na TV: Wizards of the Coast
 
 - 06/11 · Especial pré-release Star Trek (TV SAL): "Próximo plantão: o que o pré-release mostrou de verdade" + revisão das três apostas do Mana · aberta · `manaburn/episodios/esp03_startrek_prerelease/episode.js`
+- 08/11 · Giro de domingo nº 2: "Segunda, dia 9, ele [o TUBO] volta pra prestar contas. Onde acertou. E onde errou." · aberta · `manaburn/giro/2026-11-08/`
 
 ## Opiniões das personagens
 - 01/11 · Giro · Burn: quem vê luto e enxerga margem de lucro "não é jogada, é falta de respeito" (subida da Collector Booster de Star Trek depois da morte de Sir Patrick Stewart).
@@ -26,6 +27,10 @@ Semente de 02/11/2026, só com o que está no repositório, no projeto claude.ai
 - "Então eu respondo a sua resposta… com a minha resposta… e ninguém joga nada!" (Giro, 01/11, Leyline of Anticipation).
 
 - "A carta dos Borg não mata Borg" (Resistance Is Futile); "mudança interplanetária"; "manobrista de nave"; "cobrar o aluguel" (especial pré-release, 06/11).
+- "Quero ver ela embaralhar cem cartas sem derrubar nenhuma!" (Giro, 08/11, filme de Magic).
+- "Fichinha de graça e ainda ajuda hospital? Essa eu não baniria." (Giro, 08/11, Young Pyromancer).
+- "O cara destrói artefato e nem descruza o braço!" (Giro, 08/11, Joven).
+- "Recorde com ajudinha." (Giro, 08/11, impulsionamento do EP05).
 
 ## Assuntos pendentes
 - Star Trek: lançamento a 13/11 (preço de pré-venda).

@@ -1,6 +1,6 @@
 # Ficha · Conde de Manaforte · EP004 · Joven: o réu que não explica nada
 
-Render final de 03/11/2026 (55,1 s sem o fecho; 58,97 s no total). **Produzido, não publicado.**
+Render final de 03/11/2026 (55,1 s sem o fecho; 58,97 s no total). **Publicado** (confirmado pelo fundador a 08/11/2026, entre 03 e 08/11; data exata por confirmar). Métricas: por receber.
 Scripts: `conde/montar_ep004.py` (copiado de `montar_ep003.py`), `conde/encurtar_narracao_ep004.py`. Dados: `conde/ep004/`.
 
 ## Classificação

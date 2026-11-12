@@ -21,6 +21,12 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **Decisões técnicas:** o registo fica em YAML porque a segunda tem de o ler sem interpretação; o histórico humano remete para ele, para não haver duas tabelas. A shell não chega ao 17Lands, magic.gg nem MTGMeta: o script não pesquisa, diz o quê e onde; o agente usa as ferramentas web. Previsões de prazo longo levam conferências marcadas às segundas (placar parcial, nunca auditoria).
 **Impacto:** identidade, voz, trilha e estrutura do TUBO não mudam. A `main` ainda não tem o `PROTOCOLO_PRE_RELEASE.md` (branch `protocolo-pre-release-tubo`) nem o EP05 (branch `meta-em-curto-ep05`); o ciclo remete para eles e funciona sem eles, mas a integração dessas branches fica por aprovar.
 
+## 08/11/2026 (02:06) · Calendário da parede configurável (Mana & Burn)
+
+**O quê:** o ano do calendário velho da sala passa a vir de `EP.calendario` (por defeito "2019"). O Giro de 08/11 usa "1996".
+**Porquê:** fundador, 08/11/2026: "mude o calendário na parede para 1996".
+**Impacto:** só o Giro de 08/11 muda; os outros episódios e a sala v3 ficam iguais. Se o fundador quiser 1996 em todos, basta mudar o valor por defeito no `index.html`.
+
 ## 08/11/2026 (00:05) · Burn no plano da TV
 
 **O quê:** correção de um defeito de render, não de modelo: no plano da TV os padrões SVG (cabelo raspado do Burn, xadrez da camisa, papel de parede) saíam transparentes porque os ids repetidos apontavam para o mundo escondido. O plano da TV passa a ter defs próprios (sufixo `_2`). O Burn sobe 40 px atrás da TV e mostra pescoço e ombros com a mesma camisa do plano geral, ligando-se ao braço que aponta.
