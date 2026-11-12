@@ -1,6 +1,6 @@
 # Continuidade · Meta em Curto (TUBO)
 
-Semente de 02/11/2026. Previsões e resultados vivem em `comum/historico.md` (`oraculo/CONTEXTO.md` §10); aqui só a remissão.
+Semente de 02/11/2026. Previsões e resultados vivem em `comum/historico.md` (`oraculo/CONTEXTO.md` §7.2, item 4; pré-release: `oraculo/PROTOCOLO_PRE_RELEASE.md`); aqui só a remissão.
 
 ## Episódios
 - EP01 · AC13, Relatório do Meta · `oraculo/episodios/ep01_ac13_ficha.md` · previsões: nenhuma.

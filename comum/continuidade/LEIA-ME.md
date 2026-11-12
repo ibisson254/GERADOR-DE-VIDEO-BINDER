@@ -14,7 +14,7 @@ Pedido do fundador (02/11/2026, missão "Visual Evolution & Character Excellence
 2. **Opiniões das personagens**: o que a personagem defendeu em voz alta; uma opinião nova que a contradiga tem de o assumir em cena.
 3. **Promessas ao público**: tudo o que o vídeo, a TV SAL, a legenda ou o comentário anunciaram para depois (data, plantão, "próximo episódio").
 4. **Assuntos pendentes**: temas abertos que pedem regresso.
-5. **Previsões e resultados** (sobretudo TUBO): ficam em `comum/historico.md`, como manda `oraculo/CONTEXTO.md`; aqui só a remissão.
+5. **Previsões e resultados** (sobretudo TUBO): ficam em `comum/historico.md`, como manda `oraculo/CONTEXTO.md` §7.2; aqui só a remissão.
 6. **Referências a episódios anteriores** já usadas (para não repetir a mesma piada).
 7. **Aprendizagens editoriais** da personagem (as do estúdio ficam em `comum/historico.md`).
 

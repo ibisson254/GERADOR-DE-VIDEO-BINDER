@@ -48,11 +48,22 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 | Kit v2 no repositório + melhorias (legenda na zona segura, fonte do medidor, ventilador, antena, paninho) | Implementado e testado (bordas OK) | `manaburn/LEIA-ME.md` |
 | Duração livre nas séries | Implementado (constituição v1.5) | `nucleo/DECISOES.md` |
 
+## Protocolo de Pré-Release do TUBO (06/11/2026)
+
+| Bloco | Estado | Onde |
+|---|---|---|
+| Método (fases A–D, integridade estatística, estados, grau de certeza) | Implementado | `oraculo/PROTOCOLO_PRE_RELEASE.md` |
+| Modelo de ficha por coleção | Implementado | `nucleo/modelos/PREVISOES_PRE_RELEASE.md` → `oraculo/pre-release/` |
+| Ativação e router | Implementado | `oraculo/PERFIL.md`, `nucleo/SHOWRUNNER.md` §2.2 |
+| Registo canónico (IDs, estados, conferências) | Implementado | `oraculo/previsoes/registo.yaml` (decisão de 09/11: o histórico remete para ele) |
+| Migrar as 4 previsões do EP05 para `PR-TRK-01`–`04` | Concluído (09/11, na branch do EP07; no registo desde o PR #18) | `oraculo/previsoes/registo.yaml` |
+
 ## Depende do fundador
 
 - Aprovar um esboço das expressões novas do Mana e do Burn (auditoria §4) antes de as desenhar no kit.
-- ~~Enviar ou subir o motor que gerou o Giro~~ → encontrado na branch `giro/2026-11-01` e integrado em `consolidacao/2026-11-12-missao-master` (12/11).
-- Decisões da Missão Master (ver secção F de `nucleo/auditorias/2026-11-12_missao_master.md`): qual das 4 branches é o Ep. 10 do Mana & Burn; frentes novas (Pequeno Mestre, Vince Vault, Vinci); merge da branch de consolidação; ordem de integração dos pacotes de conteúdo (EP03–EP07, Giro nº 2, Conde EP005, especiais, lambes); reconciliação dos PRs #3 e #9.
+- ~~Enviar ou subir o motor que gerou o Giro~~ → encontrado na branch `giro/2026-11-01` e integrado na `main` (PR #18, 12/11).
+- Decisões que continuam com o fundador (secção F de `nucleo/auditorias/2026-11-12_missao_master.md`): qual das 4 branches é o Ep. 10 do Mana & Burn; frentes novas (Pequeno Mestre, Vince Vault, Vinci); merge dos pacotes de conteúdo (EP03–EP07, Giro nº 2, Conde EP005, especiais, lambes); merge do PR #3 reconciliado.
+- ~~Protocolo de Pré-Release: aprovar o PR e decidir o «~35%»~~ → integrado a 12/11 («Escolha as melhores opções e pode prosseguir»); o «~35%» já tinha saído conforme a decisão de 06/11 (aplicado em `oraculo/previsoes/registo.yaml`).
 - Drive atualizado a 02/11 (notas de fonte de verdade na bíblia, no doc 05 e no Mapa do Drive; secção de estado na bíblia).
 
 ## Pendências técnicas (não bloqueiam a governação)
