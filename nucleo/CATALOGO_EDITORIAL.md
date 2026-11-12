@@ -57,7 +57,7 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Objetivo editorial | Explicar em ~40 s porque um deck ou uma jogada funcionou (jogador competitivo e de Commander) |
 | Identidade | Monitor CRT dos anos 90 com estética de código verde; voz = LED a acender; "fora do tubo / dentro do tubo"; jazz de precisão com o tema "Paper Thin Alibi" |
 | Documentação | Bíblia: `oraculo/CONTEXTO.md` · Perfil: `oraculo/PERFIL.md` |
-| Regras específicas | Só campeonatos recentes e falados; evidência visual (lista completa, carta oficial, ficha de jogador com silhueta; foto só com autorização); comparar a jogada com 1–2 alternativas |
+| Regras específicas | Só campeonatos recentes e falados, mais previsões de pré-release pelo protocolo (`oraculo/PROTOCOLO_PRE_RELEASE.md`, 06/11/2026); evidência visual (lista completa, carta oficial, ficha de jogador com silhueta; foto só com autorização); comparar a jogada com 1–2 alternativas |
 | Território | Competição: decks, metagame, matchups, mulligan, sideboard, decisões de jogo |
 | Conteúdo produzido | Reel 9:16; carrossel com a lista |
 | Relação com o BINDER Vision | Fecho do scanner |

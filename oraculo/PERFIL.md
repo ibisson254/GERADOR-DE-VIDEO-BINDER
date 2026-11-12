@@ -3,6 +3,7 @@
 Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Identidade, visual, trilha, estrutura do Reel e tipos de episódio: `oraculo/CONTEXTO.md` (autoridade). Pasta e scripts mantêm o nome antigo `oraculo/`; o nome público da série é **Meta em Curto**.
 
 - **Território:** competição. Torneios mais recentes e mais falados da comunidade mundial; decks, metagame, matchups, mulligan, sideboard, sequenciamento, decisões de jogo.
+- **Previsões de pré-release** de uma coleção nova (Limited/Sealed) entram no território pelo Protocolo de Pré-Release (secção abaixo; fundador, 06/11/2026).
 - **Fora do território:** curiosidades, hype de sets, preço, Salt Score, cultura → Mana & Burn. Arte → Conde. Temas genéricos ou sem torneio por trás não entram.
 - **Público e necessidade:** jogador competitivo e de Commander que quer perceber *porquê* um deck ou uma jogada funcionou, em 40 s.
 
@@ -14,6 +15,7 @@ Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Identidade, visual, t
 | A Jogada que Não Viste | Reconstrução esquemática | VOD com minuto exato; estado da mesa (vida, mão conhecida, campo, mana) confirmado no VOD; alternativas avaliadas com o texto Oracle |
 | Relatório do Meta | Análise de dados | Fonte, data, evento e tamanho da amostra no ecrã; distinguir **representação** (quantos jogaram), **desempenho** (conversão / win rate) e **confronto direto** |
 | Previsão | Opinião registada | Marcada como opinião no ecrã; registada em `comum/historico.md`; revista depois do evento |
+| Previsão de pré-release | Protocolo de Pré-Release | Fases A–D de `PROTOCOLO_PRE_RELEASE.md`; ficha em `pre-release/`; ID e estado em `comum/historico.md` |
 
 ## Regras próprias de rigor
 
@@ -23,6 +25,14 @@ Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Identidade, visual, t
 - Win rate só de fonte que o publica; nunca calculado sobre dados incompletos sem o dizer.
 - Jogadores reais: nome e resultado sim; deboche não (`CONTEXTO.md` §7.2.3). "O TUBO julga o teu deck" só com autorização do autor.
 - Contador `ERROS HUMANOS` = contagem real de episódios.
+
+## Protocolo de Pré-Release (ativação)
+
+Método completo: `PROTOCOLO_PRE_RELEASE.md`. Não muda nada da identidade (`CONTEXTO.md`).
+
+- **Ativa** quando o pedido envolve: previsões de pré-release; análise de uma coleção antes do pré-release; preparação competitiva para Sealed; expectativas sobre arquétipos de uma coleção nova. Ativa as quatro fases, não só a previsão.
+- **Coleção já lançada:** identificar primeiro o que se pede. Análise de resultados com previsões registadas → Fase D. Sem previsões registadas → Relatório do Meta normal. Previsão retrospectiva («o que se devia ter previsto») → marcada como retrospectiva e nunca registada como previsão (não é auditável).
+- **Não ativa** em episódios comuns (torneio, jogada, leitura de carta, meta de Construído), nem para hype ou reação a spoilers (Mana & Burn).
 
 ## Gancho e fecho
 
@@ -46,6 +56,7 @@ Guardados + partilhas (conteúdo de referência). Secundária: respostas à perg
 - [ ] Cada número no ecrã tem fonte e data visíveis.
 - [ ] Representação, desempenho e confronto não estão misturados.
 - [ ] Previsão marcada e registada (se houver).
+- [ ] Pré-release: ficha `pre-release/<CÓDIGO>_previsoes.md` com critério de avaliação em cada ID; linhas no histórico; nenhuma percentagem sem fonte, amostra, formato e período; grau de certeza sem %.
 - [ ] Nenhuma imagem de transmissão.
 - [ ] Ficha e `*_fontes.txt` em `oraculo/episodios/`.
 

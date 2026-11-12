@@ -2,6 +2,25 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 12/11/2026 · Missão Master: merge da consolidação e integração do protocolo de pré-release
+
+**O quê:** (1) A branch `consolidacao/2026-11-12-missao-master` entra na `main` (PR #18): matriz de integração, sistema de previsões do TUBO (de `meta-em-curto/ep07-wc32`, PR #16) com `ciclo.py continuacao` corrigido (mostra TODAS as previsões abertas em qualquer dia, não só a janela semanal) e 15 testes, `comum/ferramentas/validar_repo.py`, motor do Giro nº 1 arquivado de `giro/2026-11-01`, STATUS ao estado real. (2) A branch `protocolo-pre-release-tubo` (PR #9, decisão de 06/11 abaixo) entra reconciliada: a secção de previsões de `comum/historico.md` passa a remissão para `oraculo/previsoes/registo.yaml` (fonte canónica única, decisão de 09/11 abaixo); as entradas de 06/11, 09/11 e 10/11 entram neste registo de decisões. (3) PR #7 passa a ter base `main` (a base anterior já foi integrada).
+**Porquê:** fundador, 12/11/2026 (01:32): «Escolha as melhores opções e pode prosseguir», em resposta à secção F de `nucleo/auditorias/2026-11-12_missao_master.md`.
+**Fica de fora (decisão própria do fundador):** qual das 4 branches é o Ep. 10 do Mana & Burn; frentes novas (Pequeno Mestre, Vince Vault, Vinci); merge dos pacotes de conteúdo (EP03–EP07, Giro nº 2, Conde EP005, especiais, lambes); merge do PR #3 reconciliado (muda governação).
+
+## 10/11/2026 · Toda previsão do TUBO conta no registo, em qualquer dia
+
+**O quê:** (1) `oraculo/CICLO_SEMANAL.md` §0: qualquer previsão do TUBO, em qualquer peça e dia, entra em `oraculo/previsoes/registo.yaml` antes da voz; qualquer produção do TUBO começa por ler o registo. (2) `ciclo.py continuacao` (igual a `segunda`, para qualquer dia). (3) Linha no `AGENTS.md` §2. (4) Recorte das PR-TRK-01 e 03 no 17Lands fixado antes de haver dados (linhas de guilda sem splash; «Two-color» contra três ou mais cores).
+**Porquê:** pedido do fundador (10/11/2026, 09:54), ao enviar o EP05: «sempre que der uma previsão tem que contar nos históricos de previsão do personagem no Github para quando o personagem for fazer episódio já saber qual é que ele tem que produzir sem eu ter que falar toda vez».
+**Impacto:** só vale em sessões novas depois de a branch `meta-em-curto/ep06-ciclo-semanal` entrar na `main` (as sessões clonam a `main`). Identidade do TUBO sem alterações.
+
+## 09/11/2026 · Ciclo semanal do TUBO: quinta prevê, segunda presta contas
+
+**O quê:** (1) Novo `oraculo/CICLO_SEMANAL.md`: o episódio de quinta fecha previsões sobre o fim de semana; o de segunda volta a elas com dado. (2) Registo único e legível por máquina em `oraculo/previsoes/registo.yaml` (texto original, critério, prazo, conferências, estado) e calendário em `oraculo/previsoes/calendario.yaml`. (3) `oraculo/previsoes/ciclo.py` gera o briefing (`segunda`, `quinta`) e valida o registo (`validar`). (4) Palavras `tubo segunda` / `tubo quinta` no `AGENTS.md`. (5) `comum/historico.md` deixa de repetir a tabela de previsões e aponta para o registo. (6) PR-TRK-01..04 do EP05 transcritas para o registo, com a conversão prevista a 06/11 (grau 2; sem o «~35%»).
+**Porquê:** pedido do fundador (09/11/2026, 01:20): «tem que se tornar padrão salvar as previsões para assim que eu pedir o episódio de segunda tem que ser automático. Ele tem que buscar as previsões feita na quinta, e quando eu pedir episódio da quinta ele já tem que saber o que pesquisar.»
+**Decisões técnicas:** o registo fica em YAML porque a segunda tem de o ler sem interpretação; o histórico humano remete para ele, para não haver duas tabelas. A shell não chega ao 17Lands, magic.gg nem MTGMeta: o script não pesquisa, diz o quê e onde; o agente usa as ferramentas web. Previsões de prazo longo levam conferências marcadas às segundas (placar parcial, nunca auditoria).
+**Impacto:** identidade, voz, trilha e estrutura do TUBO não mudam. A `main` ainda não tem o `PROTOCOLO_PRE_RELEASE.md` (branch `protocolo-pre-release-tubo`) nem o EP05 (branch `meta-em-curto-ep05`); o ciclo remete para eles e funciona sem eles, mas a integração dessas branches fica por aprovar.
+
 ## 08/11/2026 (00:05) · Burn no plano da TV
 
 **O quê:** correção de um defeito de render, não de modelo: no plano da TV os padrões SVG (cabelo raspado do Burn, xadrez da camisa, papel de parede) saíam transparentes porque os ids repetidos apontavam para o mundo escondido. O plano da TV passa a ter defs próprios (sufixo `_2`). O Burn sobe 40 px atrás da TV e mostra pescoço e ombros com a mesma camisa do plano geral, ligando-se ao braço que aponta.
@@ -26,6 +45,13 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **Porquê:** fundador, 07/11/2026: "Todos episódios de mana burn deve manter as melhorias que foram feitas nesse episódio", e "Pode avançar" à proposta refinada.
 **Âmbito:** episódios novos e especiais do Mana & Burn. Publicados não se reabrem. Não vale para Conde, Meta em Curto nem Órbita.
 **Fica de fora (precisa de aprovação própria):** fase 2 (luz dentro do `index.html`, como camadas do cenário); objetos novos (manta de crochê, benjamim, piso de taco); planos fixos da auditoria §5.
+
+## 06/11/2026 · Protocolo de Pré-Release do TUBO (Meta em Curto)
+
+**O quê:** (1) Novo `oraculo/PROTOCOLO_PRE_RELEASE.md`, canónico: quatro fases (investigação, previsões, acompanhamento, auditoria), integridade estatística, escala do grau de certeza e estados (PENDENTE, CONFIRMADA, PARCIALMENTE CONFIRMADA, REFUTADA, INCONCLUSIVA). (2) Novo modelo `nucleo/modelos/PREVISOES_PRE_RELEASE.md`; fichas por coleção em `oraculo/pre-release/`. (3) Ativação em `oraculo/PERFIL.md` e linha no router (`SHOWRUNNER.md` §2.2): previsões de pré-release passam a ser território do TUBO; hype e reação a spoilers continuam no Mana & Burn. (4) `comum/historico.md` ganha a secção «Previsões registadas do TUBO» (ID, estado, revisões, lições), que continua a ser o único histórico. (5) Remissões em `oraculo/CONTEXTO.md` §7.2 item 4, catálogo e `nucleo/README.md`; referência partida «§10» corrigida para «§7.2» em `comum/continuidade/`.
+**Porquê:** decisão editorial aprovada pelo fundador (prompt «Implementação do Protocolo de Pré-Release do TUBO», 06/11/2026): tornar as previsões de pré-release do EP05 uma metodologia permanente e verificável, independente de cada coleção.
+**Decisões técnicas:** um só documento de método e só remissões nos outros (sem duplicar regras); grau de certeza em 5 níveis, ligado ao medidor de 5 segmentos que já existe (`oraculo/CONTEXTO.md` §11), nunca em percentagem, com teto 3 antes do pré-release (não há dados de Sealed da coleção); o texto original da previsão não se edita e a auditoria compara sempre o original; previsão retrospectiva nunca entra como previsão.
+**Impacto:** identidade, voz, trilha, cenários, estrutura, fecho e episódios publicados não mudam. Resolve a «exceção de território» que o EP05 tinha de declarar. O EP05 (branch `meta-em-curto-ep05`, por publicar) não foi tocado: ao integrá-lo, a sua tabela de previsões tem conflito com esta secção e as 4 linhas convertem-se para `PR-TRK-01` a `04`; a coluna «Confiança» passa à escala 1–5 (arredondando para baixo: «baixa» → 2, «média-baixa» → 2) e o «~35%» da linha pública sai ou ganha fonte e método, por decisão do fundador.
 
 ## 02/11/2026 · Especial "Precon em jogo": seguidor na tela e quadro do Conde
 

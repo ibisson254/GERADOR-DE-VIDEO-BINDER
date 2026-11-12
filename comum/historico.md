@@ -44,6 +44,10 @@ Print do próprio post (não do Insights), enviado pelo Ibisson. Entra no quadro
 - 04/11/2026 (previsto) · Especial Mana & Burn "A comunidade falou: Precon em jogo": comentário de @diegoalencard, trecho de Meta em Curto EP03, quadro do Conde. Render conferido a 02/11 (79,33 s com fecho, −14,8 LUFS, pico −2,3 dBTP): `especiais/precon_em_jogo/`. Hipótese: comentário de seguidor na tela + pergunta A/B geram mais respostas por 1.000 views. Métricas: aguardam publicação.
 - 03/11/2026 · Conde de Manaforte Ep. 004 (Joven, Homelands 1995, arte de Douglas Shuler). **Produzido, não publicado.** Render conferido (55,1 s + fecho, sem corte lateral, −13,9 LUFS, pico −1,5 dBTP): `conde/episodios/ep004_joven_ficha.md`. Sem easter egg. Hipótese em teste: pergunta A/B com dois réus concretos. Métricas: aguardam publicação.
 
+## Previsões registadas do TUBO
+
+Fonte canónica única: `oraculo/previsoes/registo.yaml` (decisão de 09/11/2026, `nucleo/DECISOES.md`: este histórico não repete a tabela, só remete). Método de pré-release: `oraculo/PROTOCOLO_PRE_RELEASE.md`. Briefing em qualquer dia: `python3 -I oraculo/previsoes/ciclo.py continuacao`. Erro numa previsão pública = "Erro de sistema" num episódio seguinte (`oraculo/CONTEXTO.md` §7.2, item 4).
+
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 
 - Especial de Halloween 2026 (Innistrad × Duskmourn): **publicado**. A música que acima aparece como "provisória" foi aprovada como está.
