@@ -29,7 +29,7 @@
 | Em 2018 tinha 103 terrenos básicos (20+19+16+28+20) | https://hipstersofthecoast.com/2018/08/john-avons-unstable-full-art-island-painting-sells-for-20000 | 12/11/2026 |
 | Ilha de Unstable vendida por US$ 20.000 em 2018; primeira pintura tradicional em 15 anos | idem | 12/11/2026 |
 | Lotus Field original vendido por US$ 40.000 em 2019 | https://hipstersofthecoast.com/tag/john-avon | 12/11/2026 |
-| Créditos das cartas (nome, coleção, nº, artista) | Scryfall, rodapé da carta: https://scryfall.com/card/unh/140/forest, https://scryfall.com/card/plc/165/urborg-tomb-of-yawgmoth, https://scryfall.com/card/ust/213/island | 12/11/2026 |
+| Créditos das cartas (nome, coleção, nº, artista) | Scryfall, rodapé da carta: https://scryfall.com/card/slu/4/arid-mesa, https://scryfall.com/card/isd/238/clifftop-retreat, https://scryfall.com/card/ust/213/island | 12/11/2026 |
 
 ## Produção
 - Gerador: `lambe-lambe/carrosseis_artistas/gerador/` (`render.py`, HTML/CSS no Chrome sem interface). PNG das cartas do Scryfall e fontes woff2 não versionados (ver LEIA-ME).

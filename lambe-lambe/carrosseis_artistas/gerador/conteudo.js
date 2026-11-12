@@ -2,9 +2,9 @@
 // <y>…</y> = palavra em amarelo nas faixas pretas · <b>…</b> = destaque rosa no papel.
 const CONT = {
 avon: { nome:['JOHN','AVON'],
-  capa:{ arte:'avon_island', pos:'center 78%', gancho:'Quem transforma<br>terrenos em', destaque:'paisagens?', info:'Mais de 300 artes para Magic<br>famoso por suas paisagens', chip:'Desde 1996' },
-  s2:{ carta:'avon_forest', script:'Paisagens que<br>contam histórias', fato:'Desde <b>1996</b>, John Avon já fez mais de <big>300</big> artes para Magic.', faixa:'Galês, ficou famoso pelos <y>terrenos básicos</y>.' },
-  s3:{ carta:'avon_urborg', pre:'Só de terrenos básicos', num:'100+', pos:'até 2018', faixa:'Unhinged e Unstable têm terrenos de <y>arte total</y> pintados por ele.' },
+  capa:{ arte:'avon_mesa', gancho:'Quem transforma<br>terrenos em', destaque:'paisagens?', info:'Mais de 300 artes para Magic<br>famoso por suas paisagens', chip:'Desde 1996' },
+  s2:{ carta:'avon_clifftop', script:'Paisagens que<br>contam histórias', fato:'Desde <b>1996</b>, John Avon já fez mais de <big>300</big> artes para Magic.', faixa:'Galês, ficou famoso pelos <y>terrenos básicos</y>.' },
+  s3:{ carta:'avon_mesa', pre:'Só de terrenos básicos', num:'100+', pos:'até 2018', faixa:'Pintou os terrenos de <y>arte total</y> de Unhinged e Unstable.' },
   s4:{ carta:'avon_island', titulo:'Uma Ilha por', destaque:'US$ 20 mil', texto:'Em 2018, a pintura original desta Ilha de Unstable foi vendida por <b>US$ 20.000</b>. Era a primeira pintura tradicional dele em 15 anos.' },
   s5:{ pergunta:'Qual terreno do Avon está no seu', destaque:'deck?' } },
 poole: { nome:['MARK','POOLE'],

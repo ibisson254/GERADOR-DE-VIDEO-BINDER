@@ -2,6 +2,11 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 12/11/2026 (12:18) · Carrosséis de artistas v3: identidade igual às referências
+
+**O quê:** v2 reprovada («Refine mais tem que fica identidade igual a do ficheiro que enviei»). v3: arte de ponta a ponta no cartaz principal, relevo de tinta e papel amassado, letras gastas, fitas, Rubik itálico amarelo nas faixas. Mantêm-se: sem retrato, sem símbolo de Magic, arte real com a carta inteira no carrossel.
+**Impacto:** `gerador/` passa à v3; v2 em `v2_reprovada/`.
+
 ## 12/11/2026 (12:04) · Carrosséis de artistas refeitos no layout das referências
 
 **O quê:** a v1 (ilustração vetorial plana) foi reprovada: «Tem que ser todos nesse padrão do ficheiro que lhe enviei refaça». A v2 segue o layout das duas referências. Imagem grande = detalhe ampliado da arte real da carta (opção escolhida pelo fundador, entre arte real, geração no ElevenLabs ou geração no ChatGPT). Mantém-se sem retrato do artista e sem o símbolo de Magic no selo.

@@ -138,5 +138,25 @@
   "artist": "Seb McKinnon",
   "uri": "https://scryfall.com/card/rtr/111/vandalblast",
   "flavor": "Beauty is in the eye of the exploder."
+ },
+ "avon_mesa": {
+  "name": "Arid Mesa",
+  "set": "Secret Lair: Ultimate Edition",
+  "code": "SLU",
+  "num": "4",
+  "year": "2020",
+  "artist": "John Avon",
+  "uri": "https://scryfall.com/card/slu/4/arid-mesa",
+  "flavor": ""
+ },
+ "avon_clifftop": {
+  "name": "Clifftop Retreat",
+  "set": "Innistrad",
+  "code": "ISD",
+  "num": "238",
+  "year": "2011",
+  "artist": "John Avon",
+  "uri": "https://scryfall.com/card/isd/238/clifftop-retreat",
+  "flavor": "Where cathars learn to fight not only demons and vampires, but ignorance as well."
  }
 }

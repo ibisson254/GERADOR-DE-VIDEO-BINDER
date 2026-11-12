@@ -1,0 +1,115 @@
+"""Gera FICHA.md de cada carrossel: python3 -I pacotes.py <creditos.json> <saida>"""
+import json, sys, os
+CR = json.load(open(sys.argv[1])); OUT = sys.argv[2]
+def cred(keys): return ", ".join(f"{CR[k]['name']} ({CR[k]['set']}, {CR[k]['year']}, nº {CR[k]['num']})" for k in keys) + f". Arte: {CR[keys[0]]['artist']}"
+def sc(k): return f"{CR[k]['uri']}"
+D = "12/11/2026"
+P = [
+dict(id="LL-ART13", slug="avon", nome="John Avon", cartas=["avon_forest","avon_urborg","avon_island"],
+ gancho="Sabe quem pintou o terreno básico mais bonito da sua coleção? Talvez tenha sido John Avon.",
+ fato="Galês, em Magic desde Mirage (1996), com mais de 300 artes, boa parte delas paisagens. A história da Ilha de US$ 20 mil está no comentário fixado.",
+ cta="→ Baixe o BINDER Vision no Android: link na bio.", tag="#MTGArt #JohnAvon",
+ pergunta="Qual terreno do John Avon está no seu deck? Responda só com o nome da carta.",
+ extra="A Ilha de US$ 20 mil:\n1. Em 2017, Avon pintou os terrenos básicos de arte total de Unstable.\n2. Foram as primeiras pinturas tradicionais dele em 15 anos: o trabalho recente era todo digital.\n3. Em agosto de 2018, a pintura original da Ilha foi vendida por US$ 20.000 no MTG Art Market.\n4. Em 2019, a pintura original de Lotus Field foi vendida por US$ 40.000.",
+ alt="Carrossel em cartazes rasgados colados num muro rosa. Capa: \"Quem transforma terrenos em paisagens? John Avon. Mais de 300 artes para Magic, famoso por suas paisagens. Desde 1996\", sobre um detalhe ampliado da arte da Island de Unstable. Depois: Forest de Unhinged com \"Paisagens que contam histórias\"; \"Só de terrenos básicos, 100+, até 2018\" com Urborg, Tomb of Yawgmoth; \"Uma Ilha por US$ 20 mil\"; e \"Qual terreno do Avon está no seu deck?\" com o cartaz do BINDER Vision.",
+ fatos=[("Nasceu no País de Gales em 1961","https://mtg.wiki/page/John_Avon ; https://en.wikipedia.org/wiki/John_Avon"),
+  ("Primeira carta em Mirage (1996): Grasslands, 08/10/1996","Scryfall, busca a:\"John Avon\" ordenada por data"),
+  ("Mais de 300 artes (342 artes únicas em papel)","Scryfall, a:\"John Avon\" game:paper unique:art"),
+  ("Conhecido pelos terrenos básicos; arte total em Unhinged (2004) e Unstable (2017)","https://mtg.wiki/page/John_Avon ; https://blog.cardkingdom.com/a-guide-to-full-art-lands/"),
+  ("Em 2018 tinha 103 terrenos básicos (20+19+16+28+20)","https://hipstersofthecoast.com/2018/08/john-avons-unstable-full-art-island-painting-sells-for-20000"),
+  ("Ilha de Unstable vendida por US$ 20.000 em 2018; primeira pintura tradicional em 15 anos","idem"),
+  ("Lotus Field original vendido por US$ 40.000 em 2019","https://hipstersofthecoast.com/tag/john-avon")]),
+dict(id="LL-ART14", slug="poole", nome="Mark Poole", cartas=["poole_counter","poole_birds","poole_gem"],
+ gancho="O Counterspell da primeira coleção de Magic foi pintado antes de Magic chegar às lojas.",
+ fato="Mark Poole começou em 1992, foi um dos 25 artistas da Alpha e em 2025 ainda pintava cartas novas. Mais no comentário fixado.",
+ cta="→ Baixe o BINDER Vision no Android e comece o seu Binder. Link na bio.", tag="#MTGArt #OldSchoolMTG",
+ pergunta="Qual carta da Alpha você mais queria ter? Responda só com o nome dela.",
+ extra="Algumas cartas de Mark Poole na Alpha (1993):\n• Counterspell\n• Birds of Paradise\n• Wild Growth\n• Ancestral Recall\n\nEle começou a trabalhar para Magic em 1992, um ano antes do lançamento, em agosto de 1993. Em 2025, pintou a Gemstone Caverns de Edge of Eternities: Stellar Sights.",
+ alt="Carrossel em cartazes rasgados colados num muro rosa. Capa: \"Pintou Magic antes de Magic existir. Mark Poole. Alpha 1993\", sobre um detalhe da arte de Birds of Paradise. Depois: Counterspell da Alpha com \"Da Alpha até hoje\"; \"Era um dos 25 artistas da Alpha\"; \"32 anos depois\" com Gemstone Caverns (2025); e \"Qual carta da Alpha você mais queria ter?\" com o cartaz do BINDER Vision.",
+ fatos=[("Começou a trabalhar para Magic em 1992, um ano antes do lançamento","https://magicuntapped.com/index.php/features/magic-artist-mark-poole-talks-about-making-early-mtg-art-and-picks-out-his-favorite-art-pieces"),
+  ("Um dos 25 artistas originais da Alpha","https://mtg.wiki/page/Mark_Poole"),
+  ("Alpha lançada em agosto de 1993 (05/08/1993 no Scryfall)","Scryfall, set LEA"),
+  ("Counterspell, Birds of Paradise, Wild Growth e Ancestral Recall da Alpha creditados a Mark Poole","https://scryfall.com/card/lea/54 ; /lea/186 ; /lea/229 ; Ancestral Recall (LEA)"),
+  ("Gemstone Caverns (Edge of Eternities: Stellar Sights, 2025), arte Mark Poole", sc("poole_gem"))]),
+dict(id="LL-ART15", slug="walker", nome="Kev Walker", cartas=["walker_rancor","walker_gift"],
+ gancho="Nenhum artista pintou tantas cartas de Magic quanto Kev Walker.",
+ fato="Britânico, de Leeds, em Magic desde Mirage (1996), com mais de 500 artes. Como reconhecer o traço dele está no comentário fixado.",
+ cta="→ Baixe o BINDER Vision no Android e escaneie a sua primeira carta hoje. Link na bio.", tag="#MTGArt #KevWalker",
+ pergunta="Qual carta do Kev Walker você tem? Responda só com o nome dela.",
+ extra="Como reconhecer o traço dele:\n1. Linha de tinta preta forte e muito contraste, herança dos quadrinhos (2000 AD e Warhammer).\n2. Procure no rodapé: \"Kev Walker\".\n3. Cartas para começar: Rancor (1999), Damnation (2007), Grave Pact, Generous Gift (2019) e Field of the Dead (2019).\n\nA MTG Wiki chama-o de artista mais prolífico do jogo.",
+ alt="Carrossel em cartazes rasgados colados num muro rosa. Capa: \"O artista com mais artes em Magic. Kev Walker. Desde 1996\", sobre um detalhe da arte de Generous Gift. Depois: Rancor com \"Traço de quadrinho\"; \"Mais de 500 artes em Magic\"; \"20 anos, o mesmo traço\" com Rancor (1999) e Generous Gift (2019); e \"Qual carta do Kev Walker você tem?\" com o cartaz do BINDER Vision.",
+ fatos=[("Britânico, de Leeds; quadrinhos 2000 AD e Warhammer","https://en.wikipedia.org/wiki/Kev_Walker ; https://mtg.wiki/page/Kev_Walker"),
+  ("Em Magic desde Mirage (1996)","https://mtg.wiki/page/Kev_Walker ; Scryfall (Forsaken Wastes, Mirage)"),
+  ("Artista mais prolífico do jogo","https://mtg.wiki/page/Kev_Walker ; https://en.wikipedia.org/wiki/List_of_Magic:_The_Gathering_artists"),
+  ("Mais de 500 artes (507 artes únicas em papel, inclui fichas)","Scryfall, a:\"Kev Walker\" game:paper unique:art ; Draftsim (504, incluindo tokens)"),
+  ("Rancor (Urza's Legacy, 1999) e Generous Gift (Modern Horizons, 2019)", sc("walker_rancor")+" ; "+sc("walker_gift"))]),
+dict(id="LL-ART16", slug="magali", nome="Magali Villeneuve", cartas=["magali_chandra","magali_narset"],
+ gancho="A artista da Chandra, Torch of Defiance também ilustra os livros de Game of Thrones.",
+ fato="Magali Villeneuve é francesa, autodidata e tem mais de 250 artes em Magic. O caminho dela até as cartas está no comentário fixado.",
+ cta="→ Baixe o BINDER Vision (beta para Android). Link na bio.", tag="#MTGArt #MagaliVilleneuve",
+ pergunta="Qual planeswalker da Magali Villeneuve é o seu favorito? Responda só com o nome.",
+ extra="O caminho até Magic:\n1. Nasceu em Bordeaux, França, em 1980, e aprendeu sozinha.\n2. Começou pintando capas de livros na França e ilustrando jogos de cartas da Fantasy Flight Games.\n3. Em 2012 começou a trabalhar para Magic; as primeiras cartas saíram em 2013.\n4. Pintou planeswalkers como Chandra, Narset, Liliana e Serra.\n5. É ilustradora oficial de A Song of Ice and Fire e também escreve fantasia.",
+ alt="Carrossel em cartazes rasgados colados num muro rosa. Capa: \"Ela pinta Game of Thrones e Magic. Magali Villeneuve. Da França\", sobre um detalhe da arte de Chandra, Torch of Defiance. Depois: Narset, Parter of Veils com \"Planeswalkers em movimento\"; \"Começou para Magic em 2012, primeiras cartas em 2013\"; \"Ilustradora de Game of Thrones\"; e \"Qual planeswalker da Magali é o seu favorito?\" com o cartaz do BINDER Vision.",
+ fatos=[("Nasceu em Bordeaux, 1980; autodidata","https://mtg.wiki/page/Magali_Villeneuve ; https://en.wikipedia.org/wiki/Magali_Villeneuve"),
+  ("Começou a contribuir para Magic em 2012, depois da Fantasy Flight Games","https://en.wikipedia.org/wiki/Magali_Villeneuve"),
+  ("Primeiras cartas em 2013 (Scryfall: Theros, 27/09/2013; MTG Wiki: Commander 2013)","Scryfall ; https://mtg.wiki/page/Magali_Villeneuve"),
+  ("Mais de 250 artes (255 artes únicas em papel)","Scryfall, a:\"Magali Villeneuve\" game:paper unique:art"),
+  ("Conhecida por Chandra, Narset, Liliana e Serra","https://us.millenium.gg/news/20444.html"),
+  ("Ilustradora oficial de A Song of Ice and Fire; também autora de fantasia","https://en.wikipedia.org/wiki/Magali_Villeneuve (cita WinterIsComing.net, 2016)"),
+  ("Começou pintando capas de livros na França","https://penguinrandomhouse.com/authors/225589/magali-villeneuve")]),
+dict(id="LL-ART17", slug="swanland", nome="Raymond Swanland", cartas=["swan_ugin","swan_vengevine"],
+ gancho="O Ugin de Fate Reforged foi pintado por um veterano dos videogames.",
+ fato="Raymond Swanland passou oito anos na série Oddworld antes de chegar a Magic, em 2007. Hoje tem mais de 200 artes no jogo. Mais no comentário fixado.",
+ cta="→ Seja um dos primeiros colecionadores no BINDER Vision: baixe a beta para Android pelo link na bio.", tag="#MTGArt #Ugin",
+ pergunta="Qual dragão de Magic você colecionaria? Responda só com o nome da carta.",
+ extra="Raymond Swanland em Magic:\n• Primeira carta: Pact of the Titan, Future Sight (2007).\n• Ugin, the Spirit Dragon (Fate Reforged, 2015).\n• Vengevine (Rise of the Eldrazi, 2010), Mana Drain, Vampiric Tutor e Watery Grave são outras cartas com arte dele.\n\nAntes disso: oito anos na série Oddworld, em quatro jogos. O site dele também cita trabalhos no universo Marvel do cinema.",
+ alt="Carrossel em cartazes rasgados colados num muro rosa. Capa: \"Do videogame para o Ugin. Raymond Swanland. Desde 2007\", sobre um detalhe da arte de Ugin, the Spirit Dragon. Depois: Vengevine com \"Dragões e criaturas\"; \"Antes de Magic, passou 8 anos na série Oddworld\"; \"Do Vengevine ao Mana Drain\"; e \"Qual dragão de Magic você colecionaria?\" com o cartaz do BINDER Vision.",
+ fatos=[("Oito anos na série Oddworld, em quatro jogos","https://kotaku.com/the-only-place-tonight-youll-find-oddworld-wow-and-mag-5934491"),
+  ("Projetos em Oddworld, Magic e no universo Marvel do cinema","https://raymondswanland.com/about"),
+  ("Primeira carta: Pact of the Titan, Future Sight (2007)","Scryfall, busca por data"),
+  ("Mais de 200 artes (217 artes únicas em papel)","Scryfall, a:\"Raymond Swanland\" game:paper unique:art"),
+  ("Ugin, the Spirit Dragon (FRF, 2015) e Vengevine (ROE, 2010)", sc("swan_ugin")+" ; "+sc("swan_vengevine"))]),
+dict(id="LL-ART18", slug="seb", nome="Seb McKinnon", cartas=["seb_trophy","seb_vandal"],
+ gancho="O artista do Assassin's Trophy também faz filmes, e financiou um com arte de Magic.",
+ fato="Seb McKinnon é canadense, de Montreal, e pinta Magic desde 2012. Como os tapetes de jogo viraram filme está no comentário fixado.",
+ cta="→ Baixe o BINDER Vision no Android: link na bio.", tag="#MTGArt #SebMcKinnon",
+ pergunta="Qual carta do Seb McKinnon você tem no fichário? Responda só com o nome.",
+ extra="Dos tapetes de jogo para o cinema:\n1. Com o irmão Ben, fundou a produtora Five Knights Productions.\n2. O curta Kin (2013) ganhou melhor fotografia no festival Fantasia, em Montreal.\n3. Para o longa Kin Fables: The Stolen Child, fez campanhas no Kickstarter com tapetes de jogo com as artes dele de Magic.\n4. Também compõe música, como CLANN.",
+ alt="Carrossel em cartazes rasgados colados num muro rosa. Capa: \"O artista de Magic que também faz cinema. Seb McKinnon. Do Canadá\", sobre um detalhe da arte de Assassin's Trophy. Depois: Vandalblast com \"Pinta e filma\"; \"O curta Kin, de 2013, melhor fotografia no Fantasia\"; \"Tapetes viraram filme\"; e \"Qual carta do Seb você tem no fichário?\" com o cartaz do BINDER Vision.",
+ fatos=[("Canadense, de Montreal; primeira encomenda em 2012, para Magic 2013","https://en.wikipedia.org/wiki/Seb_McKinnon"),
+  ("Mais de 100 artes (Wikipedia: mais de 100 cartas; Scryfall: 153 artes únicas em papel)","https://en.wikipedia.org/wiki/Seb_McKinnon ; Scryfall"),
+  ("Five Knights Productions com o irmão Ben; Kin (2013) melhor fotografia no Fantasia","https://en.wikipedia.org/wiki/Seb_McKinnon"),
+  ("Kickstarter com tapetes de jogo para financiar Kin Fables: The Stolen Child","https://en.wikipedia.org/wiki/Seb_McKinnon ; https://dotesports.com/mtg/news/mtg-artist-seb-mckinnon-launches-second-limited-edition-playmats-kickstarter-campaign"),
+  ("Música como CLANN","https://en.wikipedia.org/wiki/Seb_McKinnon"),
+  ("Assassin's Trophy (GRN, 2018) e Vandalblast (RTR, 2012)", sc("seb_trophy")+" ; "+sc("seb_vandal"))]),
+]
+for p in P:
+    leg = f"{p['gancho']}\n\n{p['fato']}\n\nNa imagem: {cred(p['cartas'])}. © Wizards of the Coast. Conteúdo de fã não oficial.\n\n{p['cta']}\n\n#MagicTheGathering #MTG #MTGBrasil {p['tag']}"
+    corpo = leg.split('\n\nNa imagem')[0]
+    com = f"{p['pergunta']}\n\n{p['extra']}"
+    assert len(p['gancho']) <= 100, p['id']; assert len(com) <= 1000, (p['id'], len(com))
+    d = os.path.join(OUT, f"{p['id'].lower()}_{p['slug']}"); os.makedirs(d, exist_ok=True)
+    open(os.path.join(d,'legenda.txt'),'w').write(leg+"\n")
+    open(os.path.join(d,'comentario_fixado.txt'),'w').write(com+"\n")
+    open(os.path.join(d,'texto_alternativo.txt'),'w').write(p['alt']+"\n")
+    fic = [f"# Ficha · {p['id']} · Artistas de Magic · {p['nome']}", "",
+      "## Classificação", "- Frente: Lambe-lambe (espontânea) · série de posts \"Artistas de Magic\" · palavra `lambe`",
+      "- Formato: carrossel 4:5, 5 imagens 1080×1350 (padrão oficial do carrossel Lambe-lambe, 12/11/2026)",
+      "- Pilar: C (cultura TCG) com ponte para o scanner", f"- Estado: produzido a {D}, aguarda aprovação do fundador", "",
+      "## Editorial", f"- Mensagem única: {p['gancho']}", "- Objetivo: salvamentos e partilhas; ponte para o scanner no slide 5.",
+      "- Hipótese: carrosséis de artista com capa ilustrada geram mais salvamentos por 1.000 contas alcançadas do que os posts únicos da fase 1.",
+      "- Métrica principal: salvamentos ÷ alcance; secundária: visitas ao perfil.", "",
+      "## Slides", "1. Capa: selo azul, gancho, detalhe ampliado da arte real (a carta inteira aparece no carrossel), faixa preta com o nome, linha creme e chip amarelo.",
+      "2. Editorial: nome grande, frase manuscrita, carta real inteira colada, papel com o número, faixa preta.", "3. Número grande + carta real.", "4. A história + carta real.",
+      "5. Pergunta para os comentários + cartaz preto BINDER (\"Achou o nome no rodapé? Aponte a câmera…\", beta para Android, link na bio).", "",
+      "## Fontes e evidências", "| Afirmação | Fonte | Conferida em |", "|---|---|---|"]
+    fic += [f"| {a} | {f} | {D} |" for a,f in p['fatos']]
+    fic += [f"| Créditos das cartas (nome, coleção, nº, artista) | Scryfall, rodapé da carta: {', '.join(sc(k) for k in p['cartas'])} | {D} |", "",
+      "## Produção", "- Gerador: `lambe-lambe/carrosseis_artistas/gerador/` (`render.py`, HTML/CSS no Chrome sem interface). PNG das cartas do Scryfall e fontes woff2 não versionados (ver LEIA-ME).",
+      "- Cartas inteiras, sem filtro; fita só nos cantos de cima; rodapé com artista e © livre. Marca em preto e esmeralda.",
+      "- Imagens: detalhe ampliado da arte real da carta (art_crop do Scryfall), sempre com a carta inteira no mesmo slide ou no carrossel; sem fotos nem rostos gerados do artista.",
+      "- Sem foto do artista (decisão: não publicar retratos de pessoas reais nem imagens geradas que imitem o rosto delas).",
+      "- Easter egg: 0.", "", "## Pacote", "Legenda: `legenda.txt` · Comentário fixado: `comentario_fixado.txt` · Texto alternativo: `texto_alternativo.txt`.", "",
+      "## Pendências", "- Aprovação do fundador; confirmar a política de fan content antes de impulsionar com anúncio pago.", ""]
+    open(os.path.join(d,'FICHA.md'),'w').write("\n".join(fic))
+    print(p['id'], len(corpo), "car. (corpo)", len(com), "car. comentário")

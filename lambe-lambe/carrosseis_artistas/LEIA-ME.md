@@ -1,4 +1,7 @@
-# Carrosséis "Artistas de Magic" · padrão oficial do Lambe-lambe (v2, 12/11/2026)
+# Carrosséis "Artistas de Magic" · padrão oficial do Lambe-lambe (v3, 12/11/2026)
+
+**v3 (12/11, 12:18, «Refine mais tem que fica identidade igual a do ficheiro que enviei»)**: a arte ocupa o cartaz principal de ponta a ponta (como nas referências), com os papéis de texto colados por cima; relevo de tinta/papel amassado e grão sobre todo o slide; letras gastas (máscara `desgaste.png`); fitas de papel nos cantos; tipos: Archivo Black (títulos e nome), Barlow Condensed 800 (linha creme), Rubik 800/900 itálico (faixa preta, palavras em amarelo), Caveat Brush (frase manuscrita e «?» rosa). John Avon passa a usar Arid Mesa (capa, pôr do sol) e Clifftop Retreat (castelo, slide 2). Texturas v3: `parede.jpg`, `relevo.png`, `desgaste.png`, `grao.png`, `papel.jpg` (não versionadas; gerar com a lógica de `texturas_v2.py`, valores na ficha da sessão). A v2 fica em `v2_reprovada/`.
+
 
 Seis carrosséis 4:5 (5 imagens 1080×1350 cada), LL-ART13 a LL-ART18: John Avon, Mark Poole, Kev Walker, Magali Villeneuve, Raymond Swanland e Seb McKinnon. Cada pasta tem `FICHA.md` (fontes), `legenda.txt`, `comentario_fixado.txt` e `texto_alternativo.txt`.
 

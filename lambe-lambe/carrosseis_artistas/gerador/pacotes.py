@@ -5,13 +5,13 @@ def cred(keys): return ", ".join(f"{CR[k]['name']} ({CR[k]['set']}, {CR[k]['year
 def sc(k): return f"{CR[k]['uri']}"
 D = "12/11/2026"
 P = [
-dict(id="LL-ART13", slug="avon", nome="John Avon", cartas=["avon_forest","avon_urborg","avon_island"],
+dict(id="LL-ART13", slug="avon", nome="John Avon", cartas=["avon_mesa","avon_clifftop","avon_island"],
  gancho="Sabe quem pintou o terreno básico mais bonito da sua coleção? Talvez tenha sido John Avon.",
  fato="Galês, em Magic desde Mirage (1996), com mais de 300 artes, boa parte delas paisagens. A história da Ilha de US$ 20 mil está no comentário fixado.",
  cta="→ Baixe o BINDER Vision no Android: link na bio.", tag="#MTGArt #JohnAvon",
  pergunta="Qual terreno do John Avon está no seu deck? Responda só com o nome da carta.",
  extra="A Ilha de US$ 20 mil:\n1. Em 2017, Avon pintou os terrenos básicos de arte total de Unstable.\n2. Foram as primeiras pinturas tradicionais dele em 15 anos: o trabalho recente era todo digital.\n3. Em agosto de 2018, a pintura original da Ilha foi vendida por US$ 20.000 no MTG Art Market.\n4. Em 2019, a pintura original de Lotus Field foi vendida por US$ 40.000.",
- alt="Carrossel em cartazes rasgados colados num muro rosa. Capa: \"Quem transforma terrenos em paisagens? John Avon. Mais de 300 artes para Magic, famoso por suas paisagens. Desde 1996\", sobre um detalhe ampliado da arte da Island de Unstable. Depois: Forest de Unhinged com \"Paisagens que contam histórias\"; \"Só de terrenos básicos, 100+, até 2018\" com Urborg, Tomb of Yawgmoth; \"Uma Ilha por US$ 20 mil\"; e \"Qual terreno do Avon está no seu deck?\" com o cartaz do BINDER Vision.",
+ alt="Carrossel em cartazes rasgados colados num muro rosa. Capa: \"Quem transforma terrenos em paisagens? John Avon. Mais de 300 artes para Magic, famoso por suas paisagens. Desde 1996\", sobre um detalhe ampliado da arte de Arid Mesa (pôr do sol entre rochedos). Depois: Clifftop Retreat com \"Paisagens que contam histórias\"; \"Só de terrenos básicos, 100+, até 2018\" com Arid Mesa; \"Uma Ilha por US$ 20 mil\" com a Island de Unstable; e \"Qual terreno do Avon está no seu deck?\" com o cartaz do BINDER Vision.",
  fatos=[("Nasceu no País de Gales em 1961","https://mtg.wiki/page/John_Avon ; https://en.wikipedia.org/wiki/John_Avon"),
   ("Primeira carta em Mirage (1996): Grasslands, 08/10/1996","Scryfall, busca a:\"John Avon\" ordenada por data"),
   ("Mais de 300 artes (342 artes únicas em papel)","Scryfall, a:\"John Avon\" game:paper unique:art"),
