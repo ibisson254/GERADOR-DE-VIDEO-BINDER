@@ -116,7 +116,11 @@ Decisão do fundador a 12/11: o movimento tem de ser fluido. Fluidez aqui não s
 
 Limite honesto: um gesto verdadeiramente desenhado (o braço a varrer o ar) exige desenhos intermédios e isto não os dá. Se um episódio precisar mesmo disso, acrescentam-se dois ou três intermédios **a um só gesto**, e esse gesto passa a ser a assinatura da série. Antes disso, aplicar os nove pontos acima — resolvem quase tudo e custam zero.
 
-## 8. Fórmula do episódio (30–45 s)
+## 8. Fórmula do episódio
+
+Boletim semanal de sábado, 45–60 s, com as três rubricas (subiu, caiu, procurada) — estrutura e fontes em `DADOS.md` §4. A fórmula curta abaixo (30–45 s, uma carta só) fica para episódios avulsos fora do boletim.
+
+### Episódio avulso (30–45 s)
 
 1. **0–3 s:** o número, no painel e na voz, escrito desde o primeiro quadro.
 2. **3–10 s:** que carta é, com o PNG do Scryfall e o crédito no rodapé.
@@ -133,5 +137,5 @@ Limite honesto: um gesto verdadeiramente desenhado (o braço a varrer o ar) exig
 
 1. ~~Voz do Vinci~~ — **fechada a 12/11**: voz desenhada no ElevenLabs, `voice_id` `nDJxgaKfMo1DDJJqNg0f`, nome na biblioteca "Vinci — Multiverse Capital". Timbre grave e rouco de fumador, enérgico, de vendedor. Desenhada pela descrição do timbre; não clona nem imita a voz de nenhuma pessoa real.
 2. ~~Nome público~~ — **fechado a 12/11**: Multiverse Capital.
-3. Cadência e dia de publicação: **por decidir**.
+3. ~~Cadência~~ — **fechada a 12/11**: boletim **todos os sábados**. Hora por confirmar. Rubricas e fontes dos números em `DADOS.md`; fronteira com o Giro de domingo no §5 desse documento.
 4. Easter egg do fio do telefone: entra ou não.

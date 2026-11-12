@@ -2,6 +2,14 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 12/11/2026 · Multiverse Capital ao sábado, com rubricas de dados
+
+**O quê:** a série passa a boletim semanal **ao sábado**, com três rubricas: a que mais valorizou, a que mais desvalorizou e a mais procurada. Fontes, limites e faseamento em `vince/DADOS.md`.
+**Porquê:** pedido do fundador a 12/11. Verificado contra os termos do Scryfall e contra o Data Intelligence Master v1.2.
+**Regras que isto fixa:** preço vem da praça citada (Cardmarket, TCGplayer ou praça brasileira), sempre a mesma praça nas duas pontas da variação, com fonte, data, hora e "estimativa, não oferta de compra"; piso de valor absoluto para não publicar percentagens enormes de cartas de cêntimos; a rubrica "mais procurada" usa um proxy externo e **diz o nome do proxy**, porque interesse de construção não é procura de compra.
+**Dados próprios do BINDER:** a rubrica "a carta mais procurada no BINDER" fica à espera da F0, da declaração de dados na Play, da opção de recusa e de amostra suficiente (proposta: ≥ 300 utilizadores ativos/mês e ≥ 100 eventos/semana). A 02/10 a base tinha 5 donos de coleção e 11 desejos — publicar um ranking daí seria ruído com ar de número.
+**Fronteira:** notícia de mercado continua no Giro de domingo; variação com causa e números é do Vince. O Giro não repete o que o Vince deu no dia anterior.
+
 ## 12/11/2026 · Reconciliação: uma só frente para o Vince Vault
 
 **O quê:** a pasta `vinci/`, criada a 12/11, passa a ser `vince/` e absorve a proposta do PR #11 (branch `vince-vault`, 07–08/11). Existiam duas frentes para o mesmo personagem.

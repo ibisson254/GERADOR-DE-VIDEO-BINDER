@@ -118,7 +118,7 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Documentação | Bíblia: `vince/CONTEXTO.md` · Perfil: `vince/PERFIL.md` · Som: `vince/audio/fonte.py` |
 | Regras específicas | Nunca prever preço nem recomendar compra ou venda; todo o número com fonte e data no ecrã; a Fonte nunca aparece, nunca fala palavras e nunca é legendada; sem fonte verificada, a Fonte não atende |
 | Território | Preço e o que o move. Humor sobre cartas → Mana & Burn; notícia da semana → Giro; resultado competitivo → Meta em Curto; arte → Conde |
-| Conteúdo produzido | Nenhum ainda (formato previsto: Reel 9:16, 30–45 s) |
+| Conteúdo produzido | Nenhum ainda (boletim semanal ao sábado, Reel 9:16, 45–60 s) |
 | Relação com o BINDER Vision | Direta: o fecho do scanner é continuação do conteúdo, não interrupção |
 
 ## Frente nova

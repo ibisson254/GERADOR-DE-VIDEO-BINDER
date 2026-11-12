@@ -10,7 +10,8 @@ Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Aqui só o que é pr�
 - **Fontes preferenciais:** Cardmarket e praças brasileiras para **preço** (com fonte, data e a nota "estimativa, não oferta de compra"); Scryfall **só** para texto, dados e imagem da carta — **os dados de preço do Scryfall não se republicam** (termos de uso, constituição §4); anúncios oficiais da Wizards e listas de torneio para a causa.
 - **Afirmações que exigem prova:** qualquer preço, percentagem ou variação; a causa atribuída à variação; a escassez ou a reimpressão de uma carta; a existência de procura. Sem prova, não entra — e, na ficção, a Fonte não atende.
 - **Gancho e fecho:** gancho = um número e uma data nos primeiros 3 s, falado e escrito. Fecho = scanner do BINDER Vision, que aqui é continuação do conteúdo e não interrupção.
-- **Duração e formato:** Reel 9:16, 1080×1920, 30 fps, 30–45 s, −14 LUFS.
+- **Duração e formato:** Reel 9:16, 1080×1920, 30 fps, −14 LUFS. Boletim de sábado: 45–60 s. Episódio avulso: 30–45 s.
+- **Cadência:** todos os sábados (decisão do fundador, 12/11/2026). Fronteira com o Giro de domingo em `DADOS.md` §5.
 - **Ponte para o BINDER:** direta e natural: o episódio mostra que um preço mudou; o app diz quanto vale a pasta de quem está a ver.
 - **Métrica principal:** guardados por 1.000 views. Secundária: retenção aos 3 s. Comentários não são a métrica desta série.
 - **Critérios de aceitação próprios:**
@@ -19,4 +20,4 @@ Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Aqui só o que é pr�
   - Legenda com a linha fixa de que não é conselho de investimento.
   - No máximo um telefonema à Fonte por episódio; a Fonte nunca é vista, ouvida em palavras, legendada nem nomeada.
   - Moeda em reais e centavos.
-- **Lacunas conhecidas:** cadência de publicação por decidir. Voz, nome público e kit visual v1 fechados a 12/11/2026 (ver `vince/CONTEXTO.md` §7 e §10).
+- **Lacunas conhecidas:** hora de publicação de sábado; rubrica de dados próprios do BINDER à espera da F0 (`DADOS.md` §3). Voz, nome público e kit visual v1 fechados a 12/11/2026 (ver `vince/CONTEXTO.md` §7 e §10).

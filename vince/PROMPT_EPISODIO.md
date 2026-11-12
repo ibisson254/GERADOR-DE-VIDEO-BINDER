@@ -13,7 +13,7 @@ Colar como primeira mensagem de um chat novo do executor. Serve para qualquer ep
 Repositório: `ibisson254/GERADOR-DE-VIDEO-BINDER`, branch `vince/kit-v1` (PR #17, ainda sem merge).
 `git clone --depth 1 -b vince/kit-v1 https://github.com/ibisson254/GERADOR-DE-VIDEO-BINDER`
 
-1. `AGENTS.md` 2. `STATUS.md` 3. `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md` 4. `vince/PERFIL.md` 5. `vince/CONTEXTO.md` (bíblia — manda em tudo o que é identidade) 5b. `vince/EDICAO.md` (sistema de edição "Pregão" — manda no ritmo, na tipografia e no som) 6. `vince/kit/v1/ancoras.json` 7. `manaburn/LEIA-ME.md` (motor de vídeo HTML + Playwright + ffmpeg: **reaproveitar, não reconstruir**).
+1. `AGENTS.md` 2. `STATUS.md` 3. `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md` 4. `vince/PERFIL.md` 5. `vince/CONTEXTO.md` (bíblia — manda em tudo o que é identidade) 5b. `vince/EDICAO.md` (edição) 5c. `vince/DADOS.md` (rubricas, fontes dos números e a fronteira com o Giro) (sistema de edição "Pregão" — manda no ritmo, na tipografia e no som) 6. `vince/kit/v1/ancoras.json` 7. `manaburn/LEIA-ME.md` (motor de vídeo HTML + Playwright + ffmpeg: **reaproveitar, não reconstruir**).
 Se este prompt e o repositório divergirem num detalhe de implementação, vale o repositório; regista a divergência no relatório.
 
 **2. O que já está feito e não se refaz**
@@ -23,11 +23,13 @@ Se este prompt e o repositório divergirem num detalhe de implementação, vale 
 - Voz da Fonte e sons do telefone: `vince/audio/saida/*.wav`, gerados por `vince/audio/fonte.py`. **Nunca gerar voz para a Fonte em TTS.** Frase nova, se precisares: acrescenta ao dicionário `FRASES` e corre o script — custo zero.
 - Símbolo do BINDER: composto em código no centro do disco do telefone, a partir do ficheiro oficial do repositório. Nunca desenhado nem gerado.
 
-**3. Pesquisa e escolha da pauta (fazes tu, agora)**
+**3. Pesquisa e rubricas (fazes tu, agora)**
+
+Se for o boletim de sábado, segue `vince/DADOS.md` §4: três rubricas (subiu, caiu, procurada), uma carta cada. A rubrica "procurada" usa hoje um proxy externo e **diz o nome do proxy em voz alta** — a rubrica de dados próprios do BINDER só entra quando as quatro condições de `DADOS.md` §3 estiverem cumpridas; até lá não se inventa.
 
 Investiga o mercado de cartas de Magic dos últimos 7 dias e levanta **pelo menos três** candidatas a pauta: uma carta cujo preço se mexeu de forma clara e explicável. Fontes de **preço**: Cardmarket, praças brasileiras ou TCGplayer. **Nunca republiques dados de preço do Scryfall** (termos de uso, constituição §4) — o Scryfall serve para texto, dados e imagem da carta. Causa: anúncios oficiais da Wizards, listas de torneio, EDHREC quando for Commander.
 
-Escolhe a pauta pela relação entre **força do número** (o salto é grande e dá para dizer em 3 segundos), **clareza da causa** (uma causa só, verificável) e **quantas pessoas têm a carta**. Regista em duas linhas porque escolheste essa e porque rejeitaste as outras.
+Para um episódio avulso, escolhe a pauta pela relação entre **força do número** (o salto é grande e dá para dizer em 3 segundos), **clareza da causa** (uma causa só, verificável) e **quantas pessoas têm a carta**. Regista em duas linhas porque escolheste essa e porque rejeitaste as outras.
 
 Separa sempre: facto confirmado / tendência com evidência / interpretação. Não inventes preço, percentagem, data nem causa. Se não conseguires confirmar a causa em fonte citável, troca de pauta — não especules.
 
