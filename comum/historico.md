@@ -52,6 +52,8 @@ Print do próprio post (não do Insights), enviado pelo Ibisson. Entra no quadro
 
 Fonte canónica única: `oraculo/previsoes/registo.yaml` (decisão de 09/11/2026, `nucleo/DECISOES.md`: este histórico não repete a tabela, só remete). Método de pré-release: `oraculo/PROTOCOLO_PRE_RELEASE.md`. Briefing em qualquer dia: `python3 -I oraculo/previsoes/ciclo.py continuacao`. Erro numa previsão pública = "Erro de sistema" num episódio seguinte (`oraculo/CONTEXTO.md` §7.2, item 4).
 
+- 02/11/2026 · Lambe-lambe · Pré-release Invasion (Star Trek, promocional): render v2 de 20,00 s com fecho e 68 impressões de cartas; **em preparação, PRÉVIA — DIREITOS A CONFIRMAR, não publicado**. Pasta: `lambe-lambe/publicacoes/2026-11-pre-release-star-trek/`. Hipótese: pergunta de três opções (Kirk, Janeway ou Borg Cube). Easter egg: nenhum. Métricas: aguardam publicação.
+
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 
 - Especial de Halloween 2026 (Innistrad × Duskmourn): **publicado**. A música que acima aparece como "provisória" foi aprovada como está.

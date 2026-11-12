@@ -26,6 +26,10 @@ Auditoria integral do repositório, matriz de integração de todas as branches 
 
 Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); Órbita (temática); Lambe-lambe (espontânea); especiais. Tudo o que está no repositório está aprovado e lançado; Halloween 2026 e Star Trek publicados. Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
 
+## Em produção
+
+Lambe-lambe · chamada do pré-release de Star Trek (branch `producao/lambe-pre-release-star-trek`): vídeo v2 renderizado (68 impressões de cartas), **PRÉVIA — DIREITOS A CONFIRMAR**, não publicado, 5 P1 por decidir. Ver `lambe-lambe/publicacoes/2026-11-pre-release-star-trek/relatorio_qc.md` e `HANDOFF.md`.
+
 ## Consolidação
 
 | Bloco | Estado | Onde |
