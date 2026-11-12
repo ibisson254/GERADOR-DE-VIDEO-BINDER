@@ -1,0 +1,42 @@
+{
+  "video": "MultiverseCapital_Ep01_PregaoDeVespera_v2_916.mp4",
+  "frente": "vince",
+  "formato": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30.0,
+    "dur": 44.766667
+  },
+  "duracao_sem_fecho": 40.9,
+  "lufs": -14.3,
+  "pico_dbtp": -1.3,
+  "fecho": {
+    "exigido": true,
+    "presente": true,
+    "diferenca_media": 0.06,
+    "inicio_s": 40.9
+  },
+  "cortes_s": [
+    3.4,
+    7.3,
+    21.0,
+    25.5,
+    29.0,
+    36.5,
+    40.9
+  ],
+  "quadros_na_folha": 45,
+  "problemas": [],
+  "zona_segura_aprox_px": {
+    "topo": 220,
+    "base": 380,
+    "direita": 140
+  },
+  "conferir_a_olho": [
+    "legendas e textos fora da zona vermelha",
+    "carta inteira, também nos zooms",
+    "nada a tapar fontes ou rodapés",
+    "personagens inteiros e no modelo",
+    "sem corte lateral"
+  ]
+}

@@ -3,7 +3,7 @@
 `qc_video.py` mede o ficheiro final antes da entrega (checklist, bloco C). Não altera o vídeo.
 
 ```
-python3 -I comum/qc/qc_video.py VIDEO.mp4 --frente manaburn   # tubo | conde | orbita | lambe
+python3 -I comum/qc/qc_video.py VIDEO.mp4 --frente manaburn   # tubo | conde | orbita | lambe | vince
 python3 -I comum/qc/qc_video.py VIDEO.mp4 --sem-fecho          # especial com exceção registada
 ```
 
