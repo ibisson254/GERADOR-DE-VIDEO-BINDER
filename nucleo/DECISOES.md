@@ -2,6 +2,11 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 12/11/2026 (12:27) · Carrosséis de artistas v4: gerados por IA no estilo das referências (teste John Avon)
+
+**O quê:** «Não quero perto quero igual». O fundador autorizou gastar créditos ElevenLabs só para testar o carrossel do John Avon (5 slides). Gerados com gpt-image-2 usando a capa dele como referência de estilo; texto conferido; slide 5 com o cartaz BINDER real colado por código. Custo: 6.490 créditos. As pinturas são ilustrações de IA, não obras do artista: a legenda e uma etiqueta discreta nos slides dizem-no.
+**Impacto:** os outros 5 artistas só avançam com a aprovação do teste. Prompts e nós em `lambe-lambe/carrosseis_artistas/ia/PROMPTS_AVON.md`.
+
 ## 12/11/2026 (12:18) · Carrosséis de artistas v3: identidade igual às referências
 
 **O quê:** v2 reprovada («Refine mais tem que fica identidade igual a do ficheiro que enviei»). v3: arte de ponta a ponta no cartaz principal, relevo de tinta e papel amassado, letras gastas, fitas, Rubik itálico amarelo nas faixas. Mantêm-se: sem retrato, sem símbolo de Magic, arte real com a carta inteira no carrossel.
