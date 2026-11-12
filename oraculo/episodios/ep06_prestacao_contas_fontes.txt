@@ -1,0 +1,31 @@
+Meta em Curto EP06 · Prestação de contas · fontes (consultadas a 09/11/2026)
+
+REGISTO
+- oraculo/previsoes/registo.yaml (PR-TRK-01..04, transcritas da tabela do EP05).
+- EP05: branch meta-em-curto-ep05 / carrossel-ep05, oraculo/episodios/ep05_star_trek_ficha.md, legenda e dossiê.
+- Giro de 08/11: branch giro/2026-11-08, manaburn/giro/2026-11-08/ficha.md (promessa «volta segunda pra prestar contas»).
+
+DATAS
+- Wizards, calendário do Arena (Sealed TRK 10/11–08/12): https://magic.wizards.com/en/news/mtg-arena/star-trek-event-schedule (lido a 05/11, fontes do EP05).
+- WPN, pré-release 06–12/11, Sealed, REL casual: https://wpn.wizards.com/en/event/prerelease-star-trek
+- magic.gg, Worlds 32, 13–15/11, Star Trek Booster Draft + Standard: https://magic.gg/news/world-championship-32-fact-sheet-for-competitors
+
+OPINIÃO (tipo O, não muda estado)
+- MTG Rocks, 05/11/2026, Early Access no Arena a convite da Wizards: https://mtgrocks.com/mtg-star-trek-prerelease-tips/
+  Strange New Worlds acima do resto; Sealed parecido com Reality Fracture; recompensa ir para cinco cores.
+- Ultimate Guard, guia de pré-release (azul/verde = Strange New Worlds): https://ultimateguard.com/en/blog/magic-the-gathering-star-trek-prerelease-guide/
+
+CARTA
+- Scryfall API, The Traveler, TRK 254, incomum, {G}{U}, arte de Ioannis Fiore: oraculo/ep06/cartas/the_traveler.json e .png.
+
+NÃO ACESSÍVEL NESTA SESSÃO
+- 17Lands, MTGMeta e magic.gg pela shell (proxy). Lidos pelas ferramentas web quando possível.
+
+ATUALIZAÇÃO DE 10/11/2026 (briefing da continuação do EP05)
+- Wizards, anúncios do Arena de 02/11/2026 (TRK no Arena a 10/11; qualifier de Sealed TRK: Play-In Bo1 14/11, Play-In Bo3 20/11, fim de semana 21–22/11): https://magic.wizards.com/en/news/mtg-arena/announcements-november-2-2026
+- Draftsim, Peter Smith, «Key Takeaways From Star Trek Prerelease», 09/11/2026 (tipo R/O; uma loja, sem contagem): https://draftsim.com/mtg-star-trek-prerelease-review/
+- 17Lands ainda sem win rate por par de cores de TRK; datasets públicos ~2 semanas depois do lançamento (fonte terciária, README): https://github.com/Aviouslyy/trk-early-access-data-analysis
+- Formato da tabela Deck Color Data do 17Lands (splash separado; linhas agregadas por número de cores), visto no Sealed de Reality Fracture: https://www.17lands.com/deck_color_data?expansion=FRA&format=Sealed&time_period=ALL_TIME
+- Untapped.gg, tier list de Draft de TRK com dados do Early Access de 04/11, «volume muito baixo» (não usado: é Draft): https://mtga.untapped.gg/limited/draft/star-trek/tier-list
+- Worlds 32 (13–15/11, Draft de Star Trek + Standard; sexta e sábado 3 rondas de Draft + 4 de Standard): https://magic.gg/news/world-championship-32-fact-sheet-for-competitors
+- 17lands.com não abriu pelo WebFetch nesta sessão (fora da lista de acesso).

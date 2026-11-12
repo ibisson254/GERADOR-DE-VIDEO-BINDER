@@ -1,0 +1,347 @@
+{
+ "landfall": {
+  "fonte": "Frank Karsten, magic.gg, 05/11/2026 (Metagame Mentor): lista agregada por algoritmo das 1.810 listas (AC13 + Spotlight: Fracture Hartford e Pequim); a ligação do artigo aponta para https://melee.gg/Decklist/View/9e6521d6-7bb8-4ab1-941a-b4f3009ede25 como lista real próxima. Tipos conferidos no Scryfall (Esper Origins = feitiço // saga, FIN 185; Elven Passage = terreno).",
+  "deck": "Mono-Green Landfall",
+  "jogador": "lista agregada (sem jogador)",
+  "principal": {
+   "CRIATURAS (24)": [
+    [
+     4,
+     "Sazh's Chocobo"
+    ],
+    [
+     4,
+     "Llanowar Elves"
+    ],
+    [
+     4,
+     "Carnivorous Cultivator"
+    ],
+    [
+     4,
+     "Icetill Explorer"
+    ],
+    [
+     4,
+     "Mossborn Hydra"
+    ],
+    [
+     4,
+     "Mightform Harmonizer"
+    ]
+   ],
+   "OUTRAS (10)": [
+    [
+     4,
+     "Earthbender Ascension"
+    ],
+    [
+     3,
+     "Sapling Nursery"
+    ],
+    [
+     3,
+     "Esper Origins"
+    ]
+   ],
+   "TERRENOS (26)": [
+    [
+     13,
+     "Forest"
+    ],
+    [
+     4,
+     "Fabled Passage"
+    ],
+    [
+     4,
+     "Elven Passage"
+    ],
+    [
+     3,
+     "Ba Sing Se"
+    ],
+    [
+     1,
+     "Escape Tunnel"
+    ],
+    [
+     1,
+     "Demolition Field"
+    ]
+   ]
+  },
+  "reserva": [
+   [
+    3,
+    "Meltstrider's Resolve"
+   ],
+   [
+    2,
+    "Surrak, Elusive Hunter"
+   ],
+   [
+    2,
+    "Torpor Orb"
+   ],
+   [
+    2,
+    "Warg Tactics"
+   ],
+   [
+    2,
+    "Hard-Hitting Question"
+   ],
+   [
+    1,
+    "Sapling Nursery"
+   ],
+   [
+    1,
+    "Keen-Eyed Curator"
+   ],
+   [
+    1,
+    "Sandman, Shifting Scoundrel"
+   ],
+   [
+    1,
+    "Soul-Guide Lantern"
+   ]
+  ]
+ },
+ "jund_hartford": {
+  "fonte": "https://articles.starcitygames.com/magic-the-gathering/von-stange-jund-sacrifice-wins-magic-spotlight-fracture/ (acedido 29/10/2026)",
+  "jogador": "Alexander von Stange",
+  "deck": "Jund Sacrifice",
+  "posicao": "1.º",
+  "principal": {
+   "CRIATURAS (22)": [
+    [
+     4,
+     "Biotech Specialist"
+    ],
+    [
+     4,
+     "Gene Pollinator"
+    ],
+    [
+     4,
+     "Greedy Freebooter"
+    ],
+    [
+     1,
+     "Llanowar Elves"
+    ],
+    [
+     1,
+     "Smaug the Magnificent"
+    ],
+    [
+     4,
+     "The Sackville-Bagginses"
+    ],
+    [
+     4,
+     "Umbral Collar Zealot"
+    ]
+   ],
+   "ENCANTAMENTOS (7)": [
+    [
+     4,
+     "Obsessive Pursuit"
+    ],
+    [
+     3,
+     "The Misty Mountains Cold"
+    ]
+   ],
+   "FEITIÇOS (5)": [
+    [
+     4,
+     "Lively Dirge"
+    ],
+    [
+     1,
+     "Stir Up Trouble"
+    ]
+   ],
+   "MÁGICAS INSTANTÂNEAS (4)": [
+    [
+     1,
+     "Requiting Hex"
+    ],
+    [
+     3,
+     "Torch the Tower"
+    ]
+   ],
+   "TERRENOS (22)": [
+    [
+     1,
+     "Blazemire Verge"
+    ],
+    [
+     4,
+     "Blood Crypt"
+    ],
+    [
+     4,
+     "Blooming Marsh"
+    ],
+    [
+     1,
+     "Forest"
+    ],
+    [
+     1,
+     "Mountain"
+    ],
+    [
+     2,
+     "Overgrown Tomb"
+    ],
+    [
+     4,
+     "Starting Town"
+    ],
+    [
+     3,
+     "Stomping Ground"
+    ],
+    [
+     1,
+     "Swamp"
+    ],
+    [
+     1,
+     "Thornspire Verge"
+    ]
+   ]
+  }
+ },
+ "jund_pequim": {
+  "fonte": "https://www.mtggoldfish.com/deck/8025711 (dados do Melee), consulta 02/11/2026; quantidades lidas da vista visual e iguais às da Merlion citada na pesquisa do ChatGPT",
+  "jogador": "Que Mo (mo que no Melee)",
+  "deck": "Jund Sacrifice (MTGGoldfish: Jund)",
+  "posicao": "1.º",
+  "principal": {
+   "CRIATURAS (24)": [
+    [
+     4,
+     "Biotech Specialist"
+    ],
+    [
+     4,
+     "Gene Pollinator"
+    ],
+    [
+     4,
+     "Greedy Freebooter"
+    ],
+    [
+     2,
+     "Magda, the Hoardmaster"
+    ],
+    [
+     1,
+     "Smaug the Magnificent"
+    ],
+    [
+     4,
+     "The Sackville-Bagginses"
+    ],
+    [
+     4,
+     "Umbral Collar Zealot"
+    ],
+    [
+     1,
+     "Wolverine, Fierce Fighter"
+    ]
+   ],
+   "ENCANTAMENTOS (6)": [
+    [
+     4,
+     "Obsessive Pursuit"
+    ],
+    [
+     2,
+     "The Misty Mountains Cold"
+    ]
+   ],
+   "FEITIÇOS (5)": [
+    [
+     4,
+     "Lively Dirge"
+    ],
+    [
+     1,
+     "Molten Collapse"
+    ]
+   ],
+   "INSTANTÂNEAS (3)": [
+    [
+     1,
+     "Requiting Hex"
+    ],
+    [
+     1,
+     "Torch the Tower"
+    ],
+    [
+     1,
+     "Witherbloom Charm"
+    ]
+   ],
+   "TERRENOS (22)": [
+    [
+     2,
+     "Blazemire Verge"
+    ],
+    [
+     2,
+     "Blood Crypt"
+    ],
+    [
+     4,
+     "Blooming Marsh"
+    ],
+    [
+     1,
+     "Forest"
+    ],
+    [
+     1,
+     "Mountain"
+    ],
+    [
+     4,
+     "Overgrown Tomb"
+    ],
+    [
+     4,
+     "Starting Town"
+    ],
+    [
+     3,
+     "Stomping Ground"
+    ],
+    [
+     1,
+     "Swamp"
+    ]
+   ]
+  }
+ },
+ "chave_jund": [
+  "Biotech Specialist",
+  "Gene Pollinator",
+  "Greedy Freebooter",
+  "The Sackville-Bagginses",
+  "Umbral Collar Zealot",
+  "Obsessive Pursuit",
+  "Lively Dirge"
+ ],
+ "nota": "No ecrã: Landfall completa (60); Jund só não-terrenos das duas listas campeãs, a verde as 7 com 4 cópias nas duas (igual ao EP04)."
+}

@@ -27,12 +27,13 @@ Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Identidade, visual, t
 - Contador `ERROS HUMANOS` = contagem real de episódios.
 
 ## Protocolo de Pré-Release (ativação)
-
 Método completo: `PROTOCOLO_PRE_RELEASE.md`. Não muda nada da identidade (`CONTEXTO.md`).
-
 - **Ativa** quando o pedido envolve: previsões de pré-release; análise de uma coleção antes do pré-release; preparação competitiva para Sealed; expectativas sobre arquétipos de uma coleção nova. Ativa as quatro fases, não só a previsão.
 - **Coleção já lançada:** identificar primeiro o que se pede. Análise de resultados com previsões registadas → Fase D. Sem previsões registadas → Relatório do Meta normal. Previsão retrospectiva («o que se devia ter previsto») → marcada como retrospectiva e nunca registada como previsão (não é auditável).
 - **Não ativa** em episódios comuns (torneio, jogada, leitura de carta, meta de Construído), nem para hype ou reação a spoilers (Mana & Burn).
+## Ciclo semanal (09/11/2026)
+Quinta prevê, segunda presta contas: `CICLO_SEMANAL.md`. Toda previsão vai para `previsoes/registo.yaml` antes de gravar a voz; o briefing sai de `python3 -I oraculo/previsoes/ciclo.py segunda|quinta`.
+
 
 ## Gancho e fecho
 

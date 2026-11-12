@@ -58,16 +58,19 @@ Fonte canónica única: `oraculo/previsoes/registo.yaml` (decisão de 09/11/2026
 
 - 07/11/2026 · Mana & Burn Ep. 10 "A febre do autógrafo" (cartas especiais de Star Trek, semana do pré-release; Kirk nº 1701, carta de autógrafo, arte de Chris Rallis). **Produzido, não publicado.** Render conferido (47,7 s + fecho, sem corte lateral, −14,5 LUFS, pico −1,7 dBTP): `manaburn/episodios/ep10_cartas_especiais/ficha.md`. Easter egg: relógio 17:01. Hipótese em teste: pergunta A/B sobre o produto (genial × loteria). Métricas: aguardam publicação.
 
+## Previsões registadas do TUBO
+
+Registo único desde 09/11/2026: `oraculo/previsoes/registo.yaml` (texto original, critério, prazo, conferências, estado). Abertas: PR-TRK-01 (pública) a PR-TRK-04, do EP05, auditoria a 01/12/2026. Lições das auditorias entram aqui.
+
+- 09/11/2026 · Meta em Curto EP06 "Prestação de contas: placar zero". **Escrito, não produzido** (falta autorização para a voz): `oraculo/episodios/ep06_prestacao_contas_ficha.md`. Primeiro episódio do ciclo semanal (`oraculo/CICLO_SEMANAL.md`).
+
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 
 - Especial de Halloween 2026 (Innistrad × Duskmourn): **publicado**. A música que acima aparece como "provisória" foi aprovada como está.
 - Órbita · Star Trek: a sequência editorial está **publicada**.
 - Tudo o que está no repositório foi testado, aprovado e lançado; vozes e músicas foram criadas pelo fundador e estão aprovadas. As notas "pendente: licença" acima ficam resolvidas por esta confirmação.
-
 ## Semana 02–08/11/2026 · índice (auditoria do Giro de 08/11)
-
 Fonte dos estados: respostas do fundador a 08/11/2026 (00:10–00:15) + fichas e branches. Produzido ≠ publicado: só é "publicado" o que o fundador confirmou.
-
 | Frente | Código | Título / assunto | Produção | Publicação | Estado | Desempenho confirmado | Ficha / materiais |
 |---|---|---|---|---|---|---|---|
 | Conde de Manaforte | CM-EP004 | Joven, o réu que não explica nada | 03/11 | entre 03 e 08/11 (data por confirmar) | publicado | por receber | `conde/episodios/ep004_joven_ficha.md` |
@@ -78,12 +81,10 @@ Fonte dos estados: respostas do fundador a 08/11/2026 (00:10–00:15) + fichas e
 | Meta em Curto | MC-EP04 | Jund em Pequim | 02/11 | não confirmada | produzido | — | branch `meta-em-curto-ep04` |
 | Mana & Burn | MB-EP10 | A febre do autógrafo | 07/11 | não confirmada | produzido | — | branch `ep10-cartas-especiais` |
 | Mana & Burn | MB-GIRO-2026-11-08 | Giro de domingo nº 2 | 08/11 | — | produzido, por aprovar | — | `manaburn/giro/2026-11-08/ficha.md` |
-
 Previsão pública aberta: MC-EP05, "Previsão registrada: Rakdos no top três do Sealed até primeiro de dezembro. Certeza baixa. Se eu errar, assumo." Critério: win rate de Sealed de Star Trek no 17Lands; auditoria final a 01/12/2026. O Giro de 08/11 anuncia a volta do TUBO a 09/11 para prestar contas. (Tabela completa das 4 previsões do EP05 na branch `meta-em-curto-ep05`.)
-
 ## Cronologia (desde 01/11/2026)
-
 Formato: data · ID · frente · acontecimento · estado. Mais recente no fim.
-
 - 01/11/2026 · — · estúdio · Registo editorial universal criado com 72 conteúdos migrados (30 `POR AUDITAR`); insights de 21/10 e 26/10 migrados para `comum/insights/`; impulso dos posts de 26/10 passa a `A CONFIRMAR`. Branch `feature/memoria-editorial-insights`.
 - 01/11/2026 · — · estúdio · Insights da conta de 1–31/10 (export do fundador): 13 mil visualizações de Reels, 182 seguidores; `comum/insights/semanas/2026-10-31.md`. MB-EP09 e CM-EP003 confirmados como publicados (miniaturas no export).
+- 10/11/2026 · Meta em Curto EP07 "Seis brasileiros. 134 convidados. 8 vagas no Top 8." (Magic World Championship 32, Atlanta, 13–15/11; Previsão + Relatório do Meta). **Produzido, não publicado.** Render conferido (57,4 s + fecho, sem corte lateral, −14,0 LUFS, pico −1,3 dBTP): `oraculo/episodios/ep07_mundial_ficha.md`. Previsões: PR-WC32-01 (pública), 02 e 03 (registo) em `oraculo/previsoes/registo.yaml`, conferência a 16/11. Hipótese: pergunta "comente o nome" gera mais comentários por 1.000 views. Métricas: aguardam publicação.
+
