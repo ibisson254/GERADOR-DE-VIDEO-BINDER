@@ -181,7 +181,7 @@ Peças de 18–19/10/2026 descritas em projeto:claude/reel-lambe-lambe-pop.md ("
 
 | ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| VV-EP00 | Fechamento (piloto do boletim) | Elminster; Gandalf; Plaza | Boletim semanal de preços | Buy the dip! | EM PRODUÇÃO | branch vince-vault integrada 12/11; personagem 3D em evolução (V03) | 12/11/2026 (frente) | — | vince/episodios/ep00_fechamento_ficha.md | — | sem conflito |
+| VV-EP00 | Fechamento (piloto 3D, arquivado) | Elminster; Gandalf; Plaza | Boletim de preços | Buy the dip! | PAUSADO | direção 2D ativa desde 12/11 (PR #17): o piloto 3D fica como arquivo; kit 2D por fechar (ficheiros do PR #17 em falta na branch) | 12/11/2026 (frente) | — | vince/episodios/ep00_fechamento_ficha.md | — | sem conflito |
 
 ## Lacunas da auditoria retroativa (01/11/2026)
 

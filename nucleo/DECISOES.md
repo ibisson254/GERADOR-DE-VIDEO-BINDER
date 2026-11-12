@@ -41,6 +41,14 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **Porquê:** fundador, 08/11/2026: "mude o calendário na parede para 1996".
 **Impacto:** só o Giro de 08/11 muda; os outros episódios e a sala v3 ficam iguais. Se o fundador quiser 1996 em todos, basta mudar o valor por defeito no `index.html`.
 
+## 12/11/2026 · Frente nova em desenvolvimento: Vinci (o mercado das cartas)
+
+**O quê:** pasta `vinci/` (palavras de arranque `vinci`, `mercado`, `preco`): série sobre preço de cartas, com causa, fonte e data. Inclui `CONTEXTO.md` (bíblia), `PERFIL.md` e `audio/` com o sintetizador da voz da Fonte. Entradas novas no catálogo, em `series.yaml` e no `AGENTS.md`.
+**Porquê:** pedido do fundador (11–12/11/2026). O plano original era uma personagem 3D, descartada por custo: em 3D o custo não baixa com o tempo, e nesta série o que muda a cada episódio é o número, a carta e a causa — texto e uma imagem do Scryfall. Decidiu-se character design 2D desenhado uma vez e composto em camadas, com o método de planos parados cortados a cada 3–6 s.
+**Impacto:** nenhuma série existente muda; preço continua a poder ser remate cómico em Mana & Burn e notícia no Giro. Três regras novas próprias desta frente: nunca prever preço nem recomendar compra ou venda; todo o número com fonte e data no ecrã; a Fonte (personagem do telefone) nunca aparece, nunca fala palavras e nunca é legendada, e quando não há fonte verificada não atende. O som da Fonte é sintetizado localmente, sem créditos de serviços externos.
+
+*Reconciliação (12/11/2026, mesma madrugada):* o PR #17 declara que esta é a mesma frente do Vince Vault («por engano foi criada uma segunda frente»; frente única Multiverse Capital, apresentada pelo Vince Vault). Reconciliado: pasta única `vince/` (bíblia 2D `vince/CONTEXTO.md` substitui `BIBLIA_PERSONAGEM.md`, que fica como arquivo com o resto do material 3D), voz antiga mantida (`L93SDe6kGQj79D6svMgA`). O kit 2D, `recortar.py`, `EDICAO.md` e `PROMPT_EPISODIO.md` descritos no corpo do PR #17 **não chegaram à branch** — ausência registada, nada foi inventado. Fontes de preço seguem a decisão de 08/11 (sem Cardmarket; piloto MTGStocks/TCGplayer): o corpo do PR #17 mencionava Cardmarket — **a confirmar pelo fundador qual das duas vale**.
+
 ## 08/11/2026 (00:05) · Burn no plano da TV
 
 **O quê:** correção de um defeito de render, não de modelo: no plano da TV os padrões SVG (cabelo raspado do Burn, xadrez da camisa, papel de parede) saíam transparentes porque os ids repetidos apontavam para o mundo escondido. O plano da TV passa a ter defs próprios (sufixo `_2`). O Burn sobe 40 px atrás da TV e mostra pescoço e ombros com a mesma camisa do plano geral, ligando-se ao braço que aponta.

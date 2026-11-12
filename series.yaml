@@ -86,3 +86,19 @@ series:
     identidade: lambe-lambe/CONTEXTO.md         # + skill binder-posts-instagram
     vozes: {}
     trilha: []
+
+  - slug: vince
+    nome: Vince Vault · Multiverse Capital (o mercado das cartas) — frente aprovada 12/11/2026, em desenvolvimento
+    palavras: [vince, vinci, vault, mercado, preco]
+    formato: reel_9x16                         # 1080x1920, 30 fps, 30-45 s
+    pasta: vince/
+    perfil: vince/PERFIL.md
+    identidade: vince/CONTEXTO.md              # direção 2D (12/11); material 3D anterior fica como arquivo na mesma pasta
+    assets: vince/kit/v1/                      # EM FALTA: o kit 2D descrito no PR #17 (16 PNG + recortar.py + EDICAO.md + PROMPT_EPISODIO.md) não chegou à branch
+    audio_fonte: vince/audio/                  # voz da Fonte e sons do telefone, sintetizados (fonte.py), custo zero
+    vozes:
+      vince: {fornecedor: elevenlabs, nome: "Vince Vault", voice_id: L93SDe6kGQj79D6svMgA, modelo: null}   # voz antiga mantida (PR #17; decisão de 07/11)
+      fonte: {fornecedor: local, nome: "trombone com surdina", ficheiro: vince/audio/fonte.py}
+    trilha: []                                 # por decidir
+    referencia: null
+
