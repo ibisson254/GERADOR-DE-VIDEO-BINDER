@@ -64,6 +64,8 @@ Registo único desde 09/11/2026: `oraculo/previsoes/registo.yaml` (texto origina
 
 - 09/11/2026 · Meta em Curto EP06 "Prestação de contas: placar zero". **Escrito, não produzido** (falta autorização para a voz): `oraculo/episodios/ep06_prestacao_contas_ficha.md`. Primeiro episódio do ciclo semanal (`oraculo/CICLO_SEMANAL.md`).
 
+- 09/11/2026 · Conde de Manaforte Ep. 005 (Hyalopterous Lemure, Ice Age 1995, arte original de Richard Thomas). **Produzido, não publicado.** Roteiro aprovado a 09/11. Render conferido (69,1 s + fecho, sem corte lateral, −14,0 LUFS, pico −1,8 dBTP; música refeita a 09/11 às 12:10); pronúncia por ouvir. Ficha: `conde/episodios/ep005_hyalopterous_lemure_ficha.md`. Sem easter egg. Hipótese: bastidor com fonte primária gera mais guardados e partilhas do que a análise só visual do Ep. 004.
+
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 
 - Especial de Halloween 2026 (Innistrad × Duskmourn): **publicado**. A música que acima aparece como "provisória" foi aprovada como está.
