@@ -24,6 +24,12 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **Decisões técnicas:** o registo fica em YAML porque a segunda tem de o ler sem interpretação; o histórico humano remete para ele, para não haver duas tabelas. A shell não chega ao 17Lands, magic.gg nem MTGMeta: o script não pesquisa, diz o quê e onde; o agente usa as ferramentas web. Previsões de prazo longo levam conferências marcadas às segundas (placar parcial, nunca auditoria).
 **Impacto:** identidade, voz, trilha e estrutura do TUBO não mudam. A `main` ainda não tem o `PROTOCOLO_PRE_RELEASE.md` (branch `protocolo-pre-release-tubo`) nem o EP05 (branch `meta-em-curto-ep05`); o ciclo remete para eles e funciona sem eles, mas a integração dessas branches fica por aprovar.
 
+## 08/11/2026 · Vince Vault: boletim semanal e fonte de preços
+
+**O quê:** o formato proposto para o Vince passa a ser um boletim semanal (altas, baixas e oportunidades em cartas acessíveis, com vocabulário da bolsa). Preços sem Cardmarket. Fonte preferida: a plataforma BINDER; como a base ainda não guarda histórico de preços (F1 do Data Intelligence Master v1.2) e o valor de referência da app vem do Scryfall (termos proíbem republicar preços), a variação semanal vem de uma fonte que a publica, atribuída e datada no ecrã (piloto: MTGStocks, preços do TCGplayer). O BINDER Vision entra como chamada para ação (scanner + valor de referência).
+**Porquê:** pedido do fundador (08/11/2026).
+**Impacto:** quando a F1 existir, o boletim passa a usar os dados do BINDER. Sem previsões nem recomendação de compra; "Buy the dip!" é sempre desmentido em cena.
+
 ## 08/11/2026 (02:06) · Calendário da parede configurável (Mana & Burn)
 **O quê:** o ano do calendário velho da sala passa a vir de `EP.calendario` (por defeito "2019"). O Giro de 08/11 usa "1996".
 **Porquê:** fundador, 08/11/2026: "mude o calendário na parede para 1996".
@@ -40,6 +46,12 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **O quê:** entra no `manaburn/index.html` o esboço de 07/11 (`nucleo/auditorias/2026-11-07_esboco_sala.md`): mesa de noite de Commander (decks com sleeves, cartas genéricas, d20, dados, deckboxes), mesa 96 px acima para sair da faixa das legendas no plano geral, piso de taco discreto entre rodapé e carpete, e a luz dentro do cenário (lâmpada quente, reflexo frio da TV que apaga com ela, primeiro plano mais escuro). Com a luz no cenário, o `luz.py` deixa de correr por defeito no `render.py` (`--luz-pos` liga); continua a servir vídeos de outro motor.
 **Porquê:** fundador, 08/11/2026: "Sim finalizei tudo", em resposta ao pedido de aprovação dos pontos 1 a 4 do esboço.
 **Fica de fora:** modelo do Burn no plano da TV (só cabeça, sem boné nem ombros): precisa de decisão própria.
+
+## 07/11/2026 · Vince Vault: personagem em desenvolvimento e estratégia de créditos
+
+**O quê:** novo personagem Vince Vault (Multiverse Capital, "Buy the dip!"), com bíblia em `vince/BIBLIA_PERSONAGEM.md` e referências em `vince/referencias/`. Turnaround oficial fixado; voz desenhada no ElevenLabs (`L93SDe6kGQj79D6svMgA`). Estratégia de créditos: imagens fixas no app Gemini, ElevenLabs só para voz e lip sync, estimativa antes de cada geração, uma variação por pedido, lip sync só no gancho.
+**Porquê:** pedido do fundador (07/11/2026); a primeira ronda no ElevenLabs esgotou o saldo do plano.
+**Impacto:** ainda não é uma frente. Formato e catálogo dependem de decisão do fundador. Os preços ditos pelo Vince seguem a regra de não inventar factos.
 
 ## 07/11/2026 (17:54) · Merge da luz padrão e do especial "Precon em jogo" para `main`
 
