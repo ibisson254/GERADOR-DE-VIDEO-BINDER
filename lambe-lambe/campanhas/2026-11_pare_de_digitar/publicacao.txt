@@ -1,0 +1,55 @@
+CARROSSEL "PARE DE DIGITAR CARTA POR CARTA" · textos de publicação · 11/11/2026
+Link (bio e Stories): https://play.google.com/store/apps/details?id=com.binderstudios.vision&referrer=utm_source%3Dinstagram%26utm_medium%3Dcarrossel%26utm_campaign%3Dpare_de_digitar
+
+=== LEGENDA PRINCIPAL (versão A, escolhida) ===
+Quem já cadastrou a coleção carta por carta sabe: nome em inglês, sigla da edição, foil ou não… e faltam 295.
+
+No BINDER Vision você aponta a câmera, confirma a carta e ela vai pro seu Binder. Quando terminar, exporta tudo em lista ou planilha no formato que a LigaMagic aceita e cola lá. Sem digitar.
+
+O valor que aparece é uma referência (Scryfall, convertida pra reais), não oferta de compra.
+
+Beta para Android. Baixe o BINDER Vision no Google Play: link na bio.
+
+#magicthegathering #mtgbrasil #commanderbrasil #mtgcollection #tcgbrasil
+
+=== LEGENDA ALTERNATIVA (versão B) ===
+300 cartas no fichário. Quantas você já cadastrou?
+
+A parte chata de organizar coleção é digitar. O BINDER Vision faz isso pela câmera: aponta, confirma, e a carta entra no seu Binder. Depois dá pra exportar a coleção inteira pro cadastro por lista da LigaMagic.
+
+Escaneie sua primeira carta hoje. Beta para Android, link na bio.
+
+#magicthegathering #mtgbrasil #commanderbrasil #mtgcollection
+
+=== COMENTÁRIO FIXADO ===
+Quantas cartas tem o seu fichário hoje? 📒 Menos de 100, 100 a 500 ou mais de 500?
+
+Como levar a coleção pra LigaMagic: 1) escaneie as cartas no BINDER Vision; 2) no seu Binder, toque em Exportar para LigaMagic; 3) escolha Texto Rápido (pro Cadastro por Lista) ou Planilha CSV (pra Importar Coleção); 4) cole no site. O BINDER não tem parceria com a LigaMagic: a exportação só usa o formato que ela aceita.
+
+=== TEXTO ALTERNATIVO (por slide) ===
+01: Fundo preto. Texto: "Seu fichário tem 300 cartas. Você vai digitar uma por uma?"
+02: Lista de cartas digitada à mão (Sol Ring, Arcane Signet, Command Tower, Swords to Plowshares, Cultivate) e "faltam 295". Texto: "Todo colecionador já fez isso. Nome em inglês, edição certa, foil ou não. E repete. E repete."
+03: Texto: "E se a câmera fizesse a parte chata?"
+04: Tela real do scanner do BINDER Vision com moldura verde em volta da carta Iron Man Armor. Texto: "Aponte. Pronto. O BINDER Vision lê a carta pela câmera e ajuda a identificá-la."
+05: Tela real de resultado: Iron Man Armor, Marvel Super Heroes, valor de referência R$ 15,00 e botão Confirmar. Texto: "Confirme. Já está no seu Binder." Nota: valor de 24/10/2026, referência do Scryfall convertida, estimativa.
+06: Três passos: Escaneie; Exporte do seu Binder em texto ou planilha CSV; Cole na LigaMagic. Nota: sem parceria com a LigaMagic.
+07: Texto: "Escaneie aqui. Pare de digitar." Botão verde: "Baixe no Google Play · link na bio".
+
+Créditos: Iron Man Armor (Marvel Super Heroes, 2026), nº 248. Arte: Javier Charro. © Wizards of the Coast. Marvel ©.
+
+=== STORIES (3 quadros, 9:16) ===
+1: "Você digitaria 300 cartas?" + enquete "Já fiz isso / Nunca mais"
+2: gravação real do scanner (comum/outro/scan, 1,5 s em loop) + "Aponte. Confirme. Pronto."
+3: "Depois exporta pra LigaMagic." + sticker de link (utm_medium=stories) "Baixar o BINDER Vision"
+
+=== TEXTO PARA COMUNIDADES BR (só onde a divulgação é permitida; avisar o admin) ===
+Fala, pessoal! Sou o dev do BINDER Vision, um app de coleção de Magic que estou construindo sozinho (beta, só Android).
+
+A ideia é tirar a parte chata de cadastrar coleção: você escaneia as cartas com a câmera e depois exporta a lista no formato da LigaMagic (cadastro por lista ou CSV), sem digitar uma por uma. O valor que aparece é referência do Scryfall convertida, não preço da Liga.
+
+Tá em beta, então feedback é ouro, principalmente de quem vende na Liga: o que falta pra isso te poupar tempo de verdade?
+
+Link: [UTM do grupo]
+
+=== VERSÃO CURTA (Stories / bio) ===
+Escaneie suas cartas. Exporte pra LigaMagic. Pare de digitar.

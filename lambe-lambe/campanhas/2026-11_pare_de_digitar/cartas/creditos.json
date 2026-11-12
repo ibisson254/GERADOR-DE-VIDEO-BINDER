@@ -1,0 +1,83 @@
+{
+ "sol_ring": {
+  "name": "Sol Ring",
+  "set": "Reality Fracture Commander",
+  "code": "FRC",
+  "num": "21",
+  "artist": "Titus Lunter",
+  "year": "2026",
+  "uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+ },
+ "rhystic_study": {
+  "name": "Rhystic Study",
+  "set": "Jumpstart 2022",
+  "code": "J22",
+  "num": "114",
+  "artist": "Tatiana Kirgetova",
+  "year": "2022",
+  "uri": "https://scryfall.com/card/j22/114/rhystic-study?utm_source=api"
+ },
+ "the_one_ring": {
+  "name": "The One Ring",
+  "set": "The Lord of the Rings: Tales of Middle-earth",
+  "code": "LTR",
+  "num": "246",
+  "artist": "Veli Nyström",
+  "year": "2023",
+  "uri": "https://scryfall.com/card/ltr/246/the-one-ring?utm_source=api"
+ },
+ "smothering_tithe": {
+  "name": "Smothering Tithe",
+  "set": "Commander Masters",
+  "code": "CMM",
+  "num": "57",
+  "artist": "Mark Behm",
+  "year": "2023",
+  "uri": "https://scryfall.com/card/cmm/57/smothering-tithe?utm_source=api"
+ },
+ "cyclonic_rift": {
+  "name": "Cyclonic Rift",
+  "set": "Ravnica Remastered",
+  "code": "RVR",
+  "num": "40",
+  "artist": "Isis",
+  "year": "2024",
+  "uri": "https://scryfall.com/card/rvr/40/cyclonic-rift?utm_source=api"
+ },
+ "arcane_signet": {
+  "name": "Arcane Signet",
+  "set": "Reality Fracture Commander",
+  "code": "FRC",
+  "num": "20",
+  "artist": "Josu Solano",
+  "year": "2026",
+  "uri": "https://scryfall.com/card/frc/20/arcane-signet?utm_source=api"
+ },
+ "command_tower": {
+  "name": "Command Tower",
+  "set": "Reality Fracture Commander",
+  "code": "FRC",
+  "num": "22",
+  "artist": "Josu Solano",
+  "year": "2026",
+  "uri": "https://scryfall.com/card/frc/22/command-tower?utm_source=api"
+ },
+ "swords_to_plowshares": {
+  "name": "Swords to Plowshares",
+  "set": "Reality Fracture Commander",
+  "code": "FRC",
+  "num": "37",
+  "artist": "Jesper Ejsing",
+  "year": "2026",
+  "uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+ },
+ "cultivate": {
+  "name": "Cultivate",
+  "set": "Marvel Super Heroes Commander",
+  "code": "MSC",
+  "num": "172",
+  "artist": "Darius Zablockis",
+  "year": "2026",
+  "uri": "https://scryfall.com/card/msc/172/cultivate?utm_source=api"
+ }
+}
