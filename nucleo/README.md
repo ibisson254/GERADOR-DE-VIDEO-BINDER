@@ -9,6 +9,8 @@ Um documento canónico por matéria. Este índice diz onde cada uma vive; nada s
 | Catálogo de frentes e formatos | `CATALOGO_EDITORIAL.md` |
 | Showrunner (classificação, router, briefing) | `SHOWRUNNER.md` |
 | Decisões do fundador e histórico de alterações | `DECISOES.md` |
+| Memória editorial (todos os conteúdos e estados) | `../comum/REGISTRO_EDITORIAL.md` |
+| Métricas do Instagram (snapshots semanais) | `../comum/insights/` |
 | Controlo de qualidade | `CHECKLIST_QUALIDADE.md` |
 | Modelos (ficha, perfil, handoff, previsões de pré-release) | `modelos/` |
 | Instruções para o projeto claude.ai e para o ChatGPT | `prompts/` |
@@ -28,9 +30,10 @@ Um documento canónico por matéria. Este índice diz onde cada uma vive; nada s
 | Direitos, vozes e músicas com licença | constituição §7 |
 | Produto: funções que podem ser citadas e palavras proibidas | constituição §9 |
 | Pacote de publicação (legenda, comentário fixado, texto alternativo, ficha de fatos) | constituição §10 |
+| Registo editorial, originalidade e encerramento obrigatório | constituição §10 + `SHOWRUNNER.md` §2.3 e §6 |
 | Easter eggs (máx. 1 por episódio) | constituição §10 + `../comum/easter_eggs.md` |
 | Bloqueios | constituição §11 |
-| Aprendizagem depois de publicar | constituição §12 + `../comum/historico.md` |
+| Aprendizagem depois de publicar | constituição §12 + `../comum/insights/LEIA-ME.md` |
 | Especiais e homenagens | constituição §14 |
 
 ## Marca e posicionamento

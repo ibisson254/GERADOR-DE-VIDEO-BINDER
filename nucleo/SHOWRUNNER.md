@@ -8,7 +8,7 @@ Vale igual para Claude, ChatGPT ou qualquer agente. O Showrunner é o diretor ed
 2. `CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md` (regras comuns; §1 hierarquia).
 3. `CATALOGO_EDITORIAL.md` (frentes, estado, território).
 4. A bíblia e o perfil **só da frente escolhida** (caminhos no catálogo e em `../series.yaml`).
-5. `../comum/historico.md` e `../comum/easter_eggs.md` (não repetir tema nem egg).
+5. `../comum/REGISTRO_EDITORIAL.md` (tudo o que já foi feito, de todas as frentes) e `../comum/easter_eggs.md`: não repetir tema, objeto nem egg.
 6. `DECISOES.md` quando o pedido toca numa regra.
 
 Antes de perguntar ao fundador, procurar a resposta nestes documentos. Só se pergunta o que não está escrito ou o que é decisão nova.
@@ -35,6 +35,13 @@ Antes de perguntar ao fundador, procurar a resposta nestes documentos. Só se pe
 | Ilustração: composição, técnica, simbolismo, bastidores, artista | Conde de Manaforte | Território "ilustração" (`conde/PERFIL.md`) |
 | Arte de uma carta como curiosidade rápida, sem crítica encenada | Lambe-lambe | Formato espontâneo (série "Artistas de Magic") |
 | Carta do set de Star Trek | Órbita, ou uma série se o ângulo for o território dela | O ângulo decide; registar a escolha |
+
+### 2.3 Auditoria de originalidade (antes de propor a pauta)
+
+1. Na raiz do repositório: `python3 comum/ferramentas/memoria.py pauta --objeto "<carta, pessoa, deck ou evento>" --tema "<tema>"`.
+2. Comparar à mão, no registo, tema, objeto, tese, gancho e ângulo (o script só compara texto). Mudar título, personagem, frente ou formato não elimina a duplicidade.
+3. `BLOQUEADA` ou dúvida: não avançar. Apresentar ao fundador o conflito (IDs) e o ângulo novo; só com decisão dele, registada em `DECISOES.md`, a pauta entra no registo citando essa decisão na coluna "Originalidade".
+4. Pauta livre: linha nova no registo (`IDEIA` ou `EM ANÁLISE`) antes de pesquisar a fundo.
 
 Quando um tema cabe em duas frentes: propor a escolha com uma frase de justificação e pedir aprovação antes do roteiro. Tema fora de todos os territórios: dizer isso e propor alternativa; não forçar.
 
@@ -65,7 +72,30 @@ O motor técnico da frente executa a partir deste briefing.
 ## 5. Manter o estado
 
 - Decisão nova do fundador que muda uma regra → entrada em `DECISOES.md` + alteração no documento canónico que ela afeta.
-- Conteúdo aprovado ou publicado → linha em `../comum/historico.md` (data, frente, peça, estado) e ficha atualizada.
+- Cada mudança de estado de um conteúdo → linha em `../comum/REGISTRO_EDITORIAL.md` atualizada (estado, fonte do estado, datas); aprovado, concluído ou publicado → também uma linha em `../comum/historico.md` com o ID.
 - Frente nova ou mudança de estado de uma frente → `CATALOGO_EDITORIAL.md` (+ `../series.yaml` se mudar algo técnico).
 - Fim de sessão → `../STATUS.md` atualizado e handoff (`modelos/HANDOFF.md`).
 - Commit no repositório, nunca com vídeos renderizados. Sem acesso de escrita ao GitHub (ex.: ChatGPT), entregar o texto exato de cada alteração para o fundador ou para a sessão seguinte aplicar.
+
+## 6. Protocolo de encerramento (obrigatório no fim de cada episódio)
+
+Vale para qualquer conteúdo produzido (episódio, especial, Órbita, Lambe-lambe). Um agente só diz "arquivado" depois do passo 12. Se um passo falhar (sem escrita no GitHub, rede, permissão), o episódio fica `EM PRODUÇÃO` no registo e o handoff diz o que falta.
+
+1. Briefing e roteiro definitivo na ficha (`modelos/FICHA_EPISODIO.md`) ou em ficheiro na pasta do episódio.
+2. Legenda final: `legenda.txt`.
+3. Comentário fixado: `comentario_fixado.txt`.
+4. Texto alternativo: `texto_alternativo.txt`.
+5. Fontes e evidências: tabela da ficha ou `fontes.md`.
+6. Controlo de qualidade medido no ficheiro final, na ficha.
+7. Localização do vídeo e da capa finais na ficha ("Ficheiros finais"). Os vídeos renderizados nunca entram no Git.
+8. `../comum/REGISTRO_EDITORIAL.md`: estado `CONCLUÍDO` (ou `PUBLICADO` com confirmação), ficha, relações, originalidade.
+9. `../comum/historico.md`: uma linha com data, ID, frente, peça e estado.
+10. `../STATUS.md`, quando muda o estado do estúdio ou da frente.
+11. Handoff (`modelos/HANDOFF.md`).
+12. Verificação: `python3 comum/ferramentas/memoria.py encerramento <ID>` e `validar` sem erros → commit → `git push` → conferir que o hash está no remoto (`git ls-remote origin <branch>` ou a página do commit) e que os ficheiros aparecem lá.
+
+Sem publicar no Instagram e sem gastar créditos externos (vozes, música, imagem) sem autorização explícita do fundador.
+
+## 7. Domingo · insights
+
+Quando o fundador envia os prints do Instagram Insights: seguir `../comum/insights/LEIA-ME.md` (snapshot novo em `semanas/AAAA-MM-DD.md`, linhas acrescentadas a `registo_posts.csv`, impulsionamento `A CONFIRMAR` até confirmação, relatório com facto · interpretação · hipótese · recomendação). Uma semana isolada não muda regras.
