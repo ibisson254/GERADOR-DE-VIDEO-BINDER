@@ -157,6 +157,12 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **Porquê:** pedido explícito do Ibisson no brief do especial (nível 1 da hierarquia, §1): homenagem sem promoção do app, sem humor e sem parecer exploração comercial do luto.
 **Impacto:** só este episódio. As regras voltam a valer no episódio seguinte. Cena própria (`homenagem.html`) feita com os desenhos do `manaburn/index.html` sem alterá-lo; trilha original sintetizada (`musica.py`) em vez da trilha rock da série.
 
+## 02/11/2026 · Meta em Curto: foto real do campeão passa a padrão
+
+**O quê:** `oraculo/CONTEXTO.md` §6.4: o campeão aparece com foto real na ficha, em vez da silhueta. Altera a regra de 29/10, que exigia autorização registada em `oraculo/autorizacoes/`. Outros jogadores mantêm a silhueta.
+**Porquê:** pedido do fundador (02/11/2026, EP04).
+**Impacto:** risco aceite pelo fundador: a foto tem direitos do autor ou do organizador e o direito de imagem do jogador; pode haver denúncia de direitos. Mitigação: só foto oficial, com crédito.
+
 ## 29/10/2026 · Meta em Curto EP02 e regra de evidência visual
 
 **O quê:** `oraculo/CONTEXTO.md` passa a v6 com a secção 6.4: deck citado → lista completa no ecrã; carta citada → imagem oficial do Scryfall; jogador citado → ficha de jogador com silhueta, sem fotos. Novo modo «Leitura da Final» para quando não há VOD analisável. Estreia do Erro de sistema.

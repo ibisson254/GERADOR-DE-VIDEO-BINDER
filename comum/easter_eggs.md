@@ -8,4 +8,5 @@
 | 29/10/2026 | Mana & Burn · Ep. 09 (Dack Fayden) | relógio da TV SAL em "02:10" = 02/10, dia de lançamento do precon Multiverse Reforged | canto inferior direito da TV, em todos os planos da TV (0–4 s, 11–17 s, 31–35 s) |
 | 31/10/2026 | Especial de Halloween (Innistrad × Duskmourn) | "13" na chuva de código do terminal = o custo da Emrakul, the Promised End | cena 5 (dentro do tubo), ~74–75 s, ao centro-direita |
 | 01/11/2026 | Meta em Curto · EP03 (Arquivo Competitivo) | "LOAM" na vertical na chuva de código do terminal = promo Life from the Loam do Top 32 do Legacy no Eternal Weekend | 8–9 s, canto inferior direito |
+| 02/11/2026 | Meta em Curto · EP04 (Jund em Pequim) | "BOLSÃO" na vertical na chuva de código = a casa cobiçada pelos Sacola-Bolseiro em O Hobbit | cena da The Sackville-Bagginses, à direita da carta |
 | 02/11/2026 | Especial · A comunidade falou: Precon em jogo | retrato do Conde de Manaforte na parede muda de expressão a cada regresso à sala | planos de sala, a partir de ~7 s |

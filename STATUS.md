@@ -80,6 +80,8 @@ Giro de domingo de 01/11 publicado (registado em `comum/historico.md`, 02/11). F
 
 ## Depende do fundador
 
+- Meta em Curto EP04 produzido e conferido (branch `meta-em-curto-ep04`): falta o fundador publicar, com `oraculo/legendas/ep04_jund_pequim_legenda.txt`; merge do PR depois do EP03 (PR #4).
+
 - Aprovar um esboço das expressões novas do Mana e do Burn (auditoria §4) antes de as desenhar no kit.
 - ~~Enviar ou subir o motor que gerou o Giro~~ → encontrado na branch `giro/2026-11-01` e integrado na `main` (PR #18, 12/11).
 - Decisões que continuam com o fundador (secção F de `nucleo/auditorias/2026-11-12_missao_master.md`): qual das 4 branches é o Ep. 10 do Mana & Burn; frentes novas (Pequeno Mestre, Vince Vault, Vinci); merge dos pacotes de conteúdo (EP03–EP07, Giro nº 2, Conde EP005, especiais, lambes).
