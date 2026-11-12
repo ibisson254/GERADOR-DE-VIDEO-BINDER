@@ -1,0 +1,736 @@
+{
+ "mecanismos": {
+  "borg": {
+   "rotulo": "Borg/artefato",
+   "pecas_cu": 28,
+   "payoffs_cu": 8,
+   "pecas_todas": 35,
+   "payoffs_todas": 14,
+   "grau_ponderado": 19,
+   "intermediacao": 0.179
+  },
+  "nave": {
+   "rotulo": "Spacecraft",
+   "pecas_cu": 8,
+   "payoffs_cu": 8,
+   "pecas_todas": 17,
+   "payoffs_todas": 12,
+   "grau_ponderado": 8,
+   "intermediacao": 0.0
+  },
+  "klingon": {
+   "rotulo": "Klingon/sacrifício",
+   "pecas_cu": 11,
+   "payoffs_cu": 12,
+   "pecas_todas": 15,
+   "payoffs_todas": 17,
+   "grau_ponderado": 13,
+   "intermediacao": 0.0
+  },
+  "naocriatura": {
+   "rotulo": "Não-criaturas",
+   "pecas_cu": 74,
+   "payoffs_cu": 6,
+   "pecas_todas": 108,
+   "payoffs_todas": 8,
+   "grau_ponderado": 0,
+   "intermediacao": 0
+  },
+  "federation": {
+   "rotulo": "Federation",
+   "pecas_cu": 0,
+   "payoffs_cu": 2,
+   "pecas_todas": 0,
+   "payoffs_todas": 6,
+   "grau_ponderado": 0,
+   "intermediacao": 0
+  },
+  "dilemma": {
+   "rotulo": "Dilemma",
+   "pecas_cu": 28,
+   "payoffs_cu": 6,
+   "pecas_todas": 39,
+   "payoffs_todas": 9,
+   "grau_ponderado": 24,
+   "intermediacao": 0.107
+  },
+  "landfall": {
+   "rotulo": "Landfall",
+   "pecas_cu": 10,
+   "payoffs_cu": 9,
+   "pecas_todas": 17,
+   "payoffs_todas": 9,
+   "grau_ponderado": 6,
+   "intermediacao": 0.0
+  },
+  "marcadores": {
+   "rotulo": "Marcadores",
+   "pecas_cu": 28,
+   "payoffs_cu": 8,
+   "pecas_todas": 36,
+   "payoffs_todas": 9,
+   "grau_ponderado": 17,
+   "intermediacao": 0.321
+  },
+  "cemiterio": {
+   "rotulo": "Cemitério",
+   "pecas_cu": 18,
+   "payoffs_cu": 14,
+   "pecas_todas": 25,
+   "payoffs_todas": 20,
+   "grau_ponderado": 23,
+   "intermediacao": 0.0
+  },
+  "poder8": {
+   "rotulo": "Poder total 8",
+   "pecas_cu": 20,
+   "payoffs_cu": 7,
+   "pecas_todas": 38,
+   "payoffs_todas": 7,
+   "grau_ponderado": 21,
+   "intermediacao": 0.464
+  },
+  "snw": {
+   "rotulo": "Strange New Worlds",
+   "pecas_cu": 2,
+   "payoffs_cu": 7,
+   "pecas_todas": 35,
+   "payoffs_todas": 13,
+   "grau_ponderado": 0,
+   "intermediacao": 0
+  },
+  "beam": {
+   "rotulo": "Beam me up",
+   "pecas_cu": 9,
+   "payoffs_cu": 0,
+   "pecas_todas": 10,
+   "payoffs_todas": 0,
+   "grau_ponderado": 3,
+   "intermediacao": 0.0
+  }
+ },
+ "ligacoes": [
+  {
+   "a": "Dilemma",
+   "b": "Cemitério",
+   "cartas": 10,
+   "jaccard": 0.25
+  },
+  {
+   "a": "Borg/artefato",
+   "b": "Dilemma",
+   "cartas": 6,
+   "jaccard": 0.143
+  },
+  {
+   "a": "Klingon/sacrifício",
+   "b": "Poder total 8",
+   "cartas": 6,
+   "jaccard": 0.214
+  },
+  {
+   "a": "Borg/artefato",
+   "b": "Cemitério",
+   "cartas": 5,
+   "jaccard": 0.116
+  },
+  {
+   "a": "Borg/artefato",
+   "b": "Poder total 8",
+   "cartas": 4,
+   "jaccard": 0.103
+  },
+  {
+   "a": "Dilemma",
+   "b": "Marcadores",
+   "cartas": 4,
+   "jaccard": 0.095
+  },
+  {
+   "a": "Borg/artefato",
+   "b": "Marcadores",
+   "cartas": 3,
+   "jaccard": 0.073
+  },
+  {
+   "a": "Marcadores",
+   "b": "Landfall",
+   "cartas": 3,
+   "jaccard": 0.103
+  },
+  {
+   "a": "Klingon/sacrifício",
+   "b": "Cemitério",
+   "cartas": 2,
+   "jaccard": 0.054
+  },
+  {
+   "a": "Dilemma",
+   "b": "Poder total 8",
+   "cartas": 2,
+   "jaccard": 0.047
+  },
+  {
+   "a": "Marcadores",
+   "b": "Spacecraft",
+   "cartas": 2,
+   "jaccard": 0.065
+  },
+  {
+   "a": "Marcadores",
+   "b": "Cemitério",
+   "cartas": 2,
+   "jaccard": 0.045
+  },
+  {
+   "a": "Marcadores",
+   "b": "Poder total 8",
+   "cartas": 2,
+   "jaccard": 0.051
+  },
+  {
+   "a": "Cemitério",
+   "b": "Poder total 8",
+   "cartas": 2,
+   "jaccard": 0.047
+  },
+  {
+   "a": "Poder total 8",
+   "b": "Spacecraft",
+   "cartas": 2,
+   "jaccard": 0.067
+  },
+  {
+   "a": "Poder total 8",
+   "b": "Beam me up",
+   "cartas": 2,
+   "jaccard": 0.08
+  },
+  {
+   "a": "Borg/artefato",
+   "b": "Klingon/sacrifício",
+   "cartas": 1,
+   "jaccard": 0.028
+  },
+  {
+   "a": "Klingon/sacrifício",
+   "b": "Spacecraft",
+   "cartas": 1,
+   "jaccard": 0.04
+  },
+  {
+   "a": "Klingon/sacrifício",
+   "b": "Dilemma",
+   "cartas": 1,
+   "jaccard": 0.026
+  },
+  {
+   "a": "Klingon/sacrifício",
+   "b": "Marcadores",
+   "cartas": 1,
+   "jaccard": 0.029
+  },
+  {
+   "a": "Klingon/sacrifício",
+   "b": "Beam me up",
+   "cartas": 1,
+   "jaccard": 0.05
+  },
+  {
+   "a": "Dilemma",
+   "b": "Spacecraft",
+   "cartas": 1,
+   "jaccard": 0.028
+  },
+  {
+   "a": "Cemitério",
+   "b": "Spacecraft",
+   "cartas": 1,
+   "jaccard": 0.028
+  },
+  {
+   "a": "Cemitério",
+   "b": "Landfall",
+   "cartas": 1,
+   "jaccard": 0.029
+  },
+  {
+   "a": "Poder total 8",
+   "b": "Landfall",
+   "cartas": 1,
+   "jaccard": 0.033
+  },
+  {
+   "a": "Spacecraft",
+   "b": "Landfall",
+   "cartas": 1,
+   "jaccard": 0.045
+  }
+ ],
+ "clusters": [
+  [
+   "Borg/artefato",
+   "Cemitério",
+   "Dilemma"
+  ],
+  [
+   "Beam me up",
+   "Klingon/sacrifício",
+   "Poder total 8"
+  ],
+  [
+   "Landfall",
+   "Marcadores",
+   "Spacecraft"
+  ]
+ ],
+ "densidade": 0.722,
+ "cartas_ponte": [
+  {
+   "n": "L'Rell, Fierce Visionary",
+   "r": "U",
+   "nota": 3.5,
+   "mecanismos": [
+    "cemiterio",
+    "klingon",
+    "poder8"
+   ]
+  },
+  {
+   "n": "Stray from History",
+   "r": "C",
+   "nota": 2.5,
+   "mecanismos": [
+    "cemiterio",
+    "dilemma",
+    "nave"
+   ]
+  },
+  {
+   "n": "Sarcophagus, Ship of the Dead",
+   "r": "U",
+   "nota": 2.5,
+   "mecanismos": [
+    "klingon",
+    "nave",
+    "poder8"
+   ]
+  },
+  {
+   "n": "Rogue Artificial Intelligence",
+   "r": "C",
+   "nota": 2.5,
+   "mecanismos": [
+    "borg",
+    "cemiterio",
+    "dilemma"
+   ]
+  },
+  {
+   "n": "Resistance Is Futile",
+   "r": "U",
+   "nota": 2.5,
+   "mecanismos": [
+    "borg",
+    "cemiterio",
+    "dilemma"
+   ]
+  },
+  {
+   "n": "The Duras Sisters",
+   "r": "U",
+   "nota": 3.5,
+   "mecanismos": [
+    "klingon",
+    "poder8"
+   ]
+  },
+  {
+   "n": "Seven of Nine",
+   "r": "U",
+   "nota": 3.5,
+   "mecanismos": [
+    "borg",
+    "dilemma"
+   ]
+  },
+  {
+   "n": "The Doctor, EMH",
+   "r": "U",
+   "nota": 3.0,
+   "mecanismos": [
+    "borg",
+    "marcadores"
+   ]
+  },
+  {
+   "n": "Syndicate Liquidators",
+   "r": "U",
+   "nota": 3.0,
+   "mecanismos": [
+    "landfall",
+    "marcadores"
+   ]
+  },
+  {
+   "n": "Sylvia Tilly, Joy of Discovery",
+   "r": "U",
+   "nota": 3.0,
+   "mecanismos": [
+    "cemiterio",
+    "marcadores"
+   ]
+  },
+  {
+   "n": "Rutherford, Upgraded Ensign",
+   "r": "U",
+   "nota": 3.0,
+   "mecanismos": [
+    "marcadores",
+    "nave"
+   ]
+  },
+  {
+   "n": "In the Pale Moonlight",
+   "r": "U",
+   "nota": 3.0,
+   "mecanismos": [
+    "klingon",
+    "poder8"
+   ]
+  },
+  {
+   "n": "D'Ghor Bloodletter",
+   "r": "U",
+   "nota": 3.0,
+   "mecanismos": [
+    "dilemma",
+    "klingon"
+   ]
+  },
+  {
+   "n": "Temporal Conqueror",
+   "r": "C",
+   "nota": 2.5,
+   "mecanismos": [
+    "cemiterio",
+    "landfall"
+   ]
+  },
+  {
+   "n": "Tell Me What You See",
+   "r": "U",
+   "nota": 2.5,
+   "mecanismos": [
+    "cemiterio",
+    "dilemma"
+   ]
+  },
+  {
+   "n": "Impossible Choice",
+   "r": "U",
+   "nota": 2.5,
+   "mecanismos": [
+    "dilemma",
+    "poder8"
+   ]
+  },
+  {
+   "n": "Hologram Stalker",
+   "r": "U",
+   "nota": 2.5,
+   "mecanismos": [
+    "cemiterio",
+    "poder8"
+   ]
+  },
+  {
+   "n": "Free Borg Revolutionaries",
+   "r": "C",
+   "nota": 2.5,
+   "mecanismos": [
+    "borg",
+    "poder8"
+   ]
+  },
+  {
+   "n": "Federation Field Medic",
+   "r": "C",
+   "nota": 2.5,
+   "mecanismos": [
+    "dilemma",
+    "marcadores"
+   ]
+  },
+  {
+   "n": "Cleveland Booker, Empath",
+   "r": "U",
+   "nota": 2.5,
+   "mecanismos": [
+    "landfall",
+    "poder8"
+   ]
+  },
+  {
+   "n": "Captain Michael Burnham",
+   "r": "U",
+   "nota": 2.5,
+   "mecanismos": [
+    "landfall",
+    "marcadores"
+   ]
+  },
+  {
+   "n": "Brad Boimler, Eager Ensign",
+   "r": "U",
+   "nota": 2.5,
+   "mecanismos": [
+    "marcadores",
+    "nave"
+   ]
+  },
+  {
+   "n": "Adversary by Algorithm",
+   "r": "U",
+   "nota": 2.5,
+   "mecanismos": [
+    "beam",
+    "poder8"
+   ]
+  },
+  {
+   "n": "Vash, Freelance Archaeologist",
+   "r": "U",
+   "nota": 3.5,
+   "mecanismos": [
+    "cemiterio"
+   ]
+  },
+  {
+   "n": "Transporter Malfunction",
+   "r": "U",
+   "nota": 3.5,
+   "mecanismos": [
+    "beam"
+   ]
+  }
+ ],
+ "regras_top": [
+  {
+   "a": "remocao",
+   "b": "remocao_dura",
+   "suporte": 0.0438,
+   "confianca": 0.364,
+   "lift": 8.303,
+   "n": 12
+  },
+  {
+   "a": "remocao",
+   "b": "remocao_leve",
+   "suporte": 0.0766,
+   "confianca": 0.636,
+   "lift": 8.303,
+   "n": 21
+  },
+  {
+   "a": "remocao_dura",
+   "b": "remocao",
+   "suporte": 0.0438,
+   "confianca": 1.0,
+   "lift": 8.303,
+   "n": 12
+  },
+  {
+   "a": "remocao_leve",
+   "b": "remocao",
+   "suporte": 0.0766,
+   "confianca": 1.0,
+   "lift": 8.303,
+   "n": 21
+  },
+  {
+   "a": "cemiterio",
+   "b": "recursao",
+   "suporte": 0.0401,
+   "confianca": 0.306,
+   "lift": 6.44,
+   "n": 11
+  },
+  {
+   "a": "recursao",
+   "b": "cemiterio",
+   "suporte": 0.0401,
+   "confianca": 0.846,
+   "lift": 6.44,
+   "n": 11
+  },
+  {
+   "a": "fixacao",
+   "b": "landfall",
+   "suporte": 0.0292,
+   "confianca": 0.471,
+   "lift": 5.373,
+   "n": 8
+  },
+  {
+   "a": "landfall",
+   "b": "fixacao",
+   "suporte": 0.0292,
+   "confianca": 0.333,
+   "lift": 5.373,
+   "n": 8
+  },
+  {
+   "a": "anti_artefato",
+   "b": "remocao",
+   "suporte": 0.0219,
+   "confianca": 0.545,
+   "lift": 4.529,
+   "n": 6
+  },
+  {
+   "a": "remocao",
+   "b": "anti_artefato",
+   "suporte": 0.0219,
+   "confianca": 0.182,
+   "lift": 4.529,
+   "n": 6
+  },
+  {
+   "a": "dilemma",
+   "b": "recursao",
+   "suporte": 0.0219,
+   "confianca": 0.14,
+   "lift": 2.941,
+   "n": 6
+  },
+  {
+   "a": "recursao",
+   "b": "dilemma",
+   "suporte": 0.0219,
+   "confianca": 0.462,
+   "lift": 2.941,
+   "n": 6
+  },
+  {
+   "a": "anti_artefato",
+   "b": "dilemma",
+   "suporte": 0.0182,
+   "confianca": 0.455,
+   "lift": 2.896,
+   "n": 5
+  },
+  {
+   "a": "dilemma",
+   "b": "anti_artefato",
+   "suporte": 0.0182,
+   "confianca": 0.116,
+   "lift": 2.896,
+   "n": 5
+  },
+  {
+   "a": "beam",
+   "b": "naocriatura",
+   "suporte": 0.0365,
+   "confianca": 1.0,
+   "lift": 2.404,
+   "n": 10
+  },
+  {
+   "a": "naocriatura",
+   "b": "beam",
+   "suporte": 0.0365,
+   "confianca": 0.088,
+   "lift": 2.404,
+   "n": 10
+  },
+  {
+   "a": "naocriatura",
+   "b": "remocao_dura",
+   "suporte": 0.0438,
+   "confianca": 0.105,
+   "lift": 2.404,
+   "n": 12
+  },
+  {
+   "a": "remocao_dura",
+   "b": "naocriatura",
+   "suporte": 0.0438,
+   "confianca": 1.0,
+   "lift": 2.404,
+   "n": 12
+  },
+  {
+   "a": "cemiterio",
+   "b": "dilemma",
+   "suporte": 0.0474,
+   "confianca": 0.361,
+   "lift": 2.301,
+   "n": 13
+  },
+  {
+   "a": "dilemma",
+   "b": "cemiterio",
+   "suporte": 0.0474,
+   "confianca": 0.302,
+   "lift": 2.301,
+   "n": 13
+  }
+ ],
+ "trofeus": {
+  "n": 69,
+  "sets": 9,
+  "duas_cores": 58,
+  "tres_cores": 11,
+  "t17": 60,
+  "t16": 9,
+  "r70": 9,
+  "r71": 18,
+  "r72": 42,
+  "duas_top": 26,
+  "tres_top": 1,
+  "fisher_p": 0.0405,
+  "t16_top": 5,
+  "t17_top": 22,
+  "lift_top_2cores": 1.146,
+  "lift_top_3cores": 0.232,
+  "pares": [
+   [
+    "BG",
+    15
+   ],
+   [
+    "WB",
+    8
+   ],
+   [
+    "WG",
+    8
+   ],
+   [
+    "WU",
+    8
+   ],
+   [
+    "UR",
+    7
+   ],
+   [
+    "BR",
+    5
+   ],
+   [
+    "WR",
+    3
+   ],
+   [
+    "RG",
+    3
+   ],
+   [
+    "UB",
+    1
+   ]
+  ]
+ }
+}

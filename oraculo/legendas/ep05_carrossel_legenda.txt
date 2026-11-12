@@ -1,0 +1,43 @@
+META EM CURTO · EP05 · CARROSSEL «GUIA DE BOLSO DO PRÉ-RELEASE» (9 slides, 1080×1350)
+Slides: python3 -I oraculo/episodios/ep05_carrossel.py . <pasta>  (números lidos de oraculo/ep05/resultados e dados, consultas de 05/11/2026)
+Sem easter egg. Previsão no formato do Protocolo de Pré-Release (PR-TRK-01, grau de certeza 2 de 5, sem %).
+
+LEGENDA (Instagram)
+A bomba que você quer no pré-release de Star Trek aparece em 1 jogo em 96. Guarde este carrossel antes de abrir os boosters.
+
+O TUBO juntou cinco contas para levar à mesa: a bomba, a estrutura, as cores, a remoção e a nave parada. Ainda não existe partida registrada de Star Trek, então aqui tem conta, modelo e listas de outras coleções, sem win rate inventado. As premissas e as fontes estão no comentário fixado.
+
+Meta em Curto: análise com dado e fonte. Fontes: Wizards of the Coast, magic.gg, Scryfall, Untapped.gg, MTG Arena Zone, Draftsim e note.com (17Lands via Portent Lab, MTGMeta), consultas de 05/11/2026.
+
+Na tela: U.S.S. Enterprise-A, Free Spirit (Star Trek, 2026), nº 43. Arte: Evan Shipard. © Wizards of the Coast. Star Trek © CBS. Conteúdo de fã não oficial.
+
+#MTG #MagicTheGathering #MTGStarTrek #MTGLimited #MTGBrasil
+
+Abriu as cartas? Escaneie, organize seu pool e baixe o BINDER Vision.
+
+COMENTÁRIO FIXADO
+Abriu uma mítica fora do seu melhor par: o que você faz? Responda A, B ou C.
+A: joga a bomba · B: joga a estrutura · C: splash
+
+As premissas de cada conta:
+1. Bomba: 3,8% de abrir uma mítica específica em 6 boosters (colação oficial, taxa igual entre as 25 míticas) × 27,5% de vê-la até o turno 5 (40 cartas, 1 cópia, jogando primeiro) = 1 jogo em 96.
+2. Estrutura: até o turno 5, 7 cartas com a mesma função aparecem em 91,6% dos jogos; 1 payoff + 8 peças ligam em 18,6%; 4 payoffs + 8 peças em 51,6%. Hipergeométrica, sem mulligan.
+3. Cores: 69 listas de troféu de Sealed do Arena, 9 coleções anteriores (Untapped.gg). 58 com 2 cores, 60 com 17 terrenos. Até 1 derrota: 26 de 58 com 2 cores, 1 de 11 com 3. Só vencedores, sem grupo de controle: padrão, não causa.
+4. Remoção: a Wizards pede pelo menos 5 (guia de pré-release, 30/10/2026). Média de remoções no pool, nas cores do par, num modelo de 40 mil pools: Rakdos 5,8, Boros 5,6, Orzhov 5,3 ... Simic 2,3. Modelo, não jogo.
+5. Nave parada: só 5 de 27 remoções comuns e incomuns acertam: 70,000 Light-Years from Home, Malfunctioning Holodeck, Guidance Failure, Marooned e Rules of Acquisition.
+Aviso: o Mundial (13–15/11) é Draft. Em Reality Fracture, Gruul foi 3.º no Draft e 9.º no Sealed.
+
+Previsão registrada PR-TRK-01: Rakdos no top 3 de win rate do Sealed de Star Trek no 17Lands em 01/12/2026. Grau de certeza: baixo (2 de 5).
+
+TEXTO ALTERNATIVO
+Carrossel de 9 imagens do Meta em Curto, com fundo escuro de terminal e letras verdes.
+1: o TUBO, um monitor bege dos anos 90 com olhos quadrados verdes, sob o texto "Pré-release de Star Trek. A bomba que você quer aparece em 1 jogo em 96. Guia de bolso do TUBO para a mesa".
+2: "Conta 1, a bomba". Carta U.S.S. Enterprise-A, Free Spirit inteira; "3,8% de abrir esta mítica em 6 boosters", "27,5% de vê-la até o turno 5, se abrir", "juntando as duas: 1 jogo em 96. Não construa o deck em volta dela".
+3: "Conta 2, a estrutura". Barras até o turno 5: 1 carta única 27,5%; 7 cartas com a mesma função 91,6%; 1 payoff mais 8 peças 18,6%; 4 payoffs mais 8 peças 51,6%. "Redundância liga o motor. Carta única é sorte."
+4: "Conta 3, duas cores, 17 terrenos". 69 listas de troféu de Sealed do Arena: 58 com 2 cores, 11 com 3 ou mais, 60 com 17 terrenos. "Até 1 derrota: 26 de 58 com 2 cores; 1 de 11 com 3 cores." Carimbo "padrão, não causa".
+5: "Conta 4, remoção". "A Wizards pede 5 remoções." Barras de remoções no pool por par, com linha no 5: Rakdos 5,8, Boros 5,6, Orzhov 5,3, Izzet 4,6, Dimir 4,0, Gruul 4,0, Azorius 3,9, Golgari 3,4, Selesnya 3,3, Simic 2,3. Carimbo "modelo, não jogo".
+6: "Conta 5, a nave parada". "Só 5 de 27 remoções comuns e incomuns acertam uma nave que não é criatura": 70,000 Light-Years from Home, Malfunctioning Holodeck, Guidance Failure, Marooned, Rules of Acquisition.
+7: "Aviso: não copie o Mundial". "O Mundial (13 a 15/11) é Draft. O pré-release é Sealed." Em Reality Fracture, Gruul 3.º no Draft e 9.º no Sealed.
+8: "Previsão registrada PR-TRK-01: Rakdos no top 3 de win rate do Sealed de Star Trek. Fonte da auditoria: 17Lands, data 01/12/2026." O TUBO ao lado de "Motor ligado até o T5: Rakdos 65, Orzhov 25, Dimir 15 em 100 pools simulados". Medidor de grau de certeza com 2 de 5 segmentos: baixo. "Se eu errar, assumo."
+9: "Abriu uma mítica fora do seu melhor par." Opções A joga a bomba, B joga a estrutura, C splash. "Responda com uma letra. Guarde para a mesa do pré-release. Probabilidade calculada. Humanos, imprevisíveis."
+Cada imagem tem linhas de fonte no rodapé.

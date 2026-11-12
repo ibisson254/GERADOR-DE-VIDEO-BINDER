@@ -1,0 +1,39 @@
+LEGENDA (Instagram)
+A Enterprise-A que você quer no pré-release: 1 jogo em 96. E você vai torcer por ela mesmo assim.
+
+O TUBO fez a conta do Sealed de Star Trek. Abrir uma mítica específica em 6 boosters: 3,8%. Ver essa carta até o turno 5: 27,5%. Sete cartas com a mesma função aparecem em 91,6% dos jogos no mesmo intervalo. Ainda não existe nenhuma partida registrada de Star Trek, então aqui só tem conta e modelo, sem win rate inventado. As tabelas, as premissas e a previsão estão no comentário fixado.
+
+Meta em Curto: análise com dado e fonte. Fontes: Wizards of the Coast, magic.gg, Scryfall, Untapped.gg, MTG Arena Zone e note.com (17Lands via Portent Lab, MTGMeta), consultas de 05/11/2026.
+
+Na tela: U.S.S. Enterprise-A, Free Spirit (Star Trek, 2026), nº 43. Arte: Evan Shipard. © Wizards of the Coast. Star Trek © CBS. Conteúdo de fã não oficial.
+
+#MTG #MagicTheGathering #MTGStarTrek #MTGLimited #MTGBrasil
+
+Abriu as cartas? Escaneie, organize seus decks e baixe o BINDER Vision.
+
+COMENTÁRIO FIXADO
+Mítica fora do seu melhor par: o que você faz? Responda A, B ou C.
+A: joga a bomba · B: joga a estrutura · C: splash
+
+A conta (40 cartas, até o T5, sem mulligan; começando / comprando):
+1 carta única: 27,5% / 30,0%
+7 cartas com a mesma função: 91,6% / 93,7%
+Combo de 2 cartas únicas: 7,1% / 8,5%
+1 payoff + 8 peças: 18,6% / 22,1%
+4 payoffs + 8 peças: 51,6% / 58,7%
+Custo 2 no T2 com 8 cartas: 80,4% / 86,4%. Com 3 cartas: 45,6% / 52,0%
+
+Abrir em 6 boosters, sem a promo: mítica específica 3,8%, rara específica 7,5%, alguma mítica 63,7%.
+
+Motor ligado até o T5, modelo de 40 mil pools, não é win rate: Rakdos 65, Gruul 49, Golgari 47, Azorius 42, Selesnya 39, Izzet 36, Simic 25 (teto), Orzhov 25, Boros 24 (teto), Dimir 15.
+
+Só 5 de 27 remoções comuns e incomuns acertam nave parada: 70,000 Light-Years from Home, Malfunctioning Holodeck, Guidance Failure, Marooned e Rules of Acquisition.
+
+Listas de troféu: 69 de Sealed do Arena, 9 coleções (Untapped.gg). Só vencedores, primeiras listas de cada página, sem grupo de controle.
+
+Previsão registrada: Rakdos no top 3 de win rate do Sealed de Star Trek no 17Lands em 01/12/2026. Certeza baixa.
+
+Tem um detalhe escondido. Diga o segundo.
+
+TEXTO ALTERNATIVO
+Vídeo vertical do Meta em Curto, com o TUBO, um monitor bege dos anos 90 com olhos quadrados verdes. Abre com "Enterprise-A, 3,8% de abrir". A câmara entra no ecrã: terminal verde mostra a carta inteira U.S.S. Enterprise-A, Free Spirit e depois "3,8% × 27,5%", com uma grelha de 96 quadrados e um aceso: "1 jogo em 96". Tabela de arquivo de Star Trek com win rate vazio e zeros, carimbo "sem dados", e o texto "Dado que não existe, eu não invento". Grelha de 69 listas de troféu de Sealed por par de cores: 2 cores 58, 26 com até 1 derrota; 3 cores 11, 1 com até 1 derrota; 17 terrenos 60, 16 terrenos 9; carimbo "padrão, não causa". "Draft ≠ Sealed" e gráfico de linhas de Reality Fracture em que Gruul cai do 3.º para o 9.º. Barras: 1 carta única 27,5%, 7 cartas com a mesma função 91,6%, 1 payoff + 8 peças 18,6%, 4 payoffs + 8 peças 51,6%. Grafo com três famílias, Valor, Corpos e Mesa, Dilemma e Cemitério ligados por 10 cartas, Federation e Strange New Worlds com 0 ligações. Barras de 40.000 pools: motor até o T5, Rakdos 65%, Gruul 49%, Golgari 47%, Azorius 42%, Selesnya 39%, Izzet 36%, Simic 25%, Orzhov 25%, Boros 24%, Dimir 15%. Barras de remoções por pool com linha em 5: Rakdos 5,8 até Simic 2,3; carimbo "modelo, não jogo". O TUBO volta: "Não a maior bomba. O próprio plano", leitura do TUBO. "Previsão registrada: Rakdos, top 3 do Sealed, 17Lands, até 01/12/2026", grau de certeza baixo. Pergunta "Mítica fora do seu melhor par?" com A bomba, B estrutura, C splash. Cartão "Meta em Curto com TUBO, BINDER Originals" e o fecho com o scanner do BINDER Vision. Linhas de fonte e legendas verdes palavra a palavra.

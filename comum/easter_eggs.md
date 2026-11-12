@@ -10,3 +10,4 @@
 | 01/11/2026 | Meta em Curto · EP03 (Arquivo Competitivo) | "LOAM" na vertical na chuva de código do terminal = promo Life from the Loam do Top 32 do Legacy no Eternal Weekend | 8–9 s, canto inferior direito |
 | 02/11/2026 | Meta em Curto · EP04 (Jund em Pequim) | "BOLSÃO" na vertical na chuva de código = a casa cobiçada pelos Sacola-Bolseiro em O Hobbit | cena da The Sackville-Bagginses, à direita da carta |
 | 02/11/2026 | Especial · A comunidade falou: Precon em jogo | retrato do Conde de Manaforte na parede muda de expressão a cada regresso à sala | planos de sala, a partir de ~7 s |
+| 05/11/2026 | Meta em Curto · EP05 (Star Trek) | "1701-A" na vertical na chuva de código = o registo da U.S.S. Enterprise-A | ~4,5–7,5 s, à direita da carta |

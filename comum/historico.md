@@ -48,11 +48,12 @@ Print do próprio post (não do Insights), enviado pelo Ibisson. Entra no quadro
 - 04/11/2026 (previsto) · Especial Mana & Burn "A comunidade falou: Precon em jogo": comentário de @diegoalencard, trecho de Meta em Curto EP03, quadro do Conde. Render conferido a 02/11 (79,33 s com fecho, −14,8 LUFS, pico −2,3 dBTP): `especiais/precon_em_jogo/`. Hipótese: comentário de seguidor na tela + pergunta A/B geram mais respostas por 1.000 views. Métricas: aguardam publicação.
 - 03/11/2026 · Conde de Manaforte Ep. 004 (Joven, Homelands 1995, arte de Douglas Shuler). **Produzido, não publicado.** Render conferido (55,1 s + fecho, sem corte lateral, −13,9 LUFS, pico −1,5 dBTP): `conde/episodios/ep004_joven_ficha.md`. Sem easter egg. Hipótese em teste: pergunta A/B com dois réus concretos. Métricas: aguardam publicação.
 
+- 02/11/2026 · Lambe-lambe · Pré-release Invasion (Star Trek, promocional): render v2 de 20,00 s com fecho e 68 impressões de cartas; **em preparação, PRÉVIA — DIREITOS A CONFIRMAR, não publicado**. Pasta: `lambe-lambe/publicacoes/2026-11-pre-release-star-trek/`. Hipótese: pergunta de três opções (Kirk, Janeway ou Borg Cube). Easter egg: nenhum. Métricas: aguardam publicação.
+- 05/11/2026 · Meta em Curto EP05 "A Enterprise-A que você quer: 3,8% de abrir" (Star Trek, radar para o pré-release; Sealed). **Produzido, não publicado.** Render conferido (93,1 s + fecho, sem corte lateral, −14,0 LUFS, pico −1,9 dBTP; áudio medido, não ouvido): `oraculo/episodios/ep05_star_trek_ficha.md`. Dossiê: `oraculo/episodios/ep05_star_trek_dossie.md`. Branch `meta-em-curto-ep05`. Hipótese em teste: gráfico próprio aumenta guardados; pergunta A/B/C sobre decisão real gera respostas. Métricas: aguardam publicação.
+
 ## Previsões registadas do TUBO
 
 Fonte canónica única: `oraculo/previsoes/registo.yaml` (decisão de 09/11/2026, `nucleo/DECISOES.md`: este histórico não repete a tabela, só remete). Método de pré-release: `oraculo/PROTOCOLO_PRE_RELEASE.md`. Briefing em qualquer dia: `python3 -I oraculo/previsoes/ciclo.py continuacao`. Erro numa previsão pública = "Erro de sistema" num episódio seguinte (`oraculo/CONTEXTO.md` §7.2, item 4).
-
-- 02/11/2026 · Lambe-lambe · Pré-release Invasion (Star Trek, promocional): render v2 de 20,00 s com fecho e 68 impressões de cartas; **em preparação, PRÉVIA — DIREITOS A CONFIRMAR, não publicado**. Pasta: `lambe-lambe/publicacoes/2026-11-pre-release-star-trek/`. Hipótese: pergunta de três opções (Kirk, Janeway ou Borg Cube). Easter egg: nenhum. Métricas: aguardam publicação.
 
 ## Estado de publicação confirmado pelo fundador (31/10/2026)
 
