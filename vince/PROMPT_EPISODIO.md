@@ -10,7 +10,7 @@ Colar como primeira mensagem de um chat novo do executor. Serve para qualquer ep
 
 **1. Fonte de verdade — ler uma vez, por esta ordem, antes de tocar em alguma coisa**
 
-Repositório: `ibisson254/GERADOR-DE-VIDEO-BINDER`, branch `vince/kit-v1` (PR #18, ainda sem merge).
+Repositório: `ibisson254/GERADOR-DE-VIDEO-BINDER`, branch `vince/kit-v1` (PR #23, ainda sem merge).
 `git clone --depth 1 -b vince/kit-v1 https://github.com/ibisson254/GERADOR-DE-VIDEO-BINDER`
 
 1. `AGENTS.md` 2. `STATUS.md` 3. `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md` 4. `vince/PERFIL.md` 5. `vince/CONTEXTO.md` (bíblia — manda em tudo o que é identidade) 5b. `vince/EDICAO.md` (edição) 5c. `vince/DADOS.md` (rubricas, fontes dos números e a fronteira com o Giro) (sistema de edição "Pregão" — manda no ritmo, na tipografia e no som) 6. `vince/kit/v1/ancoras.json` 7. `manaburn/LEIA-ME.md` (motor de vídeo HTML + Playwright + ffmpeg: **reaproveitar, não reconstruir**).
