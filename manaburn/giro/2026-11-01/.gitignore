@@ -1,0 +1,11 @@
+frames/
+previa/
+vozes/
+*.wav
+*.mp4
+*.jpg
+!cards/*.png
+data.js
+node_modules
+tv_asset.png
+logo
