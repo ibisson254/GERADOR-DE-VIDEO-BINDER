@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 12/11/2026 (16:34) · VV-EP01: Spock #535 apesar do aviso da auditoria (ORB-17) e gramática acelerada do Vince
+
+**O quê:** (1) A auditoria (`memoria.py pauta`) bloqueou a pauta por semelhança com ORB-17 (Spock autógrafo n.º 1702, Órbita). A pauta avança: impressão diferente (#535, Showcase Surge Foil), frente diferente (preço, não estética) e ângulo novo (preço de pré-venda assente numa venda ≠ mercado). (2) Estreia com montagem de alta cadência na faixa escolhida pelo fundador (`sweat_on_the_walls.mp3`, 140 BPM): cortes em múltiplos da batida (1 batida nos impactos, 2 nas reações, 1 compasso nas placas com números), seguindo `vince/EDICAO.md` (branch `vince/kit-v1`). (3) Preço em dólares (TCGplayer) com conversão em reais marcada como conversão, porque não há preço brasileiro do #535 antes do lançamento.
+**Porquê:** fundador, 12/11/2026 16:34, depois de ler o briefing v2 com o bloqueio e as decisões pendentes: «Comece a produção do vídeo e só pare quando terminar».
+**Impacto:** VV-EP01 produzido e CONCLUÍDO (`vince/episodios/ep01_pregao_vespera/`). Voz do Vince gerada (578 créditos ElevenLabs). Fica com o fundador: verificar no TCGplayer que o #535 continua com uma só venda antes de publicar; licença da faixa para o Instagram.
+
 ## 12/11/2026 (05:54) · Todos os episódios fechados, menos o TUBO de segunda; Vince Vault aprovada
 
 **O quê:** (1) Entram na `main`, fechados (CONCLUÍDO; PUBLICADO onde o índice de 08/11 já o confirmava): MC-EP03, MC-EP04, MC-EP05 (+carrossel), MC-EP07, MB-ESP03, MB-EP10 («A febre do autógrafo», branch `ep10-cartas-especiais`, conforme o índice semanal confirmado pelo fundador a 08/11 — as branches `ep10-97-terrenos`, `ep10-numot` e `ep10-olag` ficam como rascunhos não integrados), MB-GIRO02, CM-EP004 (registo), CM-EP005, LL-PRETRK, LL-SHEOL, LL-DIVCAR e LL-CAMPBR. (2) **MC-EP06 («Prestação de contas: placar zero», o episódio de segunda) fica ABERTO**: escrito, não produzido; a prestação de contas é segunda, 16/11. (3) **Vince Vault aprovada como frente** (pasta `vince/`, branch `vince-vault`/PR #11; a `proposta/vince-vault` de 07/11 fica como proposta substituída); secção no catálogo. Pequeno Mestre (PR #2) e Vinci (PR #17) continuam em desenvolvimento, sem aprovação.

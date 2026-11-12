@@ -182,6 +182,7 @@ Peças de 18–19/10/2026 descritas em projeto:claude/reel-lambe-lambe-pop.md ("
 | ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | VV-EP00 | Fechamento (piloto 3D, arquivado) | Elminster; Gandalf; Plaza | Boletim de preços | Buy the dip! | PAUSADO | direção 2D ativa desde 12/11 (PR #17): o piloto 3D fica como arquivo; kit 2D por fechar (ficheiros do PR #17 em falta na branch) | 12/11/2026 (frente) | — | vince/episodios/ep00_fechamento_ficha.md | — | sem conflito |
+| VV-EP01 | O Pregão de Véspera: preço de pré-venda assente numa venda | Mr. Spock, Science Officer (TRK #535, Showcase Surge Foil) | US$ 299,98 é uma venda; antes do lançamento, preço é o que o vendedor pede | Trezentos dólares! | CONCLUÍDO | render conferido 12/11/2026 (43,87 s com fecho, −14,0 LUFS, QC sem problemas) | 12/11/2026 16:34 (fundador: «Comece a produção…») | — | vince/episodios/ep01_pregao_vespera/ficha.md | ORB-17; ORB-18; MB-ESP03; MC-EP05 | auditoria BLOQUEOU por ORB-17 (mesmo nome de carta); decisão do fundador em nucleo/DECISOES.md (12/11, 16:34): impressão, frente e ângulo diferentes |
 
 ## Lacunas da auditoria retroativa (01/11/2026)
 
