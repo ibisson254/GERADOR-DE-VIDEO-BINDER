@@ -2,6 +2,11 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 13/11/2026 (16:18) · Motor autónomo de carrossel «Artistas de Magic» (7 slides)
+
+**O quê:** o fundador enviou `lambe-lambe/MASTER_PROMPT_MOTOR_CARROSSEL.md`: pedido «faça um carrossel sobre [artista]» → pesquisa no Scryfall, curadoria e 7 slides prontos, sem aprovação entre slides. Volta a haver fita, mas só a segurar impressões e cartas (substitui a proibição de fitas do Master Prompt 2.0). Implementação: `lambe-lambe/kit_carrossel/motor.py` + `carrossel_<artista>.py`. Primeiro: Raymond Swanland (`carrosseis_artistas/raymond_swanland/`).
+**Mantém-se:** retrato só com foto fornecida pelo fundador; sem símbolo de Planeswalker; CTA do BINDER na legenda.
+
 ## 13/11/2026 (16:07) · Master Prompt 2.0 da série Artistas de Magic
 
 **O quê:** o fundador enviou o `lambe-lambe/MASTER_PROMPT_ARTISTAS_2.md`, referência de direção de arte da série. Implementação: `lambe-lambe/kit_carrossel/capa_mp2.py` + `cfg_<artista>.json`.

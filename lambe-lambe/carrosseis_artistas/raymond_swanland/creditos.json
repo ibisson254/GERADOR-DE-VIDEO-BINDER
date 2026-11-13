@@ -1,0 +1,58 @@
+{
+ "ugin": {
+  "name": "Ugin, the Spirit Dragon",
+  "set": "Fate Reforged",
+  "year": "2015",
+  "num": "1",
+  "artist": "Raymond Swanland",
+  "uri": "https://scryfall.com/card/frf/1/ugin-the-spirit-dragon"
+ },
+ "pact": {
+  "name": "Pact of the Titan",
+  "set": "Future Sight",
+  "year": "2007",
+  "num": "103",
+  "artist": "Raymond Swanland",
+  "uri": "https://scryfall.com/card/fut/103/pact-of-the-titan"
+ },
+ "etali": {
+  "name": "Etali, Primal Storm",
+  "set": "Rivals of Ixalan",
+  "year": "2018",
+  "num": "100",
+  "artist": "Raymond Swanland",
+  "uri": "https://scryfall.com/card/rix/100/etali-primal-storm"
+ },
+ "mesa": {
+  "name": "Arid Mesa",
+  "set": "Zendikar",
+  "year": "2009",
+  "num": "211",
+  "artist": "Raymond Swanland",
+  "uri": "https://scryfall.com/card/zen/211/arid-mesa"
+ },
+ "tutor": {
+  "name": "Vampiric Tutor",
+  "set": "Eternal Masters",
+  "year": "2016",
+  "num": "112",
+  "artist": "Raymond Swanland",
+  "uri": "https://scryfall.com/card/ema/112/vampiric-tutor"
+ },
+ "drain": {
+  "name": "Mana Drain",
+  "set": "Iconic Masters",
+  "year": "2017",
+  "num": "65",
+  "artist": "Raymond Swanland",
+  "uri": "https://scryfall.com/card/ima/65/mana-drain"
+ },
+ "grave": {
+  "name": "Watery Grave",
+  "set": "Gatecrash",
+  "year": "2013",
+  "num": "249",
+  "artist": "Raymond Swanland",
+  "uri": "https://scryfall.com/card/gtc/249/watery-grave"
+ }
+}
