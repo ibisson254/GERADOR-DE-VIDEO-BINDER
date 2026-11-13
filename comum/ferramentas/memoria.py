@@ -177,7 +177,8 @@ def verificar_encerramento(raiz, entrada):
     if not p.exists():
         return [f'ficha não existe: {entrada["Ficha"]}']
     pasta = p if p.is_dir() else p.parent
-    ficha = next((f for pd in PECAS['ficha'] for f in pasta.glob(pd)), None)
+    # A ficha indicada no registo tem prioridade (ficha_fontes.md também casa com 'ficha*.md').
+    ficha = p if p.is_file() else next((f for pd in PECAS['ficha'] for f in sorted(pasta.glob(pd))), None)
     txt = ficha.read_text(encoding='utf-8') if ficha else ''
     # Estrutura antiga (Conde, Meta em Curto): legendas em <frente>/legendas/<epNN>_*.txt,
     # com o comentário fixado dentro do mesmo ficheiro.

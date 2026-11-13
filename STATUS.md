@@ -12,6 +12,12 @@ Auditoria integral, matriz de integração, sistema de previsões do TUBO corrig
 - **Motor do Giro encontrado**: está na branch `giro/2026-11-01` (`manaburn/giro/2026-11-01/`: `processar.py`, `previa.py`, `quadros.py`, `giro.html`, `cena_giro.js`); integrado nesta branch como arquivo do episódio publicado. A pendência "enviar ou subir o motor que gerou o Giro" (abaixo) fica resolvida quando esta branch entrar na `main`.
 - **Integridade**: `python3 -I comum/ferramentas/validar_repo.py` — caminhos do `series.yaml`, sintaxe Python, imports locais, vídeos versionados, links internos e segredos. Resultado a 12/11: 0 problemas (3 limitações conhecidas documentadas e aceites). Nenhum segredo versionado.
 
+## Insights de 13/11/2026 (MB-EP11 e carrossel)
+
+- **MB-EP11** (Numot, branch `manaburn/ep10-numot`, que o registo dava como rascunho) foi publicado a 11/11 e impulsionado: é o post mais visto do canal. Pacote trazido para `manaburn/episodios/ep10_numot/`; linha nova no registo editorial (ID MB-EP11, porque MB-EP10 é «A febre do autógrafo»).
+- Snapshot e análise: `comum/insights/semanas/2026-11-13.md` (separação orgânico × pago, carrossel com 43 toques no link, hipótese do par Reel + carrossel).
+- **Depende do fundador:** confirmar se o carrossel "300 cartas" é o LL-CAMPBR; totais finais do anúncio; retenção do Reel; decidir se o scanner pode entrar a meio do episódio (hoje só no fecho obrigatório).
+
 ## Estado editorial
 
 Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vince Vault (série, aprovada a 12/11, em desenvolvimento)**; Órbita (temática); Lambe-lambe (espontânea); especiais. Estados por conteúdo: `comum/REGISTRO_EDITORIAL.md` (86 conteúdos). Fecho de 12/11: MC-EP03/04/05/07, MB-ESP03, MB-EP10, MB-GIRO02, CM-EP004/005, LL-PRETRK, LL-SHEOL, LL-DIVCAR, LL-CAMPBR fechados; **MC-EP06 (episódio de segunda) aberto**. Pequeno Mestre (PR #2) em desenvolvimento, sem aprovação; o PR #17 era a direção 2D do próprio Vince Vault (integrado, reconciliado). Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
