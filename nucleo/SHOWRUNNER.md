@@ -65,7 +65,8 @@ Uma ficha por peça, a partir de `modelos/FICHA_EPISODIO.md`, com no mínimo:
 6. Plano visual e lista de materiais reais necessários (cartas, listas, gravações do app).
 7. Pacote de publicação: legenda, comentário fixado, texto alternativo, ficha de fatos (constituição §10).
 8. Easter egg (0 ou 1) e métrica principal.
-9. O que depende do fundador.
+9. Plano de retenção (constituição, «Retenção e recompensa»): o que o quadro 0 mostra de Magic, o gancho visual dos primeiros 3 s, as revelações com som e o pagamento do gancho.
+10. O que depende do fundador.
 
 O motor técnico da frente executa a partir deste briefing.
 
@@ -86,13 +87,13 @@ Vale para qualquer conteúdo produzido (episódio, especial, Órbita, Lambe-lamb
 3. Comentário fixado: `comentario_fixado.txt`.
 4. Texto alternativo: `texto_alternativo.txt`.
 5. Fontes e evidências: tabela da ficha ou `fontes.md`.
-6. Controlo de qualidade medido no ficheiro final, na ficha.
+6. Controlo de qualidade medido no ficheiro final, na ficha, com a linha «Retenção» (quadro 0 com Magic; mudança visual ≤ 3 s; som em cada revelação).
 7. Localização do vídeo e da capa finais na ficha ("Ficheiros finais"). Os vídeos renderizados nunca entram no Git.
 8. `../comum/REGISTRO_EDITORIAL.md`: estado `CONCLUÍDO` (ou `PUBLICADO` com confirmação), ficha, relações, originalidade.
 9. `../comum/historico.md`: uma linha com data, ID, frente, peça e estado.
 10. `../STATUS.md`, quando muda o estado do estúdio ou da frente.
 11. Handoff (`modelos/HANDOFF.md`).
-12. Verificação: `python3 comum/ferramentas/memoria.py encerramento <ID>` e `validar` sem erros → commit → `git push` → conferir que o hash está no remoto (`git ls-remote origin <branch>` ou a página do commit) e que os ficheiros aparecem lá.
+12. Verificação: `python3 comum/ferramentas/memoria.py encerramento <ID>` e `validar` sem erros → commit na `main` (ou merge imediato da branch para a `main`) → `git push` → conferir que o hash está na `main` remota (`git ls-remote origin main` ou a página do commit) e que os ficheiros aparecem lá.
 
 Sem publicar no Instagram e sem gastar créditos externos (vozes, música, imagem) sem autorização explícita do fundador.
 

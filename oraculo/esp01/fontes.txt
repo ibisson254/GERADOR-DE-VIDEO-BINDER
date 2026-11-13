@@ -1,0 +1,11 @@
+Meta em Curto ESP01 · Precon em dupla · fontes (consulta 13/11/2026)
+
+1. Comentário de @diarioplaninauta num post do @binderthetrade (print enviado pelo fundador a 13/11/2026, 02:08; «1 sem»). Uso autorizado pelo fundador: oraculo/autorizacoes/2026-11-13_esp01_diarioplaninauta.md. Tipo: relato/opinião do autor. No vídeo entra o print real (recorte em comentario_diarioplaninauta.png), com a foto, a pedido do fundador (02:24).
+2. «@montcardshop já fez torneios valendo 3k»: só o relato do comentário. Pesquisa web de 13/11 («montcardshop torneio precon 2x2») sem resultado. NÃO VERIFICADO; marcado assim no ecrã e no comentário fixado.
+3. Commander em dupla, regra oficial: Wizards Play Network, «Noite de Commander: Gigante de Duas Cabeças» (Reality Fracture): cada jogador joga com o próprio deck de Commander de 100 cartas e as duplas compartilham 60 pontos de vida. https://wpn.wizards.com/pt-BR/event/two-headed-giant-commander-night-reality-fracture . Tipo: facto.
+4. Commander: 40 pontos de vida por jogador. https://magic.wizards.com/pt-br/formats/commander . Tipo: facto.
+5. Gigante de Duas Cabeças clássico: vida compartilhada a começar em 30 (easter egg). https://magic.wizards.com/pt-BR/formats/two-headed-giant . Tipo: facto.
+6. 25% / 50%: cálculo nosso, modelo sem habilidade (1/4 e 1/2), jogadores de força igual. Tipo: inferência matemática; não é win rate.
+7. «Resultado binário, o suíço agradece»: leitura do TUBO (pareamento suíço pensado para vitória/derrota). Tipo: opinião/inferência; marcado «leitura do TUBO» no ecrã.
+8. «Ninguém publica win rate de dupla»: na nossa pesquisa de 13/11 não encontrámos win rate publicado de 2x2 de Precon. Tipo: incerteza; o ecrã diz «nenhum publicado na nossa pesquisa (13/11)».
+9. Cartas do gancho: Jace, Multiverse Architect (frc 1, Volkan Baǵa), Nissa, Leyline Tamer (frc 2, Justyna Dura), Avacyn, Angel of Horror (frc 7, Pauline Voss), Niv-Mizzet, Ghost Counsel (frc 10, Brian Valeza). Reality Fracture Commander, 02/10/2026. Imagens e dados: Scryfall (cartas/creditos.json). Tipo: facto.
