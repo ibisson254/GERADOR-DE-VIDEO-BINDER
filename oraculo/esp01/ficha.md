@@ -1,6 +1,6 @@
 # Ficha · Meta em Curto · ESP01 · A comunidade falou: Precon em dupla
 
-ID editorial: **MC-ESP01**. Render de 13/11/2026: 59,2 s com o fecho, 55,3 s sem o fecho. Pacote nesta pasta: `comentario_diarioplaninauta.png`, `esp01_audio.py`, `esp01_render.py`, `roteiro.json`, `words.json`, `fontes.txt`, `legenda.txt`, `comentario_fixado.txt`, `texto_alternativo.txt`.
+ID editorial: **MC-ESP01**. Render de 13/11/2026: 59,2 s com o fecho, 55,3 s sem o fecho. Pacote nesta pasta: `cartas/` (4 imagens Scryfall + `creditos.json`), `comentario_diarioplaninauta.png`, `esp01_audio.py`, `esp01_render.py`, `roteiro.json`, `words.json`, `fontes.txt`, `legenda.txt`, `comentario_fixado.txt`, `texto_alternativo.txt`.
 
 ## Classificação
 - Série: Meta em Curto (TUBO) · **especial**, fora do ciclo segunda/quinta (não substitui o MC-EP06).
@@ -22,7 +22,7 @@ Voz: ElevenLabs «Antonio de Jesus» (`MK5tXPmT83J5SUlpUo4K`), eleven_v4, tomada
 ## Estrutura (render)
 | Tempo | Onde | Conteúdo |
 |---|---|---|
-| 0–5,0 s | Fora (desconfiado → confiante) | Gancho: MESA DE 4 25% · EM DUPLA 50% |
+| 0–5,0 s | Fora (desconfiado → confiante) | Gancho (v3, 09:49): quadro 0 com 4 comandantes reais do Reality Fracture Commander a cair na mesa (vida 40); 3 apagam → 25%; as cartas viram duas duplas por cima do TUBO (vida 60) → 50% no ecrã do TUBO, onde entra o mergulho |
 | 5,0–15,2 s | Mergulho → dentro | Arquivo: print real do comentário de @diarioplaninauta (com foto, entrada «scan»), carimbo 2x2 = IDEAL; cartão @montcardshop «3k · relato do comentário · não verificado» |
 | 15,2–21,7 s | Dentro | Regras: 1 deck de 100 por jogador; 60 de vida por dupla; Commander comum 40; egg «30» |
 | 21,7–29,8 s | Dentro | Modelo sem habilidade: mesa de 4 (25%) × dois contra dois (50%); carimbo ANTES DA PRIMEIRA CARTA |
@@ -39,15 +39,16 @@ Voz: ElevenLabs «Antonio de Jesus» (`MK5tXPmT83J5SUlpUo4K`), eleven_v4, tomada
 | `qc_video.py --frente tubo` | Sem problemas mensuráveis |
 | 1080×1920, 30 fps | OK |
 | Corte lateral | cropdetect 1080:1920:0:0 em todos os quadros medidos |
-| Loudness | −14,0 LUFS, pico −2,1 dBTP |
+| Loudness | −14,0 LUFS, pico −1,9 dBTP |
 | Fecho | Presente a partir de 55,3 s |
 | Folha de contacto | Vista do início ao fim; corrigidas sobreposições do gancho, da revelação e da pergunta com o monitor; ecrã vazio nas regras (15–17 s) corrigido |
 | Facto × opinião | 25%/50% marcado como cálculo nosso (não é win rate); «suíço» e revelação marcados como leitura do TUBO; 3k marcado como não verificado |
 | Pessoas | Print real do comentário com a foto de perfil (pedido do fundador, 02:24); nome, @ e imagem sob responsabilidade do fundador |
+| Retenção | Quadro 0 com cartas de Magic; mudanças visuais ≤ 3 s; som curto em cada revelação (25%, duplas, 50%, carimbos, 60, chips) |
 | Egg | «30» na chuva de código (vida do Gigante de Duas Cabeças clássico), `comum/easter_eggs.md` |
 
 ## Ficheiros finais
-- Vídeo: `ESP01_META_EM_CURTO.mp4` (md5 781d75722330f68b687cd981ca923f14; v2 com o print real, 02:24), entregue ao fundador na conversa de 13/11/2026; não versionado.
+- Vídeo: `ESP01_META_EM_CURTO.mp4` (md5 cad99628b5d3853b98f0bc2718bd999e; v3 com o gancho de cartas reais e micro-sons, 09:49), entregue ao fundador na conversa de 13/11/2026; não versionado.
 - Capa: `ESP01_CAPA.png` (md5 95b9a6d8a5b7fb9cdb915408f59ae5e6), entregue na mesma conversa; não versionada.
 - Refazer: na pasta de trabalho com `voz.mp3` (tomada acima) e `words.json` desta pasta: `python3 esp01_audio.py <kit>` → `python3 esp01_render.py <kit>` → `python3 esp01_render.py <kit> capa`.
 

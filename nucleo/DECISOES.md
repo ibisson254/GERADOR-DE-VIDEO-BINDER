@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 13/11/2026 (09:49) · Retenção e recompensa em todo o conteúdo; gancho novo do MC-ESP01
+
+**O quê:** (1) Regra nova na constituição (bloco «Retenção e recompensa em todo o conteúdo»): quadro 0 com sinal inequívoco de Magic, gancho visual que encena a tese, mudança visual a cada ≤ 3 s, som curto em cada revelação, ciclo aberto pago antes do fim, participação. (2) MC-ESP01: os primeiros 5 s passam a ser uma mesa de Commander com 4 comandantes reais do Reality Fracture Commander (Jace, Nissa, Avacyn, Niv-Mizzet; Scryfall) com vida 40; 3 apagam (25%), as cartas viram duas duplas com vida 60 e o «50%» aparece no ecrã do TUBO, onde entra o mergulho. Micro-sons em todas as revelações. Voz sem alteração (sem créditos novos).
+**Porquê:** fundador, 13/11/2026 (09:43): «Senti falta de um gancho visual para que os usuários saibam logo que é de Magic»; (09:49): «Aceito sua sugestão temos que sempre tentar ter técnicas de retenção de espectadores e técnicas de liberação de dopamina para o conteúdo».
+**Impacto:** vale para todas as frentes a partir de agora; episódios publicados ou aprovados não se reabrem. Identidade, voz e trilha das séries não mudam.
+
 ## 13/11/2026 (02:13) · Meta em Curto ESP01: comentário de seguidor e especial fora do ciclo semanal
 
 **O quê:** (1) Primeiro especial do TUBO (`MC-ESP01`, «A comunidade falou: Precon em dupla»): leitura de formato a partir do comentário de @diarioplaninauta (2x2 de Precon, menção à @montcardshop). Fora do ciclo segunda/quinta; não substitui o MC-EP06. (2) Nome, @ e texto do comentário usados sem autorização prévia do autor; o fundador assume a responsabilidade (exceção à constituição §11.5 só neste episódio; registo em `oraculo/autorizacoes/2026-11-13_esp01_diarioplaninauta.md`). Print real do comentário, com a foto de perfil, a pedido do fundador (13/11, 02:24), em vez da silhueta. (3) Autorização para gastar créditos da ElevenLabs na voz do TUBO deste especial.

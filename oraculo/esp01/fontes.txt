@@ -8,3 +8,4 @@ Meta em Curto ESP01 · Precon em dupla · fontes (consulta 13/11/2026)
 6. 25% / 50%: cálculo nosso, modelo sem habilidade (1/4 e 1/2), jogadores de força igual. Tipo: inferência matemática; não é win rate.
 7. «Resultado binário, o suíço agradece»: leitura do TUBO (pareamento suíço pensado para vitória/derrota). Tipo: opinião/inferência; marcado «leitura do TUBO» no ecrã.
 8. «Ninguém publica win rate de dupla»: na nossa pesquisa de 13/11 não encontrámos win rate publicado de 2x2 de Precon. Tipo: incerteza; o ecrã diz «nenhum publicado na nossa pesquisa (13/11)».
+9. Cartas do gancho: Jace, Multiverse Architect (frc 1, Volkan Baǵa), Nissa, Leyline Tamer (frc 2, Justyna Dura), Avacyn, Angel of Horror (frc 7, Pauline Voss), Niv-Mizzet, Ghost Counsel (frc 10, Brian Valeza). Reality Fracture Commander, 02/10/2026. Imagens e dados: Scryfall (cartas/creditos.json). Tipo: facto.

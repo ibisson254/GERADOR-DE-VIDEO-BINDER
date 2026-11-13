@@ -57,6 +57,13 @@ def modem(dur=0.55):
 def stamp_click(dur=0.18):
     tt = np.arange(int(dur * SR)) / SR
     return (np.sin(2 * np.pi * 120 * tt) * np.exp(-tt * 30) * 0.7 + np.random.default_rng(4).normal(0, 1, len(tt)) * np.exp(-tt * 80) * 0.25).astype(np.float32)
+def pop(dur=0.13, f0=650, f1=1300):
+    tt = np.arange(int(dur * SR)) / SR; fr = f0 + (f1 - f0) * tt / dur
+    return (np.sin(2 * np.pi * np.cumsum(fr) / SR) * np.exp(-tt * 18) * 0.45).astype(np.float32)
+def swish(dur=0.35):
+    tt = np.arange(int(dur * SR)) / SR; n = np.random.default_rng(5).normal(0, 1, len(tt))
+    n = np.convolve(n, np.ones(12) / 12, 'same'); e = np.sin(np.pi * tt / dur) ** 2
+    return (n * e * 0.5).astype(np.float32)
 S = np.zeros_like(V)
 def put(x, at, gain):
     i = int(at * SR); n = min(len(x), N - i); S[i:i + n] += x[:n, None] * gain
@@ -67,6 +74,16 @@ put(thump(), 0.0, 0.8)
 put(modem(), DIVE, 0.55)
 put(thump(0.4, 70), EXIT + 0.25, 0.35)
 put(stamp_click(), PREV, 0.5)
+# Micro-recompensas (retenção): um som curto em cada revelação visual.
+def wsa(i): return vt(W[i]['s'])
+for k in range(4): put(stamp_click(), 0.06 * k, 0.45)            # 4 cartas batem na mesa
+put(pop(), wsa(6) - .05, 0.5)                                     # 25%
+put(swish(), wsa(11) - .05, 0.5)                                  # cartas viram duplas
+put(pop(f0=800, f1=1600), wsa(14) - .05, 0.5)                     # 50%
+for i in (29, 39, 63, 87, 104): put(stamp_click(), wsa(i) - .05, 0.4)   # carimbos e cartões
+for i in (72, 82): put(pop(), wsa(i) - .05, 0.4)                   # 25% / 50% na conta
+for i in (111,): put(pop(f0=500, f1=1000), wsa(i) - .05, 0.35)    # «A dupla iguala a mesa»
+for i in (133, 137, 141): put(pop(0.09, 900, 1400), wsa(i) - .05, 0.3)   # chips A/B/C
 mix = V + M + S
 sf.write('mix_raw.wav', mix, SR)
 m = subprocess.run(['ffmpeg', '-v', 'info', '-i', 'mix_raw.wav', '-af', 'loudnorm=I=-14:TP=-2.2:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr

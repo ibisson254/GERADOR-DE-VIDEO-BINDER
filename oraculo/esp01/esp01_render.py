@@ -211,6 +211,81 @@ def wrapw(d, s, font, maxw):
     if cur: out.append(cur)
     return out
 
+
+# ---------- gancho: mesa de Commander com cartas reais (Reality Fracture Commander, Scryfall) ----------
+def _card(n):
+    c = Image.open(K + f'oraculo/esp01/cartas/{n}.jpg').convert('RGB')
+    m = Image.new('L', c.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, c.size[0] - 1, c.size[1] - 1), 26, fill=255)
+    c = c.convert('RGBA'); c.putalpha(m); return c
+CARTAS = [_card(n) for n in ('jace', 'nissa', 'avacyn', 'niv')]
+_cc = {}
+def card_img(i, w, dim=0.0):
+    key = (i, int(w), round(dim, 2))
+    if key not in _cc:
+        c = CARTAS[i]; h = int(w * c.height / c.width); r = c.resize((int(w), h), Image.LANCZOS)
+        if dim > 0:
+            dark = Image.new('RGBA', r.size, (5, 10, 16, 255)); a = r.getchannel('A')
+            r = Image.blend(r, dark, dim); r.putalpha(a)
+        if len(_cc) > 400: _cc.clear()
+        _cc[key] = r
+    return _cc[key]
+GRID = [(55, 250), (555, 250), (55, 945), (555, 945)]; GW = 470            # 2×2 em ecrã inteiro (mesa de 4)
+ROW = [(30, 92), (285, 92), (555, 92), (810, 92)]; RW = 240               # duas duplas por cima do TUBO
+def glow_box(im, box, col=PH, r=26):
+    g = Image.new('RGBA', im.size, (0, 0, 0, 0)); gd = ImageDraw.Draw(g)
+    gd.rounded_rectangle(box, r, outline=col + (255,), width=16); g = g.filter(ImageFilter.GaussianBlur(14))
+    im.alpha_composite(g); ImageDraw.Draw(im).rounded_rectangle(box, r, outline=col + (255,), width=6)
+def pill(d, cx, cy, txt, col, size=44):
+    f = F(MONOB, size); wd = d.textlength(txt, font=f) + 40
+    d.rounded_rectangle((cx - wd / 2, cy - size * .75, cx + wd / 2, cy + size * .75), int(size * .75), fill=(5, 10, 16, 235), outline=col, width=4)
+    d.text((cx, cy), txt, font=f, fill=col, anchor='mm')
+def pop_text(d, cx, cy, txt, t0, t, size, col):
+    if t < t0: return
+    k = eio((t - t0) / 0.22); sz = int(size * (1.35 - 0.35 * k))
+    f = F(INTB, sz)
+    for dx, dy in ((6, 6), (-2, 6)): d.text((cx + dx, cy + dy), txt, font=f, fill=(0, 0, 0, 200), anchor='mm')
+    d.text((cx, cy), txt, font=f, fill=col, anchor='mm')
+def hook(t):
+    T25, TMOV, T50 = ws(6) - .05, ws(11) - .05, ws(14) - .05
+    km = eio((t - TMOV) / 0.5) if t >= TMOV else 0.0
+    base = tubo_frame(t, 'desconfiado' if t < TMOV else 'confiante').convert('RGBA')
+    shade = Image.new('RGBA', base.size, (3, 6, 10, int(225 * (1 - km))))
+    im = base.copy(); im.alpha_composite(shade); d = ImageDraw.Draw(im, 'RGBA')
+    if km < 1:
+        a = int(255 * max(0, 1 - km * 2.5))
+        d.text((W / 2, 120), 'MESA DE 4 · COMMANDER', font=F(MONOB, 50), fill=(200, 215, 220, a), anchor='mm')
+        d.text((W / 2, 185), 'cartas: Reality Fracture Commander (2026)', font=F(COND, 30), fill=(140, 160, 165, a), anchor='mm')
+    for i in range(4):
+        t0 = 0.06 * i; ks = eio((t - t0 + 0.07) / 0.25)
+        if ks <= 0: continue
+        gx, gy = GRID[i]; rx, ry = ROW[i]
+        w = GW + (RW - GW) * km; x = gx + (rx - gx) * km; y = gy + (ry - gy) * km
+        sc = 1.18 - 0.18 * ks; w2 = w * sc; x -= (w2 - w) / 2; y -= (w2 - w) * 0.7
+        dim = 0.0
+        if T25 <= t < TMOV and i != 0: dim = 0.68
+        if t >= T50 and i >= 2: dim = 0.6
+        c = card_img(i, w2, dim); im.alpha_composite(c, (int(x), int(y)))
+        if (T25 <= t < TMOV and i == 0) or (t >= T50 and i < 2):
+            glow_box(im, (int(x), int(y), int(x + c.width), int(y + c.height)))
+        d = ImageDraw.Draw(im, 'RGBA')
+        if km < 0.5 and ks > 0.6:
+            pill(d, x + c.width / 2, y + c.height - 70, '40', WHITE if not (T25 <= t and i != 0) else GREY)
+    if km >= 0.5:
+        kk = eio((km - 0.5) / 0.5)
+        for cx, col in ((280, PH if t >= T50 else WHITE), (800, GREY if t >= T50 else WHITE)):
+            pill(d, cx, 92 + int(RW * 1.4) + 4, '60', col, int(30 + 14 * kk))
+        d.text((540, 92 + int(RW * 0.7)), 'VS', font=F(MONOB, 34), fill=GREY, anchor='mm')
+    if T25 <= t < TMOV:
+        d.rounded_rectangle((250, 800, 830, 1130), 40, fill=(3, 6, 10, 215), outline=WHITE, width=4)
+        pop_text(d, W / 2, 935, '25%', T25, t, 230, WHITE)
+        d.text((W / 2, 1085), '1 em 4', font=F(MONOB, 44), fill=GREY, anchor='mm')
+    if t >= T50:                       # «50%» no ecrã do TUBO: o mergulho entra nele
+        k = eio((t - T50) / 0.2); f = F(INTB, int(84 * (1.3 - .3 * k)))
+        d.rounded_rectangle(SCR, 18, fill=(4, 14, 10, 235))
+        d.text((SCX, SCY - 10), '50%', font=f, fill=PH, anchor='mm')
+        d.text((SCX, SCY + 62), '1 em 2', font=F(MONOB, 26), fill=EM, anchor='mm')
+    return im.convert('RGB')
+
 # ---------- DENTRO ----------
 def scene_comentario(t):
     im, d = term_base(t, 18)
@@ -343,17 +418,11 @@ def frame(t):
 def frame_main(t):
     if t < DIVE_END:
         if t < DIVE:
-            im = tubo_frame(t, 'desconfiado' if t < ws(11) else 'confiante', zoom=1.0 + 0.04 * eio(t / 3.0))
-            d = ImageDraw.Draw(im, 'RGBA')
-            d.text((290, 170), 'MESA DE 4', font=F(MONOB, 44), fill=GREY, anchor='ma')
-            d.text((290, 225), '25%', font=F(INTB, 130), fill=WHITE, anchor='ma')
-            if t >= ws(11) - .05:
-                d.text((790, 170), 'EM DUPLA', font=F(MONOB, 44), fill=GREY, anchor='ma')
-                d.text((790, 225), '50%', font=F(INTB, 130), fill=PH, anchor='ma')
-            note(d, 'chance de base · jogadores de força igual')
-            return subs(im, t, SUBY)
+            return subs(hook(t), t, 1700 if t < ws(11) else SUBY)
         k = eio((t - DIVE) / (DIVE_END - DIVE)); z = 1 + k * 4.2
-        im = tubo_frame(t, 'analitico', zoom=z, cx=W / 2 + (SCX - W / 2) * min(1, k * 1.5), cy=H / 2 + (SCY - H / 2) * min(1, k * 1.5))
+        im = hook(DIVE - 0.001).resize((int(W * z), int(H * z)), Image.LANCZOS)
+        ox = int(SCX * z - (W / 2 + (SCX - W / 2) * min(1, k * 1.5))); oy = int(SCY * z - (H / 2 + (SCY - H / 2) * min(1, k * 1.5)))
+        im = im.crop((ox, oy, ox + W, oy + H))
         if k > 0.6: im = Image.blend(im, scene_comentario(t), (k - 0.6) / 0.4)
         return im
     if t < EXIT: return subs(inside(t), t)
