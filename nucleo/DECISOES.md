@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 13/11/2026 (10:00) · Retenção como padrão obrigatório; git direto para a main
+
+**O quê:** (1) O bloco «Retenção e recompensa» da constituição passa a fazer parte do briefing (`SHOWRUNNER.md` §4, item 9) e do controlo de qualidade de cada conteúdo (linha «Retenção» na ficha, §6). (2) Fim do PR à espera: com render feito e encerramento + validação sem erros, o conteúdo entra na `main` na mesma sessão; alterações posteriores entram como commit novo na `main`; sem force push. Substitui a regra «nada de merge automático para `main`» de `AGENTS.md`.
+**Porquê:** fundador, 13/11/2026 (10:00): «Isso tem que se tornar padrão tanto a forma de retenção de espectadores liberação de dopamina e sempre que os vídeos forem renderizado já pode fazer o merge se eu quiser fazer alterações corrija o merge já feito isso para todos os vídeos daqui pra frente estou gastando limites desnecessário nessa ação».
+**Impacto:** menos passos por episódio. A barreira de qualidade passa a ser o encerramento + a validação: se falharem, nada entra na `main`. Publicar no Instagram continua a ser só do fundador.
+
 ## 13/11/2026 (09:49) · Retenção e recompensa em todo o conteúdo; gancho novo do MC-ESP01
 
 **O quê:** (1) Regra nova na constituição (bloco «Retenção e recompensa em todo o conteúdo»): quadro 0 com sinal inequívoco de Magic, gancho visual que encena a tese, mudança visual a cada ≤ 3 s, som curto em cada revelação, ciclo aberto pago antes do fim, participação. (2) MC-ESP01: os primeiros 5 s passam a ser uma mesa de Commander com 4 comandantes reais do Reality Fracture Commander (Jace, Nissa, Avacyn, Niv-Mizzet; Scryfall) com vida 40; 3 apagam (25%), as cartas viram duas duplas com vida 60 e o «50%» aparece no ecrã do TUBO, onde entra o mergulho. Micro-sons em todas as revelações. Voz sem alteração (sem créditos novos).

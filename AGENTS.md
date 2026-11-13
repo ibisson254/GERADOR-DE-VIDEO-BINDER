@@ -43,7 +43,8 @@ Frente nova: fim de `nucleo/CATALOGO_EDITORIAL.md`. Mudança de regra: `nucleo/D
 ## 3. Segurança
 
 - Não apagar ficheiros sem autorização do Ibisson.
-- Nada de force push nem de merge automático para `main`.
+- Nada de force push nem de reescrever histórico.
+- **Git direto para a `main`** (fundador, 13/11/2026): com o render feito e `memoria.py encerramento <ID>` + `validar` sem erros, o conteúdo entra na `main` na mesma sessão (commit na `main` ou merge imediato da branch), sem PR à espera de aprovação. Alterações pedidas depois entram como commit novo na `main`. Se o encerramento ou a validação falharem, o trabalho fica numa branch e o handoff diz porquê.
 - Não sobrescrever originais nem versões sem comparar.
 - Nunca versionar credenciais, chaves API ou dados de testadores.
 - Não publicar no Instagram.

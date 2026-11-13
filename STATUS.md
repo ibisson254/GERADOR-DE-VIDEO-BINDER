@@ -18,7 +18,7 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 
 ## Em produção
 
-- **MC-ESP01 «A comunidade falou: Precon em dupla»** (13/11): primeiro especial do TUBO, a partir do comentário de @diarioplaninauta; autorização do fundador (02:13). **CONCLUÍDO, não publicado.** Pacote: `oraculo/esp01/`. Antes de publicar: ouvir a pronúncia, avisar o autor e, se ele aceitar, convidar para Collab (e a @montcardshop).
+- **MC-ESP01 «A comunidade falou: Precon em dupla»** (13/11): primeiro especial do TUBO, a partir do comentário de @diarioplaninauta; autorização do fundador (02:13). **CONCLUÍDO, não publicado** (v3 com gancho de cartas reais, na `main`). Pacote: `oraculo/esp01/`. Antes de publicar: ouvir a pronúncia, avisar o autor e, se ele aceitar, convidar para Collab (e a @montcardshop).
 - **MC-EP06 «Prestação de contas: placar zero»** (o TUBO de segunda): escrito, não produzido; a prestação de contas real é segunda 16/11 (`python3 -I oraculo/previsoes/ciclo.py segunda`).
 - **Vince Vault (Multiverse Capital)**: direção 2D ativa (PR #17, decisões de 11–12/11; 3D arquivado). Bíblia `vince/CONTEXTO.md`, som da Fonte `vince/audio/fonte.py`. **Em falta:** o kit 2D (16 PNG), `recortar.py`, `EDICAO.md` e `PROMPT_EPISODIO.md` descritos no PR #17 não chegaram à branch — pedir à sessão de origem ou refazer com aprovação.
 
