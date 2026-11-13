@@ -1,0 +1,18 @@
+O Niv virou dez cartas. Quantas vêm pra sua mão? Chuta um número de 0 a 10.
+
+Como o Niv-Mizzet Reborn funciona:
+1. Ele entra no campo e você revela as 10 cartas do topo do grimório.
+2. Para cada um dos 10 pares de cores (branco-azul, azul-preto, preto-vermelho e por aí vai), você escolhe uma carta que seja exatamente daquelas duas cores.
+3. As escolhidas vão para a mão. O resto vai para o fundo do grimório em ordem aleatória.
+Carta de uma cor só, incolor, de três cores ou terreno não vem: só carta de exatamente duas cores.
+
+Texto da carta (Oracle): "Flying. When Niv-Mizzet Reborn enters, reveal the top ten cards of your library. For each color pair, choose a card that's exactly those colors from among them. Put the chosen cards into your hand and the rest on the bottom of your library in a random order."
+
+Os três combos do vídeo:
+• Savage Ventmaw (vermelho e verde, o Niv acha) + Aggravated Assault (só vermelho, o Niv não acha): cada ataque do Ventmaw gera 6 manas, o Assault custa 5 para desvirar e dar outro combate. Combates infinitos.
+• Duskmantle Guildmage (azul e preto, acha) + Mindcrank (incolor, não acha): perda de vida e moagem em loop.
+• Witherbloom Apprentice (preto e verde, acha) + Chain of Smog (só preto, não acha): cada cópia do Chain of Smog drena 1 de cada oponente. Cópias infinitas.
+
+Reparou na TV? O Combômetro marca 50% porque o Niv acha 3 das 6 peças desses três combos.
+
+Tem um detalhe escondido na TV SAL. Achou?

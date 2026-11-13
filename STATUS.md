@@ -18,6 +18,7 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 
 ## Em produção
 
+- **MB-EP11 «O rodízio de combo»** (Niv-Mizzet Reborn, 13/11): roteiro, TV SAL, destaques, inserts, legenda, comentário fixado e texto alternativo prontos em `manaburn/episodios/ep11_niv_rodizio/`; voz do Burn gerada (`burn_ep11.mp3`). **Bloqueio:** faltam créditos no ElevenLabs para a faixa do Mana (480 pedidos, 250 de saldo). Próximo passo: gerar só o Mana com `vozes_elevenlabs.txt` e seguir a pendência 2 da ficha.
 - **MC-EP06 «Prestação de contas: placar zero»** (o TUBO de segunda): escrito, não produzido; a prestação de contas real é segunda 16/11 (`python3 -I oraculo/previsoes/ciclo.py segunda`).
 - **Vince Vault (Multiverse Capital)**: direção 2D ativa (PR #17, decisões de 11–12/11; 3D arquivado). Bíblia `vince/CONTEXTO.md`, som da Fonte `vince/audio/fonte.py`. **Em falta:** o kit 2D (16 PNG), `recortar.py`, `EDICAO.md` e `PROMPT_EPISODIO.md` descritos no PR #17 não chegaram à branch — pedir à sessão de origem ou refazer com aprovação.
 

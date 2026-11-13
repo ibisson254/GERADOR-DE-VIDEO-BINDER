@@ -14,4 +14,4 @@
 | 06/11/2026 | Mana & Burn · Especial pré-release Star Trek | "CH 47" no ecrã de troca de canal do ato 3 (Borg) = o 47, piada interna dos argumentistas de Star Trek | ~28,2–28,6 s, centro da TV |
 | 07/11/2026 | Mana & Burn · Ep. 10 (A febre do autógrafo) | relógio da TV SAL em "17:01" = nº 1701 da carta de autógrafo do Kirk (e NCC-1701) | canto inferior direito da TV, em todos os planos da TV (0–3,9 s, 12,3–15,4 s, 34,5–38,6 s) |
 | 10/11/2026 | Meta em Curto · EP07 (Mundial 32) | "2002" na vertical na chuva de código = ano do título mundial de Carlos Romão, primeiro brasileiro campeão | fichas dos brasileiros, ~16–19 s, canto inferior direito |
-
+| 13/11/2026 | Mana & Burn · Ep. 11 (O rodízio de combo) | relógio da TV SAL em "10:10" = 10 cartas viradas pelo Niv e 10 pares de cores | canto inferior direito da TV, em todos os planos da TV |
