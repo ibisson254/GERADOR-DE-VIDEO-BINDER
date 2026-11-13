@@ -1,0 +1,33 @@
+{
+ "episodio": "Meta em Curto · Especial 01 · A comunidade falou: Precon em dupla (leitura de formato)",
+ "nota": "texto = legenda no ecrã; fala = grafia fonética enviada ao ElevenLabs. Mesmo número de palavras por bloco.",
+ "blocos": [
+  {"id": "gancho", "onde": "fora",
+   "texto": "Mesa de quatro: você começa com vinte e cinco por cento. Em dupla, com cinquenta.",
+   "fala": "Mesa de quatro: você começa com vinte e cinco por cento. Em dupla, com cinquenta."},
+  {"id": "comentario", "onde": "dentro",
+   "texto": "Quem trouxe a tese foi o Diário Planinauta, aqui nos comentários. Para torneio grande, Precon em dupla é o ideal. Ele conta que a Montcard já fez torneio valendo três mil.",
+   "fala": "Quem trouxe a tese foi o Diário Planinauta, aqui nos comentários. Para torneio grande, Prícon em dupla é o ideal. Ele conta que a Môntcard já fez torneio valendo três mil."},
+  {"id": "regras", "onde": "dentro",
+   "texto": "Na versão oficial da Wizards, cada jogador usa o próprio deck de cem cartas. A dupla divide sessenta pontos de vida.",
+   "fala": "Na versão oficial da Uízards, cada jogador usa o próprio déck de cem cartas. A dupla divide sessenta pontos de vida."},
+  {"id": "conta", "onde": "dentro",
+   "texto": "Mesa de quatro, um vencedor: vinte e cinco por cento por jogador. Dois contra dois: cinquenta por cento por dupla. Antes da primeira carta.",
+   "fala": "Mesa de quatro, um vencedor: vinte e cinco por cento por jogador. Dois contra dois: cinquenta por cento por dupla. Antes da primeira carta."},
+  {"id": "binario", "onde": "dentro",
+   "texto": "E o resultado fica binário. Vitória ou derrota, como no um contra um. O suíço agradece.",
+   "fala": "E o resultado fica binário. Vitória ou derrota, como no um contra um. O suíço agradece."},
+  {"id": "revelacao", "onde": "fora",
+   "texto": "Precon iguala os decks. A dupla iguala a mesa.",
+   "fala": "Prícon iguala os décks. A dupla iguala a mesa."},
+  {"id": "certeza", "onde": "fora",
+   "texto": "Grau de certeza: três de cinco. Ninguém publica win rate de dupla. Ainda.",
+   "fala": "Grau de certeza: três de cinco. Ninguém publica uín reit de dupla. Ainda."},
+  {"id": "pergunta", "onde": "fora",
+   "texto": "Torneio grande de Precon: A, mesa de quatro. B, dois contra dois. C, depende do prêmio. Responda com a letra.",
+   "fala": "Torneio grande de Prícon: A, mesa de quatro. Bê, dois contra dois. Cê, depende do prêmio. Responda com a letra."},
+  {"id": "fecho", "onde": "fora",
+   "texto": "Probabilidade calculada. Humanos, imprevisíveis.",
+   "fala": "Probabilidade calculada. Humanos, imprevisíveis."}
+ ]
+}

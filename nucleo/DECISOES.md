@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 13/11/2026 (02:13) · Meta em Curto ESP01: comentário de seguidor e especial fora do ciclo semanal
+
+**O quê:** (1) Primeiro especial do TUBO (`MC-ESP01`, «A comunidade falou: Precon em dupla»): leitura de formato a partir do comentário de @diarioplaninauta (2x2 de Precon, menção à @montcardshop). Fora do ciclo segunda/quinta; não substitui o MC-EP06. (2) Nome, @ e texto do comentário usados sem autorização prévia do autor; o fundador assume a responsabilidade (exceção à constituição §11.5 só neste episódio; registo em `oraculo/autorizacoes/2026-11-13_esp01_diarioplaninauta.md`). Sem foto de perfil (silhueta). (3) Autorização para gastar créditos da ElevenLabs na voz do TUBO deste especial.
+**Porquê:** fundador, 13/11/2026 (02:13): «Pode fazer o episódio eu assumo a responsabilidade comece o vídeo imediatamente e só pare quando terminar».
+**Impacto:** identidade, voz, trilha e estrutura da série não mudam. Território: formato de torneio (competição), por isso cabe no TUBO; o especial «Precon em jogo» do Mana & Burn fica como antecedente (ângulo diferente: matemática do formato). O valor «3k» aparece só como relato do comentário.
+
 ## 12/11/2026 (05:54) · Todos os episódios fechados, menos o TUBO de segunda; Vince Vault aprovada
 
 **O quê:** (1) Entram na `main`, fechados (CONCLUÍDO; PUBLICADO onde o índice de 08/11 já o confirmava): MC-EP03, MC-EP04, MC-EP05 (+carrossel), MC-EP07, MB-ESP03, MB-EP10 («A febre do autógrafo», branch `ep10-cartas-especiais`, conforme o índice semanal confirmado pelo fundador a 08/11 — as branches `ep10-97-terrenos`, `ep10-numot` e `ep10-olag` ficam como rascunhos não integrados), MB-GIRO02, CM-EP004 (registo), CM-EP005, LL-PRETRK, LL-SHEOL, LL-DIVCAR e LL-CAMPBR. (2) **MC-EP06 («Prestação de contas: placar zero», o episódio de segunda) fica ABERTO**: escrito, não produzido; a prestação de contas é segunda, 16/11. (3) **Vince Vault aprovada como frente** (pasta `vince/`, branch `vince-vault`/PR #11; a `proposta/vince-vault` de 07/11 fica como proposta substituída); secção no catálogo. Pequeno Mestre (PR #2) e Vinci (PR #17) continuam em desenvolvimento, sem aprovação.
