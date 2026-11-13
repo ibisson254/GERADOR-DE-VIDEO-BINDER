@@ -2,6 +2,11 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 13/11/2026 (10:06) · Kit do lambe-lambe é o padrão oficial dos carrosséis
+
+**O quê:** o fundador aprovou o modelo feito com o kit (capa do Raymond Swanland): «Modelo aceito se torne padrão para carrocel de lambe lambe». Carrosséis novos do Lambe-lambe usam `lambe-lambe/kit_carrossel/` (slides do John Avon gerados por IA, sem texto, + arte real da carta + textos impressos por código), sem créditos ElevenLabs.
+**Pedido recusado:** pôr a foto do artista no slide 2 «igual estava do John Avon». Mantém-se a regra: sem fotos nem rostos gerados de pessoas reais; a carta real ocupa esse lugar.
+
 ## 12/11/2026 (12:27) · Carrosséis de artistas v4: gerados por IA no estilo das referências (teste John Avon)
 
 **O quê:** «Não quero perto quero igual». O fundador autorizou gastar créditos ElevenLabs só para testar o carrossel do John Avon (5 slides). Gerados com gpt-image-2 usando a capa dele como referência de estilo; texto conferido; slide 5 com o cartaz BINDER real colado por código. Custo: 6.490 créditos. As pinturas são ilustrações de IA, não obras do artista: a legenda e uma etiqueta discreta nos slides dizem-no.
