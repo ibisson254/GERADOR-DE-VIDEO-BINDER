@@ -1,0 +1,53 @@
+{
+  "consulta": "2026-11-13 18:20–18:45 (Europe/Lisbon)",
+  "cambio": {"usd_brl": 5.59, "fonte": "Brasil 61 — dólar comercial, fecho de 10/11/2026", "url": "https://brasil61.com/n/dolar-sobe-1-46-e-fecha-cotado-a-r-5-59-nesta-terca-feira-10-bras2617452"},
+  "nota": "LigaMagic e MTGStocks bloqueados no ambiente de produção; preços em US$ do TCGplayer (mercado NM) convertidos ao câmbio indicado. Estimativas, não ofertas de compra.",
+  "cartas": {
+    "uthros": {
+      "nome": "Uthros Research Craft", "edicao": "Commander: Edge of Eternities (EOC) #7, versão normal, não foil",
+      "antes_usd": 2.0, "antes_txt": "menos de US$ 2", "antes_quando": "meados de outubro (há ~1 mês)",
+      "depois_usd": 7.26, "depois_quando": "13/11/2026",
+      "variacao_txt": "mais que triplicou (+263% ou mais)",
+      "causa": "Spacecraft de volta com Star Trek (TCGplayer, 12/11) + comandantes de artefato de Reality Fracture (MTGStocks, Weekly Winners 2026-43)",
+      "fontes": ["https://www.tcgplayer.com/content/article/The-Biggest-Price-Spikes-in-Magic-The-Gathering-This-Week-11-12-2026/f8df3ae2-ed61-4bba-abc6-a4cfdb452665/", "https://www.tcgplayer.com/product/642790/magic-commander-edge-of-eternities-uthros-research-craft", "https://www.mtgstocks.com/news/25613-weekly-winners-2026---43"],
+      "scryfall": "eoc/7"
+    },
+    "moonshadow": {
+      "nome": "Moonshadow", "edicao": "Lorwyn Eclipsed (ECL) #110, versão normal",
+      "antes_usd": 14.0, "antes_quando": "lançamento de Reality Fracture (início de outubro)",
+      "depois_usd": 27.0, "depois_quando": "12/11/2026",
+      "variacao_pct": 92.9,
+      "causa": "Modern: o deck Rakdos Moonshadow ganhou Dark Matter Manipulator (Reality Fracture) — TCGplayer, 12/11; MTGStocks 2026-45",
+      "fontes": ["https://www.tcgplayer.com/content/article/The-Biggest-Price-Spikes-in-Magic-The-Gathering-This-Week-11-12-2026/f8df3ae2-ed61-4bba-abc6-a4cfdb452665/", "https://www.mtgstocks.com/news/25844-weekly-winners-2026---45"],
+      "scryfall": "ecl/110"
+    },
+    "watery_lcars": {
+      "nome": "Watery Grave", "edicao": "Star Trek (TRK) #393, Showcase LCARS, não foil",
+      "antes_usd": 43.41, "antes_quando": "06/11/2026",
+      "depois_usd": 10.99, "depois_quando": "13/11/2026",
+      "variacao_pct": -74.7,
+      "causa": "Caiu quando a coleção chegou às mesas no pré-lançamento (NerdSnack, 06/11: LCARS de 41–46 para 14–18 dólares). Lançamento oficial 13/11.",
+      "fontes": ["https://www.tcgstrat.com/mtg/index", "https://www.tcgplayer.com/product/713216/magic-star-trek-watery-grave-showcase", "https://nerdsnack.com/mtg-star-trek-chase-cards-most-expensive/"],
+      "scryfall": "trk/393"
+    },
+    "steam_lcars": {
+      "nome": "Steam Vents", "edicao": "Star Trek (TRK) #398, Showcase LCARS, não foil",
+      "antes_usd": 27.42, "antes_quando": "06/11/2026",
+      "depois_usd": 10.78, "depois_quando": "13/11/2026",
+      "variacao_pct": -60.7,
+      "causa": "Mesma queda das LCARS no pré-lançamento (NerdSnack, 06/11)",
+      "fontes": ["https://www.tcgstrat.com/mtg/index", "https://nerdsnack.com/mtg-star-trek-chase-cards-most-expensive/"],
+      "scryfall": "trk/398"
+    },
+    "shocklands": {
+      "nome": "As 10 shocklands", "edicao": "versões normais (ilustração: Watery Grave TRK #306)",
+      "facto": "todas abaixo de US$ 10, menor preço da história, com a reimpressão em Star Trek",
+      "fontes": ["https://draftsim.com/mtg-shockland-low-price/", "https://www.mtgstocks.com/news/25943-weekly-winners-2026---46"],
+      "scryfall": "trk/306"
+    }
+  },
+  "radar": {
+    "evento": "Mundial 32 (Magic World Championship 32) e MagicCon: Atlanta, este fim de semana, com Star Trek em destaque (TCGplayer, 12/11)",
+    "fontes": ["https://www.tcgplayer.com/content/article/The-Biggest-Price-Spikes-in-Magic-The-Gathering-This-Week-11-12-2026/f8df3ae2-ed61-4bba-abc6-a4cfdb452665/"]
+  }
+}

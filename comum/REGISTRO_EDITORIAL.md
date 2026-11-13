@@ -103,6 +103,7 @@ Prefixos de ID: `MB` Mana & Burn · `MC` Meta em Curto · `CM` Conde de Manafort
 | ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | ESP-2026-01 | Halloween 2026: tribunal Innistrad × Duskmourn | Innistrad; Duskmourn; EDHREC (comparação 3 × 2); Emrakul, the Promised End | O tribunal do BINDER recontou e deu 3 a 2 para Innistrad | A EDHREC deu 3 a 2 para Duskmourn. O tribunal do BINDER recontou e deu 3 a 2 para Innistrad. | PUBLICADO | Fundador, explícito (31/10/2026); Export do Insights 1–31/10/2026 (miniatura entre os Reels do período) | — | confirmada, entre 01/10 e 31/10/2026 | especiais/halloween_2026/LEIA-ME.md | MB-EP07; MC-EP01; CM-EP003 | Retroativa: sem conflito |
+| ESP-2026-02 | PREGÃO MAGIC — a bolsa abriu (13/11): altas, quedas e radar do fim de semana, sem personagem | Uthros Research Craft; Moonshadow; Watery Grave LCARS; Steam Vents LCARS; shocklands; Mundial 32 | Quem sobe, quem cai e por quê: naves de Star Trek e Modern em alta; LCARS a cair depois do pré-lançamento | Uma carta caiu 74,7% em 7 dias. Outra mais que triplicou. | EM PRODUÇÃO | ficha 13/11/2026: v4 renderizado e conferido sem narração; falta voz (autorização ElevenLabs) ou decisão de publicar só com música | pedido do fundador 13/11/2026 (18:13) | — | especiais/pregao_magic/ficha.md | VV-EP00 (mesmo território); MB-ESP03; MC-EP07 | pauta livre (memoria.py pauta, 13/11) |
 
 ## Órbita · Star Trek
 

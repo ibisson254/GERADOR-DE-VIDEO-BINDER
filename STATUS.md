@@ -18,6 +18,7 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 
 ## Em produção
 
+- **ESP-2026-02 «PREGÃO MAGIC — a bolsa abriu»** (13/11, pedido do fundador às 18:13): especial de mercado sem personagem, com a música `sweat_on_the_walls` enviada pelo fundador. Render v4 conferido (46,87 s com fecho, −14,1 LUFS, −2,0 dBTP, sem corte lateral). **Falta a narração**: ElevenLabs por autorizar (~1.400 créditos, voz nova) — ou o fundador publica a versão só com música. Branch `especial/pregao-magic`; entra na `main` quando passar a CONCLUÍDO. Pacote e motor reutilizável: `especiais/pregao_magic/`. LigaMagic não abriu neste ambiente: reais por conversão a R$ 5,59 (10/11). Números válidos para publicar até sábado 14/11.
 - **MC-ESP01 «A comunidade falou: Precon em dupla»** (13/11): primeiro especial do TUBO, a partir do comentário de @diarioplaninauta; autorização do fundador (02:13). **CONCLUÍDO, não publicado** (v3 com gancho de cartas reais, na `main`). Pacote: `oraculo/esp01/`. Antes de publicar: ouvir a pronúncia, avisar o autor e, se ele aceitar, convidar para Collab (e a @montcardshop).
 - **MC-EP06 «Prestação de contas: placar zero»** (o TUBO de segunda): escrito, não produzido; a prestação de contas real é segunda 16/11 (`python3 -I oraculo/previsoes/ciclo.py segunda`).
 - **Vince Vault (Multiverse Capital)**: direção 2D ativa (PR #17, decisões de 11–12/11; 3D arquivado). Bíblia `vince/CONTEXTO.md`, som da Fonte `vince/audio/fonte.py`. **Em falta:** o kit 2D (16 PNG), `recortar.py`, `EDICAO.md` e `PROMPT_EPISODIO.md` descritos no PR #17 não chegaram à branch — pedir à sessão de origem ou refazer com aprovação.
@@ -122,4 +123,4 @@ Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a p
 
 ## Handoff
 
-Ver o handoff de 12/11/2026 no fim de `nucleo/auditorias/2026-11-12_missao_master.md`.
+Último: ESP-2026-02 em `especiais/pregao_magic/HANDOFF.md` (13/11/2026). Anterior: o handoff de 12/11/2026 no fim de `nucleo/auditorias/2026-11-12_missao_master.md`.
