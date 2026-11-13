@@ -3,7 +3,7 @@
 #   python3 esp01_render.py /caminho/do/kit             -> ESP01_META_EM_CURTO.mp4
 #   python3 esp01_render.py /caminho/do/kit stills 3 10 -> still_03.00.png ...
 #   python3 esp01_render.py /caminho/do/kit capa        -> ESP01_CAPA.png
-# Comentário de @diarioplaninauta usado com autorização do fundador (oraculo/autorizacoes/2026-11-13_esp01_diarioplaninauta.md); sem foto de perfil.
+# Comentário de @diarioplaninauta (print real, com a foto de perfil) usado com autorização do fundador (oraculo/autorizacoes/2026-11-13_esp01_diarioplaninauta.md).
 import os, json, math, subprocess, sys, numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 K = (sys.argv[1] if len(sys.argv) > 1 else '../..').rstrip('/') + '/'
@@ -198,6 +198,8 @@ def silhueta(d, x, y, px=13, col=PH):
     for r, row in enumerate(SIL):
         for c, ch in enumerate(row):
             if ch == '#': d.rectangle((x + c * px, y + r * px, x + c * px + px - 2, y + r * px + px - 2), fill=mix_bg(col, 150))
+PRINT = Image.open(K + 'oraculo/esp01/comentario_diarioplaninauta.png').convert('RGB')
+PRINT = PRINT.resize((920, round(PRINT.height * 920 / PRINT.width)), Image.LANCZOS)
 COMENT = ['Existe um formato de torneio de Precon', 'que está se popularizando muito que é o', '2x2 (Precon em duplas). A própria',
           '@montcardshop já fez torneios valendo', '3k. Eu amo o formato Precon, mas acho', 'que para torneios grandes o 2x2 é o ideal', 'mesmo.']
 def wrapw(d, s, font, maxw):
@@ -217,26 +219,22 @@ def scene_comentario(t):
     d.text((80, 200), typed(s1, t0, t), font=fit(d, s1, MONOB, 38, 920), fill=PH)
     d.text((80, 258), typed('  num post do @binderthetrade · novembro de 2026', t0 + .3, t), font=F(MONO, 28), fill=EM)
     d.line((80, 312, 1000, 312), fill=(16, 185, 129, 90), width=2)
-    # ficha do autor: silhueta (sem foto de perfil)
-    d.rounded_rectangle((80, 345, 1000, 520), 16, outline=EM, width=3, fill=(8, 20, 18, 255))
-    silhueta(d, 110, 368, 10)
-    d.text((300, 380), 'DIÁRIO PLANINAUTA', font=F(INTB, 54), fill=WHITE)
-    d.text((300, 452), '@diarioplaninauta', font=F(MONOB, 34), fill=PH)
-    # o comentário, palavra por palavra
-    if t >= ws(15) - .3:
-        d.rounded_rectangle((80, 550, 1000, 1080), 16, outline=(40, 80, 70), width=2, fill=(8, 16, 20, 255))
-        f = F(COND, 40); full = ' '.join(COMENT); shown = typed(full, DIVE_END + 0.3, t, 60)
-        y = 580
-        for ln in wrapw(d, shown, f, 860):
-            d.text((110, y), ln, font=f, fill=(200, 220, 215)); y += 54
-        if t >= ws(29) - .05:      # «Precon em dupla é o ideal»
-            stamp(d, '2x2 = IDEAL PARA TORNEIO GRANDE', PH, ws(29), t, 1010, 34)
+    # print real do comentário (foto e texto do autor), entrada «scan» de cima para baixo
+    t1 = DIVE_END + 0.15
+    if t >= t1:
+        k = eio((t - t1) / 0.9); ch = max(1, int(PRINT.height * k))
+        d.rounded_rectangle((72, 337, 72 + PRINT.width + 16, 345 + ch + 8), 18, fill=(255, 255, 255, 255))
+        im.paste(PRINT.crop((0, 0, PRINT.width, ch)), (80, 345)); d = ImageDraw.Draw(im, 'RGBA')
+        if k < 1: d.rectangle((80, 345 + ch - 3, 80 + PRINT.width, 345 + ch + 3), fill=PH + (255,))
+        d.rounded_rectangle((72, 337, 72 + PRINT.width + 16, 345 + ch + 8), 18, outline=EM, width=4)
+    if t >= ws(29) - .05:          # «Precon em dupla é o ideal»
+        stamp(d, '2x2 = IDEAL PARA TORNEIO GRANDE', PH, ws(29), t, 780, 34)
     if t >= ws(39) - .05:          # «Montcard»
-        d.rounded_rectangle((80, 1110, 1000, 1290), 16, outline=AMBER, width=3, fill=(20, 16, 8, 255))
-        d.text((110, 1130), '@montcardshop', font=F(MONOB, 40), fill=WHITE)
-        d.text((110, 1185), 'torneios de 2x2 valendo 3k', font=F(COND, 38), fill=(220, 200, 160))
-        d.text((110, 1238), 'relato do comentário · não verificado', font=F(MONOB, 28), fill=AMBER)
-    fontes(d, ['fonte: comentário público no @binderthetrade (nov/2026)'], 1384)
+        d.rounded_rectangle((80, 860, 1000, 1040), 16, outline=AMBER, width=3, fill=(20, 16, 8, 255))
+        d.text((110, 880), '@montcardshop', font=F(MONOB, 40), fill=WHITE)
+        d.text((110, 935), 'torneios de 2x2 valendo 3k', font=F(COND, 38), fill=(220, 200, 160))
+        d.text((110, 988), 'relato do comentário · não verificado', font=F(MONOB, 28), fill=AMBER)
+    fontes(d, ['print do comentário público no @binderthetrade (nov/2026)', 'imagem usada com autorização do fundador'], 1384)
     hud(d, t); return term_finish(im)
 def scene_regras(t):
     im, d = term_base(t, 16)
