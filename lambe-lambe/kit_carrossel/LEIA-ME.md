@@ -14,3 +14,5 @@ Regras: arte real da carta com crédito no slide; carta inteira colada no slide 
 ## Padrão de 5 slides + foto do artista na capa (13/11/2026 10:12)
 Pedido do fundador: todos os carrosséis do Lambe-lambe têm 5 slides e a capa leva a foto do artista; o fundador pede autorização ao artista antes de publicar e assume a responsabilidade.
 A capa sai com o espaço «FOTO DO ARTISTA» (`foto_slot.py`). A foto não é procurada na internet nem gerada por IA: entra só a foto enviada pelo fundador (a que o artista autorizar), com `python3 -I foto_slot.py <capa.png> <saida.png> <foto.jpg>`.
+
+Foto integrada como cartaz (13/11): `python3 -I foto_lambe.py <capa.png> <foto.jpg> <saida.png>` imprime a foto no papel creme (cor reduzida, retícula, rugas, falhas de tinta, borda rasgada) e põe a faixa preta do nome por cima. A foto do Raymond Swanland foi enviada pelo fundador, que pede a autorização ao artista antes de publicar; a foto não é versionada.
