@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 13/11/2026 (01:51) · O formato do MB-EP11 (Numot) passa a padrão do Mana & Burn
+
+**O quê:** o fundador decide que o comportamento do MB-EP11 vira padrão dos próximos episódios: (1) carta vilã que a mesa já sofreu, gancho com número; (2) Burn exagera, Mana lê o Oracle e corrige (mínimo 3 correções reais); (3) prova visual de cada correção; (4) pergunta A/B no fim, igual ao comentário fixado; (5) par de publicação: carrossel do app no dia seguinte, ligado ao tema. Impulso só em episódio com guardados acima do normal, só Instagram. Texto completo em `manaburn/PERFIL.md` («Padrão de episódio»); episódio de referência em `series.yaml` passa a `manaburn/episodios/ep10_numot/`.
+**Porquê:** MB-EP11 é o post mais visto do canal (7.138 views, 71 guardados, 73 seguidores, ~56 orgânicos) e o carrossel publicado a seguir teve 43 toques no link (`comum/insights/semanas/2026-11-13.md`). Regra criada por decisão do fundador (constituição §12), sem esperar padrão de 2+ semanas.
+**Impacto:** só Mana & Burn (as outras séries não herdam a estrutura, princípio da constituição). O fecho obrigatório do scanner não muda; a ideia de pôr o scanner a meio do episódio continua por decidir. O Giro de domingo mantém o seu formato próprio. A skill `binder-mana-burn-episodio` deve ser atualizada para remeter para este padrão.
+
 ## 12/11/2026 (05:54) · Todos os episódios fechados, menos o TUBO de segunda; Vince Vault aprovada
 
 **O quê:** (1) Entram na `main`, fechados (CONCLUÍDO; PUBLICADO onde o índice de 08/11 já o confirmava): MC-EP03, MC-EP04, MC-EP05 (+carrossel), MC-EP07, MB-ESP03, MB-EP10 («A febre do autógrafo», branch `ep10-cartas-especiais`, conforme o índice semanal confirmado pelo fundador a 08/11 — as branches `ep10-97-terrenos`, `ep10-numot` e `ep10-olag` ficam como rascunhos não integrados), MB-GIRO02, CM-EP004 (registo), CM-EP005, LL-PRETRK, LL-SHEOL, LL-DIVCAR e LL-CAMPBR. (2) **MC-EP06 («Prestação de contas: placar zero», o episódio de segunda) fica ABERTO**: escrito, não produzido; a prestação de contas é segunda, 16/11. (3) **Vince Vault aprovada como frente** (pasta `vince/`, branch `vince-vault`/PR #11; a `proposta/vince-vault` de 07/11 fica como proposta substituída); secção no catálogo. Pequeno Mestre (PR #2) e Vinci (PR #17) continuam em desenvolvimento, sem aprovação.

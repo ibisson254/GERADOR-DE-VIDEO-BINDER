@@ -23,6 +23,20 @@ Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Identidade (personage
 - Manchetes da TV SAL: piada sobre o meta, sem pessoas reais; facto citado numa manchete tem de ser verdadeiro.
 - Tema que muda depressa: dizer o "quando" (data da fonte) na legenda ou no comentário.
 
+## Padrão de episódio (decisão do fundador, 13/11/2026)
+
+Molde: **MB-EP11 (Numot)**, `manaburn/episodios/ep10_numot/`. Todo episódio novo segue estes cinco pontos; fugir de um deles exige registo em `nucleo/DECISOES.md`.
+
+1. **Carta vilã que a mesa já sofreu.** O objeto é uma carta (ou combo) que o jogador casual reconhece como dor real: destruição de terreno, imposto, tranca, roubo. O gancho do Burn diz a dor em uma frase, com um número ("cada pancada dele, somem DOIS!").
+2. **Burn exagera → Mana lê a carta e corrige.** O corpo é uma sequência de enganos comuns da mesa, cada um desfeito com o texto Oracle ("Lê a carta…", "Não destrói. Sacrifica."). Mínimo 3 correções reais por episódio; cada uma ensina uma regra que vale guardar. Cartas de apoio entram como insert com crédito.
+3. **Prova visual da correção.** Quando o Mana corrige, a imagem mostra a linha da carta que prova (destaque no Oracle, no "6/6", no "não básico").
+4. **Pergunta A/B no fim.** O Burn fecha com uma escolha binária de ação ("A, mata o dragão. B, vira amigo do dono"), a mesma do comentário fixado → "Comenta aí."
+5. **Par de publicação.** No dia seguinte ao Reel publica-se um carrossel do app (Lambe-lambe) ligado ao tema do episódio, com o pedido de instalação e o link da bio. O pedido do app vive no carrossel e na legenda; o fecho do scanner continua obrigatório no vídeo.
+
+Impulsionamento (quando houver): só o episódio que já mostra guardados acima do normal nas primeiras horas, só no Instagram (sem Facebook), e o carrossel do dia seguinte não se impulsiona antes de medir os toques no link.
+
+Métricas de controlo do padrão: guardados e comentários por 1.000 views, seguidores orgânicos, e toques no link do carrossel do par. Referência MB-EP11: 71 guardados, ~3,9 comentários por 1.000 (orgânico), ~56 seguidores orgânicos; carrossel do par com 43 toques no link (`comum/insights/semanas/2026-11-13.md`).
+
 ## Gancho e fecho
 
 Gancho: opinião quente do Burn. Fecho: pergunta do Burn (a mesma do comentário fixado) → "Comenta aí." do Mana → TV desliga e vira o ponto verde da logo → fecho do scanner.
@@ -43,7 +57,7 @@ Ligada à carta do episódio, entre as funções confirmadas (ex.: escanear e ve
 
 ## Métrica principal
 
-Respostas à pergunta do comentário fixado (o histórico de 26/10 mostra comentários quase a zero: testar pergunta A/B ou de número). Secundária: partilhas.
+Respostas à pergunta A/B do comentário fixado e guardados por 1.000 views. Secundária: toques no link do carrossel do par (padrão de 13/11/2026).
 
 ## Critérios de aceitação próprios
 

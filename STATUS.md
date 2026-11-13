@@ -16,6 +16,7 @@ Auditoria integral, matriz de integração, sistema de previsões do TUBO corrig
 
 - **MB-EP11** (Numot, branch `manaburn/ep10-numot`, que o registo dava como rascunho) foi publicado a 11/11 e impulsionado: é o post mais visto do canal. Pacote trazido para `manaburn/episodios/ep10_numot/`; linha nova no registo editorial (ID MB-EP11, porque MB-EP10 é «A febre do autógrafo»).
 - Snapshot e análise: `comum/insights/semanas/2026-11-13.md` (separação orgânico × pago, carrossel com 43 toques no link, hipótese do par Reel + carrossel).
+- **Padrão novo do Mana & Burn (13/11, 01:51):** formato do MB-EP11 em `manaburn/PERFIL.md`; referência em `series.yaml`.
 - **Depende do fundador:** confirmar se o carrossel "300 cartas" é o LL-CAMPBR; totais finais do anúncio; retenção do Reel; decidir se o scanner pode entrar a meio do episódio (hoje só no fecho obrigatório).
 
 ## Estado editorial

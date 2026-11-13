@@ -31,7 +31,7 @@ series:
     trilha:
       - {nome: midnight_throttle, ficheiro: manaburn/musica.mp3, uso: "Ep. 1–2 e padrão do trilha.py v2"}
       - {nome: concrete_teeth, ficheiro: null, uso: "Ep. 5–7 (ficheiro em falta no repositório)"}
-    referencia: manaburn/episodios/ep09_dack/
+    referencia: manaburn/episodios/ep10_numot/   # MB-EP11, padrão desde 13/11/2026 (antes: ep09_dack)
 
   - slug: tubo
     nome: Meta em Curto (personagem TUBO; ex-Oráculo de Tubo)
