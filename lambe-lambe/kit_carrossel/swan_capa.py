@@ -12,7 +12,7 @@ tinta = '''
 '''
 claro = '''
 <div class="e ab" data-w="840" style="left:540px;transform:translateX(-50%) rotate(-.8deg);top:968px;font-size:108px;color:#F2E6CC;text-transform:none">RAYMOND SWANLAND</div>
-<div style="position:absolute;right:80px;top:912px;font-family:Geist;font-size:13px;color:#fff;text-shadow:0 1px 3px #000;opacity:.9">Arte: Ugin, the Spirit Dragon (Fate Reforged, 2015) · Raymond Swanland · © Wizards of the Coast</div>
+<div style="position:absolute;left:96px;top:912px;width:480px;white-space:normal;line-height:1.25;font-family:Geist;font-size:13px;color:#fff;text-shadow:0 1px 3px #000;opacity:.9">Arte: Ugin, the Spirit Dragon (Fate Reforged, 2015) · Raymond Swanland · © Wizards of the Coast</div>
 '''
 asyncio.run(camada(tinta,'_tinta.png')); asyncio.run(camada(claro,'_claro.png'))
 out = aplicar(base,'_tinta.png','_claro.png')

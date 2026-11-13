@@ -2,6 +2,10 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 13/11/2026 (10:12) · Capa com foto do artista (foto enviada pelo fundador)
+
+**O quê:** padrão de 5 slides por carrossel, com a foto do artista na capa. O fundador vai pedir autorização a cada artista. A foto não é procurada na web nem gerada: a capa sai com o espaço marcado e a foto é colada quando o fundador a enviar (`lambe-lambe/kit_carrossel/foto_slot.py`).
+
 ## 13/11/2026 (10:06) · Kit do lambe-lambe é o padrão oficial dos carrosséis
 
 **O quê:** o fundador aprovou o modelo feito com o kit (capa do Raymond Swanland): «Modelo aceito se torne padrão para carrocel de lambe lambe». Carrosséis novos do Lambe-lambe usam `lambe-lambe/kit_carrossel/` (slides do John Avon gerados por IA, sem texto, + arte real da carta + textos impressos por código), sem créditos ElevenLabs.

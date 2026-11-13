@@ -10,3 +10,7 @@ Base: os slides gerados por IA do John Avon (flow ElevenLabs `QUq7zV013KwmsMYP92
 - Exemplo: `swan_capa.py`, `swan_2.py` (Raymond Swanland).
 
 Regras: arte real da carta com crédito no slide; carta inteira colada no slide 2 (no lugar do retrato da referência); sem fotos nem rostos gerados de pessoas reais. Fontes, `desgaste.png`, cartas e artes não versionadas (ver `carrosseis_artistas/gerador/` v3).
+
+## Padrão de 5 slides + foto do artista na capa (13/11/2026 10:12)
+Pedido do fundador: todos os carrosséis do Lambe-lambe têm 5 slides e a capa leva a foto do artista; o fundador pede autorização ao artista antes de publicar e assume a responsabilidade.
+A capa sai com o espaço «FOTO DO ARTISTA» (`foto_slot.py`). A foto não é procurada na internet nem gerada por IA: entra só a foto enviada pelo fundador (a que o artista autorizar), com `python3 -I foto_slot.py <capa.png> <saida.png> <foto.jpg>`.
