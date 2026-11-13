@@ -1,6 +1,10 @@
 # Ficha · Mana & Burn · EP11 · O rodízio de combo (Niv-Mizzet Reborn)
 
-Estado (13/11/2026, 02h): **EM PRODUÇÃO. Roteiro, TV SAL, destaques, inserts e textos de entrega prontos; voz do Burn gerada; voz do Mana bloqueada por falta de créditos no ElevenLabs** (pedido de 480 créditos, saldo de 250). Prévia de quadros conferida com faixa provisória do Mana (tom sintético, só para medir planos); nada renderizado para publicar.
+Estado (13/11/2026, 02h10): **vídeo final renderizado e conferido; aguarda aprovação e publicação pelo fundador. Não publicado.** Vozes geradas (Mana depois da recarga de créditos do fundador, "Pode gerar já atualizei o elevenlabs", 02:02).
+
+## Render e controlo de qualidade
+- `ManaBurn_Ep11_Rodizio_916.mp4` (não versionado): 1080x1920, 30 fps, 49,6 s (45,7 s + fecho do scanner), −14,4 LUFS, pico −1,4 dBTP. `bordas.py` OK (456 quadros de TV, laterais 10–1068 px). `qc_video.py`: sem problemas mensuráveis; folha de contacto conferida a olho (carta inteira, destaques alinhados, inserts com crédito, "Comenta aí" antes da pancada, fecho presente).
+- Capa: `ManaBurn_Ep11_Rodizio_916_capa.jpg` (não versionada).
 
 ## Origem
 - Pedido do fundador (13/11/2026, 01:52): episódio inspirado num Reel de terceiros ("The 2 Color Conundrum", @bullwark_mtg repostado por @mtg_paradise): um deck de Niv-Mizzet Reborn em que cada carta de duas cores faria parte de um combo infinito (Brago + Strionic Resonator, Savage Ventmaw + Aggravated Assault, Duskmantle Guildmage + Mindcrank, Witherbloom Apprentice + Chain of Smog e uma lista de mais combos).
@@ -49,10 +53,10 @@ Estado (13/11/2026, 02h): **EM PRODUÇÃO. Roteiro, TV SAL, destaques, inserts e
 ## Vozes
 - ElevenLabs (conector restrito), eleven_v4, 1 geração por faixa. Flow: https://elevenlabs.io/app/flows/toKppksshHSJqbowfiF9
 - Burn (Talis, `E9a8LlXPNWtyvvSoZzrb`): gerada, 559 créditos, 29,6 s, 6 pausas = 7 falas → `burn_ep11.mp3`.
-- Mana (Erik, `nfiLpQ54jEQninp3nNqL`): **falhou por quota** (pedia 480, saldo 250). Texto pronto em `vozes_elevenlabs.txt`.
+- Mana (Erik, `nfiLpQ54jEQninp3nNqL`): 1.ª tentativa falhou por quota (250 de 480); gerada às 02:03 depois da recarga, 480 créditos, 29,8 s → `mana_ep11.mp3`. Cortes conferidos (7 falas cada; a pausa interna depois de "Vem." ficou dentro da fala 6).
 - Licença: confirmar que a conta está no plano com licença comercial antes de publicar.
 
 ## Pendências
-1. Recarregar créditos no ElevenLabs (≥ 480) e gerar só a faixa do Mana (não regerar o Burn).
-2. `python3 process.py burn_ep11.mp3 mana.mp3` → `preview.py` → `bordas.py` → `render.py` → `juntar_fecho.py` → `qc_video.py`.
-3. Ouvir a pronúncia dos nomes de cartas no Burn (Ventmaw, Guildmage, Mindcrank, Witherbloom, Chain of Smog).
+1. Ouvir a pronúncia dos nomes de cartas (Ventmaw, Guildmage, Mindcrank, Witherbloom, Chain of Smog) antes de publicar.
+2. Confirmar licença comercial do plano ElevenLabs.
+3. Aprovar e publicar; registar a data no registo editorial.
