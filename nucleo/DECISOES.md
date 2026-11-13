@@ -2,6 +2,11 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 13/11/2026 (16:07) · Master Prompt 2.0 da série Artistas de Magic
+
+**O quê:** o fundador enviou o `lambe-lambe/MASTER_PROMPT_ARTISTAS_2.md`, referência de direção de arte da série. Implementação: `lambe-lambe/kit_carrossel/capa_mp2.py` + `cfg_<artista>.json`.
+**Desvio:** sem símbolo de Planeswalker no selo (marca da Wizards, ficheiro não fornecido).
+
 ## 13/11/2026 (10:12) · Capa com foto do artista (foto enviada pelo fundador)
 
 **O quê:** padrão de 5 slides por carrossel, com a foto do artista na capa. O fundador vai pedir autorização a cada artista. A foto não é procurada na web nem gerada: a capa sai com o espaço marcado e a foto é colada quando o fundador a enviar (`lambe-lambe/kit_carrossel/foto_slot.py`).
