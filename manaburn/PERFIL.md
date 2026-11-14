@@ -37,6 +37,20 @@ Duração livre (constituição §6): a necessária para reter sem perder o ritm
 
 Formato derivado **Giro de domingo**: três notícias da semana na TV SAL, reação da dupla a cada uma, pergunta "Comenta 1, 2 ou 3" (primeiro publicado a 01/11/2026).
 
+## Capa (modelo fixo desde 14/11/2026)
+
+Todas as capas do Mana & Burn, de episódios novos ou pedidas para episódios antigos, seguem este modelo (fundador, 14/11/2026 02:57; referência: capa do MB-EP11, Numot). Gerador: `manaburn/capas/capa_mb.py`. A capa deixa de ser um quadro tirado do vídeo (`render.py` continua a gerá-lo, mas não é a capa a publicar).
+
+- **Carta principal do episódio** (a da TV) na largura toda, imagem «png» do Scryfall (maior resolução). A arte fica livre em cima; nada tapa a criatura nem o nome da carta. Sem personagens.
+- **Frase** (2–5 palavras, branco, Bangers) e **foco** (1 palavra ou número, amarelo #FFD84A, gigante, com brilho), por cima do texto de regras escurecido. A frase repete a ideia do gancho; o foco é a palavra que a pessoa tem de ler na miniatura.
+- **Selo vermelho** (opcional, 1 só) com o dado-chave do episódio (ex.: «−2 POR PANCADA»), no canto da arte, sem tapar a criatura.
+- **Faixa fixa** em baixo: «MANA & BURN · EP. NN» a amarelo; à direita, o formato ou a collab a branco (ex.: «COMMANDER»).
+- Tudo dentro do recorte 3:4 da grelha (y 240–1680); conferir o `*_grelha.png` em tamanho pequeno antes de entregar.
+- Crédito da carta da capa na legenda (já é o crédito da carta da TV).
+- Episódio sem carta principal (notícia, Giro): usar a carta mais representativa; se não houver, perguntar ao fundador.
+
+Exemplo: `python3 capas/capa_mb.py --scryfall cmd/215 --frase "O dragão que come" --foco "terreno" --selo "−2 por pancada" --ep 11 --tag Commander --saida MB_EP11_CAPA.png`
+
 ## Ponte para o BINDER
 
 Ligada à carta do episódio, entre as funções confirmadas (ex.: escanear e ver o valor de referência). CTA da legenda não repete o do post anterior.

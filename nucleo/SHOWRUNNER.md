@@ -65,7 +65,7 @@ Uma ficha por peça, a partir de `modelos/FICHA_EPISODIO.md`, com no mínimo:
 6. Plano visual e lista de materiais reais necessários (cartas, listas, gravações do app).
 7. Pacote de publicação: legenda, comentário fixado, texto alternativo, ficha de fatos (constituição §10).
 8. Easter egg (0 ou 1) e métrica principal.
-9. Capa segundo o modelo da frente, quando existir (Meta em Curto: `oraculo/CONTEXTO.md` §7.3), conferida no recorte da grelha. Plano de retenção (constituição, «Retenção e recompensa»): o que o quadro 0 mostra de Magic, o gancho visual dos primeiros 3 s, as revelações com som e o pagamento do gancho.
+9. Capa segundo o modelo da frente, quando existir (Meta em Curto: `oraculo/CONTEXTO.md` §7.3; Mana & Burn: `manaburn/PERFIL.md` «Capa»), conferida no recorte da grelha. Plano de retenção (constituição, «Retenção e recompensa»): o que o quadro 0 mostra de Magic, o gancho visual dos primeiros 3 s, as revelações com som e o pagamento do gancho.
 10. O que depende do fundador.
 
 O motor técnico da frente executa a partir deste briefing.

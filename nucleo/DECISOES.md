@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 14/11/2026 (02:57) · Mana & Burn: modelo fixo de capa
+
+**O quê:** todas as capas do Mana & Burn (episódios novos e capas pedidas para episódios antigos) seguem `manaburn/PERFIL.md` «Capa»: carta principal na largura toda com a arte livre, frase + foco em Bangers sobre o texto de regras, um selo vermelho, faixa fixa «MANA & BURN · EP. NN». Gerador `manaburn/capas/capa_mb.py`. A capa deixa de ser um quadro do vídeo. Referência: capa do MB-EP11 (Numot).
+**Porquê:** fundador, 14/11/2026 (02:57): «essa tbm deve ser tornar padrão do mana burn se eu pedir uma capa de algum episódio tem que ser nesse padrão e todo vídeo criado tbm já vem com esse padrão de capa».
+**Impacto:** só o Mana & Burn.
+
 ## 14/11/2026 (02:43) · Meta em Curto: modelo fixo de capa
 
 **O quê:** todas as capas do Meta em Curto seguem o modelo de `oraculo/CONTEXTO.md` §7.3: um ponto focal (frase → número gigante → TUBO a reagir → faixa fixa da série), tudo dentro do recorte 3:4 da grelha do perfil. Referência: capa v3 do MC-ESP02.
