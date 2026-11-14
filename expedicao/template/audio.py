@@ -148,15 +148,17 @@ if abis: amb = np.maximum(amb, np.clip((tt - abis[0]) / 0.6, 0, 1) * np.clip((dr
 amb = amb * (0.75 + 0.25 * np.sin(tt * 0.9))
 AMB = nz2 * (amb * 0.06)[:, None]
 
-# ---------- 4. música: -21 LUFS, ducking sob a voz, abre no drop e no fim ----------
+# ---------- 4. música: musica.lufs (−26), ducking musica.duck_db sob a voz (≥ 15 dB abaixo da voz, para a tradução
+#      automática do Instagram separar a fala), sobe musica.fim_db depois da voz ----------
 import pyloudnorm as pyln
 meter = pyln.Meter(SR)
 MUS = MUS * 10 ** ((MU['lufs'] - meter.integrated_loudness(MUS[:int(VEND * SR)])) / 20)
 ev = np.abs(VOX).mean(1); w = int(0.05 * SR); ev = np.convolve(ev, np.ones(w) / w, 'same')
 speak = np.convolve((ev > 0.01).astype(float), np.ones(int(0.3 * SR)), 'same') > 0
 speak = np.convolve(speak.astype(float), np.ones(int(0.2 * SR)) / int(0.2 * SR), 'same')
-g_db = speak * MU['duck_db'] + 3 * np.exp(-((tt - drop_t - 0.6) / 1.0) ** 2)
-g_db = np.where(tt >= VEND + 0.2, 2.0, g_db)
+g_db = speak * MU['duck_db'] + MU.get('drop_db', 3) * np.exp(-((tt - drop_t - 0.6) / 1.0) ** 2)
+fim_db = MU.get('fim_db', 2.0); g_db = np.where(tt >= VEND + 0.2, fim_db, g_db)
+g_db = np.where((tt > VEND - 0.3) & (tt < VEND + 0.2), np.interp(tt, [VEND - 0.3, VEND + 0.2], [MU['duck_db'], fim_db]), g_db)
 MUS = MUS * (10 ** (g_db / 20) * np.clip((TOTAL - tt) / 0.6, 0, 1))[:, None]
 save(f'{WK}/musica_arranjo_{VER}.wav', MUS)
 save(f'{WK}/mix_pre_{VER}.wav', VOX + MUS + SFX + AMB)

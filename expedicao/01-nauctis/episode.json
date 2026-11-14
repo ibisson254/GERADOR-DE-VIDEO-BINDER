@@ -116,8 +116,10 @@
   ],
   "drop_w": 220,
   "ajuste_pausa_w": 213,
-  "lufs": -21,
-  "duck_db": -4
+  "lufs": -26,
+  "duck_db": -7,
+  "drop_db": 1.0,
+  "fim_db": 8.0
  },
  "camadas": {
   "rasos": {

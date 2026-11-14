@@ -27,7 +27,7 @@ Reel 9:16 de 60–75 s (sem o fecho) que apresenta as primeiras cartas reveladas
 ## 3. Música
 - **EX-01: «Auction of Power»** (`kit/auction_of_power.mp3`, 45 s, 140 BPM, batida 0,42865 s), escolhida e fornecida pelo fundador a 14/11/2026. **Licença a registar antes de publicar.**
 - A música manda no ritmo: `audio.py` rearranja-a sozinho em batidas inteiras (repete os compassos antes do drop até o **drop** cair na palavra da revelação, `drop_w`, e repete compassos depois do drop até a **cauda natural da faixa acabar com o vídeo**); a pausa `ajuste_pausa_w` absorve a diferença. A grelha de batidas do vídeo é a da música.
-- −21 LUFS sob a voz, ducking −4 dB, abre +3 dB no drop e no fecho; acaba dentro do fecho de marca.
+- −26 LUFS sob a voz com ducking −7 dB: durante a fala a voz fica **≥ 15 dB acima da música** (integrado), para a tradução automática do Instagram separar a fala. Sobe +1 dB no drop e +8 dB depois da voz; acaba com a cauda natural da faixa.
 - Tema próprio da v1 (`kit/tema_expedicao.mp3`, ElevenLabs Music) fica como reserva quando o fundador não escolher faixa.
 
 ## 4. Os oito movimentos de edição (só estes)
