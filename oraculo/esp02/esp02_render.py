@@ -285,23 +285,47 @@ def bar(d, x, y, w, pct, col, lab, t0, t, h=64, ref=None):
         for yy in range(int(y - 12), int(y + h + 12), 14): d.line((rx, yy, rx, yy + 7), fill=WHITE, width=3)
     d.text((x + 18, y + h / 2), lab, font=F(CONDB, 34), fill=WHITE, anchor='lm')
     d.text((x + w - 18, y + h / 2), f'{round(pct * k)}%', font=F(INTB, 44), fill=WHITE, anchor='rm')
+def _print(n):
+    im = Image.open(K + f'oraculo/esp02/comentarios/{n}.png').convert('RGB')
+    return im.resize((920, round(im.height * 920 / im.width)), Image.LANCZOS)
+PR_JOREL, PR_PRECO = _print('jorel_oliveira'), _print('preconautamtg_arvore')
+def scan_print(im, pr, x, y, t0, t):
+    """Print real de comentário (foto + texto), com entrada «scan» de cima para baixo."""
+    if t < t0: return ImageDraw.Draw(im, 'RGBA')
+    d = ImageDraw.Draw(im, 'RGBA'); k = eio((t - t0) / 0.7); ch = max(1, int(pr.height * k))
+    d.rounded_rectangle((x - 8, y - 8, x + pr.width + 8, y + ch + 8), 18, fill=(255, 255, 255, 255))
+    im.paste(pr.crop((0, 0, pr.width, ch)), (x, y)); d = ImageDraw.Draw(im, 'RGBA')
+    if k < 1: d.rectangle((x, y + ch - 3, x + pr.width, y + ch + 3), fill=PH + (255,))
+    d.rounded_rectangle((x - 8, y - 8, x + pr.width + 8, y + ch + 8), 18, outline=EM, width=4)
+    return d
+def tile_s(d, x, y, w, h, num, lab, col, t0, t):
+    if t < t0: return
+    k = eio((t - t0) / 0.25)
+    d.rounded_rectangle((x, y, x + w, y + h), 16, outline=col, width=3, fill=(8, 20, 18, 255))
+    d.text((x + w / 2, y + h * 0.40), num, font=F(INTB, int(76 * (1.25 - .25 * k))), fill=col, anchor='mm')
+    d.text((x + w / 2, y + h - 30), lab, font=F(MONOB, 26), fill=GREY, anchor='mm')
 def scene_fonte(t):
     im, d = term_base(t, 18)
     t0 = DIVE_END - 0.1
-    s1 = '> ARQUIVO: TAÇA PRECONAUTA · 1ª EDIÇÃO'
+    s1 = '> ARQUIVO: A COMUNIDADE RESPONDEU'
     d.text((80, 200), typed(s1, t0, t), font=fit(d, s1, MONOB, 38, 920), fill=PH)
-    d.text((80, 258), typed('  taca.preconauta.com.br · consulta 14/11/2026', t0 + .3, t), font=F(MONO, 28), fill=EM)
+    d.text((80, 258), typed('  comentários no @binderthetrade · nov/2026', t0 + .3, t), font=F(MONO, 28), fill=EM)
     d.line((80, 312, 1000, 312), fill=(16, 185, 129, 90), width=2)
     if t >= DIVE_END + 0.1:
-        d.rounded_rectangle((80, 350, 1000, 560), 16, outline=AMBER, width=3, fill=(20, 16, 8, 255))
-        d.text((110, 372), 'TUBO · ESPECIAL 01', font=F(MONOB, 28), fill=AMBER)
-        d.text((110, 420), '«Ninguém publica win rate', font=F(INTB, 52), fill=WHITE)
-        d.text((110, 482), 'de dupla. Ainda.»', font=F(INTB, 52), fill=WHITE)
-    if t >= ws(15) - .05: stamp(d, 'AGORA PUBLICAM', PH, ws(15), t, 600, 44)
-    tile(d, 80, 700, 290, 260, '101', 'MATCHES', PH, ws(20) - .05, t)
-    tile(d, 395, 700, 290, 260, '230', 'JOGOS', PH, ws(24) - .05, t)
-    tile(d, 710, 700, 290, 260, '97', 'PRECONS', PH, ws(28) - .05, t)
-    fontes(d, ['dados: Taça Preconauta (@preconautamtg), usados com autorização', 'a Taça está em andamento: os números mudam'], 1384)
+        d.rounded_rectangle((80, 330, 1000, 430), 16, outline=AMBER, width=3, fill=(20, 16, 8, 255))
+        d.text((110, 345), 'TUBO · ESPECIAL 01', font=F(MONOB, 24), fill=AMBER)
+        d.text((110, 378), '«Ninguém publica win rate de dupla. Ainda.»', font=fit(d, '«Ninguém publica win rate de dupla. Ainda.»', INTB, 40, 860), fill=WHITE)
+    d = scan_print(im, PR_JOREL, 80, 458, ws(15) - .1, t)
+    if t >= ws(15) - .05:
+        k = eio((t - ws(15) + .05) / 0.3)
+        d.line((110, 401, 110 + 860 * k, 401), fill=RED, width=5)
+        d.rounded_rectangle((720, 338, 990, 372), 17, fill=(5, 40, 20, 255), outline=PH, width=3)
+        d.text((855, 355), 'AGORA PUBLICAM', font=F(MONOB, 24), fill=PH, anchor='mm')
+    d = scan_print(im, PR_PRECO, 80, 818, ws(17) - .1, t)
+    tile_s(d, 80, 1130, 290, 190, '101', 'MATCHES', PH, ws(20) - .05, t)
+    tile_s(d, 395, 1130, 290, 190, '230', 'JOGOS', PH, ws(24) - .05, t)
+    tile_s(d, 710, 1130, 290, 190, '97', 'PRECONS', PH, ws(28) - .05, t)
+    fontes(d, ['prints reais dos comentários · Taça Preconauta 1ª edição (taca.preconauta.com.br)', 'dados usados com autorização do @preconautamtg · a Taça está em andamento'], 1384)
     hud(d, t); return term_finish(im)
 def scene_ordem(t):
     im, d = term_base(t, 14)

@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 14/11/2026 (02:15) · Comentários da comunidade sempre no vídeo, com foto
+
+**O quê:** regra nova na constituição (bloco «Comentários da comunidade no vídeo»): comentários de seguidores usados num conteúdo aparecem como print real (foto, @, texto), com crédito na legenda e convite de Collab quando fizer sentido; exceção permanente a §11.5 para este uso. Aplicada já ao MC-ESP02 (prints de @jorel.oliveira e @preconautamtg).
+**Porquê:** fundador, 14/11/2026 (02:15): «Sempre que tiver comentário coloque no vídeo pós precisamos validar quem comentou e ajuda para fazermos o colab que e uma estratégia que deu certo e que pretendo sempre fazer […] pode colocar a foto dos seguidores eu assumo a responsabilidade».
+**Impacto:** todas as frentes. Limites: só comentários públicos em posts do BINDER; sem conteúdo ofensivo, menores ou dados pessoais; retira-se a pedido do autor.
+
 ## 13/11/2026 (10:00) · Retenção como padrão obrigatório; git direto para a main
 
 **O quê:** (1) O bloco «Retenção e recompensa» da constituição passa a fazer parte do briefing (`SHOWRUNNER.md` §4, item 9) e do controlo de qualidade de cada conteúdo (linha «Retenção» na ficha, §6). (2) Fim do PR à espera: com render feito e encerramento + validação sem erros, o conteúdo entra na `main` na mesma sessão; alterações posteriores entram como commit novo na `main`; sem force push. Substitui a regra «nada de merge automático para `main`» de `AGENTS.md`.
