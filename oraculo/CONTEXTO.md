@@ -138,6 +138,7 @@ Todas as capas do Meta em Curto seguem este modelo (fundador, 14/11/2026 02:43; 
 - **Fundo:** as cartas reais do episódio, desfocadas e escurecidas (dizem «Magic» sem competir com o texto).
 - **Fora da capa:** números de apoio, fontes, perguntas e créditos (vão para a legenda e o comentário fixado). Máximo de 3 blocos de texto (frase, foco, faixa) e 1 elemento de apoio.
 - Capas já publicadas não se refazem.
+- **Variante «comunidade»** (fundador, 14/11/2026 10:44; referência: `ESP02_CAPA_COMUNIDADE.png`, `esp02_render.py <kit> capa_comunidade`): quando o episódio nasce de comentários de contas relevantes (criadores, lojas, ligas), o foco passa a ser os **prints reais** desses comentários, empilhados como cartas (máx. 3, de quem tiver mais peso para quem tiver menos), com as fotos e os @ visíveis. Frase em duas linhas por cima (branco + verde), um selo de apoio por cima da linha de ações do último print (sem tapar texto de ninguém) e a faixa fixa da série. Serve de prova social na grelha e valoriza os parceiros da collab.
 
 ## 8. Pilares
 

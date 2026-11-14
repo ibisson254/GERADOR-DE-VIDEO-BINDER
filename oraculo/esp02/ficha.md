@@ -64,3 +64,4 @@ Voz: ElevenLabs «Antonio de Jesus» (`MK5tXPmT83J5SUlpUo4K`), eleven_v4, tomada
 
 ## Depois de publicar
 - Convite de Collab para @preconautamtg. Métrica principal: visitas ao perfil por 1.000 views · secundária: respostas A/B/C.
+- Capa variante «comunidade» (14/11, 10:50): `ESP02_CAPA_COMUNIDADE.png` — «A COMUNIDADE / CORRIGIU O TUBO», prints reais de @diarioplaninauta, @jorel.oliveira e @preconautamtg, selo «TUBO: 50% → 66%», faixa «META EM CURTO · ESP. 02 × PRECONAUTA». Gerada com `esp02_render.py <kit> capa_comunidade` (+ `_grelha.png`). Não versionada.

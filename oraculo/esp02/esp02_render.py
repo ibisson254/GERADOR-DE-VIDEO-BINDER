@@ -501,6 +501,43 @@ if __name__ == '__main__':
         im.convert('RGB').save('ESP02_CAPA.png')
         im.convert('RGB').crop((0, 240, W, 1680)).save('ESP02_CAPA_grelha.png')
         sys.exit()
+    if len(sys.argv) > 2 and sys.argv[2] == 'capa_comunidade':
+        # Variante «comunidade» do modelo de capa (CONTEXTO §7.3): o foco são os prints reais de quem comentou
+        # (influenciador verificado, organizador da liga, liga/loja), para a prova social ler-se na grelha.
+        im = Image.new('RGBA', (W, H), BG + (255,))
+        d = ImageDraw.Draw(im, 'RGBA')
+        # 1) frase
+        d.text((W / 2, 300), 'A COMUNIDADE', font=F(INTB, 118), fill=WHITE, anchor='mm')
+        d.text((W / 2, 420), 'CORRIGIU O TUBO', font=fit(d, 'CORRIGIU O TUBO', INTB, 118, 980), fill=PH, anchor='mm')
+        # 2) foco: os três prints reais, empilhados como cartas
+        prints = [(K + 'oraculo/esp01/comentario_diarioplaninauta.png', -2.0), (K + 'oraculo/esp02/comentarios/jorel_oliveira.png', 1.6),
+                  (K + 'oraculo/esp02/comentarios/preconautamtg_arvore.png', -1.2)]
+        y = 520
+        for path, ang in prints:
+            pr = Image.open(path).convert('RGB'); pr = pr.resize((940, round(pr.height * 940 / pr.width)), Image.LANCZOS)
+            card = Image.new('RGBA', (pr.width + 24, pr.height + 24), (255, 255, 255, 255)); card.paste(pr, (12, 12))
+            m = Image.new('L', card.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, card.width - 1, card.height - 1), 22, fill=255); card.putalpha(m)
+            sh = Image.new('RGBA', (card.width + 80, card.height + 80), (0, 0, 0, 0))
+            ImageDraw.Draw(sh).rounded_rectangle((40, 50, card.width + 40, card.height + 50), 26, fill=(0, 0, 0, 170))
+            sh = sh.filter(ImageFilter.GaussianBlur(18)).rotate(ang, resample=Image.BICUBIC, expand=True)
+            cr = card.rotate(ang, resample=Image.BICUBIC, expand=True)
+            x = (W - cr.width) // 2
+            im.alpha_composite(sh, (x - 40, y - 40)); im.alpha_composite(cr, (x, y))
+            y += card.height - 30
+        # 3) apoio: a correção do TUBO, sobre a linha de ações do último print (não tapa texto de ninguém)
+        d = ImageDraw.Draw(im, 'RGBA')
+        st = Image.new('RGBA', (500, 110), (0, 0, 0, 0)); sd = ImageDraw.Draw(st)
+        sd.rounded_rectangle((4, 4, 496, 106), 22, fill=(30, 6, 8, 245), outline=RED, width=6)
+        sd.text((250, 55), 'TUBO: 50% → 66%', font=fit(sd, 'TUBO: 50% → 66%', INTB, 50, 440), fill=WHITE, anchor='mm')
+        st = st.rotate(-4, resample=Image.BICUBIC, expand=True); im.alpha_composite(st, (W - st.width - 30, y - 48))
+        d = ImageDraw.Draw(im, 'RGBA')
+        # 4) faixa fixa da série
+        d.rectangle((0, 1572, W, 1662), fill=(5, 10, 16, 255)); d.line((0, 1572, W, 1572), fill=PH, width=4)
+        d.text((60, 1617), 'META EM CURTO · ESP. 02', font=F(MONOB, 40), fill=PH, anchor='lm')
+        d.text((W - 60, 1617), '× PRECONAUTA', font=F(MONOB, 40), fill=AMBER, anchor='rm')
+        im.convert('RGB').save('ESP02_CAPA_COMUNIDADE.png')
+        im.convert('RGB').crop((0, 240, W, 1680)).save('ESP02_CAPA_COMUNIDADE_grelha.png')
+        sys.exit()
     if len(sys.argv) > 2 and sys.argv[2] == 'stills':
         for tt in map(float, sys.argv[3:]): frame(tt).save(f'still_{tt:05.2f}.png')
         sys.exit()
