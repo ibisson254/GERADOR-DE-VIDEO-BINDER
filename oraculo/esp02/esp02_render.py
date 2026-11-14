@@ -424,10 +424,22 @@ def frame_main(t):
         if k < 0.35: im = Image.blend(inside(t), im, k / 0.35)
         return subs(im, t, SUBY)
     if t < T_Q:
-        im = tubo_frame(t, 'confiante', zoom=1.0 + .03 * eio((t - EXIT_END) / 3)); d = ImageDraw.Draw(im, 'RGBA')
-        if t >= ws(92) - .05: pop_text(d, W / 2, 140, 'ERREI A CONTA.', ws(92) - .05, t, 72, AMBER)
+        err = ws(92) - .08 <= t < ws(95) - .05            # «Errei a conta» = Erro de sistema (bíblia)
+        kp = eio((t - REV0) / (REV1 - REV0 + 0.4)) if t >= REV0 else 0.0   # corte seco: aproximação lenta, sem pausa morta
+        im = tubo_frame(t, 'erro' if err else 'confiante', zoom=1.0 + .03 * eio((t - EXIT_END) / 3) + 0.05 * kp, red_led=err)
+        d = ImageDraw.Draw(im, 'RGBA')
+        if err:
+            rr = np.random.default_rng(int(t * 30)); jx = int(rr.integers(-8, 8))
+            d.text((W / 2 + jx, 140), 'ERREI A CONTA.', font=F(INTB, 72), fill=RED, anchor='mm')
+            d.rounded_rectangle((120, 205, 960, 300), 14, fill=(5, 10, 16, 230), outline=(255, 64, 64, 200), width=3)
+            d.text((150, 252), '> MODELO TUBO: 50%', font=F(MONOB, 34), fill=WHITE, anchor='lm')
+            d.text((930, 252), 'REAL: 66%', font=F(MONOB, 34), fill=RED, anchor='rm')
+            for _ in range(3):
+                y0 = int(rr.integers(110, 300)); d.rectangle((120, y0, 960, y0 + int(rr.integers(2, 6))), fill=(255, 64, 64, 90))
+        elif t >= ws(92) - .05:
+            d.text((W / 2, 140), 'ERREI A CONTA.', font=F(INTB, 72), fill=AMBER, anchor='mm')
         if t >= ws(95) - .05: d.text((W / 2, 205), 'A DUPLA IGUALA A MESA.', font=fit(d, 'A DUPLA IGUALA A MESA.', INTB, 60, 960), fill=GREY, anchor='ma')
-        if t >= ws(100) - .05: d.text((W / 2, 275), 'A ORDEM DE TURNO DESEMPATA.', font=fit(d, 'A ORDEM DE TURNO DESEMPATA.', INTB, 66, 980), fill=PH, anchor='ma')
+        if t >= ws(100) - .05: pop_text(d, W / 2, 305, 'A ORDEM DE TURNO DESEMPATA.', ws(100) - .05, t, 62, PH)
         if t >= ws(105) - .05:
             meter(d, 360, 4 if t >= ws(108) - .05 else 0)
             if t >= ws(111) - .05:

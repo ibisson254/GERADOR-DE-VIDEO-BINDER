@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 14/11/2026 (02:22) · Meta em Curto: erro do TUBO com «Erro de sistema» e corte seco sem pausa morta
+
+**O quê:** quando o TUBO admite que errou, usa-se a expressão «Erro de sistema» já definida em `oraculo/CONTEXTO.md` (olhos duplicados, glitch, tremor, LED vermelho, caixa «MODELO TUBO» com o erro a vermelho, som de glitch). O corte seco continua a ser a assinatura da série, mas passa a ser curto (~0,6 s) e com movimento (aproximação lenta da câmara), para não ficar uma pausa morta antes do «Grau de certeza». Aplicado ao MC-ESP02 (v3).
+**Porquê:** fundador, 14/11/2026 (02:22): «quando erra a conta tem um efeito que já tínhamos pré definido na bíblia do personagem, antes que ele fala grau de certeza da uma pausa seca que temos ajustar».
+**Impacto:** só o Meta em Curto. Identidade, voz e trilha mantêm-se; muda a duração do silêncio e o que se vê nele.
+
 ## 14/11/2026 (02:15) · Comentários da comunidade sempre no vídeo, com foto
 
 **O quê:** regra nova na constituição (bloco «Comentários da comunidade no vídeo»): comentários de seguidores usados num conteúdo aparecem como print real (foto, @, texto), com crédito na legenda e convite de Collab quando fizer sentido; exceção permanente a §11.5 para este uso. Aplicada já ao MC-ESP02 (prints de @jorel.oliveira e @preconautamtg).

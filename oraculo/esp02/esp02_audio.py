@@ -7,7 +7,7 @@ import numpy as np, soundfile as sf, subprocess, json, sys
 K = sys.argv[1] if len(sys.argv) > 1 else '../..'
 SR = 48000; TEMPO = 1.10; LEAD = 0.15
 W = json.load(open('words.json'))
-PAUSES = [((W[32]['e'] + W[33]['s']) / 2, 0.40), ((W[54]['e'] + W[55]['s']) / 2, 0.30), ((W[65]['e'] + W[66]['s']) / 2, 0.40), ((W[91]['e'] + W[92]['s']) / 2, 1.00), ((W[104]['e'] + W[105]['s']) / 2, 1.20)]   # (tempo da voz original, s)
+PAUSES = [((W[32]['e'] + W[33]['s']) / 2, 0.40), ((W[54]['e'] + W[55]['s']) / 2, 0.30), ((W[65]['e'] + W[66]['s']) / 2, 0.40), ((W[91]['e'] + W[92]['s']) / 2, 1.00), ((W[104]['e'] + W[105]['s']) / 2, 0.60)]   # (tempo da voz original, s)
 def load(p):
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', p, '-ac', '2', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True).stdout
     return np.frombuffer(raw, np.float32).reshape(-1, 2).copy()
@@ -25,7 +25,7 @@ N = int(TOTAL * SR)
 V = np.zeros((N, 2), np.float32); a = int(LEAD * SR); V[a:a + len(voz)] = voz[:N - a]
 # --- trilha: tema original até ao corte seco; silêncio; retoma no ponto que faz o tema acabar por baixo do fecho
 REV0 = vt(W[104]['e']) + 0.02         # fim de «desempata.»
-REV1 = REV0 + 1.20
+REV1 = REV0 + 0.60   # corte seco curto (fundador, 14/11 02:22): o silêncio segue a revelação sem pausa morta
 T = load(K + '/oraculo/musica/tubo_tema_original.mp3'); TL_ = len(T) / SR
 resume = max(0.0, TL_ - (TOTAL - REV1) - 0.3)
 M = np.zeros((N, 2), np.float32)
@@ -64,6 +64,12 @@ def swish(dur=0.35):
     tt = np.arange(int(dur * SR)) / SR; n = np.random.default_rng(5).normal(0, 1, len(tt))
     n = np.convolve(n, np.ones(12) / 12, 'same'); e = np.sin(np.pi * tt / dur) ** 2
     return (n * e * 0.5).astype(np.float32)
+def glitch(dur=0.5):   # erro de sistema (bíblia): zumbido digital com cortes, igual ao EP02
+    tt = np.arange(int(dur * SR)) / SR; rng = np.random.default_rng(5)
+    x = np.sign(np.sin(2 * np.pi * 180 * tt)) * 0.10 + rng.normal(0, 1, len(tt)) * 0.06
+    gate = (np.floor(tt * 28) % 3 != 1).astype(float)
+    e = np.minimum(1, tt / 0.01) * np.minimum(1, (dur - tt) / 0.05)
+    return (x * gate * e).astype(np.float32)
 S = np.zeros_like(V)
 def put(x, at, gain):
     i = int(at * SR); n = min(len(x), N - i); S[i:i + n] += x[:n, None] * gain
@@ -83,6 +89,7 @@ put(swish(), wsa(8) - .05, 0.5)                                   # cartas viram
 put(pop(f0=800, f1=1600), wsa(9) - .05, 0.55)                     # 66%
 for i in (15, 56, 85, 92): put(stamp_click(), wsa(i) - .05, 0.4)  # carimbos
 for i in (20, 24, 28, 42, 48, 70, 76, 83, 89): put(pop(), wsa(i) - .05, 0.4)   # números e barras
+put(glitch(0.7), wsa(92) - .08, 0.5)                              # «Errei a conta» = Erro de sistema
 put(pop(f0=500, f1=1000), wsa(100) - .05, 0.35)                   # «A ordem de turno desempata»
 for i in (125, 128, 131): put(pop(0.09, 900, 1400), wsa(i) - .05, 0.3)   # chips A/B/C
 mix = V + M + S
