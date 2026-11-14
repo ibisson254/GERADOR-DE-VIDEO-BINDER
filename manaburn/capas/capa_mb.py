@@ -7,7 +7,7 @@
 #                      --ep 11 --tag COMMANDER --saida MB_EP11_CAPA.png
 #   (ou --carta caminho.png em vez de --scryfall SET/Nº). Gera também *_grelha.png (pré-visualização do recorte).
 # Fonte: Bangers (node_modules/@fontsource/bangers); convertida de woff2 automaticamente se faltar o .ttf.
-import argparse, json, pathlib, subprocess, tempfile
+import argparse, json, pathlib, subprocess, tempfile  # precisa: pip install fonttools brotli
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 ap = argparse.ArgumentParser()
 ap.add_argument('--carta'); ap.add_argument('--scryfall', help='SET/Nº, ex.: cmd/215')

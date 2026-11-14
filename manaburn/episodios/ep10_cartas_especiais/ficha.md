@@ -90,6 +90,9 @@ Não testado (depende das vozes): sincronização das falas, mistura a −14 LUF
 - [x] Roteiro · [x] episode.json/js · [x] Cartas · [x] Legenda (671 caracteres) · [x] Comentário fixado (967) · [x] Texto alternativo · [x] Fontes · [x] Prévia e capa provisória (fora do repositório)
 - [x] Vozes · [x] Vídeo final (fora do repositório) · [x] Capa (2,5 s, fala 1) · [x] QC do ficheiro final
 
+## Capa no modelo fixo (14/11/2026)
+`MB_EP10_CAPA.png` (+ `_grelha.png`), gerada com `manaburn/capas/capa_mb.py --carta cards/main.png --frase "Kirk assinado no pré-release?" --foco ZERO --selo "Só no Collector" --ep 10 --tag "Star Trek"`. Substitui a capa de quadro do vídeo (PERFIL, secção «Capa»). Foco = fala 9 (zero autógrafo no Play Booster); selo = fala 8. Crédito da carta (Chris Rallis) já na legenda.
+
 ## Depende do fundador
 1. Ouvir a pronúncia ("pré-release", "Play Booster", "Collector", "Stardate", "LCARS") e aprovar o vídeo; publicar.
 2. Confirmar que o Ep. 4 do Drive ("Autógrafos de Star Trek", Kirk 1701) não foi publicado; o tema toca no mesmo produto (ângulo novo, piadas diferentes).
