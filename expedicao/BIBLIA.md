@@ -1,6 +1,6 @@
 # Expedição BINDER · bíblia do formato
 
-Versão 2 · 14/11/2026 (v1 às 02:24 com o episódio #01; v2 às 15:33 com a direção «Prisma Abissal», `01-nauctis/brief_v2.md`). Formato de lançamento do BINDER Originals: **um episódio por set novo, no «primeiro olhar»**, até 72 h depois da revelação oficial.
+Versão 3 · 14/11/2026 (v1 02:24; v2 15:33 «Prisma Abissal», `01-nauctis/brief_v2.md`; v3 16:19 «Operação Abyssal», estrutura de retenção e finais A/B). Formato de lançamento do BINDER Originals: **um episódio por set novo, no «primeiro olhar»**, até 72 h depois da revelação oficial.
 
 ## 1. O que é
 Reel 9:16 de 60–75 s (sem o fecho) que apresenta as primeiras cartas reveladas de um set **como espécies de um documentário de natureza**, numa descida pelas camadas oficiais do mundo do set. Pergunta aberta no início, paga no fim; espécies numeradas; pedido de comentário com resposta de um número.
@@ -8,6 +8,15 @@ Reel 9:16 de 60–75 s (sem o fecho) que apresenta as primeiras cartas reveladas
 - Público: jogadores de Magic do Brasil (sobretudo Commander) que ainda não leram nada sobre o set.
 - Proposta de valor: em ~70 s a pessoa conhece o plano, as cartas, os decks de Commander e a data, e lembra-se delas porque foram apresentadas como bichos.
 - **Não é Mana & Burn.** Nenhum personagem do BINDER aparece (sem Burn, Mana, sofá, TV SAL, Conde, TUBO, Vince). Sem vozes nem música das séries.
+
+## 1b. Estrutura de retenção (v3)
+1. **Gancho (0–2,5 s):** a promessa escrita no quadro 0 sobre a silhueta da carta-pagamento (mesmo enquadramento da revelação), um clarão curto que a deixa entrever, a câmara a descer. Etiqueta da série pequena; nada de título institucional.
+2. **Descobertas numeradas (1/6 … n/6)**, cada uma com uma entrada própria (aproximação à arte, varredura de scanner, panorâmica, giro, faixa de luz) e depois o **modo habilidade**: a carta sobe e uma chamada curta em PT-BR diz a habilidade (fichas verdes = vantagem, vermelhas = condição, brancas = informação). Nunca depender do texto inglês impresso.
+3. **Camadas** com fundo que muda de luz e contraste; no Abismo, um indício da carta-pagamento lá em baixo.
+4. **Revelação no drop** (herói maior, brilho, swell), depois habilidade, comparação verificada e escassez só se confirmada.
+5. **Data** («5 FEV 2027») e **decks** em placas gráficas neutras (nunca imitar embalagem; caixa oficial só com imagem oficial).
+6. **Final A (engajamento):** grelha 3×2 numerada com nomes, ≥ 4 s, pergunta «QUAL ESPÉCIE VOCÊ LEVA? / COMENTE DE 1 A N»; assinatura curta do BINDER Vision. **Final B (instalação):** sem a pergunta; scanner real em destaque e botão «BAIXE O BINDER VISION». Nunca duas chamadas com o mesmo peso.
+7. **Fecho do BINDER Vision:** gravação real do scanner (`comum/outro/scan`) + cartão final de alto contraste (logótipo grande; «Escaneie suas cartas e organize seus decks.» / «Disponível no Google Play.» / «Link na bio.»). Substitui o `outro_binder_916.mp4` neste formato (decisão de 14/11/2026).
 
 ## 2. Voz
 - ElevenLabs **«Rafael Valente – Brazilian Professional Narrator»**, `voice_id dX7gRq1dIvLTgUaWpEFn`, modelo `eleven_v4`. Escolhida a 14/11/2026 entre duas prévias (a outra: «Bia – Versátil & Expressiva», `0ozreaQ0xnggCu2x9oFC`): é a mais rápida e curiosa das duas, com registo jovem de documentário. Não é voz de nenhuma série.
@@ -17,7 +26,7 @@ Reel 9:16 de 60–75 s (sem o fecho) que apresenta as primeiras cartas reveladas
 
 ## 3. Música
 - **EX-01: «Auction of Power»** (`kit/auction_of_power.mp3`, 45 s, 140 BPM, batida 0,42865 s), escolhida e fornecida pelo fundador a 14/11/2026. **Licença a registar antes de publicar.**
-- A música manda no ritmo: `audio.py` rearranja-a em batidas inteiras (`episode.json → musica.arranjo`) até cobrir o episódio e põe o **drop** exatamente na palavra da revelação (`drop_w`); a pausa `ajuste_pausa_w` absorve a diferença. A grelha de batidas do vídeo é a da música.
+- A música manda no ritmo: `audio.py` rearranja-a sozinho em batidas inteiras (repete os compassos antes do drop até o **drop** cair na palavra da revelação, `drop_w`, e repete compassos depois do drop até a **cauda natural da faixa acabar com o vídeo**); a pausa `ajuste_pausa_w` absorve a diferença. A grelha de batidas do vídeo é a da música.
 - −21 LUFS sob a voz, ducking −4 dB, abre +3 dB no drop e no fecho; acaba dentro do fecho de marca.
 - Tema próprio da v1 (`kit/tema_expedicao.mp3`, ElevenLabs Music) fica como reserva quando o fundador não escolher faixa.
 
@@ -43,7 +52,7 @@ Conceito: a descida é luz a decompor-se. Quanto mais fundo, menos luz e mais pu
 - **Medidor de descida** à esquerda, **sem números de profundidade**; **ficha de espécie** «Nº n · NOME · tipo · camada» (esmeralda do BINDER no número); legenda palavra a palavra com palavras-chave a amarelo; logótipo do BINDER no canto superior direito, 62 px, 60%.
 - Abertura: gancho escrito desde o quadro 0; silhueta da carta-pagamento quase invisível. Pagamento: a mesma carta acende **no mesmo enquadramento**, no drop.
 - **Sonoplastia desenhada, três sons e só três** (`kit/sfx/`, ElevenLabs SFX v2, 14/11/2026): *descida* (queda de pressão sub-grave) nas três camadas; *glitch* (rajada digital de 0,3 s) nos punch-ins brutais das caixas e nas três condições da carta-pagamento; *swell* prismático invertido que acaba no drop. Proibido: ping de sonar, bolhas, whoosh de água e qualquer som «de biblioteca» por defeito. Um som que não melhore o plano sai.
-- Termina com `comum/outro/outro_binder_916.mp4` (corte seco; a música acaba dentro dele).
+- Termina com o scanner real e o cartão final (§1b.7); a música acaba com a cauda natural, sem trecho mudo.
 
 ## 6. Regras de facto e de direitos
 - Texto Oracle de cada carta lido no Scryfall (ou no artigo da Wizards) antes da voz; nunca regra de memória.

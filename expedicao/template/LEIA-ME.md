@@ -19,15 +19,16 @@ Bíblia do formato: `../BIBLIA.md`. Este motor não reescreve o gerador das sér
 5. `python3 -I template/baixar_cartas.py NN-<set>` (depois de escrever `cards/creditos.json`).
 6. Numa pasta de trabalho com `voz.mp3`:
    ```
-   python3 -I template/audio.py  NN-<set> <trabalho>
-   python3 -I template/render.py NN-<set> <trabalho> stills 0 3 10 20   # prévias
-   python3 -I template/render.py NN-<set> <trabalho>                     # vídeo (PARTES=n para paralelizar)
-   python3 -I template/render.py NN-<set> <trabalho> capas
+   python3 -I template/audio.py  NN-<set> <trabalho> A            # e B (finais em episode.json -> versoes)
+   python3 -I template/render.py NN-<set> <trabalho> A stills 0 3 10 20   # prévias
+   python3 -I template/render.py NN-<set> <trabalho> A                     # vídeo (PARTES=n para paralelizar)
+   python3 -I template/render.py NN-<set> <trabalho> A capas
    python3 -I ../comum/qc/qc_video.py --frente lambe <trabalho>/<ficheiro>.mp4
    ```
    (correr a partir de `expedicao/`; `-I` isola os imports, por isso `audio.py` acrescenta a própria pasta ao caminho.)
 
 ## Limites conhecidos
-- Sem as caixas oficiais em `products/`, o render mostra cartões «PRÉVIA · NÃO PUBLICAR» e a abertura/o fecho usam cartas em vez da fila de caixas. O episódio não é publicável assim.
+- v3: as caixas aparecem como placas gráficas neutras com o nome dos decks (bloco `decks`); a imagem oficial em `products/` ainda não é usada por este bloco.
+- `qc_video.py` acusa «fecho ausente»: esperado, o formato usa scanner real + cartão próprio (BIBLIA §1b.7).
 - B-roll: suportado na bíblia, ainda não implementado no motor (o EX-01 saiu sem B-roll porque os bancos não abrem nesta rede).
 - Requisitos: Python 3, Pillow, numpy, scipy, pyloudnorm, librosa (só para analisar uma música nova), ffmpeg com `rubberband`, fontes Inter em `/usr/share/fonts/opentype/inter/`.

@@ -2,7 +2,7 @@
 
 ## Identificação
 - ID editorial: **EX-01** (`comum/REGISTRO_EDITORIAL.md`)
-- Estado no registo: **EM PRODUÇÃO** — render completo e conferido, mas **prévia não publicável** até as quatro caixas oficiais entrarem em `products/` (constituição §11.2).
+- Estado no registo: **EM PRODUÇÃO** — v3 (retenção, versões A e B) renderizada e conferida, **sem avisos internos**; falta a aprovação do fundador, ouvir a mistura e registar a licença da «Auction of Power».
 - Pedido do fundador: prompt «BINDER Originals · Expedição BINDER #01 "Nauctis: Primeiro Mergulho"», 14/11/2026 (02:24), com gravação de ecrã da referência (Reel de @magicoddities, sem áudio). Inclui a autorização para voz e música no ElevenLabs.
 - Publicação alvo: segunda 16/11/2026, 21h Lisboa (18h Brasília). Prazo de valor: 72 h depois da revelação (13/11).
 
@@ -29,6 +29,37 @@ Mudanças face ao prompt (todas por verificação ou duração):
 - Frases 5, 6, 9 e 12: o prompt dizia «os tubarões/as focas/os monstros têm deck». Sem as caixas oficiais não confirmei o tema dos decks; a narração fala só do **nome** («nome de ataque de tubarão», «trocadilho de foca», «leva o nome do fundo»), que é observação verificável. Nenhuma frase liga carta a deck ou a comandante.
 - Frase 6: «criaturas pequenas» → «de poder dois ou menos» (texto Oracle).
 - Gravado e cortado na montagem para caber em 75 s (prompt §7): frase 2 inteira («Isto é Nauctis…»), «onde vive quase tudo» (frase 7), «achado no caminho» (frase 10), «Agora,» (frase 11) e «e compra carta a cada sacrifício» (frase 12, detalhe de regra). A numeração, as caixas, o Lotus e a pergunta ficaram.
+
+## Versão 3 «Operação Abyssal · retenção» (14/11/2026, 16:19, pedido do fundador)
+Pedido: reconstrução para retenção (gancho, micro-retenção, progressão, revelação, som, legendas, avisos internos, CTA, BINDER Vision, 40–50 s, finais A e B). Por decisão do fundador (16:32) **a voz é a mesma** (sem geração nova): só cortes de frases inteiras. Resultado: 59,2 s (A) e 58,3 s (B), a duração mais curta que mantém as seis espécies com a voz existente.
+
+**Auditoria da v2 (problemas encontrados):** título institucional de 2,4 s antes da primeira carta; primeira descoberta só aos 6,5 s; seis apresentações iguais (plano + troca de versão + zoom em texto inglês, ilegível no telemóvel); revelação aos 60 s de 78 s; 4 cartões «PRÉVIA · NÃO PUBLICAR» (caixas em falta) aos 15, 25, 36 e 54 s; data «05/02/2027» ambígua; fecho com texto pequeno e pouco contraste; cauda da música a morrer dentro do fecho.
+
+**O que mudou:**
+- Gancho: «TEM UM LOTUS NO FUNDO DESTE MAR» no quadro 0 sobre a silhueta da carta-pagamento (mesmo enquadramento da revelação), com um clarão aos 0,33 s que deixa ver a carta por um instante; a câmara desce. A primeira descoberta entra aos 2,5 s. O título da série ficou como etiqueta pequena.
+- Seis apresentações com entrada própria: Goramou (aproximação à ilustração), Calmwater Mentor (varredura de scanner, a ligar ao BINDER Vision), Salinae (panorâmica pela baleia), Ring of Unity (giro), Tecton (acende com uma faixa de luz), Abyssal Lotus (silhueta → acende no drop com a fenda prismática). Todas passam a «modo habilidade»: a carta sobe e uma chamada curta em PT-BR explica a habilidade (factos da tabela abaixo), com fichas verdes (vantagem), vermelhas (condição) e brancas (informação).
+- Medidor de descida com as 6 descobertas (pontos) e o contador 1/6 … 6/6; o fundo muda por camada (Rasos claro, Grande Marinho com mais contraste, Abismo escuro); no Abismo aparece um indício da carta-pagamento lá em baixo.
+- Revelação aos 37,8 s (no drop), antes 60 s: herói maior, brilho prismático, swell; depois custo 0 → 3 manas → comparação com o Black Lotus → as três condições → «≈ 500 cópias» (confirmado no artigo da Wizards).
+- Caixas: sem imagem oficial, substituídas por **placas gráficas neutras** com os nomes dos 4 decks (não imitam embalagem). Nenhum aviso interno no vídeo.
+- Data: «5 FEV 2027».
+- Pergunta (A): as seis cartas numeradas em grelha com o nome por baixo, 4,7 s em ecrã.
+- BINDER Vision: gravação real do scanner (`comum/outro/scan`) + cartão final novo, branco e verde sobre escuro: «Escaneie suas cartas e organize seus decks.» / «Disponível no Google Play.» / «Link na bio.» (texto do fecho oficial). A: assinatura curta depois da pergunta. B: sem a pergunta; scanner em destaque (3,9 s, «ESCANEIE SUAS CARTAS» → «E ORGANIZE SEUS DECKS») e botão «BAIXE O BINDER VISION».
+- Som: música rearranjada para acabar com o vídeo (cauda natural da faixa no cartão final, sem trecho mudo); sons de design só em 8 momentos (descida ×3, swell ×1, glitch ×4); fundo de água discreto só no gancho e no Abismo.
+- Narração usada (cortes da gravação existente): «No fundo deste oceano existe um Lotus.» · «Espécie número um: Goramou, o tubarão tomado pelo coral. Quando chega, deixa sangue na água: um marcador de Blood.» · «Número dois: Calmwater Mentor, uma foca monge. Busca até duas criaturas de poder dois ou menos.» · «Mais fundo: o Grande Marinho.» · «Número três: Salinae, uma deusa-baleia. Cada artefato ou criatura que você conjura, ela copia, como um peixinho um por um.» · «Número quatro, Ring of Unity. Todo artefato seu gera dois de mana. Todo. Artefato. Vira. Sol Ring.» · «O abismo.» · «Número cinco: Tecton, um kraken elemental. Fica mais barato a cada carta permanente no seu cemitério.» · «E lá no fundo... número seis: o Abyssal Lotus. Custo zero. Três de mana, igual ao Black Lotus. Mas entra virado, só funciona com oito cartas permanentes no cemitério, e depois vai pro exílio. A versão sem texto vai ter umas quinhentas cópias.» · «Náuctis chega em cinco de fevereiro.» · (A) «Qual espécie você leva pra casa? Comenta o número.»
+
+**Controlo de qualidade v3 (14/11/2026):**
+| Critério | A · engajamento | B · instalação |
+|---|---|---|
+| Ficheiro | `EXPEDICAO_BINDER_NAUCTIS_V2_RETENCAO.mp4` (md5 ab39e1b5…) | `EXPEDICAO_BINDER_NAUCTIS_V2_RETENCAO_B_INSTALACAO.mp4` (md5 b83cf154…) |
+| Técnico | 1080×1920, 30 fps, H.264 + AAC 48 kHz, 59,19 s | igual, 58,33 s |
+| Loudness | −14,1 LUFS, pico −1,4 dBTP | −14,1 LUFS, pico −1,3 dBTP |
+| Pretos acidentais | nenhum (blackdetect) | nenhum |
+| Grelha | 42/43 eventos a ±40 ms de uma batida; drop = revelação (37,76 s) | 41/42 |
+| Primeira descoberta | 2,5 s | 2,5 s |
+| Avisos internos | nenhum | nenhum |
+| `qc_video.py` | «fecho ausente»: esperado (fecho substituído por scanner real + cartão novo, decisão de 14/11) | idem |
+| Áudio ouvido | **Não** (sem saída de áudio na sessão) | **Não** |
+Quadros conferidos: folha de contacto completa e 0; 2,6; 9,5; 14,5; 23,5; 30,5; 38; 44; 49,6; 52; 56; 58,5 (A) e 51; 54; 56,5 (B).
 
 ## Versão 2 «Prisma Abissal» (14/11/2026, 15:33, pedido de voz do fundador)
 Brief refinado: `brief_v2.md`. O texto, os factos e a voz não mudam; muda a forma.
@@ -95,8 +126,8 @@ Quadro 0 com quatro cartas reais de Nauctis e o gancho escrito; gancho visual (s
 - Refazer: pasta de trabalho com `voz.mp3` (geração acima) → `python3 -I template/audio.py 01-nauctis <trab>` → `render.py 01-nauctis <trab>` → `render.py … capas` (a partir de `expedicao/`).
 
 ## Para publicar (falta)
-1. Fundador: anexar as quatro imagens oficiais das caixas (artigo «Collecting Nauctis» ou kit de imprensa da Wizards) e, se quiser, a arte-chave. Gravar como `products/blood_in_the_water.png`, `seal_the_deal.png`, `merfolk_regiment.png`, `terrors_of_the_abyss.png`, medir `ret_subtitulo` e voltar a renderizar (≈ 2 min). A capa B passa a usar as caixas.
-2. Ouvir a voz inteira contra esta ficha.
+1. Ouvir as versões A e B inteiras contra esta ficha e escolher o final.
+2. Opcional: imagens oficiais das 4 caixas, se o fundador as quiser no lugar das placas neutras.
 3. Registar a licença da «Auction of Power» (origem e termos de uso comercial).
 
 ## Limitações

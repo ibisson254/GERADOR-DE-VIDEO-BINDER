@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 14/11/2026 (16:19) · Expedição BINDER v3: estrutura de retenção, finais A/B e fecho próprio
+
+**O quê:** reconstrução do EX-01 pedida pelo fundador («Operação Abyssal»), com a voz existente (decisão das 16:32: sem geração nova). Gancho com indício da carta-pagamento e primeira descoberta aos 2,5 s; entradas diferentes por carta e chamadas de habilidade em PT-BR; medidor 1/6–6/6; revelação no drop (37,8 s); caixas sem imagem oficial substituídas por placas neutras; data «5 FEV 2027»; finais A (engajamento) e B (instalação). **O fecho deste formato deixa de ser o `outro_binder_916.mp4`** e passa a ser a gravação real do scanner (`comum/outro/scan`) + um cartão final de alto contraste com os mesmos textos.
+**Porquê:** o fundador pediu corrigir o contraste insuficiente da tela final e integrar o BINDER Vision mais cedo e com demonstração real; o scanner real e a assinatura continuam (a regra «o fecho nunca sai» cumpre-se no conteúdo).
+**Impacto:** BIBLIA da Expedição §1b; `qc_video.py` passa a acusar «fecho ausente» nesta frente (esperado). As outras frentes mantêm o fecho de sempre.
+
 ## 14/11/2026 (15:33) · Expedição BINDER v2: «Prisma Abissal», música do fundador e sonoplastia desenhada
 
 **O quê:** o fundador aprovou o caminho da v1 do EX-01 e pediu três mudanças: fundo segundo 5 referências de design, música «Auction of Power» com o ritmo do vídeo adaptado a ela, e fim da sonoplastia genérica. Brief refinado em `expedicao/01-nauctis/brief_v2.md`; bíblia passa à v2 (§3 música, §4 grelha, §5 identidade).
