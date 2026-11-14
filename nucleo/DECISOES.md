@@ -14,6 +14,12 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **Porquê:** fundador, 14/11/2026 (02:22): «quando erra a conta tem um efeito que já tínhamos pré definido na bíblia do personagem, antes que ele fala grau de certeza da uma pausa seca que temos ajustar».
 **Impacto:** só o Meta em Curto. Identidade, voz e trilha mantêm-se; muda a duração do silêncio e o que se vê nele.
 
+## 14/11/2026 (02:24) · Formato novo: Expedição BINDER
+
+**O quê:** frente nova «Expedição BINDER» (um episódio por set, primeiro olhar como documentário de natureza), pedida pelo fundador no prompt do EX-01. Bíblia `expedicao/BIBLIA.md`, motor `expedicao/template/`, secção no catálogo e entrada no `series.yaml`. Voz própria (Rafael Valente, `dX7gRq1dIvLTgUaWpEFn`) e tema próprio (`expedicao/kit/tema_expedicao.mp3`).
+**Porquê:** o fundador quer um vídeo com a gramática de edição de Reels de spoiler, mas com narração, legendas PT-BR e eixo narrativo próprios, repetível a cada set.
+**Impacto:** a constituição não muda. Regra própria do formato: nenhuma carta é ligada a um deck ou a um comandante antes da revelação; sem caixas oficiais o episódio não sai (cartão PRÉVIA no render). Divergência registada: o prompt pedia um convite «escaneie as suas no BINDER Vision quando sair»; o repositório não confirma que o scanner reconhece cartas de um set ainda não lançado, por isso a legenda usa um CTA de scanner genérico.
+
 ## 14/11/2026 (02:15) · Comentários da comunidade sempre no vídeo, com foto
 
 **O quê:** regra nova na constituição (bloco «Comentários da comunidade no vídeo»): comentários de seguidores usados num conteúdo aparecem como print real (foto, @, texto), com crédito na legenda e convite de Collab quando fizer sentido; exceção permanente a §11.5 para este uso. Aplicada já ao MC-ESP02 (prints de @jorel.oliveira e @preconautamtg).

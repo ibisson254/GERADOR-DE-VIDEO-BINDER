@@ -43,3 +43,6 @@ orbita/gerador/out*/
 orbita/gerador/html*/
 orbita/gerador/frames*/
 orbita/gerador/node_modules/
+
+# Expedição BINDER: PNG das cartas (descarregar com expedicao/template/baixar_cartas.py)
+expedicao/*/cards/*.png

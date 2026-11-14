@@ -1,0 +1,114 @@
+{
+  "id": "EX-01",
+  "titulo": "Nauctis: Primeiro Mergulho",
+  "set": "Nauctis: The Sunken Realm",
+  "ficheiro": "BINDER_Expedicao01_Nauctis_916",
+  "gancho": "TEM UM LOTUS NO FUNDO DESTE MAR",
+  "titulo_formato": ["EXPEDIÇÃO BINDER", "Nº 01 · NAUCTIS: THE SUNKEN REALM"],
+  "data_lancamento": "05/02/2027",
+  "pergunta": "QUAL ESPÉCIE VOCÊ LEVA? 1 A 6",
+
+  "voz": {
+    "arquivo": "voz.mp3",
+    "words": "audio/words.json",
+    "voice_id": "dX7gRq1dIvLTgUaWpEFn",
+    "tempo": 1.2,
+    "lead": 0.2,
+    "cortes": [[17, 27], [112, 115], [152, 154], [170, 170], [194, 199]],
+    "pausas": [[28, 0.5], [107, 0.5], [171, 0.5], [213, 0.55], [256, 0.3]]
+  },
+  "musica": {"arquivo": "../kit/tema_expedicao.mp3", "lufs": -22, "duck_db": -5},
+
+  "camadas": {
+    "rasos":   {"nome": "RASOS",          "topo": [34, 150, 160], "base": [6, 70, 92],  "raios": 1.0, "particula": [210, 245, 245]},
+    "grande":  {"nome": "GRANDE MARINHO", "topo": [12, 70, 100],  "base": [3, 26, 46],  "raios": 0.45, "particula": [170, 220, 235]},
+    "abismo":  {"nome": "ABISMO",         "topo": [6, 14, 26],    "base": [1, 3, 8],    "raios": 0.0, "particula": [60, 255, 210], "bio": true}
+  },
+
+  "legenda": {
+    "amarelo": [6, 16, 31, 34, 44, 57, 58, 59, 75, 76, 77, 78, 80, 84, 85, 90, 91, 104, 105, 106, 110, 111, 117, 124, 133, 148, 149, 151, 162, 163, 164, 168, 169, 172, 174, 177, 190, 192, 193, 209, 210, 211, 212, 218, 220, 221, 223, 233, 237, 246, 254, 255, 259, 260, 261, 270],
+    "trocas": {"19": "Nauctis:", "111": "Marinho.", "171": "O", "193": "Mortífero.", "137": "1/1.", "138": "", "139": "", "254": "500", "256": "Nauctis", "259": "5"}
+  },
+
+  "abertura": {
+    "fila": "caixas",
+    "fila_alternativa": ["goramou_220.png", "mentor_5.png", "salinae_70.png", "tecton_121.png"],
+    "silhueta": "lotus_361.png",
+    "corte_silhueta": 1.0,
+    "titulo_w": 7
+  },
+
+  "caixas": {
+    "Blood in the Water":  {"img": "products/blood_in_the_water.png",  "ret_subtitulo": null},
+    "Seal the Deal":       {"img": "products/seal_the_deal.png",       "ret_subtitulo": null},
+    "Merfolk Regiment":    {"img": "products/merfolk_regiment.png",    "ret_subtitulo": null},
+    "Terrors of the Abyss":{"img": "products/terrors_of_the_abyss.png","ret_subtitulo": null}
+  },
+
+  "blocos": [
+    {"tipo": "respiro", "w": 28, "camada": "rasos"},
+
+    {"tipo": "carta", "w": 32, "camada": "rasos", "carta": "goramou_220.png",
+     "ficha": {"n": 1, "nome": "GORAMOU", "tipo": "Tubarão", "camada": "Rasos"},
+     "eventos": [
+       {"w": 37, "variante": "goramou_329.png"},
+       {"w": 41, "variante": "goramou_220.png"},
+       {"w": 44, "punch": [40, 655, 710, 765]},
+       {"w": 48, "comparacao": "blood_token.png"},
+       {"w": 51, "fim_comparacao": true},
+       {"w": 55, "punch": [40, 770, 710, 945]}
+     ]},
+    {"tipo": "caixa", "w": 62, "camada": "rasos", "deck": "Blood in the Water", "punch_w": 75},
+
+    {"tipo": "carta", "w": 79, "camada": "rasos", "carta": "mentor_5.png",
+     "ficha": {"n": 2, "nome": "CALMWATER MENTOR", "tipo": "Foca Monge", "camada": "Rasos"},
+     "eventos": [
+       {"w": 84, "variante": "mentor_281.png"},
+       {"w": 88, "variante": "mentor_5.png", "punch": [40, 655, 710, 825]}
+     ]},
+    {"tipo": "caixa", "w": 99, "camada": "rasos", "deck": "Seal the Deal", "punch_w": 104},
+
+    {"tipo": "respiro", "w": 107, "camada": "grande"},
+
+    {"tipo": "carta", "w": 116, "camada": "grande", "carta": "salinae_70.png",
+     "ficha": {"n": 3, "nome": "SALINAE", "tipo": "Deusa-Baleia", "camada": "Grande Marinho"},
+     "eventos": [
+       {"w": 123, "variante": "salinae_321.png"},
+       {"w": 125, "variante": "salinae_70.png", "punch": [40, 825, 710, 948]}
+     ]},
+    {"tipo": "caixa", "w": 140, "camada": "grande", "deck": "Merfolk Regiment", "punch_w": 148},
+
+    {"tipo": "carta", "w": 150, "camada": "grande", "carta": "ring_238.png",
+     "ficha": {"n": 4, "nome": "RING OF UNITY", "tipo": "Artefato", "camada": "Grande Marinho"},
+     "eventos": [
+       {"w": 158, "punch": [40, 668, 710, 752]},
+       {"w": 165, "variante": "ring_317.png"},
+       {"w": 167, "comparacao": "solring_lea.png"}
+     ]},
+
+    {"tipo": "respiro", "w": 171, "camada": "abismo"},
+
+    {"tipo": "carta", "w": 173, "camada": "abismo", "carta": "tecton_121.png",
+     "ficha": {"n": 5, "nome": "TECTON", "tipo": "Kraken Elemental", "camada": "Abismo"},
+     "eventos": [
+       {"w": 177, "variante": "tecton_354.png"},
+       {"w": 179, "variante": "tecton_121.png", "punch": [40, 666, 710, 738]},
+       {"w": 190, "punch": [40, 736, 340, 776]}
+     ]},
+    {"tipo": "caixa", "w": 202, "camada": "abismo", "deck": "Terrors of the Abyss", "punch_w": 209},
+
+    {"tipo": "lotus", "w": 213, "camada": "abismo", "acende_w": 220, "carta_lit": "lotus_361.png",
+     "ficha": {"n": 6, "nome": "ABYSSAL LOTUS", "tipo": "Artefato", "camada": "Abismo"},
+     "eventos": [
+       {"w": 222, "variante": "lotus_234.png", "punch": [540, 22, 735, 92]},
+       {"w": 224, "comparacao": "blacklotus_lea.png"},
+       {"w": 231, "fim_comparacao": true, "punch": [40, 648, 440, 700]},
+       {"w": 237, "punch": [40, 772, 710, 856]},
+       {"w": 246, "punch": [40, 700, 580, 745]},
+       {"w": 247, "variante": "lotus_361.png", "selo": "≈ 500 CÓPIAS"}
+     ]},
+
+    {"tipo": "fecho", "w": 256, "camada": "abismo", "pergunta_w": 262,
+     "miniaturas": ["goramou_220.png", "mentor_5.png", "salinae_70.png", "ring_238.png", "tecton_121.png", "lotus_361.png"]}
+  ]
+}

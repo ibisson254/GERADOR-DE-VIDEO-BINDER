@@ -102,3 +102,15 @@ series:
     trilha: []                                 # por decidir
     referencia: null
 
+  - slug: expedicao
+    nome: Expedição BINDER (primeiro olhar de cada set) — criada 14/11/2026
+    palavras: [expedicao, expedição, primeiro olhar]
+    formato: reel_9x16                         # 1080x1920, 30 fps, 60-75 s + fecho
+    pasta: expedicao/
+    perfil: expedicao/BIBLIA.md                # bíblia e perfil numa página
+    identidade: expedicao/BIBLIA.md
+    tecnico: expedicao/template/LEIA-ME.md
+    vozes:
+      narrador: {fornecedor: elevenlabs, nome: "Rafael Valente - Brazilian Professional Narrator", voice_id: dX7gRq1dIvLTgUaWpEFn, modelo: eleven_v4, atempo: 1.2}
+    trilha: [expedicao/kit/tema_expedicao.mp3]
+    referencia: expedicao/01-nauctis/

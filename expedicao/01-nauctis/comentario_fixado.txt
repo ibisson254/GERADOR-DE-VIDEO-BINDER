@@ -1,0 +1,11 @@
+Qual espécie você leva pra casa? Responde com o número de 1 a 6.
+
+Texto das cartas em português (tradução nossa; as cartas ainda não têm versão oficial em PT-BR):
+1. Goramou the Coral-Taken · {1}{R}{G} · Criatura Lendária — Tubarão 3/4. Quando Goramou entrar, crie uma ficha de Sangue (Blood). Sempre que você descartar um ou mais cards de terreno, você pode exilar um deles do seu cemitério. Se fizer isso, coloque esse card no campo de batalha virado no início da próxima etapa final.
+2. Calmwater Mentor · {2}{W}{W} · Criatura — Foca Monge 3/2. Quando esta criatura entrar, você pode procurar no seu grimório até dois cards de criatura com poder 2 ou menos, revelá-los e colocá-los na sua mão. Depois embaralhe.
+3. Salinae, the Ocean Mother · {6}{U}{U} · Criatura Lendária — Deus Baleia 5/7. Esta mágica custa {X} a menos para ser conjurada, onde X é a sua devoção a azul. Atropelar. Sempre que você conjurar uma mágica de artefato ou de criatura, copie-a, exceto que a cópia é uma criatura Peixe 1/1 além dos outros tipos.
+4. Ring of Unity · {7} · Artefato. Os artefatos que você controla têm "{T}: Adicione {C}{C}."
+5. Tecton, Malignant Ruin · {6}{B}{B} · Criatura Lendária — Kraken Elemental 5/5. Fathomless descent — Esta mágica custa {1} a menos para ser conjurada para cada card de permanente no seu cemitério. Ameaça, toque mortífero. Sempre que você sacrificar outra permanente, compre um card.
+6. Abyssal Lotus · {0} · Artefato. Este artefato entra virado. Descend 8 — {T}, exile este artefato: adicione três manas de uma mesma cor. Ative somente se houver oito ou mais cards de permanente no seu cemitério. A versão headliner sem texto, em raised foil, terá cerca de 500 cópias, só em Collector Boosters.
+
+Fontes: Scryfall (texto Oracle, 14/11/2026) e Wizards of the Coast, "Collecting Nauctis: The Sunken Realm" (13/11/2026).

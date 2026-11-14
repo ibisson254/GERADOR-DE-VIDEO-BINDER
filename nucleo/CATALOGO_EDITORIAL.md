@@ -119,6 +119,20 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Conteúdo produzido | Nenhum ainda (formato previsto: Reel 9:16, 30–45 s); piloto antigo 3D arquivado em `vince/episodios/` |
 | Relação com o BINDER Vision | Direta: o fecho do scanner é continuação do conteúdo, não interrupção |
 
+## Expedição BINDER (primeiro olhar de cada set)
+
+| Campo | Valor |
+|---|---|
+| Classificação | Formato de lançamento · um episódio por set novo |
+| Estado | Criado pelo fundador (14/11/2026, prompt do EX-01); motor e bíblia no repositório; EX-01 em produção (faltam as caixas oficiais) |
+| Objetivo editorial | Apresentar as primeiras cartas de um set até 72 h depois da revelação, como espécies de um documentário de natureza, numa descida pelas camadas oficiais do mundo |
+| Identidade | Narrador de documentário (voz ElevenLabs própria, `dX7gRq1dIvLTgUaWpEFn`), tema subaquático próprio, oito movimentos de edição, medidor de descida, ficha de espécie, ping de sonar. Nenhum personagem do BINDER |
+| Documentação | Bíblia: `expedicao/BIBLIA.md` · Motor: `expedicao/template/LEIA-ME.md` · Episódios: `expedicao/NN-<set>/` |
+| Regras específicas | Texto Oracle antes da voz; nenhuma carta ligada a deck ou comandante antes da revelação; cores de deck só pelas caixas oficiais; caixas e arte-chave só imagens oficiais da Wizards; sem preços; B-roll só com licença registada |
+| Território | Primeiro olhar de um set (cartas e produtos revelados). Reação/polémica do set → Mana & Burn; previsões de Limited → Meta em Curto (pré-release) |
+| Conteúdo produzido | EX-01 «Nauctis: Primeiro Mergulho» (14/11/2026, prévia) |
+| Relação com o BINDER Vision | Fecho do scanner no fim; CTA de scanner na legenda |
+
 ## Frente nova
 
 Criar a pasta, `PERFIL.md` (modelo em `modelos/PERFIL_SERIE.md`) e a bíblia (`CONTEXTO.md`), acrescentar uma secção aqui e uma entrada em `../series.yaml`, e registar em `DECISOES.md`. A constituição não muda.
