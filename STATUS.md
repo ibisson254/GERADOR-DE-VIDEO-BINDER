@@ -18,7 +18,7 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 
 ## Pregão Magic · Brutal Bass Edition (14/11/2026)
 
-**VV-PG01** (frente Vince Vault, formato alternativo **sem personagem**, decisão de 14/11): boletim da semana de 13/11 (Urza +104%, Uchuulon +48%, Picard −46%, Overgrown Tomb −50% / Watery Grave +44%) montado na trilha «Auction of Power» do fundador. v1 renderizada e conferida **sem voz** (45,07 s com fecho, −14,1 LUFS, sem corte lateral). Pacote e motor reutilizável em `vince/pregao/` (branch `vince/pregao-ep01-brutal-bass`; não entra na `main` até ao encerramento). Depende do fundador: autorizar a narração (~600 créditos/tomada, voz `L93SDe6kGQj79D6svMgA`), confirmar a licença comercial da faixa, ouvir e aprovar.
+**VV-PG01** (frente Vince Vault, formato alternativo **sem personagem**, decisão de 14/11): boletim da semana de 13/11 (Urza +104%, Uchuulon +48%, Picard −46%, Overgrown Tomb −50% / Watery Grave +44%) montado na trilha «Auction of Power» do fundador. v1 renderizada e conferida **sem voz** (45,07 s com fecho, −14,1 LUFS, sem corte lateral). Pacote, motor reutilizável e handoff (`vince/pregao/ep01/HANDOFF.md`) em `vince/pregao/` (branch `vince/pregao-ep01-brutal-bass`; não entra na `main` até ao encerramento). Depende do fundador: autorizar a narração (~600 créditos/tomada, voz `L93SDe6kGQj79D6svMgA`), confirmar a licença comercial da faixa, ouvir e aprovar.
 
 ## Em produção
 
