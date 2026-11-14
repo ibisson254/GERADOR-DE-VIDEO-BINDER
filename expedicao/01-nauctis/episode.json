@@ -15,9 +15,11 @@
     "tempo": 1.2,
     "lead": 0.2,
     "cortes": [[17, 27], [112, 115], [152, 154], [170, 170], [194, 199]],
-    "pausas": [[28, 0.5], [107, 0.5], [171, 0.5], [213, 0.55], [256, 0.3]]
+    "pausas": [[28, 0.5], [107, 0.5], [171, 0.5], [213, 0.55], [256, 0.2]]
   },
-  "musica": {"arquivo": "../kit/tema_expedicao.mp3", "lufs": -22, "duck_db": -5},
+  "musica": {"arquivo": "../kit/auction_of_power.mp3", "titulo": "Auction of Power", "periodo": 0.42865, "offset": 0.0349,
+             "arranjo": [[0, 60], [16, 60], [16, 48], [60, null]], "drop_beat": 64, "drop_w": 220, "ajuste_pausa_w": 213,
+             "lufs": -21, "duck_db": -4},
 
   "camadas": {
     "rasos":   {"nome": "RASOS",          "topo": [34, 150, 160], "base": [6, 70, 92],  "raios": 1.0, "particula": [210, 245, 245]},
@@ -102,9 +104,9 @@
      "eventos": [
        {"w": 222, "variante": "lotus_234.png", "punch": [540, 22, 735, 92]},
        {"w": 224, "comparacao": "blacklotus_lea.png"},
-       {"w": 231, "fim_comparacao": true, "punch": [40, 648, 440, 700]},
-       {"w": 237, "punch": [40, 772, 710, 856]},
-       {"w": 246, "punch": [40, 700, 580, 745]},
+       {"w": 231, "fim_comparacao": true, "punch": [40, 648, 440, 700], "som": "glitch"},
+       {"w": 237, "punch": [40, 772, 710, 856], "som": "glitch"},
+       {"w": 246, "punch": [40, 700, 580, 745], "som": "glitch"},
        {"w": 247, "variante": "lotus_361.png", "selo": "≈ 500 CÓPIAS"}
      ]},
 

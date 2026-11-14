@@ -30,6 +30,14 @@ Mudanças face ao prompt (todas por verificação ou duração):
 - Frase 6: «criaturas pequenas» → «de poder dois ou menos» (texto Oracle).
 - Gravado e cortado na montagem para caber em 75 s (prompt §7): frase 2 inteira («Isto é Nauctis…»), «onde vive quase tudo» (frase 7), «achado no caminho» (frase 10), «Agora,» (frase 11) e «e compra carta a cada sacrifício» (frase 12, detalhe de regra). A numeração, as caixas, o Lotus e a pergunta ficaram.
 
+## Versão 2 «Prisma Abissal» (14/11/2026, 15:33, pedido de voz do fundador)
+Brief refinado: `brief_v2.md`. O texto, os factos e a voz não mudam; muda a forma.
+- **Fundo**: gerado em código a partir das características das 5 referências do designer (`template/fundo.py`). As imagens de referência não entram no vídeo.
+- **Música**: «Auction of Power» (ficheiro do fundador, `kit/auction_of_power.mp3`, 45 s, 140 BPM). Rearranjada em batidas inteiras: [0–60) + [16–60) + [16–48) + [60–fim]; o drop (batida 64 original) cai aos 60,046 s, no «Abyssal Lotus» (pausa antes de «E lá no fundo» passou a 1,24 s). **Licença por registar.**
+- **Ritmo**: os 41 eventos de montagem (cortes, trocas, punch-ins, slide-ins, camadas, revelação) estão a ±40 ms de uma batida; as 3 camadas entram em tempos fortes.
+- **Sonoplastia**: saem ping, bolhas e whoosh. Entram 3 sons desenhados (ElevenLabs SFX v2, flow `0XnRy5fnCKLW7pWERfzQ`, 6 gerações × 17 créditos; escolhidos por análise de envelope e espectro): *descida* ×3 (camadas), *glitch* ×7 (4 caixas + 3 condições do Lotus), *swell* ×1 (acaba no drop).
+- **Grafismo**: linha de sinal vermelha no lugar do anel de sonar; nome da camada com tracking e índice «01 / 03»; brilho da revelação em rosa-prisma.
+
 ## Fontes e evidências (ficha de factos)
 | Afirmação (vídeo, legenda ou comentário) | Tipo | Fonte |
 |---|---|---|
@@ -65,32 +73,31 @@ Nenhum preço. Nenhuma frase diz ou sugere que uma carta é comandante ou vem nu
 ## Plano de retenção
 Quadro 0 com quatro cartas reais de Nauctis e o gancho escrito; gancho visual (silhueta da carta) até 2,3 s; troca ou punch-in em média a cada 1,1 s (maior intervalo sem corte detetado: 2,3 s → 6,6 s, título + respiração com animação); som em cada respiração, caixa e slide-in; pagamento aos 59 s no mesmo enquadramento; pergunta 1 a 6.
 
-## Controlo de qualidade (ficheiro final, 14/11/2026)
+## Controlo de qualidade (v2, ficheiro final, 14/11/2026)
 | Critério | Resultado |
 |---|---|
 | `qc_video.py --frente lambe` | Sem problemas mensuráveis |
 | Formato | 1080×1920, 30 fps, sem corte lateral |
-| Duração | 74,3 s sem o fecho · 78,2 s com o fecho |
+| Duração | 74,8 s sem o fecho · 78,7 s com o fecho |
 | Loudness | −14,1 LUFS, pico −1,3 dBTP |
-| Gancho | Texto e pergunta do Lotus desde o quadro 0 (até 2,3 s) |
-| Ritmo | 29 cortes detetados + punch-ins; nenhum plano estático > 4 s |
-| Seis espécies numeradas nas camadas | OK (Ring of Unity na camada do Grande Marinho, sem afirmar que é de lá) |
+| Grelha | 41/41 eventos de montagem a ±40 ms de uma batida; drop = quadro em que o Lotus acende (60,05 s) |
+| Gancho | Texto e pergunta do Lotus desde o quadro 0 |
+| Camadas | Reconhecíveis só pelo fundo (pastel → violeta → coluna espectral); Lotus da abertura e do fim no mesmo enquadramento |
+| Sons de design | 3 tipos, 11 ocorrências (descida 3, glitch 7, swell 1) |
 | Quatro caixas | **Só como cartão «PRÉVIA · NÃO PUBLICAR»** (falta a imagem oficial) |
-| Fundo muda nas três camadas; Lotus da abertura e do fim no mesmo enquadramento | OK |
-| Legenda e ficha fora das zonas de interface; nada sobre a linha destacada | OK nos quadros 0, 3, 10, 20, 30, 40, 50, 60, 60,2, 70, 76 e na folha de contacto |
-| Capa a 25% | Capa A legível (gancho a 86 px) |
-| Fecho | `outro_binder_916.mp4` a partir de 74,33 s, corte seco |
-| Áudio ouvido | **Não** (sem saída de áudio na sessão): falta ouvir a pronúncia de «Náuctis», «Calmwater», «Salinae», «Tecton» e as emendas dos cortes |
+| Legenda e ficha | Fora das zonas de interface; nada sobre a linha destacada (folha de contacto e quadros 0, 30,5, 47, 60,4, 71,5) |
+| Capa a 25% | Capa A legível |
+| Áudio ouvido | **Não** (sem saída de áudio na sessão): falta ouvir a voz, as emendas da música e os três sons |
 
 ## Ficheiros finais (não versionados)
-- Vídeo: `BINDER_Expedicao01_Nauctis_916.mp4` (md5 d7c1db0978d5d7fc02df8469e71c58b9), entregue na conversa de 14/11/2026. **Prévia** (caixas em falta).
+- Vídeo v2: `BINDER_Expedicao01_Nauctis_916.mp4` (md5 05d377986368715e5059fa09d102527f), entregue na conversa de 14/11/2026 (15:33). **Prévia** (caixas em falta). A v1 (md5 d7c1db09…) fica substituída.
 - Capas: `capa_A.png` (silhueta + gancho) e `capa_B.png` (seis cartas + «NAUCTIS: 6 ESPÉCIES»; sem as caixas, usa as cartas), mesma conversa.
 - Refazer: pasta de trabalho com `voz.mp3` (geração acima) → `python3 -I template/audio.py 01-nauctis <trab>` → `render.py 01-nauctis <trab>` → `render.py … capas` (a partir de `expedicao/`).
 
 ## Para publicar (falta)
 1. Fundador: anexar as quatro imagens oficiais das caixas (artigo «Collecting Nauctis» ou kit de imprensa da Wizards) e, se quiser, a arte-chave. Gravar como `products/blood_in_the_water.png`, `seal_the_deal.png`, `merfolk_regiment.png`, `terrors_of_the_abyss.png`, medir `ret_subtitulo` e voltar a renderizar (≈ 2 min). A capa B passa a usar as caixas.
 2. Ouvir a voz inteira contra esta ficha.
-3. Confirmar que o plano ElevenLabs ativo cobre uso comercial da música (tema do formato).
+3. Registar a licença da «Auction of Power» (origem e termos de uso comercial).
 
 ## Limitações
 - O site da Wizards, o Pexels e o Pixabay não abrem nesta rede (o artigo da Wizards foi lido por resultado de pesquisa); daí as caixas e o B-roll em falta.

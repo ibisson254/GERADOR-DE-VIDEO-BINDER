@@ -17,5 +17,8 @@ A ficha de factos completa, frase a frase, está em `ficha.md` («Fontes e evid�
 
 ## Produção
 - Voz: ElevenLabs, flow `0XnRy5fnCKLW7pWERfzQ`, geração `pcNuaR1EcgMshEbkJcmE` (Rafael Valente, eleven_v4). Scribe: geração `fgryQ53qfQcTgO4OZyal`.
-- Música: ElevenLabs Music v2.5, geração `4eBIeeddSuHAlBhSVILC` → `../kit/tema_expedicao.mp3`.
+- Música v2: «Auction of Power», ficheiro enviado pelo fundador a 14/11/2026 (15:33) → `../kit/auction_of_power.mp3`. Origem e licença: **a registar**.
+- Música v1 (reserva): ElevenLabs Music v2.5, geração `4eBIeeddSuHAlBhSVILC` → `../kit/tema_expedicao.mp3`.
+- Sons de design: ElevenLabs SFX v2 — descida `Pkhtp9kSe8W0oKK5ZBZc`, glitch `tahmxtY1ePlNmkOrTu4B` (0,32 s), swell `mR4fqX1mt8slcj1c5Gvs` (esticado a 1,67 s) → `../kit/sfx/`.
+- Referências visuais do designer (5 imagens, enviadas pelo fundador): só características, nenhuma imagem no vídeo.
 - Referência de edição (não usada como material): gravação de ecrã de um Reel de @magicoddities, enviada pelo fundador; só a gramática de cortes.

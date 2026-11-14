@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 14/11/2026 (15:33) · Expedição BINDER v2: «Prisma Abissal», música do fundador e sonoplastia desenhada
+
+**O quê:** o fundador aprovou o caminho da v1 do EX-01 e pediu três mudanças: fundo segundo 5 referências de design, música «Auction of Power» com o ritmo do vídeo adaptado a ela, e fim da sonoplastia genérica. Brief refinado em `expedicao/01-nauctis/brief_v2.md`; bíblia passa à v2 (§3 música, §4 grelha, §5 identidade).
+**Porquê:** a v1 tinha cara de vídeo genérico (azul literal, ping/bolhas/whoosh); o formato precisa de identidade visual e sonora própria.
+**Impacto:** fundo gerado em código (`expedicao/template/fundo.py`), música rearranjada em batidas inteiras com o drop na revelação, todos os cortes na grelha, três sons desenhados (`expedicao/kit/sfx/`) e proibição de ping, bolhas e whoosh no formato. A licença da faixa tem de ser registada antes de publicar.
+
 ## 14/11/2026 (02:43) · Meta em Curto: modelo fixo de capa
 
 **O quê:** todas as capas do Meta em Curto seguem o modelo de `oraculo/CONTEXTO.md` §7.3: um ponto focal (frase → número gigante → TUBO a reagir → faixa fixa da série), tudo dentro do recorte 3:4 da grelha do perfil. Referência: capa v3 do MC-ESP02.

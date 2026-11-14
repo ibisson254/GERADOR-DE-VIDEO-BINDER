@@ -59,25 +59,12 @@ def paste_card(im, c, x, y):
     im.alpha_composite(c, (int(x), int(y)))
 def bob(t): return 6 * math.sin(2 * math.pi * t / 3.0)
 
-# ---------- fundo do oceano: gradiente por camada, raios de luz, partículas ----------
+# ---------- fundo «Prisma Abissal» (fundo.py): uma pintura por camada, a respirar com a música ----------
+sys.path.insert(0, HERE)
+from fundo import Fundo
 CAM = CFG['camadas']
-def grad(top, base):
-    y = np.linspace(0, 1, H)[:, None, None]
-    g = (np.array(top)[None, None, :] * (1 - y) + np.array(base)[None, None, :] * y)
-    return np.broadcast_to(g, (H, W, 3)).astype(np.float32)
-GRAD = {k: grad(v['topo'], v['base']) for k, v in CAM.items()}
-def rays_img():
-    r = Image.new('L', (W, H), 0); d = ImageDraw.Draw(r)
-    for x0, w0, a in ((120, 90, 70), (360, 140, 55), (640, 70, 60), (820, 120, 45), (980, 60, 40)):
-        d.polygon([(x0, -10), (x0 + w0, -10), (x0 + w0 * 2.6 + 260, H * 0.85), (x0 + 140, H * 0.85)], fill=a)
-    r = r.filter(ImageFilter.GaussianBlur(38))
-    fade = np.linspace(1, 0, H)[:, None] ** 1.3
-    return np.array(r, np.float32) / 255 * fade
-RAYS = rays_img()
-rng = np.random.default_rng(3)
-PART = [dict(x=rng.uniform(0, W), y=rng.uniform(0, H), r=rng.uniform(1.5, 4.2), v=rng.uniform(10, 34), ph=rng.uniform(0, 6.3),
-             a=rng.uniform(0.25, 0.8)) for _ in range(80)]
-
+FUNDO = Fundo()
+BEATS = TL.get('BEATS', []); ENV = TL.get('ENV', [])
 # camada ao longo do tempo: corte seco na abertura, cross-fade de 0,35 s nas respirações
 SEG = []
 for e in EV:
@@ -97,22 +84,28 @@ def layer_at(t):
     m = ease((t - t0) / 0.35) if fade else 1.0
     return cur, prev, m
 
+CORTES = sorted(set([e['t'] for e in EV if e['tipo'] in ('respiro', 'carta', 'caixa', 'lotus', 'fecho')] +
+                    [x['t'] for e in EV for x in e.get('sub', []) if 'variante' in x]))
+RESP_T = [e['t'] for e in EV if e['tipo'] == 'respiro']
+LIT = ([e['t'] for e in EV if e['tipo'] == 'lotus_acende'] or [1e9])[0]
 def background(t):
+    import bisect
     cur, prev, m = layer_at(t)
-    g = GRAD[cur] if (prev is None or m >= 1) else GRAD[prev] * (1 - m) + GRAD[cur] * m
-    ra = CAM[cur]['raios'] if (prev is None or m >= 1) else CAM[prev]['raios'] * (1 - m) + CAM[cur]['raios'] * m
-    if ra > 0:
-        sh = int(30 * math.sin(t * 0.35)); r = np.roll(RAYS, sh, axis=1) * (0.75 + 0.25 * math.sin(t * 0.9))
-        g = g + r[:, :, None] * np.array([150, 230, 230], np.float32)[None, None, :] * 0.55 * ra
-    im = Image.fromarray(np.clip(g, 0, 255).astype(np.uint8)).convert('RGBA')
-    d = ImageDraw.Draw(im, 'RGBA'); pc = tuple(CAM[cur]['particula']); bio = CAM[cur].get('bio')
-    for p in PART:
-        x = (p['x'] + 14 * math.sin(t * 0.6 + p['ph'])) % W; y = (p['y'] - p['v'] * t) % H
-        a = p['a'] * (0.6 + 0.4 * math.sin(t * 1.7 + p['ph'] * 3)) if bio else p['a'] * 0.7
-        r = p['r'] * (1.3 if bio else 1)
-        if bio: d.ellipse((x - r * 3, y - r * 3, x + r * 3, y + r * 3), fill=pc + (int(28 * a),))
-        d.ellipse((x - r, y - r, x + r, y + r), fill=pc + (int(200 * a),))
-    return im
+    fi = min(len(ENV) - 1, int(t * FPS)) if ENV else 0
+    energy = ENV[fi] if ENV else 0.5
+    j = bisect.bisect_right(BEATS, t) - 1
+    pulse = 0.0
+    if j >= 0:
+        dt = t - BEATS[j]; pulse = math.exp(-dt / 0.12) * (1.0 if j % 4 == 0 else 0.45)
+    lotus = ease((t - LIT) / 0.6) if t >= LIT else 0.0
+    k = bisect.bisect_right(CORTES, t) - 1
+    glitch = 1.0 if (k >= 0 and t - CORTES[k] < 2.5 / FPS and t > AB['t1']) else 0.0
+    sinal = 0.0; seed = int(t * FPS)
+    for rt in RESP_T:
+        if 0 <= t - rt < 0.75: sinal = 1 - ease((t - rt) / 0.75); seed = int(rt * 100)
+    if cur == 'abismo' and sinal == 0 and j >= 0 and j % 4 == 0 and t - BEATS[j] < 0.22 and t > AB['t1'] and t < LIT:
+        sinal = 0.45 * (1 - (t - BEATS[j]) / 0.22); seed = j
+    return FUNDO.frame(t, cur, prev if m < 1 else None, m, energy, pulse, lotus, glitch, sinal, seed)
 
 # ---------- caixas: imagem oficial em products/; sem ela, cartão PRÉVIA (não publicável) ----------
 BOXW = 640
@@ -285,7 +278,7 @@ def lotus_scene(im, t, e, b):
 _glow = {}
 def glow(im, by, k):
     if 'g' not in _glow:
-        g = Image.new('RGBA', (CW + 240, CH + 240), (0, 0, 0, 0)); ImageDraw.Draw(g).rounded_rectangle((120, 120, CW + 120, CH + 120), radius=40, fill=(60, 255, 210, 150))
+        g = Image.new('RGBA', (CW + 240, CH + 240), (0, 0, 0, 0)); ImageDraw.Draw(g).rounded_rectangle((120, 120, CW + 120, CH + 120), radius=40, fill=(255, 120, 170, 150))
         _glow['g'] = g.filter(ImageFilter.GaussianBlur(60))
     g = _glow['g'].copy(); g.putalpha(Image.fromarray((np.array(g.getchannel('A')) * k).astype(np.uint8)))
     im.alpha_composite(g, (CX - 120, int(by) - 120))
@@ -293,10 +286,17 @@ _sil = {}
 def silhouette():
     if 's' not in _sil:
         c = card(CFG['abertura']['silhueta']).copy(); rgb = ImageEnhance.Brightness(c.convert('RGB')).enhance(0.09)
-        rgb = Image.blend(rgb, Image.new('RGB', rgb.size, (0, 40, 46)), 0.25); rgb = rgb.convert('RGBA'); rgb.putalpha(c.getchannel('A'))
+        rgb = Image.blend(rgb, Image.new('RGB', rgb.size, (24, 10, 40)), 0.25); rgb = rgb.convert('RGBA'); rgb.putalpha(c.getchannel('A'))
         _sil['s'] = rgb
     return _sil['s']
 
+def tracked(d, txt, y, font, size, col, track=0.12, maxw=1000):
+    while True:
+        f = F(font, size); ws = [d.textlength(c, font=f) for c in txt]; tot = sum(ws) + size * track * (len(txt) - 1)
+        if tot <= maxw or size < 20: break
+        size -= 2
+    x = (W - tot) / 2
+    for c, w in zip(txt, ws): d.text((x, y), c, font=f, fill=col, anchor='lm'); x += w + size * track
 def text_center(d, txt, y, font, size, col, maxw=980, stroke=0):
     f = fit(d, txt, font, size, maxw); d.text((W / 2, y), txt, font=f, fill=col, anchor='mm', stroke_width=stroke, stroke_fill=INK)
 
@@ -334,10 +334,9 @@ def frame_main(t):
             d.line((W / 2 - 220 * k, 935, W / 2 + 220 * k, 935), fill=EM + (255,), width=4)
             text_center(d, tt[1], 990, SEMI, 40, (200, 235, 238, int(255 * k)))
     elif e['tipo'] == 'respiro':
-        lay = b['camada']; k = eout((t - e['t']) / 0.3)
-        r = 60 + 900 * ((t - e['t']) / 1.2); a = max(0, 1 - (t - e['t']) / 1.2)
-        d.ellipse((W / 2 - r, 900 - r, W / 2 + r, 900 + r), outline=(200, 255, 245, int(120 * a)), width=4)
-        text_center(d, CAM[lay]['nome'], 900 - 20 * (1 - k), BLK, 120, WHITE + (int(255 * k),))
+        lay = b['camada']; k = eout((t - e['t']) / 0.28); idx = list(CAM.keys()).index(lay) + 1
+        tracked(d, CAM[lay]['nome'], 900 + 26 * (1 - k), BLK, 112, WHITE + (int(255 * k),), track=0.16)
+        tracked(d, f'{idx:02d} / {len(CAM):02d}', 800, BOLD, 36, (255, 52, 52, int(255 * k)), track=0.22)
     elif e['tipo'] in ('carta', 'lotus'):
         pending = e['tipo'] == 'lotus' and lotus_scene(im, t, e, b)
         img, by, (cf, ct, ctt), comp, c0, c1, selo, fp = scene_card(im, t, e, b, hud)
@@ -413,11 +412,11 @@ def render_part(args):
 
 def capas():
     # A: silhueta do Lotus no escuro + gancho · B: as quatro caixas (ou, sem elas, as seis cartas) + "NAUCTIS: 6 ESPÉCIES"
-    a = Image.fromarray(np.clip(GRAD['abismo'], 0, 255).astype(np.uint8)).convert('RGBA')
-    paste_card(a, silhouette(), CX, CY); glow(a, CY, 0.35); hook_text(a); draw_logo(a)
+    a = FUNDO.frame(2.0, 'abismo', energy=0.7)
+    paste_card(a, silhouette(), CX, CY); hook_text(a); draw_logo(a)
     d = ImageDraw.Draw(a, 'RGBA'); text_center(d, 'EXPEDIÇÃO BINDER #01', 1560, BLK, 64, EM + (255,), stroke=4)
     a.convert('RGB').save(f'{WK}/capa_A.png')
-    b = Image.fromarray(np.clip(GRAD['grande'], 0, 255).astype(np.uint8)).convert('RGBA')
+    b = FUNDO.frame(2.0, 'grande', energy=0.6)
     names = list(CFG['caixas'].keys()) if boxes_ok() else [x for x in CFG['blocos'][-1]['miniaturas']]
     if len(names) == 4: fila(b, 10, 0, names, y=900, w=240)
     else:
