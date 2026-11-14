@@ -54,3 +54,6 @@ Seis brasileiros. Cento e trinta e quatro convidados. Oito vagas no Top 8. Mundi
 ## Depois de publicar
 - Segunda 16/11: `python3 -I oraculo/previsoes/ciclo.py segunda` → conferir PR-WC32-01..03 com o Top 8 e a análise do metagame do magic.gg.
 - Métrica principal: guardados + partilhas · secundária: comentários com nome por 1.000 views.
+
+## Capa v2 (14/11/2026)
+Refeita no modelo fixo (`oraculo/CONTEXTO.md` §7.3), a pedido do fundador: frase «BRASILEIROS NO MUNDIAL», foco «6», TUBO Confiante, carimbo «TOP 8?», faixa «META EM CURTO · EP. 07»; fundo com cartas do Jund Sacrifice. Sem fotos dos jogadores (falta a de Sales Junior e a autorização cobre as fichas do vídeo). Gera-se com `python3 -I oraculo/episodios/ep07_capa.py <repo>` → `EP07_CAPA.png` + `EP07_CAPA_grelha.png` (não versionados). A capa v1 do `ep07_render.py` fica substituída se o episódio ainda não foi publicado.
