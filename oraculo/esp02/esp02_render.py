@@ -467,12 +467,42 @@ def frame_main(t):
     return subs(im, t, SUBY)
 if __name__ == '__main__':
     if len(sys.argv) > 2 and sys.argv[2] == 'capa':
-        im = tubo_frame(12.0, 'confiante', zoom=1.0); d = ImageDraw.Draw(im, 'RGBA')
-        d.text((W / 2, 110), 'A TAÇA RESPONDEU', font=F(INTB, 100), fill=WHITE, anchor='ma')
-        d.text((W / 2, 235), '50% → 66%', font=F(INTB, 120), fill=PH, anchor='ma')
-        d.text((W / 2, 395), 'QUEM COMEÇA VENCE', font=F(MONOB, 54), fill=AMBER, anchor='ma')
-        d.text((W / 2, 1470), 'META EM CURTO × PRECONAUTA', font=F(MONOB, 40), fill=WHITE, anchor='ma')
-        im.convert('RGB').save('ESP02_CAPA.png'); sys.exit()
+        # Capa pensada para a grelha do perfil (recorte 3:4 ao centro: y 240–1680). Tudo o que orienta fica lá dentro.
+        base = tubo_frame(12.0, 'confiante', zoom=1.0).convert('RGBA')
+        im = Image.new('RGBA', (W, H), BG + (255,))
+        tb = base.resize((int(W * .62), int(H * .62)), Image.LANCZOS)          # TUBO pequeno, canto inferior direito, com bordas esbatidas
+        m = Image.new('L', tb.size, 0); ImageDraw.Draw(m).ellipse((tb.width * .12, tb.height * .14, tb.width * .9, tb.height * .9), fill=255)
+        tb.putalpha(m.filter(ImageFilter.GaussianBlur(60)))
+        im.alpha_composite(tb, (W - tb.width + 150, 1680 - tb.height + 250))
+        d = ImageDraw.Draw(im, 'RGBA')
+        # 1) identidade da série (orienta quem navega pelo perfil)
+        d.rounded_rectangle((60, 262, 700, 330), 34, fill=(5, 40, 20, 255), outline=PH, width=4)
+        d.text((380, 296), 'META EM CURTO · ESP. 02', font=F(MONOB, 38), fill=PH, anchor='mm')
+        d.rounded_rectangle((720, 262, 1020, 330), 34, fill=(20, 16, 8, 255), outline=AMBER, width=4)
+        d.text((870, 296), '× PRECONAUTA', font=F(MONOB, 32), fill=AMBER, anchor='mm')
+        # 2) a promessa, em duas linhas gigantes
+        d.text((60, 365), 'QUEM COMEÇA', font=fit(d, 'QUEM COMEÇA', INTB, 132, 960), fill=WHITE)
+        d.text((60, 500), 'VENCE', font=F(INTB, 132), fill=WHITE)
+        f66 = F(INTB, 210); x66 = 60 + d.textlength('VENCE ', font=F(INTB, 132))
+        d.text((x66, 462), '66%', font=f66, fill=PH)
+        # 3) a virada (o TUBO errou)
+        d.text((60, 668), 'a conta do TUBO dizia', font=F(CONDB, 46), fill=GREY)
+        x50 = 60 + d.textlength('a conta do TUBO dizia ', font=F(CONDB, 46))
+        d.text((x50, 656), '50%', font=F(INTB, 62), fill=RED)
+        w50 = d.textlength('50%', font=F(INTB, 62)); d.line((x50 - 6, 700, x50 + w50 + 6, 680), fill=RED, width=8)
+        # 4) sinal de Magic: leque de comandantes reais
+        for k, (ci, ang, x, y) in enumerate([(0, 9, 40, 800), (1, 3, 230, 770), (2, -3, 420, 790), (3, -9, 600, 830)]):
+            c = card_img(ci, 300).rotate(ang, resample=Image.BICUBIC, expand=True)
+            im.alpha_composite(c, (x, y))
+        d = ImageDraw.Draw(im, 'RGBA')
+        # 5) prova: dados reais
+        d.rounded_rectangle((60, 1430, 760, 1640), 22, fill=(5, 10, 16, 240), outline=EM, width=4)
+        d.text((95, 1462), 'DADOS REAIS · TAÇA 2x2', font=F(MONOB, 36), fill=PH)
+        d.text((95, 1520), '101 matches · 230 jogos', font=F(INTB, 50), fill=WHITE)
+        d.text((95, 1585), 'qual precon segura em 2º?', font=F(CONDB, 40), fill=AMBER)
+        im.convert('RGB').save('ESP02_CAPA.png')
+        g = im.convert('RGB').crop((0, 240, W, 1680)); g.save('ESP02_CAPA_grelha.png')
+        sys.exit()
     if len(sys.argv) > 2 and sys.argv[2] == 'stills':
         for tt in map(float, sys.argv[3:]): frame(tt).save(f'still_{tt:05.2f}.png')
         sys.exit()
