@@ -159,3 +159,7 @@ Paleta clara (papel #F2EEE6, tinta #0A0F14, esmeralda #0E9F6E, ouro #E0A526), 6 
 
 ## v3 (11/11/2026, "refina essa ideia")
 Capa com Sol Ring, The One Ring e Rhystic Study (Scryfall); grade de 6 staples na dor; scanner em painel escuro; R$ 396 como herói; tela real do Binder com o botão Exportar (sem a linha Investido/Lucro); CTA com selo. `src/build_v3.py`; as imagens das cartas baixam-se de novo com `cartas/creditos.json`. Textos: `publicacao_v3.txt`.
+
+## 11. Capa v4 (14/11/2026)
+
+Pedido do fundador: capa melhor para o carrossel v3 já publicado. Mantém a headline "300 cartas. Zero digitação."; passa para a paleta escura da marca (#050A10, #10B981) e mostra o produto já na capa: pilha de cartas reais (Sol Ring, The One Ring, Rhystic Study, Smothering Tithe, Cyclonic Rift, Scryfall) → celular com a tela real do scanner (`src/scan.png`, 24/10). Apoio: "Aponte a câmera. O app reconhece a carta." (não "entra sozinha": o utilizador ainda confirma). Sem selo do Google Play na capa (fica no último slide). Fonte: `src/build_capa_v4.py`. PNG não versionado.
