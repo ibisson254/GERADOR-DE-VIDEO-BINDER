@@ -125,6 +125,20 @@ Tema oficial: `musica/tubo_tema.mp3` (40,6 s). Composição própria do Ibisson 
 8. **Ponte honesta para o app:** o "scan" da carta a entrar no tubo ecoa o scanner real do outro. Nunca mostrar ou inventar outras funcionalidades.
 9. **Carrossel derivado:** cada "Relatório do Meta" também sai como carrossel com os mesmos dados e fontes.
 
+## 7.3 Capa (modelo fixo desde 14/11/2026)
+
+Todas as capas do Meta em Curto seguem este modelo (fundador, 14/11/2026 02:43; referência: capa v3 do ESP02, `oraculo/esp02/esp02_render.py <kit> capa`). Um ponto focal por capa, pensado para a grelha do perfil.
+
+- **Formato:** 1080×1920; tudo o que importa dentro do recorte 3:4 da grelha (y 240–1680). Gerar também a pré-visualização do recorte (`*_CAPA_grelha.png`) e conferi-la em tamanho pequeno.
+- **Ordem de leitura, de cima para baixo:**
+  1. **Frase** numa linha (Inter Bold, branca, ~110 px): a tese em 2–4 palavras («QUEM COMEÇA VENCE»).
+  2. **Foco:** um número ou palavra gigante (~400 px, verde fósforo com brilho): o dado do episódio («66%»). Nada lhe toca.
+  3. **TUBO a reagir** à tese, na expressão do episódio (Erro de sistema quando ele erra, Confiante quando acerta), com bordas esbatidas. Um único elemento de apoio ao lado dele, quando houver (ex.: a previsão errada, riscada a vermelho).
+  4. **Faixa fixa da série** em baixo (y 1572–1662): «META EM CURTO · EP. NN» (ou «ESP. NN») a verde à esquerda; à direita, a collab («× PRECONAUTA») a âmbar ou nada.
+- **Fundo:** as cartas reais do episódio, desfocadas e escurecidas (dizem «Magic» sem competir com o texto).
+- **Fora da capa:** números de apoio, fontes, perguntas e créditos (vão para a legenda e o comentário fixado). Máximo de 3 blocos de texto (frase, foco, faixa) e 1 elemento de apoio.
+- Capas já publicadas não se refazem.
+
 ## 8. Pilares
 
 1. A Jogada que Não Viste.

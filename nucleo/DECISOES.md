@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 14/11/2026 (02:43) · Meta em Curto: modelo fixo de capa
+
+**O quê:** todas as capas do Meta em Curto seguem o modelo de `oraculo/CONTEXTO.md` §7.3: um ponto focal (frase → número gigante → TUBO a reagir → faixa fixa da série), tudo dentro do recorte 3:4 da grelha do perfil. Referência: capa v3 do MC-ESP02.
+**Porquê:** fundador, 14/11/2026 (02:43): «As capas tem que ser nesse padrão daqui para frente do meta em curto».
+**Impacto:** só o Meta em Curto; capas já publicadas não se refazem.
+
 ## 14/11/2026 (02:22) · Meta em Curto: erro do TUBO com «Erro de sistema» e corte seco sem pausa morta
 
 **O quê:** quando o TUBO admite que errou, usa-se a expressão «Erro de sistema» já definida em `oraculo/CONTEXTO.md` (olhos duplicados, glitch, tremor, LED vermelho, caixa «MODELO TUBO» com o erro a vermelho, som de glitch). O corte seco continua a ser a assinatura da série, mas passa a ser curto (~0,6 s) e com movimento (aproximação lenta da câmara), para não ficar uma pausa morta antes do «Grau de certeza». Aplicado ao MC-ESP02 (v3).
