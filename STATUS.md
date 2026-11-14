@@ -18,6 +18,8 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 
 ## Em produção
 
+- **LL-ART13 «7 cartas. Uma artista brasileira.»** (14/11): carrossel de 7 slides sobre Nathanna Érica nos Special Guests de Lorwyn Eclipsed. **CONCLUÍDO, não publicado.** Pacote: `lambe-lambe/episodios/ll-art13_nathanna_sete_cartas/`. Antes de publicar: o fundador confirma a autorização da artista para a foto do slide 6. Primeiro carrossel com o **modelo pronto sem ElevenLabs** (`lambe-lambe/referencias/carrossel_padrao_0{1,2}.png` + `lambe-lambe/kit_carrossel/motor_padrao.py`). Conflito de ID: a branch `lambe/artistas-carrosseis` usa LL-ART13–18; renumerar ao integrá-la (`nucleo/DECISOES.md`, 14/11).
+
 - **MC-ESP02 «A Taça respondeu»** (14/11): continuação do ESP01 com os dados da Taça Preconauta (66% para quem começa o jogo 1). **CONCLUÍDO, não publicado.** Pacote: `oraculo/esp02/`. Antes de publicar: mandar o roteiro ao Preconauta (prometido), ouvir a pronúncia; ao publicar, convite de Collab para @preconautamtg. Próxima pauta possível: ligas 2x2 × mesão do Preconauta (site principal não respondeu a 14/11).
 - **MC-ESP01 «A comunidade falou: Precon em dupla»** (13/11): primeiro especial do TUBO, a partir do comentário de @diarioplaninauta; autorização do fundador (02:13). **CONCLUÍDO, não publicado** (v3 com gancho de cartas reais, na `main`). Pacote: `oraculo/esp01/`. Antes de publicar: ouvir a pronúncia, avisar o autor e, se ele aceitar, convidar para Collab (e a @montcardshop).
 - **MC-EP06 «Prestação de contas: placar zero»** (o TUBO de segunda): escrito, não produzido; a prestação de contas real é segunda 16/11 (`python3 -I oraculo/previsoes/ciclo.py segunda`).

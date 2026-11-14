@@ -17,6 +17,15 @@ O muro de lambe-lambe pop é o caos da coleção; o BINDER Vision é a lente que
 - Etiquetas: "Quem pintou?" (nome do artista a marcador), "Do Brasil" (verde) e "De Portugal" (vermelha) para artistas lusófonos, "ARTE" com o nome do artista nas peças em vídeo, selo "TELA REAL DO APP" nas demonstrações.
 - Cartazes pop desenhados para ilustrar a curiosidade sem copiar a arte da carta; lupas com detalhes ampliados ao lado da carta, que fica inteira.
 
+### Modelo pronto do carrossel (14/11/2026)
+
+Referências canónicas, aprovadas pelo fundador (13/11) e reutilizadas sem gerar imagens: `referencias/carrossel_padrao_01.png` (capa) e `referencias/carrossel_padrao_02.png` (editorial). São os slides do John Avon sem texto. Todas as páginas de um carrossel novo saem destes dois modelos: muro rosa, folha creme rasgada, selo azul «Artistas de Magic», papéis kraft, faixa preta com risco rosa, fitas.
+
+- Motor: `kit_carrossel/motor_padrao.py` (instruções em `kit_carrossel/LEIA-ME.md`). Fontes livres: `sh kit_carrossel/preparar_fontes.sh`.
+- Carrossel novo = script curto na pasta do episódio, com cartas reais do Scryfall. Zero créditos ElevenLabs.
+- Cartas inteiras, fita só nos cantos de cima, sem texto sobre arte, crédito em cada página. Foto do artista só a enviada pelo fundador, em recorte P&B, sem tapar a arte.
+- Exemplo: `episodios/ll-art13_nathanna_sete_cartas/` (7 slides).
+
 ## 3. Formatos já usados
 
 | Formato | Descrição |

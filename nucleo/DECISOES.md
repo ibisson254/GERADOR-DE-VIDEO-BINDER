@@ -2,6 +2,18 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 14/11/2026 (16:30) · Carrossel Lambe-lambe: modelos prontos, sem ElevenLabs
+
+**O quê:** os dois slides aprovados do padrão (capa e editorial do John Avon, sem texto) passam a ser as referências canónicas `lambe-lambe/referencias/carrossel_padrao_01.png` (capa) e `carrossel_padrao_02.png` (editorial), na `main`. Novo `lambe-lambe/kit_carrossel/motor_padrao.py`: monta qualquer carrossel só com estes dois modelos, papel, fita, fontes livres (`preparar_fontes.sh`) e cartas reais. Deixa de depender dos slides originais gerados no ElevenLabs (`avon_*.png`, não versionados). Carrossel novo = script curto na pasta do episódio (exemplo: `lambe-lambe/episodios/ll-art13_nathanna_sete_cartas/carrossel.py`). Nenhuma geração de imagem.
+**Porquê:** fundador, 14/11/2026 (16:30): «para o modelo que usei no último lambe feito se torne padrão sem eu ter que gastar toda vez com elevenlabs os modelos eram pra deixar pronto e só reutilizar em novos carroceis».
+**Impacto:** custo zero por carrossel. Mantêm-se as regras de 13/11: cartas inteiras com fita só nos cantos de cima, crédito em cada slide, foto do artista só a enviada pelo fundador (recorte P&B, sem tapar a arte). Os originais com texto continuam no flow ElevenLabs `QUq7zV013KwmsMYP92hI` (não foram descarregados: a leitura do flow foi recusada nesta sessão).
+
+## 14/11/2026 (16:22) · LL-ART13: Nathanna Érica com ângulo novo
+
+**O quê:** pauta LL-ART13 «Nathanna Érica: sete cartas em Special Guests de Lorwyn Eclipsed», liberada apesar do bloqueio de `memoria.py pauta` (LL-ART02 «De advogada a ilustradora», POR AUDITAR; LL-R02, colagem). Ângulo: variedade das sete ilustrações e presença da artista no conjunto. LL-ART02 não é alterado nem reaberto.
+**Porquê:** autorização expressa do fundador na missão de produção de 14/11/2026.
+**Conflito de ID:** a branch não integrada `lambe/artistas-carrosseis` usa LL-ART13 a LL-ART18 (John Avon, Mark Poole, Kev Walker, Magali Villeneuve, Raymond Swanland, Seb McKinnon). Na `main`, LL-ART13 passa a ser a Nathanna; ao integrar essa branch, os seis carrosséis dela têm de ser renumerados (LL-ART14 em diante).
+
 ## 14/11/2026 (09:59) · Conde de Manaforte: modelo fixo de capa
 
 **O quê:** todas as capas do Tribunal Estético seguem `conde/PERFIL.md` «Capa»: obra inteira emoldurada sobre papel marfim, frase-acusação em itálico, veredito numa palavra dentro do carimbo bordô, o Conde no medalhão a reagir, faixa fixa «O TRIBUNAL ESTÉTICO · Nº 00X / réu de ANO». Gerador `conde/capas/capa_cm.py`. Referência: capa do CM-EP005 (Lêmure). Substitui o título no papel do `capa_ep005.py`.
