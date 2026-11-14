@@ -1,0 +1,13 @@
+Meta em Curto ESP02 · A Taça respondeu · fontes (consulta 14/11/2026, ~01:10 Lisboa)
+
+Fonte única de dados: Taça Preconauta, 1.ª edição — https://taca.preconauta.com.br/dashboard (aplicação Streamlit; filtro «Etapa: Tudo», todas as rodadas incluindo Ouro/Prata Oitavas). Lida com navegador headless; tabelas extraídas do próprio site (instantâneo em dados/). Uso autorizado por @preconautamtg (oraculo/autorizacoes/2026-11-13_preconauta_dados_2x2.md). A Taça está a decorrer: os números mudam.
+
+1. 101 matches, 230 jogos, 97 decks diferentes, 12 W.O.; 5 matches empatados; 52 matches foram ao 3.º jogo (52/101 = 51,5% → «mais da metade»); 14 jogos empatados. Tipo: facto (site).
+2. Ordem de turno: «Quem começa vence — Jogo 1»: 66% (70 jogos com vencedor; no jogo 1 quem começa é sorteado). «Todos os jogos»: 59% (181 jogos com vencedor). Empates não contam. Tipo: facto (site). IC 95% aproximado (cálculo nosso): 55–77% e 52–66%.
+3. Ahoy Mateys: 56 jogos, 58,9% no total; começando (turnos 1 e 3) 72,4% em 29 jogos; em 2.º (turnos 2 e 4) 36,8% em 19 jogos. Tipo: facto (site; % por jogador que usou o deck).
+4. Jeskai Striker: 45 jogos, 64,4% no total; começando 70,8% (24); em 2.º 56,2% (16) — único dos 6 decks mais jogados acima de 50% em 2.º (os outros: Scions & Spellcraft 45,5%, Multiverse Reforged 47,8%, Counter Blitz 18,8%, Veloci-Ramp-Tor 31,2%). Tipo: facto (site) + comparação nossa.
+5. Multiverse Reforged: 54 jogos, 53,7%; comandante Jace, Multiverse Architect (o mesmo do gancho do ESP01). Tipo: facto.
+6. 29 duplas, 58 jogadores (egg «29»). Tipo: facto.
+7. Formato da Taça: cada jogador tem o seu turno (a dupla que começa joga os turnos 1 e 3). Regra de vida não confirmada; o vídeo não fala de vida. Tipo: facto (nota do site) + lacuna.
+8. «Errei a conta / a ordem de turno desempata»: leitura do TUBO a partir de 2–4. Tipo: opinião.
+9. Cartas no ecrã: Admiral Brass, Unsinkable (LCC 1, Jason Rainville), Jace, Multiverse Architect (FRC 1, Volkan Baǵa), Shiko and Narset, Unified (TDC 7, Chris Rallis), Pantlaza, Sun-Favored (LCC 4, Sam Burley). Scryfall. Comandantes de Ahoy Mateys, Multiverse Reforged, Jeskai Striker e Veloci-Ramp-Tor (precons entre os mais jogados; os de Universes Beyond ficam só em texto).

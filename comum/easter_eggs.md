@@ -15,3 +15,4 @@
 | 07/11/2026 | Mana & Burn · Ep. 10 (A febre do autógrafo) | relógio da TV SAL em "17:01" = nº 1701 da carta de autógrafo do Kirk (e NCC-1701) | canto inferior direito da TV, em todos os planos da TV (0–3,9 s, 12,3–15,4 s, 34,5–38,6 s) |
 | 10/11/2026 | Meta em Curto · EP07 (Mundial 32) | "2002" na vertical na chuva de código = ano do título mundial de Carlos Romão, primeiro brasileiro campeão | fichas dos brasileiros, ~16–19 s, canto inferior direito |
 | 13/11/2026 | Meta em Curto · ESP01 (Precon em dupla) | "30" na vertical na chuva de código = vida inicial do Gigante de Duas Cabeças clássico (o de Commander dobra para 60) | cena das regras, ~15–22 s, canto inferior direito |
+| 14/11/2026 | Meta em Curto · ESP02 (A Taça respondeu) | "29" na vertical na chuva de código = número de duplas da 1.ª edição da Taça Preconauta | cena da ordem de turno, ~14–24 s, canto inferior direito |

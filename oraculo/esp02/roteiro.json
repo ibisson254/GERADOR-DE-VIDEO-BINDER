@@ -1,0 +1,33 @@
+{
+ "episodio": "Meta em Curto · Especial 02 · A Taça respondeu (continuação do ESP01, collab com @preconautamtg)",
+ "nota": "texto = legenda no ecrã; fala = grafia fonética para o ElevenLabs. Mesmo número de palavras por bloco.",
+ "blocos": [
+  {"id": "gancho", "onde": "fora",
+   "texto": "Eu disse cinquenta por cento. A Taça Preconauta respondeu: sessenta e seis.",
+   "fala": "Eu disse cinquenta por cento. A Taça Preconauta respondeu: sessenta e seis."},
+  {"id": "fonte", "onde": "dentro",
+   "texto": "Lembra do ainda? Eles publicam tudo. Primeira edição: cento e um matches, duzentos e trinta jogos, noventa e sete precons diferentes.",
+   "fala": "Lembra do ainda? Eles publicam tudo. Primeira edição: cento e um métches, duzentos e trinta jogos, noventa e sete prícons diferentes."},
+  {"id": "ordem", "onde": "dentro",
+   "texto": "No jogo um, quem começa é sorteado. Quem começa vence sessenta e seis por cento. Em todos os jogos, cinquenta e nove.",
+   "fala": "No jogo um, quem começa é sorteado. Quem começa vence sessenta e seis por cento. Em todos os jogos, cinquenta e nove."},
+  {"id": "terceiro", "onde": "dentro",
+   "texto": "E mais da metade dos matches foi para o terceiro jogo.",
+   "fala": "E mais da metade dos métches foi para o terceiro jogo."},
+  {"id": "decks", "onde": "dentro",
+   "texto": "O Ahoy Mateys vence setenta e dois por cento começando. Em segundo, trinta e sete. Só o Jeskai Striker segura jogando em segundo: cinquenta e seis.",
+   "fala": "O Arrói Mêitis vence setenta e dois por cento começando. Em segundo, trinta e sete. Só o Djéskai Stráiker segura jogando em segundo: cinquenta e seis."},
+  {"id": "revelacao", "onde": "fora",
+   "texto": "Errei a conta. A dupla iguala a mesa. A ordem de turno desempata.",
+   "fala": "Errei a conta. A dupla iguala a mesa. A ordem de turno desempata."},
+  {"id": "certeza", "onde": "fora",
+   "texto": "Grau de certeza: quatro de cinco. Setenta jogos sorteados. A Taça ainda está rolando.",
+   "fala": "Grau de certeza: quatro de cinco. Setenta jogos sorteados. A Taça ainda está rolando."},
+  {"id": "pergunta", "onde": "fora",
+   "texto": "Qual precon você leva pra Taça? A, Ahoy Mateys. B, Jeskai Striker. C, Multiverse Reforged. Responda com a letra.",
+   "fala": "Qual prícon você leva pra Taça? A, Arrói Mêitis. Bê, Djéskai Stráiker. Cê, Mâltivers Rifórdjd. Responda com a letra."},
+  {"id": "fecho", "onde": "fora",
+   "texto": "Probabilidade calculada. Humanos, imprevisíveis.",
+   "fala": "Probabilidade calculada. Humanos, imprevisíveis."}
+ ]
+}

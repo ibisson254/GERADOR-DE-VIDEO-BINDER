@@ -1,0 +1,121 @@
+keyboard_double_arrow_left
+edit_note
+
+Declarar resultado
+
+admin_panel_settings
+
+Organização
+
+leaderboard
+
+Dashboard
+
+style
+
+Precons
+
+Dashboard
+
+Taça Preconauta - 1ª Edição
+
+Etapa
+
+Tudo
+
+Fase de grupos
+
+Playoffs
+
+Rodadas / playoffs
+
+Rodada 1
+Rodada 2
+Rodada 3
+Rodada 4
+Rodada 5
+Rodada 6
+Rodada 7
+Ouro | Oitavas
+Prata | Oitavas
+
+Mínimo de jogos para aparecer nas tabelas
+
+Visão geral
+
+Decks
+
+Comandantes
+
+Duplas e jogadores
+
+Por dupla
+
+Duplas de decks
+
+Confrontos
+
+Regiões
+
+Matches
+
+101
+
+Jogos
+
+230
+
+Decks diferentes
+
+97
+
+W.O.
+
+12
+
+5 match(es) terminaram empatados · 52 foram para o 3º jogo · 14 jogo(s) empatado(s)
+
+Ordem de turnos
+
+Quem começa vence — Jogo 1
+
+66%
+
+70 jogo(s) com vencedor
+
+Quem começa vence — todos os jogos
+
+59%
+
+181 jogo(s) com vencedor
+
+Jogo 1: quem começa é sorteado — é a medida mais justa da vantagem de começar. Nos jogos seguintes, quem perdeu o jogo anterior (ou ganhou o sorteio, após empate) escolhe a ordem. Jogos empatados não contam.
+
+Decks mais jogados
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+Scions & Spellcra…
+Ahoy Mateys
+Multiverse Reforged
+Counter Blitz (FIN…
+Jeskai Striker
+Veloci-Ramp-Tor
+Mutant Menace
+Silverquill Influence
+Tramplesaurus Rex
+Explorers of the D…
+Counter Intellige…
+Prismari Artistry

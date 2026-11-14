@@ -1,0 +1,38 @@
+[
+ {
+  "slug": "brass",
+  "name": "Admiral Brass, Unsinkable",
+  "set": "The Lost Caverns of Ixalan Commander",
+  "year": "2023",
+  "num": "1",
+  "artist": "Jason Rainville",
+  "uri": "https://scryfall.com/card/lcc/1/admiral-brass-unsinkable"
+ },
+ {
+  "slug": "shiko",
+  "name": "Shiko and Narset, Unified",
+  "set": "Tarkir: Dragonstorm Commander",
+  "year": "2025",
+  "num": "7",
+  "artist": "Chris Rallis",
+  "uri": "https://scryfall.com/card/tdc/7/shiko-and-narset-unified"
+ },
+ {
+  "slug": "pantlaza",
+  "name": "Pantlaza, Sun-Favored",
+  "set": "The Lost Caverns of Ixalan Commander",
+  "year": "2023",
+  "num": "4",
+  "artist": "Sam Burley",
+  "uri": "https://scryfall.com/card/lcc/4/pantlaza-sun-favored"
+ },
+ {
+  "slug": "jace",
+  "name": "Jace, Multiverse Architect",
+  "set": "Reality Fracture Commander",
+  "year": "2026",
+  "num": "1",
+  "artist": "Volkan Baǵa",
+  "uri": "(ver esp01/cartas/creditos.json)"
+ }
+]
