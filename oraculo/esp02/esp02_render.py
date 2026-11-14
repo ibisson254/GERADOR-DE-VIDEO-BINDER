@@ -467,41 +467,39 @@ def frame_main(t):
     return subs(im, t, SUBY)
 if __name__ == '__main__':
     if len(sys.argv) > 2 and sys.argv[2] == 'capa':
-        # Capa pensada para a grelha do perfil (recorte 3:4 ao centro: y 240–1680). Tudo o que orienta fica lá dentro.
-        base = tubo_frame(12.0, 'confiante', zoom=1.0).convert('RGBA')
+        # Capa v3: um ponto focal (66%), uma frase, uma personagem. Tudo dentro do recorte 3:4 da grelha (y 240–1680).
         im = Image.new('RGBA', (W, H), BG + (255,))
-        tb = base.resize((int(W * .62), int(H * .62)), Image.LANCZOS)          # TUBO pequeno, canto inferior direito, com bordas esbatidas
-        m = Image.new('L', tb.size, 0); ImageDraw.Draw(m).ellipse((tb.width * .12, tb.height * .14, tb.width * .9, tb.height * .9), fill=255)
-        tb.putalpha(m.filter(ImageFilter.GaussianBlur(60)))
-        im.alpha_composite(tb, (W - tb.width + 150, 1680 - tb.height + 250))
+        # fundo: leque de comandantes, escurecido e desfocado (textura «isto é Magic», sem competir com o texto)
+        bgc = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+        for ci, ang, x, y in [(0, 14, -120, 560), (1, 5, 160, 470), (2, -5, 470, 470), (3, -14, 760, 560)]:
+            c = card_img(ci, 420).rotate(ang, resample=Image.BICUBIC, expand=True); bgc.alpha_composite(c, (x, y))
+        bgc = bgc.filter(ImageFilter.GaussianBlur(3)); im.alpha_composite(bgc)
+        dark = Image.new('RGBA', (W, H), BG + (170,)); im.alpha_composite(dark)
+        # TUBO em «Erro de sistema» (a cara da série reage ao número)
+        tb = tubo_frame(33.9, 'erro', zoom=1.0, red_led=True).convert('RGBA')
+        tb = tb.crop((150, 380, 930, 1500)).resize((700, 1005), Image.LANCZOS)
+        m = Image.new('L', tb.size, 0); ImageDraw.Draw(m).ellipse((40, 30, tb.width - 40, tb.height + 300), fill=255)
+        tb.putalpha(m.filter(ImageFilter.GaussianBlur(45))); im.alpha_composite(tb, ((W - tb.width) // 2, 820))
         d = ImageDraw.Draw(im, 'RGBA')
-        # 1) identidade da série (orienta quem navega pelo perfil)
-        d.rounded_rectangle((60, 262, 700, 330), 34, fill=(5, 40, 20, 255), outline=PH, width=4)
-        d.text((380, 296), 'META EM CURTO · ESP. 02', font=F(MONOB, 38), fill=PH, anchor='mm')
-        d.rounded_rectangle((720, 262, 1020, 330), 34, fill=(20, 16, 8, 255), outline=AMBER, width=4)
-        d.text((870, 296), '× PRECONAUTA', font=F(MONOB, 32), fill=AMBER, anchor='mm')
-        # 2) a promessa, em duas linhas gigantes
-        d.text((60, 365), 'QUEM COMEÇA', font=fit(d, 'QUEM COMEÇA', INTB, 132, 960), fill=WHITE)
-        d.text((60, 500), 'VENCE', font=F(INTB, 132), fill=WHITE)
-        f66 = F(INTB, 210); x66 = 60 + d.textlength('VENCE ', font=F(INTB, 132))
-        d.text((x66, 462), '66%', font=f66, fill=PH)
-        # 3) a virada (o TUBO errou)
-        d.text((60, 668), 'a conta do TUBO dizia', font=F(CONDB, 46), fill=GREY)
-        x50 = 60 + d.textlength('a conta do TUBO dizia ', font=F(CONDB, 46))
-        d.text((x50, 656), '50%', font=F(INTB, 62), fill=RED)
-        w50 = d.textlength('50%', font=F(INTB, 62)); d.line((x50 - 6, 700, x50 + w50 + 6, 680), fill=RED, width=8)
-        # 4) sinal de Magic: leque de comandantes reais
-        for k, (ci, ang, x, y) in enumerate([(0, 9, 40, 800), (1, 3, 230, 770), (2, -3, 420, 790), (3, -9, 600, 830)]):
-            c = card_img(ci, 300).rotate(ang, resample=Image.BICUBIC, expand=True)
-            im.alpha_composite(c, (x, y))
+        # 1) frase (uma linha, branca)
+        d.text((W / 2, 330), 'QUEM COMEÇA VENCE', font=fit(d, 'QUEM COMEÇA VENCE', INTB, 112, 980), fill=WHITE, anchor='mm')
+        # 2) ponto focal: 66% gigante, com brilho
+        g = Image.new('RGBA', (W, H), (0, 0, 0, 0)); gd = ImageDraw.Draw(g)
+        gd.text((W / 2, 600), '66%', font=F(INTB, 400), fill=PH + (200,), anchor='mm'); im.alpha_composite(g.filter(ImageFilter.GaussianBlur(28)))
         d = ImageDraw.Draw(im, 'RGBA')
-        # 5) prova: dados reais
-        d.rounded_rectangle((60, 1430, 760, 1640), 22, fill=(5, 10, 16, 240), outline=EM, width=4)
-        d.text((95, 1462), 'DADOS REAIS · TAÇA 2x2', font=F(MONOB, 36), fill=PH)
-        d.text((95, 1520), '101 matches · 230 jogos', font=F(INTB, 50), fill=WHITE)
-        d.text((95, 1585), 'qual precon segura em 2º?', font=F(CONDB, 40), fill=AMBER)
+        d.text((W / 2, 600), '66%', font=F(INTB, 400), fill=PH, anchor='mm')
+        # 3) a correção: 50% riscado, como carimbo de erro ao lado do TUBO (não toca no ponto focal)
+        st = Image.new('RGBA', (360, 150), (0, 0, 0, 0)); sd = ImageDraw.Draw(st)
+        sd.rounded_rectangle((6, 6, 354, 144), 20, outline=RED, width=8, fill=(30, 6, 8, 230))
+        sd.text((180, 75), '50%', font=F(INTB, 104), fill=RED, anchor='mm'); sd.line((30, 115, 330, 35), fill=RED, width=12)
+        st = st.rotate(-10, resample=Image.BICUBIC, expand=True); im.alpha_composite(st, (690, 900))   # a previsão errada fica junto do TUBO
+        d = ImageDraw.Draw(im, 'RGBA')
+        # 4) assinatura fixa da série (mesma posição em todas as capas → o perfil orienta-se)
+        d.rectangle((0, 1572, W, 1662), fill=(5, 10, 16, 235)); d.line((0, 1572, W, 1572), fill=PH, width=4)
+        d.text((60, 1617), 'META EM CURTO · ESP. 02', font=F(MONOB, 40), fill=PH, anchor='lm')
+        d.text((W - 60, 1617), '× PRECONAUTA', font=F(MONOB, 40), fill=AMBER, anchor='rm')
         im.convert('RGB').save('ESP02_CAPA.png')
-        g = im.convert('RGB').crop((0, 240, W, 1680)); g.save('ESP02_CAPA_grelha.png')
+        im.convert('RGB').crop((0, 240, W, 1680)).save('ESP02_CAPA_grelha.png')
         sys.exit()
     if len(sys.argv) > 2 and sys.argv[2] == 'stills':
         for tt in map(float, sys.argv[3:]): frame(tt).save(f'still_{tt:05.2f}.png')

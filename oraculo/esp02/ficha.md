@@ -53,7 +53,7 @@ Voz: ElevenLabs «Antonio de Jesus» (`MK5tXPmT83J5SUlpUo4K`), eleven_v4, tomada
 
 ## Ficheiros finais
 - Vídeo: `ESP02_META_EM_CURTO.mp4` (md5 a755a322e219145b774c296c8fd836b0; v3 com Erro de sistema e corte seco curto, 14/11 02:30), entregue ao fundador na conversa de 14/11/2026; não versionado.
-- Capa (v2, 14/11 02:45): `ESP02_CAPA.png` (md5 8024d66c900ff200b1bc3e94f5529438), pensada para a grelha do perfil (recorte 3:4 ao centro, y 240–1680): selo da série + «× PRECONAUTA», «QUEM COMEÇA VENCE 66%», «a conta do TUBO dizia 50%» riscado, leque dos 4 comandantes, caixa «dados reais · Taça 2x2». `esp02_render.py <kit> capa` também gera `ESP02_CAPA_grelha.png` (pré-visualização do recorte). Não versionada.
+- Capa (v3, 14/11 02:50): `ESP02_CAPA.png` (md5 794a2c770c886f7f9010bbbddaa5babc). Hierarquia com um ponto focal: frase única «QUEM COMEÇA VENCE» → «66%» gigante com brilho → TUBO em Erro de sistema com o carimbo «50%» riscado ao lado → faixa fixa da série em baixo («META EM CURTO · ESP. 02 × PRECONAUTA»). Comandantes desfocados ao fundo. Tudo dentro do recorte 3:4 da grelha; `… capa` gera também `ESP02_CAPA_grelha.png`. Não versionada.
 - Refazer: pasta de trabalho com `voz.mp3` (tomada acima) e `words.json` desta pasta → `python3 esp02_audio.py <kit>` → `python3 esp02_render.py <kit>` → `… capa`.
 
 ## Limitações
