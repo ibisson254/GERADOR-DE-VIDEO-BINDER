@@ -16,6 +16,10 @@ Auditoria integral, matriz de integração, sistema de previsões do TUBO corrig
 
 Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vince Vault (série, aprovada a 12/11, em desenvolvimento)**; Órbita (temática); Lambe-lambe (espontânea); especiais. Estados por conteúdo: `comum/REGISTRO_EDITORIAL.md` (86 conteúdos). Fecho de 12/11: MC-EP03/04/05/07, MB-ESP03, MB-EP10, MB-GIRO02, CM-EP004/005, LL-PRETRK, LL-SHEOL, LL-DIVCAR, LL-CAMPBR fechados; **MC-EP06 (episódio de segunda) aberto**. Pequeno Mestre (PR #2) em desenvolvimento, sem aprovação; o PR #17 era a direção 2D do próprio Vince Vault (integrado, reconciliado). Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
 
+## Pregão Magic · Brutal Bass Edition (14/11/2026)
+
+**VV-PG01** (frente Vince Vault, formato alternativo **sem personagem**, decisão de 14/11): boletim da semana de 13/11 (Urza +104%, Uchuulon +48%, Picard −46%, Overgrown Tomb −50% / Watery Grave +44%) montado na trilha «Auction of Power» do fundador. v1 renderizada e conferida **sem voz** (45,07 s com fecho, −14,1 LUFS, sem corte lateral). Pacote e motor reutilizável em `vince/pregao/` (branch `vince/pregao-ep01-brutal-bass`; não entra na `main` até ao encerramento). Depende do fundador: autorizar a narração (~600 créditos/tomada, voz `L93SDe6kGQj79D6svMgA`), confirmar a licença comercial da faixa, ouvir e aprovar.
+
 ## Em produção
 
 - **MC-ESP01 «A comunidade falou: Precon em dupla»** (13/11): primeiro especial do TUBO, a partir do comentário de @diarioplaninauta; autorização do fundador (02:13). **CONCLUÍDO, não publicado** (v3 com gancho de cartas reais, na `main`). Pacote: `oraculo/esp01/`. Antes de publicar: ouvir a pronúncia, avisar o autor e, se ele aceitar, convidar para Collab (e a @montcardshop).

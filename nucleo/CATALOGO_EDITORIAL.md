@@ -116,7 +116,8 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Documentação | Bíblia: `vince/CONTEXTO.md` · Perfil: `vince/PERFIL.md` · Som da Fonte: `vince/audio/fonte.py` · Arquivo 3D (não ativo): `vince/BIBLIA_PERSONAGEM.md`, `vince/FICHA_VISUAL.md`, `vince/MODELO_3D.md`, `vince/V03_PLANO.md`, `vince/referencias/` |
 | Regras específicas | Nunca prever preço nem recomendar compra ou venda; todo o número com fonte e data no ecrã e nota «estimativa, não oferta de compra»; sem Cardmarket e sem preços do Scryfall (decisão de 08/11; constituição §4); sem fonte verificada, a Fonte não atende |
 | Território | Preço e o que o move. Humor sobre cartas → Mana & Burn; notícia da semana → Giro; resultado competitivo → Meta em Curto |
-| Conteúdo produzido | Nenhum ainda (formato previsto: Reel 9:16, 30–45 s); piloto antigo 3D arquivado em `vince/episodios/` |
+| Conteúdo produzido | VV-PG01 «Pregão Magic · Brutal Bass Edition» (formato alternativo sem personagem, 14/11/2026; `vince/pregao/ep01/`); piloto antigo 3D arquivado em `vince/episodios/` |
+| Formatos | (1) Vince com personagem (bíblia `vince/CONTEXTO.md`); (2) **Pregão sem personagem** (decisão de 14/11/2026): cartas reais, números, montagem na música, motor `vince/pregao/motor/` |
 | Relação com o BINDER Vision | Direta: o fecho do scanner é continuação do conteúdo, não interrupção |
 
 ## Frente nova

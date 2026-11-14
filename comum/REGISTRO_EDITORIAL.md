@@ -183,6 +183,7 @@ Peças de 18–19/10/2026 descritas em projeto:claude/reel-lambe-lambe-pop.md ("
 | ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | VV-EP00 | Fechamento (piloto 3D, arquivado) | Elminster; Gandalf; Plaza | Boletim de preços | Buy the dip! | PAUSADO | direção 2D ativa desde 12/11 (PR #17): o piloto 3D fica como arquivo; kit 2D por fechar (ficheiros do PR #17 em falta na branch) | 12/11/2026 (frente) | — | vince/episodios/ep00_fechamento_ficha.md | — | sem conflito |
+| VV-PG01 | Pregão Magic · Brutal Bass Edition: boletim da semana de 13/11/2026 | Urza, Chief Artificer; Uchuulon; Captain Jean-Luc Picard; Overgrown Tomb; Watery Grave | Altas, quedas e radar do mercado com fonte e data; formato sem personagem, montagem na música | +104% em 7 dias | EM PRODUÇÃO | v1 renderizada e conferida (14/11, sem voz); falta narração (créditos ElevenLabs por autorizar) e ok do fundador | 14/11/2026 (missão do fundador) | — | vince/pregao/ep01/ficha.md | VV-EP00 (mesmo formato de boletim, pausado); Picard e Star Trek em MB/ORB/MC noutro ângulo | pauta acusou conflitos; libertada pela missão do fundador (nucleo/DECISOES.md, 14/11) |
 
 ## Lacunas da auditoria retroativa (01/11/2026)
 

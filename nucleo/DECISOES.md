@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 14/11/2026 (00:01) · Pregão Magic · Brutal Bass Edition: formato alternativo sem personagem
+
+**O quê:** (1) Novo formato alternativo do Pregão na frente Vince Vault: **sem personagem, mascote, avatar ou apresentador visual**; a narrativa é conduzida por voz (quando autorizada), cartas reais e montagem, com a trilha "Auction of Power" (ElevenLabs Music, do fundador) como motor da montagem. A bíblia do Vince (`vince/CONTEXTO.md`) **não muda**: o personagem continua disponível para outros episódios. (2) Primeiro episódio `VV-PG01` (boletim da semana de 13/11: altas, quedas, radar, fechamento). A auditoria de originalidade acusou conflitos de tema/objeto (VV-EP00 boletim; Picard e Star Trek noutras frentes); libertados por esta missão do fundador: o ângulo é preço, território exclusivo desta frente, e o VV-EP00 está pausado. (3) Motor reutilizável em `vince/pregao/motor/` (composição por código, som sintetizado, zero créditos). (4) Preços em reais por conversão do dólar com o câmbio do Banco Central indicado no ecrã, porque a LigaMagic não estava acessível a partir do ambiente de produção; a variação vem do MTGStocks (TCGplayer) e do MTGGoldfish, atribuída e datada.
+**Porquê:** missão do fundador «MISSÃO MASTER — PREGÃO MAGIC · BRUTAL BASS EDITION» (14/11/2026): «Desvio expressamente autorizado para esta produção: não utilizar personagem… Registar a decisão como formato alternativo do Pregão, preservando a possibilidade de produzir o Vince em outra ocasião.»
+**Impacto:** a frente passa a ter dois formatos (Vince com personagem; Pregão sem personagem). Voz da narração: a do Vince (`L93SDe6kGQj79D6svMgA`, voz da frente), só com créditos autorizados — pedido feito a 14/11 (00:18), sem autorização; a v1 sai sem voz. MTGGoldfish entra como fonte de variação semanal ao lado do MTGStocks.
+
 ## 13/11/2026 (10:00) · Retenção como padrão obrigatório; git direto para a main
 
 **O quê:** (1) O bloco «Retenção e recompensa» da constituição passa a fazer parte do briefing (`SHOWRUNNER.md` §4, item 9) e do controlo de qualidade de cada conteúdo (linha «Retenção» na ficha, §6). (2) Fim do PR à espera: com render feito e encerramento + validação sem erros, o conteúdo entra na `main` na mesma sessão; alterações posteriores entram como commit novo na `main`; sem force push. Substitui a regra «nada de merge automático para `main`» de `AGENTS.md`.
