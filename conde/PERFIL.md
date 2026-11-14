@@ -32,6 +32,21 @@ Abertura "Meus caros apreciadores do duvidoso…" e veredito/carimbo conforme `C
 
 Duração livre (constituição §6); referência histórica ~42–48 s. -14 LUFS, layout e paleta de `CONTEXTO.md` §6 (a paleta da série é própria; o verde BINDER só no fecho).
 
+## Capa (modelo fixo desde 14/11/2026)
+
+Todas as capas do Tribunal Estético, de episódios novos ou pedidas para episódios antigos, seguem este modelo (fundador, 14/11/2026 09:59; referência: capa do CM-EP005, Lêmure). Gerador: `conde/capas/capa_cm.py`. É a estratégia das capas do Mana & Burn e do Meta em Curto (um ponto focal, a personagem a reagir, faixa fixa, recorte 3:4) na linguagem do Conde.
+
+- **Fundo:** papel marfim com grão (o do vídeo). Sem cartas desfocadas: o papel é a assinatura da série.
+- **A obra (o réu):** `art_crop` do Scryfall, inteira, sem nada por cima, numa moldura dupla a tinta, como num museu. Arte de 2 faces: a face julgada.
+- **Frase** (3–7 palavras, Lora SemiBold Italic, tinta): a acusação. Pode deixar a frase em suspenso para o foco a completar («Pediram um espírito. Veio um…»).
+- **Foco:** o veredito numa palavra, gigante, em Lora Bold bordô dentro do carimbo gasto e inclinado (o carimbo do vídeo). É a palavra que a pessoa tem de ler na miniatura.
+- **O Conde** no medalhão, à esquerda do carimbo, de perfil a olhar para o veredito, na expressão do episódio (desconfiado, indignado, admirado; neutro só se nada encaixar).
+- **Faixa fixa** em baixo: «O TRIBUNAL ESTÉTICO · Nº 00X» a marfim; à direita, «réu de ANO» em itálico rosado.
+- Máximo de 3 blocos de texto (frase, foco, faixa). Crédito da arte e «Conteúdo de fã não oficial» vão na legenda.
+- Tudo dentro do recorte 3:4 da grelha (y 240–1680); conferir o `*_grelha.png` em tamanho pequeno antes de entregar. Capas já publicadas não se refazem (só se o fundador pedir).
+
+Exemplo: `python3 conde/capas/capa_cm.py --scryfall ice/133 --frase "Pediram um espírito. Veio um…" --foco lêmure --expressao desconfiado --processo 5 --saida CM_EP005_CAPA.png`
+
 ## Ponte para o BINDER
 
 Ligada à carta julgada (ex.: escanear a carta e guardá-la no Binder), só funções confirmadas.

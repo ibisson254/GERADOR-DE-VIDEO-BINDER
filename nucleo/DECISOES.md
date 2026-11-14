@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 14/11/2026 (09:59) · Conde de Manaforte: modelo fixo de capa
+
+**O quê:** todas as capas do Tribunal Estético seguem `conde/PERFIL.md` «Capa»: obra inteira emoldurada sobre papel marfim, frase-acusação em itálico, veredito numa palavra dentro do carimbo bordô, o Conde no medalhão a reagir, faixa fixa «O TRIBUNAL ESTÉTICO · Nº 00X / réu de ANO». Gerador `conde/capas/capa_cm.py`. Referência: capa do CM-EP005 (Lêmure). Substitui o título no papel do `capa_ep005.py`.
+**Porquê:** fundador, 14/11/2026 (09:59): «Crie uma capa para o tribunal estético para se tornar padrão dos episódios usando a mesma estratégia das capas dos outros personagens mas se adaptando ao estilo do personagem».
+**Impacto:** só o Conde; capas já publicadas não se refazem.
+
 ## 14/11/2026 (02:57) · Mana & Burn: modelo fixo de capa
 
 **O quê:** todas as capas do Mana & Burn (episódios novos e capas pedidas para episódios antigos) seguem `manaburn/PERFIL.md` «Capa»: carta principal na largura toda com a arte livre, frase + foco em Bangers sobre o texto de regras, um selo vermelho, faixa fixa «MANA & BURN · EP. NN». Gerador `manaburn/capas/capa_mb.py`. A capa deixa de ser um quadro do vídeo. Referência: capa do MB-EP11 (Numot).
