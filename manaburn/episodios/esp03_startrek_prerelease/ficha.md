@@ -72,6 +72,9 @@ Subtítulo: O pré-release de Star Trek chegou. E ninguém está preparado.
 ## Entregáveis
 - [x] Vídeo · [x] Capa · [x] Legenda · [x] Comentário fixado · [x] Texto alternativo · [x] Legendas .srt · [x] Fontes e previsões
 
+## Capa no modelo fixo (14/11/2026, pedido do fundador)
+`python3 manaburn/capas/capa_mb.py --scryfall trk/227 --frase "Abri um Cubo Borg" --foco "Assimilado" --selo "Station 12+" --ep "Especial" --tag "Pré-release" --saida MB_ESP03_CAPA.png` (imagem fora do repositório; recorte da grelha conferido).
+
 ## Depois de publicar
 - Métrica principal: respostas A/B por 1.000 views. Secundária: guardados e partilhas.
 - Rever as três previsões depois de 12/11 com dados reais.

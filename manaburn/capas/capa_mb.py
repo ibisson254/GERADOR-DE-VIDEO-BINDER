@@ -54,7 +54,7 @@ if a.selo:                                                                      
     d.rounded_rectangle((W - 50 - wd, a.selo_y, W - 50, a.selo_y + 100), 20, fill=RED, outline=INK, width=7)
     txt((W - 50 - wd / 2, a.selo_y + 51), a.selo.upper(), ss, WHITE, stroke=5)
 d.rectangle((0, 1572, W, H), fill=INK); d.line((0, 1572, W, 1572), fill=YEL, width=6)            # 4) faixa fixa da série
-txt((60, 1619), f'MANA & BURN · EP. {a.ep}', 62, YEL, anchor='lm', stroke=0)
+txt((60, 1619), f'MANA & BURN · ' + (f'EP. {a.ep}' if str(a.ep).isdigit() else str(a.ep).upper()), 62, YEL, anchor='lm', stroke=0)  # especiais: --ep "ESPECIAL"
 if a.tag: txt((W - 60, 1619), a.tag.upper(), 62, WHITE, anchor='rm', stroke=0)
 im.convert('RGB').save(a.saida)
 im.convert('RGB').crop((0, 240, W, 1680)).save(a.saida.replace('.png', '_grelha.png'))
