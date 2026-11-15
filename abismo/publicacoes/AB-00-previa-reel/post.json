@@ -112,5 +112,12 @@
   "VOCÊ JOGARIA NO SEU DECK?",
   "COMENTE SIM OU NÃO"
  ],
- "porque_formato": "Reviravolta custo 0 × condição (Descend 8) e comparação com o Black Lotus: ganham com o drop da música."
+ "porque_formato": "Reviravolta custo 0 × condição (Descend 8) e comparação com o Black Lotus: ganham com o drop da música.",
+ "capa": {
+  "texto": [
+   "UM LOTUS QUE",
+   "CUSTA ZERO"
+  ],
+  "sub": "3 MANAS DE UMA COR · COM CONDIÇÕES"
+ }
 }
