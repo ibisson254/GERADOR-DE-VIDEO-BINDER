@@ -9,10 +9,12 @@ Estado: **proposta de 15/11/2026, por aprovar pelo fundador.** Enquanto não hou
 | MC-ESP01 (Precon em dupla) | comentário de um seguidor, com print no vídeo | 6,7 mil views em 2 d; melhor taxa de comentários (2,7/1.000) e partilhas (5,5/1.000) dos Reels medidos |
 | MC-ESP02 (A Taça respondeu) | dados de uma liga parceira (Preconauta) | 2,3 mil em 1 d; 4,3 comentários e 4,3 partilhas por 1.000 |
 | LL-ART13 (Nathanna Érica) | artista marcada | poucas interações, mas a artista comentou e 3 contas verificadas do nicho curtiram |
-| MC-EP05 (Enterprise-A) | sem parceiro, impulsionado | 5,3 mil views, 0,4 comentários/1.000: alcance pago sem conversa |
+| MC-EP05 (Enterprise-A) | sem parceiro, impulsionado | 5,3 mil views (~92% pagas), 0,4 comentários/1.000: alcance pago sem conversa |
+| MB-EP11 (Numot) | sem parceiro, impulsionado | 9,5 mil views, ~66% pagas |
+| Anúncios, 30 dias | — | 27,6 mil views (~45% do total), 946 cliques no link, 93 seguidores |
 | Relato do fundador | marcações de lojas, artista e comentadores | ~3 influenciadores verificados passaram a seguir e curtir |
 
-Leitura: o conteúdo que **nasce de alguém** (comentário, dados de uma liga, obra de uma artista) gera conversa e relação. O ganho não vem só no próprio post: vem das contas que entram na órbita do BINDER e voltam nos posts seguintes. Ainda são poucos dados (1–2 semanas): isto é hipótese forte, não lei (constituição §12).
+Leitura: o anúncio compra alcance e cliques no link; o conteúdo que **nasce de alguém** (comentário, dados de uma liga, obra de uma artista) gera conversa e relação. O ganho não vem só no próprio post: vem das contas que entram na órbita do BINDER e voltam nos posts seguintes. Ainda são poucos dados (1–2 semanas): isto é hipótese forte, não lei (constituição §12).
 
 ## 2. Princípio
 
@@ -61,7 +63,8 @@ Nas 24 h seguintes:
 
 - 2 peças de Collab por semana: uma do círculo 1 (comunidade) e uma dos círculos 2–4 (loja, liga ou artista).
 - O resto do calendário das séries segue igual, para ter comparação.
-- Nada de impulsionar as peças de Collab durante o teste (senão não se separa o efeito).
+- **Collab primeiro, anúncio depois**: cada peça de Collab corre 48 h sem impulso (mede-se o orgânico); depois, só a que tiver mais comentários e partilhas por 1.000 views recebe impulso, com o mesmo valor e objetivo dos anúncios anteriores. Assim o Collab escolhe o vencedor e o anúncio leva-o ao link.
+- Registar valor, período e objetivo de cada impulso no dia em que é feito.
 
 ## 7. Modelos de mensagem (PT-BR)
 
@@ -96,6 +99,6 @@ Instalações do app continuam a medir-se só pela Play Console com UTM; o Colla
 
 ## 10. Decisões pedidas ao fundador
 
-1. Aprovar o teste de 2 semanas (16–29/11) com 2 peças de Collab por semana e sem impulso nelas.
+1. Aprovar o teste de 2 semanas (16–29/11): 2 peças de Collab por semana, 48 h sem impulso, depois impulsionar só a vencedora.
 2. Aprovar o campo **Parceiro** na ficha de episódio e o registo `comum/parcerias/registo.csv`.
 3. Escolher a primeira loja a convidar para «Os dados da sua loja».
