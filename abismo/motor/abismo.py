@@ -12,6 +12,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.abspath(f'{HERE}/../..')
 sys.path.insert(0, f'{ROOT}/expedicao/template')
 from fundo import Fundo
+sys.path.insert(0, HERE)
+from vida import Vida
 POST = os.path.abspath(sys.argv[1]); MODE = sys.argv[2] if len(sys.argv) > 2 else 'render'
 CFG = json.load(open(f'{POST}/post.json'))
 ID = json.load(open(f'{HERE}/../identidade.json'))
@@ -65,6 +67,7 @@ _cards = {}
 def card(c, w):
     k = (c['png'], int(w))
     if k not in _cards:
+        if len(_cards) > 48: _cards.clear()
         im = Image.open(card_png(c)).convert('RGBA'); w = int(w); h = round(im.height * w / im.width)
         im = im.resize((w, h), Image.LANCZOS)
         m = Image.new('L', (w, h), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w - 1, h - 1), radius=int(w * 0.045), fill=255)
@@ -95,7 +98,12 @@ def fundo(t, lotus=1.0, energy=0.6, pulse=0.0, glitch=0.0):
     im = FUNDO.frame(t, 'abismo', energy=energy, pulse=pulse, lotus=lotus, glitch=glitch, seed=int(t * 30))
     if (W, H) != (1080, 1920):   # 4:5: recorte central do 9:16 (o feixe horizontal fica a ~41% da altura)
         y0 = ID['fundo']['recorte_45_y']; im = im.crop((0, y0, 1080, y0 + H))
-    return im
+    return VIDA.aplicar(im, t, 0.0 if CFG.get('vida') is False else 1.0)
+VIDA = Vida(W, H, ID['vida'], ID['musica']['periodo'])
+def pulso(t, apos):
+    """pulsação da carta no 1.º tempo de cada compasso (o mesmo instante em que as medusas contraem)."""
+    pc = ID['vida']['pulso_carta']; u = t % (ID['vida']['pulso_batidas'] * ID['musica']['periodo'])
+    return 1 + (pc['amplitude_apos_impacto'] if apos else pc['amplitude']) * math.exp(-u / pc['decaimento_s'])
 
 LOGO = Image.open(f'{ROOT}/{ID["marca"]["logo"]}').convert('RGBA')
 def logo_small(im, y=None):
@@ -236,9 +244,11 @@ def frame_anim(t, T):
         for i, ln in enumerate(CFG['gancho']): text_center(d, ln, S['topo'] + 90 + i * 96, 'black', 86, WHITE, stroke=6)
         tracked(d, ID['etiqueta'], S['topo'] + 6, 'bold', 24, EM + (230,), track=0.2)
         logo_small(im); return im.convert('RGB')
-    dt = t - T['entrada']; k_info = ease((t - T['info']) / 0.35) if t >= T['info'] else 0
-    sc = lerp(hero['escala'], hero['escala_info'], k_info); cw2 = W * sc; ch2 = cw2 * 1040 / 745; x2 = (W - cw2) / 2; y2 = lerp(hero['topo'], hero['topo_info'], k_info) + 4 * math.sin(2 * math.pi * t / 3)
-    if lit > 0: glow(im, x2, y2, cw2, ch2, lit * 0.6)
+    dt = t - T['entrada']; k_info = ease((t - T['info'] + 0.4) / 0.35)   # a carta encolhe antes: o painel chega no tempo certo sem sobrepor
+    sc = lerp(hero['escala'], hero['escala_info'], k_info); y2 = lerp(hero['topo'], hero['topo_info'], k_info) + 4 * math.sin(2 * math.pi * t / 3)
+    pz = pulso(t, t >= T['impacto']); y2 -= W * sc * 1040 / 745 * (pz - 1) / 2   # cresce a partir do centro
+    cw2 = round(W * sc * pz / 2) * 2; ch2 = cw2 * 1040 / 745; x2 = (W - cw2) / 2
+    if lit > 0: glow(im, x2, y2, cw2, ch2, lit * 0.6 * (0.75 + 12 * (pz - 1)))
     cc = card(c, cw2)
     paste_card(im, entry_luz(cc, dt / 0.95) if dt < 1.0 else cc, x2, y2)
     comp = CFG.get('comparacao')
@@ -260,7 +270,8 @@ def frame_anim(t, T):
         if t >= T['ficha']: ficha(im, T['ficha'], t, min(S['base'] - 210, y2 + ch2 + 46))
     else:
         credit(im, c, y2 + ch2 + 22)
-        if t < T['pergunta']: painel(im, T['info'], T['chips'], t, y2 + ch2 + 58)
+        yf = hero['topo_info'] + W * hero['escala_info'] * 1040 / 745   # posição final da carta: o painel não salta com a transição
+        if t < T['pergunta']: painel(im, T['info'], T['chips'], t, yf + 58)
     if t >= T['pergunta']:
         d = ImageDraw.Draw(im, 'RGBA'); k = eout((t - T['pergunta']) / 0.3); p1, p2 = CFG['pergunta']
         text_center(d, p1, y2 + ch2 + 110, 'black', 66, WHITE + (int(255 * k),), stroke=5)

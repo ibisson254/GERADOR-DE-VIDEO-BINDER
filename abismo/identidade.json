@@ -108,5 +108,62 @@
    "glitch": 0.2,
    "swell": 0.35
   }
+ },
+ "vida": {
+  "ativo": true,
+  "pulso_batidas": 4,
+  "subida": 0.004,
+  "caustica": 0.06,
+  "cores": {
+   "ciano": [
+    90,
+    225,
+    255
+   ],
+   "magenta": [
+    255,
+    105,
+    200
+   ]
+  },
+  "medusas": [
+   {
+    "x": 0.95,
+    "y": 0.3,
+    "r": 0.12,
+    "cor": "ciano",
+    "fase": 0.0,
+    "intensidade": 0.8
+   },
+   {
+    "x": 0.09,
+    "y": 0.8,
+    "r": 0.08,
+    "cor": "magenta",
+    "fase": 0.5,
+    "intensidade": 0.7
+   },
+   {
+    "x": 0.84,
+    "y": 0.88,
+    "r": 0.05,
+    "cor": "ciano",
+    "fase": 0.25,
+    "intensidade": 0.55
+   },
+   {
+    "x": 0.3,
+    "y": 0.06,
+    "r": 0.04,
+    "cor": "magenta",
+    "fase": 0.7,
+    "intensidade": 0.45
+   }
+  ],
+  "pulso_carta": {
+   "amplitude": 0.012,
+   "amplitude_apos_impacto": 0.02,
+   "decaimento_s": 0.35
+  }
  }
 }

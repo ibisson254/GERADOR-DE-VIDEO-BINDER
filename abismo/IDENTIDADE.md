@@ -8,6 +8,12 @@ O fundo das duas últimas cartas do vídeo de referência (Tecton e Abyssal Lotu
 - Estados: **tensão** (`lotus 0`) até ao momento de impacto; **mestre** (`lotus 1`) depois.
 - Placas fixas: `kit/fundo_mestre_916.png`, `kit/fundo_mestre_45.png` (recorte y 285 do 9:16).
 
+## Vida («o abismo respira») — `motor/vida.py`, valores em `identidade.json` → `vida`
+- **Medusas bioluminescentes** procedurais (ciano/magenta do feixe), atrás da carta e nas margens: campânula translúcida,
+  tentáculos com onda que desce, braços orais; sobem devagar e oscilam. Contraem no 1.º tempo de cada compasso (4 batidas).
+- **Pulsação da carta** no mesmo instante: +1,2% (+2% depois do drop), decaimento 0,35 s; o brilho acompanha.
+- **Luz ondulante** (cáusticas) muito ténue, mais visível em cima. Desligar por post com `"vida": false`.
+
 ## Sistema gráfico
 - **Medidor lateral** (x 44): RASOS · GRANDE MARINHO · ABISMO, marcador esmeralda desce até à camada da carta.
   Contador `n/N` só quando o post é uma sequência (`"sequencia": [n, N]`); nunca 1/6 para uma carta só.
