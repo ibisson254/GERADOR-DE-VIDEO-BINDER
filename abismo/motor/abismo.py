@@ -118,7 +118,9 @@ def logo_small(im, y=None):
     im.alpha_composite(Image.fromarray(a), (W - s - 40, y if y is not None else MOD['seguro']['topo'] - 18))
 
 def meter(im, t_on, t, n=None):
-    """medidor lateral: só a camada da carta; contador n/N só quando o post é uma sequência (CFG['sequencia'])."""
+    """medidor lateral: só a camada da carta; contador n/N só quando o post é uma sequência (CFG['sequencia']).
+    "medidor": false no post.json desliga-o (carta sem camada do oceano, ex.: reimpressão dos decks de Commander)."""
+    if CFG.get('medidor') is False: return
     d = ImageDraw.Draw(im, 'RGBA'); x = 44; y0, y1 = MOD['medidor']; seg = (y1 - y0) / 3
     d.line((x, y0, x, y1), fill=(255, 255, 255, 80), width=2)
     for i, nome in enumerate(ID['camadas']):

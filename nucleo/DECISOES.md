@@ -8,6 +8,11 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **Porquê:** fundador, 15/11/2026 (03:08): «Tem que ser padrão todo comentário dos personagens tem que ter imagem do que eles estão falando, exemplo burguer king tem que aparecer imagens da deck box os comentários devem aparecer na tv início do vídeo sempre tem que ter imagem relativa ao Magic. o episódio do numot foi o mais visto da série use estratégias que ele usou. A narração é essa coloque feedback visual para que o seguidor entenda do que estão falando. E sempre me manda a capa e legenda e comentário fixado separados para eu copiar e colar.»
 **Impacto:** vale para todas as frentes com personagens (Mana & Burn, Conde, Meta em Curto, Vince Vault) a partir de agora; regra detalhada em `manaburn/PERFIL.md` («Feedback visual em cada fala») e itens novos no `nucleo/CHECKLIST_QUALIDADE.md` (bloco E). Primeiro conteúdo: MB-GIRO03 v2. Publicados não se reabrem.
 
+## 15/11/2026 (10:30) · ABISMO: medidor opcional e prefixo AB no registo
+
+**O quê:** `"medidor": false` no `post.json` desliga o medidor de camadas (cartas sem camada do oceano, como as reimpressões dos decks de Commander de Nauctis; nunca se inventa camada). Conteúdos ABISMO entram em `comum/REGISTRO_EDITORIAL.md` com o prefixo `AB-` (`memoria.py`). Máximo de 4 etiquetas no Reel (a 5.ª tapa a legenda).
+**Porquê:** AB-01 (Crucible of Worlds), pedido do fundador às 10:05; carta escolhida pelo fundador.
+
 ## 15/11/2026 (01:55) · ABISMO: toda postagem sai com capa
 
 **O quê:** a capa passa a ser obrigatória em todas as postagens do ABISMO. Reel: o motor gera `saida/<ID>_capa.png` no fim de cada render (`abismo/motor/capa.py`, 1080×1920, essencial no recorte 3:4 da grelha). Carrossel: 1.º slide `capa`. Sem capa o pacote de entrega não está completo (PROCESSO.md §4 e §5).

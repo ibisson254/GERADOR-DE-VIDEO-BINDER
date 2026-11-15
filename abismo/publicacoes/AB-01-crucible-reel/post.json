@@ -1,0 +1,116 @@
+{
+ "id": "AB-01-crucible-reel",
+ "formato": "reel",
+ "medidor": false,
+ "carta": {
+  "png": "cartas/crucible_nac345.png",
+  "set": "nac",
+  "num": "345",
+  "nome": "Crucible of Worlds",
+  "colecao": "Nauctis: The Sunken Realm Commander",
+  "artista": "Chris Seaman",
+  "camada": "ABISMO"
+ },
+ "ficha": {
+  "nome": "CRUCIBLE OF WORLDS",
+  "tipo": "Artefato",
+  "camada": "Commander"
+ },
+ "chamada": {
+  "titulo": "JOGUE TERRENOS DO CEMITÉRIO",
+  "chips": [
+   [
+    "CUSTO 3",
+    "info"
+   ],
+   [
+    "TERRENOS DIRETO DO CEMITÉRIO",
+    "ok"
+   ],
+   [
+    "SÓ RENDE COM TERRENOS NO CEMITÉRIO",
+    "mau"
+   ],
+   [
+    "ORIGINAL: QUINTA AURORA (2004)",
+    "info"
+   ]
+  ]
+ },
+ "gancho": [
+  "UM CLÁSSICO DE 2004",
+  "EM NAUCTIS"
+ ],
+ "comparacao": {
+  "png": "cartas/crucible_5dn114.png",
+  "set": "5dn",
+  "num": "114",
+  "nome": "Crucible of Worlds",
+  "colecao": "Fifth Dawn",
+  "artista": "Ron Spencer",
+  "batida": 20,
+  "batida_fim": 28
+ },
+ "impacto": [
+  "DE VOLTA",
+  "DECKS DE COMMANDER DE NAUCTIS · 05/02/2027"
+ ],
+ "selo_batida": 30,
+ "frases": [
+  {
+   "batida": 4,
+   "texto": "Um clássico de 2004 em Nauctis.",
+   "amarelo": [
+    1,
+    3
+   ],
+   "batidas": 7
+  },
+  {
+   "batida": 12,
+   "texto": "Jogue terrenos do seu cemitério.",
+   "amarelo": [
+    1,
+    4
+   ],
+   "batidas": 7
+  },
+  {
+   "batida": 20,
+   "texto": "A mesma carta de Quinta Aurora.",
+   "amarelo": [
+    4,
+    5
+   ],
+   "batidas": 6
+  },
+  {
+   "batida": 26,
+   "texto": "Agora nos decks de Commander.",
+   "amarelo": [
+    4
+   ],
+   "batidas": 5
+  },
+  {
+   "batida": 31,
+   "texto": "E o texto fala da Kiora.",
+   "amarelo": [
+    5
+   ],
+   "batidas": 5
+  }
+ ],
+ "pergunta": [
+  "VOCÊ JÁ TEM UMA?",
+  "COMENTE SIM OU NÃO"
+ ],
+ "porque_formato": "Reviravolta clássico × reimpressão: a comparação com a original de Quinta Aurora e o regresso em 2027 ganham com o drop da música. Uma carta, uma mensagem.",
+ "capa": {
+  "texto": [
+   "CRUCIBLE OF WORLDS",
+   "VOLTOU"
+  ],
+  "sub": "DE QUINTA AURORA (2004) PARA NAUCTIS"
+ }
+}

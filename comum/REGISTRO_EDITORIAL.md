@@ -188,6 +188,12 @@ Peças de 18–19/10/2026 descritas em projeto:claude/reel-lambe-lambe-pop.md ("
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | VV-EP00 | Fechamento (piloto 3D, arquivado) | Elminster; Gandalf; Plaza | Boletim de preços | Buy the dip! | PAUSADO | direção 2D ativa desde 12/11 (PR #17): o piloto 3D fica como arquivo; kit 2D por fechar (ficheiros do PR #17 em falta na branch) | 12/11/2026 (frente) | — | vince/episodios/ep00_fechamento_ficha.md | — | sem conflito |
 
+## ABISMO · Nauctis (kit da edição, 15/11/2026)
+
+| ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| AB-01 | ABISMO · Crucible of Worlds volta em Nauctis (Reel) | Crucible of Worlds (NAC 345; original 5DN 114) | clássico de 2004 reimpresso nos decks de Commander de Nauctis; texto de ambientação cita Kiora | Um clássico de 2004 em Nauctis. | CONCLUÍDO | produzido 15/11/2026 a pedido do fundador (10:05; carta escolhida às 10:1x) | 15/11/2026 | não publicada | abismo/publicacoes/AB-01-crucible-reel/ficha.md | EX-01; AB-00 | pauta livre (memoria.py pauta, 15/11) |
+
 ## Lacunas da auditoria retroativa (01/11/2026)
 
 Para fechar o inventário, o fundador (ou o print do perfil) precisa de confirmar:
