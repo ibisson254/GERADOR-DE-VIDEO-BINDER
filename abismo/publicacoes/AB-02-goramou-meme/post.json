@@ -68,27 +68,27 @@
    "amarelo": [
     3
    ],
-   "batidas": 6
+   "batidas": 3
   },
   {
-   "batida": 26,
+   "batida": 23,
    "texto": "...e ele traz de volta.",
    "amarelo": [
     2,
     3,
     4
    ],
-   "batidas": 5
+   "batidas": 3
   },
   {
-   "batida": 31,
+   "batida": 26,
    "texto": "Tubarão, te amo.",
    "amarelo": [
     0,
     1,
     2
    ],
-   "batidas": 5
+   "batidas": 6
   }
  ],
  "pergunta": [
@@ -102,5 +102,6 @@
    "TE AMO"
   ],
   "sub": "GORAMOU · NAUCTIS"
- }
+ },
+ "selo_batida": 26
 }
