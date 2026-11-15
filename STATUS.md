@@ -18,6 +18,9 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 
 ## Em produção
 
+- **Estratégia de Collab e marcações** (15/11, PROPOSTA): `nucleo/ESTRATEGIA_COLLAB.md` — cinco círculos de parceiros, cinco formatos, checklist por peça, teste de 2 semanas (16–29/11). Depende do fundador: aprovar o teste, o campo «Parceiro» na ficha e escolher a primeira loja.
+- **Insights 15/11**: `comum/insights/semanas/2026-11-14.md` (+ adenda com MC-ESP02, Reel do Abyssal Lotus e LL-ART13). LL-ART13 e MC-ESP02 publicados a 14/11.
+
 - **MB-GIRO03 «Giro de domingo nº 3»** (15/11): Burger King Itália × Magic, PLANESWALKER (Netflix) com «Lê a carta» da Chandra, a semana no BINDER (Numot, Conde EP005, TUBO EP07/ESP01/ESP02, Nauctis) e chamada para o TUBO de segunda. **CONCLUÍDO, não publicado.** Pacote: `manaburn/giro/2026-11-15/` (vozes 1.697 créditos, flow `xiCL5Tg0uv0l1swiXKMd`). **v2 final com feedback visual em cada fala** (padrão novo de 15/11, 03:08; fotos do BK e da Netflix enviadas pelo fundador às 03:35). Antes de publicar: ouvir a pronúncia; confirmar que «o spoiler da nova edição» é a EX-01 (o registo da EX-01 não foi mudado) e o foco de 3 palavras da capa.
 
 - **LL-ART13 «7 cartas. Uma artista brasileira.»** (14/11): carrossel de 7 slides sobre Nathanna Érica nos Special Guests de Lorwyn Eclipsed. **CONCLUÍDO, não publicado.** Pacote: `lambe-lambe/episodios/ll-art13_nathanna_sete_cartas/`. Antes de publicar: o fundador confirma a autorização da artista para a foto do slide 6. Primeiro carrossel com o **modelo pronto sem ElevenLabs** (`lambe-lambe/referencias/carrossel_padrao_0{1,2}.png` + `lambe-lambe/kit_carrossel/motor_padrao.py`). Conflito de ID: a branch `lambe/artistas-carrosseis` usa LL-ART13–18; renumerar ao integrá-la (`nucleo/DECISOES.md`, 14/11).
