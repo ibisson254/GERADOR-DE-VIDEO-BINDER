@@ -27,6 +27,40 @@ Código: `MB-GIRO03`. Pasta: `manaburn/giro/2026-11-15/`. **Produzido, não publ
 
 Cortes feitos para caber no orçamento de créditos (fundador, 02:22, «Corta para caber em 1.700»): saíram a carne seca de Magic (Mythical Meats), o Terry Matalas na fala (fica na tela) e o «Top 8 saiu ontem».
 
+## v2 · feedback visual em cada fala (15/11/2026, 03:08–)
+
+Pedido do fundador (03:08): imagem do que se fala em cada fala, na TV; quadro 0 com Magic; estratégias do MB-EP11; mesma narração. Regra registada em `nucleo/DECISOES.md` e `manaburn/PERFIL.md`.
+
+| Fala | Plano | Imagem |
+|---|---|---|
+| 1 | tv | abertura com Chandra e Numot (quadro 0 de Magic) |
+| 2 | tv2 | foto da deck box + sleeves do BK (**foto em falta**) |
+| 3 | cuB | insert: foto da deck box (**em falta**) |
+| 4 | tv2 | «€19,90 · só na Itália até 30/11» com a foto (**em falta**) |
+| 5 | cuB | insert «Itália sim, Brasil não (por enquanto)» |
+| 6 | tv2 | «Se der certo, pode expandir» + carimbo «Nada decidido» (paráfrase do Blogatog) |
+| 7 | tv | imagem do primeiro olhar de PLANESWALKER (**foto em falta**) |
+| 8 | tv2 | carta Chandra, Torch of Defiance |
+| 9, 11 | cuB | insert: carta da Chandra |
+| 10 | tvtext | Chandra com o −3 destacado |
+| 12 | tv2 | capa real do MB-EP11 |
+| 13 | cuB | insert: carta do Numot |
+| 14 | tvtext | Numot com «pagar {2}{R}… até dois terrenos» destacado |
+| 15 | tv | capa real do CM-EP005 |
+| 16 | tv2 | Hyalopterous Lemure (Ice Age) + carimbo «Obra notável» |
+| 17 | tv | o TUBO + «3 episódios» |
+| 18 | tv2 | print real do comentário da @preconautamtg + «66%» |
+| 19 | tv | Calmwater Mentor + Abyssal Lotus (Nauctis) |
+| 20 | tv2 | Abyssal Lotus inteira |
+| 21 | tv | Biotech Specialist + The Sackville-Bagginses (Jund Sacrifice) |
+| 22 | tv2 | o TUBO + «Segunda, 16/11, prestação de contas» |
+| 23 | tv | as três opções numeradas com miniaturas |
+| 24 | cuM | «Comenta aí» → TV desliga |
+
+- Fotos em falta: a sessão não chega aos sites de notícias (rede fechada) e o navegador não estava ligado. Entram como `cards/src/foto_bk.jpg` (Burger King Itália) e `cards/src/foto_netflix.jpg` (Netflix); depois `python3 telas_visuais.py` e novo render (sem créditos).
+- Comentário fixado: a citação longa do Rosewater passou a paráfrase (regra de citação curta).
+- Par de publicação (MB-EP11 ponto 6): carrossel Lambe-lambe no dia seguinte, «Sleeve nova pede coleção organizada»: deck box e sleeves → escanear as cartas com o BINDER Vision e ver o valor de referência (só funções reais: scanner e valor, como no fecho), com pedido de instalação e link da bio.
+
 ## Fontes e evidências
 Ver `fontes.md`.
 

@@ -51,6 +51,32 @@ Todas as capas do Mana & Burn, de episódios novos ou pedidas para episódios an
 
 Exemplo: `python3 capas/capa_mb.py --scryfall cmd/215 --frase "O dragão que come" --foco "terreno" --selo "−2 por pancada" --ep 11 --tag Commander --saida MB_EP11_CAPA.png`
 
+## Feedback visual em cada fala (padrão desde 15/11/2026)
+
+Decisão do fundador de 15/11/2026 (`nucleo/DECISOES.md`). O seguidor tem de perceber de que se fala só a olhar para o ecrã.
+
+- **Uma imagem real por fala.** Cada fala tem a imagem do que está a ser dito: na TV SAL (um canal por fala, `EP.canais`, com som de troca de canal) ou, quando o plano é de reação (`cuB`/`cuM`), em insert ao lado da personagem (`EP.inserts`). Produto → foto oficial com crédito; carta → PNG do Scryfall; episódio da casa → capa ou quadro real; comunidade → print real do comentário; número → o número gigante na tela, com a fonte.
+- **Leitura de regra = carta com a linha destacada** (`tvtext`), sempre.
+- **Quadro 0 com Magic:** a primeira tela da TV tem uma carta ou um objeto de Magic reconhecível.
+- **Ritmo:** troca de imagem a cada ≤ 3 s; fala longa sem troca leva insert ou destaque a meio.
+- **Sem imagem real, não há fala sobre isso.** Se a sessão não consegue a imagem, pede-se ao fundador antes do render final; a prévia sai com a moldura «FOTO EM FALTA» e não se publica.
+- Ferramenta de referência: `manaburn/giro/2026-11-15/telas_visuais.py` (gerador de telas com foto, carta, carimbo, número gigante e miniaturas numeradas).
+
+## Base do episódio: o que o MB-EP11 (Numot) ensinou
+
+O MB-EP11 é o post mais visto do canal (7.138 views, 71 guardados, 73 seguidores; `comum/insights/semanas/2026-11-13.md`, branch `insights/2026-11-13-numot`). Repetir:
+
+1. Gancho com a dor real da mesa e um número, numa frase do Burn.
+2. Burn exagera → Mana corrige com o Oracle (mínimo 2 leituras no Giro, 3 no episódio base); cada correção ensina uma regra que vale guardar.
+3. A carta aparece com a linha que prova a correção destacada; cartas citadas entram em insert no momento em que são ditas.
+4. Reação do Burn em grande plano com tremor.
+5. Pergunta de escolha no fim, igual à primeira linha do comentário fixado.
+6. Par de publicação: carrossel do app no dia seguinte, com pedido de instalação (o carrossel de 12/11 teve 43 toques no link).
+
+## Entrega ao fundador
+
+No fim de cada conteúdo: a capa como ficheiro e, na mensagem, a **legenda** e o **comentário fixado** em blocos separados, prontos a copiar e colar (sem títulos dentro dos blocos).
+
 ## Ponte para o BINDER
 
 Ligada à carta do episódio, entre as funções confirmadas (ex.: escanear e ver o valor de referência). CTA da legenda não repete o do post anterior.
