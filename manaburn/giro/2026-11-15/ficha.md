@@ -1,6 +1,6 @@
 # Ficha · Mana & Burn · Giro de domingo nº 3 · semana 09–15/11/2026
 
-Código: `MB-GIRO03`. Pasta: `manaburn/giro/2026-11-15/`. **Produzido, não publicado** (15/11/2026). Pedido do fundador (01:58): «Faça o episódio de giro da semana e inclua Burger King e outros temas da semana»; às 02:07: «Faltou falar dos episódios da semana que tivemos».
+Código: `MB-GIRO03`. Pasta: `manaburn/giro/2026-11-15/`. **Produzido, não publicado** (15/11/2026). Versão a publicar: v2 (feedback visual em cada fala, 03:50). Pedido do fundador (01:58): «Faça o episódio de giro da semana e inclua Burger King e outros temas da semana»; às 02:07: «Faltou falar dos episódios da semana que tivemos».
 
 ## Classificação
 - Série: Mana & Burn · formato derivado Giro de domingo (`manaburn/PERFIL.md`)
@@ -34,12 +34,12 @@ Pedido do fundador (03:08): imagem do que se fala em cada fala, na TV; quadro 0 
 | Fala | Plano | Imagem |
 |---|---|---|
 | 1 | tv | abertura com Chandra e Numot (quadro 0 de Magic) |
-| 2 | tv2 | foto da deck box + sleeves do BK (**foto em falta**) |
-| 3 | cuB | insert: foto da deck box (**em falta**) |
-| 4 | tv2 | «€19,90 · só na Itália até 30/11» com a foto (**em falta**) |
+| 2 | tv2 | foto da deck box + sleeves do BK (enviada pelo fundador, 03:35) |
+| 3 | cuB | insert: foto da deck box |
+| 4 | tv2 | «€19,90 · só na Itália até 30/11» com a foto |
 | 5 | cuB | insert «Itália sim, Brasil não (por enquanto)» |
 | 6 | tv2 | «Se der certo, pode expandir» + carimbo «Nada decidido» (paráfrase do Blogatog) |
-| 7 | tv | imagem do primeiro olhar de PLANESWALKER (**foto em falta**) |
+| 7 | tv | logótipo da Netflix + «PLANESWALKER · 2027» (imagem enviada pelo fundador; os cartazes do fundo foram desfocados e escurecidos para não mostrar rostos de pessoas reais) |
 | 8 | tv2 | carta Chandra, Torch of Defiance |
 | 9, 11 | cuB | insert: carta da Chandra |
 | 10 | tvtext | Chandra com o −3 destacado |
@@ -57,7 +57,7 @@ Pedido do fundador (03:08): imagem do que se fala em cada fala, na TV; quadro 0 
 | 23 | tv | as três opções numeradas com miniaturas |
 | 24 | cuM | «Comenta aí» → TV desliga |
 
-- Fotos em falta: a sessão não chega aos sites de notícias (rede fechada) e o navegador não estava ligado. Entram como `cards/src/foto_bk.jpg` (Burger King Itália) e `cards/src/foto_netflix.jpg` (Netflix); depois `python3 telas_visuais.py` e novo render (sem créditos).
+- Fotos: a sessão não chegava aos sites de notícias; o fundador enviou as duas imagens a 15/11 (03:35): `cards/src/foto_bk.jpg` (deck box + sleeves, crédito «divulgação Burger King × Magic») e `cards/src/foto_netflix.jpg` (logótipo da Netflix, fundo desfocado). Render final sem créditos novos.
 - Comentário fixado: a citação longa do Rosewater passou a paráfrase (regra de citação curta).
 - Par de publicação (MB-EP11 ponto 6): carrossel Lambe-lambe no dia seguinte, «Sleeve nova pede coleção organizada»: deck box e sleeves → escanear as cartas com o BINDER Vision e ver o valor de referência (só funções reais: scanner e valor, como no fecho), com pedido de instalação e link da bio.
 
@@ -109,3 +109,14 @@ Ver `fontes.md`.
 | Retenção | quadro 0 com Magic; mudança visual ≤ 3 s; som em cada revelação | quadro 0 = tela «Giro de domingo» da TV SAL com 1-2-3 (sem carta: P2); 23 cortes em 70 s (maior intervalo 5,5 s entre 21,6 e 27,0 s, com troca de tela na TV a meio); som de troca de canal em cada canal e de destaque nas 2 leituras | sim (P2 no quadro 0) |
 | Pronúncia | ouvida | **não ouvida** | P1 a confirmar pelo fundador |
 | Afirmações | todas com fonte | `fontes.md` | sim |
+
+### v2 final (15/11/2026, 03:50) · ficheiro `ManaBurn_Giro_2026-11-15_916.mp4`
+| Critério | Medido | OK |
+|---|---|---|
+| Formato / duração | 1080×1920, 30 fps, 74,07 s (70,2 s + fecho) | sim |
+| Loudness / pico | −14,5 LUFS, −1,2 dBTP | sim |
+| `qc_video.py` | «Sem problemas mensuráveis» | sim |
+| cropdetect | 2220/2220 quadros 1080:1920:0:0 | sim |
+| Feedback visual | 24/24 falas com imagem real (17 telas na TV + 5 inserts nos grandes planos + 2 leituras com destaque); nenhuma «FOTO EM FALTA» (conferido a 0,3 / 7 / 11 / 19 / 23 / 66 s e na folha de contacto) | sim |
+| Quadro 0 | Chandra e Numot na TV | sim |
+| Pronúncia | não ouvida | P1 a confirmar |

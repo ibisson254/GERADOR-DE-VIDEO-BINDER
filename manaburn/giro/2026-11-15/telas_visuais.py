@@ -65,7 +65,7 @@ TELAS = {
   'v02_bk': f"""<div class="f"><span class="badge">1 · LANCHE</span>{foto('foto_bk.jpg', 0, 640, 'deck box + sleeves<br>do Burger King Itália')}
      <div style="position:absolute;left:30px;right:30px;top:668px" class="big">DECK BOX<br><em>+ 100 SLEEVES</em></div>
      <div style="position:absolute;left:30px;top:880px" class="sub">no lanche do <span class="y">Burger King Itália</span></div>
-     <div class="fonte">Imagem: Burger King Itália. Fontes: Dexerto, ICv2 (10/11/2026).</div></div>""",
+     <div class="fonte">Foto: divulgação Burger King × Magic. Fontes: Dexerto, ICv2 (10/11/2026).</div></div>""",
   # 4 · M «Dezenove e noventa euros. Só na Itália, até dia 30»
   'v04_preco': f"""<div class="f"><span class="badge">1 · LANCHE</span>{foto('foto_bk.jpg', 0, 430, 'deck box do BK')}
      <div style="position:absolute;left:24px;top:420px" class="giant">€19,90</div>
@@ -82,7 +82,7 @@ TELAS = {
   'v07_netflix': f"""<div class="f"><span class="badge">2 · STREAMING</span>{foto('foto_netflix.jpg', 0, 600, 'primeiro olhar<br>de PLANESWALKER (Netflix)')}
      <div style="position:absolute;left:30px;right:30px;top:625px" class="big">PLANES-<br><em>WALKER</em></div>
      <div style="position:absolute;left:30px;top:830px" class="sub">série animada · Netflix · <span class="y">2027</span></div>
-     <div class="fonte">Imagem: Netflix. Fontes: Netflix Tudum, Deadline (13/11/2026).</div></div>""",
+     <div class="fonte">Imagem: Netflix (logótipo). Fontes: Netflix Tudum, Deadline (13/11/2026).</div></div>""",
   # 12 · M «A semana no BINDER. O Burn sofreu com o Numot» — capa real do EP11
   'v12_numot_ep': f"""<div class="f"><span class="badge">A SEMANA NO BINDER</span>
      <img src="{u('mb_ep11_capa_34.jpg')}" style="position:absolute;left:84px;top:110px;width:564px">
