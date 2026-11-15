@@ -1,0 +1,112 @@
+{
+ "projeto": "ABISMO",
+ "edicao": "Nauctis: The Sunken Realm",
+ "etiqueta": "BINDER ORIGINALS · ABISMO",
+ "fontes": {
+  "pasta": "/usr/share/fonts/opentype/inter/",
+  "black": "InterDisplay-Black.otf",
+  "bold": "Inter-Bold.otf",
+  "semi": "Inter-SemiBold.otf",
+  "med": "Inter-Medium.otf"
+ },
+ "cores": {
+  "esmeralda": [
+   16,
+   185,
+   129
+  ],
+  "branco": [
+   240,
+   246,
+   248
+  ],
+  "amarelo": [
+   255,
+   214,
+   64
+  ],
+  "tinta": [
+   5,
+   10,
+   16
+  ],
+  "condicao": [
+   200,
+   40,
+   48
+  ],
+  "brilho": [
+   255,
+   120,
+   170
+  ],
+  "sinal": [
+   255,
+   42,
+   42
+  ]
+ },
+ "fundo": {
+  "gerador": "expedicao/template/fundo.py",
+  "semente": 11,
+  "camada": "abismo",
+  "estado_mestre": {
+   "lotus": 1.0,
+   "energy": 0.6
+  },
+  "estado_tensao": {
+   "lotus": 0.0,
+   "energy": 0.6
+  },
+  "placas": [
+   "abismo/kit/fundo_mestre_916.png",
+   "abismo/kit/fundo_mestre_45.png"
+  ],
+  "recorte_45_y": 285
+ },
+ "camadas": [
+  "RASOS",
+  "GRANDE MARINHO",
+  "ABISMO"
+ ],
+ "marca": {
+  "logo": "manaburn/logo/logo_mark.png",
+  "tamanho_canto": 62,
+  "opacidade_canto": 0.6,
+  "assinatura": [
+   "Escaneie suas cartas e organize seus decks.",
+   "Disponível no Google Play.",
+   "Link na bio."
+  ],
+  "scanner_real": "comum/outro/scan"
+ },
+ "musica": {
+  "arquivo": "expedicao/kit/auction_of_power.mp3",
+  "titulo": "Auction of Power",
+  "dono": "fundador (confirmado 15/11/2026)",
+  "bpm": 140,
+  "periodo": 0.42865,
+  "offset": 0.0349,
+  "marcas_batidas": {
+   "intro": 0,
+   "secao_A": 16,
+   "pausa_antes_do_drop": 62,
+   "drop": 64,
+   "fim_secao_B": 96,
+   "cauda": [
+    96,
+    "fim"
+   ]
+  }
+ },
+ "sons": {
+  "descida": "expedicao/kit/sfx/descida.mp3",
+  "glitch": "expedicao/kit/sfx/glitch.mp3",
+  "swell": "expedicao/kit/sfx/swell.mp3",
+  "ganho": {
+   "descida": 0.5,
+   "glitch": 0.2,
+   "swell": 0.35
+  }
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "carta": {
+  "png": "cartas/lotus_361.png",
+  "set": "nau",
+  "num": "361",
+  "nome": "Abyssal Lotus",
+  "colecao": "Nauctis: The Sunken Realm",
+  "artista": "Kelogsloops",
+  "camada": "ABISMO"
+ },
+ "ficha": {
+  "nome": "ABYSSAL LOTUS",
+  "tipo": "Artefato",
+  "camada": "Abismo"
+ },
+ "chamada": {
+  "titulo": "3 MANAS POR CUSTO ZERO",
+  "chips": [
+   [
+    "CUSTO 0",
+    "ok"
+   ],
+   [
+    "3 MANAS DE UMA COR",
+    "ok"
+   ],
+   [
+    "ENTRA VIRADO",
+    "mau"
+   ],
+   [
+    "SÓ COM 8+ CARTAS PERMANENTES NO CEMITÉRIO",
+    "mau"
+   ],
+   [
+    "DEPOIS SE EXILA",
+    "mau"
+   ],
+   [
+    "≈ 500 CÓPIAS SEM TEXTO",
+    "info"
+   ]
+  ]
+ },
+ "id": "AB-00-previa-carrossel",
+ "formato": "carrossel",
+ "nota": "Pré-visualização de validação do modelo (não é publicação).",
+ "slides": [
+  {
+   "tipo": "capa",
+   "texto": [
+    "O LOTUS",
+    "DO ABISMO"
+   ],
+   "sub": "ABYSSAL LOTUS · NAUCTIS"
+  },
+  {
+   "tipo": "carta"
+  },
+  {
+   "tipo": "habilidade",
+   "titulo": "3 MANAS POR CUSTO ZERO",
+   "itens": [
+    [
+     "Custo 0 · artefato",
+     "ok"
+    ],
+    [
+     "Adiciona 3 manas de uma cor",
+     "ok"
+    ],
+    [
+     "Entra virado",
+     "mau"
+    ],
+    [
+     "Só com 8+ cartas permanentes no cemitério",
+     "mau"
+    ],
+    [
+     "Depois se exila",
+     "mau"
+    ]
+   ]
+  },
+  {
+   "tipo": "comparacao",
+   "com": {
+    "png": "cartas/blacklotus_lea.png",
+    "set": "lea",
+    "num": "232",
+    "nome": "Black Lotus",
+    "colecao": "Limited Edition Alpha",
+    "artista": "Christopher Rush"
+   },
+   "titulo": "ABYSSAL LOTUS × BLACK LOTUS",
+   "linhas": [
+    "Os dois custam 0 e dão 3 manas de uma cor.",
+    "O Black Lotus se sacrifica; o Abyssal se exila.",
+    "O Abyssal entra virado e pede 8+ permanentes",
+    "no cemitério (Descend 8)."
+   ]
+  },
+  {
+   "tipo": "pergunta",
+   "texto": [
+    "VOCÊ JOGARIA?",
+    "COMENTE SIM OU NÃO"
+   ]
+  }
+ ],
+ "porque_formato": "Comparação ponto a ponto para guardar e reler."
+}

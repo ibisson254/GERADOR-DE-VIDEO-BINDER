@@ -1,0 +1,49 @@
+{
+ "formato": "reel",
+ "tamanho": [
+  1080,
+  1920
+ ],
+ "descricao": "Reel de uma carta, sem voz por defeito: gancho escrito no quadro 0 sobre a silhueta, entrada com faixa de luz, cartão informativo, drop da música = momento de impacto, pergunta, assinatura.",
+ "seguro": {
+  "topo": 236,
+  "base": 1640,
+  "legenda": 1548
+ },
+ "medidor": [
+  430,
+  1300
+ ],
+ "carta": {
+  "escala": 0.8,
+  "topo": 176,
+  "escala_info": 0.62,
+  "topo_info": 166
+ },
+ "musica": [
+  [
+   44,
+   64
+  ],
+  [
+   64,
+   92
+  ]
+ ],
+ "batidas_total": 48,
+ "momentos": {
+  "entrada": 4,
+  "ficha": 7,
+  "info": 12,
+  "impacto": 20,
+  "pergunta": 36,
+  "fim": 44
+ },
+ "sincronia": {
+  "intro": "batida 0 (faixa 44)",
+  "entrada da carta": "batida 4",
+  "revelação de informação": "batida 12 (+2 por etiqueta)",
+  "maior impacto": "batida 20 = drop da faixa (64)",
+  "encerramento": "batida 44, assinatura até 48"
+ }
+}

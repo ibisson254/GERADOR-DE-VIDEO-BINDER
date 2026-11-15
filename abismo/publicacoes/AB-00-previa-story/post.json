@@ -1,0 +1,54 @@
+{
+ "carta": {
+  "png": "cartas/lotus_361.png",
+  "set": "nau",
+  "num": "361",
+  "nome": "Abyssal Lotus",
+  "colecao": "Nauctis: The Sunken Realm",
+  "artista": "Kelogsloops",
+  "camada": "ABISMO"
+ },
+ "ficha": {
+  "nome": "ABYSSAL LOTUS",
+  "tipo": "Artefato",
+  "camada": "Abismo"
+ },
+ "chamada": {
+  "titulo": "3 MANAS POR CUSTO ZERO",
+  "chips": [
+   [
+    "CUSTO 0",
+    "ok"
+   ],
+   [
+    "3 MANAS DE UMA COR",
+    "ok"
+   ],
+   [
+    "ENTRA VIRADO",
+    "mau"
+   ],
+   [
+    "SÓ COM 8+ CARTAS PERMANENTES NO CEMITÉRIO",
+    "mau"
+   ],
+   [
+    "DEPOIS SE EXILA",
+    "mau"
+   ]
+  ]
+ },
+ "id": "AB-00-previa-story",
+ "formato": "story",
+ "nota": "Pré-visualização de validação do modelo (não é publicação).",
+ "gancho": [
+  "UM LOTUS QUE",
+  "CUSTA ZERO?"
+ ],
+ "frases": [],
+ "pergunta": [
+  "VOCÊ JOGARIA?",
+  "responde na enquete"
+ ],
+ "porque_formato": "Pergunta direta com enquete; o cartão informativo já carrega o texto, por isso o Story não leva legendas de ecrã."
+}

@@ -1,0 +1,116 @@
+{
+ "carta": {
+  "png": "cartas/lotus_361.png",
+  "set": "nau",
+  "num": "361",
+  "nome": "Abyssal Lotus",
+  "colecao": "Nauctis: The Sunken Realm",
+  "artista": "Kelogsloops",
+  "camada": "ABISMO"
+ },
+ "ficha": {
+  "nome": "ABYSSAL LOTUS",
+  "tipo": "Artefato",
+  "camada": "Abismo"
+ },
+ "chamada": {
+  "titulo": "3 MANAS POR CUSTO ZERO",
+  "chips": [
+   [
+    "CUSTO 0",
+    "ok"
+   ],
+   [
+    "3 MANAS DE UMA COR",
+    "ok"
+   ],
+   [
+    "ENTRA VIRADO",
+    "mau"
+   ],
+   [
+    "SÓ COM 8+ CARTAS PERMANENTES NO CEMITÉRIO",
+    "mau"
+   ],
+   [
+    "DEPOIS SE EXILA",
+    "mau"
+   ],
+   [
+    "≈ 500 CÓPIAS SEM TEXTO",
+    "info"
+   ]
+  ]
+ },
+ "id": "AB-00-previa-reel",
+ "formato": "reel",
+ "nota": "Pré-visualização de validação do modelo (não é publicação).",
+ "gancho": [
+  "UM LOTUS QUE",
+  "CUSTA ZERO"
+ ],
+ "comparacao": {
+  "png": "cartas/blacklotus_lea.png",
+  "set": "lea",
+  "num": "232",
+  "nome": "Black Lotus",
+  "colecao": "Limited Edition Alpha",
+  "artista": "Christopher Rush",
+  "batida": 20,
+  "batida_fim": 28
+ },
+ "impacto": [
+  "≈ 500 CÓPIAS",
+  "VERSÃO SEM TEXTO · RAISED FOIL · COLLECTOR BOOSTERS"
+ ],
+ "selo_batida": 30,
+ "frases": [
+  {
+   "batida": 4,
+   "texto": "O Lotus do fundo de Nauctis.",
+   "amarelo": [
+    1
+   ],
+   "batidas": 7
+  },
+  {
+   "batida": 12,
+   "texto": "Custo zero. Três manas.",
+   "amarelo": [
+    1,
+    3
+   ],
+   "batidas": 7
+  },
+  {
+   "batida": 20,
+   "texto": "Igual ao Black Lotus?",
+   "amarelo": [
+    2,
+    3
+   ],
+   "batidas": 6
+  },
+  {
+   "batida": 26,
+   "texto": "Só com 8 cartas permanentes no cemitério.",
+   "amarelo": [
+    2
+   ],
+   "batidas": 5
+  },
+  {
+   "batida": 31,
+   "texto": "E depois se exila.",
+   "amarelo": [
+    3
+   ],
+   "batidas": 5
+  }
+ ],
+ "pergunta": [
+  "VOCÊ JOGARIA NO SEU DECK?",
+  "COMENTE SIM OU NÃO"
+ ],
+ "porque_formato": "Reviravolta custo 0 × condição (Descend 8) e comparação com o Black Lotus: ganham com o drop da música."
+}

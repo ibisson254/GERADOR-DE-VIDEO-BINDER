@@ -1,0 +1,49 @@
+{
+ "formato": "story",
+ "tamanho": [
+  1080,
+  1920
+ ],
+ "descricao": "Segmento de Story de 13,7 s: gancho, a carta acende no drop, cartão informativo, pergunta com espaço livre por baixo para o autocolante de enquete (posto na app).",
+ "seguro": {
+  "topo": 250,
+  "base": 1580,
+  "legenda": 1525
+ },
+ "medidor": [
+  420,
+  1180
+ ],
+ "carta": {
+  "escala": 0.7,
+  "topo": 330,
+  "escala_info": 0.54,
+  "topo_info": 300
+ },
+ "musica": [
+  [
+   56,
+   64
+  ],
+  [
+   64,
+   88
+  ]
+ ],
+ "batidas_total": 32,
+ "momentos": {
+  "entrada": 4,
+  "ficha": 99,
+  "impacto": 8,
+  "info": 10,
+  "pergunta": 24,
+  "fim": 99
+ },
+ "sincronia": {
+  "intro": "batida 0 (faixa 56)",
+  "entrada da carta": "batida 4",
+  "maior impacto": "batida 8 = drop (64)",
+  "revelação de informação": "batida 10",
+  "encerramento": "batida 24 (pergunta) até 32"
+ }
+}
