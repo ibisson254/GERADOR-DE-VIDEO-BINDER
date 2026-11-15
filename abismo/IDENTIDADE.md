@@ -9,10 +9,13 @@ O fundo das duas últimas cartas do vídeo de referência (Tecton e Abyssal Lotu
 - Placas fixas: `kit/fundo_mestre_916.png`, `kit/fundo_mestre_45.png` (recorte y 285 do 9:16).
 
 ## Vida («o abismo respira») — `motor/vida.py`, valores em `identidade.json` → `vida`
-- **Medusas bioluminescentes** procedurais (ciano/magenta do feixe), atrás da carta e nas margens: campânula translúcida,
-  tentáculos com onda que desce, braços orais; sobem devagar e oscilam. Contraem no 1.º tempo de cada compasso (4 batidas).
-- **Pulsação da carta** no mesmo instante: +1,2% (+2% depois do drop), decaimento 0,35 s; o brilho acompanha.
-- **Luz ondulante** (cáusticas) muito ténue, mais visível em cima. Desligar por post com `"vida": false`.
+**Hierarquia: a carta é o único destaque.** O fundo dá profundidade, não disputa a atenção.
+1. Carta (pulsação no 1.º tempo do compasso: +1,2%, +2% depois do drop) → 2. texto e painel → 3. feixe de luz → 4. medusas e cáusticas.
+- **Medusas** procedurais (ciano/magenta do feixe) que **atravessam o ecrã**: deriva lenta + impulso no fim de cada contração
+  (a cada 4 batidas), rumo próprio, saem por um lado e voltam pelo outro. Profundidade = mais longe, menor, mais desfocada, mais fraca.
+- **Quase impercetíveis**: força global 0,42, sem flash; no máximo cerca de 1/5 do brilho dos realces da carta (medido: pico 44/255 contra p95 213 da carta).
+- **Zonas de calma**: atrás da carta o movimento cai para 12% e junto ao painel e legendas para 35%, com transição suave de 170 px.
+- **Cáusticas** a 2,5%. Desligar tudo por post com `"vida": false`.
 
 ## Sistema gráfico
 - **Medidor lateral** (x 44): RASOS · GRANDE MARINHO · ABISMO, marcador esmeralda desce até à camada da carta.

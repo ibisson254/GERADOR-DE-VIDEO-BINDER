@@ -99,7 +99,14 @@ def fundo(t, lotus=1.0, energy=0.6, pulse=0.0, glitch=0.0):
     if (W, H) != (1080, 1920):   # 4:5: recorte central do 9:16 (o feixe horizontal fica a ~41% da altura)
         y0 = ID['fundo']['recorte_45_y']; im = im.crop((0, y0, 1080, y0 + H))
     return VIDA.aplicar(im, t, 0.0 if CFG.get('vida') is False else 1.0)
-VIDA = Vida(W, H, ID['vida'], ID['musica']['periodo'])
+def zonas_calma():
+    """hierarquia: a carta é o único destaque. Atrás dela e do texto, o movimento do fundo quase desaparece."""
+    k = ID['vida']['calma']; mg = k['margem_px']
+    if 'carta' not in MOD: return [(140, 120, W - 140, H - 120, k['carta'], mg)]
+    h = MOD['carta']; cw = W * h['escala']; S = MOD['seguro']
+    return [((W - cw) / 2, h['topo'], (W + cw) / 2, h['topo'] + cw * 1040 / 745, k['carta'], mg),
+            (90, h['topo_info'] + W * h['escala_info'] * 1040 / 745, W - 90, S['legenda'] + 60, k['texto'], mg)]
+VIDA = Vida(W, H, dict(ID['vida'], _zonas=zonas_calma()), ID['musica']['periodo'])
 def pulso(t, apos):
     """pulsação da carta no 1.º tempo de cada compasso (o mesmo instante em que as medusas contraem)."""
     pc = ID['vida']['pulso_carta']; u = t % (ID['vida']['pulso_batidas'] * ID['musica']['periodo'])

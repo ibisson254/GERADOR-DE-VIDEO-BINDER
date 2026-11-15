@@ -112,8 +112,7 @@
  "vida": {
   "ativo": true,
   "pulso_batidas": 4,
-  "subida": 0.004,
-  "caustica": 0.06,
+  "caustica": 0.025,
   "cores": {
    "ciano": [
     90,
@@ -128,42 +127,64 @@
   },
   "medusas": [
    {
-    "x": 0.95,
-    "y": 0.3,
-    "r": 0.12,
+    "x": 0.92,
+    "y": 0.75,
+    "r": 0.1,
     "cor": "ciano",
     "fase": 0.0,
-    "intensidade": 0.8
+    "intensidade": 0.9,
+    "profundidade": 0.3,
+    "vel": 0.01,
+    "impulso": 0.022,
+    "rumo": -12
    },
    {
-    "x": 0.09,
-    "y": 0.8,
-    "r": 0.08,
+    "x": 0.1,
+    "y": 1.05,
+    "r": 0.075,
     "cor": "magenta",
     "fase": 0.5,
-    "intensidade": 0.7
+    "intensidade": 0.8,
+    "profundidade": 0.5,
+    "vel": 0.008,
+    "impulso": 0.016,
+    "rumo": 10
    },
    {
-    "x": 0.84,
-    "y": 0.88,
-    "r": 0.05,
+    "x": 0.7,
+    "y": 0.35,
+    "r": 0.045,
     "cor": "ciano",
     "fase": 0.25,
-    "intensidade": 0.55
+    "intensidade": 0.6,
+    "profundidade": 0.8,
+    "vel": 0.005,
+    "impulso": 0.009,
+    "rumo": -25
    },
    {
-    "x": 0.3,
-    "y": 0.06,
-    "r": 0.04,
+    "x": 0.25,
+    "y": 0.2,
+    "r": 0.035,
     "cor": "magenta",
     "fase": 0.7,
-    "intensidade": 0.45
+    "intensidade": 0.5,
+    "profundidade": 0.9,
+    "vel": 0.004,
+    "impulso": 0.007,
+    "rumo": 20
    }
   ],
   "pulso_carta": {
    "amplitude": 0.012,
    "amplitude_apos_impacto": 0.02,
    "decaimento_s": 0.35
+  },
+  "forca": 0.42,
+  "calma": {
+   "carta": 0.12,
+   "texto": 0.35,
+   "margem_px": 170
   }
  }
 }

@@ -18,6 +18,13 @@ class Vida:
         self.ciclo = cfg['pulso_batidas'] * periodo
         self.h = 2   # desenho a meia resolução, depois amplia
         self.cores = {k: np.array(v, np.float32) for k, v in cfg['cores'].items()}
+        self.calma = np.ones((H, W), np.float32)
+        yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+        for z in cfg.get('_zonas', []):   # (x0, y0, x1, y1, fator, margem_px)
+            x0, y0, x1, y1, f, mg = z
+            dx = np.maximum(np.maximum(x0 - xx, xx - x1), 0); dy = np.maximum(np.maximum(y0 - yy, yy - y1), 0)
+            k = np.clip(np.hypot(dx, dy) / mg, 0, 1); k = k * k * (3 - 2 * k)
+            self.calma = np.minimum(self.calma, f + (1 - f) * k)
         w8, h8 = W // 8, H // 8
         self.X, self.Y = np.meshgrid(np.linspace(0, 1, w8), np.linspace(0, H / W, h8))
 
@@ -25,12 +32,17 @@ class Vida:
         W, H = self.W / self.h, self.H / self.h
         c = contracao(t, self.ciclo, m['fase'])
         r = m['r'] * W; bw = r * (1 - 0.14 * c); bh = r * 0.72 * (1 + 0.12 * c)
-        cx = (m['x'] + 0.025 * math.sin(t * 0.35 + 7 * m['fase'])) * W
-        cy = (m['y'] - self.cfg['subida'] * t) * H - 0.02 * H * c
-        ang = math.radians(7 * math.sin(t * 0.45 + 5 * m['fase']))
+        # deslocação real: deriva constante + impulso no fim de cada contração (como uma medusa a nadar)
+        u = t / self.ciclo + m['fase']; imp = math.floor(u) + (ease((u % 1) / 0.25) if (u % 1) < 0.25 else 1)
+        dist = m['vel'] * t + m['impulso'] * imp
+        ang = math.radians(m['rumo'] + 9 * math.sin(t * 0.4 + 5 * m['fase']))   # direção do corpo (0 = para cima)
+        mx = m['x'] + math.sin(ang) * dist + 0.02 * math.sin(t * 0.3 + 7 * m['fase'])
+        my = m['y'] - math.cos(ang) * dist * W / H
+        mx = (mx + 0.2) % 1.4 - 0.2; my = (my + 0.25) % 1.5 - 0.25   # sai por um lado, volta a entrar pelo outro
+        cx, cy = mx * W, my * H
         ca, sa = math.cos(ang), math.sin(ang)
         def R(x, y): x -= cx; y -= cy; return (cx + x * ca - y * sa, cy + x * sa + y * ca)
-        a = s * (0.75 + 0.35 * c)
+        a = s * (0.9 + 0.1 * c)   # sem flash: a única pulsação forte do quadro é a da carta
         # tentáculos: onda que viaja para baixo, amplitude cresce com a distância à campânula
         L = bh * 3.4 * (1 + 0.12 * (1 - c)); n = 9
         for i in range(n):
@@ -61,13 +73,14 @@ class Vida:
         w2, h2 = self.W // self.h, self.H // self.h
         for m in self.cfg['medusas']:
             L = Image.new('L', (w2, h2), 0); self._medusa(ImageDraw.Draw(L), m, t, forca * m.get('intensidade', 1.0))
-            nit = np.array(L.resize((self.W, self.H), Image.BILINEAR), np.float32) / 255
-            gl = np.array(L.filter(ImageFilter.GaussianBlur(10)).resize((self.W, self.H), Image.BILINEAR), np.float32) / 255
-            A[..., :3] += self.cores[m['cor']] * (nit * 0.85 + gl * 1.6)[..., None]
+            pr = m['profundidade']   # 0 = perto, 1 = longe: mais longe = mais desfocada e mais fraca
+            nit = np.array(L.filter(ImageFilter.GaussianBlur(1 + 3 * pr)).resize((self.W, self.H), Image.BILINEAR), np.float32) / 255
+            gl = np.array(L.filter(ImageFilter.GaussianBlur(8 + 10 * pr)).resize((self.W, self.H), Image.BILINEAR), np.float32) / 255
+            A[..., :3] += self.cores[m['cor']] * ((nit * 0.5 + gl * 1.1) * self.cfg['forca'] * self.calma)[..., None]
         # luz ondulante: rede fina de cáusticas a fluir, mais visível em cima
         X, Y, T = self.X, self.Y, t
         a = np.sin(X * 9 + 1.6 * np.sin(Y * 6 + T * 0.55)); b = np.sin(Y * 11 + 1.6 * np.sin(X * 7 - T * 0.45))
         k = ((1 - np.abs(a)) ** 10 + (1 - np.abs(b)) ** 10) * (1 - 0.65 * Y / Y.max())
         k = np.array(Image.fromarray((k * 255).clip(0, 255).astype(np.uint8)).resize((self.W, self.H), Image.BICUBIC), np.float32) / 255
-        A[..., :3] += self.cores['ciano'] * (k * self.cfg['caustica'] * forca)[..., None]
+        A[..., :3] += self.cores['ciano'] * (k * self.cfg['caustica'] * forca * self.calma)[..., None]
         return Image.fromarray(A.clip(0, 255).astype(np.uint8), im.mode)
