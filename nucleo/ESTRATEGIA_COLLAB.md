@@ -9,6 +9,7 @@ Estado: **proposta de 15/11/2026, por aprovar pelo fundador.** Enquanto não hou
 | MC-ESP01 (Precon em dupla) | comentário de um seguidor, com print no vídeo | 6,7 mil views em 2 d; melhor taxa de comentários (2,7/1.000) e partilhas (5,5/1.000) dos Reels medidos |
 | MC-ESP02 (A Taça respondeu) | dados de uma liga parceira (Preconauta) | 2,3 mil em 1 d; 4,3 comentários e 4,3 partilhas por 1.000 |
 | LL-ART13 (Nathanna Érica) | artista marcada | poucas interações, mas a artista comentou e 3 contas verificadas do nicho curtiram |
+| MC-ESP01 (views sem anúncio) | comentário de seguidor | ~5,3 mil das 6,7 mil não pagas (~79%), o maior número sem anúncio da conta |
 | MC-EP05 (Enterprise-A) | sem parceiro, impulsionado | 5,3 mil views (~92% pagas), 0,4 comentários/1.000: alcance pago sem conversa |
 | MB-EP11 (Numot) | sem parceiro, impulsionado | 9,5 mil views, ~66% pagas |
 | Anúncios, 30 dias | — | 27,6 mil views (~45% do total), 946 cliques no link, 93 seguidores |
