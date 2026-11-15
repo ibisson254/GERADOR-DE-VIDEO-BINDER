@@ -22,8 +22,9 @@ Registar a justificação em `post.json` → `"porque_formato"`.
 - Áudio: −14 LUFS ±1, pico ≤ −1 dBTP; cortes de música em batidas inteiras.
 - Quadros de controlo (`stills`): gancho legível no quadro 0, nada fora das zonas seguras do modelo, crédito visível com a carta,
   nenhuma sobreposição de texto, assinatura com logótipo oficial.
+- Capa: existe, gancho legível em miniatura, carta e texto dentro do recorte 3:4 da grelha (y 240–1680), crédito visível.
 - Factos do ecrã = `fontes.md`. Português do Brasil, "você".
 
 ## 5. Pacote de entrega
-Vídeo ou slides, capa, `legenda.txt`, `comentario_fixado.txt`, `texto_alternativo.txt`, `fontes.md` (fontes e créditos),
+Vídeo ou slides, **capa (obrigatória: sem capa o pacote não está completo)**, `legenda.txt`, `comentario_fixado.txt`, `texto_alternativo.txt`, `fontes.md` (fontes e créditos),
 objetivo, formato e duração, porquê o formato, elementos reaproveitados. Linha nova em `REGISTRO.md`. Publicar só o fundador.

@@ -355,4 +355,7 @@ if __name__ == '__main__':
         T = timeline(); P = ID['musica']['periodo']
         if CFG.get('comparacao'): T['comparacao'] = CFG['comparacao']['batida'] * P; T['comparacao_fim'] = CFG['comparacao']['batida_fim'] * P
         for s in sys.argv[3:]: frame_anim(float(s), T).save(f'{OUT}/still_{float(s):05.2f}.png')
-    else: render_anim()
+    else:
+        render_anim()
+        if FMT == 'reel':   # regra do fundador (15/11/2026): todo Reel do ABISMO sai com capa
+            subprocess.run([sys.executable, '-I', f'{HERE}/capa.py', POST], check=True)

@@ -10,6 +10,8 @@ Kit de produção isolado e reutilizável, exclusivo da edição **Nauctis**, de
 3. **Formato** (PROCESSO.md §3): o agente escolhe Story, Reel ou Carrossel e justifica.
 4. **Produção**: `abismo/publicacoes/<ID>/post.json` a partir de `modelos/exemplos/`, depois
    `python3 -I abismo/motor/abismo.py abismo/publicacoes/<ID>` (na raiz do repositório).
+   **Toda postagem sai com capa** (regra do fundador, 15/11/2026): no Reel o motor gera `saida/<ID>_capa.png` no fim do render
+   (texto em `"capa"` do post.json; sem ele usa o `gancho`); no Carrossel o 1.º slide é do tipo `capa`. Só capa: `python3 -I abismo/motor/capa.py abismo/publicacoes/<ID>`.
 5. **QC** (PROCESSO.md §4) e **entrega** (PROCESSO.md §5). Linha nova em REGISTRO.md. Nunca publicar automaticamente.
 
 ## Conteúdo

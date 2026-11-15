@@ -2,6 +2,11 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 15/11/2026 (01:55) · ABISMO: toda postagem sai com capa
+
+**O quê:** a capa passa a ser obrigatória em todas as postagens do ABISMO. Reel: o motor gera `saida/<ID>_capa.png` no fim de cada render (`abismo/motor/capa.py`, 1080×1920, essencial no recorte 3:4 da grelha). Carrossel: 1.º slide `capa`. Sem capa o pacote de entrega não está completo (PROCESSO.md §4 e §5).
+**Porquê:** fundador, 15/11/2026 (01:55): «Tem que ser padrão a partir de agora todas postagens do abismo vem com capa».
+
 ## 15/11/2026 (01:45) · ABISMO: kit de produção da edição Nauctis integrado na `main`
 
 **O quê:** pasta `abismo/` (motor Story/Reel/Carrossel, identidade, processo, registo, comando `ABISMO: CRIAR POSTAGEM`), derivada do EX-01 v3 A. Fundo mestre gerado pelo mesmo código da Expedição; medusas quase impercetíveis que atravessam o ecrã e pulsação da carta no compasso, com a carta como único destaque. Entra junto com a branch `expedicao/01-nauctis`, de onde vem o motor do fundo.
