@@ -1,0 +1,150 @@
+{
+ "schema": 2,
+ "chamada": "Giro de domingo 15/11",
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "Giro de domingo, mano! Magic no *Burger King*, na *Netflix* e a *semana no BINDER*.",
+   "tts": "Giro de domingo, mano! Médjic no Bãrguer Kíng, na Nétflix e a semana no BÁINDER."
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Um. O *Burger King da Itália* lançou lanche de Magic com *deck box* e *cem sleeves*.",
+   "tts": "Um. O Bãrguer Kíng da Itália lançou lanche de Médjic com dék bóx e cem slívs."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Lanche com *deck box*?! Larguei a batata!",
+   "tts": "Lanche com dék bóx?! Larguei a batata!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "*Dezenove e noventa* euros. Só na Itália, até *dia 30*.",
+   "tts": "Dezenove e noventa euros. Só na Itália, até dia trinta."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "E o Brasil?! *Vem pra cá*, BK!",
+   "tts": "E o Brasil?! Vem pra cá, bê kâ!"
+  },
+  {
+   "quem": "M",
+   "tags": "[calm]",
+   "legenda": "O *Rosewater* disse: se der certo, *pode expandir*. *Nada decidido*.",
+   "tts": "O Rôuzuóter disse: se der certo, pode expandir. Nada decidido."
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "Dois! Série de Magic na *Netflix*: *PLANESWALKER*, em *2027*.",
+   "tts": "Dois! Série de Médjic na Nétflix: Plêinsuóker, em dois mil e vinte e sete."
+  },
+  {
+   "quem": "M",
+   "tags": "[calm]",
+   "legenda": "A protagonista é a *Chandra*.",
+   "tts": "A protagonista é a Tchândra."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "A *Chandra*?! Vai *queimar o elenco*!",
+   "tts": "A Tchândra?! Vai queimar o elenco!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Lê a carta. *Menos três*: *4 de dano* numa *criatura alvo*. *Uma só*.",
+   "tts": "Lê a carta. Menos três: quatro de dano numa criatura alvo. Uma só."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "*Isso devia ser banido!*",
+   "tts": "Isso devia ser banido!"
+  },
+  {
+   "quem": "M",
+   "tags": "[calm]",
+   "legenda": "A *semana no BINDER*. O Burn sofreu com o *Numot*.",
+   "tts": "A semana no BÁINDER. O Burn sofreu com o Númot."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "O dragão que come *dois terrenos* por pancada!",
+   "tts": "O dragão que come dois terrenos por pancada!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Lê a carta: *se pagar três de mana*. E é *até dois*.",
+   "tts": "Lê a carta: se pagar três de mana. E é até dois."
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "O *Conde* julgou um bicho felpudo de *1995*!",
+   "tts": "O Conde julgou um bicho felpudo de noventa e cinco!"
+  },
+  {
+   "quem": "M",
+   "tags": "[calm]",
+   "legenda": "Parecer: *obra notável*. Só *errou de mitologia*.",
+   "tts": "Parecer: obra notável. Só errou de mitologia."
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "O *TUBO* fez o *Mundial* e *dois especiais* de Precon!",
+   "tts": "O TUBO fez o Mundial e dois especiais de Précon!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Na *Taça Preconauta*, quem começou o jogo um venceu *66%*.",
+   "tts": "Na Taça Preconáuta, quem começou o jogo um venceu sessenta e seis por cento."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "E teve *spoiler* de *Nauctis*!",
+   "tts": "E teve spoiler de Náuctis!"
+  },
+  {
+   "quem": "M",
+   "tags": "[calm]",
+   "legenda": "No fundo daquele oceano tem um *Lotus*.",
+   "tts": "No fundo daquele oceano tem um Lótus."
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "Três! O *Mundial* termina *hoje*. O TUBO cravou *Jund Sacrifice* no Top 8!",
+   "tts": "Três! O Mundial termina hoje. O TUBO cravou Djând Sácrifais no Tóp óito!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Sem spoiler. *Amanhã* ele presta contas.",
+   "tts": "Sem spoiler. Amanhã ele presta contas."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Comenta *1, 2 ou 3*: qual a *notícia da semana*?",
+   "tts": "Comenta um, dois ou três: qual a notícia da semana?"
+  },
+  {
+   "quem": "M",
+   "tags": "[tired]",
+   "legenda": "Comenta aí.",
+   "tts": "Comenta aí."
+  }
+ ]
+}
