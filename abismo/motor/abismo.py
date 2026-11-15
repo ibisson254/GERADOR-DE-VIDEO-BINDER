@@ -300,13 +300,17 @@ def render_anim():
     T = timeline(); P = ID['musica']['periodo']
     if CFG.get('comparacao'):
         T['comparacao'] = CFG['comparacao']['batida'] * P; T['comparacao_fim'] = CFG['comparacao']['batida_fim'] * P
-    mus, _ = musica(MOD['musica'])
-    sfx = [(T['entrada'], 'descida'), (T['impacto'], 'swell')] + [(t, 'glitch') for t, ch in zip(T['chips'], CFG['chamada']['chips']) if ch[1] == 'mau']
-    mix(mus, sfx, T['total'])
+    som = CFG.get('audio', True)   # "audio": false → vídeo mudo (música posta pelo fundador no Instagram)
+    if som:
+        mus, _ = musica(MOD['musica'])
+        sfx = [(T['entrada'], 'descida'), (T['impacto'], 'swell')] + [(t, 'glitch') for t, ch in zip(T['chips'], CFG['chamada']['chips']) if ch[1] == 'mau']
+        mix(mus, sfx, T['total'])
     n = int(round(T['total'] * FPS)); path = f'{OUT}/video.mp4'
+    aud = ['-i', f'{OUT}/mix.wav'] if som else []
+    enc = ['-c:a', 'aac', '-b:a', '256k', '-ar', '48000', '-shortest'] if som else ['-an']
     p = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
-                          '-i', f'{OUT}/mix.wav', '-c:v', 'libx264', '-preset', 'medium', '-crf', '16', '-pix_fmt', 'yuv420p',
-                          '-c:a', 'aac', '-b:a', '256k', '-ar', '48000', '-shortest', '-movflags', '+faststart', f'{OUT}/{CFG["id"]}_{FMT}.mp4'], stdin=subprocess.PIPE)
+                          *aud, '-c:v', 'libx264', '-preset', 'medium', '-crf', '16', '-pix_fmt', 'yuv420p',
+                          *enc, '-movflags', '+faststart', f'{OUT}/{CFG["id"]}_{FMT}.mp4'], stdin=subprocess.PIPE)
     for fi in range(n): p.stdin.write(frame_anim(fi / FPS, T).tobytes())
     p.stdin.close(); p.wait(); print(f'{OUT}/{CFG["id"]}_{FMT}.mp4', round(T['total'], 2), 's')
 

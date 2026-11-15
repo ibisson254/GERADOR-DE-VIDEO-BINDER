@@ -332,3 +332,7 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - C · Conde comenta uma obra → `conde/PERFIL.md` (observação / interpretação / facto separados). OK.
 - D · Série nova → `modelos/PERFIL_SERIE.md` + linha na tabela §2; constituição intacta. OK.
 - E · Fonte, ferramenta ou autorização indisponível → constituição §11. OK; o próprio teste revelou o bloqueador 8.
+
+## 15/11/2026 · ABISMO: Reel sem áudio
+- Pedido do fundador (21:03): meme AB-02 (Goramou × «Tubarão Te Amo») sem narração nem música no vídeo; a música entra pela biblioteca do Instagram na publicação. O motor ganhou a opção `"audio": false` no post.json (vídeo mudo). Por defeito continua com «Auction of Power».
+- Arte: Goramou NAU 329 (PINDURSKI), indicada pelo fundador.

@@ -1,0 +1,106 @@
+{
+ "id": "AB-02-goramou-meme",
+ "formato": "reel",
+ "audio": false,
+ "carta": {
+  "png": "cartas/goramou_nau329.png",
+  "set": "nau",
+  "num": "329",
+  "nome": "Goramou the Coral-Taken",
+  "colecao": "Nauctis: The Sunken Realm",
+  "artista": "PINDURSKI",
+  "camada": "RASOS"
+ },
+ "ficha": {
+  "nome": "GORAMOU",
+  "tipo": "Tubarão Lendário",
+  "camada": "Rasos"
+ },
+ "chamada": {
+  "titulo": "ELE NÃO ABANDONA VOCÊ",
+  "chips": [
+   [
+    "CUSTO 3 · VERMELHO E VERDE",
+    "info"
+   ],
+   [
+    "ENTRA E CRIA UMA FICHA DE SANGUE",
+    "ok"
+   ],
+   [
+    "DEVOLVE O TERRENO QUE VOCÊ DESCARTA",
+    "ok"
+   ],
+   [
+    "VOLTA VIRADO, NO FIM DO TURNO",
+    "mau"
+   ]
+  ]
+ },
+ "gancho": [
+  "TUBARÃO,",
+  "TE AMO"
+ ],
+ "impacto": [
+  "ISSO É AMOR",
+  "NAUCTIS · 05/02/2027"
+ ],
+ "frases": [
+  {
+   "batida": 4,
+   "texto": "Tubarão novo em Magic.",
+   "amarelo": [
+    1
+   ],
+   "batidas": 7
+  },
+  {
+   "batida": 12,
+   "texto": "Chega deixando sangue na água.",
+   "amarelo": [
+    2
+   ],
+   "batidas": 7
+  },
+  {
+   "batida": 20,
+   "texto": "Você joga o terreno fora...",
+   "amarelo": [
+    3
+   ],
+   "batidas": 6
+  },
+  {
+   "batida": 26,
+   "texto": "...e ele traz de volta.",
+   "amarelo": [
+    2,
+    3,
+    4
+   ],
+   "batidas": 5
+  },
+  {
+   "batida": 31,
+   "texto": "Tubarão, te amo.",
+   "amarelo": [
+    0,
+    1,
+    2
+   ],
+   "batidas": 5
+  }
+ ],
+ "pergunta": [
+  "VOCÊ JOGARIA COM ELE?",
+  "COMENTE SIM OU NÃO"
+ ],
+ "porque_formato": "Meme da comunidade (Lambe-lambe no estilo ABISMO): uma carta, uma piada. Reel mudo; o fundador põe «Tubarão Te Amo» pela biblioteca do Instagram.",
+ "capa": {
+  "texto": [
+   "TUBARÃO,",
+   "TE AMO"
+  ],
+  "sub": "GORAMOU · NAUCTIS"
+ }
+}
