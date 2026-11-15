@@ -1,0 +1,4 @@
+# ABISMO: nunca versionar renders nem PNG de cartas (descarregam-se do Scryfall pelo motor)
+publicacoes/*/saida/
+publicacoes/*/cartas/*.png
+__pycache__/

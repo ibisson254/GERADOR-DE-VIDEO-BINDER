@@ -1,0 +1,12 @@
+{
+ "formato": "carrossel",
+ "tamanho": [
+  1080,
+  1350
+ ],
+ "descricao": "Carrossel 4:5 em PNG. Tipos de slide: capa, carta, habilidade, comparacao, pergunta. Fundo mestre recortado do 9:16.",
+ "seguro": {
+  "topo": 70,
+  "base": 1290
+ }
+}

@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 15/11/2026 (01:45) · ABISMO: kit de produção da edição Nauctis integrado na `main`
+
+**O quê:** pasta `abismo/` (motor Story/Reel/Carrossel, identidade, processo, registo, comando `ABISMO: CRIAR POSTAGEM`), derivada do EX-01 v3 A. Fundo mestre gerado pelo mesmo código da Expedição; medusas quase impercetíveis que atravessam o ecrã e pulsação da carta no compasso, com a carta como único destaque. Entra junto com a branch `expedicao/01-nauctis`, de onde vem o motor do fundo.
+**Porquê:** fundador, 15/11/2026 (00:36: missão ABISMO; 01:45: «proposta aceita faça o merge»). A música «Auction of Power» é propriedade do fundador (confirmado na missão de 00:36).
+**Impacto:** só a edição Nauctis; não altera a identidade nem os motores das outras frentes. Custo zero por publicação, sem voz por defeito.
+
 ## 14/11/2026 (16:30) · Carrossel Lambe-lambe: modelos prontos, sem ElevenLabs
 
 **O quê:** os dois slides aprovados do padrão (capa e editorial do John Avon, sem texto) passam a ser as referências canónicas `lambe-lambe/referencias/carrossel_padrao_01.png` (capa) e `carrossel_padrao_02.png` (editorial), na `main`. Novo `lambe-lambe/kit_carrossel/motor_padrao.py`: monta qualquer carrossel só com estes dois modelos, papel, fita, fontes livres (`preparar_fontes.sh`) e cartas reais. Deixa de depender dos slides originais gerados no ElevenLabs (`avon_*.png`, não versionados). Carrossel novo = script curto na pasta do episódio (exemplo: `lambe-lambe/episodios/ll-art13_nathanna_sete_cartas/carrossel.py`). Nenhuma geração de imagem.
@@ -25,6 +31,17 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **O quê:** todas as capas do Mana & Burn (episódios novos e capas pedidas para episódios antigos) seguem `manaburn/PERFIL.md` «Capa»: carta principal na largura toda com a arte livre, frase + foco em Bangers sobre o texto de regras, um selo vermelho, faixa fixa «MANA & BURN · EP. NN». Gerador `manaburn/capas/capa_mb.py`. A capa deixa de ser um quadro do vídeo. Referência: capa do MB-EP11 (Numot).
 **Porquê:** fundador, 14/11/2026 (02:57): «essa tbm deve ser tornar padrão do mana burn se eu pedir uma capa de algum episódio tem que ser nesse padrão e todo vídeo criado tbm já vem com esse padrão de capa».
 **Impacto:** só o Mana & Burn.
+## 14/11/2026 (16:19) · Expedição BINDER v3: estrutura de retenção, finais A/B e fecho próprio
+
+**O quê:** reconstrução do EX-01 pedida pelo fundador («Operação Abyssal»), com a voz existente (decisão das 16:32: sem geração nova). Gancho com indício da carta-pagamento e primeira descoberta aos 2,5 s; entradas diferentes por carta e chamadas de habilidade em PT-BR; medidor 1/6–6/6; revelação no drop (37,8 s); caixas sem imagem oficial substituídas por placas neutras; data «5 FEV 2027»; finais A (engajamento) e B (instalação). **O fecho deste formato deixa de ser o `outro_binder_916.mp4`** e passa a ser a gravação real do scanner (`comum/outro/scan`) + um cartão final de alto contraste com os mesmos textos.
+**Porquê:** o fundador pediu corrigir o contraste insuficiente da tela final e integrar o BINDER Vision mais cedo e com demonstração real; o scanner real e a assinatura continuam (a regra «o fecho nunca sai» cumpre-se no conteúdo).
+**Impacto:** BIBLIA da Expedição §1b; `qc_video.py` passa a acusar «fecho ausente» nesta frente (esperado). As outras frentes mantêm o fecho de sempre.
+
+## 14/11/2026 (15:33) · Expedição BINDER v2: «Prisma Abissal», música do fundador e sonoplastia desenhada
+
+**O quê:** o fundador aprovou o caminho da v1 do EX-01 e pediu três mudanças: fundo segundo 5 referências de design, música «Auction of Power» com o ritmo do vídeo adaptado a ela, e fim da sonoplastia genérica. Brief refinado em `expedicao/01-nauctis/brief_v2.md`; bíblia passa à v2 (§3 música, §4 grelha, §5 identidade).
+**Porquê:** a v1 tinha cara de vídeo genérico (azul literal, ping/bolhas/whoosh); o formato precisa de identidade visual e sonora própria.
+**Impacto:** fundo gerado em código (`expedicao/template/fundo.py`), música rearranjada em batidas inteiras com o drop na revelação, todos os cortes na grelha, três sons desenhados (`expedicao/kit/sfx/`) e proibição de ping, bolhas e whoosh no formato. A licença da faixa tem de ser registada antes de publicar.
 
 ## 14/11/2026 (02:43) · Meta em Curto: modelo fixo de capa
 
@@ -37,6 +54,12 @@ Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais
 **O quê:** quando o TUBO admite que errou, usa-se a expressão «Erro de sistema» já definida em `oraculo/CONTEXTO.md` (olhos duplicados, glitch, tremor, LED vermelho, caixa «MODELO TUBO» com o erro a vermelho, som de glitch). O corte seco continua a ser a assinatura da série, mas passa a ser curto (~0,6 s) e com movimento (aproximação lenta da câmara), para não ficar uma pausa morta antes do «Grau de certeza». Aplicado ao MC-ESP02 (v3).
 **Porquê:** fundador, 14/11/2026 (02:22): «quando erra a conta tem um efeito que já tínhamos pré definido na bíblia do personagem, antes que ele fala grau de certeza da uma pausa seca que temos ajustar».
 **Impacto:** só o Meta em Curto. Identidade, voz e trilha mantêm-se; muda a duração do silêncio e o que se vê nele.
+
+## 14/11/2026 (02:24) · Formato novo: Expedição BINDER
+
+**O quê:** frente nova «Expedição BINDER» (um episódio por set, primeiro olhar como documentário de natureza), pedida pelo fundador no prompt do EX-01. Bíblia `expedicao/BIBLIA.md`, motor `expedicao/template/`, secção no catálogo e entrada no `series.yaml`. Voz própria (Rafael Valente, `dX7gRq1dIvLTgUaWpEFn`) e tema próprio (`expedicao/kit/tema_expedicao.mp3`).
+**Porquê:** o fundador quer um vídeo com a gramática de edição de Reels de spoiler, mas com narração, legendas PT-BR e eixo narrativo próprios, repetível a cada set.
+**Impacto:** a constituição não muda. Regra própria do formato: nenhuma carta é ligada a um deck ou a um comandante antes da revelação; sem caixas oficiais o episódio não sai (cartão PRÉVIA no render). Divergência registada: o prompt pedia um convite «escaneie as suas no BINDER Vision quando sair»; o repositório não confirma que o scanner reconhece cartas de um set ainda não lançado, por isso a legenda usa um CTA de scanner genérico.
 
 ## 14/11/2026 (02:15) · Comentários da comunidade sempre no vídeo, com foto
 

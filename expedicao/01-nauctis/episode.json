@@ -1,0 +1,619 @@
+{
+ "id": "EX-01",
+ "titulo": "Nauctis: Primeiro Mergulho",
+ "set": "Nauctis: The Sunken Realm",
+ "versao": "v3 retenção (14/11/2026 16:19)",
+ "ficheiro": "EXPEDICAO_BINDER_NAUCTIS_V2_RETENCAO",
+ "gancho": "TEM UM LOTUS NO FUNDO DESTE MAR",
+ "tag_serie": "EXPEDIÇÃO BINDER · Nº 01",
+ "data_lancamento": "5 FEV 2027",
+ "voz": {
+  "arquivo": "voz.mp3",
+  "words": "audio/words.json",
+  "voice_id": "dX7gRq1dIvLTgUaWpEFn",
+  "tempo": 1.2,
+  "lead": 0.12,
+  "cortes": [
+   [
+    7,
+    31
+   ],
+   [
+    51,
+    78
+   ],
+   [
+    86,
+    87
+   ],
+   [
+    97,
+    106
+   ],
+   [
+    112,
+    115
+   ],
+   [
+    119,
+    122
+   ],
+   [
+    140,
+    149
+   ],
+   [
+    152,
+    154
+   ],
+   [
+    170,
+    170
+   ],
+   [
+    189,
+    212
+   ]
+  ],
+  "pausas": [
+   [
+    32,
+    0.25
+   ],
+   [
+    107,
+    0.3
+   ],
+   [
+    171,
+    0.3
+   ],
+   [
+    173,
+    0.3
+   ],
+   [
+    213,
+    0.5
+   ],
+   [
+    256,
+    0.25
+   ],
+   [
+    262,
+    0.2
+   ]
+  ]
+ },
+ "musica": {
+  "arquivo": "../kit/auction_of_power.mp3",
+  "titulo": "Auction of Power",
+  "periodo": 0.42865,
+  "offset": 0.0349,
+  "pre_drop": [
+   [
+    0,
+    60
+   ]
+  ],
+  "repetir_pre": [
+   56,
+   60
+  ],
+  "drop_beat": 64,
+  "pos_drop": [
+   60,
+   96
+  ],
+  "repetir_pos": [
+   88,
+   96
+  ],
+  "cauda": [
+   96,
+   null
+  ],
+  "drop_w": 220,
+  "ajuste_pausa_w": 213,
+  "lufs": -26,
+  "duck_db": -7,
+  "drop_db": 1.0,
+  "fim_db": 8.0
+ },
+ "camadas": {
+  "rasos": {
+   "nome": "RASOS",
+   "topo": [
+    34,
+    150,
+    160
+   ],
+   "base": [
+    6,
+    70,
+    92
+   ],
+   "raios": 1.0,
+   "particula": [
+    210,
+    245,
+    245
+   ]
+  },
+  "grande": {
+   "nome": "GRANDE MARINHO",
+   "topo": [
+    12,
+    70,
+    100
+   ],
+   "base": [
+    3,
+    26,
+    46
+   ],
+   "raios": 0.45,
+   "particula": [
+    170,
+    220,
+    235
+   ]
+  },
+  "abismo": {
+   "nome": "ABISMO",
+   "topo": [
+    6,
+    14,
+    26
+   ],
+   "base": [
+    1,
+    3,
+    8
+   ],
+   "raios": 0.0,
+   "particula": [
+    60,
+    255,
+    210
+   ],
+   "bio": true
+  }
+ },
+ "legenda": {
+  "amarelo": [
+   6,
+   35,
+   44,
+   50,
+   84,
+   85,
+   90,
+   91,
+   94,
+   110,
+   111,
+   124,
+   133,
+   137,
+   162,
+   163,
+   164,
+   168,
+   169,
+   172,
+   177,
+   181,
+   184,
+   185,
+   220,
+   221,
+   223,
+   224,
+   230,
+   233,
+   237,
+   246,
+   254,
+   255,
+   259,
+   260,
+   261,
+   263,
+   270
+  ],
+  "trocas": {
+   "137": "1/1.",
+   "138": "",
+   "139": "",
+   "151": "quatro:",
+   "111": "Marinho.",
+   "171": "O",
+   "188": "cemitério.",
+   "254": "500",
+   "256": "Nauctis",
+   "259": "5"
+  }
+ },
+ "abertura": {
+  "silhueta": "lotus_361.png",
+  "flash": 0.33
+ },
+ "caixas": {
+  "Blood in the Water": {
+   "img": "products/blood_in_the_water.png",
+   "ret_subtitulo": null
+  },
+  "Seal the Deal": {
+   "img": "products/seal_the_deal.png",
+   "ret_subtitulo": null
+  },
+  "Merfolk Regiment": {
+   "img": "products/merfolk_regiment.png",
+   "ret_subtitulo": null
+  },
+  "Terrors of the Abyss": {
+   "img": "products/terrors_of_the_abyss.png",
+   "ret_subtitulo": null
+  }
+ },
+ "blocos": [
+  {
+   "tipo": "carta",
+   "w": 32,
+   "camada": "rasos",
+   "entra_camada": true,
+   "som": "descida",
+   "estilo": "arte",
+   "foco": [
+    380,
+    330
+   ],
+   "carta": "goramou_329.png",
+   "ficha": {
+    "n": 1,
+    "nome": "GORAMOU",
+    "tipo": "Tubarão",
+    "camada": "Rasos"
+   },
+   "chamada": {
+    "w": 41,
+    "titulo": "AO ENTRAR, DEIXA SANGUE NA ÁGUA",
+    "chips": [
+     [
+      "CRIA UMA FICHA DE SANGUE (BLOOD)",
+      "ok"
+     ],
+     [
+      "3/4",
+      "info"
+     ]
+    ]
+   },
+   "eventos": [
+    {
+     "w": 48,
+     "comparacao": "blood_token.png"
+    }
+   ]
+  },
+  {
+   "tipo": "carta",
+   "w": 79,
+   "camada": "rasos",
+   "estilo": "scan",
+   "carta": "mentor_5.png",
+   "ficha": {
+    "n": 2,
+    "nome": "CALMWATER MENTOR",
+    "tipo": "Foca Monge",
+    "camada": "Rasos"
+   },
+   "chamada": {
+    "w": 88,
+    "titulo": "BUSCA ATÉ 2 CRIATURAS NO GRIMÓRIO",
+    "chips": [
+     [
+      "PODER 2 OU MENOS",
+      "ok"
+     ],
+     [
+      "AO ENTRAR",
+      "info"
+     ]
+    ]
+   }
+  },
+  {
+   "tipo": "respiro",
+   "w": 107,
+   "camada": "grande",
+   "som": "descida"
+  },
+  {
+   "tipo": "carta",
+   "w": 116,
+   "camada": "grande",
+   "estilo": "pan",
+   "foco": [
+    372,
+    520
+   ],
+   "foco2": [
+    300,
+    170
+   ],
+   "carta": "salinae_321.png",
+   "ficha": {
+    "n": 3,
+    "nome": "SALINAE",
+    "tipo": "Deusa-Baleia",
+    "camada": "Grande Marinho"
+   },
+   "chamada": {
+    "w": 125,
+    "titulo": "COPIA CADA CRIATURA OU ARTEFATO QUE VOCÊ CONJURA",
+    "chips": [
+     [
+      "A CÓPIA VIRA PEIXE 1/1",
+      "ok"
+     ],
+     [
+      "ATROPELAR",
+      "info"
+     ]
+    ]
+   }
+  },
+  {
+   "tipo": "carta",
+   "w": 150,
+   "camada": "grande",
+   "estilo": "flip",
+   "carta": "ring_238.png",
+   "ficha": {
+    "n": 4,
+    "nome": "RING OF UNITY",
+    "tipo": "Artefato",
+    "camada": "Grande Marinho"
+   },
+   "chamada": {
+    "w": 158,
+    "titulo": "TODO ARTEFATO SEU GERA 2 MANAS",
+    "chips": [
+     [
+      "{T}: ADICIONE {C}{C}",
+      "ok"
+     ],
+     [
+      "CUSTO 7",
+      "info"
+     ]
+    ]
+   },
+   "eventos": [
+    {
+     "w": 168,
+     "comparacao": "solring_lea.png"
+    }
+   ]
+  },
+  {
+   "tipo": "respiro",
+   "w": 171,
+   "camada": "abismo",
+   "som": "descida",
+   "pista_lotus": true
+  },
+  {
+   "tipo": "carta",
+   "w": 173,
+   "camada": "abismo",
+   "estilo": "luz",
+   "foco": [
+    372,
+    300
+   ],
+   "carta": "tecton_354.png",
+   "ficha": {
+    "n": 5,
+    "nome": "TECTON",
+    "tipo": "Kraken Elemental",
+    "camada": "Abismo"
+   },
+   "chamada": {
+    "w": 179,
+    "titulo": "MAIS BARATO A CADA CARTA PERMANENTE NO CEMITÉRIO",
+    "chips": [
+     [
+      "AMEAÇA",
+      "info"
+     ],
+     [
+      "TOQUE MORTÍFERO",
+      "info"
+     ],
+     [
+      "5/5",
+      "info"
+     ]
+    ]
+   }
+  },
+  {
+   "tipo": "lotus",
+   "w": 213,
+   "camada": "abismo",
+   "acende_w": 220,
+   "carta_lit": "lotus_361.png",
+   "ficha": {
+    "n": 6,
+    "nome": "ABYSSAL LOTUS",
+    "tipo": "Artefato",
+    "camada": "Abismo"
+   },
+   "chamada": {
+    "w": 222,
+    "titulo": "3 MANAS POR CUSTO ZERO",
+    "chips": [
+     [
+      "CUSTO 0",
+      "ok",
+      222
+     ],
+     [
+      "3 MANAS DE UMA COR",
+      "ok",
+      224
+     ],
+     [
+      "ENTRA VIRADO",
+      "mau",
+      233
+     ],
+     [
+      "SÓ COM 8+ CARTAS PERMANENTES NO CEMITÉRIO",
+      "mau",
+      237
+     ],
+     [
+      "DEPOIS SE EXILA",
+      "mau",
+      246
+     ]
+    ]
+   },
+   "eventos": [
+    {
+     "w": 224,
+     "comparacao": "blacklotus_lea.png"
+    },
+    {
+     "w": 231,
+     "fim_comparacao": true
+    },
+    {
+     "w": 233,
+     "som": "glitch"
+    },
+    {
+     "w": 237,
+     "som": "glitch"
+    },
+    {
+     "w": 246,
+     "som": "glitch"
+    },
+    {
+     "w": 248,
+     "selo": [
+      "≈ 500 CÓPIAS",
+      "VERSÃO SEM TEXTO · RAISED FOIL · COLLECTOR BOOSTERS"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "decks",
+   "w": 256,
+   "camada": "abismo",
+   "decks": [
+    "Blood in the Water",
+    "Seal the Deal",
+    "Merfolk Regiment",
+    "Terrors of the Abyss"
+   ]
+  },
+  {
+   "tipo": "pergunta",
+   "w": 262,
+   "camada": "abismo",
+   "so_versao": "A",
+   "miniaturas": [
+    [
+     "goramou_329.png",
+     "GORAMOU"
+    ],
+    [
+     "mentor_5.png",
+     "CALMWATER MENTOR"
+    ],
+    [
+     "salinae_321.png",
+     "SALINAE"
+    ],
+    [
+     "ring_238.png",
+     "RING OF UNITY"
+    ],
+    [
+     "tecton_354.png",
+     "TECTON"
+    ],
+    [
+     "lotus_361.png",
+     "ABYSSAL LOTUS"
+    ]
+   ],
+   "texto": [
+    "QUAL ESPÉCIE VOCÊ LEVA?",
+    "COMENTE DE 1 A 6"
+   ]
+  }
+ ],
+ "versoes": {
+  "A": {
+   "ficheiro": "EXPEDICAO_BINDER_NAUCTIS_V2_RETENCAO",
+   "cortes_extra": [],
+   "apos_voz": 2.4,
+   "fim": [
+    {
+     "tipo": "scanner",
+     "dur": 1.7,
+     "som": "glitch"
+    },
+    {
+     "tipo": "cartao",
+     "dur": 2.6
+    }
+   ]
+  },
+  "B": {
+   "ficheiro": "EXPEDICAO_BINDER_NAUCTIS_V2_RETENCAO_B_INSTALACAO",
+   "cortes_extra": [
+    [
+     262,
+     270
+    ]
+   ],
+   "apos_voz": 0.5,
+   "fim": [
+    {
+     "tipo": "scanner",
+     "dur": 3.9,
+     "destaque": true,
+     "som": "glitch"
+    },
+    {
+     "tipo": "cartao",
+     "dur": 3.0,
+     "instalar": true
+    }
+   ]
+  }
+ },
+ "scanner": {
+  "pasta": "../../comum/outro/scan",
+  "quadros": [
+   5,
+   41
+  ]
+ },
+ "cartao_final": [
+  "BINDER Vision",
+  "Escaneie suas cartas e organize seus decks.",
+  "Disponível no Google Play.",
+  "Link na bio."
+ ]
+}
