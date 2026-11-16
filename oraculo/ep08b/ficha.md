@@ -4,7 +4,7 @@ Estado: **CONCLUÍDO, não publicado.** Pedido do fundador (08:48): refazer o EP
 
 ## Briefing
 
-Mesma matéria do MC-EP08 (Mundial 32), por ordem inversa: a revelação (campeão com um deck de 1,6%) no quadro 0–3 s, as previsões e o placar depois. 29,7 s com fecho.
+Mesma matéria do MC-EP08 (Mundial 32), por ordem inversa: a revelação (campeão com um deck de 1,6%) no quadro 0–3 s, as previsões e o placar depois. 30,4 s com fecho.
 
 ## Roteiro definitivo
 
@@ -12,15 +12,15 @@ Voz aprovada do EP08 (tomada 2, `P8i1X70szTFXue4174Mj`) reordenada por `oraculo/
 - Dentro: «Stefan Schütz, da Áustria, com Izzet Mission. Dois jogadores em cento e vinte e oito levaram esse deck. A carta que dá nome a ele é de Star Trek e entrou no formato uma semana antes.»
 - Fora: «Previ três coisas sobre o Mundial. Acertei duas. Nenhuma delas era o campeão.» · «Placar: duas de três.» · «Você levaria ao Mundial um deck que só dois jogadores levaram?» · «Probabilidade calculada. Humanos, imprevisíveis.»
 
-## Cenas
+## Cenas (v2, 16/11 09:12: abertura no modelo do MC-ESP01 + lista do deck)
 
-1. 0 s: **quadro 0 = Ral, Crackling Wit + Anthropological Mission + Into the Flood Maw em leque**, «CAMPEÃO DO MUNDO DE MAGIC», «O DECK QUE GANHOU O MUNDIAL».
-2. 0,2 s: foto do campeão (autorizada) + «STEFAN SCHÜTZ · ÁUSTRIA», cartas na base; 1,8 s: selo «IZZET MISSION»; corte seco curto da trilha.
-3. 3,2 s: «2 / 128» e grelha de 128 decks, só 2 verdes; «126 levaram outra coisa».
-4. 6,0 s: Anthropological Mission em grande, «STAR TREK · ENTROU 1 SEMANA ANTES».
-5. 10,4 s: sai do tubo; «Minhas 3 previsões» com ✔ ✔ ✘ e «Nenhuma era o campeão»; placar 2/3.
-6. Pergunta SIM/NÃO, assinatura, fecho do scanner.
-Easter egg: «MOCS» na chuva de código (~3–6 s), o mesmo do EP08.
+1. 0 s: **grelha 2×2 em ecrã inteiro** sobre o TUBO escurecido: foto do campeão (selo «CAMPEÃO»), Anthropological Mission («4 cópias»), Ral, Crackling Wit e Into the Flood Maw («3 cópias»); cabeçalho «CAMPEÃO DO MUNDO · MAGIC».
+2. 1,8 s: a foto acende a verde, o selo vira «IZZET MISSION», o resto escurece.
+3. 3,2 s: caixa «1,6% · 2 em 128 jogadores».
+4. 6,0 s: os quadros sobem para a fila por cima do TUBO, a Anthropological Mission acende e aparece no ecrã dele; mergulho aos 6,5 s.
+5. 7–11 s: **lista campeã completa** (60 cartas, Melee via MTGTop8) com Anthropological Mission a verde e em insert; «STAR TREK (TRK 46) · entrou no formato 1 semana antes do Mundial».
+6. 11,1 s: sai do tubo; «Minhas 3 previsões» com ✔ ✔ ✘ e «Nenhuma era o campeão»; placar 2/3; pergunta SIM/NÃO; assinatura; fecho do scanner.
+Easter egg: «MOCS» na chuva de código da lista (~7–11 s).
 
 ## Fontes
 
@@ -28,8 +28,8 @@ Easter egg: «MOCS» na chuva de código (~3–6 s), o mesmo do EP08.
 
 ## Controlo de qualidade (ficheiro final)
 
-`qc_video.py --frente tubo`: 1080×1920, 30 fps, 29,70 s (25,83 s sem fecho), −14,1 LUFS, pico −1,7 dBTP, fecho presente, «sem problemas mensuráveis». Folha de contacto conferida a olho.
-Retenção: **Quadro 0: Ral, Crackling Wit · Anthropological Mission · Into the Flood Maw (ecrã inteiro).** Revelação (campeão) aos 0,2 s; mudança visual ≤ 3 s; som em cada revelação (foto, selo, 2/128, carta, ✔ ✔ ✘, placar).
+`qc_video.py --frente tubo` (v2): 1080×1920, 30 fps, 30,40 s (26,53 s sem fecho), −14,1 LUFS, pico −1,9 dBTP, fecho presente, «sem problemas mensuráveis». Folha de contacto conferida a olho.
+Retenção: **Quadro 0: grelha 2×2 (foto do campeão + Anthropological Mission, Ral, Crackling Wit, Into the Flood Maw), modelo do MC-ESP01.** Revelação (campeão) no quadro 0, «1,6%» aos 3,2 s; mudança visual ≤ 3 s; som em cada revelação (foto, selo, 2/128, carta, ✔ ✔ ✘, placar).
 
 ## Ficheiros finais
 

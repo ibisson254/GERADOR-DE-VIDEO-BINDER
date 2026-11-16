@@ -346,3 +346,8 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - **Facto:** MC-EP08 publicado; ~6 h depois: 250 visualizações, tempo médio 7 s num vídeo de 59 s, curva parada em ~200 desde a 1.ª hora. O quadro 0 era o TUBO com texto; o campeão só aparecia aos ~31 s.
 - **Decisão do fundador:** «tem que ser padrão o gancho visual no início do vídeo como nos outros dois do tubo que deram certo, tinha cartas logo no início do vídeo, e tem que se tornar padrão daqui para frente». Regra escrita em `oraculo/CONTEXTO.md` §7 (cartas no quadro 0, pagamento nos primeiros 3 s, nada no gancho depende de episódio anterior, revelação até 10 s, 25–35 s) e em `nucleo/CHECKLIST_QUALIDADE.md` (P0 do Meta em Curto).
 - **MC-EP08B:** corte novo de 29,7 s («campeão primeiro») com a voz aprovada do EP08 reordenada (sem créditos). O MC-EP08 fica no ar (não se apaga: guarda os dados e serve de comparação).
+
+## 16/11/2026 (09:12) · Meta em Curto: abertura = modelo do MC-ESP01 + lista do deck
+- O fundador enviou o vídeo do MC-ESP01 como referência: «quero que coloque as cartas e a foto do jogador com esse mesmo modelo do início que te mandei e que se torne padrão e coloque a lista do deck na edição».
+- Regra em `oraculo/CONTEXTO.md` §7 (pontos 1 e 6): grelha 2×2 em ecrã inteiro (cartas + foto do jogador quando houver), selos, destaque verde com caixa de número, fila por cima do TUBO e mergulho; a lista do deck entra sempre que o episódio fala de um deck.
+- MC-EP08B refeito nesse modelo (v2), sem créditos novos.

@@ -1,4 +1,4 @@
-# Meta em Curto EP08B · corte «campeão primeiro» · render (derivado de ep08_render.py)
+# Meta em Curto EP08B v2 · corte «campeão primeiro» · render (derivado de ep08_render.py e do gancho do MC-ESP01)
 # Abertura padrão do TUBO (fundador, 16/11): quadro 0 = cartas reais ligadas ao pagamento, em ecrã inteiro.
 # Uso, numa pasta de trabalho com tl.json, words.json, led_env.npy e mix_final.wav (saídas de ep08b_audio.py):
 #   python3 ep08_render.py /caminho/do/kit             -> EP08_META_EM_CURTO.mp4
@@ -116,7 +116,7 @@ for y in range(0, H, 4): _d.line((0, y, W, y), fill=(0, 0, 0, 60))
 vig = Image.new('L', (W, H), 0); vd = ImageDraw.Draw(vig); vd.ellipse((-300, -200, W + 300, H + 200), fill=255)
 vig = vig.filter(ImageFilter.GaussianBlur(220)); SCANL = _sl
 tcols = [dict(x=x, y=rng.uniform(0, H), v=rng.uniform(60, 160)) for x in range(30, W, 46)]
-EGG0, EGG1 = ws(7), ws(18)    # easter egg «MOCS» na chuva de código = Schütz venceu o Magic Online Champions Showcase (2024, temporada 1; Ultimate Guard)
+EGG0, EGG1 = ws(26), ws(36)    # easter egg «MOCS» na chuva de código = Schütz venceu o Magic Online Champions Showcase (2024, temporada 1; Ultimate Guard)
 def mix_bg(col, a):   # cor já misturada com o fundo (o alfa do texto não é respeitado pelo Pillow aqui)
     return tuple(int(BG[i] + (col[i] - BG[i]) * a / 255) for i in range(3))
 def term_base(t, alpha=36):
@@ -273,73 +273,113 @@ def header(d, s1, s2):
     d.line((80, 300, 1000, 300), fill=(16, 185, 129, 90), width=2)
 
 
-# ---------- EP08B: abertura com cartas ----------
-STAMPS = TL['STAMPS']; EXIT = TL['EXIT']; EXIT_END = EXIT + 0.75
-FAN = [('ral_crackling_wit', -14), ('into_the_flood_maw', 14), ('anthropological_mission', 0)]
-def leque(im, t, k_out):
-    # 3 cartas da lista campeã: em leque grande no quadro 0, encolhem para a base quando a foto entra
-    for j, (sl, ang) in enumerate(FAN):
-        w0 = 500 if sl == 'anthropological_mission' else 400; w_ = int(w0 - (w0 - 230) * k_out)
-        c = carta(sl, w_).convert('RGBA').rotate(ang, resample=Image.BICUBIC, expand=True)
-        dx = {-14: -1, 14: 1, 0: 0}[ang]
-        x0 = W / 2 + dx * 235 - c.width / 2; y0 = 650 + abs(dx) * 40 - c.height / 2
-        x1 = W / 2 + dx * 250 - c.width / 2; y1 = 1210 - c.height / 2 + abs(dx) * 20
-        im.alpha_composite(c, (int(x0 + (x1 - x0) * k_out), int(y0 + (y1 - y0) * k_out)))
-def scene_campeao_b(t):
-    im, d = term_base(t, 10); im = im.convert('RGBA')
-    d = ImageDraw.Draw(im, 'RGBA')
-    d.text((W / 2, 150), 'CAMPEÃO DO MUNDO DE MAGIC', font=fit(d, 'CAMPEÃO DO MUNDO DE MAGIC', MONOB, 50, 960), fill=PH, anchor='ma')
-    d.text((W / 2, 215), 'Mundial 32 · Standard · 15/11/2026', font=F(MONO, 30), fill=GREY, anchor='ma')
-    T_PH = STAMPS[0]; T_N = STAMPS[2]; T_C = STAMPS[3]
-    if t < T_N - .1:
-        k_out = eio((t - T_PH + .05) / .45) if t >= T_PH - .05 else 0.0
-        if k_out > 0:
-            w_ = int(380 + 60 * k_out); ph = FOTO.resize((w_, int(w_ * FOTO.height / FOTO.width)), Image.LANCZOS).crop((0, 0, w_, 560)).convert('RGBA')
-            ph.putalpha(int(255 * min(1, k_out * 1.6))); x = (W - w_) // 2
-            im.alpha_composite(ph, (x, 290)); d = ImageDraw.Draw(im, 'RGBA')
-            d.rectangle((x - 3, 287, x + w_ + 3, 853), outline=PH, width=4)
-            d.text((W / 2, 880), 'STEFAN SCHÜTZ · ÁUSTRIA', font=fit(d, 'STEFAN SCHÜTZ · ÁUSTRIA', INTB, 66, 960), fill=WHITE, anchor='ma')
-        leque(im, t, k_out); d = ImageDraw.Draw(im, 'RGBA')
-        if k_out == 0:
-            d.text((W / 2, 1060), 'O DECK QUE GANHOU O MUNDIAL', font=fit(d, 'O DECK QUE GANHOU O MUNDIAL', MONOB, 46, 960), fill=WHITE, anchor='ma')
-        stamp(d, 'IZZET MISSION', PH, STAMPS[1], t, 1000, 50)
-    elif t < T_C - .1:
-        th = FOTO.resize((150, int(150 * FOTO.height / FOTO.width)), Image.LANCZOS).crop((0, 0, 150, 170)); im.paste(th, (850, 290)); d = ImageDraw.Draw(im, 'RGBA')
-        d.rectangle((848, 288, 1002, 462), outline=PH, width=3)
-        k = eio((t - T_N + .1) / .3)
-        d.text((80, 290), '2 / 128', font=F(INTB, int(130 + 30 * k)), fill=PH)
-        d.text((80, 470), 'jogadores levaram Izzet Mission · 1,6%', font=fit(d, 'jogadores levaram Izzet Mission · 1,6%', MONO, 32, 920), fill=GREY)
-        # 128 decks: 16 × 8 quadrados; acendem em sequência, 2 a verde
-        n_on = int(128 * min(1, (t - T_N + .1) / 1.4)); hi = {37, 90}
-        for i in range(128):
-            r, c_ = divmod(i, 16); x = 95 + c_ * 56; y = 580 + r * 82
-            on = i < n_on; g = i in hi and on
-            d.rounded_rectangle((x, y, x + 44, y + 64), 6, fill=((16, 185, 129, 255) if g else ((40, 58, 66, 255) if on else (16, 24, 30, 255))), outline=(PH if g else (30, 44, 50)), width=(3 if g else 1))
-        if t >= T_N + 1.3:
-            d.text((W / 2, 1260), '126 levaram outra coisa', font=F(MONOB, 38), fill=GREY, anchor='ma')
-    else:
-        k = eio((t - T_C + .1) / .4); c = carta('anthropological_mission', int(470 + 40 * k))
-        im.paste(c.convert('RGB'), ((W - c.width) // 2, 290)); d = ImageDraw.Draw(im, 'RGBA')
-        y = 290 + c.height + 20
-        d.text((W / 2, y), 'A CARTA QUE DÁ NOME AO DECK', font=F(MONOB, 38), fill=PH, anchor='ma')
-        if t >= ws(27) - .05: d.text((W / 2, y + 58), 'STAR TREK · ENTROU 1 SEMANA ANTES', font=fit(d, 'STAR TREK · ENTROU 1 SEMANA ANTES', MONOB, 36, 960), fill=AMBER, anchor='ma')
-    if t >= T_C - .1: fontes(d, ['campeão e metagame: magic.gg · carta: Scryfall (TRK 46, arte de Pablo Mendoza)'], 1400)
-    elif t >= T_N - .1: fontes(d, ['2 de 128: metagame oficial do Standard, magic.gg'], 1400)
-    else: fontes(d, ['campeão: magic.gg · foto com autorização do jogador · cartas: Scryfall'], 1400)
-    hud(d, t); return term_finish(im.convert('RGB'))
+# ---------- EP08B: abertura padrão (modelo do MC-ESP01, fundador 16/11) ----------
+# Grelha 2×2 em ecrã inteiro sobre o TUBO escurecido: foto do jogador + 3 cartas da lista, selo em cada quadro;
+# destaque = contorno verde a brilhar + o resto escurece + caixa de número grande; depois os quadros sobem para
+# uma fila por cima do TUBO e o vídeo mergulha no ecrã dele (lista do deck dentro do tubo).
+STAMPS = TL['STAMPS']; DIVE = TL['DIVE']; DIVE_END = DIVE + 0.45; EXIT = TL['EXIT']; EXIT_END = EXIT + 0.75
+def _rounded(c):
+    m = Image.new('L', c.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, c.size[0] - 1, c.size[1] - 1), 26, fill=255)
+    c = c.convert('RGBA'); c.putalpha(m); return c
+_fw = FOTO.width; QUADROS = [_rounded(FOTO.crop((0, 0, _fw, int(_fw * 88 / 63)))),
+        _rounded(Image.open(K + 'oraculo/ep08/cartas/anthropological_mission.jpg').convert('RGB')),
+        _rounded(Image.open(K + 'oraculo/ep08/cartas/ral_crackling_wit.jpg').convert('RGB')),
+        _rounded(Image.open(K + 'oraculo/ep08/cartas/into_the_flood_maw.jpg').convert('RGB'))]
+SELOS = ['CAMPEÃO', '4 cópias', '3 cópias', '3 cópias']
+_cc = {}
+def card_img(i, w, dim=0.0):
+    key = (i, int(w), round(dim, 2))
+    if key not in _cc:
+        c = QUADROS[i]; h = int(w * 88 / 63); r_ = c.resize((int(w), h), Image.LANCZOS)
+        if dim > 0:
+            dark = Image.new('RGBA', r_.size, (5, 10, 16, 255)); a_ = r_.getchannel('A'); r_ = Image.blend(r_, dark, dim); r_.putalpha(a_)
+        if len(_cc) > 400: _cc.clear()
+        _cc[key] = r_
+    return _cc[key]
+GRID = [(55, 250), (555, 250), (55, 945), (555, 945)]; GW = 470
+ROW = [(30, 92), (285, 92), (555, 92), (810, 92)]; RW = 240
+def glow_box(im, box, col=PH, r=26):
+    g = Image.new('RGBA', im.size, (0, 0, 0, 0)); gd = ImageDraw.Draw(g)
+    gd.rounded_rectangle(box, r, outline=col + (255,), width=16); g = g.filter(ImageFilter.GaussianBlur(14))
+    im.alpha_composite(g); ImageDraw.Draw(im).rounded_rectangle(box, r, outline=col + (255,), width=6)
+def pill(d, cx, cy, txt, col, size=40):
+    f = F(MONOB, size); wd = d.textlength(txt, font=f) + 40
+    d.rounded_rectangle((cx - wd / 2, cy - size * .75, cx + wd / 2, cy + size * .75), int(size * .75), fill=(5, 10, 16, 235), outline=col, width=4)
+    d.text((cx, cy), txt, font=f, fill=col, anchor='mm')
+def pop_text(d, cx, cy, txt, t0, t, size, col):
+    if t < t0: return
+    k = eio((t - t0) / 0.22); f = F(INTB, int(size * (1.35 - 0.35 * k)))
+    for dx, dy in ((6, 6), (-2, 6)): d.text((cx + dx, cy + dy), txt, font=f, fill=(0, 0, 0, 200), anchor='mm')
+    d.text((cx, cy), txt, font=f, fill=col, anchor='mm')
+def hook(t):
+    T_MI, T_16, TMOV = STAMPS[1] - .05, STAMPS[2] - .05, STAMPS[3] - .05
+    km = eio((t - TMOV) / 0.5) if t >= TMOV else 0.0
+    base = tubo_frame(t, 'desconfiado' if t < TMOV else 'confiante').convert('RGBA')
+    im = base.copy(); im.alpha_composite(Image.new('RGBA', base.size, (3, 6, 10, int(225 * (1 - km))))); d = ImageDraw.Draw(im, 'RGBA')
+    if km < 1:
+        a = int(255 * max(0, 1 - km * 2.5))
+        d.text((W / 2, 120), 'CAMPEÃO DO MUNDO · MAGIC', font=F(MONOB, 50), fill=(200, 215, 220, a), anchor='mm')
+        d.text((W / 2, 185), 'Mundial 32 · Standard · 15/11/2026 · foto autorizada pelo jogador', font=F(COND, 30), fill=(140, 160, 165, a), anchor='mm')
+    for i in range(4):
+        ks = eio((t - 0.06 * i + 0.07) / 0.25)
+        if ks <= 0: continue
+        gx, gy = GRID[i]; rx, ry = ROW[i]
+        w = GW + (RW - GW) * km; x = gx + (rx - gx) * km; y = gy + (ry - gy) * km
+        sc = 1.18 - 0.18 * ks; w2 = w * sc; x -= (w2 - w) / 2; y -= (w2 - w) * 0.7
+        lit = (T_MI <= t < TMOV and i == 0) or (t >= TMOV and i == 1)
+        dim = 0.0 if (t < T_MI or lit) else (0.62 if t < TMOV else 0.5)
+        c = card_img(i, w2, dim); im.alpha_composite(c, (int(x), int(y)))
+        if lit: glow_box(im, (int(x), int(y), int(x + c.width), int(y + c.height)))
+        d = ImageDraw.Draw(im, 'RGBA')
+        if km < 0.5 and ks > 0.6:
+            sel = SELOS[i] if not (i == 0 and t >= T_MI) else 'IZZET MISSION'
+            pill(d, x + c.width / 2, y + c.height - 66, sel, PH if lit else (WHITE if dim == 0 else GREY), 34 if i == 0 else 38)
+    if T_16 <= t < TMOV:
+        d.rounded_rectangle((230, 800, 850, 1130), 40, fill=(3, 6, 10, 215), outline=WHITE, width=4)
+        pop_text(d, W / 2, 935, '1,6%', T_16, t, 210, WHITE)
+        d.text((W / 2, 1085), '2 em 128 jogadores', font=F(MONOB, 44), fill=GREY, anchor='mm')
+    if t >= TMOV:                      # a carta-nome entra no ecrã do TUBO: o mergulho entra nela
+        k = eio((t - TMOV) / 0.25); cw = int((SCR[2] - SCR[0] - 40) * (0.6 + 0.4 * k))
+        d.rounded_rectangle(SCR, 18, fill=(4, 14, 10, 235))
+        c = card_img(1, cw * 0.72); im.alpha_composite(c, (int(SCX - c.width / 2), int(SCY - c.height / 2)))
+    return im.convert('RGB')
+
+# ---------- DENTRO: a lista campeã ----------
+def scene_lista(t):
+    im, d = term_base(t, 10); t0 = DIVE_END - 0.1
+    s1 = '> LISTA CAMPEÃ · IZZET MISSION'
+    d.text((80, 200), typed(s1, t0, t), font=fit(d, s1, MONOB, 38, 920), fill=PH)
+    d.text((80, 258), typed('  Stefan Schütz · 1.º no Mundial 32 · 60 cartas', t0 + .3, t), font=F(MONO, 28), fill=EM)
+    d.line((80, 312, 1000, 312), fill=(16, 185, 129, 90), width=2)
+    verde = {'Anthropological Mission'}
+    lista_col(d, t, 90, 345, LISTA[:1], t0 + .2, 460, verde, ls=40, fs=30)
+    lista_col(d, t, 590, 345, LISTA[1:], t0 + .4, 420, verde, ls=40, fs=30)
+    if t >= ws(26) - .3:
+        k = eio((t - ws(26) + .3) / .35); c = carta('anthropological_mission', int(300 + 20 * k))
+        im.paste(c, (640, 860)); d = ImageDraw.Draw(im, 'RGBA'); d.rectangle((637, 857, 643 + c.width, 863 + c.height), outline=PH, width=4)
+    if t >= ws(27) - .05:
+        d.text((90, 1000), 'STAR TREK (TRK 46)', font=F(MONOB, 38), fill=AMBER)
+        d.text((90, 1055), 'entrou no formato', font=F(MONO, 32), fill=WHITE)
+        d.text((90, 1100), '1 semana antes do Mundial', font=F(MONO, 32), fill=WHITE)
+    fontes(d, ['lista: Melee via MTGTop8 · carta: Scryfall (TRK 46, arte de Pablo Mendoza)', '«uma semana antes»: magic.gg (Day Two Highlights)'], 1384)
+    hud(d, t); return term_finish(im)
 SUBY = 1530
 T_Q = ws(53) - 0.1; T_SIG = ws(64) - 0.15
 PRV = [('01', 'Jund no Top 8', True, 42), ('03', 'Spellementals < 5%', True, 42), ('02', 'Jund no top 3', False, 44)]
 def frame_main(t):
-    if t < EXIT:
-        if TL['REV0'] <= t < TL['REV1']:
-            im = scene_campeao_b(t); kz = (t - TL['REV0']) / (TL['REV1'] - TL['REV0']); z = 1 + 0.03 * kz
-            cw, ch = W / z, H / z; return subs(im.resize((W, H), Image.LANCZOS, box=((W - cw) / 2, 560 - 560 / z, (W + cw) / 2, 560 - 560 / z + ch)), t)
-        return subs(scene_campeao_b(t), t)
+    if t < DIVE_END:
+        if t < DIVE: return subs(hook(t), t, 1700 if t < STAMPS[3] - .05 else SUBY)
+        k = eio((t - DIVE) / (DIVE_END - DIVE)); z = 1 + k * 4.2
+        im = hook(DIVE - 0.001).resize((int(W * z), int(H * z)), Image.LANCZOS)
+        ox = int(SCX * z - (W / 2 + (SCX - W / 2) * min(1, k * 1.5))); oy = int(SCY * z - (H / 2 + (SCY - H / 2) * min(1, k * 1.5)))
+        im = im.crop((ox, oy, ox + W, oy + H))
+        if k > 0.6: im = Image.blend(im, scene_lista(t), (k - 0.6) / 0.4)
+        return im
+    if t < EXIT: return subs(scene_lista(t), t)
     if t < EXIT_END:
         k = eio((t - EXIT) / (EXIT_END - EXIT)); z = 5.2 - 4.2 * k
         im = tubo_frame(t, 'analitico', zoom=z, cx=W / 2 + (SCX - W / 2) * (1 - k), cy=H / 2 + (SCY - H / 2) * (1 - k))
-        if k < 0.35: im = Image.blend(scene_campeao_b(t), im, k / 0.35)
+        if k < 0.35: im = Image.blend(scene_lista(t), im, k / 0.35)
         return subs(im, t, SUBY)
     if t < T_Q:
         expr = 'confiante' if t >= ws(49) - .05 else ('desconfiado' if t >= ws(44) else 'analitico')

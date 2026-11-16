@@ -86,7 +86,8 @@ Tudo o que o TUBO cita aparece no ecrã.
 ## 7. Estrutura do Reel (25–35 s) · abertura padrão desde 16/11/2026
 
 **Regra fixa (fundador, 16/11/2026, depois do MC-EP08: 7 s de tempo médio em 59 s; os episódios do TUBO que funcionaram abriam com cartas):**
-1. **Quadro 0 = cartas reais em ecrã inteiro**, ligadas ao pagamento do episódio (a carta, o deck ou o jogador da revelação). Nunca o TUBO sozinho, nunca só texto.
+1. **Quadro 0 = abertura modelo do MC-ESP01** (vídeo de referência enviado pelo fundador a 16/11): grelha 2×2 em ecrã inteiro sobre o TUBO escurecido, com cartas reais ligadas ao pagamento e, quando o episódio fala de um jogador, **a foto dele como um dos quatro quadros** (com autorização registada). Cabeçalho em mono («CAMPEÃO DO MUNDO · MAGIC», «MESA DE 4 · COMMANDER») e linha de fonte por baixo; um selo em cada quadro (vida, cópias, país). Destaque = contorno verde a brilhar + o resto escurece + caixa com o número grande («25% · 1 em 4», «1,6% · 2 em 128»). Depois os quadros sobem para uma fila por cima do TUBO, o ecrã dele mostra o número ou a carta e o vídeo mergulha nele. Nunca o TUBO sozinho, nunca só texto. Código de referência: `hook()` em `oraculo/esp01/esp01_render.py` e `oraculo/episodios/ep08b_render.py`.
+6. **Quando o episódio fala de um deck, a lista do deck entra na edição** (dentro do tubo, logo depois do mergulho), com a carta citada destacada a verde e em insert.
 2. **O pagamento mais forte entra nos primeiros 3 s** (o campeão, o número, a carta). O vídeo abre **dentro do tubo** e o TUBO aparece depois, ao sair.
 3. **Nada no gancho depende de um episódio anterior.** Previsões, placar e `ARQUIVO` vêm depois da revelação, nunca antes.
 4. A revelação principal nunca passa dos 10 s.

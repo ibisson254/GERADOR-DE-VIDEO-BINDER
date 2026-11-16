@@ -1,4 +1,4 @@
-# Meta em Curto EP08B · corte «campeão primeiro» · áudio (derivado de ep08_audio.py)
+# Meta em Curto EP08B v2 · corte «campeão primeiro» com abertura modelo MC-ESP01 · áudio (derivado de ep08_audio.py)
 # A voz é a tomada 2 do EP08 reordenada (ver ep08b_voz.py): sem créditos novos.
 # Uso: numa pasta de trabalho com voz.mp3 (ElevenLabs) e words.json (tempos por palavra, Scribe, texto canónico):
 #   python3 ep07_audio.py /caminho/do/kit
@@ -8,7 +8,7 @@ import numpy as np, soundfile as sf, subprocess, json, sys
 K = sys.argv[1] if len(sys.argv) > 1 else '../..'
 SR = 48000; TEMPO = 1.10; LEAD = 0.15
 W = json.load(open('words.json'))
-PAUSES = [((W[i]['e'] + W[i + 1]['s']) / 2, d) for i, d in [(6, 0.4), (17, 0.2), (35, 0.9), (48, 0.3), (52, 0.3), (63, 0.3)]]   # (tempo da voz original, s)
+PAUSES = [((W[i]['e'] + W[i + 1]['s']) / 2, d) for i, d in [(6, 0.4), (17, 0.2), (35, 1.6), (48, 0.3), (52, 0.3), (63, 0.3)]]   # (tempo da voz original, s)
 def load(p):
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', p, '-ac', '2', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True).stdout
     return np.frombuffer(raw, np.float32).reshape(-1, 2).copy()
@@ -61,11 +61,12 @@ def stamp_click(dur=0.18):
 S = np.zeros_like(V)
 def put(x, at, gain):
     i = int(at * SR); n = min(len(x), N - i); S[i:i + n] += x[:n, None] * gain
-DIVE = 0.0                              # começa dentro do ecrã do TUBO (quadro 0 = cartas)
-EXIT = vt(W[36]['s']) - 0.90            # sai do tubo antes de «Previ três coisas»
+DIVE = vt(W[18]['s']) + 0.55            # mergulho no ecrã do TUBO depois de «A carta» (gancho = modelo do MC-ESP01)
+EXIT = vt(W[36]['s']) - 0.90            # sai do tubo antes de «Previ três coisas» (lista campeã fica ~5 s)
 STAMPS = [vt(W[i]['s']) for i in (0, 5, 7, 18, 42, 44, 49)]   # foto, IZZET MISSION, 2/128, carta, chips ✔✔, ✘, placar
 PREV = STAMPS[0]
 put(thump(), 0.0, 0.8)
+put(modem(), DIVE, 0.55)
 put(thump(0.4, 70), EXIT + 0.25, 0.35)
 for st in STAMPS: put(stamp_click(), st, 0.5)
 mix = V + M + S
@@ -73,7 +74,7 @@ sf.write('mix_raw.wav', mix, SR)
 m = subprocess.run(['ffmpeg', '-v', 'info', '-i', 'mix_raw.wav', '-af', 'loudnorm=I=-14:TP=-2.2:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr
 js = json.loads(m[m.rfind('{'):m.rfind('}') + 1])
 subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', 'mix_raw.wav', '-af',
-                f"loudnorm=I=-14:TP=-2.2:LRA=11:measured_I={js['input_i']}:measured_TP={js['input_tp']}:measured_LRA={js['input_lra']}:measured_thresh={js['input_thresh']}:offset={js['target_offset']}:linear=true",
+                f"loudnorm=I=-14:TP=-2.2:LRA=11:measured_I={js['input_i']}:measured_TP={js['input_tp']}:measured_LRA={js['input_lra']}:measured_thresh={js['input_thresh']}:offset={js['target_offset']}:linear=true,alimiter=limit=0.84:level=false",
                 '-ar', str(SR), 'mix_final.wav'], check=True)
 json.dump(dict(TEMPO=TEMPO, LEAD=LEAD, PAUSES=PAUSES, OUT_START=OUT_START, TOTAL=TOTAL,
                DIVE=DIVE, EXIT=EXIT, PREV=PREV, STAMPS=STAMPS, REV0=REV0, REV1=REV1), open('tl.json', 'w'), indent=1)
