@@ -1,6 +1,6 @@
 # MC-EP08 · «Acertei duas. Nenhuma era o campeão.» (proposta, 16/11/2026)
 
-Estado: **CONCLUÍDO, não publicado** (16/11/2026). Direção aprovada pelo fundador a 16/11, 01:12: «a conclusão do episódio do mundial prossiga e só pare quando o episódio estiver pronto» (inclui a voz). Pedido do fundador (16/11, 00:53): episódio do TUBO sobre o Mundial 32 — decks do Top 8, campeão, conferência das previsões, foto do campeão no episódio e na capa.
+Estado: **PUBLICADO** (confirmado pelo fundador a 16/11 com o print dos Insights: 250 visualizações, 176 contas, tempo médio 7 s, 4 curtidas, 2 comentários, 1 repost, 3 guardados, 1 seguidor ~6 h depois). Direção aprovada pelo fundador a 16/11, 01:12: «a conclusão do episódio do mundial prossiga e só pare quando o episódio estiver pronto» (inclui a voz). Pedido do fundador (16/11, 00:53): episódio do TUBO sobre o Mundial 32 — decks do Top 8, campeão, conferência das previsões, foto do campeão no episódio e na capa.
 
 Tipo: segunda · prestação de contas (CICLO_SEMANAL §3) + Leitura da Final. Proposta: substitui o MC-EP06 «placar zero» (decide o fundador).
 
@@ -64,7 +64,7 @@ Texto da legenda no ecrã (a fala fonética está em `oraculo/episodios/ep08_rot
 ## Controlo de qualidade (ficheiro final)
 
 `comum/qc/qc_video.py --frente tubo`: 1080×1920, 30 fps, 62,73 s (58,87 s sem fecho), −14,0 LUFS, pico −1,8 dBTP, fecho presente a partir de 58,87 s, «sem problemas mensuráveis». Folha de contacto conferida a olho: sem texto cortado nas laterais, legendas legíveis, fontes ≥ 24 px.
-Retenção: quadro 0 com o TUBO e «3 PREVISÕES»; mudança visual ≤ 3 s em todo o vídeo; som em cada revelação (3 carimbos e corte seco do campeão).
+Retenção: **quadro 0 sem carta (falha)**: abria com o TUBO e «3 PREVISÕES», contra a regra «quadro 0 com Magic» (constituição, 13/11); a revelação do campeão só entrava aos ~31 s. Resultado nas primeiras 6 h: 250 visualizações, tempo médio 7 s. Corrigido no MC-EP08B. Mudança visual ≤ 3 s e som em cada revelação cumpridos.
 
 ## Ficheiros finais
 

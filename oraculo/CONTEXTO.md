@@ -83,15 +83,21 @@ Tudo o que o TUBO cita aparece no ecrã.
 - O @ oficial do jogador vai no comentário fixado só se confirmado num perfil verificável; senão, omite-se.
 - Imagens de transmissão continuam proibidas (6.2).
 
-## 7. Estrutura do Reel (~40 s)
+## 7. Estrutura do Reel (25–35 s) · abertura padrão desde 16/11/2026
+
+**Regra fixa (fundador, 16/11/2026, depois do MC-EP08: 7 s de tempo médio em 59 s; os episódios do TUBO que funcionaram abriam com cartas):**
+1. **Quadro 0 = cartas reais em ecrã inteiro**, ligadas ao pagamento do episódio (a carta, o deck ou o jogador da revelação). Nunca o TUBO sozinho, nunca só texto.
+2. **O pagamento mais forte entra nos primeiros 3 s** (o campeão, o número, a carta). O vídeo abre **dentro do tubo** e o TUBO aparece depois, ao sair.
+3. **Nada no gancho depende de um episódio anterior.** Previsões, placar e `ARQUIVO` vêm depois da revelação, nunca antes.
+4. A revelação principal nunca passa dos 10 s.
+5. Controlo: a ficha guarda a linha «Quadro 0: <cartas mostradas>». Se o quadro 0 não tiver carta, o vídeo não sai.
 
 | Tempo | Bloco | Onde | Expressão |
 |---|---|---|---|
-| 0–3 s | Gancho: frase seca | Fora | Desconfiado |
-| 3–8 s | Cabeçalho `ARQUIVO: torneio · formato · data` | Entra no tubo | — |
-| 8–28 s | Análise (carta / mesa / gráfico) | Dentro | HUD `● BINDER` |
-| 28–35 s | Revelação | Sai do tubo | Confiante ou Erro de sistema |
-| 35–40 s | Pergunta competitiva + frase de fecho | Fora | Analítico |
+| 0–3 s | Gancho visual: cartas + revelação (número, campeão, carta) | Dentro | HUD `● BINDER` |
+| 3–12 s | Prova: lista, gráfico, carta com a linha destacada | Dentro | — |
+| 12–20 s | Sai do tubo: leitura do TUBO, placar ou contexto | Fora | Confiante ou Erro de sistema |
+| 20–25 s | Pergunta competitiva + frase de fecho | Fora | Analítico |
 | fim | `comum/outro/outro_binder_916.mp4` | — | — |
 
 - Easter egg (máx. 1) escondido na chuva de código; registar em `comum/easter_eggs.md`.

@@ -42,6 +42,7 @@ Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao ris
 
 - [ ] P0 · Feedback visual (15/11/2026): cada fala das personagens tem uma imagem real do que está a ser dito, na TV ou em insert; nenhuma tela «FOTO EM FALTA» no ficheiro a publicar.
 - [ ] P1 · Quadro 0 com imagem de Magic (carta ou objeto reconhecível).
+- [ ] P0 (Meta em Curto) · Quadro 0 com cartas reais em ecrã inteiro e revelação principal nos primeiros 3 s (`oraculo/CONTEXTO.md` §7). Falhou = não sai.
 - [ ] P1 · Toda leitura de regra mostra a carta com a linha destacada.
 - [ ] P0 · Carta inteira nos planos de TV e nos zooms.
 - [ ] P1 (a confirmar pelo fundador) · Na TV ao fundo dos planos de conjunto, carta e programação não aparecem cortadas pela margem.

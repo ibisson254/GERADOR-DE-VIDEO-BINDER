@@ -341,3 +341,8 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - Pedido do fundador (00:53): episódio do TUBO sobre o Mundial (decks do Top 8, campeão, previsões) com a foto do campeão no episódio e na capa. Às 01:12: «Foto veio da autorização do jogador e a conclusão do episódio do mundial prossiga e só pare quando o episódio estiver pronto» (inclui a voz no ElevenLabs).
 - A auditoria de pauta bloqueou por MB-GIRO03 (só menciona o Mundial) e MC-EP06 (prestação de contas de outro torneio). O pedido explícito do fundador vale como decisão para avançar.
 - Campeão: vale a fonte oficial (magic.gg: Stefan Schütz). O mtg.wiki diz Charis Kikidis; contradição registada nas fontes do episódio.
+
+## 16/11/2026 (08:48) · Meta em Curto: abertura padrão com cartas; MC-EP08B
+- **Facto:** MC-EP08 publicado; ~6 h depois: 250 visualizações, tempo médio 7 s num vídeo de 59 s, curva parada em ~200 desde a 1.ª hora. O quadro 0 era o TUBO com texto; o campeão só aparecia aos ~31 s.
+- **Decisão do fundador:** «tem que ser padrão o gancho visual no início do vídeo como nos outros dois do tubo que deram certo, tinha cartas logo no início do vídeo, e tem que se tornar padrão daqui para frente». Regra escrita em `oraculo/CONTEXTO.md` §7 (cartas no quadro 0, pagamento nos primeiros 3 s, nada no gancho depende de episódio anterior, revelação até 10 s, 25–35 s) e em `nucleo/CHECKLIST_QUALIDADE.md` (P0 do Meta em Curto).
+- **MC-EP08B:** corte novo de 29,7 s («campeão primeiro») com a voz aprovada do EP08 reordenada (sem créditos). O MC-EP08 fica no ar (não se apaga: guarda os dados e serve de comparação).
