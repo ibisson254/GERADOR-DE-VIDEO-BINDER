@@ -2,7 +2,7 @@
 
 Versão 1.6 · 12/11/2026 (§10 registo editorial e encerramento obrigatório, §12 sistema de insights, §13; decisão de 01/11, integrada a 12/11) · 1.5 · 02/11/2026 (§6 duração livre nos episódios de série) · 1.4 · 31/10/2026 (§1 bíblias do Órbita e do Lambe-lambe no repositório, §6 Órbita sem fecho) · 1.3 · 31/10/2026 (§1 hierarquia documental, §2 catálogo, §6 formatos por frente, §10 frase do easter egg) · 1.2 · 31/10/2026 (fonte de verdade, registo, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
 
-Norma comum de **processo** para todas as frentes do @binderthetrade (séries, universo temático, formato espontâneo e especiais; ver `CATALOGO_EDITORIAL.md`). Não define personagens nem estética: isso vive na bíblia de cada frente. Não define o produto: só funções confirmadas (secção 9).
+Norma comum de **processo** para todas as frentes do @binder_vision (séries, universo temático, formato espontâneo e especiais; ver `CATALOGO_EDITORIAL.md`). Não define personagens nem estética: isso vive na bíblia de cada frente. Não define o produto: só funções confirmadas (secção 9).
 
 Princípio: **mesma disciplina, identidades diferentes.** Nenhuma série herda a voz, o humor, a duração, a estrutura de guião ou o visual de outra.
 

@@ -1,6 +1,6 @@
 # GERADOR-DE-VIDEO-BINDER
 
-Kit de produção automatizada de Reels 9:16 (1080×1920, 30 fps) para o Instagram [@binderthetrade](https://instagram.com/binderthetrade).
+Kit de produção automatizada de Reels 9:16 (1080×1920, 30 fps) para o Instagram [@binder_vision](https://instagram.com/binder_vision).
 
 ## Estrutura do Repositório
 
@@ -41,4 +41,4 @@ cd GERADOR-DE-VIDEO-BINDER/oraculo   # Meta em Curto (TUBO)
 ## Direitos Autorais e Créditos
 
 - Imagens e propriedades de Magic: The Gathering são © Wizards of the Coast LLC. Conteúdo de fã não oficial, sem aprovação ou endosso da Wizards.
-- Trilhas musicais e vozes sintetizadas criadas via ElevenLabs pelo autor do projeto para o canal @binderthetrade.
+- Trilhas musicais e vozes sintetizadas criadas via ElevenLabs pelo autor do projeto para o canal @binder_vision.

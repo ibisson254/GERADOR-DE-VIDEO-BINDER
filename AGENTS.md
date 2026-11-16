@@ -1,4 +1,6 @@
-# AGENTS.md · Estúdio BINDER (@binderthetrade)
+# AGENTS.md · Estúdio BINDER (@binder_vision)
+
+Conta do Instagram: **@binder_vision** («BINDER Vision») (confirmado pelo fundador a 16/11/2026; o nome antigo era @binderthetrade (`nucleo/DECISOES.md`). Fichas, legendas e scripts de conteúdos já publicados mantêm o nome antigo).
 
 Ponto de entrada para qualquer agente (Claude, ChatGPT ou outro). As instruções de cada plataforma só remetem para este ficheiro (textos prontos em `nucleo/prompts/`). Este repositório é a fonte de verdade do estúdio (constituição §1).
 

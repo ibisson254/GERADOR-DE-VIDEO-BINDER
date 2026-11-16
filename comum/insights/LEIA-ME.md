@@ -1,4 +1,4 @@
-# Insights · histórico de audiência do @binderthetrade
+# Insights · histórico de audiência do @binder_vision
 
 Sistema permanente de métricas do Instagram. Criado a 01/11/2026 (`nucleo/DECISOES.md`). Substitui as tabelas de números do `comum/historico.md` (as antigas ficam lá como histórico, e foram migradas para aqui).
 
@@ -43,7 +43,7 @@ Limites: contas novas não são instalações (a Play Console continua a ser a f
 
 ## Métricas por API (vidIQ)
 
-O conector vidIQ lê os Insights do Instagram como dono (visualizações, alcance, guardados, partilhas, tempo médio, % assistida, taxa de saltos dos Reels), sem prints. A 16/11/2026 a conta ligada é a pessoal do fundador, **não** a @binderthetrade: falta o fundador ligar a @binderthetrade no vidIQ (OAuth). Depois disso, a rotina de domingo usa `vidiq_instagram_owner_insights` (modo `reels` e `media`) e os prints ficam só para o que a API não trouxer (ex.: toques no link, se não vier).
+O conector vidIQ lê os Insights do Instagram como dono (visualizações, alcance, guardados, partilhas, tempo médio, % assistida, taxa de saltos dos Reels), sem prints. A 16/11/2026 a conta ligada é a pessoal do fundador, **não** a @binder_vision: falta o fundador ligar a @binder_vision no vidIQ (OAuth). Depois disso, a rotina de domingo usa `vidiq_instagram_owner_insights` (modo `reels` e `media`) e os prints ficam só para o que a API não trouxer (ex.: toques no link, se não vier).
 
 ## Regras
 

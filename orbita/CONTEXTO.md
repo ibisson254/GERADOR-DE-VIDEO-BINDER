@@ -1,6 +1,6 @@
 # Órbita · Star Trek × Magic · bíblia
 
-Universo temático do @binderthetrade sobre as cartas de Magic: The Gathering | Star Trek. Ativo. Classificação no `nucleo/CATALOGO_EDITORIAL.md`.
+Universo temático do @binder_vision sobre as cartas de Magic: The Gathering | Star Trek. Ativo. Classificação no `nucleo/CATALOGO_EDITORIAL.md`.
 
 Fontes desta bíblia (31/10/2026): `claude/serie-star-trek-bauhaus.md` (projeto claude.ai, v3 de 21/10) e "Órbita · Star Trek · índice" (Drive, pasta 02). Este ficheiro passa a ser o canónico; esses dois ficam como histórico. Nada aqui foi acrescentado além do que eles dizem.
 

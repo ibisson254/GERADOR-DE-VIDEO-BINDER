@@ -1,4 +1,4 @@
-# Catálogo editorial · Estúdio BINDER (@binderthetrade)
+# Catálogo editorial · Estúdio BINDER (@binder_vision)
 
 Documento canónico das frentes editoriais: o que existe, como se classifica, onde está a identidade de cada uma e em que estado está. Configuração técnica (pastas, vozes, trilhas, episódio de referência): `../series.yaml`. Regras comuns: `CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`.
 

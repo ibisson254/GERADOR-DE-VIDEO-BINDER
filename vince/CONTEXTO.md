@@ -1,6 +1,6 @@
 # Vinci — bíblia da personagem e da série
 
-Frente nova do BINDER Originals (@binderthetrade), **em desenvolvimento**: traço e cenário definidos pelo fundador a 11–12/11/2026; voz, nome público e cadência ainda por decidir. Ler antes de produzir qualquer peça do Vinci. O que estiver marcado **(proposta)** ainda não foi aprovado.
+Frente nova do BINDER Originals (@binder_vision), **em desenvolvimento**: traço e cenário definidos pelo fundador a 11–12/11/2026; voz, nome público e cadência ainda por decidir. Ler antes de produzir qualquer peça do Vinci. O que estiver marcado **(proposta)** ainda não foi aprovado.
 
 ---
 

@@ -1,6 +1,6 @@
 # Lambe-lambe · bíblia
 
-Formato espontâneo e permanente do @binderthetrade: publicações de oportunidade, experimentais e avulsas. Ativo. Classificação no `nucleo/CATALOGO_EDITORIAL.md`.
+Formato espontâneo e permanente do @binder_vision: publicações de oportunidade, experimentais e avulsas. Ativo. Classificação no `nucleo/CATALOGO_EDITORIAL.md`.
 
 Fontes desta bíblia (31/10/2026): `claude/reel-lambe-lambe-pop.md` e `claude/00-comece-aqui.md` (projeto claude.ai, 18–19/10), "Lambe-lambe, Scanner e Na prática · índice" (Drive, pasta 03) e a skill `binder-posts-instagram`. Este ficheiro passa a ser o canónico; os documentos de origem ficam como histórico, com as legendas e os créditos completos de cada peça. Nada aqui foi acrescentado além do que eles dizem.
 

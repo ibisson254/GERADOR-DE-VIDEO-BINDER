@@ -1,6 +1,6 @@
 # Conde de Manaforte — contexto completo da série
 
-Série de Reels do Instagram do BINDER Vision (@binderthetrade).
+Série de Reels do Instagram do BINDER Vision (@binder_vision).
 Atualizado em 26/10/2026. Ler este ficheiro antes de produzir qualquer episódio novo.
 
 ---
@@ -11,7 +11,7 @@ O Conde de Manaforte é um crítico de arte fictício. Julga as ilustrações de
 
 - **Princípio criativo:** ele leva a arte a sério, leva a própria opinião demasiado a sério e não consegue levar o mundo à sua volta a sério.
 - **De onde vem o humor:** a análise artística é verdadeira; a arrogância é que é teatral.
-- **Onde vive:** é uma série dentro do @binderthetrade, ao lado do Mana & Burn. Não tem conta própria.
+- **Onde vive:** é uma série dentro do @binder_vision, ao lado do Mana & Burn. Não tem conta própria.
 - **Nome da série no ecrã:** O Tribunal Estético ("pareceres do Conde de Manaforte · processo nº 00X").
 - **Função no funil:** Pilar C (cultura TCG). Atrai público pela arte e pelo humor; a legenda leva ao BINDER Vision.
 
@@ -89,7 +89,7 @@ Regras de conteúdo:
 
 **Tipografia:** Lora.
 
-**Layout do Reel (1080×1920, 30 fps):** cabeçalho "O TRIBUNAL ESTÉTICO"; palco com a arte em largura total, inteira, nunca cortada nas laterais; crédito sob o palco com "Conteúdo de fã não oficial, sem aprovação ou endosso da Wizards."; legenda palavra a palavra em y≈1372; @binderthetrade em y≈1530.
+**Layout do Reel (1080×1920, 30 fps):** cabeçalho "O TRIBUNAL ESTÉTICO"; palco com a arte em largura total, inteira, nunca cortada nas laterais; crédito sob o palco com "Conteúdo de fã não oficial, sem aprovação ou endosso da Wizards."; legenda palavra a palavra em y≈1372; @binder_vision em y≈1530.
 
 **Elementos recorrentes:** elipses e setas de tinta, rótulos marfim em itálico, lupa crítica, carimbos bordô ("RÉU · ano", "OBRA NOTÁVEL", "PARECER EMITIDO"), inserto oval do Conde trocando de expressão.
 

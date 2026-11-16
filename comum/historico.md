@@ -1,4 +1,4 @@
-# Histórico de desempenho · @binderthetrade
+# Histórico de desempenho · @binder_vision
 
 > **Desde 01/11/2026:** os números do Instagram vão para `comum/insights/` (snapshots semanais e `registo_posts.csv`) e o estado de cada conteúdo vive em `comum/REGISTRO_EDITORIAL.md`. Este ficheiro passa a ser a cronologia do estúdio (secção "Cronologia" no fim), uma linha por acontecimento, sempre com o ID. As secções abaixo ficam como histórico e já estão migradas (`comum/insights/semanas/2026-10-26.md`); nada foi apagado.
 

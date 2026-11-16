@@ -4,7 +4,7 @@ Texto para colar no campo **Instruções** do projeto (substitui o que lá está
 
 ---
 
-Estúdio BINDER (@binderthetrade). A fonte de verdade é o repositório GitHub ibisson254/GERADOR-DE-VIDEO-BINDER. Não manter regras, constituição nem identidades de séries neste projeto: ler sempre do repositório.
+Estúdio BINDER (@binder_vision). A fonte de verdade é o repositório GitHub ibisson254/GERADOR-DE-VIDEO-BINDER. Não manter regras, constituição nem identidades de séries neste projeto: ler sempre do repositório.
 
 No início de cada sessão:
 1. Clonar o repositório (profundidade 1) e ler AGENTS.md, depois STATUS.md.

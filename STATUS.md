@@ -17,25 +17,18 @@ Auditoria integral, matriz de integração, sistema de previsões do TUBO corrig
 - **GitHub Actions** `validar` a cada push/PR (`.github/workflows/validar.yml`): integridade, memória, previsões e testes. Encerramento só conta com o visto verde.
 - **Funil do app**: `comum/insights/registo_app.csv` (contas novas e carta em 7 dias, por semana, do Supabase). 37 contas desde 21/09; 6 com carta em 7 dias. Consulta e limites em `comum/insights/LEIA-ME.md`.
 - **Tarefa agendada** «Briefing do TUBO» (seg e qui, 09:47 Lisboa), só leitura. Próxima: quinta 19/11.
-- **Depende do fundador:** ligar a @binderthetrade no vidIQ (hoje está a conta pessoal) para a rotina de domingo ler os Insights por API; decidir RLS em `public.spatial_ref_sys` no Supabase (aviso crítico do advisor; nada alterado); atualizar as skills `binder-*` (proposta feita no chat de 16/11).
+- **Depende do fundador:** ligar a @binder_vision no vidIQ (hoje está a conta pessoal) para a rotina de domingo ler os Insights por API; decidir RLS em `public.spatial_ref_sys` no Supabase (aviso crítico do advisor; nada alterado); atualizar as skills `binder-*` (proposta feita no chat de 16/11).
 
 ## Estado editorial
 
 Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vince Vault (série, aprovada a 12/11, em desenvolvimento)**; Órbita (temática); Lambe-lambe (espontânea); especiais. Estados por conteúdo: `comum/REGISTRO_EDITORIAL.md` (86 conteúdos). Fecho de 12/11: MC-EP03/04/05/07, MB-ESP03, MB-EP10, MB-GIRO02, CM-EP004/005, LL-PRETRK, LL-SHEOL, LL-DIVCAR, LL-CAMPBR fechados; **MC-EP06 (episódio de segunda) aberto**. Pequeno Mestre (PR #2) em desenvolvimento, sem aprovação; o PR #17 era a direção 2D do próprio Vince Vault (integrado, reconciliado). Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
 
-## Em produção
+## Em produção e publicação (atualizado a 16/11/2026, 11:30)
 
-- **MB-GIRO03 «Giro de domingo nº 3»** (15/11): Burger King Itália × Magic, PLANESWALKER (Netflix) com «Lê a carta» da Chandra, a semana no BINDER (Numot, Conde EP005, TUBO EP07/ESP01/ESP02, Nauctis) e chamada para o TUBO de segunda. **CONCLUÍDO, não publicado.** Pacote: `manaburn/giro/2026-11-15/` (vozes 1.697 créditos, flow `xiCL5Tg0uv0l1swiXKMd`). **v2 final com feedback visual em cada fala** (padrão novo de 15/11, 03:08; fotos do BK e da Netflix enviadas pelo fundador às 03:35). Antes de publicar: ouvir a pronúncia; confirmar que «o spoiler da nova edição» é a EX-01 (o registo da EX-01 não foi mudado) e o foco de 3 palavras da capa.
-
-- **LL-ART13 «7 cartas. Uma artista brasileira.»** (14/11): carrossel de 7 slides sobre Nathanna Érica nos Special Guests de Lorwyn Eclipsed. **CONCLUÍDO, não publicado.** Pacote: `lambe-lambe/episodios/ll-art13_nathanna_sete_cartas/`. Antes de publicar: o fundador confirma a autorização da artista para a foto do slide 6. Primeiro carrossel com o **modelo pronto sem ElevenLabs** (`lambe-lambe/referencias/carrossel_padrao_0{1,2}.png` + `lambe-lambe/kit_carrossel/motor_padrao.py`). Conflito de ID: a branch `lambe/artistas-carrosseis` usa LL-ART13–18; renumerar ao integrá-la (`nucleo/DECISOES.md`, 14/11).
-
-- **AB-01 «Crucible of Worlds volta em Nauctis»** (15/11, Reel ABISMO): **CONCLUÍDO, não publicado.** Pacote: `abismo/publicacoes/AB-01-crucible-reel/` (render fora do Git; recria-se com o motor, custo zero). Carta de Nauctis ainda não usada: só a Shimmering Citadel (NAU 260; camada Grande Marinho, indicada pelo fundador a 15/11).
-- **ABISMO (Nauctis)** (15/11): kit em `abismo/` integrado na `main`. Comando `ABISMO: CRIAR POSTAGEM` (ver `abismo/README.md`). Pré-visualizações AB-00 de validação, não publicar. Pendente: confirmar «≈ 500 cópias» antes de usar. Capa do AB-00-previa-reel feita com `abismo/motor/capa.py` (01:50); **capa obrigatória em toda postagem**, gerada automaticamente no render do Reel (01:55, `nucleo/DECISOES.md`).
-- **EX-01 «Nauctis: Primeiro Mergulho»** (14/11, formato **Expedição BINDER**, branch `expedicao/01-nauctis`): **v3 «Operação Abyssal» (retenção)** renderizada e conferida em duas versões — A engajamento (59,2 s) e B instalação (58,3 s), −14,1 LUFS, sem avisos internos, revelação no drop aos 37,8 s, fecho próprio com scanner real (decisão 14/11). Voz da v1 reaproveitada (só cortes). Falta: aprovação do fundador (ouvir A e B, escolher o final), licença da «Auction of Power»; depois `memoria.py encerramento EX-01` e merge para a `main`. Publicação alvo: segunda 16/11, 21h Lisboa.
-- **MC-ESP02 «A Taça respondeu»** (14/11): continuação do ESP01 com os dados da Taça Preconauta (66% para quem começa o jogo 1). **CONCLUÍDO, não publicado.** Pacote: `oraculo/esp02/`. Capa variante grunge (16/11, estilo da capa do EP08): `oraculo/esp02/capa_grunge.py`. Antes de publicar: mandar o roteiro ao Preconauta (prometido), ouvir a pronúncia; ao publicar, convite de Collab para @preconautamtg. Próxima pauta possível: ligas 2x2 × mesão do Preconauta (site principal não respondeu a 14/11).
-- **MC-ESP01 «A comunidade falou: Precon em dupla»** (13/11): primeiro especial do TUBO, a partir do comentário de @diarioplaninauta; autorização do fundador (02:13). **CONCLUÍDO, não publicado** (v3 com gancho de cartas reais, na `main`). Pacote: `oraculo/esp01/`. Antes de publicar: ouvir a pronúncia, avisar o autor e, se ele aceitar, convidar para Collab (e a @montcardshop).
-- **MC-EP08** (16/11): PUBLICADO; 7 s de tempo médio em 59 s nas primeiras 6 h (quadro 0 sem carta). **MC-EP08B** «campeão primeiro» (30,4 s, abertura no modelo do MC-ESP01 com foto + cartas, lista do deck): **CONCLUÍDO, não publicado**, pacote `oraculo/ep08b/`. Regra nova do TUBO: abertura com cartas no quadro 0 e revelação nos primeiros 3 s (`oraculo/CONTEXTO.md` §7).
-- **MC-EP06 «Prestação de contas: placar zero»** (o TUBO de segunda): escrito, não produzido; a prestação de contas real é segunda 16/11 (`python3 -I oraculo/previsoes/ciclo.py segunda`).
+- **Publicados:** o fundador confirmou a 16/11 (11:23) que «todos os episódios criados já foram lançados». No registo passaram a PUBLICADO: MB-GIRO02, MB-GIRO03, MB-EP10, MB-ESP03-CARR, MC-EP03, MC-EP04, MC-EP08B, ORB-07 a 10, LL-ART13, LL-PRETRK, LL-SHEOL, LL-DIVCAR, LL-CAMPBR, AB-01, e a linha nova MB-ESP04 (especial «Precon em jogo», que faltava). MC-ESP01, MC-ESP02 e MC-EP08 já estavam PUBLICADO. Datas exatas por confirmar no domingo, com os Insights.
+- **EX-01 «Nauctis: Primeiro Mergulho»**: continua EM PRODUÇÃO no registo (não estava concluído: faltava escolher A ou B e a licença da «Auction of Power»). Se já saiu, o fundador diz qual versão e passa a PUBLICADO.
+- **MC-EP06 «Prestação de contas: placar zero»**: EM PRODUÇÃO no registo, escrito e nunca produzido; a prestação de contas foi feita pelo MC-EP08. Proposta: arquivar (PAUSADO ou REJEITADO). Depende do fundador.
+- **Parcerias**: missão de 16/11 integrada (`nucleo/auditorias/2026-11-16_parcerias.md`). Piloto proposto: Farpas de Mana × Meta em Curto (MC-ESP03, não registado). Artista Caio Monteiro: pelo Lambe-lambe, não pelo Conde (adenda do relatório).
 - **Vince Vault (Multiverse Capital)**: direção 2D ativa (PR #17, decisões de 11–12/11; 3D arquivado). Bíblia `vince/CONTEXTO.md`, som da Fonte `vince/audio/fonte.py`. **Em falta:** o kit 2D (16 PNG), `recortar.py`, `EDICAO.md` e `PROMPT_EPISODIO.md` descritos no PR #17 não chegaram à branch — pedir à sessão de origem ou refazer com aprovação.
 
 ## Consolidação
@@ -106,9 +99,9 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 - `oraculo/episodios/ep01_render_v2.py` importa `render`, que não existe; `conde/montar_ep002.py` tem caminho absoluto. Não se mexe em scripts de episódios publicados sem necessidade.
 - Skills `binder-*` ainda mandam ler primeiro o Drive e dizem que o Scryfall não abre; alinhar com o repositório quando o fundador quiser.
 
-## Especial em espera de publicação
+## Especial «Precon em jogo» (MB-ESP04)
 
-`especiais/precon_em_jogo/`: vídeo final conferido (02/11), publicação prevista a 04/11/2026. Depende do fundador: ouvir, avisar @diegoalencard e publicar.
+Publicado (fundador, 16/11). Linha criada no registo a 16/11.
 
 ## Especial "Precon em jogo" · V2 para impulsionamento (03/11/2026)
 
@@ -134,8 +127,10 @@ Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por co
 
 ## Próximo passo concreto
 
-Conde Ep. 004 (Joven) produzido a 03/11/2026 e por publicar: o fundador ouve a pronúncia de "Joven", "Chandler" e "Eron" e publica o pacote (`conde/legendas/ep004_joven_legenda.txt`, ficha em `conde/episodios/ep004_joven_ficha.md`; o vídeo não está no repositório, recria-se com `python3 conde/montar_ep004.py`, desde que `conde/ep004/audio/narracao.wav` exista: se faltar, ver o flow ElevenLabs em `conde/episodios/ep004_fontes.txt`). Prestação de contas de 16/11 feita (MC-EP08). Próxima: quinta 19/11 `tubo quinta`; placar parcial das PR-TRK-01..03 segunda 23/11 (auditoria final 01/12).
+1. Fundador: EX-01 (saiu? versão?), MC-EP06 (arquivar?), ligar a @binder_vision no vidIQ, aprovar a DM ao Farpas (relatório de parcerias §6.3) e o carrossel do Caio Monteiro (adenda).
+2. Domingo 22/11: rotina de insights com as datas de publicação dos conteúdos fechados a 16/11 e as métricas do MC-ESP01/ESP02 (termo de comparação das parcerias).
+3. Quinta 19/11: briefing automático do TUBO (tarefa agendada).
 
 ## Handoff
 
-Ver o handoff de 12/11/2026 no fim de `nucleo/auditorias/2026-11-12_missao_master.md`.
+Último: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). Anterior: 12/11, em `nucleo/auditorias/2026-11-12_missao_master.md`.

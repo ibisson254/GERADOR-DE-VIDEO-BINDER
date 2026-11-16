@@ -359,3 +359,8 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - **vidIQ**: testado; lê Insights de dono do Instagram, mas está ligado à conta pessoal. Pendente o fundador ligar a @binderthetrade.
 - **Segurança (Supabase, aviso do advisor):** a tabela `public.spatial_ref_sys` (PostGIS) está sem RLS. Não se alterou nada; decisão do arquiteto do app.
 - **Tarefa agendada** «Briefing do TUBO (segunda e quinta)», 09:47 de Lisboa: corre `ciclo.py segunda|quinta` + `continuacao`, confere as previsões na web e manda o briefing ao fundador. Só leitura: sem créditos, sem publicar, sem commits.
+
+## 16/11/2026 (11:23) · Conta @binder_vision; conteúdos fechados publicados; missão de parcerias integrada
+- **Conta:** o fundador mudou o nome para «Binder vision». O handle é **@binder_vision**, já usado nas autorizações desde 13/11. Os documentos vivos (AGENTS, README, series.yaml, constituição, catálogo, registo, histórico, insights, prompts, CONTEXTO das frentes) foram atualizados. Fichas, legendas e scripts de conteúdos publicados não se reabrem.
+- **Estados:** «todos os episódios criados já foram lançados». Todos os CONCLUÍDO do registo passaram a PUBLICADO, com data «até 16/11/2026» a confirmar pelos Insights. Linha nova: MB-ESP04 (especial «Precon em jogo»). EX-01 e MC-EP06 não mudam sem decisão.
+- **Parcerias:** `nucleo/auditorias/2026-11-16_parcerias.md` integrado na `main` («faça o merge»). Caio Monteiro passa do Conde para o Lambe-lambe (adenda do relatório). Nenhuma mensagem enviada; o piloto com o Farpas espera aprovação da DM.

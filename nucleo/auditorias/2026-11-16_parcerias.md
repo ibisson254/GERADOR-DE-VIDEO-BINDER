@@ -251,3 +251,19 @@ Tarefas pendentes:
 
 Próximo passo concreto: o fundador responde às decisões da §5.1 e aprova a DM da §6.3; depois, merge desta branch para a main.
 ```
+
+---
+
+## Adenda · 16/11/2026, 11:30 (respostas do fundador às 11:23)
+
+- **Handle:** a conta passou a **@binder_vision** («BINDER Vision»). Documentos vivos atualizados; conteúdos publicados mantêm o nome antigo. As mensagens da §6 saem deste perfil.
+- **Estados:** «todos os episódios criados já foram lançados». Os CONCLUÍDO passaram a PUBLICADO no registo, e o especial «Precon em jogo» entrou como MB-ESP04. A §2 fica resolvida, exceto o EX-01 (não estava concluído) e o MC-EP06 (nunca produzido), que esperam decisão.
+- **Caio Monteiro: Lambe-lambe, não Conde.** O fundador observa que o Conde é a frente com pior taxa de views. O repositório só tem um ponto de dados do Conde (CM-EP001, 1.000 views em 1 dia, semana de 26/10), por isso a observação é dele e fica por medir. Mesmo sem esse número, o Lambe-lambe ganha por três razões:
+  1. **Formato já provado com artista brasileira:** «Artistas de Magic (Brasil)» (LL-ART02, 06, 10 e LL-ART13 sobre a Nathanna Érica), com o modelo pronto sem ElevenLabs (`lambe-lambe/kit_carrossel/motor_padrao.py`): custo de créditos zero.
+  2. **O artista partilha com mais facilidade** um carrossel que celebra o trabalho dele do que um Reel em que uma personagem critica a arte, mesmo que a piada seja contra o Conde. A probabilidade de collab sobe.
+  3. **Guardados e partilhas** são as métricas fortes do carrossel, e o público de arte guarda.
+  - O Conde fica como segundo passo, só se o artista gostar da ideia depois do carrossel.
+- **Matriz revista para o Caio (Lambe-lambe):** encaixe 5, exclusivo 3, público 3, probabilidade 3, custo 5, recorrência 3 → **3,75**. Continua secundário, atrás do Farpas (4,15).
+- **Pauta proposta:** LL-ART14 ou ID seguinte livre depois da renumeração da branch `lambe/artistas-carrosseis` (conflito LL-ART13–18, `nucleo/DECISOES.md` 14/11). Tema: «De Shark Typhoon a Archmage Emeritus: o carioca por trás de [n] cartas de Magic» (n a contar no dia, com a fonte Scryfall). A auditoria de pauta (Shark Typhoon × Caio Monteiro) deu LIVRE.
+- **DM revista ao Caio:**
+  > Oi, Caio! Sou o Ibisson, do BINDER Vision. A gente faz uma série de carrosséis sobre artistas brasileiros de Magic e queria fazer um sobre o seu trabalho (Shark Typhoon, Archmage Emeritus e outras). Você toparia ver antes e, se curtir, fazer o post em collab? Se quiser indicar quais artes prefere que apareçam, melhor ainda. Tudo com crédito e link para o seu portfólio.
