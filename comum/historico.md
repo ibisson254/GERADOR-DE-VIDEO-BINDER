@@ -109,3 +109,4 @@ Formato: data · ID · frente · acontecimento · estado. Mais recente no fim.
 
 - 16/11/2026, 17h · Plano dos projetos de collab em `comum/parcerias.md` (painel, calendário até 13/12, MC-ESP03 Farpas, MC-ESP04 Preconauta, LL-ART20 Caio Monteiro). Nada enviado nem registado.
 - 16/11/2026, 17:31 · Parcerias passam ao método «episódio pronto primeiro»; `comum/parcerias.md` reescrito (LL-ART20, MC-ESP03, MC-ESP04).
+- 16/11/2026, 19h · LL-ART20 (Caio Monteiro) produzido: 7 slides em versões A (foto), A prévia e B (sem foto); CONCLUÍDO, publicação bloqueada até resposta do artista. PNGs não versionados (foto sem autorização).

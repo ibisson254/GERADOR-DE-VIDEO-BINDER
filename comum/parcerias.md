@@ -32,7 +32,7 @@ Todos os outros conteúdos com terceiros já foram feitos, publicados e registad
 
 | Ordem | ID provisório | Parceiro-alvo | Frente · formato | Créditos | Se disser não | Material em falta |
 |---|---|---|---|---|---|---|
-| 1 | **LL-ART20** | Caio Monteiro (artista) | Lambe-lambe · carrossel | 0 | publicar com crédito e marcação | handle confirmado |
+| 1 | **LL-ART20** | Caio Monteiro (@caiomonteiroart) | Lambe-lambe · carrossel | 0 | versão B (sem foto) com crédito e marcação | **pronto 16/11** · prévia por enviar · prazo 21/11 |
 | 2 | **MC-ESP03** | MTGDC500 / Lotus Games (dono dos dados) | Meta em Curto · Reel 25–35 s | voz (~1.500–2.200, estimativa) | publicar com crédito ao site (dados públicos) | nada; extração no dia |
 | 3 | **MC-ESP04** | Preconauta (parceiro ativo) | Meta em Curto · Reel | voz | não se aplica (autorização de 13/11 cobre os números dos sites deles) | prints das ligas mesão e 2x2 |
 
@@ -71,5 +71,6 @@ Farpas de Mana (fonte própria), Tenda da Liliana (Pauper), Cabrito Montês (res
 |---|---|---|---|---|---|---|---|---|
 | MC-ESP01 | @montcardshop | — | aceitou | sim | | | | termo de comparação |
 | MC-ESP02 | Preconauta | — | aceitou | sim | | | | termo de comparação |
+| LL-ART20 | Caio Monteiro | | | | | | | |
 
 Sem dado = vazio, nunca 0.

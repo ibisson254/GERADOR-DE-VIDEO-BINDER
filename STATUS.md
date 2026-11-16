@@ -127,7 +127,7 @@ Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por co
 
 ## Próximo passo concreto
 
-1. Produzir o LL-ART20 (Caio Monteiro, carrossel sem créditos) e entregar o pacote de envio ao fundador. Fundador: EX-01 (saiu? versão?), ligar a @binder_vision no vidIQ, prints das ligas Preconauta para o MC-ESP04.
+1. Fundador: enviar a prévia do LL-ART20 a @caiomonteiroart (mensagem na ficha; três pedidos: foto, publicação, collab; prazo 21/11) e registar a resposta em `lambe-lambe/autorizacoes/`. Depois: MC-ESP03 (confirmar o Instagram do MTGDC500 / Lotus Games). Também: EX-01, vidIQ, prints das ligas Preconauta.
 2. Domingo 22/11: rotina de insights com as datas de publicação dos conteúdos fechados a 16/11 e as métricas do MC-ESP01/ESP02 (termo de comparação das parcerias).
 3. Quinta 19/11: briefing automático do TUBO (tarefa agendada).
 
