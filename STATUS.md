@@ -27,7 +27,7 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 
 - **Publicados:** o fundador confirmou a 16/11 (11:23) que «todos os episódios criados já foram lançados». No registo passaram a PUBLICADO: MB-GIRO02, MB-GIRO03, MB-EP10, MB-ESP03-CARR, MC-EP03, MC-EP04, MC-EP08B, ORB-07 a 10, LL-ART13, LL-PRETRK, LL-SHEOL, LL-DIVCAR, LL-CAMPBR, AB-01, e a linha nova MB-ESP04 (especial «Precon em jogo», que faltava). MC-ESP01, MC-ESP02 e MC-EP08 já estavam PUBLICADO. Datas exatas por confirmar no domingo, com os Insights.
 - **EX-01 «Nauctis: Primeiro Mergulho»**: continua EM PRODUÇÃO no registo (não estava concluído: faltava escolher A ou B e a licença da «Auction of Power»). Se já saiu, o fundador diz qual versão e passa a PUBLICADO.
-- **MC-EP06 «Prestação de contas: placar zero»**: EM PRODUÇÃO no registo, escrito e nunca produzido; a prestação de contas foi feita pelo MC-EP08. Proposta: arquivar (PAUSADO ou REJEITADO). Depende do fundador.
+- **MC-EP06**: REJEITADO (fundador, 16/11 13:47: perdeu o timing do pré-release; nunca produzido).
 - **Parcerias**: missão de 16/11 integrada (`nucleo/auditorias/2026-11-16_parcerias.md`). Piloto proposto: Farpas de Mana × Meta em Curto (MC-ESP03, não registado). Artista Caio Monteiro: pelo Lambe-lambe, não pelo Conde (adenda do relatório).
 - **Vince Vault (Multiverse Capital)**: direção 2D ativa (PR #17, decisões de 11–12/11; 3D arquivado). Bíblia `vince/CONTEXTO.md`, som da Fonte `vince/audio/fonte.py`. **Em falta:** o kit 2D (16 PNG), `recortar.py`, `EDICAO.md` e `PROMPT_EPISODIO.md` descritos no PR #17 não chegaram à branch — pedir à sessão de origem ou refazer com aprovação.
 
@@ -127,7 +127,7 @@ Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por co
 
 ## Próximo passo concreto
 
-1. Fundador: EX-01 (saiu? versão?), MC-EP06 (arquivar?), ligar a @binder_vision no vidIQ, aprovar a DM ao Farpas (relatório de parcerias §6.3) e o carrossel do Caio Monteiro (adenda).
+1. Fundador: EX-01 (saiu? versão?), ligar a @binder_vision no vidIQ, aprovar a DM ao Farpas (relatório de parcerias §6.3) e o carrossel do Caio Monteiro (adenda).
 2. Domingo 22/11: rotina de insights com as datas de publicação dos conteúdos fechados a 16/11 e as métricas do MC-ESP01/ESP02 (termo de comparação das parcerias).
 3. Quinta 19/11: briefing automático do TUBO (tarefa agendada).
 

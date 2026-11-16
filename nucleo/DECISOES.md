@@ -364,3 +364,7 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - **Conta:** o fundador mudou o nome para «Binder vision». O handle é **@binder_vision**, já usado nas autorizações desde 13/11. Os documentos vivos (AGENTS, README, series.yaml, constituição, catálogo, registo, histórico, insights, prompts, CONTEXTO das frentes) foram atualizados. Fichas, legendas e scripts de conteúdos publicados não se reabrem.
 - **Estados:** «todos os episódios criados já foram lançados». Todos os CONCLUÍDO do registo passaram a PUBLICADO, com data «até 16/11/2026» a confirmar pelos Insights. Linha nova: MB-ESP04 (especial «Precon em jogo»). EX-01 e MC-EP06 não mudam sem decisão.
 - **Parcerias:** `nucleo/auditorias/2026-11-16_parcerias.md` integrado na `main` («faça o merge»). Caio Monteiro passa do Conde para o Lambe-lambe (adenda do relatório). Nenhuma mensagem enviada; o piloto com o Farpas espera aprovação da DM.
+
+## 16/11/2026 (13:47) · MC-EP06 rejeitado; instruções do projeto claude.ai revistas
+- **MC-EP06** «Prestação de contas: placar zero»: REJEITADO. «Nunca foi nem vai mais; já passou o pré-release, perdemos o timing.» O ID não se reutiliza.
+- **`nucleo/prompts/CLAUDE_PROJECT.md`** revisto para refletir a conta @binder_vision, as ferramentas (`memoria.py`, `ciclo.py`, workflow `validar`), as fontes de métricas (vidIQ, Supabase, Play Console) e as regras de gasto e de parcerias. O fundador cola o texto no projeto «Binder Marketing».
