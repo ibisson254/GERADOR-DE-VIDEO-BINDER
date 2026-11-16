@@ -112,3 +112,4 @@ Formato: data · ID · frente · acontecimento · estado. Mais recente no fim.
 - 16/11/2026, 19h · LL-ART20 (Caio Monteiro) produzido: 7 slides em versões A (foto), A prévia e B (sem foto); CONCLUÍDO, publicação bloqueada até resposta do artista. PNGs não versionados (foto sem autorização).
 - 16/11/2026, 19h15 · LL-ART20: Story animado de 9 s («o cartaz está sendo colado»), versões prévia com foto e B sem foto, sem áudio. MP4 não versionados.
 - 16/11/2026, 19h10 · Story do Lambe-lambe passa a padrão: kit `lambe-lambe/kit_story/` (motor + LEIA-ME); LL-ART20 migrado para `story.json`.
+- 16/11/2026, 19h45 · Story do Lambe-lambe passa a terminar com o fecho do scanner (motor_story.py); LL-ART20 refeito (12,87 s), QC com fecho presente.

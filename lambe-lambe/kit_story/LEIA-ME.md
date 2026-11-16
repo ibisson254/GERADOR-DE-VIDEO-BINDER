@@ -8,11 +8,12 @@ Padrão do fundador (16/11/2026): **todo carrossel Lambe-lambe sai com este Stor
 3. `python3 -I lambe-lambe/kit_story/motor_story.py <story.json> <saída.mp4> [--sem-foto] [--previa]` (~50 s por versão).
    - Sem foto de terceiros: uma versão só (`--sem-foto` ou sem `foto` no JSON).
    - Com foto ainda não autorizada: `--previa` (envio privado) **e** `--sem-foto` (publicável). A versão com foto só se publica com autorização registada.
-4. O motor grava 8 frames-chave ao lado do MP4 (`*_fNNN.jpg`): montar a folha de contacto e conferir.
-5. MP4 e frames não se versionam. No repositório ficam `story.json` e a nota de QC.
+4. QC: `python3 -I comum/qc/qc_video.py <saída.mp4> --frente lambe` (o aviso «sem faixa de áudio» é esperado).
+5. O motor grava 8 frames-chave ao lado do MP4 (`*_fNNN.jpg`): montar a folha de contacto e conferir.
+6. MP4 e frames não se versionam. No repositório ficam `story.json` e a nota de QC.
 
-## O que o motor faz (9 s, 1080×1920, 30 fps, H.264, sem áudio)
-0–1,15 s muro vazio e sombra a anunciar · 1,15–1,77 capa cai e bate (aceleração, curvatura, tremor, overshoot) · 2,3 e 2,8 fitas nos cantos de cima, ondulação do papel · 3,3–4,6 kraft, impressão da esquerda, kraft · 5,55 retrato ou carta bate à direita · 6,35 detalhe desenrola ao centro · 7,2–8,4 câmara recua, faixa preta com `nome`, `serie · BINDER` e créditos · 8,4–9,0 plano parado.
+## O que o motor faz (9 s + fecho do scanner = 12,87 s, 1080×1920, 30 fps, H.264, sem áudio)
+0–1,15 s muro vazio e sombra a anunciar · 1,15–1,77 capa cai e bate (aceleração, curvatura, tremor, overshoot) · 2,3 e 2,8 fitas nos cantos de cima, ondulação do papel · 3,3–4,6 kraft, impressão da esquerda, kraft · 5,55 retrato ou carta bate à direita · 6,35 detalhe desenrola ao centro · 7,2–8,4 câmara recua, faixa preta com `nome`, `serie · BINDER` e créditos · 8,4–9,0 plano parado · 9,0–12,87 fecho do scanner (`comum/outro/outro_binder_916.mp4`, regra de todos os vídeos; `--sem-fecho` só para testes).
 
 ## Regras
 - Mesma identidade do carrossel; o motor do carrossel não se altera.

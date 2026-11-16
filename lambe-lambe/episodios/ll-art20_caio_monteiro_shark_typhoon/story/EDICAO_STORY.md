@@ -23,6 +23,7 @@ Motor reutilizável: `lambe-lambe/kit_story/motor_story.py` (o script deste epis
 | 7,2–8,4 | Revelação | câmara recua para 1,0× (o muro tem parallax de 0,6) |
 | 7,25 | Faixa preta | sobe com ressalto: «CAIO MONTEIRO · Artistas de Magic · BINDER» e créditos |
 | 8,4–9,0 | Plano fixo para leitura | — |
+| 9,0–12,87 | Fecho do scanner (`comum/outro/outro_binder_916.mp4`) | acrescentado a 16/11, 19:43, a pedido do fundador |
 
 ## Exportações (não versionadas)
 - `LL_ART20_story_previa_com_foto.mp4`: com foto e faixa vertical «PRÉVIA · AGUARDA AUTORIZAÇÃO» na lateral direita. Só para envio privado ao Caio.
@@ -30,7 +31,8 @@ Motor reutilizável: `lambe-lambe/kit_story/motor_story.py` (o script deste epis
 - H.264, yuv420p, CRF 18, preset veryfast, 1080×1920, 30 fps, 9,0 s. **Sem áudio**: não há efeitos sonoros locais adequados; acrescentar som no próprio Instagram.
 
 ## QC (16/11/2026)
-- ffprobe: as duas versões em h264, 1080×1920, 30/1, 270 frames, 9,000 s: OK.
+- ffprobe: as duas versões em h264, 1080×1920, 30/1, 386 frames, 12,87 s (9,0 s + fecho): OK.
+- `comum/qc/qc_video.py --frente lambe`: fecho presente a partir de 9,0 s (dif. 0,06); único aviso P1 «sem faixa de áudio» (esperado).
 - Folha de contacto com 8 frames-chave por versão (0,5 / 1,5 / 2 / 3 / 4,6 / 6 / 7 / 8,9 s), entregue ao fundador.
 - Cartas sem deformação (escala uniforme; perspetiva só durante o voo); fitas só nos cantos de cima; nenhum texto sobre as artes: OK.
 - Zona segura: capa entre ~270 e ~1250 px; nome final em ~1640–1760 px (acima da barra de resposta dos Stories). Sem corte lateral: OK.

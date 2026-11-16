@@ -1,6 +1,7 @@
 """Motor do Story animado do Lambe-lambe: «o cartaz está sendo colado no muro». 1080x1920, 30 fps, 9 s, H.264, sem áudio.
 Padrão do fundador (16/11/2026): todo carrossel Lambe-lambe ganha este Story. Referência: LL-ART20.
-Uso: python3 -I motor_story.py <config.json> <saida.mp4> [--previa] [--sem-foto]
+Uso: python3 -I motor_story.py <config.json> <saida.mp4> [--previa] [--sem-foto] [--sem-fecho]
+Termina sempre com o fecho do scanner (comum/outro/outro_binder_916.mp4), salvo --sem-fecho.
 config.json (caminhos absolutos ou relativos ao JSON):
   capa      PNG da capa do carrossel (1080x1350, renderizado pelo motor_padrao, sem faixa de prévia)
   esquerda  art_crop (Scryfall) da impressão da esquerda
@@ -217,6 +218,15 @@ def frame(t):
         out = blend(out, tr, ta, np.vstack([R, [0, 0, 1]]))
     return np.clip(out, 0, 255).astype(np.uint8)
 
+FECHO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../comum/outro/outro_binder_916.mp4'))
+def fecho(mp4):
+    """acrescenta o fecho do scanner (regra de todos os vídeos do BINDER), sem corte lateral: mesmo 1080x1920 a 30 fps"""
+    tmp = mp4 + '.tmp.mp4'
+    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', mp4, '-i', FECHO, '-filter_complex',
+                    '[0:v]setsar=1[a];[1:v]scale=1080:1920,setsar=1,fps=30[b];[a][b]concat=n=2:v=1:a=0[v]', '-map', '[v]',
+                    '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', tmp], check=True)
+    os.replace(tmp, mp4)
+
 if __name__ == '__main__':
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     ff = subprocess.Popen(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'bgr24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
@@ -225,4 +235,6 @@ if __name__ == '__main__':
     for i in range(NF):
         f = frame(i / FPS); ff.stdin.write(f.tobytes())
         if i in chaves: cv2.imwrite(OUT.replace('.mp4', f'_f{i:03d}.jpg'), f, [cv2.IMWRITE_JPEG_QUALITY, 85])
-    ff.stdin.close(); ff.wait(); print('ok', OUT)
+    ff.stdin.close(); ff.wait()
+    if '--sem-fecho' not in sys.argv: fecho(OUT)
+    print('ok', OUT)
