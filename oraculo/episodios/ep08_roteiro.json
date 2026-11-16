@@ -1,0 +1,66 @@
+{
+ "episodio": "Meta em Curto EP08 · Mundial 32: prestação de contas (Acertei duas. Nenhuma era o campeão.)",
+ "nota": "texto = legenda; fala = grafia fonética para o ElevenLabs. Mesmo número de palavras por bloco.",
+ "blocos": [
+  {
+   "id": "gancho",
+   "onde": "fora",
+   "texto": "Previ três coisas sobre o Mundial. Acertei duas. Nenhuma delas era o campeão.",
+   "fala": "Previ três coisas sobre o Mundial. Acertei duas. Nenhuma delas era o campeão."
+  },
+  {
+   "id": "arquivo",
+   "onde": "dentro",
+   "texto": "Prestação de contas. Mundial trinta e dois, Standard, Top 8 de domingo.",
+   "fala": "Prestação de contas. Mundial trinta e dois, Stândard, Tóp óito de domingo."
+  },
+  {
+   "id": "prev01",
+   "onde": "dentro",
+   "texto": "Previsão pública: Jund Sacrifice no Top 8. Um Jund chegou lá. Confirmada.",
+   "fala": "Previsão pública: Djând Sácrifais no Tóp óito. Um Djând chegou lá. Confirmada."
+  },
+  {
+   "id": "prev03",
+   "onde": "dentro",
+   "texto": "Izzet Spellementals abaixo de cinco por cento. Zero jogadores em cento e vinte e oito. Confirmada.",
+   "fala": "Ízet Spélementals abaixo de cinco por cento. Zero jogadores em cento e vinte e oito. Confirmada."
+  },
+  {
+   "id": "prev02",
+   "onde": "dentro",
+   "texto": "Jund entre os três mais jogados? Sétimo lugar, cinco vírgula cinco por cento. Refutada.",
+   "fala": "Djând entre os três mais jogados? Sétimo lugar, cinco vírgula cinco por cento. Refutada."
+  },
+  {
+   "id": "top8",
+   "onde": "dentro",
+   "texto": "No Top 8, oito jogadores e oito decks diferentes.",
+   "fala": "No Tóp óito, oito jogadores e oito décks diferentes."
+  },
+  {
+   "id": "campeao",
+   "onde": "dentro",
+   "texto": "E o campeão é Stefan Schütz, da Áustria, com Izzet Mission. Dois jogadores em cento e vinte e oito levaram esse deck. A carta que dá nome a ele é de Star Trek e entrou no formato uma semana antes.",
+   "fala": "E o campeão é Stéfan Chúts, da Áustria, com Ízet Míchon. Dois jogadores em cento e vinte e oito levaram esse déck. A carta que dá nome a ele é de Stár Trék e entrou no formato uma semana antes."
+  },
+  {
+   "id": "tese",
+   "onde": "fora",
+   "texto": "No último episódio eu disse: os dados escolhem o deck, não quem pilota. No domingo, quem pilota escolheu um deck que os dados não viam. Placar: duas de três.",
+   "fala": "No último episódio eu disse: os dados escolhem o déck, não quem pilota. No domingo, quem pilota escolheu um déck que os dados não viam. Placar: duas de três."
+  },
+  {
+   "id": "pergunta",
+   "onde": "fora",
+   "texto": "Você levaria ao Mundial um deck que só dois jogadores levaram?",
+   "fala": "Você levaria ao Mundial um déck que só dois jogadores levaram?"
+  },
+  {
+   "id": "fecho",
+   "onde": "fora",
+   "texto": "Probabilidade calculada. Humanos, imprevisíveis.",
+   "fala": "Probabilidade calculada. Humanos, imprevisíveis."
+  }
+ ]
+}

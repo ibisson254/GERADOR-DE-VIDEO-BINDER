@@ -1,0 +1,27 @@
+META EM CURTO EP08 · FONTES E VERIFICAÇÃO (acedido a 16/11/2026)
+Classe: Prestação de contas (segunda) + Leitura da Final. Conferências escritas em oraculo/previsoes/registo.yaml antes da voz.
+
+FACTOS
+- https://magic.gg/events/magic-world-championship-32 · campeão: «Mission Accomplished for World Champion Stefan Schütz», Izzet Mission. Top 8 com países: Kikidis (GR), Schütz (AT), Huschenbeth (DE), Pastore (US), Schnake (US), Nakamura (JP), Sajgalik (CA), Drake (AU).
+- https://magic.gg/news/magic-world-championship-32-day-two-highlights · decks do Top 8 (8 arquétipos diferentes); Izzet Mission «wasn't on anyone's radar», a carta que lhe dá nome entrou no formato uma semana antes do torneio.
+- https://magic.gg/news/magic-world-championship-32-top-8-players-and-decks · Abe Schnake com Jund Sacrifice; cartas-chave citadas: Smaug, the Magnificent; Torch the Tower; Greedy Freebooter.
+- https://magic.gg/news/magic-world-championship-32-standard-metagame-breakdown · 128 jogadores. Boros Pixie 24 (18,8%), Selesnya Landfall 19 (14,8%), Dimir Control 10 (7,8%), Selesnya Michelangelo 9 (7,0%), Mono-Green Landfall 8 (6,3%), Dimir Midrange 8 (6,3%), Jund Sacrifice 7 (5,5%) … Izzet Mission 2 (1,6%). Izzet Spellementals: nenhum jogador.
+- https://mtgtop8.com/event?d=912141&e=93781&f=ST · lista de Stefan Schütz (fonte: melee.gg), 60 + 15. Posições finais na mesma base: 1 Schütz, 2 Sajgalik (não usado no vídeo).
+- Scryfall: Anthropological Mission TRK 46 (Pablo Mendoza); Smaug, the Magnificent HOB 110 (Francisco Miyara); Torch the Tower WOE 153 (Uriah Voth); Greedy Freebooter LCI 109 (David Palumbo); Ral, Crackling Wit BLB 230 (Rudy Siswanto); Into the Flood Maw BLB 52 (Danny Schwartz).
+- Antes do Mundial: Izzet Spellementals 7,5% do field (Frank Karsten, magic.gg, 05/11; ver ep07_mundial_fontes.txt).
+
+CONTRADIÇÃO REGISTADA
+- mtg.wiki (2026 World Championship) e mtgdecks (classificação da ronda 14) dão Charis Kikidis como vencedor. Vale a fonte oficial (magic.gg) e o MTGTop8 (Melee), que dão Stefan Schütz. Nenhum dado do vídeo depende só do mtg.wiki.
+
+LEITURA DO TUBO (opinião)
+- «Quem pilota escolheu um deck que os dados não viam» = tese revista do EP07; não é previsão registada, não muda o placar.
+
+EASTER EGG
+- «MOCS» na vertical na chuva de código (cena da lista, ~35–38 s): Schütz venceu o Magic Online Champions Showcase, temporada 1 de 2024 (Ultimate Guard, artigo do próprio jogador).
+
+FOTO
+- Foto do campeão enviada pelo fundador a 16/11 (00:53), «da autorização do jogador» (oraculo/autorizacoes/2026-11-16_ep08_foto_campeao.md).
+
+PRODUÇÃO
+- Voz: ElevenLabs «Antonio de Jesus» (MK5tXPmT83J5SUlpUo4K), eleven_v4, 2 tomadas (1.868 créditos), escolhida a tomada 2 (geração P8i1X70szTFXue4174Mj). Flow «Meta em Curto EP08 · Mundial 32 contas» (uOmbd2z44s77ysEx7pu6). Tempos por palavra: Scribe v1 (0 créditos), 160 = 160 nas duas tomadas.
+- Trilha: oraculo/musica/tubo_tema_original.mp3, corte seco de 0,8 s depois de «com Izzet Mission.».

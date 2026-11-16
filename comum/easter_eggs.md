@@ -16,3 +16,4 @@
 | 10/11/2026 | Meta em Curto · EP07 (Mundial 32) | "2002" na vertical na chuva de código = ano do título mundial de Carlos Romão, primeiro brasileiro campeão | fichas dos brasileiros, ~16–19 s, canto inferior direito |
 | 13/11/2026 | Meta em Curto · ESP01 (Precon em dupla) | "30" na vertical na chuva de código = vida inicial do Gigante de Duas Cabeças clássico (o de Commander dobra para 60) | cena das regras, ~15–22 s, canto inferior direito |
 | 14/11/2026 | Meta em Curto · ESP02 (A Taça respondeu) | "29" na vertical na chuva de código = número de duplas da 1.ª edição da Taça Preconauta | cena da ordem de turno, ~14–24 s, canto inferior direito |
+| 16/11/2026 | Meta em Curto · EP08 (prestação de contas do Mundial 32) | "MOCS" na vertical na chuva de código = Stefan Schütz venceu o Magic Online Champions Showcase (2024, temporada 1) | cena da lista campeã, ~35–38 s, canto inferior direito |

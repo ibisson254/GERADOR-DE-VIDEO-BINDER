@@ -8,10 +8,11 @@ Semente de 02/11/2026. Previsões e resultados vivem em `comum/historico.md` (`o
 - EP03 · Arquivo Competitivo · branch `meta-em-curto-ep03`, PR #4 · promessa: analisar um evento quando os resultados fecharem [cumprida 02/11, EP04, votação B].
 - EP04 · Jund em Pequim · `oraculo/episodios/ep04_jund_pequim_ficha.md` · previsões: nenhuma. Refere Hartford (EP02): núcleo de 7 cartas igual.
 - EP05 · Star Trek, engenharia de um deck · `oraculo/episodios/ep05_star_trek_ficha.md` · 1 previsão pública, 3 de registo.
+- EP08 · Prestação de contas do Mundial 32 · `oraculo/ep08/ficha.md` · PR-WC32-01 e 03 CONFIRMADAS, 02 REFUTADA (placar 2/3). Campeão Stefan Schütz (Izzet Mission). Tese do EP07 («os dados escolhem o deck, não quem pilota») revista em voz alta.
 - EP07 · Mundial 32: seis brasileiros e a primeira previsão · `oraculo/episodios/ep07_mundial_ficha.md` · previsões: PR-WC32-01 (pública) a 03, conferência 16/11. Refere EP02 e EP04 (os dois títulos de Jund).
 
 ## Previsões abertas
-- Registo único: `oraculo/previsoes/registo.yaml` (desde 09/11/2026). Abertas: PR-TRK-01 (pública) a 04, auditoria a 01/12/2026, placar parcial às segundas. Conferência extra a 10/11 (PENDENTE). PR-WC32-01 (pública) a 03 do EP07, prazo 16/11. Antes de qualquer roteiro: `python3 -I oraculo/previsoes/ciclo.py continuacao`.
+- Registo único: `oraculo/previsoes/registo.yaml` (desde 09/11/2026). Abertas: PR-TRK-01 (pública) a 04, auditoria a 01/12/2026, placar parcial às segundas. Conferência extra a 10/11 (PENDENTE). PR-WC32-01..03 fechadas a 16/11 (EP08). Antes de qualquer roteiro: `python3 -I oraculo/previsoes/ciclo.py continuacao`.
 
 
 ## Contador "ERROS HUMANOS"
@@ -23,5 +24,5 @@ Semente de 02/11/2026. Previsões e resultados vivem em `comum/historico.md` (`o
 ## Promessas ao público
 - EP05: «Se eu errar, assumo.» Giro de 08/11: o TUBO volta a 09/11 para prestar contas (cumprida pelo EP06, escrito a 09/11).
 - EP06 (se publicado): placar parcial toda segunda até 01/12; «Quinta: previsão do Mundial» (cumprida pelo EP07, produzido a 10/11).
-- EP07: «Segunda eu confiro.» → episódio de segunda 16/11 com PR-WC32-01..03.
+- EP07: «Segunda eu confiro.» → cumprida pelo EP08 (16/11).
 

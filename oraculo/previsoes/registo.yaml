@@ -40,6 +40,12 @@ previsoes:
         nota_recorte: "a tabela Deck Color Data do 17Lands separa decks com splash; para 'pares de duas cores' valem as 10 linhas de guilda sem splash. Fixado a 10/11, antes de existir qualquer dado"
         muda_estado: false
         estado: PENDENTE
+      - data: 2026-11-16
+        episodio: "MC-EP08 (comentário fixado)"
+        dado: "sem ranking público acessível do Sealed de TRK no 17Lands nesta conferência (página do MTGMeta fora do alcance da sessão; só dados de Premier Draft citados por terceiros)"
+        evidencia_recebida: "nenhuma do tipo do critério"
+        muda_estado: false
+        estado: PENDENTE
     estado: PENDENTE
     erro_de_sistema_se_refutada: true
 
@@ -57,7 +63,13 @@ previsoes:
       inconclusiva: "ranking indisponível em 01/12/2026"
     prazo: 2026-12-01
     conferencias_marcadas: [2026-11-16, 2026-11-23, 2026-11-30]
-    conferencias: []
+    conferencias:
+      - data: 2026-11-16
+        episodio: "MC-EP08 (comentário fixado)"
+        dado: "sem ranking público acessível do Sealed de TRK no 17Lands nesta conferência (página do MTGMeta fora do alcance da sessão; só dados de Premier Draft citados por terceiros)"
+        evidencia_recebida: "nenhuma do tipo do critério"
+        muda_estado: false
+        estado: PENDENTE
     estado: PENDENTE
 
   - id: PR-TRK-03
@@ -86,6 +98,12 @@ previsoes:
         dado: "sem dados medidos de TRK"
         evidencia_recebida: "R/O · Draftsim, 09/11: sopa 'viva' por causa do fixing, as melhores com verde, muitas por necessidade do pool (contra esta previsão; sem contagem)"
         nota_recorte: "no 17Lands comparar a linha agregada 'Two-color' com as de três ou mais cores (Three-color, Four-color, Five-color), ponderadas pelos jogos. Fixado a 10/11, antes de existir qualquer dado"
+        muda_estado: false
+        estado: PENDENTE
+      - data: 2026-11-16
+        episodio: "MC-EP08 (comentário fixado)"
+        dado: "sem ranking público acessível do Sealed de TRK no 17Lands nesta conferência (página do MTGMeta fora do alcance da sessão; só dados de Premier Draft citados por terceiros)"
+        evidencia_recebida: "nenhuma do tipo do critério"
         muda_estado: false
         estado: PENDENTE
     estado: PENDENTE

@@ -336,3 +336,8 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 ## 15/11/2026 · ABISMO: Reel sem áudio
 - Pedido do fundador (21:03): meme AB-02 (Goramou × «Tubarão Te Amo») sem narração nem música no vídeo; a música entra pela biblioteca do Instagram na publicação. O motor ganhou a opção `"audio": false` no post.json (vídeo mudo). Por defeito continua com «Auction of Power».
 - Arte: Goramou NAU 329 (PINDURSKI), indicada pelo fundador.
+
+## 16/11/2026 · Meta em Curto: MC-EP08 (prestação de contas do Mundial 32)
+- Pedido do fundador (00:53): episódio do TUBO sobre o Mundial (decks do Top 8, campeão, previsões) com a foto do campeão no episódio e na capa. Às 01:12: «Foto veio da autorização do jogador e a conclusão do episódio do mundial prossiga e só pare quando o episódio estiver pronto» (inclui a voz no ElevenLabs).
+- A auditoria de pauta bloqueou por MB-GIRO03 (só menciona o Mundial) e MC-EP06 (prestação de contas de outro torneio). O pedido explícito do fundador vale como decisão para avançar.
+- Campeão: vale a fonte oficial (magic.gg: Stefan Schütz). O mtg.wiki diz Charis Kikidis; contradição registada nas fontes do episódio.
