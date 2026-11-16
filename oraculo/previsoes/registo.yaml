@@ -126,8 +126,14 @@ previsoes:
       refuta: "nenhum deck Jund Sacrifice no Top 8 e não é o melhor win rate do Standard do torneio"
       inconclusiva: "Top 8 ou listas de Standard não publicados até 16/11/2026"
     prazo: 2026-11-16
-    conferencias: []
-    estado: PENDENTE
+    conferencias:
+      - data: 2026-11-16
+        episodio: "MC-EP08 (prestação de contas do Mundial 32, em preparação)"
+        dado: "Top 8 publicado (magic.gg, Top 8 Players and Decks, 15/11): Abe Schnake com Jund Sacrifice (Smaug, the Magnificent; Torch the Tower; Greedy Freebooter). 8 arquétipos diferentes no Top 8. Campeão: Stefan Schütz, Izzet Mission (magic.gg, página do evento)"
+        evidencia_recebida: "D · magic.gg (fonte do critério)"
+        muda_estado: true
+        estado: CONFIRMADA
+    estado: CONFIRMADA
     erro_de_sistema_se_refutada: true
 
   - id: PR-WC32-02
@@ -143,8 +149,14 @@ previsoes:
       refuta: "Jund Sacrifice em 4.º ou abaixo"
       inconclusiva: "análise do metagame não publicada até 16/11/2026"
     prazo: 2026-11-16
-    conferencias: []
-    estado: PENDENTE
+    conferencias:
+      - data: 2026-11-16
+        episodio: "MC-EP08 (prestação de contas do Mundial 32, em preparação)"
+        dado: "magic.gg, Standard Metagame Breakdown: Jund Sacrifice em 7.º, 7 de 128 jogadores (5,5%). Top 3: Boros Pixie 24 (18,8%), Selesnya Landfall 19 (14,8%), Dimir Control 10 (7,8%)"
+        evidencia_recebida: "D · magic.gg (fonte do critério)"
+        muda_estado: true
+        estado: REFUTADA
+    estado: REFUTADA
 
   - id: PR-WC32-03
     episodio: MC-EP07
@@ -160,5 +172,11 @@ previsoes:
       refuta: "7,5% ou mais"
       inconclusiva: "análise do metagame não publicada até 16/11/2026"
     prazo: 2026-11-16
-    conferencias: []
-    estado: PENDENTE
+    conferencias:
+      - data: 2026-11-16
+        episodio: "MC-EP08 (prestação de contas do Mundial 32, em preparação)"
+        dado: "magic.gg, Standard Metagame Breakdown: 0 jogadores de Izzet Spellementals (0%; o artigo diz que não há nenhum)"
+        evidencia_recebida: "D · magic.gg (fonte do critério)"
+        muda_estado: true
+        estado: CONFIRMADA
+    estado: CONFIRMADA
