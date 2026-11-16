@@ -351,3 +351,11 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - O fundador enviou o vídeo do MC-ESP01 como referência: «quero que coloque as cartas e a foto do jogador com esse mesmo modelo do início que te mandei e que se torne padrão e coloque a lista do deck na edição».
 - Regra em `oraculo/CONTEXTO.md` §7 (pontos 1 e 6): grelha 2×2 em ecrã inteiro (cartas + foto do jogador quando houver), selos, destaque verde com caixa de número, fila por cima do TUBO e mergulho; a lista do deck entra sempre que o episódio fala de um deck.
 - MC-EP08B refeito nesse modelo (v2), sem créditos novos.
+
+## 16/11/2026 (10:48) · Infraestrutura: validação automática, funil do app e métricas por API
+- Pedido do fundador: «Faça o que for necessário» (sobre APIs, MCPs e práticas por adotar).
+- **GitHub Actions** (`.github/workflows/validar.yml`): a cada push e PR correm `validar_repo.py`, `memoria.py validar`, `ciclo.py validar` e os testes de `memoria` e `ciclo`. Sem render, sem serviços externos, sem créditos. O «conferido no GitHub» do encerramento passa a incluir o visto verde do workflow.
+- **Funil do app** (`comum/insights/registo_app.csv`): contas novas por semana e quantas adicionaram uma carta em 7 dias, lidas do Supabase só com contagens. Primeira leitura: 37 contas desde 21/09, 6 com carta em 7 dias (~16 %). Facto observado; a interpretação (ativação é o gargalo) fica como hipótese até haver 2+ semanas com Insights comparáveis (constituição §12).
+- **vidIQ**: testado; lê Insights de dono do Instagram, mas está ligado à conta pessoal. Pendente o fundador ligar a @binderthetrade.
+- **Segurança (Supabase, aviso do advisor):** a tabela `public.spatial_ref_sys` (PostGIS) está sem RLS. Não se alterou nada; decisão do arquiteto do app.
+- **Tarefa agendada** «Briefing do TUBO (segunda e quinta)», 09:47 de Lisboa: corre `ciclo.py segunda|quinta` + `continuacao`, confere as previsões na web e manda o briefing ao fundador. Só leitura: sem créditos, sem publicar, sem commits.

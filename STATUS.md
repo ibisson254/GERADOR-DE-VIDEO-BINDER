@@ -12,6 +12,13 @@ Auditoria integral, matriz de integração, sistema de previsões do TUBO corrig
 - **Motor do Giro encontrado**: está na branch `giro/2026-11-01` (`manaburn/giro/2026-11-01/`: `processar.py`, `previa.py`, `quadros.py`, `giro.html`, `cena_giro.js`); integrado nesta branch como arquivo do episódio publicado. A pendência "enviar ou subir o motor que gerou o Giro" (abaixo) fica resolvida quando esta branch entrar na `main`.
 - **Integridade**: `python3 -I comum/ferramentas/validar_repo.py` — caminhos do `series.yaml`, sintaxe Python, imports locais, vídeos versionados, links internos e segredos. Resultado a 12/11: 0 problemas (3 limitações conhecidas documentadas e aceites). Nenhum segredo versionado.
 
+## Infraestrutura (16/11/2026, 10:48)
+
+- **GitHub Actions** `validar` a cada push/PR (`.github/workflows/validar.yml`): integridade, memória, previsões e testes. Encerramento só conta com o visto verde.
+- **Funil do app**: `comum/insights/registo_app.csv` (contas novas e carta em 7 dias, por semana, do Supabase). 37 contas desde 21/09; 6 com carta em 7 dias. Consulta e limites em `comum/insights/LEIA-ME.md`.
+- **Tarefa agendada** «Briefing do TUBO» (seg e qui, 09:47 Lisboa), só leitura. Próxima: quinta 19/11.
+- **Depende do fundador:** ligar a @binderthetrade no vidIQ (hoje está a conta pessoal) para a rotina de domingo ler os Insights por API; decidir RLS em `public.spatial_ref_sys` no Supabase (aviso crítico do advisor; nada alterado); atualizar as skills `binder-*` (proposta feita no chat de 16/11).
+
 ## Estado editorial
 
 Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vince Vault (série, aprovada a 12/11, em desenvolvimento)**; Órbita (temática); Lambe-lambe (espontânea); especiais. Estados por conteúdo: `comum/REGISTRO_EDITORIAL.md` (86 conteúdos). Fecho de 12/11: MC-EP03/04/05/07, MB-ESP03, MB-EP10, MB-GIRO02, CM-EP004/005, LL-PRETRK, LL-SHEOL, LL-DIVCAR, LL-CAMPBR fechados; **MC-EP06 (episódio de segunda) aberto**. Pequeno Mestre (PR #2) em desenvolvimento, sem aprovação; o PR #17 era a direção 2D do próprio Vince Vault (integrado, reconciliado). Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.

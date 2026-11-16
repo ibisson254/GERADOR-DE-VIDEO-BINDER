@@ -1,0 +1,32 @@
+# Validação automática do Estúdio BINDER (decisão de 16/11/2026, nucleo/DECISOES.md).
+# Corre a cada push e PR. Não renderiza, não chama serviços externos, não gasta créditos.
+name: validar
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dependências
+        run: pip install pyyaml
+      - name: Integridade do repositório
+        run: python3 -I comum/ferramentas/validar_repo.py
+      - name: Memória editorial
+        run: python3 comum/ferramentas/memoria.py validar
+      - name: Registo de previsões do TUBO
+        run: python3 -I oraculo/previsoes/ciclo.py validar
+      - name: Testes da memória
+        run: python3 -I comum/ferramentas/test_memoria.py
+      - name: Testes do ciclo
+        run: python3 -I oraculo/previsoes/test_ciclo.py

@@ -26,6 +26,25 @@ Sistema permanente de métricas do Instagram. Criado a 01/11/2026 (`nucleo/DECIS
 7. Escrever o relatório (Fase 6: facto observado · interpretação · hipótese · recomendação) e comparar com as semanas anteriores.
 8. `python3 comum/ferramentas/memoria.py validar` → commit.
 
+## App: contas novas e primeira ação (desde 16/11/2026)
+
+`registo_app.csv` liga a audiência ao produto, sem dados pessoais: por semana (segunda a domingo), contas novas (`public.profiles.created_at`) e quantas delas adicionaram pelo menos uma carta à coleção nos primeiros 7 dias (`public.portfolio_items`). Só contagens; nunca nomes, ids ou emails.
+
+Consulta (Supabase MCP, só leitura; um agente com o conector Supabase corre-a no domingo e acrescenta as semanas fechadas):
+
+```sql
+select date_trunc('week', p.created_at)::date as semana_inicio, count(*) as contas_novas,
+  count(*) filter (where exists (select 1 from public.portfolio_items i
+    where i.user_id = p.id and i.created_at < p.created_at + interval '7 days')) as com_carta_7d
+from public.profiles p where p.created_at >= '2026-09-01' group by 1 order by 1;
+```
+
+Limites: contas novas não são instalações (a Play Console continua a ser a fonte das instalações por UTM); a tabela inclui contas de teste do fundador e de testadores; não há ligação conta ↔ UTM (precisa da Play Install Referrer API no app, decisão do arquiteto).
+
+## Métricas por API (vidIQ)
+
+O conector vidIQ lê os Insights do Instagram como dono (visualizações, alcance, guardados, partilhas, tempo médio, % assistida, taxa de saltos dos Reels), sem prints. A 16/11/2026 a conta ligada é a pessoal do fundador, **não** a @binderthetrade: falta o fundador ligar a @binderthetrade no vidIQ (OAuth). Depois disso, a rotina de domingo usa `vidiq_instagram_owner_insights` (modo `reels` e `media`) e os prints ficam só para o que a API não trouxer (ex.: toques no link, se não vier).
+
 ## Regras
 
 - Guardar números, não screenshots. Nenhum dado pessoal: sem nomes de quem comentou, sem @ de terceiros, sem identificadores de conta de anúncios.
