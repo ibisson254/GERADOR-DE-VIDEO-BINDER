@@ -1,87 +1,75 @@
-# Parcerias · plano dos projetos de collab
+# Parcerias · próximas collabs
 
-Criado a 16/11/2026 a pedido do fundador («Planeja os projetos dos colabs»). Base: `nucleo/auditorias/2026-11-16_parcerias.md` (diagnóstico, matriz, mensagens §6) e a adenda das 11:30. Este ficheiro é o painel vivo: estado de cada parceiro, projeto, calendário e próximo passo. As autorizações continuam em `<frente>/autorizacoes/`; os números de cada collab vão para `comum/insights/registo_posts.csv` na rotina de domingo.
+Painel vivo das collabs. Versão de 16/11/2026, 17:31 (fundador): **método «episódio pronto primeiro»** — o BINDER produz o episódio completo e só depois o envia ao parceiro, a pedir a collab e a autorização para publicar. Substitui a versão das 17h (fechos de quentes e DM antes de produzir). Base de pesquisa: `nucleo/auditorias/2026-11-16_parcerias.md`.
 
-**Estado: plano proposto.** Nada foi enviado nem registado no `REGISTRO_EDITORIAL.md`. Os IDs abaixo são provisórios até a pauta entrar no registo.
+As autorizações ficam em `<frente>/autorizacoes/`; os números de cada collab vão para `comum/insights/registo_posts.csv` na rotina de domingo.
 
-## Regras de trabalho (do relatório, §4–§5)
+## Collabs feitas (fechadas, não se reabrem)
 
-1. **Uma parceria nova de cada vez.** Só se abre a seguinte depois da leitura de 7 dias da anterior.
-2. **Fechar as promessas aos quentes antes de abrir uma fria.** Agradecer, entregar o que se prometeu, convidar.
-3. **Toda collab tem UTM própria** (`utm_source=<handle>&utm_campaign=<ID>`) e leitura a 48 h e 7 dias.
-4. **Marcação ≠ collab.** Marcar fontes, lojas e artistas em todo conteúdo que os cite é grátis e não conta como parceria nova (o fundador viu que funcionou com a Nathanna Érica, 15/11). Collab (co-autoria no post) só com autorização escrita.
-5. Não se inventam números nem respostas de parceiros. Sem resposta = o projeto espera ou segue sem collab, com crédito, se o fundador quiser.
+| Parceiro | Conteúdo | Estado | Nota do fundador |
+|---|---|---|---|
+| Preconauta (@preconautamtg) | MC-ESP02 | collab aceite e publicada | um dos episódios com mais views (16/11; número a registar no domingo) |
+| @montcardshop | MC-ESP01 | collab aceite e publicada | — |
 
-## Painel
+Todos os outros conteúdos com terceiros já foram feitos, publicados e registados (fundador, 16/11).
 
-| # | Parceiro | Frente | Tipo | Estado | Projeto (ID provisório) | Próximo passo | Quem |
-|---|---|---|---|---|---|---|---|
-| Q1 | Preconauta (@preconautamtg) | Meta em Curto | dados | ativa (autorização 13/11) | fecho do MC-ESP02; depois MC-ESP04 «mesão × 2x2» | enviar o roteiro prometido + convite (§6.4) | fundador |
-| Q2 | @diarioplaninauta, @montcardshop | Meta em Curto | fonte / loja | quente (MC-ESP01) | só fecho | agradecer e marcar no Stories | fundador |
-| Q3 | @diegoalencard | Mana & Burn | comentador | quente (MB-ESP04) | só fecho | agradecer; convidar a sugerir a próxima pauta | fundador |
-| Q4 | Nathanna Érica | Lambe-lambe | artista | quente (LL-ART13, PUBLICADO) | só fecho | confirmar se o slide 6 saiu com a foto dela; se sim, pedir a autorização já (§6.4) ou trocar a imagem | fundador |
-| P1 | Farpas de Mana (@farpasdemana) | Meta em Curto | dados | fria | **MC-ESP03** «o mais jogado é o que mais vence?» | DM §6.3 | fundador |
-| P2 | Caio Monteiro | Lambe-lambe | artista | fria | **LL-ART20** carrossel «o carioca por trás de Shark Typhoon» | DM da adenda, só depois da leitura do P1 | fundador |
-| R1 | Lotus Games (MTGDC500) | Meta em Curto | loja / dados | fria | fonte parceira do TUBO | entra se o Farpas indicar o MTGDC500 ou não responder | — |
-| R2 | Tenda da Liliana | Meta em Curto | loja (Pauper) | fria | relatório de um torneio de Pauper | depois do R1 | — |
-| R3 | Cabrito Montês | Mana & Burn | convidado | reserva | «essa carta é tão ruim quanto dizem?» | confirmar atividade em 2026 | — |
-| — | Taverna Games | — | loja | fora | — | — | — |
+## Método «episódio pronto primeiro»
 
-## Calendário
+**Porquê:** um parceiro diz «sim» mais facilmente a uma coisa que já vê pronta do que a uma ideia. A conta é pequena; o episódio pronto é o argumento.
 
-| Semana | Quentes (fecho) | Parceria nova | Produção | Medição |
-|---|---|---|---|---|
-| **16–22/11** | Q1 roteiro + convite · Q2 · Q3 · Q4 | P1: DM ao Farpas (só depois de enviados Q1–Q4) | MC-ESP04: pedir ao fundador os prints das ligas mesão e 2x2 (o site não abre daqui) | dom 22/11: ESP01, ESP02 e MB-ESP04 no `registo_posts.csv` |
-| **23–29/11** | — | P1: se aceitar, extrair dados e fechar a frase | **MC-ESP03** (seg 23 ou 30/11, 21h, antes da live de terça) | 48 h do MC-ESP03 |
-| **30/11–06/12** | — | P1: 7 dias → repetir, ajustar ou parar | **MC-ESP04** (Preconauta, ≥1 semana depois do ESP03 para não encadear três episódios do mesmo parceiro) | 7 dias do MC-ESP03 · dom 06/12 |
-| **07–13/12** | — | P2: DM ao Caio Monteiro | **LL-ART20** (carrossel, sem créditos ElevenLabs) | 48 h do ESP04 |
+**Regras para o método não sair caro nem arriscado:**
+1. **Só material público e creditável.** Dados de sites públicos, cartas do Scryfall, obra publicada. Nada que precise de autorização para ser *produzido* (fotos pessoais, dados privados, logótipo, voz ou frase do parceiro). Assim o episódio existe sem depender do «sim».
+2. **O vídeo não afirma parceria.** Nada de «em parceria com…» no ecrã nem na voz. A collab vive na legenda e no botão de collab do Instagram, que se ajustam depois da resposta. Se o parceiro disser não, o episódio não fica com mentira gravada.
+3. **Plano B decidido antes de produzir** (campo «Se disser não» em cada projeto): publicar com crédito e marcação, ou arquivar. Se o plano B for arquivar, o episódio tem de ser barato (carrossel, sem voz).
+4. **Créditos:** voz e imagem só com autorização do fundador, uma geração. Começa-se pelos formatos sem créditos.
+5. **Pacote de envio** (o fundador envia por DM, do @binder_vision): o vídeo ou carrossel final com marca «PRÉVIA», a legenda já com o @ deles, uma frase curta a pedir duas coisas — collab e OK para publicar — e um prazo.
+6. **Prazo:** resposta em até 5 dias. Os episódios com dados têm data de corte; depois de ~10 dias, refaz-se a conta ou cai o episódio.
+7. **Ajustes pedidos pelo parceiro:** aceitam-se correções de facto e de crédito; mudanças de tese ou de tom passam pelo fundador.
+8. **Registo:** a pauta entra no `REGISTRO_EDITORIAL.md` ao começar a produção (estado EM PRODUÇÃO); a resposta do parceiro vai para `<frente>/autorizacoes/`; só passa a PUBLICADO depois de o fundador publicar.
+9. **Um envio por semana**, para cada resposta ter UTM e leitura própria (`utm_source=<handle>&utm_campaign=<ID>`; leitura a 48 h e 7 dias).
 
-Se o Farpas não responder até sexta 27/11: o MC-ESP03 sai com fonte pública (MTGDC500) e crédito, sem collab, só com OK do fundador; R1 passa a P1 no ciclo seguinte.
+## Próximos episódios
 
-## Projetos
+| Ordem | ID provisório | Parceiro-alvo | Frente · formato | Créditos | Se disser não | Material em falta |
+|---|---|---|---|---|---|---|
+| 1 | **LL-ART20** | Caio Monteiro (artista) | Lambe-lambe · carrossel | 0 | publicar com crédito e marcação | handle confirmado |
+| 2 | **MC-ESP03** | MTGDC500 / Lotus Games (dono dos dados) | Meta em Curto · Reel 25–35 s | voz (~1.500–2.200, estimativa) | publicar com crédito ao site (dados públicos) | nada; extração no dia |
+| 3 | **MC-ESP04** | Preconauta (parceiro ativo) | Meta em Curto · Reel | voz | não se aplica (autorização de 13/11 cobre os números dos sites deles) | prints das ligas mesão e 2x2 |
 
-### MC-ESP03 · Farpas de Mana · «O mais jogado é o que mais vence?»
-- **Objetivo:** primeira collab de dados recorrente do TUBO; jogadores competitivos de Commander BR no perfil e no app.
-- **Pacote completo:** relatório §6 (tese, gancho, estrutura 25–35 s, legenda, comentário fixado).
-- **Pauta:** «Cloud, Midgar Mercenary» × «popularidade versus desempenho no Duel Commander 500» → LIVRE (16/11).
-- **Material em falta:** fonte oficial indicada pelo Farpas e data de corte; frase deles (≤15 palavras); logótipo só com autorização.
-- **Créditos:** voz ~1.500–2.200 (estimativa por episódios anteriores), uma geração, só com autorização.
-- **Autorização:** `oraculo/autorizacoes/AAAA-MM-DD_farpas_dc500.md`.
-- **Publicação:** collab @farpasdemana · `utm_source=farpasdemana&utm_campaign=MC-ESP03` · Stories com link no mesmo dia.
-- **Métrica principal:** visitas ao perfil por 1.000 views, contra MC-ESP01 (sem collab) e MC-ESP02 (collab Preconauta).
+Pautas auditadas a 16/11 com `memoria.py pauta`: as três LIVRES.
 
-### MC-ESP04 · Preconauta · «Mesa de 4 ou 2x2: o mesmo precon joga igual?»
-- **Objetivo:** cumprir a pauta já anotada com um parceiro que disse sim; testar se a segunda collab com o mesmo parceiro ainda traz público novo.
-- **Pauta:** «Liga mesão Preconauta» × «mesa de 4 versus 2x2 com o mesmo precon» → LIVRE (16/11). O objeto «Taça Preconauta» está bloqueado (MC-ESP02): o episódio não pode reusar os dados da Taça.
-- **Tese provisória:** comparar a vitória do mesmo precon na mesa de 4 (média esperada 25%) e no 2x2 (50% por dupla). A tese final depende dos números; se não houver desempenho por precon nos dois formatos, o episódio muda de ângulo ou não se faz.
-- **Material em falta:** prints ou exportação das ligas mesão e 2x2 (presencial e online), com período e amostra; confirmar se os mesmos precons aparecem nos dois formatos.
-- **Autorização:** a de 13/11 cobre collab e números dos sites deles; confirmar por DM que vale para as ligas (o convite do Q1 já pergunta).
-- **Publicação:** collab @preconautamtg · `utm_source=preconautamtg&utm_campaign=MC-ESP04`.
-- **Métrica principal:** visitas ao perfil por 1.000 views contra o MC-ESP02. Se cair muito, a terceira collab com o Preconauta fica em pausa.
+### 1 · LL-ART20 · Caio Monteiro — «O carioca por trás de Shark Typhoon»
+- **Porque primeiro:** custo zero (`lambe-lambe/kit_carrossel/motor_padrao.py`), artista brasileiro (formato já provado com a Nathanna Érica) e o artista tende a partilhar um carrossel que celebra o trabalho dele. Serve de teste do método.
+- **Conteúdo:** 6–8 slides. Capa com Shark Typhoon (IKO 67; reimpressa em FRC 44 a 02/10/2026) · quem é (Rio de Janeiro; fonte Archon Arcana) · n.º de artes únicas no Scryfall, contado no dia · 3–4 artes mais jogadas segundo o EDHREC (Archmage Emeritus, Marauding Blight-Priest…) · slide final: «Qual é a sua arte favorita dele?» + scanner do BINDER Vision.
+- **Não usar:** foto pessoal, falas inventadas, bastidores.
+- **ID:** LL-ART14 a 19 ficam reservados aos seis carrosséis da branch `lambe/artistas-carrosseis` (`nucleo/DECISOES.md` 14/11).
+- **Mensagem de envio:**
+  > Oi, Caio! Sou o Ibisson, do BINDER Vision. A gente faz uma série de carrosséis sobre artistas brasileiros de Magic e fizemos um sobre o seu trabalho — segue a prévia. Toparia publicar em collab com a gente? Se quiser trocar alguma arte ou corrigir algo, é só falar. Tudo com crédito e link para o seu portfólio.
 
-### LL-ART20 · Caio Monteiro · carrossel
-- **ID:** LL-ART20 porque LL-ART14 a 19 ficam reservados aos seis carrosséis da branch `lambe/artistas-carrosseis` (renumeração, `nucleo/DECISOES.md` 14/11).
-- **Tema:** «De Shark Typhoon a Archmage Emeritus: o carioca por trás de [n] cartas de Magic» (n contado no dia, Scryfall). Gancho atual: reimpressão de Shark Typhoon em FRC 44 (02/10/2026).
-- **Pauta:** «Caio Monteiro» × «artista carioca de Shark Typhoon» → LIVRE (16/11).
-- **Produção:** `lambe-lambe/kit_carrossel/motor_padrao.py`; zero créditos.
-- **Material em falta:** contacto e handle confirmados; escolha das artes (se ele indicar).
-- **Publicação:** collab com o artista, se aceitar; senão, crédito e marcação. Conde de Manaforte só como segundo passo, se ele gostar.
-- **Métrica principal:** guardados e partilhas por 1.000 views, contra LL-ART13.
+### 2 · MC-ESP03 · «O mais jogado é o que mais vence?» (Duel Commander 500)
+- **Mudança em relação ao piloto do relatório:** com o episódio feito primeiro, a fonte tem de ser pública e escolhida por nós: o **MTGDC500** (mtgdc500.com.br, «Lotus Games»). Por isso o alvo da collab passa a ser **quem assina os dados** (MTGDC500 / Lotus Games), não o Farpas de Mana — mandar ao Farpas um vídeo com os números de outro portal, sem saber se concorrem, é arriscado. O Farpas fica para um episódio com fonte deles, quando o site deles abrir ou eles a indicarem.
+- **Tese:** mais jogado não é mais forte, e a taxa de TOP 4 mais alta pode ser só amostra pequena ou torneios pequenos (relatório §3.A e §6).
+- **Gancho:** Cloud, Midgar Mercenary («467 listas») × Ghalta, Primal Hunger («7 de 8»); «O mais jogado ou o que mais vence?». Números refeitos no dia da produção, com data de corte, período, torneios e listas no ecrã; cálculos do BINDER marcados como tal.
+- **Fim:** pergunta «Qual comandante você acha que só parece forte?» (sem frase do parceiro) + outro do scanner.
+- **Pré-requisito:** confirmar o @ da Lotus Games / MTGDC500 no Instagram antes de produzir; se não houver perfil ativo, o fundador decide entre o Farpas (com a ressalva acima) ou publicar sem collab.
+- **Mensagem de envio:**
+  > Oi, pessoal do MTGDC500! Sou o Ibisson, do BINDER Vision (Meta em Curto, análise de meta no Instagram). Fizemos um vídeo com os dados públicos do site de vocês: o comandante mais jogado do DC500 é o que mais vence? Segue a prévia, com crédito e link. Toparia publicar em collab? Se algum número ou definição estiver errado, corrigimos antes.
 
-### Fechos dos quentes (Q1–Q4)
-Mensagens prontas no relatório §6.4 (Preconauta, Nathanna). Rascunhos para os restantes:
+### 3 · MC-ESP04 · Preconauta — «Mesa de 4 ou 2x2: o mesmo precon joga igual?»
+- **Parceiro já ativo:** a autorização de 13/11 (`oraculo/autorizacoes/2026-11-13_preconauta_dados_2x2.md`) cobre collab e números dos sites deles; o envio pede só o OK desta peça.
+- **Bloqueio:** o objeto «Taça Preconauta» está fechado (MC-ESP02). Usa só as ligas mesão e 2x2.
+- **Tese provisória:** o mesmo precon na mesa de 4 (referência 25%) e no 2x2 (50% por dupla). Só avança se os dados tiverem desempenho por precon nos dois formatos; senão, muda de ângulo ou não se faz.
+- **Material em falta:** prints ou exportação das ligas (presencial e online), com período e amostra — o site deles não abre a partir do ambiente do agente.
+- **Leitura:** comparar com o MC-ESP02. Se cair muito, a terceira collab seguida com o Preconauta fica em pausa.
 
-**@diarioplaninauta / @montcardshop (MC-ESP01):**
-> Oi! Aqui é o Ibisson, do BINDER Vision. Usamos os seus dados/torneio no nosso Meta em Curto e queria agradecer de novo. Se tiver um próximo evento ou número curioso, adoraríamos transformar em vídeo, com crédito pra vocês.
-
-**@diegoalencard (MB-ESP04):**
-> Fala, Diego! O seu comentário virou o especial «Precon em jogo» lá no BINDER Vision. Valeu pela ideia! Se tiver outra discussão que você acha que merece vídeo, manda que a gente olha com carinho.
+## Depois destes três
+Farpas de Mana (fonte própria), Tenda da Liliana (Pauper), Cabrito Montês (reserva, só com atividade confirmada em 2026). Taverna Games fora.
 
 ## Registo de resultados
 
-| ID | Parceiro | Publicado | 48 h (visitas/1.000) | 7 dias (visitas/1.000) | Instalações UTM | Parceiro partilhou? | Decisão |
-|---|---|---|---|---|---|---|---|
-| MC-ESP01 | — (sem collab) | 09–15/11 | | | | | termo de comparação |
-| MC-ESP02 | Preconauta | 09–15/11 | | | | | termo de comparação |
+| ID | Parceiro | Enviado | Resposta | Publicado | 48 h (visitas/1.000) | 7 dias (visitas/1.000) | Instalações UTM | Decisão |
+|---|---|---|---|---|---|---|---|---|
+| MC-ESP01 | @montcardshop | — | aceitou | sim | | | | termo de comparação |
+| MC-ESP02 | Preconauta | — | aceitou | sim | | | | termo de comparação |
 
 Sem dado = vazio, nunca 0.

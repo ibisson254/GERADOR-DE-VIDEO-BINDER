@@ -368,3 +368,8 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 ## 16/11/2026 (13:47) · MC-EP06 rejeitado; instruções do projeto claude.ai revistas
 - **MC-EP06** «Prestação de contas: placar zero»: REJEITADO. «Nunca foi nem vai mais; já passou o pré-release, perdemos o timing.» O ID não se reutiliza.
 - **`nucleo/prompts/CLAUDE_PROJECT.md`** revisto para refletir a conta @binder_vision, as ferramentas (`memoria.py`, `ciclo.py`, workflow `validar`), as fontes de métricas (vidIQ, Supabase, Play Console) e as regras de gasto e de parcerias. O fundador cola o texto no projeto «Binder Marketing».
+
+## 16/11/2026 (17:31) · Parcerias: método «episódio pronto primeiro»
+- **Fundador:** «Primeiro eu vou fazer os episódios e vou mandar os episódios prontos para ver se eles aceitam a collab e se eu posso postar.» As collabs anteriores estão feitas e registadas (Preconauta no MC-ESP02, aceite, «um dos episódios que deu mais views»; @montcardshop no MC-ESP01, aceite). Os fechos de quentes do plano das 17h caem.
+- **Regras do método** (detalhe em `comum/parcerias.md`): só material público para produzir; o vídeo não afirma parceria; plano B decidido antes de produzir; pacote de envio com PRÉVIA, legenda e prazo de 5 dias; um envio por semana com UTM própria.
+- **Ordem proposta:** LL-ART20 (Caio Monteiro, carrossel, 0 créditos) → MC-ESP03 (DC500 com dados públicos do MTGDC500; alvo da collab passa a ser o dono dos dados, não o Farpas) → MC-ESP04 (Preconauta, ligas mesão × 2x2, depende de prints).

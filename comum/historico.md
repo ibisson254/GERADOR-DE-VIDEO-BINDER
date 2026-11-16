@@ -108,3 +108,4 @@ Formato: data · ID · frente · acontecimento · estado. Mais recente no fim.
 - 16/11/2026 · MC-EP08B · Meta em Curto · corte «campeão primeiro» do MC-EP08 (que ficou com 7 s de tempo médio): abertura no modelo do MC-ESP01 (grelha 2×2 com a foto do campeão e 3 cartas, «1,6% · 2 em 128»), lista campeã completa dentro do tubo, previsões e placar depois. Voz do EP08 reordenada, sem créditos. 30,4 s, −14,1 LUFS, QC sem problemas. **CONCLUÍDO, não publicado.** Regra de abertura (modelo ESP01 + lista do deck) fixada no CONTEXTO §7.
 
 - 16/11/2026, 17h · Plano dos projetos de collab em `comum/parcerias.md` (painel, calendário até 13/12, MC-ESP03 Farpas, MC-ESP04 Preconauta, LL-ART20 Caio Monteiro). Nada enviado nem registado.
+- 16/11/2026, 17:31 · Parcerias passam ao método «episódio pronto primeiro»; `comum/parcerias.md` reescrito (LL-ART20, MC-ESP03, MC-ESP04).

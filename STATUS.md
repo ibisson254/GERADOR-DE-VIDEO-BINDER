@@ -28,7 +28,7 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 - **Publicados:** o fundador confirmou a 16/11 (11:23) que «todos os episódios criados já foram lançados». No registo passaram a PUBLICADO: MB-GIRO02, MB-GIRO03, MB-EP10, MB-ESP03-CARR, MC-EP03, MC-EP04, MC-EP08B, ORB-07 a 10, LL-ART13, LL-PRETRK, LL-SHEOL, LL-DIVCAR, LL-CAMPBR, AB-01, e a linha nova MB-ESP04 (especial «Precon em jogo», que faltava). MC-ESP01, MC-ESP02 e MC-EP08 já estavam PUBLICADO. Datas exatas por confirmar no domingo, com os Insights.
 - **EX-01 «Nauctis: Primeiro Mergulho»**: continua EM PRODUÇÃO no registo (não estava concluído: faltava escolher A ou B e a licença da «Auction of Power»). Se já saiu, o fundador diz qual versão e passa a PUBLICADO.
 - **MC-EP06**: REJEITADO (fundador, 16/11 13:47: perdeu o timing do pré-release; nunca produzido).
-- **Parcerias**: plano dos projetos em `comum/parcerias.md` (16/11, 17h): painel, calendário até 13/12 e três projetos — MC-ESP03 (Farpas de Mana, piloto), MC-ESP04 (Preconauta, ligas mesão × 2x2), LL-ART20 (Caio Monteiro). IDs provisórios, pautas LIVRES, nada enviado. Base: `nucleo/auditorias/2026-11-16_parcerias.md`.
+- **Parcerias** (16/11, 17:31): método «episódio pronto primeiro» — produzir, enviar a prévia ao parceiro, publicar só com o OK (`comum/parcerias.md`, `nucleo/DECISOES.md`). Collabs anteriores feitas (Preconauta MC-ESP02, @montcardshop MC-ESP01). Próximos: LL-ART20 Caio Monteiro → MC-ESP03 MTGDC500 → MC-ESP04 Preconauta. IDs provisórios, pautas LIVRES.
 - **Vince Vault (Multiverse Capital)**: direção 2D ativa (PR #17, decisões de 11–12/11; 3D arquivado). Bíblia `vince/CONTEXTO.md`, som da Fonte `vince/audio/fonte.py`. **Em falta:** o kit 2D (16 PNG), `recortar.py`, `EDICAO.md` e `PROMPT_EPISODIO.md` descritos no PR #17 não chegaram à branch — pedir à sessão de origem ou refazer com aprovação.
 
 ## Consolidação
@@ -127,7 +127,7 @@ Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por co
 
 ## Próximo passo concreto
 
-1. Fundador: EX-01 (saiu? versão?), ligar a @binder_vision no vidIQ; parcerias pela ordem de `comum/parcerias.md`: fechos Q1–Q4 (roteiro ao Preconauta, agradecimentos, foto da Nathanna no LL-ART13 publicado), depois DM ao Farpas; prints das ligas Preconauta para o MC-ESP04.
+1. Produzir o LL-ART20 (Caio Monteiro, carrossel sem créditos) e entregar o pacote de envio ao fundador. Fundador: EX-01 (saiu? versão?), ligar a @binder_vision no vidIQ, prints das ligas Preconauta para o MC-ESP04.
 2. Domingo 22/11: rotina de insights com as datas de publicação dos conteúdos fechados a 16/11 e as métricas do MC-ESP01/ESP02 (termo de comparação das parcerias).
 3. Quinta 19/11: briefing automático do TUBO (tarefa agendada).
 
