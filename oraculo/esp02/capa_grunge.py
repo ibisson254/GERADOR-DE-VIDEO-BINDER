@@ -1,5 +1,5 @@
 # Capa MC-ESP02 «A Taça respondeu» · estilo «cartaz grunge» (referência: capa do MC-EP08)
-# Uso: python3 -I capa_grunge.py <repo> <pasta_fontes> <saida.png>
+# Uso: python3 -I capa_grunge.py <repo> <pasta_fontes> <saida.png> [logo_magic.png]
 import sys, math, random
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps, ImageChops
@@ -160,7 +160,15 @@ for (y, ang) in [(500, -4), (1330, 3)]:
 d = ImageDraw.Draw(im, 'RGBA')
 
 # --- topo: identidade do evento (no lugar do logo da referência) ---------------------------------
-# espaço reservado ao logótipo (centro-topo, ~x 300–700, y 40–210): colado pelo fundador no editor
+# logótipo do Magic (centro-topo): ficheiro fornecido pelo fundador (autorização dele, 16/11/2026), 4.º argumento opcional
+if len(sys.argv) > 4:
+    lg = Image.open(sys.argv[4]).convert('RGBA')
+    lw = 410; lg = lg.resize((lw, int(lg.height * lw / lg.width)), Image.LANCZOS)
+    sh = Image.new('RGBA', (lg.width + 120, lg.height + 120), (0, 0, 0, 0))
+    sa = Image.new('L', sh.size, 0); sa.paste(lg.split()[-1], (60, 60))
+    sh.putalpha(sa.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(22)).point(lambda v: min(255, v * 2)))
+    lx, ly = (W - lg.width) // 2 - 95, 75
+    im.alpha_composite(sh, (lx - 60, ly - 60)); im.alpha_composite(lg, (lx, ly))
 # «META EM CURTO» a marcador, canto superior direito
 mt = Image.new('RGBA', (360, 220), (0, 0, 0, 0)); md = ImageDraw.Draw(mt)
 md.text((30, 10), 'META', font=F(MARK, 72), fill=WHITE)
