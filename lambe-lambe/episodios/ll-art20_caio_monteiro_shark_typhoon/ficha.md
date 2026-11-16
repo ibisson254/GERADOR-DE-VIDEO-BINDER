@@ -52,6 +52,7 @@
 ## Pendências
 - Fundador: enviar a prévia e a mensagem; registar a resposta.
 - Publicar só depois da resposta, com `utm_campaign=LL-ART20` no link da bio se aplicável.
+- Story animado (9 s, versões A prévia e B): `story/story.py` e `story/EDICAO_STORY.md` (16/11/2026).
 
 ## Ficheiros finais
 - Carrossel (vídeo: não se aplica): `versao_A_com_foto/`, `versao_A_previa/`, `versao_B_sem_foto/` (`01_capa.png` … `07_participacao.png`) + `folha_de_contacto_*.jpg`, entregues ao fundador na conversa de 16/11/2026 (`LL-ART20_caio_monteiro.zip`). Recriáveis com `carrossel.py`.
