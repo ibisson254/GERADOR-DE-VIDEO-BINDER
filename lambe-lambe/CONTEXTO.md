@@ -26,6 +26,14 @@ Referências canónicas, aprovadas pelo fundador (13/11) e reutilizadas sem gera
 - Cartas inteiras, fita só nos cantos de cima, sem texto sobre arte, crédito em cada página. Foto do artista só a enviada pelo fundador, em recorte P&B, sem tapar a arte.
 - Exemplo: `episodios/ll-art13_nathanna_sete_cartas/` (7 slides).
 
+### Story animado de cada carrossel (16/11/2026)
+
+Todo carrossel Lambe-lambe sai também com um Story de 9 s (1080×1920) «o cartaz está sendo colado no muro», feito com `kit_story/motor_story.py` a partir dos mesmos materiais (instruções em `kit_story/LEIA-ME.md`; referência LL-ART20). Publica-se logo depois do carrossel, com o sticker de link para o post. Com foto de terceiros por autorizar: versão prévia privada + versão sem foto.
+
+### Entrega no chat
+
+No fim de cada lambe, enviar ao fundador, separados e prontos a copiar: capa, legenda, comentário fixado e texto do sticker do Story.
+
 ## 3. Formatos já usados
 
 | Formato | Descrição |

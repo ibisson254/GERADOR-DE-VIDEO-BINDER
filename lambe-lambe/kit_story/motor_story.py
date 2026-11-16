@@ -1,13 +1,24 @@
-"""LL-ART20 · Story «o cartaz está sendo colado no muro». 1080x1920, 30 fps, 9 s, H.264, sem áudio.
-Uso: python3 -I story.py <pasta_cartas> <capa_A_01.png> <foto|-> <saida.mp4> [--previa]
-Reaproveita só peças aprovadas: capa renderizada do carrossel (recortada pela máscara da folha + selo), papel kraft,
-impressões, carta, fita, faixa preta e recorte P&B da foto, todos tirados de lambe-lambe/kit_carrossel/motor_padrao.py
-(sem alterar o motor). Cada peça é isolada por matting de fundo preto/branco. Sem foto = versão B (carta real no lugar)."""
-import sys, os, asyncio, subprocess, cv2, numpy as np
-a = [x for x in sys.argv[1:] if not x.startswith('--')]
-G, CAPA, FOTO, OUT = [os.path.abspath(x) if x != '-' else None for x in a[:4]]
+"""Motor do Story animado do Lambe-lambe: «o cartaz está sendo colado no muro». 1080x1920, 30 fps, 9 s, H.264, sem áudio.
+Padrão do fundador (16/11/2026): todo carrossel Lambe-lambe ganha este Story. Referência: LL-ART20.
+Uso: python3 -I motor_story.py <config.json> <saida.mp4> [--previa] [--sem-foto]
+config.json (caminhos absolutos ou relativos ao JSON):
+  capa      PNG da capa do carrossel (1080x1350, renderizado pelo motor_padrao, sem faixa de prévia)
+  esquerda  art_crop (Scryfall) da impressão da esquerda
+  direita   {"foto": jpg} e/ou {"carta": png Scryfall}; com --sem-foto (ou sem "foto") usa a carta
+  detalhe   art_crop do detalhe que desenrola ao centro
+  nome      texto grande da faixa final (ex.: "CAIO MONTEIRO")
+  serie     texto da 2.ª linha antes de «· BINDER» (ex.: "Artistas de Magic")
+  creditos  {"com_foto": "...", "sem_foto": "..."} em HTML curto (cartas, set nº, artista, © Wizards of the Coast)
+Peças isoladas por matting do motor_padrao (não alterado); capa recortada pela máscara exata da folha + selo."""
+import sys, os, json, asyncio, subprocess, cv2, numpy as np
+_a = [x for x in sys.argv[1:] if not x.startswith('--')]
+CFG_P, OUT = os.path.abspath(_a[0]), os.path.abspath(_a[1])
+CFG = json.load(open(CFG_P)); _d = os.path.dirname(CFG_P)
+_p = lambda x: x if os.path.isabs(x) else os.path.normpath(os.path.join(_d, x))
 PREVIA = '--previa' in sys.argv
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../../kit_carrossel')))
+CAPA = _p(CFG['capa'])
+FOTO = _p(CFG['direita']['foto']) if CFG['direita'].get('foto') and '--sem-foto' not in sys.argv else None
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../kit_carrossel')))
 import motor_padrao as M
 from compor import colar, rasgo_alpha, camada
 W, H, FPS, DUR = 1080, 1920, 30, 9.0
@@ -32,18 +43,17 @@ def capa_peca():
     ys, xs = np.where(al > .02)
     return img[ys.min():ys.max() + 1, xs.min():xs.max() + 1], al[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
 
-png = lambda n: f'{G}/{n}_png.png'
-art = lambda n: cv2.imread(f'{G}/{n}_art_crop.jpg')
+art = lambda k: cv2.imread(_p(CFG[k]))
 P = {}
 P['capa'] = capa_peca()
 P['kraft1'] = matte(lambda b: M.papel(b, 360, 520, 400, 300, 0, 0, 11))
 P['kraft2'] = matte(lambda b: M.papel(b, 380, 480, 330, 400, 0, 2, 12))
-P['znr'] = matte(lambda b: M.impressa(b, art('znr_112'), 540, 500, 340, 0, fitas=((0, -1, -8),), seed=21)[0])
-P['detalhe'] = matte(lambda b: M.impressa(b, art('fdn_79'), 540, 500, 300, 0, fitas=((-.5, -1, -9), (.5, -1, 9)), seed=22)[0])
+P['esq'] = matte(lambda b: M.impressa(b, art('esquerda'), 540, 500, 340, 0, fitas=((0, -1, -8),), seed=21)[0])
+P['detalhe'] = matte(lambda b: M.impressa(b, art('detalhe'), 540, 500, 300, 0, fitas=((-.5, -1, -9), (.5, -1, 9)), seed=22)[0])
 if FOTO:
     P['retrato'] = matte(lambda b: M.recorte(b, cv2.imread(FOTO), np.full((500, 400), 255, np.uint8), 540, 400, 380, 0))
 else:
-    P['retrato'] = matte(lambda b: M.carta(b, png('stx_37'), 540, 675, 300, 0, fitas=((-1.0, -1.04, -45), (1.0, -1.04, 45)), fl=60))
+    P['retrato'] = matte(lambda b: M.carta(b, _p(CFG['direita']['carta']), 540, 675, 300, 0, fitas=((-1.0, -1.04, -45), (1.0, -1.04, 45)), fl=60))
 P['fita'] = matte(lambda b: M.fita(b, 540, 675, 0, 120))
 P['faixa'] = matte(lambda b: M.rodape(b, 675, 0))
 
@@ -52,11 +62,11 @@ def texto(html, nome):
     cwd = os.getcwd(); os.chdir(M.KIT); asyncio.run(camada(html, nome)); t = cv2.imread(nome, cv2.IMREAD_UNCHANGED); os.remove(nome); os.chdir(cwd)
     t = t.astype(np.float32); ys, xs = np.where(t[..., 3] > 3)
     t = t[ys.min():ys.max() + 1, xs.min():xs.max() + 1]; return t[..., :3], t[..., 3] / 255
-CRED = ('Artes: Shark Typhoon (IKO 67) · Marauding Blight-Priest (ZNR 112) · Boltwave (FDN 79)'
-        + ('' if FOTO else ' · Archmage Emeritus (STX 37)') + '<br>Caio Monteiro · © Wizards of the Coast')
+NOME, SERIE = CFG['nome'], CFG['serie']
+CRED = CFG['creditos']['com_foto' if FOTO else 'sem_foto']
 P['titulo'] = texto('<div style="position:absolute;left:540px;top:20px;transform:translateX(-50%);text-align:center;white-space:nowrap">'
-                    '<div class="e" style="position:relative;font-family:AB;font-size:66px;line-height:1;color:#fff;letter-spacing:-1px">CAIO MONTEIRO</div>'
-                    '<div class="e" style="position:relative;margin-top:10px;font-family:RB;font-weight:800;font-size:34px;color:#fff">Artistas de Magic · <span style="color:#FFD84A;font-style:italic;font-weight:900">BINDER</span></div>'
+                    f'<div class="e" style="position:relative;font-family:AB;font-size:66px;line-height:1;color:#fff;letter-spacing:-1px">{NOME}</div>'
+                    f'<div class="e" style="position:relative;margin-top:10px;font-family:RB;font-weight:800;font-size:34px;color:#fff">{SERIE} · <span style="color:#FFD84A;font-style:italic;font-weight:900">BINDER</span></div>'
                     f'<div style="margin-top:14px;font-family:Geist;font-weight:500;font-size:15px;line-height:1.3;color:#D9D2C4">{CRED}</div></div>', '_tit.png')
 if PREVIA:
     P['previa'] = texto('<div style="position:absolute;left:20px;top:20px;background:#111;color:#FFD84A;font-family:AB;font-size:22px;padding:6px 16px;letter-spacing:2px;white-space:nowrap">PRÉVIA · AGUARDA AUTORIZAÇÃO</div>', '_prev.png')
@@ -112,7 +122,7 @@ SOMBRA_CAPA = cv2.GaussianBlur(P['capa'][1], (0, 0), 40)
 cena = [
     Peca('capa', 540, 770, .76, -1.2, 1.15, .62, de=(-60, -1500), rot0=-9, z0=1.25, onda=True),
     Peca('kraft1', 250, 1405, 1.0, -4, 3.30, .42, de=(-700, 200), rot0=-14),
-    Peca('znr', 255, 1390, .95, -3, 3.72, .42, de=(-600, -300), rot0=12),
+    Peca('esq', 255, 1390, .95, -3, 3.72, .42, de=(-600, -300), rot0=12),
     Peca('kraft2', 825, 1430, 1.0, 5, 4.20, .42, de=(700, 150), rot0=16),
     Peca(ROT, 825, 1405, .84 if FOTO else .9, 3, 5.55, .5, de=(650, -200), rot0=-12, z0=1.35),
     Peca('detalhe', 545, 1495, .66, -1.5, 6.35, .45, modo='revela'),

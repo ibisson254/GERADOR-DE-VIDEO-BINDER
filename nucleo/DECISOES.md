@@ -373,3 +373,9 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - **Fundador:** «Primeiro eu vou fazer os episódios e vou mandar os episódios prontos para ver se eles aceitam a collab e se eu posso postar.» As collabs anteriores estão feitas e registadas (Preconauta no MC-ESP02, aceite, «um dos episódios que deu mais views»; @montcardshop no MC-ESP01, aceite). Os fechos de quentes do plano das 17h caem.
 - **Regras do método** (detalhe em `comum/parcerias.md`): só material público para produzir; o vídeo não afirma parceria; plano B decidido antes de produzir; pacote de envio com PRÉVIA, legenda e prazo de 5 dias; um envio por semana com UTM própria.
 - **Ordem proposta:** LL-ART20 (Caio Monteiro, carrossel, 0 créditos) → MC-ESP03 (DC500 com dados públicos do MTGDC500; alvo da collab passa a ser o dono dos dados, não o Farpas) → MC-ESP04 (Preconauta, ligas mesão × 2x2, depende de prints).
+
+## 16/11/2026 (19:06) · Lambe-lambe: Story animado em todo carrossel; pacote para copiar
+- **Fundador:** «Sempre que fizer um lambe lambe faça esse vídeo para o story; guarde esse formato para reutilizar em futuras postagens [...] e sempre envie legenda e comentário fixado para que eu possa copiar e colar.»
+- **Formato:** `lambe-lambe/kit_story/motor_story.py` + `story.json` por episódio (referência LL-ART20). 9 s, 1080×1920, sem áudio, zero créditos. Com foto de terceiros por autorizar: prévia privada + versão sem foto.
+- **Refinamento:** o Story publica-se logo depois do carrossel, com o sticker de link para o post (texto em `story/story_sticker.txt`), e serve só para levar ao post.
+- **Entrega:** no fim de cada lambe, capa, legenda, comentário fixado e texto do sticker enviados no chat, separados e prontos a copiar (reforça a preferência de 15/11).

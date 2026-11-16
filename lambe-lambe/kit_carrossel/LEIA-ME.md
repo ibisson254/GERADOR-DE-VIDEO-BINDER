@@ -17,3 +17,6 @@ Padrão aprovado pelo fundador a 13/11/2026 («Modelo aceito se torne padrão pa
 
 ## Regras
 Carta real inteira; fita só nos cantos de cima; nada sobre o rodapé da carta; sem texto sobre arte; crédito «carta (set nº) · artista · © Wizards of the Coast» em cada slide. Foto do artista só a enviada pelo fundador (ele pede a autorização ao artista), em recorte P&B que não tapa a arte. Sem geração de imagem nem créditos externos.
+
+## Story do carrossel
+Todo carrossel novo leva também o Story animado: `../kit_story/LEIA-ME.md` (padrão de 16/11/2026).

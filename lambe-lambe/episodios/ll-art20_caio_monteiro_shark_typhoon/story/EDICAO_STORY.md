@@ -3,7 +3,8 @@
 Missão do fundador de 16/11/2026 (18:51). Zero créditos: sem IA, sem ElevenLabs, sem instalações. Só Python, OpenCV e FFmpeg locais.
 
 ## Como se faz
-`python3 -I story.py <cartas> <01_capa.png da versão A> <foto|-> <saida.mp4> [--previa]`
+Motor reutilizável: `lambe-lambe/kit_story/motor_story.py` (o script deste episódio passou para o kit a 16/11; saída idêntica, diferença média 0,0 no frame final).
+`python3 -I lambe-lambe/kit_story/motor_story.py story.json <saida.mp4> [--previa] [--sem-foto]`
 - Cartas: as mesmas do carrossel (Scryfall, ver `../fontes.md`). Capa: `01_capa.png` renderizado pelo `../carrossel.py` (versão A, sem faixa de prévia).
 - Peças isoladas sem segmentação generativa: a capa é recortada pela máscara exata da folha rasgada (`rasgo_alpha(1000,1290,16,9)`, −0,4°) mais o selo azul, por isso não há muro dentro do muro. As outras peças (papel kraft, impressões, carta, fita, faixa preta, recorte P&B da foto) são desenhadas pelo `motor_padrao.py` sobre fundo preto e branco e separadas por matting. O motor não foi alterado.
 - O muro é reconstruído a partir da cor e das bordas dos modelos aprovados (restos de cartazes antigos nas laterais), com grão de tinta.

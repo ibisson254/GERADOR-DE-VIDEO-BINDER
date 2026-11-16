@@ -1,0 +1,13 @@
+{
+  "_nota": "Story do LL-ART20 com lambe-lambe/kit_story/motor_story.py. Cartas do Scryfall e foto do fundador não versionadas: ajustar os caminhos à pasta local.",
+  "capa": "/home/claude/ll20/out/A/01_capa.png",
+  "esquerda": "/home/claude/ll20/cartas/znr_112_art_crop.jpg",
+  "direita": {"foto": "/home/claude/ll20/foto.jpg", "carta": "/home/claude/ll20/cartas/stx_37_png.png"},
+  "detalhe": "/home/claude/ll20/cartas/fdn_79_art_crop.jpg",
+  "nome": "CAIO MONTEIRO",
+  "serie": "Artistas de Magic",
+  "creditos": {
+    "com_foto": "Artes: Shark Typhoon (IKO 67) · Marauding Blight-Priest (ZNR 112) · Boltwave (FDN 79)<br>Caio Monteiro · © Wizards of the Coast",
+    "sem_foto": "Artes: Shark Typhoon (IKO 67) · Marauding Blight-Priest (ZNR 112) · Boltwave (FDN 79) · Archmage Emeritus (STX 37)<br>Caio Monteiro · © Wizards of the Coast"
+  }
+}
