@@ -160,17 +160,7 @@ for (y, ang) in [(500, -4), (1330, 3)]:
 d = ImageDraw.Draw(im, 'RGBA')
 
 # --- topo: identidade do evento (no lugar do logo da referência) ---------------------------------
-# troféu (Taça)
-tx, ty = 330, 92
-cup = Image.new('RGBA', (120, 130), (0, 0, 0, 0)); cd = ImageDraw.Draw(cup)
-cd.pieslice((14, -40, 106, 78), 0, 180, fill=LIME); cd.rectangle((14, 0, 106, 20), fill=LIME)
-cd.arc((-6, 6, 34, 50), 90, 270, fill=LIME, width=8); cd.arc((86, 6, 126, 50), -90, 90, fill=LIME, width=8)
-cd.rectangle((52, 76, 68, 100), fill=LIME); cd.rounded_rectangle((30, 98, 90, 118), 4, fill=LIME)
-cup = glow_outline(pad(cup, 20), (5, 10, 16), grow=5, blur=1)
-im.alpha_composite(cup, (tx - 70, ty - 40))
-d.text((tx + 70, ty - 10), 'TAÇA', font=F(ANTON, 74), fill=WHITE, anchor='lm')
-d.text((tx + 70, ty + 58), 'PRECONAUTA', font=F(ANTON, 50), fill=WHITE, anchor='lm')
-d.text((tx + 72, ty + 108), 'PRECON 2x2 · 1ª EDIÇÃO', font=F(INTB, 22), fill=(170, 180, 175), anchor='lm')
+# espaço reservado ao logótipo (centro-topo, ~x 300–700, y 40–210): colado pelo fundador no editor
 # «META EM CURTO» a marcador, canto superior direito
 mt = Image.new('RGBA', (360, 220), (0, 0, 0, 0)); md = ImageDraw.Draw(mt)
 md.text((30, 10), 'META', font=F(MARK, 72), fill=WHITE)
@@ -200,7 +190,7 @@ im.alpha_composite(sp, ((W - sp.width) // 2 + 4, 255 - b))
 
 # --- 2) foco: 66% gigante, grunge ------------------------------------------------------------------
 num = '66%'
-fnum = F(RUB, 470, 'Black Italic')
+fnum = F(RUB, 465, 'Black Italic')
 nl = Image.new('RGBA', (W + 200, 620), (0, 0, 0, 0)); nd = ImageDraw.Draw(nl)
 ncx, ncy = nl.width // 2 - 10, 300
 nd.text((ncx + 14, ncy + 18), num, font=fnum, fill=(0, 0, 0, 255), anchor='mm', stroke_width=26, stroke_fill=(0, 0, 0, 255))  # sombra dura
@@ -231,7 +221,7 @@ gd.text((ncx, ncy), num, font=fnum, fill=LIME + (150,), anchor='mm', stroke_widt
 gl = g.filter(ImageFilter.GaussianBlur(40))
 nl2 = Image.new('RGBA', nl.size, (0, 0, 0, 0)); nl2.alpha_composite(gl); nl2.alpha_composite(nl)
 nl2 = nl2.rotate(3, resample=Image.BICUBIC)
-im.alpha_composite(nl2, (-100, 430))
+im.alpha_composite(nl2, (-104, 415))
 # troféu-coroa (no lugar da coroa da referência): contorno a verde em cima do «%»
 cr = Image.new('RGBA', (200, 170), (0, 0, 0, 0)); crd = ImageDraw.Draw(cr)
 crd.arc((40, 10, 160, 120), 0, 180, fill=LIME, width=10)
@@ -251,18 +241,18 @@ am = Image.fromarray(alpha).filter(ImageFilter.MedianFilter(5))
 filled = am.point(lambda v: 255 if v > 60 else 0).filter(ImageFilter.MaxFilter(15)).filter(ImageFilter.MinFilter(15))
 tb = tb.convert('RGBA'); tb.putalpha(filled.filter(ImageFilter.GaussianBlur(1)))
 tb = tb.resize((int(tb.width * .86), int(tb.height * .86)), Image.LANCZOS)
-tb = glow_outline(pad(tb, 50), LIME, grow=9, blur=22, strength=.9)
+tb = glow_outline(pad(tb, 50), LIME, grow=5, blur=14, strength=.45)
 tb = tb.rotate(4, resample=Image.BICUBIC)
 
 # comandantes em leque, à direita (os dois precons do episódio: Ahoy Mateys e Jeskai Striker)
 cards = Image.new('RGBA', (620, 820), (0, 0, 0, 0))
-c2 = card('shiko', 360).rotate(-10, resample=Image.BICUBIC, expand=True)
-c1 = card('brass', 390).rotate(7, resample=Image.BICUBIC, expand=True)
-c2g = glow_outline(pad(c2, 30), LIME, grow=7, blur=14, strength=.7)
-c1g = glow_outline(pad(c1, 30), LIME, grow=7, blur=14, strength=.9)
+c2 = card('shiko', 320).rotate(-10, resample=Image.BICUBIC, expand=True)
+c1 = card('brass', 350).rotate(7, resample=Image.BICUBIC, expand=True)
+c2g = glow_outline(pad(c2, 30), LIME, grow=5, blur=10, strength=.3)
+c1g = glow_outline(pad(c1, 30), LIME, grow=5, blur=10, strength=.4)
 cards.alpha_composite(c2g, (170, 10)); cards.alpha_composite(c1g, (0, 120))
 sc, b = shadow(cards, (14, 18), 18, 210)
-im.alpha_composite(sc, (500 - b, 900 - b))
+im.alpha_composite(sc, (560 - b, 950 - b))
 st, b = shadow(tb, (12, 16), 18, 200)
 im.alpha_composite(st, (-60 - b, 880 - b))
 
@@ -281,19 +271,19 @@ for (x, y, r, n) in [(90, 1240, 120, 70), (1010, 960, 90, 40), (980, 1460, 120, 
     splatter(d, x, y, r, n, LIME + (200,))
 
 # --- autocolante: «EU DISSE 50% / ERREI A CONTA» ---------------------------------------------------
-sk = paper(560, 200, (10, 12, 14), amp=10, dirt=30)
+sk = paper(480, 165, (10, 12, 14), amp=10, dirt=30)
 skd = ImageDraw.Draw(sk)
-skd.text((60, 62), 'EU DISSE', font=F(PIX, 84), fill=WHITE, anchor='lm')
-wx = 60 + F(PIX, 84).getlength('EU DISSE ')
-skd.text((wx, 62), '50%', font=F(PIX, 84), fill=RED, anchor='lm')
-skd.line((wx - 6, 70, wx + F(PIX, 84).getlength('50%') + 6, 52), fill=RED, width=8)
+skd.text((56, 58), 'EU DISSE', font=F(PIX, 68), fill=WHITE, anchor='lm')
+wx = 60 + F(PIX, 68).getlength('EU DISSE ')
+skd.text((wx, 58), '50%', font=F(PIX, 68), fill=RED, anchor='lm')
+skd.line((wx - 6, 66, wx + F(PIX, 68).getlength('50%') + 6, 48), fill=RED, width=8)
 sl = Image.new('RGBA', sk.size, (0, 0, 0, 0)); sld = ImageDraw.Draw(sl)
-sld.text((54, 148), 'ERREI A CONTA', font=F(RUB, 74, 'Black Italic'), fill=LIME, anchor='lm')
+sld.text((52, 128), 'ERREI A CONTA', font=F(RUB, 60, 'Black Italic'), fill=LIME, anchor='lm')
 sl.putalpha(grunge_alpha(sl.split()[-1], holes=.08, scale=2))
 sk.alpha_composite(sl)
 sk = sk.rotate(3, resample=Image.BICUBIC, expand=True)
 ssk, b = shadow(sk, (8, 12), 12, 200)
-im.alpha_composite(ssk, (14 - b, 1395 - b))
+im.alpha_composite(ssk, (24 - b, 1440 - b))
 # seta para o 66% … não: para os comandantes (onde a Taça respondeu)
 ar = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ad = ImageDraw.Draw(ar)
 pts = [(470 + t * 140, 1560 - 60 * math.sin(t * 1.4)) for t in [i / 20 for i in range(21)]]
@@ -302,13 +292,13 @@ ex, ey = pts[-1]; px, py = pts[-4]; a = math.atan2(ey - py, ex - px)
 ad.polygon([(ex + math.cos(a) * 26, ey + math.sin(a) * 26), (ex + math.cos(a + 2.4) * 34, ey + math.sin(a + 2.4) * 34), (ex + math.cos(a - 2.4) * 34, ey + math.sin(a - 2.4) * 34)], fill=LIME)
 
 # --- tag de pincel verde: «230 JOGOS REAIS» (o «placar» deste episódio) --------------------------
-tg = brush(470, 250, LIME, density=70, angle=-4)
+tg = brush(420, 220, LIME, density=60, angle=-4)
 tgl = Image.new('RGBA', tg.size, (0, 0, 0, 0)); tgd = ImageDraw.Draw(tgl)
-tgd.text((tg.width / 2 + 6, 96), '230 JOGOS', font=F(MARK, 62), fill=(8, 8, 8), anchor='mm')
-tgd.text((tg.width / 2 + 6, 172), 'REAIS', font=F(MARK, 80), fill=(8, 8, 8), anchor='mm')
+tgd.text((tg.width / 2 + 6, 88), '230 JOGOS', font=F(MARK, 58), fill=(8, 8, 8), anchor='mm')
+tgd.text((tg.width / 2 + 6, 160), 'NA TAÇA', font=F(MARK, 58), fill=(8, 8, 8), anchor='mm')
 tgl = tgl.rotate(-6, resample=Image.BICUBIC)
 tg.alpha_composite(tgl)
-im.alpha_composite(tg, (W - tg.width - 10, 1560))
+im.alpha_composite(tg, (W - tg.width - 16, 1585))
 
 # --- faixa fixa da série ---------------------------------------------------------------------------
 fy = 1832
