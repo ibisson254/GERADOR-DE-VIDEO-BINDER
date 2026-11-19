@@ -198,6 +198,7 @@ Peças de 18–19/10/2026 descritas em projeto:claude/reel-lambe-lambe-pop.md ("
 | ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | AB-01 | ABISMO · Crucible of Worlds volta em Nauctis (Reel) | Crucible of Worlds (NAC 345; original 5DN 114) | clássico de 2004 reimpresso nos decks de Commander de Nauctis; texto de ambientação cita Kiora | Um clássico de 2004 em Nauctis. | PUBLICADO | produzido 15/11/2026 a pedido do fundador (10:05; carta escolhida às 10:1x) · fundador 16/11/2026 (11:23): «todos os episódios criados já foram lançados» | 15/11/2026 | não publicada | abismo/publicacoes/AB-01-crucible-reel/ficha.md | EX-01; AB-00 | pauta livre (memoria.py pauta, 15/11) |
+| AB-03 | ABISMO · Terrors of the Abyss: os comandantes do precon do abismo (Reel) | "The Ignoble Serpent" (NAC 6); "Zekes, Acid Rock Fan" (NAC 8); precon Terrors of the Abyss | o precon Sultai dos monstros marinhos de Nauctis já tem comandantes (vazados, nomes provisórios) | O precon do abismo vazou. | CONCLUÍDO | pedido do fundador 19/11/2026 (17:41) | 19/11/2026 | não publicada | abismo/publicacoes/AB-03-terrors-reel/ficha.md | AB-01 (mesmo set de Commander) | pauta livre (memoria.py pauta, 19/11) |
 
 ## Lacunas da auditoria retroativa (01/11/2026)
 

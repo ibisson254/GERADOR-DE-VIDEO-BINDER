@@ -1,0 +1,115 @@
+{
+ "id": "AB-03-terrors-reel",
+ "formato": "reel",
+ "medidor": false,
+ "carta": {
+  "png": "cartas/ignoble_nac6.png",
+  "set": "nac",
+  "num": "6",
+  "nome": "\"The Ignoble Serpent\"",
+  "colecao": "Nauctis: The Sunken Realm Commander",
+  "artista": "John Tedrick",
+  "camada": "ABISMO"
+ },
+ "ficha": {
+  "nome": "THE IGNOBLE SERPENT",
+  "tipo": "Criatura Lendária",
+  "camada": "Comandante"
+ },
+ "chamada": {
+  "titulo": "UM MONSTRO MARINHO POR TURNO",
+  "chips": [
+   [
+    "8 MANAS · 7/9",
+    "info"
+   ],
+   [
+    "DEVOLVE UM MONSTRO MARINHO NO FIM DO TURNO",
+    "ok"
+   ],
+   [
+    "SÓ COM MONSTROS NO CEMITÉRIO",
+    "mau"
+   ],
+   [
+    "NOME PROVISÓRIO",
+    "info"
+   ]
+  ]
+ },
+ "gancho": [
+  "O PRECON DO ABISMO",
+  "VAZOU"
+ ],
+ "comparacao": {
+  "png": "cartas/zekes_nac8.png",
+  "set": "nac",
+  "num": "8",
+  "nome": "\"Zekes, Acid Rock Fan\"",
+  "colecao": "Nauctis: The Sunken Realm Commander",
+  "artista": "Filip Burburan",
+  "batida": 20,
+  "batida_fim": 28
+ },
+ "impacto": [
+  "PRECON SULTAI",
+  "TERRORS OF THE ABYSS · 05/02/2027"
+ ],
+ "selo_batida": 30,
+ "frases": [
+  {
+   "batida": 4,
+   "texto": "O precon do abismo vazou.",
+   "amarelo": [
+    3
+   ],
+   "batidas": 7
+  },
+  {
+   "batida": 12,
+   "texto": "Ele traz um monstro marinho por turno.",
+   "amarelo": [
+    3,
+    4
+   ],
+   "batidas": 7
+  },
+  {
+   "batida": 20,
+   "texto": "O outro comandante dá emerge a eles.",
+   "amarelo": [
+    4
+   ],
+   "batidas": 6
+  },
+  {
+   "batida": 26,
+   "texto": "Sacrifique, compre duas, descarte uma.",
+   "amarelo": [
+    1,
+    2
+   ],
+   "batidas": 5
+  },
+  {
+   "batida": 31,
+   "texto": "Os nomes ainda são provisórios.",
+   "amarelo": [
+    4
+   ],
+   "batidas": 5
+  }
+ ],
+ "pergunta": [
+  "QUAL DOS DOIS VOCÊ JOGARIA?",
+  "COMENTE SERPENTE OU ZEKES"
+ ],
+ "porque_formato": "Reviravolta entre os dois comandantes do mesmo precon: a serpente no início, o Zekes na comparação (batidas 20–28) e o nome do deck no drop. Uma mensagem: o precon dos monstros do abismo já tem comandantes.",
+ "capa": {
+  "texto": [
+   "TERRORS OF",
+   "THE ABYSS"
+  ],
+  "sub": "OS 2 COMANDANTES DO PRECON DO ABISMO"
+ }
+}
