@@ -141,6 +141,10 @@ Atualização de 10/11/2026: regra geral no `oraculo/CICLO_SEMANAL.md` §0 (toda
 
 Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por confirmar: 57,4 s + fecho, QC sem problemas, −14,0 LUFS, sem corte lateral. Ficha `oraculo/episodios/ep07_mundial_ficha.md`, legenda `oraculo/legendas/ep07_mundial_legenda.txt`. Previsões PR-WC32-01 (pública) a 03 registadas antes da voz; conferência na segunda 16/11 (`ciclo.py segunda`). O vídeo não está no repositório: recria-se com `ep07_audio.py` + `ep07_render.py` a partir de `voz.mp3` (flow ElevenLabs em `ep07_mundial_fontes.txt`). v2 (17h): listas de Landfall e das duas campeãs de Jund no ecrã; 5 fotos dos brasileiros no ecrã (17:30); falta a de João Jorge Sales Junior. Depende do fundador: foto do Sales Junior (opcional), ouvir a pronúncia e publicar (de preferência antes de 13/11, dia 1 do Mundial).
 
+## MB-EP12 · MONEY BURN (19/11/2026, 20h55 — CONCLUÍDO; publicação com o fundador)
+
+Mana & Burn «Só falta uma carta»: o deck que nunca fica pronto e o upgrade que vira 20 de dano (Price of Progress). Sem preços (sem conflito com o Vince). Vozes Talis + Erik, 978 créditos (autorizados 19/11, 19:39). Vídeo final 45,50 s, QC sem P0/P1; vídeo e capa entregues na conversa (não versionados). Pacote em `manaburn/episodios/ep12_money_burn/`. Falta só: escuta das pronúncias e publicação (fundador); par de publicação (carrossel do app) precisa de capturas reais do scanner/Binder.
+
 ## AB-03 · Terrors of the Abyss (19/11/2026, 18h — CONCLUÍDO; publicação com o fundador)
 
 Reel ABISMO de 20,58 s com os dois comandantes vazados do precon Sultai de Nauctis (NAC 6 e 8, nomes provisórios, cartas em japonês). Sem voz, custo zero, QC v2 sem problemas. Pacote em `abismo/publicacoes/AB-03-terrors-reel/`; vídeo e capa entregues na conversa.

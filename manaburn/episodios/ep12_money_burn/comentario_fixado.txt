@@ -1,0 +1,11 @@
+Seu deck: A, tá pronto. B, falta só uma carta.
+
+O "Lê a carta" do Mana, palavra por palavra (texto Oracle, Scryfall, 19/11/2026):
+1. Volcanic Island: "({T}: Add {U} or {R}.)" Azul ou vermelha, e mais nada.
+2. Opportunity ({4}{U}{U}): "Target player draws four cards." Seis manas, quatro cartas.
+3. Greed ({3}{B}): "{B}, Pay 2 life: Draw a card."
+4. Price of Progress ({1}{R}): "Price of Progress deals damage to each player equal to twice the number of nonbasic lands that player controls."
+
+A conta da virada: 10 terrenos não básicos × 2 = 20 de dano no Burn. Num Commander de 40 de vida, é metade.
+
+Tem um detalhe escondido. Diga o segundo.

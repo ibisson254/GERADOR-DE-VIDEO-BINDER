@@ -75,3 +75,12 @@ Mesa de noite de Commander (decks com sleeves, cartas genéricas, d20, dados, de
 - A tela inteira da TV cabe sempre na largura do vídeo (zoom máximo ≈1,506, margem de 10 px); `bordas.py` confere.
 - Medidor só com dado real e fonte na tela. Bloco do scanner só com gravação real do app.
 - Duração livre (constituição §6).
+
+## TV acesa no quadro 0 (19/11/2026, MB-EP12)
+
+`EP.fx.tv_ligada: true` faz a TV já estar acesa no primeiro quadro (sem a animação de ligar de 0,22 s), para o quadro 0 mostrar a carta («quadro 0 com Magic», checklist E/F). Desligada por defeito: os episódios antigos saem iguais. É o mesmo efeito que os `juntar_fecho.py` do Ep. 9 e do Giro já obtinham cortando os 7 primeiros quadros, mas sem tirar áudio. Com a flag, o `juntar_fecho.py` do episódio usa `T0 = 0` (`manaburn/episodios/ep12_money_burn/juntar_fecho.py`).
+
+## Prévia sem voz (19/11/2026, MB-EP12)
+
+Quando os créditos de voz não estão autorizados: `python3 previa_sem_voz.py` (cópia em `episodios/ep12_money_burn/`) corre o `process.py` sem o alterar, com cada fala em silêncio pela duração prevista (calibrada no MB-EP11) e a boca com envelope sintético. Serve para conferir ritmo, telas e QC; não se publica. Com as vozes, volta-se ao passo 3 (`process.py burn.mp3 mana.mp3`). Nesta sessão o Playwright usou o Chrome do sistema (`executable_path='/usr/bin/google-chrome'`) porque o download do Chromium falhou.
+
