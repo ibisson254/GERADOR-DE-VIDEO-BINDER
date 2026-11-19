@@ -1,0 +1,140 @@
+{
+ "_leia": "Modelo do dados/episodio.json do Meta em Curto (padrão de edição de 19/11/2026). Copiar para <pasta do episódio>/dados/episodio.json e preencher. Tempos podem ser segundos ou âncoras à voz: \"@3\" = início da frase 3 de voz_tempos, \"@3+0.2\", \"@3>\" = fim da frase 3. Exemplo completo e real: oraculo/episodios/esp03_dc500/dados/episodio.json + o teste em oraculo/motor/LEIA-ME.md.",
+ "confirmado": false,
+ "previa": "PRÉVIA SEM VOZ · NÃO PUBLICAR",
+ "faixa": "META EM CURTO · EP. NN",
+ "faixa_collab": "",
+ "pergunta_gancho": "PERGUNTA DO GANCHO EM 4–8 PALAVRAS?",
+ "linha_fonte": "Dados: <fonte> · <período>",
+ "selo_fonte": "FONTE: <fonte> · @<conta>",
+ "per": "<período>",
+ "extraido": "<dd/mm/aaaa>",
+ "cenario": "A_melhor | A_melhor_margem | B_fora_margem | dentro_margem (sai de calcular.py)",
+ "indicador": "WIN RATE",
+ "denominador": "partidas",
+ "unidade_pop": "DECKS",
+ "definicao": "win rate = vitórias ÷ (vitórias + derrotas)",
+ "A": "<nome completo>",
+ "B": "<nome completo>",
+ "curtoA": "<nome curto>",
+ "curtoB": "<nome curto>",
+ "nA": "",
+ "nB": "",
+ "iA": "",
+ "iB": "",
+ "iA_v": null,
+ "iB_v": null,
+ "dA": "",
+ "dB": "",
+ "dif_titulo": "<A> − <B>, em pontos de win rate",
+ "dif": "",
+ "dif_v": null,
+ "dif_lo": null,
+ "dif_hi": null,
+ "veredito": "",
+ "veredito_cor": "verde | ambar",
+ "nota": [
+  "linha 1 da nota de robustez",
+  "linha 2"
+ ],
+ "carta_A": "cartas/<a>.jpg",
+ "carta_B": "cartas/<b>.jpg",
+ "carta_L": "",
+ "pergunta": "<pergunta final ligada à descoberta>",
+ "capa_l1": "<FRASE>",
+ "capa_l2": "<FRASE 2>",
+ "capa_foco": "<número>",
+ "capa_unidade": "<O QUE É O NÚMERO>",
+ "frases": [
+  "NO <FONTE>, DO <AUTOR>:",
+  "<frase 2>",
+  "..."
+ ],
+ "voz_cfg": {
+  "atempo": 1.1,
+  "alvo_s": 35.0,
+  "pausa": 0.15,
+  "pausa_min": 0.08,
+  "pausas_longas": {
+   "<índice da frase da diferença>": 0.45,
+   "<índice da assinatura>": 0.25
+  }
+ },
+ "seq": [
+  [
+   0,
+   "gancho"
+  ],
+  [
+   1.7,
+   "tubo_abertura",
+   "@1-0.6",
+   "@1-0.25"
+  ],
+  [
+   "@1+0.1",
+   "carta",
+   "A",
+   "<n>",
+   "DECKS",
+   "1.º",
+   [
+    "@2",
+    "top5",
+    "PRINT · <PÁGINA> · <DATA>"
+   ]
+  ],
+  [
+   "@3-0.05",
+   "carta",
+   "B",
+   "<n>",
+   "WIN RATE",
+   "2.º"
+  ],
+  [
+   "@4-0.05",
+   "duas",
+   "@4+1.8"
+  ],
+  [
+   "@5-0.05",
+   "tubo",
+   "analitico",
+   "@6",
+   "desconfiado"
+  ],
+  [
+   "@6>+0.1",
+   "dif"
+  ],
+  [
+   "@8-0.05",
+   "pergunta"
+  ],
+  [
+   "@9-0.15",
+   "tubo",
+   "analitico"
+  ],
+  [
+   "@10-0.05",
+   "tubo",
+   "desconfiado"
+  ]
+ ],
+ "beats": {
+  "SCAN": 0.5,
+  "NUM": 1.0,
+  "HLB": 1.6,
+  "Q": 2.0,
+  "RISE": 1.7,
+  "DIVE": "@1-0.25",
+  "DIF": "@6>+0.1",
+  "DIF_PT": "@7",
+  "DIF_IC": "@7+0.7",
+  "DIF_VER": "@8",
+  "DIF_NOTA": "@8+1.1",
+  "END": "@10>+0.15"
+ }
+}

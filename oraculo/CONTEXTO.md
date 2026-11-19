@@ -86,7 +86,7 @@ Tudo o que o TUBO cita aparece no ecrã.
 ## 7. Estrutura do Reel (25–35 s) · abertura padrão desde 16/11/2026
 
 **Regra fixa (fundador, 16/11/2026, depois do MC-EP08: 7 s de tempo médio em 59 s; os episódios do TUBO que funcionaram abriam com cartas):**
-1. **Quadro 0 = abertura modelo do MC-ESP01** (vídeo de referência enviado pelo fundador a 16/11): grelha 2×2 em ecrã inteiro sobre o TUBO escurecido, com cartas reais ligadas ao pagamento e, quando o episódio fala de um jogador, **a foto dele como um dos quatro quadros** (com autorização registada). Cabeçalho em mono («CAMPEÃO DO MUNDO · MAGIC», «MESA DE 4 · COMMANDER») e linha de fonte por baixo; um selo em cada quadro (vida, cópias, país). Destaque = contorno verde a brilhar + o resto escurece + caixa com o número grande («25% · 1 em 4», «1,6% · 2 em 128»). Depois os quadros sobem para uma fila por cima do TUBO, o ecrã dele mostra o número ou a carta e o vídeo mergulha nele. Nunca o TUBO sozinho, nunca só texto. Código de referência: `hook()` em `oraculo/esp01/esp01_render.py` e `oraculo/episodios/ep08b_render.py`.
+1. **Quadro 0 = abertura modelo do MC-ESP01** (vídeo de referência enviado pelo fundador a 16/11): grelha 2×2 em ecrã inteiro sobre o TUBO escurecido, com cartas reais ligadas ao pagamento e, quando o episódio fala de um jogador, **a foto dele como um dos quatro quadros** (com autorização registada). Cabeçalho em mono («CAMPEÃO DO MUNDO · MAGIC», «MESA DE 4 · COMMANDER») e linha de fonte por baixo; um selo em cada quadro (vida, cópias, país). Destaque = contorno verde a brilhar + o resto escurece + caixa com o número grande («25% · 1 em 4», «1,6% · 2 em 128»). Depois os quadros sobem para uma fila por cima do TUBO, o ecrã dele mostra o número ou a carta e o vídeo mergulha nele. Nunca o TUBO sozinho, nunca só texto. Código de referência: desde 19/11/2026 `oraculo/motor/mc_render.py` (§7.4; antes, `hook()` em `oraculo/esp01/esp01_render.py` e `oraculo/episodios/ep08b_render.py`).
 2. **O pagamento mais forte entra nos primeiros 3 s** (o campeão, o número, a carta). O vídeo abre **dentro do tubo** e o TUBO aparece depois, ao sair.
 3. **Nada no gancho depende de um episódio anterior.** Previsões, placar e `ARQUIVO` vêm depois da revelação, nunca antes.
 4. A revelação principal nunca passa dos 10 s.
@@ -128,7 +128,7 @@ Tema oficial: `musica/tubo_tema.mp3` (40,6 s). Composição própria do Ibisson 
 6. **Crossovers:** TUBO vs Conde ("carta feia, mas presença real no meta", com número verificado) ou o TUBO a aparecer na TV do sofá de Mana & Burn. Um universo BINDER partilhado.
 
 **Produção e conversão**
-7. **Legendas em estilo terminal:** fonte mono verde, palavra a palavra (a maioria vê sem som).
+7. **Legendas:** desde 19/11/2026, legenda da narração no topo em Inter Black (números a verde), frase a frase, sincronizada com a voz (§7.4); a mono verde fica para o terminal e os rótulos. A maioria vê sem som.
 8. **Ponte honesta para o app:** o "scan" da carta a entrar no tubo ecoa o scanner real do outro. Nunca mostrar ou inventar outras funcionalidades.
 9. **Carrossel derivado:** cada "Relatório do Meta" também sai como carrossel com os mesmos dados e fontes.
 
@@ -146,6 +146,22 @@ Todas as capas do Meta em Curto seguem este modelo (fundador, 14/11/2026 02:43; 
 - **Fora da capa:** números de apoio, fontes, perguntas e créditos (vão para a legenda e o comentário fixado). Máximo de 3 blocos de texto (frase, foco, faixa) e 1 elemento de apoio.
 - Capas já publicadas não se refazem.
 - **Variante «comunidade»** (fundador, 14/11/2026 10:44; referência: `ESP02_CAPA_COMUNIDADE.png`, `esp02_render.py <kit> capa_comunidade`): quando o episódio nasce de comentários de contas relevantes (criadores, lojas, ligas), o foco passa a ser os **prints reais** desses comentários, empilhados como cartas (máx. 3, de quem tiver mais peso para quem tiver menos), com as fotos e os @ visíveis. Frase em duas linhas por cima (branco + verde), um selo de apoio por cima da linha de ações do último print (sem tapar texto de ninguém) e a faixa fixa da série. Serve de prova social na grelha e valoriza os parceiros da collab.
+
+## 7.4 Edição padrão (desde 19/11/2026)
+
+Padrão aprovado pelo fundador no MC-ESP03 (v4, com vídeo de referência; `nucleo/DECISOES.md` 19/11/2026 23:13). Motor: `oraculo/motor/mc_render.py`; voz: `oraculo/motor/mc_voz.py`; guia e modelo: `oraculo/motor/LEIA-ME.md`, `episodio_modelo.json`.
+
+1. **Ordem de abertura:** cartas no quadro 0 (com a prova real e a pergunta) → o TUBO aparece **a falar** (LED a pulsar com a voz) → a carta citada a seguir **voa para o ecrã do TUBO** e o vídeo mergulha → a carta sai grande do ecrã. Sempre que o vídeo volta do TUBO aos dados, mergulha no ecrã; sempre que entra no TUBO, sai do ecrã (zoom-out).
+2. **Voz desde o 0 s, e a primeira fala diz a fonte** («No portal X, do Y:»). Sem segundos mudos no início.
+3. **Hierarquia de cada plano de dados:** legenda da narração grande no topo (Inter Black, números a verde, caixa escura) · carta grande e inteira ao centro · número em caixa logo por baixo (entra depois da troca de carta) · selo de fonte em baixo. A legenda acompanha cada frase da voz (tempos de `mc_voz.py`).
+4. **Troca de carta em rotação 3D** (eixo Y, ~0,3 s); a caixa do número nunca aparece com a carta errada.
+5. **Prova real quando a voz cita o número:** a captura da página da fonte entra por baixo da carta (que encolhe), com rótulo «PRINT · <página> · <data>».
+6. **Fundo das cenas de dados = chuva de código verde estilo Matrix**, visível (cabeça clara, cauda a desvanecer); painéis com números leem-se sobre fundo escuro translúcido.
+7. **Grandezas separadas:** popularidade, desempenho e diferença em planos próprios, cada um com unidade e denominador; a conclusão estatística aparece ao lado da margem de erro que a sustenta.
+8. **TUBO só onde tem função:** leitura (meio) e fecho; expressão pelo veredito (Confiante = evidência firme; Desconfiado = dentro da margem; Erro de sistema = o modelo falhou).
+9. **Som:** trilha oficial com ducking sob a voz, corte seco na revelação, e **a trilha continua por baixo do fecho do scanner** até ao fim (o fecho não tem áudio). Loudness acertado a −14 LUFS no ficheiro final.
+10. **Duração** 25–35 s sem o fecho; se a voz não couber, encurta-se o texto antes de gravar, não se gravam frases soltas depois.
+11. **Capa:** §7.3 com o fundo feito da **arte** das cartas (sem o texto de regras), chuva de código por cima, frase em duas cores e a unidade por baixo do número (`mc_render.py ... capa`).
 
 ## 8. Pilares
 

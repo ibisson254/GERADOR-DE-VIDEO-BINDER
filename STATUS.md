@@ -161,6 +161,10 @@ Dados lidos no portal (navegador integrado do Claude, PC do fundador). Tese: o m
 
 EM PRODUÇÃO, **bloqueado no Gate A (dados)**. O portal duelcommander500.com.br carrega os números por JavaScript; daqui só se leram os rótulos (matriz dos 20 comandantes com mais matchups, com «Win Rate» e «Popularidade»; galeria ordenável por «Mais Populares» e «Maior Conversão»). Pronto sem dados: ficha com gancho e regras de escolha fixadas antes dos números, roteiro em três cenários, storyboard, `dados/calcular.py` (Wilson 95 %, alertas de amostra; testado com dados sintéticos), rascunhos da legenda, comentário, alt e mensagem. Falta: as 9 capturas de `oraculo/episodios/esp03_dc500/capturas/LEIA-ME.md` (ou sessão no computador com Claude in Chrome). Voz estimada ≈ 400 créditos por tomada; não pedida. 15h45: motor `esp03_render.py` pronto; prévia técnica sem dados e sem voz (QC sem problemas) e capa-modelo entregues na conversa, não versionadas. 16h30: refinamento — Newcombe para a diferença (o veredito da v1 estava errado), três painéis separados, TUBO em 2 aparições, zona segura; prévia v2 com QC sem problemas (`oraculo/episodios/esp03_dc500/auditoria_previa.md`).
 
+## Edição padrão do Meta em Curto (19/11/2026, 23h40)
+
+A edição do MC-ESP03 v4 é o padrão da série: `oraculo/CONTEXTO.md` §7.4 e o motor `oraculo/motor/` (`mc_render.py`, `mc_voz.py`, `LEIA-ME.md`, `episodio_modelo.json`). Próximo episódio do TUBO começa por aí.
+
 ## Próximo passo concreto
 
 - Lisa Marie no Ar: ficha de modelo + preview estático com `lisa-marie/PROMPT_CLAUDE.md`, e respostas do fundador às decisões de 19/11 (paleta, estética de papel, símbolos). Publicar o teaser LL-LISA01 (fundador).

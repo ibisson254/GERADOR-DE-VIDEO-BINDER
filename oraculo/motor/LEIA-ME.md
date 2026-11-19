@@ -1,0 +1,30 @@
+# Meta em Curto · motor de edição padrão (desde 19/11/2026)
+
+Padrão aprovado pelo fundador no MC-ESP03 (v4 + capa v2). Regras em `oraculo/CONTEXTO.md` §7.4; lições de custo em `oraculo/PERFIL.md`.
+Episódios publicados ou aprovados não se refazem com este motor; o ESP03 mantém o seu `esp03_render.py`.
+
+## Ordem de trabalho (cada passo só depois do anterior)
+1. **Dados** abertos e verificados (navegador integrado no PC do fundador se o site usa JavaScript). Cálculos com `oraculo/episodios/esp03_dc500/dados/calcular.py` (Newcombe para diferenças). Capturas em `<pasta>/capturas/` (recortes sem alterações; logótipo de terceiros só com decisão registada).
+2. **Cartas** do Scryfall em `<pasta>/cartas/` + `creditos.json`.
+3. **`dados/episodio.json`** a partir de `episodio_modelo.json`, com as `frases` da locução (a primeira diz a fonte).
+4. **Orçamento da voz:** ≈ 11,8 caracteres por segundo (Antonio de Jesus, atempo 1,10) → 35 s ≈ 390 caracteres no total. `estimate_only` no ElevenLabs e **uma** pergunta ao fundador com o texto final e o custo.
+5. **Voz:** uma geração. Depois `python3 -I oraculo/motor/mc_voz.py <pasta> voz.mp3` → `voz_montada.wav` e `voz_tempos` no JSON (alinha as falas às frases pelo tamanho do texto, números lidos por extenso; encurta pausas até ao alvo).
+6. **Fotogramas:** `python3 -I oraculo/motor/mc_render.py <raiz> <pasta> stills 0.5 2.4 4 ...` → folha de contacto → corrigir.
+7. **Um render:** `... final voz_montada.wav` (vídeo + trilha até ao fim do fecho + loudness −14 LUFS).
+8. **Capa:** `... capa` → `CAPA.png`, `CAPA_grelha.png`, `CAPA_grelha_mini.png` (conferir a miniatura).
+9. **QC:** `python3 -I comum/qc/qc_video.py MC_FINAL.mp4 --frente tubo` + folha de contacto a olho.
+
+## Cenas disponíveis (`seq`)
+| Plano | Argumentos | O que faz |
+|---|---|---|
+| `gancho` | — | Quadro 0: cartas A e B + captura da matriz/prova + pergunta no topo + selo de fonte |
+| `tubo_abertura` | t_voo, t_mergulho | TUBO a falar (LED com a voz), cartas ao lado; a carta A voa para o ecrã e o vídeo mergulha |
+| `carta` | lado (A/B/L), número, unidade, posição, [t, `top5`/`matriz`, rótulo] | Carta grande ao centro (troca em rotação 3D), número em caixa; prova opcional a meio |
+| `duas` | t da definição | As duas cartas lado a lado com indicador e denominador |
+| `tubo` | expressão, [t ecrã «ESCOLHE ≠ GANHA», expressão 2] | TUBO sai do ecrã (zoom-out) e fala; legenda no topo |
+| `dif` | — | Painel da diferença: ponto, margem de 95 %, veredito, nota de robustez |
+| `pergunta` | — | Cartas frente a frente com a pergunta final |
+Ao voltar do `tubo` para um plano de dados, o motor mergulha no ecrã automaticamente.
+
+## O que ainda é específico de episódios «popularidade × desempenho»
+As cenas `dif` e `duas` e os campos `iA/iB/dif_*` foram feitos para comparar dois comandantes. Outros tipos de episódio (deck, previsão, campeão) reutilizam o fundo, as legendas, `carta`, `tubo`, `gancho`, a voz e a capa; uma cena nova acrescenta-se aqui, não num motor novo.

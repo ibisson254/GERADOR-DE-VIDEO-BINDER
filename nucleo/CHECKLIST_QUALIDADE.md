@@ -20,7 +20,8 @@ Um conteúdo só está aprovado sem P0 e com os P1 corrigidos ou aceites. **Nenh
 - [ ] A pauta pertence ao território da série (perfil · "Fora do território").
 - [ ] Proposta de valor numa frase.
 - [ ] Auditoria de originalidade: `memoria.py pauta` livre (ou decisão do fundador registada) e linha no `comum/REGISTRO_EDITORIAL.md`; egg não repete `comum/easter_eggs.md`.
-- [ ] Fontes necessárias acessíveis; se não, plano de bloqueio (constituição §11).
+- [ ] Fontes necessárias acessíveis **e números lidos antes de qualquer render** (nada de prévias com marcadores); se não, plano de bloqueio (constituição §11).
+- [ ] Texto da voz cabe na duração da frente antes de gravar (orçamento de caracteres no perfil da frente); uma geração por fala, aprovada com o custo.
 - [ ] Recursos do kit inspecionados e na versão atual.
 - [ ] Estratégia proporcional (constituição §3, Etapa 2).
 - [ ] Especial ou homenagem: constituição §14 (duração pela história, tom de celebração e legado, humor subtil quando couber, rigor intacto).
@@ -39,6 +40,8 @@ Um conteúdo só está aprovado sem P0 e com os P1 corrigidos ou aceites. **Nenh
 - [ ] Quadros do ficheiro final conferidos no formato da frente (9:16 ou 4:5), **sem corte lateral**, carta inteira.
 - [ ] Legenda queimada dentro da zona segura e legível.
 - [ ] Loudness medido no ficheiro final.
+- [ ] Voz sem silêncio no início (o gancho visual corre por baixo da primeira fala) e trilha a tocar por baixo do fecho até ao fim (o fecho não tem áudio próprio).
+- [ ] Folha de fotogramas conferida antes do render final; um render final por versão.
 - [ ] Vídeo termina com `comum/outro/outro_binder_916.mp4`, sem encurtar (exceto Órbita e exceções registadas).
 - [ ] Legenda termina com "baixe o BINDER Vision"; até 5 hashtags; sem emojis.
 - [ ] Comentário fixado: pergunta fácil + complemento (+ "Tem um detalhe escondido. Diga o segundo." se houver easter egg).
