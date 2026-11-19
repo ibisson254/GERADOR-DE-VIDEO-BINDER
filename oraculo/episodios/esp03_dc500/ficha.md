@@ -2,7 +2,7 @@
 
 ## Identificação*
 - ID editorial*: `MC-ESP03`
-- Estado no registo*: EM PRODUÇÃO (desde 19/11/2026, 15:10) · Gate A resolvido às 16:45 (dados lidos no portal) · **aguarda autorização da voz (Gate C/D)**
+- Estado no registo*: EM PRODUÇÃO (desde 19/11/2026, 15:10) · Gate A resolvido às 16:45 · voz autorizada pelo fundador às ~16:55 («Sim, gerar a voz») · vídeo final renderizado às 17:05 · **publicação e envio ao Farpas dependem do fundador**
 - Aprovação do fundador: pauta e parceiro-alvo decididos a 19/11/2026 (`nucleo/DECISOES.md`, `comum/parcerias.md`). Tese final, voz e envio ainda não aprovados.
 
 ## Classificação*
@@ -68,19 +68,47 @@ Créditos e autorizações: nenhuma autorização do Farpas existe. Nada em `ora
 ## Produção
 - Recursos reutilizados: `oraculo/esp01/esp01_render.py` (`hook()`, terminal, chuva, TUBO) e `oraculo/episodios/ep08b_render.py` como base do `esp03_render.py`; `oraculo/esp01/esp01_audio.py` para mix; `oraculo/assets/tubo_mestra_916.png`; `oraculo/musica/tubo_tema.mp3`; `comum/outro/outro_binder_916.mp4`. O TUBO não é regenerado.
 - Script de render: `esp03_render.py` (19/11, derivado do ESP01): grelha dupla, mergulho, terminal com barras no mesmo eixo 0–100 %, faixa de 95 %, TUBO (imagem-mestra intacta), legendas terminal, trilha + SFX, fecho do scanner, capa e recorte da grelha. Lê `dados/episodio.json`; sem valor, mostra o marcador e a marca «PRÉVIA TÉCNICA · SEM DADOS», e nunca desenha barra sem número. Falta para a versão final: cartas do Scryfall, `episodio.json` com os números, tempos a partir de `words.json` da voz.
-- Voz: Antonio de Jesus (`MK5tXPmT83J5SUlpUo4K`, eleven_v4, atempo 1,10). Não gerada. Texto final 379 caracteres ≈ 380 créditos por tomada (1 tomada pedida).
+- Voz: Antonio de Jesus (`MK5tXPmT83J5SUlpUo4K`, eleven_v4, atempo 1,10), **1 tomada, 412 créditos** (estimativa prévia confirmada; «1.323» escrito por extenso para a pronúncia). Flow ElevenLabs `LtUgaMWrnvu8UFurYG93`, geração `MKgHjfpDwkVjVQByV40l`. Voz entra aos 2,0 s; pausa de 0,4 s antes da diferença (corte seco). Frases sincronizadas por deteção de pausas (sem transcrição paga); tempos em `dados/episodio.json` (`vo`, `beats`). Recriar: descarregar a geração → `ffmpeg -i voz.mp3 -af atempo=1.10 -ar 48000 -ac 1 voz_rapida.wav` → `python3 -I esp03_render.py <raiz> final voz_rapida.wav`.
 - Easter egg: nenhum (0).
 - Riscos: P0 se um número sair sem denominador ou se win rate e conversão se misturarem; risco de parceria se o vídeo sugerir collab.
 
 ## Controlo de qualidade*
-Ficheiro final: não existe (falta a voz). **Versão sem voz com dados reais** (19/11, 16h50, `ESP03_SEM_VOZ.mp4`, não versionada; QC em `qc_sem_voz.json`): 1080×1920 · 30 fps · 27,5 s + fecho · −14,3 LUFS · pico −4,9 dBTP · fecho presente · sem problemas mensuráveis · maior intervalo sem mudança relevante 2,7 s (21,8–24,5 s) · factos = `fontes.md` · cartas inteiras. **Prévia técnica v2** (19/11, 16h30, `ESP03_PREVIA_TECNICA_v2.mp4`, não versionada; QC em `qc_previa_v2.json`): 1080×1920 · 30 fps · 27,5 s + fecho · −14,3 LUFS · pico −4,9 dBTP · fecho presente · sem problemas mensuráveis · maior intervalo sem mudança relevante 2,6 s · cropdetect sem corte lateral. **Prévia técnica v1, substituída**  (19/11, `ESP03_PREVIA_TECNICA.mp4`, não versionada), `qc_video.py --frente tubo`: 1080×1920 · 30 fps · 30,37 s (26,5 s + fecho) · −14,3 LUFS · pico −4,9 dBTP · fecho presente · cortes duros a 12,0 / 16,0 / 20,0 / 26,5 s · «sem problemas mensuráveis». Conferido a olho na folha de contacto: quadro 0 com a grelha, pergunta até 3 s, cartas sem cortes nem texto por cima. Nada disto vale para o vídeo final: repete-se com os números e a voz.
+Medido no ficheiro final `ESP03_META_EM_CURTO.mp4` (19/11/2026, 17:05) com `qc_video.py --frente tubo` (`qc_final.json`), cropdetect e medição de mudanças visuais.
+
+| Critério | Alvo | Medido | OK |
+|---|---|---|---|
+| Resolução / fps | 1080×1920 · 30 | 1080×1920 · 30,0 | sim |
+| Duração | 25–35 s sem fecho | 34,97 s + fecho (38,83 s) | sim |
+| Corte lateral (cropdetect) | nenhum | 1080:1920 em 961/991 amostras; o resto são cenas escuras do terminal | sim |
+| Loudness / pico | −14 ± 1 LUFS / < −1 dBTP | −14,0 LUFS / −3,3 dBTP | sim |
+| Fecho do scanner | presente, inteiro | presente a partir de 34,97 s (dif. média 0,36) | sim |
+| Factos = ficha | sim | todos os números do ecrã e da voz estão em `fontes.md` | sim |
+| Quadro 0 | campo 1, legível sem som | grelha com Cloud e Phelia, rótulos e unidades | sim |
+| Descoberta | ≤ 3,0 s | números 1,0 s; pergunta completa 2,6 s | sim |
+| Pagamento do gancho | campo 7 (± 3 s) | Cloud 63,1 % aos 11,9 s (voz 11,6 s); veredito aos 26,9 s | sim (dois tempos, ambos previstos) |
+| Maior intervalo sem mudança visual | ≤ 3 s | 2,5 s (17,9–20,4 s) | sim |
+| Retenção | Magic no quadro 0 · mudança ≤ 3 s · som em cada revelação | sim · sim · sim | sim |
+| Zona segura | conteúdo em x 80–940, y 220–1540 | conferido na folha de contacto (HUD da série fora, como nos episódios anteriores) | sim |
+| P0 / P1 abertos | 0 / 0 | 0 / 0 (P2: a trilha entra cheia a meio de um bloco; fecho do TUBO varia só a expressão) | sim |
 
 ## Ficheiros finais*
-- Vídeo final: não existe. Prévia técnica `ESP03_PREVIA_TECNICA.mp4` entregue ao fundador na conversa de 19/11 (não versionada).
-- Capa: modelo `ESP03_CAPA.png` + `ESP03_CAPA_grelha.png` com marcadores, entregue na conversa de 19/11; a final precisa do número e das cartas.
+- Vídeo final: `ESP03_META_EM_CURTO.mp4` · 38,83 s (34,97 s + fecho) · entregue ao fundador na conversa de 19/11/2026 (não versionado; recria-se com `esp03_render.py final`). Versões anteriores (prévias técnicas v1, v2 e sem voz) só na conversa.
+- Capa: `ESP03_CAPA.png` («LIDERA POR POUCO · 63,1%», TUBO desconfiado, cartas Cloud e Phelia ao fundo) + `ESP03_CAPA_grelha.png` (recorte 3:4, conferido em miniatura), entregues na conversa de 19/11/2026 (`esp03_render.py capa`).
 
 ## Pacote de publicação* (rascunhos nesta pasta, com marcadores `[PENDENTE]`)
-- [ ] `legenda.txt` · [ ] `comentario_fixado.txt` · [ ] `texto_alternativo.txt` · [x] `fontes.md` (parcial) · [x] `mensagem_farpas.txt` (rascunho, não enviada)
+- [x] `legenda.txt` · [x] `comentario_fixado.txt` · [x] `texto_alternativo.txt` · [x] `fontes.md` · [x] `mensagem_farpas.txt` (pronta, não enviada; prazo de 5 dias a contar do envio)
+- Plano B (se o Farpas não aceitar): publicar com crédito ao portal e marcação, sem afirmar parceria (`comum/parcerias.md`).
 
 ## Encerramento*
-Não se aplica: episódio EM PRODUÇÃO, bloqueado no Gate A.
+- [x] Briefing e roteiro definitivo nesta ficha
+- [x] Legenda, comentário fixado e texto alternativo na pasta
+- [x] Fontes e evidências (`fontes.md`, `capturas/`, `dados/`)
+- [x] Controlo de qualidade preenchido
+- [x] Localização do vídeo e da capa
+- [x] `comum/REGISTRO_EDITORIAL.md` atualizado
+- [x] `comum/historico.md`
+- [x] Easter egg: nenhum
+- [x] `STATUS.md`
+- [x] `memoria.py encerramento MC-ESP03` = ENCERRAMENTO OK (19/11, 17h10)
+- [ ] Commit conferido no GitHub (ver handoff)
+- [ ] Resposta do Farpas em `oraculo/autorizacoes/` (só quando existir)

@@ -62,6 +62,7 @@ BEAT = dict(SCAN=0.30, NUM=1.00, HLB=1.60, Q=2.00, RISE=3.00, DIVE=3.40,
             PERF=8.50, PERF_A=9.00, PERF_B=10.40, PERF_DEN=12.00,
             LEIT=13.50, LEIT2=15.00, DIF=16.50, DIF_PT=17.20, DIF_IC=18.00, DIF_VER=19.00, DIF_NOTA=20.20,
             ASK=21.50, CLOSE=24.50, CLOSE2=26.00, END=27.50)
+BEAT.update(D.get('beats', {}))                 # versão final: tempos vindos da voz (dados/episodio.json)
 CEN = D.get('cenario', 'B_fora_margem')       # B_fora_margem · dentro_margem · A_melhor (dados/calcular.py)
 LEITURA = {'B_fora_margem': 'MESMO COM A MARGEM DE ERRO, ELE FICA À FRENTE.',
            'dentro_margem': 'COM ESSA AMOSTRA, A DIFERENÇA CABE NA MARGEM DE ERRO.',
@@ -241,8 +242,8 @@ def scene_pop(t):
     if D.get('B') and D['B'] not in nomes: top = top + [['…', None], [D['B'], int(str(D.get('nB', '0')).replace('.', '') or 0)]]
     mx = max([r[1] for r in top if r[1]] or [1]); y = 640; passo = 110 if len(top) <= 5 else 96
     for j, (nome, n) in enumerate(top):
-        rowA = (D.get('A') == nome) or (j == 0 and not D.get('A')); rowB = D.get('B') == nome
-        col = PH if (rowA and t >= BEAT['POP_A']) else (AMBER if (rowB and t >= BEAT['POP_B']) else (90, 130, 140))
+        rowA = (D.get('A') == nome) or (j == 0 and not D.get('A')); rowB = D.get('B') == nome; row2 = D.get('pop_hl2') == nome and t >= BEAT.get('POP_2', 99)
+        col = PH if (rowA and t >= BEAT['POP_A']) else (AMBER if (rowB and t >= BEAT['POP_B']) else (WHITE if row2 else (90, 130, 140)))
         if nome == '…': d.text((80, y - 6), '…', font=F(MONOB, 40), fill=GREY); y += 40; continue
         d.text((80, y), nome, font=fit(d, nome, MONOB, 38, 600), fill=WHITE if (rowA or rowB) else (190, 205, 210))
         yb = y + 48; k = eio((t - BEAT['POP_BAR'] - 0.08 * j) / 0.6)
@@ -390,13 +391,43 @@ def audio_previa(out='mix_previa.wav'):
                     '-ar', str(SR), '-ac', '2', out], check=True)
     return out
 
-def render(out='ESP03_PREVIA_TECNICA.mp4'):
+def audio_final(voz, out='mix_final.wav'):
+    """Voz (já com atempo da série) + trilha com ducking −12 dB sob a voz + os mesmos SFX. Pausas da ficha inseridas."""
+    import wave
+    SR = 48000; N = int(BEAT['END'] * SR); cfg = D['voz']
+    raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', voz, '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
+    vz = np.frombuffer(raw, np.float32).copy(); V = np.zeros(N, np.float32)
+    cortes = [0.0] + [a for a, _ in cfg['pausas']] + [len(vz) / SR]; desloc = cfg['lead']
+    for k in range(len(cortes) - 1):
+        a, b = int(cortes[k] * SR), int(cortes[k + 1] * SR); i = int((cortes[k] + desloc) * SR); n = min(b - a, N - i)
+        if n > 0: V[i:i + n] = vz[a:a + n]
+        if k < len(cfg['pausas']): desloc += cfg['pausas'][k][1]
+    V *= 10 ** (cfg.get('ganho_db', 0) / 20)
+    mix_trilha = audio_previa('so_trilha_sfx.wav')
+    raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', mix_trilha, '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
+    M = np.zeros(N, np.float32); m = np.frombuffer(raw, np.float32)[:N]; M[:len(m)] = m
+    env = np.convolve((np.abs(V) > 0.01).astype(np.float32), np.ones(int(.25 * SR)) / int(.25 * SR), 'same')
+    duck = 10 ** (-12 * np.clip(env * 3, 0, 1) / 20)
+    x = V * 1.0 + M * 0.55 * duck; x = (x / max(1e-6, np.abs(x).max()) * .9 * 32767).astype(np.int16)
+    with wave.open('mix_raw.wav', 'wb') as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(x.tobytes())
+    mm = subprocess.run(['ffmpeg', '-v', 'info', '-i', 'mix_raw.wav', '-af', 'loudnorm=I=-14:TP=-2.2:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr
+    js = json.loads(mm[mm.rfind('{'):mm.rfind('}') + 1])
+    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', 'mix_raw.wav', '-af', f"loudnorm=I=-14:TP=-2.2:LRA=11:measured_I={js['input_i']}:measured_TP={js['input_tp']}:measured_LRA={js['input_lra']}:measured_thresh={js['input_thresh']}:offset={js['target_offset']}:linear=true",
+                    '-ar', str(SR), '-ac', '2', 'mix_ln.wav'], check=True)
+    mm = subprocess.run(['ffmpeg', '-v', 'info', '-i', 'mix_ln.wav', '-af', 'ebur128=peak=true', '-f', 'null', '-'], capture_output=True, text=True).stderr
+    import re
+    i_lufs = float(re.findall(r'I:\s+(-?[\d.]+) LUFS', mm)[-1]); tp = float(re.findall(r'Peak:\s+(-?[\d.]+) dBFS', mm)[-1])
+    g = min(-14.0 - i_lufs, -1.5 - tp)              # acerta −14 LUFS sem passar −1,5 dBTP
+    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', 'mix_ln.wav', '-af', f'volume={g:.2f}dB', out], check=True)
+    return out
+
+def render(out='ESP03_PREVIA_TECNICA.mp4', audio=None):
     nf = int(round(BEAT['END'] * FPS))
     p = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
                           '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', 'corpo.mp4'], stdin=subprocess.PIPE)
     for i in range(nf): p.stdin.write(frame(i / FPS).tobytes())
     p.stdin.close(); p.wait()
-    a = audio_previa(); outro = K + 'comum/outro/outro_binder_916.mp4'   # o fecho não tem faixa de áudio: silêncio com a duração dele
+    a = audio or audio_previa(); outro = K + 'comum/outro/outro_binder_916.mp4'   # o fecho não tem faixa de áudio: silêncio com a duração dele
     dur = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', outro], capture_output=True, text=True).stdout.strip()
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', 'corpo.mp4', '-i', a, '-i', outro, '-f', 'lavfi', '-t', dur, '-i', 'anullsrc=r=48000:cl=stereo', '-filter_complex',
                     '[0:v]fps=30,format=yuv420p,setsar=1[v0];[2:v]scale=1080:1920,fps=30,format=yuv420p,setsar=1[v1];'
@@ -426,6 +457,8 @@ def capa():
 
 if __name__ == '__main__':
     if MODO == 'capa': capa()
+    elif MODO == 'final':                     # python3 -I esp03_render.py <raiz> final <voz_atempo.wav>
+        render('ESP03_META_EM_CURTO.mp4', audio_final(sys.argv[3]))
     elif MODO == 'stills':
         for x in map(float, sys.argv[3:]): frame(x).save(f'still_{x:05.2f}.png')
     else: render()

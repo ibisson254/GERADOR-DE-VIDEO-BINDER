@@ -129,7 +129,11 @@ Atualização de 10/11/2026: regra geral no `oraculo/CICLO_SEMANAL.md` §0 (toda
 
 Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por confirmar: 57,4 s + fecho, QC sem problemas, −14,0 LUFS, sem corte lateral. Ficha `oraculo/episodios/ep07_mundial_ficha.md`, legenda `oraculo/legendas/ep07_mundial_legenda.txt`. Previsões PR-WC32-01 (pública) a 03 registadas antes da voz; conferência na segunda 16/11 (`ciclo.py segunda`). O vídeo não está no repositório: recria-se com `ep07_audio.py` + `ep07_render.py` a partir de `voz.mp3` (flow ElevenLabs em `ep07_mundial_fontes.txt`). v2 (17h): listas de Landfall e das duas campeãs de Jund no ecrã; 5 fotos dos brasileiros no ecrã (17:30); falta a de João Jorge Sales Junior. Depende do fundador: foto do Sales Junior (opcional), ouvir a pronúncia e publicar (de preferência antes de 13/11, dia 1 do Mundial).
 
-## MC-ESP03 · Farpas de Mana (19/11/2026, 16h50 — Gate A resolvido; aguarda voz)
+## MC-ESP03 · Farpas de Mana (19/11/2026, 17h05 — CONCLUÍDO; envio e publicação com o fundador)
+
+Vídeo final e capa entregues na conversa (não versionados); voz 412 créditos autorizada. Próximo: o fundador envia a prévia ao @farpasdemana (texto em `oraculo/episodios/esp03_dc500/mensagem_farpas.txt`, prazo 5 dias) e regista a resposta em `oraculo/autorizacoes/`; plano B: publicar com crédito, sem collab.
+
+### Estado às 16h50
 
 Dados lidos no portal (navegador integrado do Claude, PC do fundador). Tese: o mais jogado (Cloud, 522 decks) também tem o maior win rate (63,1 %, 1.323 partidas), mas a vantagem de 1,8 ponto sobre a Phelia (61,3 %, 603) cabe na margem de erro (Newcombe 95 %: −2,9 a +6,5). Versão sem voz pronta e com QC; falta autorização para ≈380 créditos (1 tomada, Antonio de Jesus), depois render final, QC e envio da prévia ao Farpas pelo fundador.
 

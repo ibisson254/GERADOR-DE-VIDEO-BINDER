@@ -1,6 +1,6 @@
 {
  "confirmado": true,
- "previa": "PRÉVIA SEM VOZ · NÃO PUBLICAR",
+ "previa": "",
  "cenario": "A_melhor_margem",
  "indicador": "WIN RATE",
  "denominador": "partidas",
@@ -62,69 +62,74 @@
  "capa_foco": "63,1%",
  "vo": [
   [
-   3.0,
-   4.0,
+   1.95,
+   4.6,
    "CLOUD: 522 DECKS."
   ],
   [
-   4.0,
-   5.6,
+   4.58,
+   6.04,
    "O MAIS JOGADO DO PORTAL."
   ],
   [
-   5.6,
-   7.2,
+   6.08,
+   9.15,
    "LIGHT-PAWS, 478, EM SEGUNDO."
   ],
   [
-   7.2,
-   8.5,
+   9.2,
+   11.49,
    "PHELIA: SÓ 255."
   ],
   [
-   8.5,
-   10.4,
+   11.59,
+   14.89,
    "NO WIN RATE, CLOUD FAZ 63,1%."
   ],
   [
-   10.4,
-   12.0,
+   14.91,
+   17.38,
    "PHELIA, 61,3%."
   ],
   [
-   12.0,
-   13.5,
+   17.44,
+   20.75,
    "EM 1.323 E 603 PARTIDAS."
   ],
   [
-   13.5,
-   15.0,
+   20.76,
+   22.59,
    "POPULARIDADE MEDE QUEM ESCOLHE."
   ],
   [
-   15.0,
-   16.5,
+   22.62,
+   24.19,
    "WIN RATE MEDE QUEM GANHA."
   ],
   [
-   17.2,
-   19.0,
+   24.6,
+   26.79,
    "CLOUD À FRENTE POR 1,8 PONTO."
   ],
   [
-   19.0,
-   21.5,
+   26.8,
+   28.94,
    "MAS ESSA VANTAGEM CABE NA MARGEM DE ERRO."
   ],
   [
-   21.5,
-   24.5,
+   28.91,
+   31.15,
    "CLOUD SEGURA O TOPO OU A PHELIA PASSA?"
   ],
   [
-   24.5,
-   27.5,
-   "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
+   31.17,
+   32.7,
+   "PROBABILIDADE CALCULADA."
+  ],
+  [
+   32.7,
+   34.7,
+   "HUMANOS, IMPREVISÍVEIS."
   ]
  ],
  "fontes_numeros": {
@@ -135,5 +140,41 @@
  },
  "curtoA": "Cloud",
  "curtoB": "Phelia",
- "fonte_perf": "win rate do portal = vitórias ÷ (vitórias + derrotas) · empates fora"
+ "fonte_perf": "win rate do portal = vitórias ÷ (vitórias + derrotas) · empates fora",
+ "pop_hl2": "Light-Paws, Emperor's Voice",
+ "beats": {
+  "RISE": 3.0,
+  "DIVE": 3.4,
+  "POP": 4.0,
+  "POP_BAR": 4.4,
+  "POP_A": 4.63,
+  "POP_2": 6.13,
+  "POP_B": 9.0,
+  "PERF": 11.5,
+  "PERF_A": 11.9,
+  "PERF_B": 14.8,
+  "PERF_DEN": 17.49,
+  "LEIT": 20.4,
+  "LEIT2": 22.67,
+  "DIF": 24.1,
+  "DIF_PT": 24.65,
+  "DIF_IC": 25.4,
+  "DIF_VER": 26.85,
+  "DIF_NOTA": 28.0,
+  "ASK": 28.9,
+  "CLOSE": 31.1,
+  "CLOSE2": 32.75,
+  "END": 34.95
+ },
+ "voz": {
+  "arquivo": "voz.mp3 (ElevenLabs, flow LtUgaMWrnvu8UFurYG93, geração MKgHjfpDwkVjVQByV40l, 412 créditos, 19/11/2026)",
+  "atempo": 1.1,
+  "lead": 2.0,
+  "pausas": [
+   [
+    22.15,
+    0.4
+   ]
+  ]
+ }
 }
