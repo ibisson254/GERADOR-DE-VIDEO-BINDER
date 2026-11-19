@@ -1,4 +1,6 @@
-# MC-ESP03 · capturas necessárias (Gate A)
+# MC-ESP03 · capturas (Gate A resolvido a 19/11/2026, 16:45)
+
+**Estado:** dados lidos diretamente do portal no navegador integrado do Claude, no PC do fundador; capturas `01_galeria_populares_2026-11-19.jpg` e `04_matchups_2026-11-19.jpg` guardadas aqui; números em `../fontes.md`. A lista abaixo fica como referência para episódios futuros.
 
 O portal https://duelcommander500.com.br/ carrega os números por JavaScript. A 19/11/2026 (15:00–15:10, Lisboa) o ambiente do agente não conseguiu abrir o site pela rede (curl sem ligação; leitura web só devolve o esqueleto da página, sem números; extensão do Chrome indisponível). Sem estas capturas, nenhum número entra no episódio.
 

@@ -1,4 +1,30 @@
-# MC-ESP03 · roteiro v2 (PENDENTE DE DADOS)
+# MC-ESP03 · roteiro definitivo (19/11/2026, 16h50) — cenário `A_melhor_margem`
+
+**Tese:** o mais jogado também é o que mais vence — mas a vantagem sobre o 2.º ainda cabe na margem de erro.
+**Texto exato da locução** (`locucao.txt`, 379 caracteres, ≈ 24 s com atempo 1,10; nenhuma fala antes dos 3 s):
+
+| Tempo | Locução (pausas: `/` 0,3 s · `//` 0,6 s) | Dado e fonte |
+|---|---|---|
+| 3,0 | «Cloud: / 522 decks.» | galeria |
+| 4,0 | «O mais jogado do portal.» | galeria |
+| 5,6 | «Light-Paws, / 478, / em segundo.» | galeria |
+| 7,2 | «Phelia: / só 255.» | galeria |
+| 8,5 | «No win rate, / Cloud faz 63,1%.» | matriz (821 V, 480 D) |
+| 10,4 | «Phelia, / 61,3%.» | matriz (357 V, 225 D) |
+| 12,0 | «Em 1.323 / e 603 partidas.» | matriz |
+| 13,5 | «Popularidade mede quem *escolhe*.» | opinião (fora do tubo) |
+| 15,0 | «Win rate mede quem *ganha*.» | opinião |
+| 16,5 | // (corte seco da trilha) | — |
+| 17,2 | «Cloud à frente / por 1,8 ponto.» | cálculo do BINDER |
+| 19,0 | «Mas essa vantagem / cabe na margem de erro.» | Newcombe 95 %: −2,9 a +6,5 |
+| 21,5 | «Cloud segura o topo / ou a Phelia passa?» | — |
+| 24,5 | «Probabilidade calculada. // Humanos, / imprevisíveis.» | — |
+
+Entonação: seca e precisa até aos 12 s; ligeiro sorriso em «escolhe / ganha»; desce um tom em «cabe na margem de erro» (a dúvida é o pagamento); pergunta com subida curta.
+
+---
+
+# Roteiro v2 por cenário (referência)
 
 Voz: Antonio de Jesus (eleven_v4, atempo 1,10). PT-BR, «você». Trilha: `oraculo/musica/tubo_tema.mp3`. Alvo: 27–29 s sem o fecho.
 Marcadores vêm de `dados/episodio.json` (gerado por `dados/calcular.py`): `[A]`, `[B]`, `[nA]`, `[nB]` listas; `[qA]` quota do meta; `[iA]`, `[iB]` win rate (ou conversão Top 4, nunca os dois); `[dA]`, `[dB]` partidas (ou listas); `[dif]` diferença B − A; `[per]` período. Nenhum marcador chega à voz sem valor em `fontes.md`.

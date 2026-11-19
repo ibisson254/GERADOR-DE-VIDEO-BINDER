@@ -39,8 +39,19 @@ Não foram procurados nem usados endpoints de terceiros. A pesquisa devolveu pá
 - Período e data de atualização: por confirmar no print.
 - Independência: no win rate da matriz, um jogo A×B entra no registo de A e no de B; jogos do mesmo piloto repetem-se. O intervalo da diferença é aproximado; se o portal mostrar a célula A×B, retiram-se esses jogos e recalcula-se.
 
-## Tabela final (preencher depois das capturas)
+## Tabela final (extraída a 19/11/2026, 16:30–16:45 Lisboa, navegador integrado do Claude no PC do fundador)
 
-| Afirmação no vídeo | Indicador (definição do portal) | Valor | Denominador | Período | Filtros | URL | Extraído em | Captura | Limitação |
-|---|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | | |
+Período: o portal não publica data de início; os números são o acumulado do portal até 19/11/2026 (evento mais recente do Cloud: 15/11/2026). Filtros: galeria «Todos» os arquétipos, sem filtro de cor, «Mais Populares»; matriz «Win Rate» (20 comandantes com mais partidas registadas, 12.147 partidas analisadas).
+
+| Afirmação no vídeo | Indicador (definição) | Valor | Denominador | URL | Captura | Limitação |
+|---|---|---|---|---|---|---|
+| Cloud é o mais jogado: 522 decks | «DECKS» da galeria | 522 | — | https://duelcommander500.com.br/galeria | `capturas/01_galeria_populares_2026-11-19.jpg` | decks ≠ jogadores ≠ partidas |
+| Light-Paws 478 · Amalia 376 · Spider-Man 2099 363 (banido) · Deadpool 331 · Phelia 255 | idem | — | — | idem | idem | Spider-Man 2099 aparece com selo «BANIDO» no portal |
+| Cloud 63,1 % de win rate | `data-wr` da matriz = V ÷ (V + D) | 821 V · 480 D · 22 E | 1.323 partidas (1.301 com vencedor) | https://duelcommander500.com.br/matchups | `capturas/04_matchups_2026-11-19.jpg` | empates fora; universo = 20 com mais partidas |
+| Phelia 61,3 % | idem | 357 V · 225 D · 21 E | 603 partidas (582 com vencedor) | idem | idem | idem |
+| Definição do win rate | conferida: V ÷ (V + D) reproduz o valor publicado ao décimo em 5 comandantes (Cloud, Phelia, Light-Paws, Plagon, King T'Challa) | — | — | idem | `dados/resultado.md` | a galeria mostra 62,7 % para o Cloud (outro recorte, não documentado): usamos só a matriz para win rate |
+| Cloud × Phelia | célula da matriz | 14 V · 11 D | 25 | idem | idem | — |
+| Cloud à frente por 1,8 ponto; margem −2,9 a +6,5 | cálculo do BINDER: Newcombe 95 % (método 10) | +1,77 pt | 1.301 e 582 | `dados/calcular.py` | `dados/resultado.md` | jogos entre os dois contam nos dois lados |
+| Sem os 25 jogos entre os dois: −3,6 a +6,0 | idem, retirando a célula Cloud×Phelia | +1,13 pt | 1.276 e 557 | idem | — | mesmo veredito |
+
+Robustez: o líder na matriz (Cloud) é também o 1.º em decks e o 1.º em win rate na galeria (62,7 %, 2.º Phelia 60,5 %), por isso a ordem não depende do recorte. Não foi possível testar outro período (o portal não oferece filtro de data na galeria nem na matriz). Teste extra: o 2.º mais jogado (Light-Paws, 59,2 %) fica 3,9 pontos atrás do Cloud, margem −7,8 a −0,0 (no limite) — não usado no vídeo.

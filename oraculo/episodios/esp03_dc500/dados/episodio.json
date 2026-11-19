@@ -1,0 +1,139 @@
+{
+ "confirmado": true,
+ "previa": "PRÉVIA SEM VOZ · NÃO PUBLICAR",
+ "cenario": "A_melhor_margem",
+ "indicador": "WIN RATE",
+ "denominador": "partidas",
+ "unidade_pop": "DECKS",
+ "per": "acumulado até 19/11/2026",
+ "filtros": "galeria: todos os arquétipos; matriz: 20 com mais partidas",
+ "universo": "só os 20 com mais partidas registadas",
+ "extraido": "19/11/2026",
+ "A": "Cloud, Midgar Mercenary",
+ "B": "Phelia, Exuberant Shepherd",
+ "nA": "522",
+ "nB": "255",
+ "ctxA": "1.º do portal",
+ "rotulo_A": "MAIS JOGADO",
+ "rotulo_B": "2.º MAIOR WIN RATE",
+ "iA": "63,1%",
+ "iB": "61,3%",
+ "iA_v": 0.6310530361260569,
+ "iB_v": 0.6134020618556701,
+ "dA": "1.323",
+ "dB": "603",
+ "dif_titulo": "Cloud − Phelia, em pontos de win rate",
+ "dif": "+1,8",
+ "dif_v": 0.017650974270386754,
+ "dif_lo": -0.029289806174150806,
+ "dif_hi": 0.06540390183111452,
+ "veredito": "LIDERA, MAS DENTRO DA MARGEM",
+ "veredito_cor": "ambar",
+ "nota": [
+  "sem os 25 jogos entre os dois:",
+  "−3,6 a +6,0 pontos · o mesmo veredito"
+ ],
+ "pop_top": [
+  [
+   "Cloud, Midgar Mercenary",
+   522
+  ],
+  [
+   "Light-Paws, Emperor's Voice",
+   478
+  ],
+  [
+   "Amalia Benavides Aguirre",
+   376
+  ],
+  [
+   "Spider-Man 2099 (banido)",
+   363
+  ],
+  [
+   "Deadpool, Trading Card",
+   331
+  ]
+ ],
+ "carta_A": "cartas/cloud.jpg",
+ "carta_B": "cartas/phelia.jpg",
+ "pergunta": "Cloud segura o topo ou a Phelia passa?",
+ "capa_frase": "LIDERA POR POUCO",
+ "capa_foco": "63,1%",
+ "vo": [
+  [
+   3.0,
+   4.0,
+   "CLOUD: 522 DECKS."
+  ],
+  [
+   4.0,
+   5.6,
+   "O MAIS JOGADO DO PORTAL."
+  ],
+  [
+   5.6,
+   7.2,
+   "LIGHT-PAWS, 478, EM SEGUNDO."
+  ],
+  [
+   7.2,
+   8.5,
+   "PHELIA: SÓ 255."
+  ],
+  [
+   8.5,
+   10.4,
+   "NO WIN RATE, CLOUD FAZ 63,1%."
+  ],
+  [
+   10.4,
+   12.0,
+   "PHELIA, 61,3%."
+  ],
+  [
+   12.0,
+   13.5,
+   "EM 1.323 E 603 PARTIDAS."
+  ],
+  [
+   13.5,
+   15.0,
+   "POPULARIDADE MEDE QUEM ESCOLHE."
+  ],
+  [
+   15.0,
+   16.5,
+   "WIN RATE MEDE QUEM GANHA."
+  ],
+  [
+   17.2,
+   19.0,
+   "CLOUD À FRENTE POR 1,8 PONTO."
+  ],
+  [
+   19.0,
+   21.5,
+   "MAS ESSA VANTAGEM CABE NA MARGEM DE ERRO."
+  ],
+  [
+   21.5,
+   24.5,
+   "CLOUD SEGURA O TOPO OU A PHELIA PASSA?"
+  ],
+  [
+   24.5,
+   27.5,
+   "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
+  ]
+ ],
+ "fontes_numeros": {
+  "522, 478, 376, 363, 331, 255 decks": "https://duelcommander500.com.br/galeria (Mais Populares, 19/11/2026 16:45)",
+  "63,1% (821V 480D 22E, 1.323), 61,3% (357V 225D 21E, 603)": "https://duelcommander500.com.br/matchups (data-* da matriz, 19/11/2026 16:40)",
+  "Cloud × Phelia 14V 11D (25)": "https://duelcommander500.com.br/matchups (célula Cloud→Phelia)",
+  "+1,8; −2,9 a +6,5; sem h2h −3,6 a +6,0": "cálculo do BINDER, dados/calcular.py (Newcombe 95 %)"
+ },
+ "curtoA": "Cloud",
+ "curtoB": "Phelia",
+ "fonte_perf": "win rate do portal = vitórias ÷ (vitórias + derrotas) · empates fora"
+}

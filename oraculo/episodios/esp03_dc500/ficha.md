@@ -2,7 +2,7 @@
 
 ## Identificação*
 - ID editorial*: `MC-ESP03`
-- Estado no registo*: EM PRODUÇÃO (desde 19/11/2026, 15:10) · **bloqueado no Gate A (dados)**
+- Estado no registo*: EM PRODUÇÃO (desde 19/11/2026, 15:10) · Gate A resolvido às 16:45 (dados lidos no portal) · **aguarda autorização da voz (Gate C/D)**
 - Aprovação do fundador: pauta e parceiro-alvo decididos a 19/11/2026 (`nucleo/DECISOES.md`, `comum/parcerias.md`). Tese final, voz e envio ainda não aprovados.
 
 ## Classificação*
@@ -12,7 +12,7 @@
 - Estratégia: análise de dados — separar **representação** (listas), **desempenho** (win rate ou conversão, conforme o portal publica) e **amostra** (denominador)
 
 ## Originalidade*
-- Objeto*: portal Duel Commander 500 (Farpas de Mana); comandantes a definir pelos dados
+- Objeto*: portal Duel Commander 500 (Farpas de Mana); Cloud, Midgar Mercenary (FIN 10) × Phelia, Exuberant Shepherd (MH3 40)
 - `memoria.py pauta --objeto "Duel Commander 500" --tema "popularidade versus desempenho competitivo dos comandantes"`* (19/11/2026, 15:08): **PAUTA LIVRE**. Conferido à mão: nenhum MC/MB/CM/LL trata DC500 nem popularidade × desempenho de comandantes; o MC-EP01 (conversão por arquétipo no AC13) é outro formato, outro evento e outra fonte.
 - Relações: MC-ESP01 e MC-ESP02 (modelo de abertura e de parceria); MC-EP01 (mesmo tipo de raciocínio, representação × conversão).
 - Previsões abertas do TUBO (`ciclo.py continuacao`, 19/11): PR-TRK-01..04 — nenhuma toca este episódio; o MC-ESP03 não faz previsão.
@@ -23,7 +23,7 @@
 - Público: jogadores de Duel Commander 500 no Brasil (público do Farpas) e jogadores competitivos de Commander.
 - Hipótese a testar: a comparação de dois comandantes na grelha segura mais os 3 s do que a apresentação de um só (termo de comparação: MC-EP08B, ambos sem impulso).
 - Variável em teste: 1 — abertura com comparação de dois × campeão único (MC-EP08B).
-- Tese*: **pendente dos dados** (Gate B). Três teses possíveis, escolhidas só pelo veredito de `dados/calcular.py`:
+- Tese*: **o mais jogado também é o que mais vence — mas a vantagem sobre o 2.º ainda cabe na margem de erro** (cenário `A_melhor_margem`, devolvido por `dados/calcular.py` a 19/11, 16:45). Responde ao título sem o forçar. Evidência mais forte: Cloud 1.º em decks (522) e em win rate (63,1 %, 1.323 partidas). Contra-argumento: a 2.ª (Phelia, 61,3 %) fica a 1,8 ponto, margem −2,9 a +6,5. Grau de certeza: alto para «lidera hoje», baixo para «é melhor». Risco de leitura errada: ouvir «o Cloud é o melhor» — o painel da diferença e a frase da margem existem para isso. O espectador aprende: popularidade ≠ desempenho, e uma vantagem pequena precisa de amostra. Tabela de teses fixada antes dos dados:
 
 | Veredito do cálculo | Tese que se grava | Grau de certeza |
 |---|---|---|
@@ -39,25 +39,25 @@ Regras da escolha de B (fixadas **antes** de ver os números, para não escolher
 
 ## Gancho visual* (`nucleo/SHOWRUNNER.md` §4.1) — v2, 19/11 · estrutura fechada, números pendentes
 
-1. Quadro 0*: grelha 2×2 completa sobre o TUBO escurecido — carta A (cima esq.) · «MAIS JOGADO · [nA] LISTAS · [qA] do meta» (cima dir.) · «MAIOR WIN RATE · [iB] · em [dB] partidas» (baixo esq.) · carta B (baixo dir.); «DUEL COMMANDER 500 · [per]» e linha de fonte. As quatro peças estão no quadro 0.
-2. Objeto real*: **pendente** — as cartas dos comandantes A e B (Scryfall, impressão registada), escolhidos pela regra fixada antes dos dados.
+1. Quadro 0*: grelha 2×2 completa sobre o TUBO escurecido — carta Cloud · «MAIS JOGADO · DECKS · 1.º do portal» (522 entra aos 1,0 s) · «2.º MAIOR WIN RATE · WIN RATE · em 603 partidas» (61,3 % aos 1,0 s) · carta Phelia; «DUEL COMMANDER 500 · acumulado até 19/11/2026» e linha de fonte. O «2.º» abre a pergunta: quem é o 1.º?
+2. Objeto real*: Cloud, Midgar Mercenary (FIN 10, Kazto Furuya) e Phelia, Exuberant Shepherd (MH3 40, Rudy Siswanto), imagens oficiais do Scryfall, inteiras (`cartas/creditos.json`).
 3. Ação no 1.º segundo*: as peças assentam (1,05 → 1); 0,3–0,8 s scan verde sobre a carta A e contorno.
 4. Som*: tum de CRT a 0,0 s, quatro cliques, modem no scan, pop nos números (1,0 s) e no salto para B (1,6 s).
-5. Descoberta até 3 s*: aos 1,0 s as unidades (listas × win rate em N partidas); aos 2,0 s «O MAIS JOGADO É O QUE MAIS VENCE?».
-6. Promessa*: mostrar se a diferença é real ou só amostra.
-7. Pagamento*: 19,0 s — veredito ao lado do ponto e da margem de 95 % da diferença (painel A DIFERENÇA); segundo final ajustado à voz.
+5. Descoberta até 3 s*: aos 1,0 s «522 DECKS» × «61,3 % WIN RATE em 603 partidas»; aos 2,0 s «O MAIS JOGADO É O QUE MAIS VENCE?» (completa aos 2,6 s).
+6. Promessa*: dizer quem vence mais e se a diferença é real ou só amostra.
+7. Pagamento*: 8,5–10,4 s (Cloud 63,1 %: o mais jogado é o 1.º) e 19,0 s (veredito «LIDERA, MAS DENTRO DA MARGEM» ao lado do ponto +1,8 e da margem −2,9 a +6,5).
 
 | Rubrica (1–5) | Prevista | Medida na prévia v2 (sem dados) |
 |---|---|---|
-| Relevância visual | 5 | 2 (marcadores no lugar das cartas — sobe com os dados) |
-| Impacto inicial | 4 | 3 |
+| Relevância visual | 5 | 5 (versão sem voz de 19/11, 16h50: cartas reais) |
+| Impacto inicial | 4 | 4 |
 | Clareza | 4 | 4 (unidades e pergunta legíveis em miniatura) |
 | Curiosidade | 5 | 4 |
-| Pagamento | 4 | 3 (veredito existe, valor pendente) |
+| Pagamento | 4 | 4 (pago aos 8,5 e 19,0 s; o «por pouco» pode soar a anticlímax) |
 | Identidade | 5 | 5 |
 
 ## Roteiro definitivo*
-**Pendente de dados.** Roteiro v2 em `roteiro.md` (texto comum + três cenários). Revisão narrativa (§4.2) feita sobre a estrutura; repete-se com os números. Auditoria da prévia v1 e correções: `auditoria_previa.md`.
+**Definitivo** em `roteiro.md` (topo) e `locucao.txt`, por gravar. Roteiro v2 em `roteiro.md` (texto comum + três cenários). Revisão narrativa (§4.2) feita sobre a estrutura; repete-se com os números. Auditoria da prévia v1 e correções: `auditoria_previa.md`.
 
 ## Fontes e evidências*
 Ver `fontes.md` (verificado V1–V5, tentativas de acesso, tabela final por preencher). Capturas em `capturas/` (lista do que falta em `capturas/LEIA-ME.md`). Cálculos em `dados/calcular.py` (testado com dados sintéticos; `extracao.csv` vazio).
@@ -68,12 +68,12 @@ Créditos e autorizações: nenhuma autorização do Farpas existe. Nada em `ora
 ## Produção
 - Recursos reutilizados: `oraculo/esp01/esp01_render.py` (`hook()`, terminal, chuva, TUBO) e `oraculo/episodios/ep08b_render.py` como base do `esp03_render.py`; `oraculo/esp01/esp01_audio.py` para mix; `oraculo/assets/tubo_mestra_916.png`; `oraculo/musica/tubo_tema.mp3`; `comum/outro/outro_binder_916.mp4`. O TUBO não é regenerado.
 - Script de render: `esp03_render.py` (19/11, derivado do ESP01): grelha dupla, mergulho, terminal com barras no mesmo eixo 0–100 %, faixa de 95 %, TUBO (imagem-mestra intacta), legendas terminal, trilha + SFX, fecho do scanner, capa e recorte da grelha. Lê `dados/episodio.json`; sem valor, mostra o marcador e a marca «PRÉVIA TÉCNICA · SEM DADOS», e nunca desenha barra sem número. Falta para a versão final: cartas do Scryfall, `episodio.json` com os números, tempos a partir de `words.json` da voz.
-- Voz: Antonio de Jesus (`MK5tXPmT83J5SUlpUo4K`, eleven_v4, atempo 1,10). Não gerada.
-- Easter egg: a decidir com os números (no máx. 1, chuva de código, registado em `comum/easter_eggs.md`).
+- Voz: Antonio de Jesus (`MK5tXPmT83J5SUlpUo4K`, eleven_v4, atempo 1,10). Não gerada. Texto final 379 caracteres ≈ 380 créditos por tomada (1 tomada pedida).
+- Easter egg: nenhum (0).
 - Riscos: P0 se um número sair sem denominador ou se win rate e conversão se misturarem; risco de parceria se o vídeo sugerir collab.
 
 ## Controlo de qualidade*
-Ficheiro final: não existe. **Prévia técnica v2** (19/11, 16h30, `ESP03_PREVIA_TECNICA_v2.mp4`, não versionada; QC em `qc_previa_v2.json`): 1080×1920 · 30 fps · 27,5 s + fecho · −14,3 LUFS · pico −4,9 dBTP · fecho presente · sem problemas mensuráveis · maior intervalo sem mudança relevante 2,6 s · cropdetect sem corte lateral. **Prévia técnica v1, substituída**  (19/11, `ESP03_PREVIA_TECNICA.mp4`, não versionada), `qc_video.py --frente tubo`: 1080×1920 · 30 fps · 30,37 s (26,5 s + fecho) · −14,3 LUFS · pico −4,9 dBTP · fecho presente · cortes duros a 12,0 / 16,0 / 20,0 / 26,5 s · «sem problemas mensuráveis». Conferido a olho na folha de contacto: quadro 0 com a grelha, pergunta até 3 s, cartas sem cortes nem texto por cima. Nada disto vale para o vídeo final: repete-se com os números e a voz.
+Ficheiro final: não existe (falta a voz). **Versão sem voz com dados reais** (19/11, 16h50, `ESP03_SEM_VOZ.mp4`, não versionada; QC em `qc_sem_voz.json`): 1080×1920 · 30 fps · 27,5 s + fecho · −14,3 LUFS · pico −4,9 dBTP · fecho presente · sem problemas mensuráveis · maior intervalo sem mudança relevante 2,7 s (21,8–24,5 s) · factos = `fontes.md` · cartas inteiras. **Prévia técnica v2** (19/11, 16h30, `ESP03_PREVIA_TECNICA_v2.mp4`, não versionada; QC em `qc_previa_v2.json`): 1080×1920 · 30 fps · 27,5 s + fecho · −14,3 LUFS · pico −4,9 dBTP · fecho presente · sem problemas mensuráveis · maior intervalo sem mudança relevante 2,6 s · cropdetect sem corte lateral. **Prévia técnica v1, substituída**  (19/11, `ESP03_PREVIA_TECNICA.mp4`, não versionada), `qc_video.py --frente tubo`: 1080×1920 · 30 fps · 30,37 s (26,5 s + fecho) · −14,3 LUFS · pico −4,9 dBTP · fecho presente · cortes duros a 12,0 / 16,0 / 20,0 / 26,5 s · «sem problemas mensuráveis». Conferido a olho na folha de contacto: quadro 0 com a grelha, pergunta até 3 s, cartas sem cortes nem texto por cima. Nada disto vale para o vídeo final: repete-se com os números e a voz.
 
 ## Ficheiros finais*
 - Vídeo final: não existe. Prévia técnica `ESP03_PREVIA_TECNICA.mp4` entregue ao fundador na conversa de 19/11 (não versionada).

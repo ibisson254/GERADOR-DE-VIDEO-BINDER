@@ -1,0 +1,54 @@
+{
+ "confirmado": false,
+ "cenario": "A_melhor_margem",
+ "indicador": "WIN RATE",
+ "denominador": "partidas",
+ "per": "início não publicado a 19/11/2026",
+ "filtros": "galeria: todos, mais populares; matriz: 20 com mais matchups, win rate",
+ "A": "Cloud, Midgar Mercenary",
+ "B": "Phelia, Exuberant Shepherd",
+ "nA": "522",
+ "nB": "255",
+ "qA": "14,6%",
+ "qB": "7,1%",
+ "iA": "63,1%",
+ "iB": "61,3%",
+ "iA_v": 0.6310530361260569,
+ "iB_v": 0.6134020618556701,
+ "dA": "1.301",
+ "dB": "582",
+ "dif": "-1,8%",
+ "dif_v": -0.017650974270386754,
+ "dif_lo": -0.06540390183111452,
+ "dif_hi": 0.029289806174150806,
+ "veredito": "LIDERA, MAS DENTRO DA MARGEM",
+ "veredito_cor": "ambar",
+ "pop_top": [
+  [
+   "Cloud, Midgar Mercenary",
+   522
+  ],
+  [
+   "Light-Paws, Emperor's Voice",
+   478
+  ],
+  [
+   "Elminster",
+   327
+  ],
+  [
+   "Phelia, Exuberant Shepherd",
+   255
+  ],
+  [
+   "Quintorius, History Chaser",
+   248
+  ]
+ ],
+ "carta_A": "",
+ "carta_B": "",
+ "extraido": "",
+ "pergunta": "",
+ "capa_frase": "",
+ "capa_foco": ""
+}

@@ -1,4 +1,3 @@
-[RASCUNHO · MC-ESP03 · [PENDENTE]]
-[pergunta ligada à descoberta, a mesma do vídeo]
+O Cloud segura o topo ou a Phelia passa?
 
-Como lemos os dados: listas e win rate do portal Duel Commander 500 do Farpas de Mana ([per], filtros: [filtros]). Popularidade e win rate são medidas diferentes e aparecem em painéis separados. Comparamos só comandantes com pelo menos 20 listas e 50 partidas. A margem de 95% da diferença é cálculo nosso e é aproximada, porque os jogos entre os dois comandantes contam nos dois lados.
+Como lemos os dados: decks da galeria e win rate da matriz de matchups do portal Duel Commander 500, do Farpas de Mana (acumulado até 19/11/2026). O win rate do portal é vitórias divididas por vitórias mais derrotas (empates ficam fora). A margem de 95% da diferença entre Cloud e Phelia é cálculo nosso: vai de -2,9 a +6,5 pontos, e continua incluindo o zero mesmo sem os 25 jogos entre os dois.

@@ -24,6 +24,7 @@ def v(k, fall=None):
     x = D.get(k)
     return x if x not in (None, '') else (fall if fall is not None else f'[{k}]')
 SEM_DADOS = not D.get('confirmado', False)
+UNID = D.get('unidade_pop', 'LISTAS')           # unidade de popularidade tal como o portal a escreve
 IND = v('indicador', 'WIN RATE')           # «WIN RATE» ou «CONVERSÃO TOP 4», nunca os dois
 DEN = v('denominador', 'partidas')         # «partidas» (win rate) ou «listas» (conversão)
 VEREDITO = v('veredito', '[veredito]'); VER_OK = D.get('veredito_cor', 'verde') == 'verde'
@@ -64,7 +65,8 @@ BEAT = dict(SCAN=0.30, NUM=1.00, HLB=1.60, Q=2.00, RISE=3.00, DIVE=3.40,
 CEN = D.get('cenario', 'B_fora_margem')       # B_fora_margem · dentro_margem · A_melhor (dados/calcular.py)
 LEITURA = {'B_fora_margem': 'MESMO COM A MARGEM DE ERRO, ELE FICA À FRENTE.',
            'dentro_margem': 'COM ESSA AMOSTRA, A DIFERENÇA CABE NA MARGEM DE ERRO.',
-           'A_melhor': 'DESTA VEZ, A MULTIDÃO FEZ A CONTA.'}[CEN]
+           'A_melhor': 'DESTA VEZ, A MULTIDÃO FEZ A CONTA.',
+           'A_melhor_margem': 'MAS ESSA VANTAGEM CABE NA MARGEM DE ERRO.'}[CEN]
 VO = [  # (início, fim, texto) — legenda terminal; na prévia = locução planeada (roteiro.md v2)
     (3.0, 4.0, f"{v('A')}: {v('nA')} LISTAS."), (4.0, 5.6, f"O MAIS JOGADO DO PORTAL, {v('qA')} DO META."),
     (5.6, 7.2, 'POPULARIDADE: QUEM ESCOLHE.'), (7.2, 8.5, f"{v('B')}: SÓ {v('nB')} LISTAS."),
@@ -74,6 +76,7 @@ VO = [  # (início, fim, texto) — legenda terminal; na prévia = locução pla
     (17.2, 19.0, f"A DIFERENÇA: {v('dif')}."), (19.0, 21.5, LEITURA),
     (21.5, 24.5, str(v('pergunta', '[PERGUNTA LIGADA À DESCOBERTA]')).upper()),
     (24.5, 27.5, 'PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS.')]
+if D.get('vo'): VO = [tuple(x) for x in D['vo']]   # texto final vem dos dados aprovados (roteiro.md)
 
 # ---------- TUBO (imagem-mestra, sem alterações) ----------
 MASTER = Image.open(K + 'oraculo/assets/tubo_mestra_916.png').convert('RGB')
@@ -132,8 +135,8 @@ def hud(d):
 def fontes(d, linhas, y=1350):
     for i, s in enumerate(linhas): d.text((80, y + i * 46), s, font=fit(d, s, COND, 36, 860), fill=(160, 180, 185, 240))
 def marca(d):
-    if SEM_DADOS:
-        s = 'PRÉVIA TÉCNICA · SEM DADOS · NÃO PUBLICAR'
+    if SEM_DADOS or D.get('previa'):
+        s = 'PRÉVIA TÉCNICA · SEM DADOS · NÃO PUBLICAR' if SEM_DADOS else D.get('previa')
         d.rounded_rectangle((W / 2 - 330, 22, W / 2 + 330, 70), 10, fill=(40, 28, 4, 230), outline=AMBER, width=2)
         d.text((W / 2, 46), s, font=F(MONOB, 26), fill=AMBER, anchor='mm')
 def subs(im, t, y=1560):
@@ -188,7 +191,7 @@ def tile_num(w, h, big, unit, ctx, col, dim, rotulo):
     return im
 def hook(t):
     km = eio((t - BEAT['RISE']) / 0.4) if t >= BEAT['RISE'] else 0.0
-    tela = [(str(v('nA')), 70, PH), ('LISTAS', 30, EM)] if t >= BEAT['RISE'] + .2 else None
+    tela = [(str(v('nA')), 70, PH), (UNID, 30, EM)] if t >= BEAT['RISE'] + .2 else None
     base = tubo_frame(t, 'desconfiado', tela=tela).convert('RGBA')
     shade = Image.new('RGBA', base.size, (3, 6, 10, int(225 * (1 - km)))); im = base.copy(); im.alpha_composite(shade)
     d = ImageDraw.Draw(im, 'RGBA'); a = int(255 * max(0, 1 - km * 2.5))
@@ -203,8 +206,8 @@ def hook(t):
         ladoA = i in (0, 1); dim = 0.55 if (focoB and ladoA and km < 1) else 0.0
         numon = t >= BEAT['NUM']
         if i in (0, 3): c = card_img('A' if i == 0 else 'B', w2, dim)
-        elif i == 1: c = tile_num(w2, w2 * GH / GW, str(v('nA')) if numon else '', 'LISTAS', f"{v('qA')} do meta", WHITE, dim, 'MAIS JOGADO')
-        else: c = tile_num(w2, w2 * GH / GW, str(v('iB')) if numon else '', IND, f"em {v('dB')} {DEN}", PH, 0, 'MAIOR ' + IND)
+        elif i == 1: c = tile_num(w2, w2 * GH / GW, str(v('nA')) if numon else '', UNID, str(D.get('ctxA', f"{v('qA')} do meta")), WHITE, dim, D.get('rotulo_A', 'MAIS JOGADO'))
+        else: c = tile_num(w2, w2 * GH / GW, str(v('iB')) if numon else '', IND, f"em {v('dB')} {DEN}", PH, 0, D.get('rotulo_B', 'MAIOR ' + IND))
         im.alpha_composite(c, (int(x), int(y)))
         if km < 0.3 and ((not focoB and ladoA and t >= BEAT['SCAN'] + .5) or (focoB and not ladoA)):
             glow_box(im, (int(x), int(y), int(x + c.width), int(y + c.height)))
@@ -232,27 +235,27 @@ def tracejado(d, box, col=GREY):
     for y in range(int(y0), int(y1), 26): d.line((x0, y, x0, min(y + 13, y1)), fill=col, width=3); d.line((x1, y, x1, min(y + 13, y1)), fill=col, width=3)
 def scene_pop(t):
     im, d = term_base(t); im = im.convert('RGBA'); d = ImageDraw.Draw(im, 'RGBA')
-    titulo(d, t, BEAT['POP'] - .1, '> POPULARIDADE', f"listas registadas no portal · {v('per')}")
+    titulo(d, t, BEAT['POP'] - .1, '> POPULARIDADE', f"{UNID.lower()} registados no portal · {v('per')}")
     top = D.get('pop_top') or [[f'[comandante {i + 1}]', None] for i in range(5)]
     nomes = [r[0] for r in top]
     if D.get('B') and D['B'] not in nomes: top = top + [['…', None], [D['B'], int(str(D.get('nB', '0')).replace('.', '') or 0)]]
-    mx = max([r[1] for r in top if r[1]] or [1]); y = 700; passo = 116 if len(top) <= 5 else 90
+    mx = max([r[1] for r in top if r[1]] or [1]); y = 640; passo = 110 if len(top) <= 5 else 96
     for j, (nome, n) in enumerate(top):
         rowA = (D.get('A') == nome) or (j == 0 and not D.get('A')); rowB = D.get('B') == nome
         col = PH if (rowA and t >= BEAT['POP_A']) else (AMBER if (rowB and t >= BEAT['POP_B']) else (90, 130, 140))
-        if nome == '…': d.text((80, y + 10), '…', font=F(MONOB, 44), fill=GREY); y += 70; continue
-        d.text((80, y), nome, font=fit(d, nome, MONOB, 40, 600), fill=WHITE if (rowA or rowB) else (190, 205, 210))
-        yb = y + 52; k = eio((t - BEAT['POP_BAR'] - 0.08 * j) / 0.6)
-        if n is None: tracejado(d, (80, yb, 760, yb + 44)); d.text((935, yb + 22), '[n]', font=F(MONOB, 40), fill=GREY, anchor='rm')
+        if nome == '…': d.text((80, y - 6), '…', font=F(MONOB, 40), fill=GREY); y += 40; continue
+        d.text((80, y), nome, font=fit(d, nome, MONOB, 38, 600), fill=WHITE if (rowA or rowB) else (190, 205, 210))
+        yb = y + 48; k = eio((t - BEAT['POP_BAR'] - 0.08 * j) / 0.6)
+        if n is None: tracejado(d, (80, yb, 680, yb + 34)); d.text((935, yb + 17), '[n]', font=F(MONOB, 40), fill=GREY, anchor='rm')
         elif k > 0:
-            d.rectangle((80, yb, 80 + 680 * n / mx * k, yb + 44), fill=col + (255,))
-            d.text((935, yb + 22), f'{n:,}'.replace(',', '.'), font=F(MONOB, 42), fill=WHITE, anchor='rm')
+            d.rectangle((80, yb, 80 + 600 * n / mx * k, yb + 34), fill=col + (255,))
+            d.text((935, yb + 17), f'{n:,}'.replace(',', '.'), font=F(MONOB, 42), fill=WHITE, anchor='rm')
         y += passo
-    d.text((80, y + 6), 'escala: número de listas (0 à esquerda)', font=F(COND, 34), fill=GREY)
-    for lado, t0, x in (('A', BEAT['POP_A'], 735), ('B', BEAT['POP_B'], 735)):
+    d.text((80, y + 6), f'escala: número de {UNID.lower()} (0 à esquerda)', font=F(COND, 34), fill=GREY)
+    for lado, t0, x in (('A', BEAT['POP_A'], 760), ('B', BEAT['POP_B'], 760)):
         if t >= t0 and (lado == 'A') == (t < BEAT['POP_B']):
-            k = eio((t - t0) / .3); c = card_img(lado, 200); im.alpha_composite(c, (int(x + 40 * (1 - k)), 400)); d = ImageDraw.Draw(im, 'RGBA')
-    fontes(d, [FONTE, f"extraído em {v('extraido')} · lista ≠ jogador ≠ partida"])
+            k = eio((t - t0) / .3); c = card_img(lado, 170); im.alpha_composite(c, (int(x + 40 * (1 - k)), 392)); d = ImageDraw.Draw(im, 'RGBA')
+    fontes(d, [FONTE, f"extraído em {v('extraido')} · {UNID.lower()} ≠ jogadores ≠ partidas"])
     hud(d); marca(d); return term_finish(im.convert('RGB'))
 COLX = {'A': 300, 'B': 720}; BASE, ALT = 1150, 440
 def scene_perf(t):
@@ -265,7 +268,9 @@ def scene_perf(t):
             for x in range(110, 920, 24): d.line((x, y, x + 12, y), fill=GREY, width=2)
         else: d.line((110, y, 920, y), fill=(60, 80, 90), width=2)
         d.text((100, y), f'{p}%', font=F(MONOB, 34), fill=GREY, anchor='rm')
-    for lado, t0, col in (('A', BEAT['PERF_A'], (110, 150, 160)), ('B', BEAT['PERF_B'], PH)):
+    lider = 'A' if (frac('iA_v') or 0) >= (frac('iB_v') or 1) else 'B'    # o verde vai para quem tem o valor mais alto
+    for lado, t0 in (('A', BEAT['PERF_A']), ('B', BEAT['PERF_B'])):
+        col = PH if lado == lider else (110, 150, 160)
         if t < t0: continue
         cx = COLX[lado]; c = card_img(lado, 160); im.alpha_composite(c, (int(cx - 80), 400)); d = ImageDraw.Draw(im, 'RGBA')
         val = frac(f'i{lado}_v'); k = eio((t - t0) / .6)
@@ -273,16 +278,16 @@ def scene_perf(t):
         else: d.rectangle((cx - 110, BASE - ALT * val * k, cx + 110, BASE), fill=col + (255,))
         yv = BASE - ALT * (val or 1) * k - 60 if val is not None else top - 60
         d.text((cx, max(yv, 668)), str(v(f'i{lado}')), font=F(INTB, 72), fill=col if val is not None else GREY, anchor='mm')
-        d.text((cx, BASE + 40), str(v(lado)), font=fit(d, str(v(lado)), MONOB, 40, 420), fill=WHITE, anchor='mm')
+        nm = str(D.get('curto' + lado) or v(lado)); d.text((cx, BASE + 40), nm, font=fit(d, nm, MONOB, 42, 380), fill=WHITE, anchor='mm')
         if t >= BEAT['PERF_DEN']:
             s = f"em {v('d' + lado)} {DEN}"; kd = eio((t - BEAT['PERF_DEN']) / .25)
             d.rounded_rectangle((cx - 190, BASE + 75, cx + 190, BASE + 135), 12, outline=AMBER, width=3)
             d.text((cx, BASE + 105), s, font=fit(d, s, MONOB, int(40 + 8 * (1 - kd)), 380), fill=AMBER, anchor='mm')
-    fontes(d, [FONTE, f"{IND.lower()} tal como publicado no portal · extraído em {v('extraido')}"])
+    fontes(d, [FONTE, D.get('fonte_perf', f"{IND.lower()} tal como publicado no portal · extraído em {v('extraido')}")])
     hud(d); marca(d); return term_finish(im.convert('RGB'))
 def scene_dif(t):
     im, d = term_base(t, 18); im = im.convert('RGBA'); d = ImageDraw.Draw(im, 'RGBA')
-    titulo(d, t, BEAT['DIF'], '> A DIFERENÇA É REAL?', f"{v('B')} − {v('A')}, em pontos de {IND.lower()}")
+    titulo(d, t, BEAT['DIF'], '> A DIFERENÇA É REAL?', D.get('dif_titulo', f"{v('B')} − {v('A')}, em pontos de {IND.lower()}"))
     lo, hi, dv = D.get('dif_lo'), D.get('dif_hi'), D.get('dif_v')
     R = 0.5 if dv is None else min(0.5, max(0.2, math.ceil(max(abs(lo), abs(hi)) * 10 + 0.5) / 10))   # escala simétrica, nunca < ±20 pp
     X0, X1, Y = 140, 920, 720; xz = (X0 + X1) / 2; sx = lambda val: xz + (X1 - xz) * val / R
@@ -297,14 +302,14 @@ def scene_dif(t):
             k = eio((t - BEAT['DIF_IC']) / .8); a0, a1 = sx(dv + (lo - dv) * k), sx(dv + (hi - dv) * k)
             d.rectangle((a0, Y - 30, a1, Y + 30), fill=(16, 185, 129, 120), outline=EM, width=3)
         if t >= BEAT['DIF_PT']:
-            d.ellipse((sx(dv) - 20, Y - 20, sx(dv) + 20, Y + 20), fill=WHITE); d.text((sx(dv), Y - 70), str(v('dif')), font=F(INTB, 64), fill=WHITE, anchor='mm')
+            d.ellipse((sx(dv) - 20, Y - 20, sx(dv) + 20, Y + 20), fill=WHITE); d.text((sx(dv) + 70, Y - 70), str(v('dif')), font=F(INTB, 64), fill=WHITE, anchor='mm')
     d.text((80, 880), 'ponto = diferença · faixa = margem de 95 %', font=F(COND, 38), fill=(170, 190, 195))
     if t >= BEAT['DIF_VER']:
         k = eio((t - BEAT['DIF_VER']) / .2); col = PH if VER_OK else AMBER; f = fit(d, VEREDITO, INTB, int(66 * (1.2 - .2 * k)), 880)
         wd = d.textlength(VEREDITO, font=f) + 70
         d.rounded_rectangle((W / 2 - wd / 2, 960, W / 2 + wd / 2, 1090), 18, outline=col, width=5, fill=(8, 20, 16, 240)); d.text((W / 2, 1025), VEREDITO, font=f, fill=col, anchor='mm')
     if t >= BEAT['DIF_NOTA']:
-        for i, s in enumerate(('aproximado: jogos entre os dois contam', 'nos dois lados da conta')):
+        for i, s in enumerate(D.get('nota', ('aproximado: jogos entre os dois contam', 'nos dois lados da conta'))):
             d.text((W / 2, 1170 + i * 50), s, font=F(MONOB, 36), fill=AMBER, anchor='mm')
     fontes(d, [FONTE, 'margem: intervalo de Newcombe a 95 % · cálculo do BINDER'])
     hud(d); marca(d); return term_finish(im.convert('RGB'))
@@ -317,7 +322,7 @@ def scene_ask(t):
     q = str(v('pergunta', '[pergunta ligada à descoberta]')).upper(); f = F(INTB, 60); linhas = wrapw(d, q, f, 860)[:3]
     for i, s in enumerate(linhas): d.text((W / 2, 280 + i * 76), s, font=f, fill=WHITE if i < len(linhas) - 1 else PH, anchor='mm')
     for lado, x in (('A', 290), ('B', 730)):
-        s = f"{v('i' + lado)} · {v('n' + lado)} listas"; d.text((x, 1215), s, font=fit(d, s, MONOB, 38, 390), fill=(190, 205, 210), anchor='mm')
+        s = f"{v('i' + lado)} · {v('n' + lado)} {UNID.lower()}"; d.text((x, 1215), s, font=fit(d, s, MONOB, 38, 390), fill=(190, 205, 210), anchor='mm')
     hud(d); marca(d); return term_finish(im.convert('RGB'))
 def wrapw(d, s, font, maxw):
     out, cur = [], ''
@@ -329,14 +334,15 @@ def wrapw(d, s, font, maxw):
     return out
 
 # ---------- fora: TUBO, só duas vezes e com funções diferentes ----------
-EXPR_LEIT = 'desconfiado' if CEN == 'dentro_margem' else 'confiante'
+INCERTO = CEN in ('dentro_margem', 'A_melhor_margem')
+EXPR_LEIT = 'desconfiado' if INCERTO else 'confiante'
 def fora(t):
     if t < BEAT['DIF']:                          # leitura: sai do terminal (zoom-out) e escreve a regra no ecrã
         z = 1 + 0.6 * (1 - eio((t - BEAT['LEIT']) / .6))
         tela = [('ESCOLHE', 48, WHITE), ('≠ GANHA', 48, PH)] if t >= BEAT['LEIT2'] else None
         im = tubo_frame(t, 'analitico' if t < BEAT['LEIT2'] else EXPR_LEIT, zoom=z, tela=tela)
     else:                                        # fecho: assinatura; muda de expressão no «Humanos»
-        im = tubo_frame(t, 'analitico' if t < BEAT['CLOSE2'] else ('confiante' if CEN != 'dentro_margem' else 'desconfiado'),
+        im = tubo_frame(t, 'analitico' if t < BEAT['CLOSE2'] else ('desconfiado' if INCERTO else 'confiante'),
                         zoom=1 + 0.06 * ease((t - BEAT['CLOSE']) / 3))
     d = ImageDraw.Draw(im, 'RGBA'); marca(d); return im
 
@@ -404,11 +410,11 @@ def capa():
     for lado, (x, y, r) in (('A', (-40, 300, -8)), ('B', (540, 420, 7))):
         c = card_img(lado, 600).rotate(r, expand=True, resample=Image.BICUBIC); im.paste(c, (x, y), c)
     im = im.filter(ImageFilter.GaussianBlur(14)); im = Image.blend(im, Image.new('RGB', (W, H), BG), 0.55).convert('RGBA')
-    tubo = tubo_frame(0.5, 'confiante' if D.get('cenario') in ('B_fora_margem', 'A_melhor') else 'desconfiado').crop((300, 420, 940, 1000)).resize((560, 507), Image.LANCZOS).convert('RGBA')
+    tubo = tubo_frame(0.5, 'desconfiado' if INCERTO or not D.get('cenario') else 'confiante').crop((300, 420, 940, 1000)).resize((560, 507), Image.LANCZOS).convert('RGBA')
     m = Image.new('L', tubo.size, 0); ImageDraw.Draw(m).ellipse((40, 20, tubo.width - 40, tubo.height + 120), fill=255); tubo.putalpha(m.filter(ImageFilter.GaussianBlur(45)))
     im.alpha_composite(tubo, (260, 1040)); d = ImageDraw.Draw(im, 'RGBA')
-    frase = D.get('capa_frase') or {'B_fora_margem': 'POPULAR ≠ FORTE', 'dentro_margem': 'AMOSTRA CURTA', 'A_melhor': 'O HYPE ACERTOU'}.get(D.get('cenario'), 'MAIS JOGADO, MAIS FORTE?')
-    foco = str(D.get('capa_foco') or (v('iA') if CEN == 'A_melhor' else v('iB')))
+    frase = D.get('capa_frase') or {'B_fora_margem': 'POPULAR ≠ FORTE', 'dentro_margem': 'AMOSTRA CURTA', 'A_melhor': 'O HYPE ACERTOU', 'A_melhor_margem': 'LIDERA POR POUCO'}.get(D.get('cenario'), 'MAIS JOGADO, MAIS FORTE?')
+    foco = str(D.get('capa_foco') or (v('iA') if CEN.startswith('A_melhor') else v('iB')))
     d.text((W / 2, 350), frase, font=fit(d, frase, INTB, 110, W - 100), fill=WHITE, anchor='mm')
     g = Image.new('RGBA', (W, H), (0, 0, 0, 0)); gd = ImageDraw.Draw(g); ff = fit(gd, foco, INTB, 400, W - 80)
     gd.text((W / 2, 720), foco, font=ff, fill=PH + (255,), anchor='mm'); im.alpha_composite(g.filter(ImageFilter.GaussianBlur(22))); im.alpha_composite(g)

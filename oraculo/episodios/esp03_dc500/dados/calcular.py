@@ -91,7 +91,9 @@ def escolher(rows, chave):
     kk, nn = NUM[chave]
     dif = newcombe(a[kk], a[nn], b[kk], b[nn])
     if b[chave] <= a[chave]:
-        return a, b, 'A_melhor', 'o mais jogado também tem o melhor indicador entre os comparáveis', dif
+        if dif[1] < 0:
+            return a, b, 'A_melhor', 'o mais jogado lidera e a vantagem sobre o 2.º fica fora da margem de erro', dif
+        return a, b, 'A_melhor_margem', 'o mais jogado lidera, mas a vantagem sobre o 2.º cabe na margem de erro', dif
     if dif[0] > 0:
         return a, b, 'B_fora_margem', 'B fica à frente mesmo com a margem de erro da diferença (Newcombe 95 %, cálculo do BINDER)', dif
     return a, b, 'dentro_margem', 'B tem valor maior, mas a margem de erro da diferença inclui zero: não distinguível com esta amostra', dif
@@ -134,7 +136,7 @@ def para_video(rows, periodo, chave='wr'):
     kk, nn = NUM[chave]
     num = lambda x: f'{int(x):,}'.replace(',', '.')
     txt = {'B_fora_margem': ('À FRENTE MESMO COM A MARGEM', 'verde'), 'dentro_margem': ('DENTRO DA MARGEM DE ERRO', 'ambar'),
-           'A_melhor': ('O MAIS JOGADO TAMBÉM VENCE MAIS', 'verde')}[cod]
+           'A_melhor': ('O MAIS JOGADO TAMBÉM VENCE MAIS', 'verde'), 'A_melhor_margem': ('LIDERA, MAS DENTRO DA MARGEM', 'ambar')}[cod]
     top = sorted(rows, key=lambda r: -(r['listas'] or 0))[:5]
     return dict(confirmado=False, cenario=cod, indicador=ind, denominador=den, per=f'{periodo[0]} a {periodo[1]}', filtros=periodo[2],
                 A=a['comandante'], B=b['comandante'], nA=num(a['listas']), nB=num(b['listas']), qA=pct(a['quota']), qB=pct(b['quota']),
