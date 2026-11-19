@@ -131,7 +131,7 @@ Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por co
 
 ## MC-ESP03 · Farpas de Mana (19/11/2026, 17h05 — CONCLUÍDO; envio e publicação com o fundador)
 
-Vídeo final e capa entregues na conversa (não versionados); voz 412 créditos autorizada. Próximo: o fundador envia a prévia ao @farpasdemana (texto em `oraculo/episodios/esp03_dc500/mensagem_farpas.txt`, prazo 5 dias) e regista a resposta em `oraculo/autorizacoes/`; plano B: publicar com crédito, sem collab.
+Vídeo final v3 (17h45: abre com a fonte, capturas do portal, cartas grandes) e capa entregues na conversa (não versionados); voz 412 + 48 créditos, autorizados. Próximo: o fundador envia a prévia ao @farpasdemana (texto em `oraculo/episodios/esp03_dc500/mensagem_farpas.txt`, prazo 5 dias) e regista a resposta em `oraculo/autorizacoes/`; plano B: publicar com crédito, sem collab.
 
 ### Estado às 16h50
 

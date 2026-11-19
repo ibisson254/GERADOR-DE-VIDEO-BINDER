@@ -1,11 +1,12 @@
 # MC-ESP03 · roteiro definitivo (19/11/2026, 16h50) — cenário `A_melhor_margem`
 
 **Tese:** o mais jogado também é o que mais vence — mas a vantagem sobre o 2.º ainda cabe na margem de erro.
-**Texto exato da locução** (`locucao.txt`, 379 caracteres, ≈ 24 s com atempo 1,10; nenhuma fala antes dos 3 s):
+**Texto exato da locução** (`locucao.txt`). Na v3 a voz abre no 0 s com a fonte e os tempos vêm de `dados/episodio.json` (`voz_tempos`); a tabela abaixo mostra os tempos da v2:
 
 | Tempo | Locução (pausas: `/` 0,3 s · `//` 0,6 s) | Dado e fonte |
 |---|---|---|
-| 3,0 | «Cloud: / 522 decks.» | galeria |
+| 0,0 (v3) | «No portal Duel Commander 500, do Farpas de Mana:» | fonte (gravada a 19/11, 48 créditos) |
+| 3,0 (v3: 3,24) | «Cloud: / 522 decks.» | galeria |
 | 4,0 | «O mais jogado do portal.» | galeria |
 | 5,6 | «Light-Paws, / 478, / em segundo.» | galeria |
 | 7,2 | «Phelia: / só 255.» | galeria |

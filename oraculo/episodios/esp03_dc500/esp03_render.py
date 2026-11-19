@@ -359,13 +359,176 @@ def frame(t):
     return im
 
 
+# ---------- v3 (19/11, 17h30): hierarquia da referência do fundador — legenda grande no topo, carta grande ao centro,
+# número em caixa por baixo, troca de carta com rotação 3D, provas reais do portal, selo de fonte sempre visível ----------
+CARD['L'] = None
+if D.get('carta_L') and os.path.exists(HERE + D['carta_L']):
+    _c = Image.open(HERE + D['carta_L']).convert('RGB'); _m = Image.new('L', _c.size, 0)
+    ImageDraw.Draw(_m).rounded_rectangle((0, 0, _c.size[0] - 1, _c.size[1] - 1), 24, fill=255); _c = _c.convert('RGBA'); _c.putalpha(_m); CARD['L'] = _c
+def _prova(n):
+    p = HERE + 'capturas/' + n
+    return Image.open(p).convert('RGB') if os.path.exists(p) else None
+LOGO, MATRIZ, TOP5 = _prova('recorte_cabecalho_portal.png'), _prova('recorte_matriz.png'), _prova('recorte_galeria_top5.png')
+TL = D.get('voz_tempos') or []
+
+def fundo(t):
+    im, d = term_base(t, 22); return im.convert('RGBA')
+def selo_fonte(im, a=255):
+    d = ImageDraw.Draw(im, 'RGBA'); y = 1462
+    d.rounded_rectangle((80, y, 940, y + 64), 14, fill=(8, 16, 20, int(235 * a / 255)), outline=(200, 40, 40, a), width=3)
+    if LOGO:
+        lg = LOGO.resize((int(LOGO.width * 54 / LOGO.height), 54), Image.LANCZOS); im.paste(lg, (90, y + 5)); x0 = 90 + lg.width + 14
+    else: x0 = 100
+    s = 'FONTE: portal Duel Commander 500 · @farpasdemana'; ImageDraw.Draw(im, 'RGBA').text((x0, y + 32), s, font=fit(d, s, CONDB if os.path.exists(CONDB) else COND, 32, 930 - x0), fill=(235, 240, 242, a), anchor='lm')
+CONDB = '/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf'
+def legenda_topo(im, txt, t0, t, verde=()):
+    """Legenda da narração no topo (estilo da referência): Inter Black, caixa escura, números a verde."""
+    if not txt: return 236
+    d = ImageDraw.Draw(im, 'RGBA'); f = F(INTB, 62); linhas = wrapw(d, txt, f, 860)[:3]
+    if len(linhas) == 3: f = F(INTB, 54); linhas = wrapw(d, txt, f, 860)[:3]
+    k = eio((t - t0) / 0.18); lh = f.size * 1.12; h = lh * len(linhas) + 40; y0 = 236 + 10 * (1 - k)
+    wmax = max(d.textlength(l, font=f) for l in linhas)
+    d.rounded_rectangle((540 - wmax / 2 - 30, y0, 540 + wmax / 2 + 30, y0 + h), 18, fill=(5, 10, 16, int(225 * k)))
+    for i, l in enumerate(linhas):
+        x = 540 - d.textlength(l, font=f) / 2; y = y0 + 20 + i * lh
+        for w_ in l.split(' '):
+            col = PH if any(ch.isdigit() for ch in w_) or w_.strip('?:,.') in verde else WHITE
+            d.text((x + 3, y + 3), w_, font=f, fill=(0, 0, 0, int(160 * k))); d.text((x, y), w_, font=f, fill=col + (int(255 * k),))
+            x += d.textlength(w_ + ' ', font=f)
+    return y0 + h
+def fala(t):
+    for a, b, s in TL:
+        if a - 0.05 <= t < b + 0.25: return a, s
+    return None
+def carta_flip(im, lado_ant, lado, t0, t, w, cx, cy, dur=0.32):
+    """Troca de carta com rotação 3D no eixo Y (referência): a antiga roda até 90°, a nova entra de −90° a 0°."""
+    k = (t - t0) / dur
+    if lado_ant is None or k >= 1: _carta_rot(im, lado, 0.0, w, cx, cy); return
+    if k < 0.5: _carta_rot(im, lado_ant, ease(k * 2) * 90, w, cx, cy)
+    else: _carta_rot(im, lado, -90 + ease((k - .5) * 2) * 90, w, cx, cy)
+def _carta_rot(im, lado, ang, w, cx, cy):
+    c = card_img(lado, w); h = c.height; a = math.radians(ang)
+    ww = max(2, int(w * math.cos(a))); persp = 0.12 * math.sin(a)        # o lado que se afasta encolhe
+    src = c.resize((ww, h), Image.LANCZOS)
+    hl, hr = h * (1 - max(0, persp)), h * (1 + min(0, persp))
+    out = Image.new('RGBA', (ww, h), (0, 0, 0, 0)); d = (h - hl) / 2, (h - hr) / 2
+    coeffs = _persp([(0, d[0]), (ww, d[1]), (ww, h - d[1]), (0, h - d[0])], [(0, 0), (ww, 0), (ww, h), (0, h)])
+    out = src.transform((ww, h), Image.PERSPECTIVE, coeffs, Image.BICUBIC)
+    sh = Image.new('RGBA', (ww + 60, h + 60), (0, 0, 0, 0)); ImageDraw.Draw(sh).rounded_rectangle((30, 40, ww + 30, h + 40), 24, fill=(0, 0, 0, 150))
+    sh = sh.filter(ImageFilter.GaussianBlur(18)); im.alpha_composite(sh, (int(cx - ww / 2 - 30), int(cy - h / 2 - 30)))
+    im.alpha_composite(out, (int(cx - ww / 2), int(cy - h / 2)))
+def _persp(pa, pb):
+    A = []
+    for (x, y), (X, Y) in zip(pa, pb):
+        A.append([x, y, 1, 0, 0, 0, -X * x, -X * y]); A.append([0, 0, 0, x, y, 1, -Y * x, -Y * y])
+    B = np.array(pb).reshape(8); r = np.linalg.solve(np.array(A, float), B); return tuple(r)
+def caixa_num(im, big, sub, t0, t, y, col=PH, rot=''):
+    d = ImageDraw.Draw(im, 'RGBA'); k = eio((t - t0) / 0.22)
+    fb = F(INTB, int(118 * (1.15 - .15 * k))); wb = d.textlength(big, font=fb); fs = F(MONOB, 40); ws_ = d.textlength(sub, font=fs)
+    w = max(wb, ws_) + 80; x0 = 540 - w / 2
+    d.rounded_rectangle((x0, y, x0 + w, y + 190), 22, fill=(5, 12, 14, 240), outline=col, width=5)
+    d.text((540, y + 72), big, font=fb, fill=col, anchor='mm'); d.text((540, y + 152), sub, font=fs, fill=WHITE, anchor='mm')
+    if rot:
+        fr = F(INTB, 54); wr = d.textlength(rot, font=fr) + 40
+        d.rounded_rectangle((x0 + w - wr / 2 - 10, y - 40, x0 + w + wr / 2 - 10, y + 30), 16, fill=col)
+        d.text((x0 + w - 10, y - 5), rot, font=fr, fill=BG, anchor='mm')
+def prova(im, img, t0, t, y, label, w=900):
+    if img is None or t < t0: return
+    k = eio((t - t0) / 0.35); s = img.resize((w, int(img.height * w / img.width)), Image.LANCZOS); s = s.crop((0, 0, w, min(s.height, 350)))
+    yy = int(y + 120 * (1 - k)); x = (W - w) // 2; d = ImageDraw.Draw(im, 'RGBA')
+    d.rounded_rectangle((x - 10, yy - 54, x + w + 10, yy + s.height + 10), 16, fill=(240, 240, 240, int(255 * k)))
+    d.text((x + 6, yy - 28), label, font=F(MONOB, 30), fill=(30, 30, 30, int(255 * k)), anchor='lm')
+    im.paste(s, (x, yy))
+
+SEQ = D.get('seq', [])   # [[t, plano, args...]] — ver dados/episodio.json
+def plano_em(t):
+    cur = None
+    for i, p in enumerate(SEQ):
+        if t >= p[0]: cur = i
+    return cur
+
+def cena_gancho(t):
+    im = fundo(t); d = ImageDraw.Draw(im, 'RGBA')
+    k = [eio((t + 0.15 - 0.05 * i) / 0.25) for i in range(3)]
+    for i, (lado, x) in enumerate((('A', 70), ('B', 540))):
+        c = card_img(lado, 470 * (1.04 - .04 * k[i])); im.alpha_composite(c, (int(x + (470 - c.width) / 2), 452))
+        if t >= (0.5 if lado == 'A' else 1.6):
+            glow_box(im, (int(x), 452, int(x + 470), 452 + c.height))
+    if MATRIZ is not None:
+        s = MATRIZ.resize((900, int(MATRIZ.height * 900 / MATRIZ.width)), Image.LANCZOS); y = 1130
+        d.rounded_rectangle((80, y - 10, 1000, y + 330), 16, fill=(240, 240, 240, 255)); im.paste(s.crop((0, 0, 900, 320)), (90, y))
+        if t >= 1.8: glow_box(im, (80, y - 10, 1000, y + 330), col=(220, 50, 50), r=16)
+    legenda_topo(im, 'O MAIS JOGADO É O QUE MAIS VENCE?', 0.0, max(t, .3))
+    selo_fonte(im); marca(ImageDraw.Draw(im, 'RGBA')); return im.convert('RGB')
+
+def cena_carta(t, i):
+    p = SEQ[i]; lado, big, sub, rot = p[2], p[3], p[4], p[5] if len(p) > 5 else ''
+    prev = SEQ[i - 1][2] if i > 0 and SEQ[i - 1][1] == 'carta' else ('A' if i > 0 else None)
+    extra = p[6] if len(p) > 6 else None                      # prova a meio do plano: [t, 'top5'|'matriz', rótulo]
+    im = fundo(t); com_prova = extra and t >= extra[0]
+    kp = eio((t - extra[0]) / .35) if com_prova else 0
+    w = 560 - 150 * kp; cy = 448 + w * 1.396 / 2           # carta inteira, sempre acima da caixa ou da prova
+    carta_flip(im, prev, lado, p[0], t, w, 540, cy)
+    if not com_prova:
+        if t >= p[0] + 0.3: caixa_num(im, big, f'{sub} · {rot}' if rot else sub, p[0] + .3, t, 1250)
+    else: prova(im, {'top5': TOP5, 'matriz': MATRIZ}[extra[1]], extra[0], t, 1092, extra[2])
+    f = fala(t); legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
+    selo_fonte(im); marca(ImageDraw.Draw(im, 'RGBA')); return im.convert('RGB')
+
+def cena_duas(t, i):
+    p = SEQ[i]; im = fundo(t); k = eio((t - p[0]) / .35); d = ImageDraw.Draw(im, 'RGBA')
+    for lado, x, s1, s2 in (('A', 80, D['iA'], D['dA'] + ' partidas'), ('B', 545, D['iB'], D['dB'] + ' partidas')):
+        c = card_img(lado, 455); im.alpha_composite(c, (int(x + (1 - k) * (-80 if lado == 'A' else 80)), 470))
+        d = ImageDraw.Draw(im, 'RGBA'); cx = x + 227
+        d.rounded_rectangle((cx - 210, 1120, cx + 210, 1300), 18, fill=(5, 12, 14, 240), outline=PH if lado == 'A' else (110, 150, 160), width=4)
+        d.text((cx, 1180), s1, font=F(INTB, 84), fill=PH if lado == 'A' else WHITE, anchor='mm')
+        d.text((cx, 1260), s2, font=fit(d, s2, MONOB, 40, 390), fill=AMBER if t >= p[0] + 1.2 else WHITE, anchor='mm')
+    if len(p) > 2 and t >= p[2]:
+        s = 'win rate = vitórias ÷ (vitórias + derrotas)'; d.text((540, 1360), s, font=fit(d, s, COND, 36, 860), fill=(190, 205, 210), anchor='mm')
+    f = fala(t); legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
+    selo_fonte(im); marca(d); return im.convert('RGB')
+
+def cena_dif(t, i):
+    im = scene_dif(t).convert('RGBA'); d = ImageDraw.Draw(im, 'RGBA')
+    d.rectangle((0, 220, W, 400), fill=BG + (255,))                 # o título do painel dá lugar à legenda
+    f = fala(t); legenda_topo(im, f[1] if f else 'A DIFERENÇA É REAL?', f[0] if f else SEQ[i][0], t)
+    d = ImageDraw.Draw(im, 'RGBA'); d.rectangle((0, 1420, W, 1560), fill=BG + (255,)); selo_fonte(im)
+    return im.convert('RGB')
+
+def cena_pergunta(t, i):
+    p = SEQ[i]; im = fundo(t); k = eio((t - p[0]) / .35)
+    for lado, x in (('A', 80), ('B', 545)):
+        c = card_img(lado, 455); ang = (1 - k) * (6 if lado == 'A' else -6)
+        c2 = c.rotate(ang, expand=True, resample=Image.BICUBIC); im.alpha_composite(c2, (int(x + (1 - k) * (-100 if lado == 'A' else 100)), 520))
+    d = ImageDraw.Draw(im, 'RGBA'); d.text((540, 840), '×', font=F(INTB, 120), fill=PH, anchor='mm')
+    for lado, x in (('A', 307), ('B', 772)):
+        s = f"{D['i' + lado]} · {D['n' + lado]} decks"; d.text((x, 1235), s, font=fit(d, s, MONOB, 40, 420), fill=WHITE, anchor='mm')
+    f = fala(t); legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
+    selo_fonte(im); marca(d); return im.convert('RGB')
+
+def cena_tubo(t, i):
+    p = SEQ[i]; expr, tela_t = p[2], (p[3] if len(p) > 3 else None)
+    z = 1 + 0.25 * (1 - eio((t - p[0]) / .5)) + 0.04 * ease((t - p[0]) / 3)
+    tela = [('ESCOLHE', 48, WHITE), ('≠ GANHA', 48, PH)] if (tela_t and t >= tela_t) else None
+    e2 = p[4] if (len(p) > 4 and tela_t and t >= tela_t) else expr
+    im = tubo_frame(t, e2, zoom=z, tela=tela).convert('RGBA')
+    f = fala(t); legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
+    marca(ImageDraw.Draw(im, 'RGBA')); return im.convert('RGB')
+
+CENAS = dict(gancho=lambda t, i: cena_gancho(t), carta=cena_carta, duas=cena_duas, dif=cena_dif, pergunta=cena_pergunta, tubo=cena_tubo)
+def frame(t):
+    i = plano_em(t); return CENAS[SEQ[i][1]](t, i)
+
 # ---------- áudio da prévia: trilha do TUBO + SFX do ESP01 (sem voz) ----------
+OUTRO = None
+def _dur_outro():
+    return float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', K + 'comum/outro/outro_binder_916.mp4'], capture_output=True, text=True).stdout)
 def audio_previa(out='mix_previa.wav'):
-    SR = 48000; N = int(BEAT['END'] * SR)
-    raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', K + 'oraculo/musica/tubo_tema.mp3', '-t', str(BEAT['END']), '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
+    SR = 48000; TOT = BEAT['END'] + _dur_outro(); N = int(TOT * SR)
+    raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', K + 'oraculo/musica/tubo_tema.mp3', '-t', str(TOT), '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
     M = np.zeros(N, np.float32); m = np.frombuffer(raw, np.float32)[:N]; M[:len(m)] = m
     t = np.arange(N) / SR; c = np.ones(N); j0, j1 = int(BEAT['DIF'] * SR), int((BEAT['DIF'] + .6) * SR); c[j0:j1] = 0   # corte seco = pagamento
-    M *= c * np.clip((BEAT['END'] - t) / 1.2, 0, 1)
+    M *= c * np.clip((TOT - t) / 1.5, 0, 1)       # a trilha acompanha o fecho e só termina com ele
     def tt(d): return np.arange(int(d * SR)) / SR
     def thump(d=0.7, f0=58): x = tt(d); return (np.sin(2 * np.pi * f0 * x * (1 - .25 * x)) * np.exp(-x * 6) * .9).astype(np.float32)
     def modem(d=0.55):
@@ -394,7 +557,7 @@ def audio_previa(out='mix_previa.wav'):
 def audio_final(voz, out='mix_final.wav'):
     """Voz (já com atempo da série) + trilha com ducking −12 dB sob a voz + os mesmos SFX. Pausas da ficha inseridas."""
     import wave
-    SR = 48000; N = int(BEAT['END'] * SR); cfg = D['voz']
+    SR = 48000; N = int((BEAT['END'] + _dur_outro()) * SR); cfg = D['voz']
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', voz, '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
     vz = np.frombuffer(raw, np.float32).copy(); V = np.zeros(N, np.float32)
     cortes = [0.0] + [a for a, _ in cfg['pausas']] + [len(vz) / SR]; desloc = cfg['lead']
@@ -428,12 +591,11 @@ def render(out='ESP03_PREVIA_TECNICA.mp4', audio=None):
     for i in range(nf): p.stdin.write(frame(i / FPS).tobytes())
     p.stdin.close(); p.wait()
     a = audio or audio_previa(); outro = K + 'comum/outro/outro_binder_916.mp4'   # o fecho não tem faixa de áudio: silêncio com a duração dele
-    dur = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', outro], capture_output=True, text=True).stdout.strip()
-    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', 'corpo.mp4', '-i', a, '-i', outro, '-f', 'lavfi', '-t', dur, '-i', 'anullsrc=r=48000:cl=stereo', '-filter_complex',
-                    '[0:v]fps=30,format=yuv420p,setsar=1[v0];[2:v]scale=1080:1920,fps=30,format=yuv420p,setsar=1[v1];'
-                    '[1:a]aformat=sample_rates=48000:channel_layouts=stereo[a0];[3:a]aformat=sample_rates=48000:channel_layouts=stereo[a1];'
-                    '[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]', '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18',
-                    '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', out], check=True)
+    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', 'corpo.mp4', '-i', outro, '-filter_complex',
+                    '[0:v]fps=30,format=yuv420p,setsar=1[v0];[1:v]scale=1080:1920,fps=30,format=yuv420p,setsar=1[v1];[v0][v1]concat=n=2:v=1:a=0[v]',
+                    '-map', '[v]', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', 'video_so.mp4'], check=True)
+    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', 'video_so.mp4', '-i', a, '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k',
+                    '-shortest', '-movflags', '+faststart', out], check=True)
     print(out)
 
 def capa():

@@ -68,6 +68,7 @@ Créditos e autorizações: nenhuma autorização do Farpas existe. Nada em `ora
 ## Produção
 - Recursos reutilizados: `oraculo/esp01/esp01_render.py` (`hook()`, terminal, chuva, TUBO) e `oraculo/episodios/ep08b_render.py` como base do `esp03_render.py`; `oraculo/esp01/esp01_audio.py` para mix; `oraculo/assets/tubo_mestra_916.png`; `oraculo/musica/tubo_tema.mp3`; `comum/outro/outro_binder_916.mp4`. O TUBO não é regenerado.
 - Script de render: `esp03_render.py` (19/11, derivado do ESP01): grelha dupla, mergulho, terminal com barras no mesmo eixo 0–100 %, faixa de 95 %, TUBO (imagem-mestra intacta), legendas terminal, trilha + SFX, fecho do scanner, capa e recorte da grelha. Lê `dados/episodio.json`; sem valor, mostra o marcador e a marca «PRÉVIA TÉCNICA · SEM DADOS», e nunca desenha barra sem número. Falta para a versão final: cartas do Scryfall, `episodio.json` com os números, tempos a partir de `words.json` da voz.
+- **v3 (19/11, 17h45, pedido do fundador com vídeo de referência):** legenda grande no topo sincronizada com a voz, carta grande ao centro com troca em rotação 3D, número em caixa por baixo da carta, capturas reais do portal (matriz e galeria) como prova, selo «FONTE: portal Duel Commander 500 · @farpasdemana» com o cabeçalho do portal em todos os planos de dados, TUBO só na leitura e no fecho, trilha até ao fim do fecho. Frase de abertura gravada (48 créditos, geração `9yjcYfXw6loEyPtVMywv`, −2 dB para nivelar); pausas da tomada principal encurtadas para 0,10 s (0,45 s antes da diferença, 0,25 s antes da assinatura) para caber em 35 s sem mudar o atempo. Voz montada: 34,81 s; tempos em `dados/episodio.json` (`voz_tempos`, `seq`). Créditos totais do episódio: 460.
 - Voz: Antonio de Jesus (`MK5tXPmT83J5SUlpUo4K`, eleven_v4, atempo 1,10), **1 tomada, 412 créditos** (estimativa prévia confirmada; «1.323» escrito por extenso para a pronúncia). Flow ElevenLabs `LtUgaMWrnvu8UFurYG93`, geração `MKgHjfpDwkVjVQByV40l`. Voz entra aos 2,0 s; pausa de 0,4 s antes da diferença (corte seco). Frases sincronizadas por deteção de pausas (sem transcrição paga); tempos em `dados/episodio.json` (`vo`, `beats`). Recriar: descarregar a geração → `ffmpeg -i voz.mp3 -af atempo=1.10 -ar 48000 -ac 1 voz_rapida.wav` → `python3 -I esp03_render.py <raiz> final voz_rapida.wav`.
 - Easter egg: nenhum (0).
 - Riscos: P0 se um número sair sem denominador ou se win rate e conversão se misturarem; risco de parceria se o vídeo sugerir collab.
@@ -78,21 +79,21 @@ Medido no ficheiro final `ESP03_META_EM_CURTO.mp4` (19/11/2026, 17:05) com `qc_v
 | Critério | Alvo | Medido | OK |
 |---|---|---|---|
 | Resolução / fps | 1080×1920 · 30 | 1080×1920 · 30,0 | sim |
-| Duração | 25–35 s sem fecho | 34,97 s + fecho (38,83 s) | sim |
+| Duração | 25–35 s sem fecho | v3: 34,93 s + fecho (38,80 s) | sim |
 | Corte lateral (cropdetect) | nenhum | 1080:1920 em 961/991 amostras; o resto são cenas escuras do terminal | sim |
-| Loudness / pico | −14 ± 1 LUFS / < −1 dBTP | −14,0 LUFS / −3,3 dBTP | sim |
-| Fecho do scanner | presente, inteiro | presente a partir de 34,97 s (dif. média 0,36) | sim |
+| Loudness / pico | −14 ± 1 LUFS / < −1 dBTP | v3: −14,0 LUFS / −4,0 dBTP; trilha audível por baixo do fecho (−14 dB médio a 35,5–37 s) | sim |
+| Fecho do scanner | presente, inteiro | v3: presente a partir de 34,93 s (dif. média 0,06) | sim |
 | Factos = ficha | sim | todos os números do ecrã e da voz estão em `fontes.md` | sim |
 | Quadro 0 | campo 1, legível sem som | grelha com Cloud e Phelia, rótulos e unidades | sim |
-| Descoberta | ≤ 3,0 s | números 1,0 s; pergunta completa 2,6 s | sim |
-| Pagamento do gancho | campo 7 (± 3 s) | Cloud 63,1 % aos 11,9 s (voz 11,6 s); veredito aos 26,9 s | sim (dois tempos, ambos previstos) |
-| Maior intervalo sem mudança visual | ≤ 3 s | 2,5 s (17,9–20,4 s) | sim |
+| Descoberta | ≤ 3,0 s | v3: pergunta e cartas no quadro 0; voz cita a fonte de 0 a 3,1 s | sim |
+| Pagamento do gancho | campo 7 (± 3 s) | v3: Cloud 63,1 % aos 12,7 s; veredito aos 27,1 s | sim |
+| Maior intervalo sem mudança visual | ≤ 3 s | v3: 3,0 s (18,3–21,3 s, plano das duas cartas) | sim (no limite) |
 | Retenção | Magic no quadro 0 · mudança ≤ 3 s · som em cada revelação | sim · sim · sim | sim |
 | Zona segura | conteúdo em x 80–940, y 220–1540 | conferido na folha de contacto (HUD da série fora, como nos episódios anteriores) | sim |
 | P0 / P1 abertos | 0 / 0 | 0 / 0 (P2: a trilha entra cheia a meio de um bloco; fecho do TUBO varia só a expressão) | sim |
 
 ## Ficheiros finais*
-- Vídeo final: `ESP03_META_EM_CURTO.mp4` · 38,83 s (34,97 s + fecho) · entregue ao fundador na conversa de 19/11/2026 (não versionado; recria-se com `esp03_render.py final`). Versões anteriores (prévias técnicas v1, v2 e sem voz) só na conversa.
+- Vídeo final: `ESP03_META_EM_CURTO.mp4` (v3) · 38,80 s (34,93 s + fecho) · entregue ao fundador na conversa de 19/11/2026 (não versionado; recria-se com `esp03_render.py final`). Versões anteriores (prévias técnicas v1, v2 e sem voz) só na conversa.
 - Capa: `ESP03_CAPA.png` («LIDERA POR POUCO · 63,1%», TUBO desconfiado, cartas Cloud e Phelia ao fundo) + `ESP03_CAPA_grelha.png` (recorte 3:4, conferido em miniatura), entregues na conversa de 19/11/2026 (`esp03_render.py capa`).
 
 ## Pacote de publicação* (rascunhos nesta pasta, com marcadores `[PENDENTE]`)

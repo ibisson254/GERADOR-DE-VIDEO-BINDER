@@ -1,2 +1,29 @@
-{"cloud.jpg": {"carta": "Cloud, Midgar Mercenary", "set": "FIN", "numero": "10", "scryfall_id": "2cf7e8a3-fad7-413d-b17c-7519a9cf5fb5", "artista": "Kazto Furuya", "fonte": "Scryfall (imagem oficial, sem alterações)", "obtida": "2026-11-19"},
- "phelia.jpg": {"carta": "Phelia, Exuberant Shepherd", "set": "MH3", "numero": "40", "scryfall_id": "55707746-da6e-46e5-a5ca-7ac843fdc38e", "artista": "Rudy Siswanto", "fonte": "Scryfall (imagem oficial, sem alterações)", "obtida": "2026-11-19"}}
+{
+ "cloud.jpg": {
+  "carta": "Cloud, Midgar Mercenary",
+  "set": "FIN",
+  "numero": "10",
+  "scryfall_id": "2cf7e8a3-fad7-413d-b17c-7519a9cf5fb5",
+  "artista": "Kazto Furuya",
+  "fonte": "Scryfall (imagem oficial, sem alterações)",
+  "obtida": "2026-11-19"
+ },
+ "phelia.jpg": {
+  "carta": "Phelia, Exuberant Shepherd",
+  "set": "MH3",
+  "numero": "40",
+  "scryfall_id": "55707746-da6e-46e5-a5ca-7ac843fdc38e",
+  "artista": "Rudy Siswanto",
+  "fonte": "Scryfall (imagem oficial, sem alterações)",
+  "obtida": "2026-11-19"
+ },
+ "lightpaws.jpg": {
+  "carta": "Light-Paws, Emperor's Voice",
+  "set": "NEO",
+  "numero": "25",
+  "scryfall_id": "39555a72-a57b-45ee-9222-ce3b9e8de126",
+  "artista": "Randy Vargas",
+  "fonte": "Scryfall (imagem oficial, sem alterações)",
+  "obtida": "2026-11-19"
+ }
+}

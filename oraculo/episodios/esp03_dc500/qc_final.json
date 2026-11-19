@@ -5,22 +5,26 @@
     "w": 1080,
     "h": 1920,
     "fps": 30.0,
-    "dur": 38.833333
+    "dur": 38.8
   },
-  "duracao_sem_fecho": 34.97,
+  "duracao_sem_fecho": 34.93,
   "lufs": -14.0,
-  "pico_dbtp": -3.3,
+  "pico_dbtp": -4.0,
   "fecho": {
     "exigido": true,
     "presente": true,
-    "diferenca_media": 0.36,
-    "inicio_s": 34.97
+    "diferenca_media": 0.06,
+    "inicio_s": 34.93
   },
   "cortes_s": [
-    20.4,
-    24.1,
-    28.9,
-    31.1,
+    3.2,
+    15.63,
+    18.07,
+    21.27,
+    24.87,
+    29.13,
+    31.4,
+    33.0,
     34.93
   ],
   "quadros_na_folha": 39,

@@ -143,38 +143,201 @@
  "fonte_perf": "win rate do portal = vitórias ÷ (vitórias + derrotas) · empates fora",
  "pop_hl2": "Light-Paws, Emperor's Voice",
  "beats": {
-  "RISE": 3.0,
-  "DIVE": 3.4,
-  "POP": 4.0,
-  "POP_BAR": 4.4,
-  "POP_A": 4.63,
-  "POP_2": 6.13,
-  "POP_B": 9.0,
-  "PERF": 11.5,
-  "PERF_A": 11.9,
-  "PERF_B": 14.8,
-  "PERF_DEN": 17.49,
-  "LEIT": 20.4,
-  "LEIT2": 22.67,
-  "DIF": 24.1,
-  "DIF_PT": 24.65,
-  "DIF_IC": 25.4,
-  "DIF_VER": 26.85,
-  "DIF_NOTA": 28.0,
-  "ASK": 28.9,
-  "CLOSE": 31.1,
-  "CLOSE2": 32.75,
+  "SCAN": 0.5,
+  "NUM": 1.0,
+  "HLB": 1.6,
+  "Q": 2.0,
+  "RISE": 3.18,
+  "DIVE": 3.18,
+  "POP": 3.18,
+  "POP_BAR": 5.75,
+  "POP_A": 7.15,
+  "POP_2": 7.15,
+  "POP_B": 10.16,
+  "PERF": 12.39,
+  "PERF_A": 12.39,
+  "PERF_B": 15.63,
+  "PERF_DEN": 18.04,
+  "LEIT": 21.25,
+  "LEIT2": 23.06,
+  "DIF": 24.85,
+  "DIF_PT": 24.98,
+  "DIF_IC": 25.7,
+  "DIF_VER": 27.11,
+  "DIF_NOTA": 28.2,
+  "ASK": 29.13,
+  "CLOSE": 31.4,
+  "CLOSE2": 32.99,
   "END": 34.95
  },
  "voz": {
-  "arquivo": "voz.mp3 (ElevenLabs, flow LtUgaMWrnvu8UFurYG93, geração MKgHjfpDwkVjVQByV40l, 412 créditos, 19/11/2026)",
+  "arquivo": "voz_montada.wav = abertura (geração 9yjcYfXw6loEyPtVMywv, 48 créditos, −2 dB) + tomada principal (geração MKgHjfpDwkVjVQByV40l, 412 créditos) com pausas encurtadas; flow ElevenLabs LtUgaMWrnvu8UFurYG93",
   "atempo": 1.1,
-  "lead": 2.0,
-  "pausas": [
-   [
-    22.15,
-    0.4
-   ]
+  "lead": 0.0,
+  "pausas": []
+ },
+ "voz_tempos": [
+  [
+   0.0,
+   3.12,
+   "NO PORTAL DUEL COMMANDER 500, DO FARPAS DE MANA:"
+  ],
+  [
+   3.24,
+   5.71,
+   "CLOUD: 522 DECKS."
+  ],
+  [
+   5.81,
+   7.11,
+   "O MAIS JOGADO DO PORTAL."
+  ],
+  [
+   7.21,
+   10.12,
+   "LIGHT-PAWS, 478, EM SEGUNDO."
+  ],
+  [
+   10.22,
+   12.35,
+   "PHELIA: SÓ 255."
+  ],
+  [
+   12.45,
+   15.59,
+   "NO WIN RATE, CLOUD FAZ 63,1%."
+  ],
+  [
+   15.69,
+   18.0,
+   "PHELIA, 61,3%."
+  ],
+  [
+   18.1,
+   21.25,
+   "EM 1.323 E 603 PARTIDAS."
+  ],
+  [
+   21.35,
+   23.02,
+   "POPULARIDADE MEDE QUEM ESCOLHE."
+  ],
+  [
+   23.12,
+   24.53,
+   "WIN RATE MEDE QUEM GANHA."
+  ],
+  [
+   24.98,
+   27.01,
+   "CLOUD À FRENTE POR 1,8 PONTO."
+  ],
+  [
+   27.11,
+   29.09,
+   "MAS ESSA VANTAGEM CABE NA MARGEM DE ERRO."
+  ],
+  [
+   29.19,
+   31.27,
+   "CLOUD SEGURA O TOPO OU A PHELIA PASSA?"
+  ],
+  [
+   31.52,
+   32.89,
+   "PROBABILIDADE CALCULADA."
+  ],
+  [
+   32.99,
+   34.81,
+   "HUMANOS, IMPREVISÍVEIS."
   ]
- }
+ ],
+ "carta_L": "cartas/lightpaws.jpg",
+ "seq": [
+  [
+   0,
+   "gancho"
+  ],
+  [
+   3.18,
+   "carta",
+   "A",
+   "522",
+   "DECKS",
+   "1.º",
+   [
+    5.75,
+    "top5",
+    "PRINT · GALERIA DO PORTAL · 19/11/2026"
+   ]
+  ],
+  [
+   7.15,
+   "carta",
+   "L",
+   "478",
+   "DECKS",
+   "2.º"
+  ],
+  [
+   10.16,
+   "carta",
+   "B",
+   "255",
+   "DECKS",
+   "7.º"
+  ],
+  [
+   12.39,
+   "carta",
+   "A",
+   "63,1%",
+   "WIN RATE",
+   "1.º",
+   [
+    14.0,
+    "matriz",
+    "PRINT · MATRIZ DE MATCHUPS · 19/11/2026"
+   ]
+  ],
+  [
+   15.63,
+   "carta",
+   "B",
+   "61,3%",
+   "WIN RATE",
+   "2.º"
+  ],
+  [
+   18.04,
+   "duas",
+   19.8
+  ],
+  [
+   21.25,
+   "tubo",
+   "analitico",
+   23.06,
+   "desconfiado"
+  ],
+  [
+   24.85,
+   "dif"
+  ],
+  [
+   29.13,
+   "pergunta"
+  ],
+  [
+   31.4,
+   "tubo",
+   "analitico"
+  ],
+  [
+   32.99,
+   "tubo",
+   "desconfiado"
+  ]
+ ]
 }

@@ -2,6 +2,11 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 19/11/2026 (~16:50) · MC-ESP03: capturas do portal do Farpas no vídeo e frase de abertura com a fonte
+- O fundador autorizou (escolha no chat: «Usar capturas do portal») mostrar no MC-ESP03 capturas reais e públicas do portal duelcommander500.com.br, com o nome e o logótipo «Farpas de Mana», como prova e crédito. Exceção pontual à regra de não usar logótipo de parceiro sem autorização do parceiro; só recortes sem alterações (`oraculo/episodios/esp03_dc500/capturas/`). Continua proibido afirmar parceria.
+- Autorizou também 1 frase de abertura na voz do TUBO («No portal Duel Commander 500, do Farpas de Mana:», 48 créditos), para a narração começar no 0 s e citar a fonte.
+- Motivo (fundador): o vídeo não dizia de onde vinham os dados e não dava retorno visual à marca do parceiro; sem isso a collab é improvável.
+
 ## 19/11/2026 · Missão estrutural: gancho visual no briefing, gates P0/P1/P2, revisão narrativa, testes comparáveis; MC-ESP03 com o Farpas
 
 **O quê:** (1) **Gancho visual como componente do briefing**: 7 campos obrigatórios antes do roteiro (quadro 0, objeto, ação, som, descoberta até 3 s, promessa, pagamento), regras comuns e tabela de aplicação por frente em `nucleo/SHOWRUNNER.md` §4.1; princípio na constituição §6 (v1.7). (2) **Rubrica interna 1–5** (relevância, impacto, clareza, curiosidade, pagamento, identidade), prevista e medida na ficha; não decide vencedores nem muda regras. (3) **Revisão narrativa** antes da voz (`SHOWRUNNER.md` §4.2). (4) **Gates consolidados** em `nucleo/CHECKLIST_QUALIDADE.md`: P0 inclui identidade incorreta, áudio defeituoso medível, parceria afirmada sem autorização e gancho nunca pago; nenhuma média compensa um P0; bloco F (gancho e narrativa). (5) **Rigor**: tipo «cálculo», limitações e capturas na ficha (constituição §4); crédito editorial ≠ parceria (§7). (6) **Testes comparáveis** (uma variável, peças equivalentes, leitura 48 h e 7 dias) em `comum/insights/LEIA-ME.md`. (7) **MC-ESP03**: parceiro-alvo Farpas de Mana, fonte o portal próprio Duel Commander 500 do Farpas; a referência MTGDC500 / Lotus Games como dona dos dados fica substituída e a Lotus deixa de estar indicada como parceira do piloto. Nenhuma parceria marcada como aceite.

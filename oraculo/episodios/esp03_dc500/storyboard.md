@@ -1,3 +1,27 @@
+# MC-ESP03 · storyboard v3 (19/11/2026, 17h45 — implementado; tempos em `dados/episodio.json`, `seq`)
+
+Hierarquia da referência do fundador: legenda da narração grande no topo (Inter Black 62, números a verde) · carta grande ao centro (560 px, inteira) · número em caixa por baixo · selo de fonte com o cabeçalho real do portal em baixo. Troca de carta = rotação 3D no eixo Y (0,32 s); a caixa do número só entra depois da troca.
+
+| In | Plano | Carta / prova | Número | Voz | Som |
+|---|---|---|---|---|---|
+| 0,00 | Grelha: Cloud + Phelia (cartas 470 px) + captura da matriz do portal; pergunta no topo | Cloud, Phelia, matriz | — | «No portal Duel Commander 500, do Farpas de Mana:» | tum CRT, cliques |
+| 3,18 | Carta Cloud (troca 3D) | Cloud | 522 · DECKS · 1.º | «Cloud: 522 decks.» | modem |
+| 5,75 | Captura da galeria entra; a carta encolhe | galeria (print 19/11) | — | «O mais jogado do portal.» | clique |
+| 7,15 | Troca 3D → Light-Paws | Light-Paws (NEO 25) | 478 · DECKS · 2.º | «Light-Paws, 478, em segundo.» | pop |
+| 10,16 | Troca 3D → Phelia | Phelia | 255 · DECKS · 7.º | «Phelia: só 255.» | pop |
+| 12,39 | Troca 3D → Cloud | Cloud | 63,1% · WIN RATE · 1.º | «No win rate, Cloud faz 63,1%.» | clique |
+| 14,00 | Captura da matriz entra | matriz (print 19/11) | — | (continua) | — |
+| 15,63 | Troca 3D → Phelia | Phelia | 61,3% · WIN RATE · 2.º | «Phelia, 61,3%.» | pop agudo |
+| 18,04 | As duas cartas lado a lado; denominadores a âmbar; definição do win rate | Cloud, Phelia | 63,1% / 1.323 partidas · 61,3% / 603 partidas | «Em 1.323 e 603 partidas.» | clique |
+| 21,25 | TUBO (leitura); «ESCOLHE ≠ GANHA» aos 23,06 s | — | — | «Popularidade mede quem escolhe. Win rate mede quem ganha.» | tum, clique |
+| 24,85 | A DIFERENÇA: ponto +1,8, margem −2,9 a +6,5, veredito, nota sem h2h | — | +1,8 | «Cloud à frente por 1,8 ponto. Mas essa vantagem cabe na margem de erro.» | corte seco 0,6 s, pops |
+| 29,13 | Cartas frente a frente | Cloud × Phelia | 63,1% · 522 / 61,3% · 255 | «Cloud segura o topo ou a Phelia passa?» | clique |
+| 31,40 | TUBO (fecho), desconfiado aos 32,99 s | — | — | «Probabilidade calculada. Humanos, imprevisíveis.» | tum |
+| 34,93 | Fecho oficial do scanner, com a trilha por baixo até ao fim | — | — | — | trilha (fade 1,5 s) |
+
+---
+
+# Storyboard v2 (histórico)
 # MC-ESP03 · storyboard v2 (implementado em `esp03_render.py`, `BEAT`)
 
 1080×1920, 30 fps, 27,5 s + fecho. Zona segura: x 80–940, y 220–1540 (HUD da série e marca de água da prévia ficam fora, como nos episódios anteriores). Leitura ≥ 38 px de corpo; fontes 34–36 px; legenda 44 px a y 1490. Cartas sempre inteiras. Cada grandeza tem o seu painel, a sua unidade e a sua escala. Timecodes da prévia; na final ajustam-se às palavras da voz, sem mudar a ordem.
