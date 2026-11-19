@@ -288,6 +288,7 @@ def scene_perf(t):
     hud(d); marca(d); return term_finish(im.convert('RGB'))
 def scene_dif(t):
     im, d = term_base(t, 18); im = im.convert('RGBA'); d = ImageDraw.Draw(im, 'RGBA')
+    d.rounded_rectangle((60, 540, 1020, 1250), 22, fill=(5, 10, 16, 228))     # painel legível por cima da chuva
     titulo(d, t, BEAT['DIF'], '> A DIFERENÇA É REAL?', D.get('dif_titulo', f"{v('B')} − {v('A')}, em pontos de {IND.lower()}"))
     lo, hi, dv = D.get('dif_lo'), D.get('dif_hi'), D.get('dif_v')
     R = 0.5 if dv is None else min(0.5, max(0.2, math.ceil(max(abs(lo), abs(hi)) * 10 + 0.5) / 10))   # escala simétrica, nunca < ±20 pp
@@ -484,7 +485,7 @@ def cena_duas(t, i):
         d.text((cx, 1180), s1, font=F(INTB, 84), fill=PH if lado == 'A' else WHITE, anchor='mm')
         d.text((cx, 1260), s2, font=fit(d, s2, MONOB, 40, 390), fill=AMBER if t >= p[0] + 1.2 else WHITE, anchor='mm')
     if len(p) > 2 and t >= p[2]:
-        s = 'win rate = vitórias ÷ (vitórias + derrotas)'; d.text((540, 1360), s, font=fit(d, s, COND, 36, 860), fill=(190, 205, 210), anchor='mm')
+        s = 'win rate = vitórias ÷ (vitórias + derrotas)'; d.rounded_rectangle((110, 1330, 970, 1392), 12, fill=(5, 10, 16, 230)); d.text((540, 1360), s, font=fit(d, s, COND, 36, 860), fill=(190, 205, 210), anchor='mm')
     f = fala(t); legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
     selo_fonte(im); marca(d); return im.convert('RGB')
 
@@ -518,6 +519,96 @@ def cena_tubo(t, i):
 CENAS = dict(gancho=lambda t, i: cena_gancho(t), carta=cena_carta, duas=cena_duas, dif=cena_dif, pergunta=cena_pergunta, tubo=cena_tubo)
 def frame(t):
     i = plano_em(t); return CENAS[SEQ[i][1]](t, i)
+
+# ---------- v4 (19/11, 17h30): chuva estilo Matrix visível no fundo, TUBO a falar depois das cartas,
+# carta entra no ecrã do TUBO e o vídeo mergulha (como nos episódios antigos) ----------
+mcols = [dict(x=x, y=rng.uniform(-H, H), v=rng.uniform(160, 360), n=int(rng.integers(14, 30))) for x in range(10, W, 26)]
+def term_base(t, alpha=30):
+    """Fundo do terminal com chuva de código verde a descer (estilo Matrix): cabeça clara, cauda a desvanecer."""
+    im = TERM_BG.copy(); d = ImageDraw.Draw(im); fs = F(MONOB, 26)
+    for c in mcols:
+        yh = (c['y'] + t * c['v']) % (H + 600) - 300
+        for k in range(c['n']):
+            y = yh - k * 30
+            if -30 < y < H:
+                ch = GLY[int(t * 9 + k * 5 + c['x'] * 0.37) % len(GLY)] if k else GLY[int(t * 20 + c['x']) % len(GLY)]
+                col = (170, 255, 190) if k == 0 else PH
+                a = 235 if k == 0 else int(150 * (1 - k / c['n']) + 20)
+                d.text((c['x'], y), ch, font=fs, fill=mix_bg(col, a))
+    if EGG and EGG['t0'] <= t < EGG['t1']:
+        for k, ch in enumerate(EGG['txt']): d.text((mcols[20]['x'], 1250 + k * 30), ch, font=fs, fill=mix_bg(PH, 160))
+    return im, ImageDraw.Draw(im, 'RGBA')
+ENV = None
+def _led(im, t):
+    if ENV is None: return
+    fi = int(t * FPS); a = min(1, float(ENV[fi])) if fi < len(ENV) else 0
+    if a < 0.04: return
+    g = Image.new('RGBA', (120, 120), (0, 0, 0, 0)); ImageDraw.Draw(g).ellipse((40, 40, 80, 80), fill=(16, 185, 129, int(220 * a)))
+    g = g.filter(ImageFilter.GaussianBlur(14)); im.paste(g, (LED[0] - 60, LED[1] - 60), g)
+    ImageDraw.Draw(im).ellipse((LED[0] - 7, LED[1] - 7, LED[0] + 7, LED[1] + 7), fill=(140, 255, 200))
+def tubo_falando(t, expr, zoom=1.0, tela=None):
+    im = tubo_frame(t, expr, tela=tela); _led(im, t)
+    if abs(zoom - 1) > 1e-3:
+        cw, ch = W / zoom, H / zoom; x0 = min(max(SCX - cw / 2, 0), W - cw); y0 = min(max(SCY - ch / 2, 0), H - ch)
+        im = im.resize((W, H), Image.LANCZOS, box=(x0, y0, x0 + cw, y0 + ch))
+    return im.convert('RGBA')
+
+def cena_tubo_abertura(t, i):
+    """Depois das cartas, o TUBO aparece a falar; as cartas sobem para uma fila; a carta citada a seguir voa para o ecrã dele."""
+    p = SEQ[i]; t0 = p[0]; t_voo, t_mergulho, t_fim = p[2], p[3], SEQ[i + 1][0]
+    im = tubo_falando(t, 'confiante')
+    k = eio((t - t0) / .4)
+    pos = {'A': [(70, 452, 470), (80, 560, 200)], 'B': [(540, 452, 470), (800, 560, 200)]}
+    for lado in ('B', 'A'):
+        (x0, y0, w0), (x1, y1, w1) = pos[lado]; x, y, w = x0 + (x1 - x0) * k, y0 + (y1 - y0) * k, w0 + (w1 - w0) * k
+        if lado == 'A' and t >= t_voo:                       # voa para dentro do ecrã do TUBO
+            kv = ease((t - t_voo) / (t_mergulho - t_voo)); sw = SCR[2] - SCR[0] - 40
+            w = w1 + (sw * .55 - w1) * kv; x = x1 + (SCX - w / 2 - x1) * kv; y = y1 + (SCY - w * 0.7 - y1) * kv
+        if lado == 'B' and t >= t_voo:
+            continue
+        c = card_img(lado, w); im.alpha_composite(c, (int(x), int(y)))
+    if t < t_voo + 0.05:
+        f = fala(t); legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
+        d = ImageDraw.Draw(im, 'RGBA')
+    out = im.convert('RGB')
+    if t >= t_mergulho:                                       # mergulho no ecrã (como nos episódios antigos)
+        z = 1 + 9 * ease((t - t_mergulho) / (t_fim - t_mergulho))
+        cw, ch = W / z, H / z; x0 = min(max(SCX - cw / 2, 0), W - cw); y0 = min(max(SCY - ch / 2, 0), H - ch)
+        out = out.resize((W, H), Image.LANCZOS, box=(x0, y0, x0 + cw, y0 + ch))
+    return out
+
+_cena_tubo_v3 = cena_tubo
+def cena_tubo(t, i):
+    """TUBO: entra a sair do ecrã (zoom-out do terminal) e fala com o LED a pulsar."""
+    p = SEQ[i]; expr, tela_t = p[2], (p[3] if len(p) > 3 else None)
+    k = (t - p[0]) / .5; z = 1 + 7 * (1 - eio(k)) if k < 1 else 1 + 0.04 * ease((t - p[0] - .5) / 3)
+    if i > 0 and SEQ[i - 1][1] == 'tubo': z = 1 + 0.04 * ease((t - p[0]) / 3)
+    tela = [('ESCOLHE', 48, WHITE), ('≠ GANHA', 48, PH)] if (tela_t and t >= tela_t) else None
+    e2 = p[4] if (len(p) > 4 and tela_t and t >= tela_t) else expr
+    im = tubo_falando(t, e2, zoom=z, tela=tela)
+    f = fala(t); legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
+    marca(ImageDraw.Draw(im, 'RGBA')); return im.convert('RGB')
+CENAS['tubo'] = cena_tubo; CENAS['tubo_abertura'] = cena_tubo_abertura
+
+_cena_carta_v3 = cena_carta
+def cena_carta(t, i):
+    """Primeira carta depois do mergulho: sai do ecrã do TUBO (cresce a partir do centro) em vez de rodar."""
+    p = SEQ[i]
+    if i > 0 and SEQ[i - 1][1] == 'tubo_abertura' and t < p[0] + 0.4:
+        k = eio((t - p[0]) / .4); im = fundo(t); w = 160 + 400 * k; cy = 448 + 560 * 1.396 / 2
+        c = card_img(p[2], w); im.alpha_composite(c, (int(540 - w / 2), int(cy - c.height / 2)))
+        f = fala(t); legenda_topo(im, f[1] if f else '', f[0] if f else 0, t); selo_fonte(im)
+        marca(ImageDraw.Draw(im, 'RGBA')); return im.convert('RGB')
+    return _cena_carta_v3(t, i)
+CENAS['carta'] = cena_carta
+
+def frame(t):
+    i = plano_em(t); p = SEQ[i]
+    if p[1] not in ('tubo', 'tubo_abertura') and i > 0 and SEQ[i - 1][1] == 'tubo' and t < p[0] + 0.45:
+        k = ease((t - p[0]) / .45); prev = SEQ[i - 1]                 # mergulho no ecrã antes de voltar aos dados
+        im = tubo_falando(t, prev[4] if len(prev) > 4 else prev[2], zoom=1 + 9 * k)
+        return im.convert('RGB')
+    return CENAS[p[1]](t, i)
 
 # ---------- áudio da prévia: trilha do TUBO + SFX do ESP01 (sem voz) ----------
 OUTRO = None
@@ -620,6 +711,10 @@ def capa():
 if __name__ == '__main__':
     if MODO == 'capa': capa()
     elif MODO == 'final':                     # python3 -I esp03_render.py <raiz> final <voz_atempo.wav>
+        _r = subprocess.run(['ffmpeg', '-v', 'error', '-i', sys.argv[3], '-ac', '1', '-ar', '48000', '-f', 'f32le', '-'], capture_output=True).stdout
+        _v = np.frombuffer(_r, np.float32); _h = 48000 // FPS
+        _e = np.array([np.sqrt((_v[j * _h:(j + 1) * _h] ** 2).mean()) for j in range(len(_v) // _h)])
+        ENV = _e / (np.percentile(_e[_e > 0.005], 95) if (_e > 0.005).any() else 1)
         render('ESP03_META_EM_CURTO.mp4', audio_final(sys.argv[3]))
     elif MODO == 'stills':
         for x in map(float, sys.argv[3:]): frame(x).save(f'still_{x:05.2f}.png')
