@@ -66,3 +66,16 @@ Guardados + partilhas (conteúdo de referência). Secundária: respostas à perg
 Ver `CONTEXTO.md` §12. Episódios: EP01 (AC13, Relatório do Meta) — `episodios/ep01_ac13_ficha.md`; EP02 (Spotlight Fracture, Leitura da Final) — `episodios/ep02_hartford_ficha.md`; EP03 (Arquivo Competitivo, boletim do fim de semana) — `episodios/ep03_arquivo_ficha.md`.
 
 Evidência visual obrigatória (lista, carta, ficha de jogador sem foto): `CONTEXTO.md` §6.4.
+
+## Lições do MC-ESP03 (19/11/2026) — obrigatórias antes de produzir
+
+O MC-ESP03 custou 460 créditos de voz, três prévias técnicas e um refazer completo da montagem. Para não repetir:
+
+1. **Dados antes de tudo.** Abrir a fonte no início da sessão (se o site carrega por JavaScript, usar o navegador integrado do Claude no PC do fundador). Sem números verificados não se renderiza nada: nada de prévias técnicas com marcadores.
+2. **Método estatístico certo à primeira.** Diferença entre dois comandantes = intervalo de Newcombe da diferença (`oraculo/episodios/esp03_dc500/dados/calcular.py`), nunca dois intervalos individuais. Confirmar a definição do indicador do site com os números publicados antes de escrever.
+3. **A fonte entra na voz e no ecrã desde o 0 s.** Primeira fala = de onde vêm os dados («No portal X, do Y:»); selo de fonte em todos os planos com números. Uso de capturas ou logótipo de terceiros decide-se no briefing, não depois do render.
+4. **Voz numa só geração, já do tamanho certo.** Antonio de Jesus com atempo 1,10 ≈ 11,8 caracteres por segundo com as pausas: 35 s ≈ 390 caracteres no máximo, abertura incluída. Escrever os números que a voz pode ler mal por extenso. Correr `estimate_only` e mostrar texto final + custo ao fundador numa só pergunta. Nada de frases soltas depois.
+5. **Voz a partir do 0 s.** O gancho visual corre por baixo da primeira fala; não deixar o vídeo começar mudo.
+6. **Trilha cobre o fecho.** O fecho do scanner não tem áudio: a trilha continua por baixo dele e só desvanece no fim (`esp03_render.py`, `audio_previa`).
+7. **Hierarquia visual padrão para episódios de dados** (referência do fundador, 19/11): legenda grande no topo sincronizada com a voz, carta grande e inteira ao centro, número em caixa por baixo, troca de carta em rotação 3D, prova (captura) quando a voz cita o número. Motor de referência: `oraculo/episodios/esp03_dc500/esp03_render.py` (cenas `gancho`, `carta`, `duas`, `dif`, `pergunta`, `tubo`, sequência em `dados/episodio.json`).
+8. **Conferir em fotogramas, renderizar uma vez.** Folha de contacto com 10–15 fotogramas → corrigir → um render final → QC. Cada render completo custa ~1 min; cada prévia descartada custa uma volta de revisão do fundador.

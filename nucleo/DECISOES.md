@@ -2,6 +2,9 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 19/11/2026 (17:11) · Lições de custo do MC-ESP03 passam a regra do Meta em Curto
+- O fundador pediu para aprender com o custo elevado do MC-ESP03. As 8 lições ficam em `oraculo/PERFIL.md` («Lições do MC-ESP03»): dados antes de qualquer render; Newcombe para diferenças; fonte na voz e no ecrã desde o 0 s; voz numa só geração com orçamento de ~390 caracteres para 35 s; voz desde o 0 s; trilha por baixo do fecho; hierarquia visual v3 como padrão de episódios de dados; fotogramas antes de um único render.
+
 ## 19/11/2026 (~16:50) · MC-ESP03: capturas do portal do Farpas no vídeo e frase de abertura com a fonte
 - O fundador autorizou (escolha no chat: «Usar capturas do portal») mostrar no MC-ESP03 capturas reais e públicas do portal duelcommander500.com.br, com o nome e o logótipo «Farpas de Mana», como prova e crédito. Exceção pontual à regra de não usar logótipo de parceiro sem autorização do parceiro; só recortes sem alterações (`oraculo/episodios/esp03_dc500/capturas/`). Continua proibido afirmar parceria.
 - Autorizou também 1 frase de abertura na voz do TUBO («No portal Duel Commander 500, do Farpas de Mana:», 48 créditos), para a narração começar no 0 s e citar a fonte.
