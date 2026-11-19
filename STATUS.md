@@ -129,6 +129,10 @@ Atualização de 10/11/2026: regra geral no `oraculo/CICLO_SEMANAL.md` §0 (toda
 
 Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por confirmar: 57,4 s + fecho, QC sem problemas, −14,0 LUFS, sem corte lateral. Ficha `oraculo/episodios/ep07_mundial_ficha.md`, legenda `oraculo/legendas/ep07_mundial_legenda.txt`. Previsões PR-WC32-01 (pública) a 03 registadas antes da voz; conferência na segunda 16/11 (`ciclo.py segunda`). O vídeo não está no repositório: recria-se com `ep07_audio.py` + `ep07_render.py` a partir de `voz.mp3` (flow ElevenLabs em `ep07_mundial_fontes.txt`). v2 (17h): listas de Landfall e das duas campeãs de Jund no ecrã; 5 fotos dos brasileiros no ecrã (17:30); falta a de João Jorge Sales Junior. Depende do fundador: foto do Sales Junior (opcional), ouvir a pronúncia e publicar (de preferência antes de 13/11, dia 1 do Mundial).
 
+## MC-ESP03 · Farpas de Mana (19/11/2026, 15h10)
+
+EM PRODUÇÃO, **bloqueado no Gate A (dados)**. O portal duelcommander500.com.br carrega os números por JavaScript; daqui só se leram os rótulos (matriz dos 20 comandantes com mais matchups, com «Win Rate» e «Popularidade»; galeria ordenável por «Mais Populares» e «Maior Conversão»). Pronto sem dados: ficha com gancho e regras de escolha fixadas antes dos números, roteiro em três cenários, storyboard, `dados/calcular.py` (Wilson 95 %, alertas de amostra; testado com dados sintéticos), rascunhos da legenda, comentário, alt e mensagem. Falta: as 9 capturas de `oraculo/episodios/esp03_dc500/capturas/LEIA-ME.md` (ou sessão no computador com Claude in Chrome). Voz estimada ≈ 400 créditos por tomada; não pedida.
+
 ## Próximo passo concreto
 
 0. Fundador: decisões da missão estrutural (`nucleo/auditorias/2026-11-19_missao_estrutural.md` §8), sobretudo integrar MB-EP11 + insights de 13–14/11 e o acesso ao portal do Farpas.

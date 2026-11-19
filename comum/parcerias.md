@@ -33,7 +33,7 @@ Todos os outros conteúdos com terceiros já foram feitos, publicados e registad
 | Ordem | ID provisório | Parceiro-alvo | Frente · formato | Créditos | Se disser não | Material em falta |
 |---|---|---|---|---|---|---|
 | 1 | **LL-ART20** | Caio Monteiro (@caiomonteiroart) | Lambe-lambe · carrossel | 0 | versão B (sem foto) com crédito e marcação | **pronto 16/11** · prévia por enviar · prazo 21/11 |
-| 2 | **MC-ESP03** | Farpas de Mana (@farpasdemana), dono do portal Duel Commander 500 usado como fonte | Meta em Curto · Reel 25–35 s | voz (~1.500–2.200, estimativa) | publicar com crédito ao portal do Farpas (dados públicos), sem afirmar parceria | acesso ao portal (não abriu do ambiente do agente a 16/11): exportação ou prints com data, período e amostra |
+| 2 | **MC-ESP03** | Farpas de Mana (@farpasdemana), dono do portal Duel Commander 500 usado como fonte | Meta em Curto · Reel 25–35 s | voz (~1.500–2.200, estimativa) | publicar com crédito ao portal do Farpas (dados públicos), sem afirmar parceria | **EM PRODUÇÃO desde 19/11** (`oraculo/episodios/esp03_dc500/`); bloqueado no Gate A: números do portal por JavaScript, sem acesso daqui a 16/11 nem a 19/11 → capturas da lista `capturas/LEIA-ME.md` ou sessão com Claude in Chrome |
 | 3 | **MC-ESP04** | Preconauta (parceiro ativo) | Meta em Curto · Reel | voz | não se aplica (autorização de 13/11 cobre os números dos sites deles) | prints das ligas mesão e 2x2 |
 
 Pautas auditadas a 16/11 com `memoria.py pauta`: as três LIVRES.

@@ -1,0 +1,4 @@
+[RASCUNHO · MC-ESP03 · [PENDENTE]]
+Qual comandante você acha que só parece forte?
+
+Como lemos os dados: listas e win rate do portal Duel Commander 500 do Farpas de Mana ([per], filtros: [filtros]). Comparamos só comandantes com pelo menos 20 listas e 50 partidas, e o intervalo de 95% é cálculo nosso.
