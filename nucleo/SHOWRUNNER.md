@@ -65,10 +65,74 @@ Uma ficha por peça, a partir de `modelos/FICHA_EPISODIO.md`, com no mínimo:
 6. Plano visual e lista de materiais reais necessários (cartas, listas, gravações do app).
 7. Pacote de publicação: legenda, comentário fixado, texto alternativo, ficha de fatos (constituição §10).
 8. Easter egg (0 ou 1) e métrica principal.
-9. Capa segundo o modelo da frente, quando existir (Meta em Curto: `oraculo/CONTEXTO.md` §7.3; Mana & Burn: `manaburn/PERFIL.md` «Capa»), conferida no recorte da grelha. Plano de retenção (constituição, «Retenção e recompensa»): o que o quadro 0 mostra de Magic, o gancho visual dos primeiros 3 s, as revelações com som e o pagamento do gancho.
-10. O que depende do fundador.
+9. Capa segundo o modelo da frente, quando existir (Meta em Curto: `oraculo/CONTEXTO.md` §7.3; Mana & Burn: `manaburn/PERFIL.md` «Capa»; Conde: `conde/PERFIL.md` «Capa»), conferida no recorte da grelha. Plano de retenção (constituição, «Retenção e recompensa»): **gancho visual definido pelos 7 campos da §4.1, antes do roteiro**, revelações com som e pagamento do gancho.
+10. Variável em teste (0 ou 1; `../comum/insights/LEIA-ME.md`, «Testes comparáveis»).
+11. O que depende do fundador.
 
 O motor técnico da frente executa a partir deste briefing.
+
+### 4.1 Gancho visual (componente do briefing, desde 19/11/2026)
+
+O gancho decide-se **antes do roteiro**, a partir da evidência visual mais forte da história; o roteiro escreve-se a partir dele, não ao contrário. Sem os 7 campos preenchidos na ficha não se escreve o roteiro nem se gasta voz.
+
+| # | Campo | Pergunta |
+|---|---|---|
+| 1 | Quadro 0 | O que se vê no primeiro quadro, sem áudio? |
+| 2 | Objeto | Que carta, deck, obra, personagem ou imagem real prende o olhar? |
+| 3 | Ação | Que movimento acontece no primeiro segundo (entra, acende, risca, vira, compara)? |
+| 4 | Som | Que som curto da biblioteca da frente sublinha essa ação? |
+| 5 | Descoberta até 3 s | Que facto, número ou pergunta fica claro até aos 3 s? |
+| 6 | Promessa | O que o espectador espera receber se ficar? |
+| 7 | Pagamento | Em que segundo (e com que imagem) a promessa é paga? |
+
+**Regras (todas as frentes):**
+- Específico da história: o mesmo gancho não serve para outro episódio. Teste: trocar a carta e o número; se o gancho continuar a funcionar, é genérico.
+- Nunca abrir com logótipo, título da série, apresentação da personagem ou explicação quando existe uma evidência visual (carta, obra, número, print) que pode abrir o vídeo. As aberturas e bordões das bíblias mantêm-se, mas correm **por cima** da evidência, não no lugar dela.
+- O quadro 0 faz sentido sem som (a maioria vê sem som): mostrado em miniatura e sem áudio, percebe-se o assunto.
+- O som reforça a ação da imagem; não substitui a imagem nem depende de volume acima do alvo de loudness da frente.
+- Curiosidade legítima: a promessa é paga dentro do vídeo com a mesma evidência (constituição §5). Promessa nunca paga = engano (P0 no checklist).
+
+**Aplicação por frente** (critérios comuns, identidades próprias; o detalhe está na bíblia ou no perfil, aqui só o mínimo):
+
+| Frente | Quadro 0 e objeto | Som | Onde está a regra |
+|---|---|---|---|
+| Meta em Curto | Grelha 2×2 do MC-ESP01 com cartas ou deck reais (e foto do jogador autorizada); revelação até 3 s; mergulho no terminal; dados e fonte legíveis; mudança ≤ 3 s; pagamento; fecho oficial | sonoplastia do TUBO (CRT, modem, glitch) | `oraculo/CONTEXTO.md` §7 |
+| Mana & Burn | Carta ou objeto de Magic na TV SAL com a dor da mesa e um número na 1.ª fala do Burn; evidência visual em cada fala | troca de canal da TV SAL | `manaburn/PERFIL.md` |
+| Conde de Manaforte | A obra (ou o detalhe que sustenta a análise) já no ecrã enquanto corre a abertura; nunca estatística como gancho | trilha e sons do Tribunal | `conde/PERFIL.md` |
+| Vince Vault | Carta real + número + data, só com os recursos 2D aprovados (3D é arquivo) | só sons aprovados da frente (Fonte sintetizada) | `vince/PERFIL.md` |
+| Órbita | Carta Star Trek inteira e parada desde o quadro 0 (loop de 12 s); nada de outras frentes | sem áudio no ficheiro (música no Instagram) | `orbita/CONTEXTO.md` §4 |
+| Lambe-lambe | O objeto (carta, artista, app) no 1.º slide ou quadro 0; uma leitura simples e forte | efeitos próprios, pico −6 dBFS | `lambe-lambe/CONTEXTO.md` §4 |
+
+**Rubrica interna (1 a 5)**, preenchida na ficha duas vezes: no briefing (prevista) e no ficheiro final (medida, olhando para a folha de contacto sem som).
+
+| Critério | 1 | 3 | 5 |
+|---|---|---|---|
+| Relevância visual | a imagem não pertence à história | pertence, mas é secundária | é a prova central da história |
+| Impacto inicial | precisa de explicação para prender | prende com o texto do ecrã | prende só com a imagem |
+| Clareza | assunto só se percebe depois dos 3 s | percebe-se com o texto | percebe-se no quadro 0, sem som |
+| Curiosidade | nenhuma pergunta aberta | pergunta genérica | pergunta específica que só este vídeo responde |
+| Pagamento | promessa não paga | paga tarde ou só em parte | paga inteira, no segundo previsto |
+| Identidade | parece outra frente | parcial | inconfundível desta frente |
+
+Nota 1 em Pagamento = P0 (engano); nota ≤ 2 em Relevância, Clareza ou Identidade = P1. **Não há média que compense um P0.** A rubrica é opinião interna: não declara um gancho vencedor nem muda uma regra; isso só com dados do Insights comparáveis (constituição §12).
+
+### 4.2 Revisão narrativa (antes da voz)
+
+Feita no roteiro, antes de gastar créditos. Cada item é uma pergunta de sim/não; um «não» é P1 até ser corrigido.
+
+| Critério | Teste |
+|---|---|
+| Tese central | Cabe numa frase na ficha e o vídeo inteiro serve essa frase |
+| Originalidade | `memoria.py pauta` livre (ou decisão registada) e o ângulo não repete tese nem gancho do registo |
+| Clareza | Quem nunca jogou o formato percebe o assunto aos 3 s |
+| Progressão | Cada bloco acrescenta um facto, uma prova ou uma virada; nenhum bloco pode sair sem perda |
+| Evidência | Cada afirmação tem imagem real no ecrã no momento em que é dita (decisão de 15/11) e fonte na ficha |
+| Ritmo | Nenhum intervalo > 3 s sem mudança visual (medido no ficheiro final) |
+| Recompensa | O pagamento chega no segundo previsto no campo 7 |
+| Relevância | Responde a algo que a comunidade discute agora ou guarda para usar (regra, número, obra) |
+| CTA natural | Uma só ação, ligada ao conteúdo (pergunta ou função confirmada do app) |
+
+Corta-se: informação que não muda a compreensão; frases genéricas («Magic é incrível», «vamos ver»); introduções antes da evidência; conclusões sem prova; repetições; efeitos sem função (som ou animação que não marca uma revelação).
 
 ## 5. Manter o estado
 
@@ -87,7 +151,7 @@ Vale para qualquer conteúdo produzido (episódio, especial, Órbita, Lambe-lamb
 3. Comentário fixado: `comentario_fixado.txt`.
 4. Texto alternativo: `texto_alternativo.txt`.
 5. Fontes e evidências: tabela da ficha ou `fontes.md`.
-6. Controlo de qualidade medido no ficheiro final, na ficha, com a linha «Retenção» (quadro 0 com Magic; mudança visual ≤ 3 s; som em cada revelação).
+6. Controlo de qualidade medido no ficheiro final, na ficha, com a linha «Retenção» (quadro 0 com Magic; mudança visual ≤ 3 s; som em cada revelação), o segundo real do pagamento do gancho e a rubrica da §4.1 medida.
 7. Localização do vídeo e da capa finais na ficha ("Ficheiros finais"). Os vídeos renderizados nunca entram no Git.
 8. `../comum/REGISTRO_EDITORIAL.md`: estado `CONCLUÍDO` (ou `PUBLICADO` com confirmação), ficha, relações, originalidade.
 9. `../comum/historico.md`: uma linha com data, ID, frente, peça e estado.
@@ -99,4 +163,4 @@ Sem publicar no Instagram e sem gastar créditos externos (vozes, música, image
 
 ## 7. Domingo · insights
 
-Quando o fundador envia os prints do Instagram Insights: seguir `../comum/insights/LEIA-ME.md` (snapshot novo em `semanas/AAAA-MM-DD.md`, linhas acrescentadas a `registo_posts.csv`, impulsionamento `A CONFIRMAR` até confirmação, relatório com facto · interpretação · hipótese · recomendação). Uma semana isolada não muda regras.
+Quando o fundador envia os prints do Instagram Insights: seguir `../comum/insights/LEIA-ME.md` (snapshot novo em `semanas/AAAA-MM-DD.md`, linhas acrescentadas a `registo_posts.csv`, impulsionamento `A CONFIRMAR` até confirmação, relatório com facto · interpretação · hipótese · recomendação). Uma semana isolada não muda regras. Os testes de gancho (uma variável de cada vez, peças equivalentes) leem-se lá, na secção «Testes comparáveis».

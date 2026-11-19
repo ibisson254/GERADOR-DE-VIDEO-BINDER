@@ -3,6 +3,10 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
+## Missão estrutural (19/11/2026) — gancho visual, gates e testes
+
+Gancho visual passa a componente do briefing (7 campos antes do roteiro, rubrica 1–5, aplicação por frente: `nucleo/SHOWRUNNER.md` §4.1); revisão narrativa antes da voz (§4.2); gates P0/P1/P2 consolidados e bloco F (`nucleo/CHECKLIST_QUALIDADE.md`); ficha com gancho, rubrica e linhas de retenção; testes comparáveis em `comum/insights/LEIA-ME.md`; constituição v1.7. MC-ESP03 corrigido: parceiro-alvo Farpas de Mana, fonte o portal DC500 do Farpas (MTGDC500 / Lotus fora). Relatório, inconsistências e decisões pendentes: `nucleo/auditorias/2026-11-19_missao_estrutural.md`.
+
 ## Missão Master (12/11/2026) — concluída e integrada na `main`
 
 Auditoria integral, matriz de integração, sistema de previsões do TUBO corrigido e testado, validador de integridade, memória editorial e protocolo de pré-release reconciliados — tudo na `main` (PRs #18, #19, #20; autorização de 01:32). Às 05:54 o fundador fechou os episódios («Todos episódios dê como fechados menos o tubo de segunda. Vince vault»): 12 pacotes de conteúdo integrados e CONCLUÍDOS, MC-EP06 aberto, frente Vince Vault aprovada (`nucleo/DECISOES.md`, 12/11). Relatório: `nucleo/auditorias/2026-11-12_missao_master.md` · Matriz: `2026-11-12_matriz_integracao.md`.
@@ -28,7 +32,7 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 - **Publicados:** o fundador confirmou a 16/11 (11:23) que «todos os episódios criados já foram lançados». No registo passaram a PUBLICADO: MB-GIRO02, MB-GIRO03, MB-EP10, MB-ESP03-CARR, MC-EP03, MC-EP04, MC-EP08B, ORB-07 a 10, LL-ART13, LL-PRETRK, LL-SHEOL, LL-DIVCAR, LL-CAMPBR, AB-01, e a linha nova MB-ESP04 (especial «Precon em jogo», que faltava). MC-ESP01, MC-ESP02 e MC-EP08 já estavam PUBLICADO. Datas exatas por confirmar no domingo, com os Insights.
 - **EX-01 «Nauctis: Primeiro Mergulho»**: continua EM PRODUÇÃO no registo (não estava concluído: faltava escolher A ou B e a licença da «Auction of Power»). Se já saiu, o fundador diz qual versão e passa a PUBLICADO.
 - **MC-EP06**: REJEITADO (fundador, 16/11 13:47: perdeu o timing do pré-release; nunca produzido).
-- **Parcerias** (16/11, 17:31): método «episódio pronto primeiro» — produzir, enviar a prévia ao parceiro, publicar só com o OK (`comum/parcerias.md`, `nucleo/DECISOES.md`). Collabs anteriores feitas (Preconauta MC-ESP02, @montcardshop MC-ESP01). Próximos: LL-ART20 Caio Monteiro → MC-ESP03 MTGDC500 → MC-ESP04 Preconauta. IDs provisórios, pautas LIVRES.
+- **Parcerias** (16/11, 17:31): método «episódio pronto primeiro» — produzir, enviar a prévia ao parceiro, publicar só com o OK (`comum/parcerias.md`, `nucleo/DECISOES.md`). Collabs anteriores feitas (Preconauta MC-ESP02, @montcardshop MC-ESP01). Próximos: LL-ART20 Caio Monteiro → MC-ESP03 Farpas de Mana (portal DC500 do Farpas; corrigido a 19/11) → MC-ESP04 Preconauta. IDs provisórios, pautas LIVRES.
 - **Vince Vault (Multiverse Capital)**: direção 2D ativa (PR #17, decisões de 11–12/11; 3D arquivado). Bíblia `vince/CONTEXTO.md`, som da Fonte `vince/audio/fonte.py`. **Em falta:** o kit 2D (16 PNG), `recortar.py`, `EDICAO.md` e `PROMPT_EPISODIO.md` descritos no PR #17 não chegaram à branch — pedir à sessão de origem ou refazer com aprovação.
 
 ## Consolidação
@@ -77,7 +81,7 @@ Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vinc
 
 | Bloco | Estado | Onde |
 |---|---|---|
-| Registo editorial (ID e estado por conteúdo, todas as frentes) | Implementado; **desatualizado desde 01/11** (falta registar EP04–EP07, Giro nº 2, Conde EP004–005, especiais e lambes das branches) | `comum/REGISTRO_EDITORIAL.md` |
+| Registo editorial (ID e estado por conteúdo, todas as frentes) | Implementado; atualizado a 16/11 (98 conteúdos, 30 POR AUDITAR). Falta a linha MB-EP11 (pacote na branch `manaburn/ep10-numot`) | `comum/REGISTRO_EDITORIAL.md` |
 | Auditoria de originalidade antes de cada pauta | Implementado | `python3 comum/ferramentas/memoria.py pauta --objeto "…" --tema "…"` |
 | Encerramento obrigatório em 12 passos | Implementado | `nucleo/SHOWRUNNER.md` §6 |
 | Insights semanais (snapshots, CSV, impulso SIM/NÃO/A CONFIRMAR) | Implementado | `comum/insights/` |
@@ -127,10 +131,12 @@ Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por co
 
 ## Próximo passo concreto
 
-1. Fundador: enviar a prévia do LL-ART20 a @caiomonteiroart (mensagem na ficha; três pedidos: foto, publicação, collab; prazo 21/11) e registar a resposta em `lambe-lambe/autorizacoes/`. Depois: MC-ESP03 (confirmar o Instagram do MTGDC500 / Lotus Games). Também: EX-01, vidIQ, prints das ligas Preconauta.
+0. Fundador: decisões da missão estrutural (`nucleo/auditorias/2026-11-19_missao_estrutural.md` §8), sobretudo integrar MB-EP11 + insights de 13–14/11 e o acesso ao portal do Farpas.
+
+1. Fundador: enviar a prévia do LL-ART20 a @caiomonteiroart (mensagem na ficha; três pedidos: foto, publicação, collab; prazo 21/11) e registar a resposta em `lambe-lambe/autorizacoes/`. Depois: MC-ESP03 com o Farpas de Mana (acesso ao portal DC500 do Farpas ou prints com data, período e amostra). Também: EX-01, vidIQ, prints das ligas Preconauta.
 2. Domingo 22/11: rotina de insights com as datas de publicação dos conteúdos fechados a 16/11 e as métricas do MC-ESP01/ESP02 (termo de comparação das parcerias).
 3. Quinta 19/11: briefing automático do TUBO (tarefa agendada).
 
 ## Handoff
 
-Último: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). Anterior: 12/11, em `nucleo/auditorias/2026-11-12_missao_master.md`.
+Último: 19/11/2026, no fim de `nucleo/auditorias/2026-11-19_missao_estrutural.md`. Anterior: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). 

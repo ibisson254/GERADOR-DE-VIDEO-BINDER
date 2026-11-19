@@ -87,11 +87,11 @@ Tudo o que o TUBO cita aparece no ecrã.
 
 **Regra fixa (fundador, 16/11/2026, depois do MC-EP08: 7 s de tempo médio em 59 s; os episódios do TUBO que funcionaram abriam com cartas):**
 1. **Quadro 0 = abertura modelo do MC-ESP01** (vídeo de referência enviado pelo fundador a 16/11): grelha 2×2 em ecrã inteiro sobre o TUBO escurecido, com cartas reais ligadas ao pagamento e, quando o episódio fala de um jogador, **a foto dele como um dos quatro quadros** (com autorização registada). Cabeçalho em mono («CAMPEÃO DO MUNDO · MAGIC», «MESA DE 4 · COMMANDER») e linha de fonte por baixo; um selo em cada quadro (vida, cópias, país). Destaque = contorno verde a brilhar + o resto escurece + caixa com o número grande («25% · 1 em 4», «1,6% · 2 em 128»). Depois os quadros sobem para uma fila por cima do TUBO, o ecrã dele mostra o número ou a carta e o vídeo mergulha nele. Nunca o TUBO sozinho, nunca só texto. Código de referência: `hook()` em `oraculo/esp01/esp01_render.py` e `oraculo/episodios/ep08b_render.py`.
-6. **Quando o episódio fala de um deck, a lista do deck entra na edição** (dentro do tubo, logo depois do mergulho), com a carta citada destacada a verde e em insert.
 2. **O pagamento mais forte entra nos primeiros 3 s** (o campeão, o número, a carta). O vídeo abre **dentro do tubo** e o TUBO aparece depois, ao sair.
 3. **Nada no gancho depende de um episódio anterior.** Previsões, placar e `ARQUIVO` vêm depois da revelação, nunca antes.
 4. A revelação principal nunca passa dos 10 s.
 5. Controlo: a ficha guarda a linha «Quadro 0: <cartas mostradas>». Se o quadro 0 não tiver carta, o vídeo não sai.
+6. **Quando o episódio fala de um deck, a lista do deck entra na edição** (dentro do tubo, logo depois do mergulho), com a carta citada destacada a verde e em insert.
 
 | Tempo | Bloco | Onde | Expressão |
 |---|---|---|---|
@@ -123,7 +123,7 @@ Tema oficial: `musica/tubo_tema.mp3` (40,6 s). Composição própria do Ibisson 
 3. **Limite do humor:** a arrogância visa decisões e probabilidades, nunca jogadores reais pelo nome em tom de deboche.
 
 **Episódios**
-4. **Previsões registadas:** antes de um torneio grande, o TUBO faz uma previsão marcada como opinião. Depois do evento, volta a ela e mostra acerto ou erro (erro = "Erro de sistema"). Registar cada previsão em `comum/historico.md`. Previsões de pré-release (coleção nova, Sealed/Limited) seguem `PROTOCOLO_PRE_RELEASE.md`.
+4. **Previsões registadas:** antes de um torneio grande, o TUBO faz uma previsão marcada como opinião. Depois do evento, volta a ela e mostra acerto ou erro (erro = "Erro de sistema"). Registar cada previsão em `previsoes/registo.yaml` antes da voz (decisões de 09/11 e 10/11; `CICLO_SEMANAL.md` §0). Previsões de pré-release (coleção nova, Sealed/Limited) seguem `PROTOCOLO_PRE_RELEASE.md`.
 5. **"O TUBO julga o teu deck":** seguidores deixam a lista nos comentários; uma é analisada por semana. Pedir autorização ao autor e citar o @.
 6. **Crossovers:** TUBO vs Conde ("carta feia, mas presença real no meta", com número verificado) ou o TUBO a aparecer na TV do sofá de Mana & Burn. Um universo BINDER partilhado.
 

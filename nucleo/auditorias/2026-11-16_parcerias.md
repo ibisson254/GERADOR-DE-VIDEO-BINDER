@@ -267,3 +267,7 @@ Próximo passo concreto: o fundador responde às decisões da §5.1 e aprova a D
 - **Pauta proposta:** LL-ART14 ou ID seguinte livre depois da renumeração da branch `lambe/artistas-carrosseis` (conflito LL-ART13–18, `nucleo/DECISOES.md` 14/11). Tema: «De Shark Typhoon a Archmage Emeritus: o carioca por trás de [n] cartas de Magic» (n a contar no dia, com a fonte Scryfall). A auditoria de pauta (Shark Typhoon × Caio Monteiro) deu LIVRE.
 - **DM revista ao Caio:**
   > Oi, Caio! Sou o Ibisson, do BINDER Vision. A gente faz uma série de carrosséis sobre artistas brasileiros de Magic e queria fazer um sobre o seu trabalho (Shark Typhoon, Archmage Emeritus e outras). Você toparia ver antes e, se curtir, fazer o post em collab? Se quiser indicar quais artes prefere que apareçam, melhor ainda. Tudo com crédito e link para o seu portfólio.
+
+## Adenda de 19/11/2026
+
+O fundador fixou o MC-ESP03: parceiro-alvo **Farpas de Mana**, fonte o portal próprio Duel Commander 500 do Farpas. A alternativa MTGDC500 / Lotus Games deste relatório fica sem efeito para o MC-ESP03 (a Lotus não é parceira escolhida do piloto). Painel atualizado em `comum/parcerias.md`; decisão em `nucleo/DECISOES.md` (19/11). O resto do relatório fica como histórico.

@@ -113,3 +113,4 @@ Formato: data · ID · frente · acontecimento · estado. Mais recente no fim.
 - 16/11/2026, 19h15 · LL-ART20: Story animado de 9 s («o cartaz está sendo colado»), versões prévia com foto e B sem foto, sem áudio. MP4 não versionados.
 - 16/11/2026, 19h10 · Story do Lambe-lambe passa a padrão: kit `lambe-lambe/kit_story/` (motor + LEIA-ME); LL-ART20 migrado para `story.json`.
 - 16/11/2026, 19h45 · Story do Lambe-lambe passa a terminar com o fecho do scanner (motor_story.py); LL-ART20 refeito (12,87 s), QC com fecho presente.
+- 19/11/2026 · Núcleo · Missão estrutural: gancho visual no briefing (7 campos + rubrica), revisão narrativa, gates P0/P1/P2 consolidados, testes comparáveis nos insights; MC-ESP03 passa a ter o Farpas de Mana como parceiro-alvo e fonte (portal Duel Commander 500). Nenhum conteúdo publicado reaberto. Relatório `nucleo/auditorias/2026-11-19_missao_estrutural.md`.

@@ -2,7 +2,15 @@
 
 Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao risco: peça simples usa só os itens que se aplicam.
 
-**Gravidade** (pedido do fundador, 02/11/2026): **P0** impede publicação (os "Defeitos bloqueadores" abaixo) · **P1** problema importante de qualidade: corrige-se antes de publicar ou o fundador aceita-o por escrito · **P2** refinamento opcional. Um episódio só está aprovado sem P0 e com os P1 corrigidos ou aceites.
+**Gravidade** (02/11/2026, consolidada a 19/11/2026):
+
+| Nível | O que é | Consequência |
+|---|---|---|
+| **P0 · Bloqueador** | Erro factual ou informação inventada; identidade incorreta (voz, trilha, personagem, fecho ou nome de outra frente); direitos (licença, autorização, crédito); corte lateral; áudio defeituoso. Lista medível em «Defeitos bloqueadores» | Não se publica. Nem o fundador o aceita por escrito: corrige-se |
+| **P1 · Correção obrigatória** | Problema relevante de narrativa, legibilidade, ritmo, enquadramento, som ou retenção (itens marcados P1) | Corrige-se antes de publicar ou o fundador aceita-o por escrito, com a razão na ficha |
+| **P2 · Melhoria** | Polimento visual, microanimações, pequenos ajustes de ritmo ou acabamento | Opcional; regista-se se ficar para o próximo |
+
+Um conteúdo só está aprovado sem P0 e com os P1 corrigidos ou aceites. **Nenhuma média, nota de rubrica ou desempenho noutro critério compensa um P0.** Os critérios são medidos (segundos, píxeis, LUFS, sim/não), nunca adjetivos («bonito», «cinematográfico», «profissional»).
 
 **Passo automático:** `python3 -I comum/qc/qc_video.py VIDEO.mp4 --frente <frente>` (formato, duração, loudness, pico, fecho, cortes, folha de contacto com zona segura). Não dispensa o olho no bloco E.
 
@@ -41,7 +49,7 @@ Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao ris
 ## E. Personagens, cena e montagem (ficheiro final, na folha de contacto)
 
 - [ ] P0 · Feedback visual (15/11/2026): cada fala das personagens tem uma imagem real do que está a ser dito, na TV ou em insert; nenhuma tela «FOTO EM FALTA» no ficheiro a publicar.
-- [ ] P1 · Quadro 0 com imagem de Magic (carta ou objeto reconhecível).
+- [ ] P1 · Quadro 0 com imagem de Magic (carta ou objeto reconhecível). No Meta em Curto é P0 (item seguinte, decisão de 16/11).
 - [ ] P0 (Meta em Curto) · Quadro 0 com cartas reais em ecrã inteiro e revelação principal nos primeiros 3 s (`oraculo/CONTEXTO.md` §7). Falhou = não sai.
 - [ ] P1 · Toda leitura de regra mostra a carta com a linha destacada.
 - [ ] P0 · Carta inteira nos planos de TV e nos zooms.
@@ -60,14 +68,32 @@ Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao ris
 
 ## Defeitos bloqueadores (não publicar)
 
-1. Facto, número, citação ou jogada inventados ou sem fonte.
+Todos P0.
+
+1. Facto, número, citação ou jogada inventados ou sem fonte; cálculo do BINDER apresentado como dado da fonte.
 2. Função, tela ou número do app inventados; tela do app redesenhada.
-3. Corte lateral ou carta cortada/tapada.
-4. Falta o fecho do scanner.
+3. Corte lateral ou carta cortada/tapada (conferido em quadros do ficheiro final).
+4. Falta o fecho do scanner (exceto Órbita, Expedição com fecho próprio de 14/11 e exceções registadas em especiais).
 5. Voz ou música sem licença comercial.
 6. Imagem de transmissão de torneio ou de terceiros sem autorização.
 7. Humor contra uma pessoa real identificável.
 8. Segredo ou dado pessoal no vídeo ou no repositório.
+9. Identidade incorreta: voz, trilha, personagem, cenário ou fecho de outra frente; personagem regenerado em vez do recurso mestre; nome de carta, artista, jogador ou série errado no ecrã ou na legenda.
+10. Áudio defeituoso: clipping audível ou pico ≥ 0 dBFS; estalo, corte ou silêncio não intencional; voz trocada, cortada a meio de palavra ou ininteligível; dessincronia visível entre fala e legenda. (Loudness fora de −14 ± 1 LUFS ou pico ≥ −1 dBTP é P1, como mede o `qc_video.py`.)
+11. Parceria ou colaboração afirmada sem autorização registada; crédito de autoria de dados ou de obra em falta.
+12. Gancho que promete algo que o vídeo nunca paga (rubrica: Pagamento = 1).
+
+## F. Gancho e narrativa (briefing e ficheiro final; `SHOWRUNNER.md` §4.1 e §4.2)
+
+- [ ] P1 · Os 7 campos do gancho preenchidos na ficha antes do roteiro (quadro 0, objeto, ação, som, descoberta até 3 s, promessa, pagamento).
+- [ ] P1 · Quadro 0 mostrado em miniatura e sem som: o assunto percebe-se.
+- [ ] P1 · Nenhum logótipo, título da série ou apresentação antes da evidência visual (as aberturas das bíblias correm por cima dela).
+- [ ] P1 · Descoberta ou pergunta clara até aos 3,0 s (medido no ficheiro final).
+- [ ] P1 · Pagamento no segundo previsto no campo 7 (± 3 s) ou desvio explicado na ficha; nunca pago = P0 (bloqueador 12).
+- [ ] P1 · Maior intervalo sem mudança visual ≤ 3 s, medido nos cortes do `qc_video.py` (exceto o loop do Órbita).
+- [ ] P1 · Rubrica medida na ficha; nenhuma nota ≤ 2 em Relevância, Clareza ou Identidade.
+- [ ] P1 · Revisão narrativa da §4.2 sem «não» (tese, progressão, evidência, recompensa, CTA único).
+- [ ] P2 · Som do gancho dentro da biblioteca da frente e sem pico acima do resto da mistura.
 
 ## Melhorias opcionais (não bloqueiam)
 

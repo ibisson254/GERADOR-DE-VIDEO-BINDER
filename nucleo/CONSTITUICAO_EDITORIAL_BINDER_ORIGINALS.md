@@ -1,6 +1,6 @@
 # Constituição editorial e operacional · BINDER Originals
 
-Versão 1.6 · 12/11/2026 (§10 registo editorial e encerramento obrigatório, §12 sistema de insights, §13; decisão de 01/11, integrada a 12/11) · 1.5 · 02/11/2026 (§6 duração livre nos episódios de série) · 1.4 · 31/10/2026 (§1 bíblias do Órbita e do Lambe-lambe no repositório, §6 Órbita sem fecho) · 1.3 · 31/10/2026 (§1 hierarquia documental, §2 catálogo, §6 formatos por frente, §10 frase do easter egg) · 1.2 · 31/10/2026 (fonte de verdade, registo, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
+Versão 1.7 · 19/11/2026 (§4 cálculo e limitações, §6 gancho visual no briefing, §7 parceiros; missão estrutural de 19/11) · 1.6 · 12/11/2026 (§10 registo editorial e encerramento obrigatório, §12 sistema de insights, §13; decisão de 01/11, integrada a 12/11) · 1.5 · 02/11/2026 (§6 duração livre nos episódios de série) · 1.4 · 31/10/2026 (§1 bíblias do Órbita e do Lambe-lambe no repositório, §6 Órbita sem fecho) · 1.3 · 31/10/2026 (§1 hierarquia documental, §2 catálogo, §6 formatos por frente, §10 frase do easter egg) · 1.2 · 31/10/2026 (fonte de verdade, registo, texto alternativo) · 1.1 · 29/10/2026 (§14) · 1.0 · 28/10/2026 · alterações registadas em `DECISOES.md` (mesma pasta).
 
 Norma comum de **processo** para todas as frentes do @binder_vision (séries, universo temático, formato espontâneo e especiais; ver `CATALOGO_EDITORIAL.md`). Não define personagens nem estética: isso vive na bíblia de cada frente. Não define o produto: só funções confirmadas (secção 9).
 
@@ -62,7 +62,8 @@ As 12 perguntas da orquestração (série, objetivo, interesse, investigação, 
 ## 4. Rigor factual
 
 - Nunca inventar factos, números, citações, jogadas, eventos, fontes ou funções do app.
-- Marcar o tipo de cada afirmação central: **facto** (fonte) · **inferência** · **opinião** (da personagem) · **previsão** · **incerteza**.
+- Marcar o tipo de cada afirmação central: **facto** (fonte) · **cálculo** (do BINDER sobre dados da fonte, dito como tal) · **inferência** · **opinião** (da personagem) · **previsão** · **incerteza**.
+- Cada peça factual regista na ficha as **limitações** (amostra, período, o que a fonte não publica) e guarda as capturas ou exportações usadas na pasta do episódio. Nunca se cria uma estatística para preencher a narrativa.
 - Fonte primária quando existe: Oracle/Scryfall (texto e dados da carta), Wizards/Magic.gg (anúncios, resultados oficiais), EDHREC (Salt Score), MTGGoldfish/MTGTop8/Melee (meta). Fonte secundária é atribuída ("segundo o Draftsim").
 - Datas: toda pauta que muda depressa leva a data da fonte. Preço só com fonte e data; valores são "estimativa, não oferta de compra". Não republicar dados de preço do Scryfall (termos de uso).
 - Regra de carta nunca de memória: conferir no Oracle.
@@ -83,6 +84,7 @@ As 12 perguntas da orquestração (série, objetivo, interesse, investigação, 
 - Formato da frente (catálogo): séries em Reel 9:16, 1080×1920, 30 fps; Órbita em Reel 4:5, 1080×1350; Lambe-lambe em post 4:5 ou Reel 9:16. Em qualquer formato, **sem corte lateral** (regra com historial de reclamações: conferir quadros reais do ficheiro final, não só a prévia).
 - **Duração livre nos episódios de série** (fundador, 02/11/2026): o episódio dura o necessário para reter o público sem destruir o entretenimento. Não há mínimo nem máximo; as durações dos perfis passam a referência histórica. Cada segundo tem de ganhar o seguinte: bloco que não segura a atenção corta-se (§5). O formato do Órbita (loop de 12 s) não muda.
 - **Retenção e recompensa em todo o conteúdo** (fundador, 13/11/2026): (1) **quadro 0 diz «Magic»**: o primeiro quadro mostra um sinal visual inequívoco de Magic (cartas reais, de preferência ligadas ao tema), sem esperar pela narração; (2) **gancho visual que encena a tese** nos primeiros 3 s, não só texto; (3) **mudança visual a cada ≤ 3 s** (entrada, carimbo, número, corte); (4) **micro-recompensas**: cada revelação (número, carimbo, cartão, chip) tem um som curto e um movimento de «pop»; (5) **ciclo aberto → pagamento**: o que o gancho promete paga-se antes do fim; (6) **participação**: pergunta com resposta numa letra ou egg. Tudo isto sem quebrar a constituição: o gancho promete só o que o vídeo entrega e não há dados inventados.
+- **Gancho visual no briefing** (missão estrutural, 19/11/2026): o gancho é parte do briefing, não acabamento. Define-se antes do roteiro nos 7 campos de `SHOWRUNNER.md` §4.1 (quadro 0, objeto, ação, som, descoberta até 3 s, promessa, pagamento), é específico da história, faz sentido sem som e nunca começa por logótipo ou apresentação quando há evidência visual mais forte. Critérios comuns; a execução é de cada frente.
 - **Comentários da comunidade no vídeo** (fundador, 14/11/2026): quando um conteúdo nasce de comentários de seguidores, ou os usa, o vídeo mostra o **print real** de cada comentário (foto de perfil, @ e texto, sem edição), com entrada própria («scan») e som, para a comunidade ver quem comentou. A legenda marca o @ e agradece; depois de publicar, convite de Collab ao autor quando fizer sentido. Exceção permanente a §11.5 para este uso, sob responsabilidade do fundador. Limites: só comentários públicos em posts do BINDER (mensagens privadas só com o «sim» do autor na própria conversa); nada de comentários ofensivos, de perfis que pareçam de menores ou com dados pessoais; se o autor pedir para retirar, retira-se. Recomendado avisar o autor antes de publicar. Os prints ficam na pasta do episódio (`comentarios/`).
 - Carta real, inteira, rodapé visível, nada por cima.
 - Texto legível no telemóvel; legenda dentro da zona segura.
@@ -94,6 +96,7 @@ As 12 perguntas da orquestração (série, objetivo, interesse, investigação, 
 ## 7. Ferramentas, direitos e transparência
 
 - Política de Conteúdo de Fãs da Wizards: identificar como não oficial, creditar artista e Wizards.
+- **Parceiros e fontes de terceiros:** reconhecer sempre a autoria dos dados e das obras; crédito editorial não é parceria comercial; nunca afirmar colaboração (no ecrã, na voz ou na legenda) sem autorização registada em `<frente>/autorizacoes/`; a tese e a conclusão são do BINDER, não do parceiro (método em `../comum/parcerias.md`).
 - Vozes e músicas ElevenLabs: publicar só o que foi gerado com licença comercial ativa. Nada de imitar vozes reais.
 - Nada de imagens de transmissões de torneio; reconstruir com imagens de cartas.
 - Reconstrução nunca é apresentada como gravação.

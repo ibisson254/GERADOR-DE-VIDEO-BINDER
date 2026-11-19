@@ -53,6 +53,25 @@ O conector vidIQ lê os Insights do Instagram como dono (visualizações, alcanc
 - Views não são instalações. Instalações só com o relatório da Play Console por UTM.
 - Uma semana isolada não vira regra (constituição §12): uma regra nova precisa de padrão em 2+ semanas ou de decisão do fundador.
 
+## Avaliar resultados e testes comparáveis (desde 19/11/2026)
+
+**Métricas que se leem**, só quando o Instagram, a Play Console ou o Supabase as mostram (o que não aparece fica vazio): visualizações e alcance · retenção inicial (taxa de saltos do Reel ou reproduções de 3 s do anúncio) · tempo médio e % assistida · partilhas · guardados · comentários · visitas ao perfil · seguidores novos · toques no link · instalações por UTM (`utm_campaign=<ID>`, Play Console) · contas novas e primeira carta em 7 dias (`registo_app.csv`, sem atribuição a um post). Nenhuma métrica se estima nem se deriva de outra sem o dizer.
+
+**Seguidores qualificados e conversões:** só se atribuem a um post com UTM ou com um pico isolado no mesmo dia, dito como hipótese. Views não são instalações.
+
+**Comparar só peças equivalentes:** mesma frente e formato, duração parecida, idade parecida no momento do print, e o mesmo estado de impulso (`NÃO` com `NÃO`; nunca pago com orgânico). Peças de formatos diferentes só se comparam com o contexto escrito ao lado.
+
+**Testes (uma variável de cada vez):** a ficha do episódio diz a variável e a peça de comparação; o resto do formato fica estável. Variáveis em fila:
+- carta estática × carta com scan no quadro 0;
+- revelação imediata × revelação progressiva (nunca no Meta em Curto, onde a revelação até 3 s é P0);
+- comparação de dois decks ou cartas × apresentação de uma única carta.
+
+Leitura a 48 h e a 7 dias, na tabela abaixo. Um par de peças não muda uma regra; uma regra nova precisa de padrão em 2+ semanas ou de decisão do fundador (constituição §12).
+
+| Teste | Variável | Peça A | Peça B | Métrica | 48 h | 7 dias | Leitura (facto · interpretação · hipótese · recomendação) |
+|---|---|---|---|---|---|---|---|
+| | | | | | | | |
+
 ## Colunas do CSV
 
 `semana_fim` (AAAA-MM-DD) · `periodo` (como o print o diz) · `id_editorial` (ID do registo ou `SEM-ID`) · `frente` · `post_ref` (início da legenda ou nome no print) · `formato` · `idade` (no momento do print) · `visualizacoes` · `alcance` · `impressoes` · `curtidas` · `comentarios` · `guardados` · `partilhas` · `visitas_perfil` · `novos_seguidores` · `cliques_link` · `outras_acoes` · `impulsionado` (SIM/NÃO/PARCIAL/A CONFIRMAR) · `investimento` · `moeda` · `campanha_periodo` · `objetivo_anuncio` · `alcance_pago` · `fonte` · `notas`.

@@ -14,8 +14,8 @@ Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Identidade, visual, t
 | Leitura de Carta | Verificação rápida | Oracle + formatos legais |
 | A Jogada que Não Viste | Reconstrução esquemática | VOD com minuto exato; estado da mesa (vida, mão conhecida, campo, mana) confirmado no VOD; alternativas avaliadas com o texto Oracle |
 | Relatório do Meta | Análise de dados | Fonte, data, evento e tamanho da amostra no ecrã; distinguir **representação** (quantos jogaram), **desempenho** (conversão / win rate) e **confronto direto** |
-| Previsão | Opinião registada | Marcada como opinião no ecrã; registada em `comum/historico.md`; revista depois do evento |
-| Previsão de pré-release | Protocolo de Pré-Release | Fases A–D de `PROTOCOLO_PRE_RELEASE.md`; ficha em `pre-release/`; ID e estado em `comum/historico.md` |
+| Previsão | Opinião registada | Marcada como opinião no ecrã; registada em `previsoes/registo.yaml` antes da voz (`CICLO_SEMANAL.md` §0); revista depois do evento |
+| Previsão de pré-release | Protocolo de Pré-Release | Fases A–D de `PROTOCOLO_PRE_RELEASE.md`; ficha em `pre-release/`; ID e estado em `previsoes/registo.yaml` |
 
 ## Regras próprias de rigor
 
@@ -37,11 +37,11 @@ Quinta prevê, segunda presta contas: `CICLO_SEMANAL.md`. Toda previsão vai par
 
 ## Gancho e fecho
 
-Gancho: frase seca com o dado ou a decisão surpreendente (fora do tubo, desconfiado). Fecho: pergunta competitiva + «Probabilidade calculada. Humanos, imprevisíveis.» + fecho do scanner.
+Gancho: abertura padrão de `CONTEXTO.md` §7 (desde 16/11/2026): grelha 2×2 do MC-ESP01 com cartas ou deck reais no quadro 0, revelação até 3 s, mergulho no terminal, dados e fonte legíveis, sonoplastia do TUBO, mudança visual ≤ 3 s e pagamento antes do fecho; os 7 campos vão para a ficha (`nucleo/SHOWRUNNER.md` §4.1). A frase seca «fora do tubo, desconfiado» passou para depois da revelação. Fecho: pergunta competitiva + «Probabilidade calculada. Humanos, imprevisíveis.» + fecho do scanner.
 
 ## Formato
 
-Duração livre (constituição §6), contada sem o fecho do scanner. Referência histórica: EP01 43,4 s, EP02 45,0 s. Áudio alvo da trilha -16 LUFS (`CONTEXTO.md` §7.1); mix final -14 LUFS. Corte seco da trilha alinhado à revelação (não a um segundo fixo).
+Duração: 25–35 s sem o fecho, pela regra de 16/11/2026 (`CONTEXTO.md` §7), que prevalece sobre a duração livre da constituição §6 nesta série. Referência histórica: EP01 43,4 s, EP02 45,0 s. Áudio alvo da trilha -16 LUFS (`CONTEXTO.md` §7.1); mix final -14 LUFS. Corte seco da trilha alinhado à revelação (não a um segundo fixo).
 
 ## Ponte para o BINDER
 
@@ -56,7 +56,7 @@ Guardados + partilhas (conteúdo de referência). Secundária: respostas à perg
 - [ ] Torneio, formato, data, jogadores e listas confirmados na fonte.
 - [ ] Cada número no ecrã tem fonte e data visíveis.
 - [ ] Representação, desempenho e confronto não estão misturados.
-- [ ] Previsão marcada e registada (se houver).
+- [ ] Previsão marcada e registada em `previsoes/registo.yaml` (se houver).
 - [ ] Pré-release: ficha `pre-release/<CÓDIGO>_previsoes.md` com critério de avaliação em cada ID; linhas no histórico; nenhuma percentagem sem fonte, amostra, formato e período; grau de certeza sem %.
 - [ ] Nenhuma imagem de transmissão.
 - [ ] Ficha e `*_fontes.txt` em `oraculo/episodios/`.

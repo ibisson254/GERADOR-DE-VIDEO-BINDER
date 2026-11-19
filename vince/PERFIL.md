@@ -1,4 +1,6 @@
-# Perfil operacional · Vinci (o mercado das cartas)
+# Perfil operacional · Vince Vault · Multiverse Capital (o mercado das cartas)
+
+Nome reconciliado a 12/11/2026: «Vinci» e Vince Vault são a mesma frente (`nucleo/DECISOES.md`). Pasta `vince/`.
 
 Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Aqui só o que é próprio da série. Identidade criativa (personagem, voz, visual, fórmula) vive em `vince/CONTEXTO.md` e não se repete aqui.
 
@@ -9,8 +11,8 @@ Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Aqui só o que é pr�
 - **Classes de conteúdo e estratégia por defeito:** episódio de preço com causa única e verificada. Abre com o número, explica a causa, diz o que fazer com a informação (não o que comprar).
 - **Fontes preferenciais:** LigaMagic (preço em reais, praça principal do público), MTGStocks/TCGplayer (referência internacional; decisão de 08/11/2026: sem Cardmarket, e os preços do Scryfall não se republicam — constituição §4; o Scryfall entra só para dados e imagem da carta), anúncios oficiais da Wizards, listas de torneio para causa competitiva. Toda a cotação tem fonte, data e hora, com a nota «estimativa, não oferta de compra». Quando a F1 do BINDER existir, a fonte passa a ser a plataforma BINDER.
 - **Afirmações que exigem prova:** qualquer preço, percentagem ou variação; a causa atribuída à variação; a escassez ou a reimpressão de uma carta; a existência de procura. Sem prova, não entra — e, na ficção, a Fonte não atende.
-- **Gancho e fecho:** gancho = um número e uma data nos primeiros 3 s, falado e escrito. Fecho = scanner do BINDER Vision, que aqui é continuação do conteúdo e não interrupção.
-- **Duração e formato:** Reel 9:16, 1080×1920, 30 fps, 30–45 s, −14 LUFS.
+- **Gancho e fecho:** gancho = carta real + um número + uma data nos primeiros 3 s, falado e escrito, só com os recursos 2D aprovados (o 3D é arquivo e não volta sem decisão); os 7 campos vão para a ficha (`nucleo/SHOWRUNNER.md` §4.1). Sem kit 2D no repositório, não há episódio. Fecho = scanner do BINDER Vision, que aqui é continuação do conteúdo e não interrupção.
+- **Duração e formato:** Reel 9:16, 1080×1920, 30 fps, −14 LUFS; duração livre (constituição §6), referência inicial 30–45 s.
 - **Ponte para o BINDER:** direta e natural: o episódio mostra que um preço mudou; o app diz quanto vale a pasta de quem está a ver.
 - **Métrica principal:** guardados por 1.000 views. Secundária: retenção aos 3 s. Comentários não são a métrica desta série.
 - **Critérios de aceitação próprios:**
@@ -19,4 +21,4 @@ Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Aqui só o que é pr�
   - Legenda com a linha fixa de que não é conselho de investimento.
   - No máximo um telefonema à Fonte por episódio; a Fonte nunca é vista, ouvida em palavras, legendada nem nomeada.
   - Moeda em reais e centavos.
-- **Lacunas conhecidas:** voz do Vinci por escolher no ElevenLabs; cadência de publicação por decidir; kit visual v1 em curso (ver `vince/CONTEXTO.md` §7).
+- **Lacunas conhecidas:** voz mantida (`L93SDe6kGQj79D6svMgA`, reconciliação de 12/11); kit 2D, `recortar.py`, `EDICAO.md` e `PROMPT_EPISODIO.md` em falta (STATUS); cadência de publicação por decidir; kit visual v1 em curso (ver `vince/CONTEXTO.md` §7).

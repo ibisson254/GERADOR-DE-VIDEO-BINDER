@@ -47,6 +47,7 @@ Som nos Reels: efeitos sintetizados próprios, pico a −6 dBFS; a música é es
 
 ## 4. Regras próprias
 
+- Gancho visual (19/11/2026, `nucleo/SHOWRUNNER.md` §4.1): o objeto (carta, artista, tela real do app) aparece no 1.º slide ou no quadro 0, numa leitura simples e forte; o formato continua pop e espontâneo (ficha curta).
 - Carta limpa: sem filtros, cortes, distorção nem marca d'água. A fita só toca os cantos de cima; nada tapa o rodapé com o artista e o ©.
 - Créditos (artista e © Wizards of the Coast; personagens licenciados aos titulares) no post e na legenda.
 - Produto só com gravação ou captura real do app. Nada acelerado: os cortes só tiram esperas. Dizer "Gravação real do app" na legenda.

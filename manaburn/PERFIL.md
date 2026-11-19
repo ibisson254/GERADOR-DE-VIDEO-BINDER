@@ -25,7 +25,7 @@ Herda `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`. Identidade (personage
 
 ## Gancho e fecho
 
-Gancho: opinião quente do Burn. Fecho: pergunta do Burn (a mesma do comentário fixado) → "Comenta aí." do Mana → TV desliga e vira o ponto verde da logo → fecho do scanner.
+Gancho: opinião quente do Burn com a dor da mesa e um número, sobre a carta ou o objeto já visível na TV SAL desde o quadro 0; os 7 campos vão para a ficha (`nucleo/SHOWRUNNER.md` §4.1). Fecho: pergunta do Burn (a mesma do comentário fixado) → "Comenta aí." do Mana → TV desliga e vira o ponto verde da logo → fecho do scanner.
 
 ## Luz e cenário
 
@@ -72,6 +72,13 @@ O MB-EP11 é o post mais visto do canal (7.138 views, 71 guardados, 73 seguidore
 4. Reação do Burn em grande plano com tremor.
 5. Pergunta de escolha no fim, igual à primeira linha do comentário fixado.
 6. Par de publicação: carrossel do app no dia seguinte, com pedido de instalação (o carrossel de 12/11 teve 43 toques no link).
+
+**Auditoria de 19/11/2026 (o que os números permitem e não permitem dizer):**
+- Facto observado (snapshot de 13/11): das 7.138 visualizações, 4.050 vieram do anúncio (≈57 %), mas só 17 dos 73 seguidores; no anúncio, 2.000 reproduções de 3 s em 4.050 (metade do público frio saiu antes dos 3 s). O snapshot de 14/11 marca o mesmo post como impulso `A CONFIRMAR` e devia dizer `SIM` (confirmado a 13/11).
+- Facto observado: os dois snapshots e o pacote do episódio (`manaburn/episodios/ep10_numot/`) estão em branches não integradas (`insights/2026-11-13-numot`, `insights/2026-11-14`, `manaburn/ep10-numot`); a `main` não tem linha MB-EP11 no registo editorial.
+- Interpretação: o recorde de views não prova o gancho (é sobretudo alcance pago); o que distingue o EP11 é a parte orgânica (≈36 guardados e ≈56 seguidores) e o tema de leitura de regras.
+- Hipótese: o padrão «dor da mesa + número na 1.ª fala + carta na TV» segura nos 3 s o público de Commander, não o público frio. Testar com um episódio sem impulso (`comum/insights/LEIA-ME.md`, «Testes comparáveis»).
+- Recomendação: a base continua (decisão de 15/11); não se torna regra nova sem padrão em 2+ semanas. Não importar a grelha nem o terminal do TUBO: o equivalente aqui é a TV SAL e a reação do Burn.
 
 ## Entrega ao fundador
 

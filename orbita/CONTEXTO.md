@@ -31,7 +31,7 @@ Técnico: Reel 4:5, 1080×1350, 12 s, 30 fps, loop perfeito, mais capa JPG. Sem 
 
 ## 4. Regras próprias
 
-- Carta real, inteira e parada no centro, rodapé visível.
+- Carta real, inteira e parada no centro, rodapé visível. Gancho visual (19/11/2026, `nucleo/SHOWRUNNER.md` §4.1): a carta Star Trek está inteira desde o quadro 0 do loop; o campo «som» da ficha diz «música no Instagram». Nada de personagens, trilhas ou códigos visuais de outras frentes.
 - Não citar preços (pré-venda instável; termos do Scryfall).
 - Escolha das cartas: cobertura na imprensa e listas de cartas mais procuradas, com fonte.
 - Ordem de publicação com personagens alternados; CTA da legenda sem repetir em posts seguidos.

@@ -1,6 +1,6 @@
 # Parcerias · próximas collabs
 
-Painel vivo das collabs. Versão de 16/11/2026, 17:31 (fundador): **método «episódio pronto primeiro»** — o BINDER produz o episódio completo e só depois o envia ao parceiro, a pedir a collab e a autorização para publicar. Substitui a versão das 17h (fechos de quentes e DM antes de produzir). Base de pesquisa: `nucleo/auditorias/2026-11-16_parcerias.md`.
+Painel vivo das collabs. MC-ESP03 corrigido a 19/11/2026 (parceiro-alvo Farpas de Mana). Versão de 16/11/2026, 17:31 (fundador): **método «episódio pronto primeiro»** — o BINDER produz o episódio completo e só depois o envia ao parceiro, a pedir a collab e a autorização para publicar. Substitui a versão das 17h (fechos de quentes e DM antes de produzir). Base de pesquisa: `nucleo/auditorias/2026-11-16_parcerias.md`.
 
 As autorizações ficam em `<frente>/autorizacoes/`; os números de cada collab vão para `comum/insights/registo_posts.csv` na rotina de domingo.
 
@@ -33,7 +33,7 @@ Todos os outros conteúdos com terceiros já foram feitos, publicados e registad
 | Ordem | ID provisório | Parceiro-alvo | Frente · formato | Créditos | Se disser não | Material em falta |
 |---|---|---|---|---|---|---|
 | 1 | **LL-ART20** | Caio Monteiro (@caiomonteiroart) | Lambe-lambe · carrossel | 0 | versão B (sem foto) com crédito e marcação | **pronto 16/11** · prévia por enviar · prazo 21/11 |
-| 2 | **MC-ESP03** | MTGDC500 / Lotus Games (dono dos dados) | Meta em Curto · Reel 25–35 s | voz (~1.500–2.200, estimativa) | publicar com crédito ao site (dados públicos) | nada; extração no dia |
+| 2 | **MC-ESP03** | Farpas de Mana (@farpasdemana), dono do portal Duel Commander 500 usado como fonte | Meta em Curto · Reel 25–35 s | voz (~1.500–2.200, estimativa) | publicar com crédito ao portal do Farpas (dados públicos), sem afirmar parceria | acesso ao portal (não abriu do ambiente do agente a 16/11): exportação ou prints com data, período e amostra |
 | 3 | **MC-ESP04** | Preconauta (parceiro ativo) | Meta em Curto · Reel | voz | não se aplica (autorização de 13/11 cobre os números dos sites deles) | prints das ligas mesão e 2x2 |
 
 Pautas auditadas a 16/11 com `memoria.py pauta`: as três LIVRES.
@@ -47,13 +47,14 @@ Pautas auditadas a 16/11 com `memoria.py pauta`: as três LIVRES.
   > Oi, Caio! Sou o Ibisson, do BINDER Vision. A gente faz uma série de carrosséis sobre artistas brasileiros de Magic e fizemos um sobre o seu trabalho — segue a prévia. Toparia publicar em collab com a gente? Se quiser trocar alguma arte ou corrigir algo, é só falar. Tudo com crédito e link para o seu portfólio.
 
 ### 2 · MC-ESP03 · «O mais jogado é o que mais vence?» (Duel Commander 500)
-- **Mudança em relação ao piloto do relatório:** com o episódio feito primeiro, a fonte tem de ser pública e escolhida por nós: o **MTGDC500** (mtgdc500.com.br, «Lotus Games»). Por isso o alvo da collab passa a ser **quem assina os dados** (MTGDC500 / Lotus Games), não o Farpas de Mana — mandar ao Farpas um vídeo com os números de outro portal, sem saber se concorrem, é arriscado. O Farpas fica para um episódio com fonte deles, quando o site deles abrir ou eles a indicarem.
-- **Tese:** mais jogado não é mais forte, e a taxa de TOP 4 mais alta pode ser só amostra pequena ou torneios pequenos (relatório §3.A e §6).
-- **Gancho:** Cloud, Midgar Mercenary («467 listas») × Ghalta, Primal Hunger («7 de 8»); «O mais jogado ou o que mais vence?». Números refeitos no dia da produção, com data de corte, período, torneios e listas no ecrã; cálculos do BINDER marcados como tal.
+- **Correção do fundador (19/11/2026, `nucleo/DECISOES.md`):** o parceiro-alvo é o **Farpas de Mana** e a fonte é o **portal próprio Duel Commander 500 do Farpas** (os artigos deles citam duelcommander500.com.br; endereço confirmado no dia da extração). Substitui a versão de 16/11, que punha o MTGDC500 / Lotus Games como dono dos dados deste episódio. A Lotus Games **não** é parceira escolhida deste piloto, e os números do MTGDC500 recolhidos a 16/11 (Cloud 467 listas, Ghalta 7 em 8) **não entram** no MC-ESP03. Nenhuma parceria está aceite.
+- **Tese:** mais jogado não é mais forte, e a taxa de vitória ou de TOP mais alta pode ser só amostra pequena ou torneios pequenos (relatório §3.A e §6). A tese é do BINDER, não do Farpas.
+- **Gancho:** provisório até haver os dados do portal. Modelo: dois comandantes reais na grelha 2×2 do MC-ESP01 (o mais jogado × o de maior taxa), com o número de cada um e «O mais jogado ou o que mais vence?» até 3 s. Os 7 campos (`nucleo/SHOWRUNNER.md` §4.1) preenchem-se com os números do portal, com data de corte, período, torneios e listas no ecrã; cálculos do BINDER marcados como tal; definições do portal (o que conta como vitória, TOP ou aparição) copiadas para a ficha.
 - **Fim:** pergunta «Qual comandante você acha que só parece forte?» (sem frase do parceiro) + outro do scanner.
-- **Pré-requisito:** confirmar o @ da Lotus Games / MTGDC500 no Instagram antes de produzir; se não houver perfil ativo, o fundador decide entre o Farpas (com a ressalva acima) ou publicar sem collab.
-- **Mensagem de envio:**
-  > Oi, pessoal do MTGDC500! Sou o Ibisson, do BINDER Vision (Meta em Curto, análise de meta no Instagram). Fizemos um vídeo com os dados públicos do site de vocês: o comandante mais jogado do DC500 é o que mais vence? Segue a prévia, com crédito e link. Toparia publicar em collab? Se algum número ou definição estiver errado, corrigimos antes.
+- **O vídeo não afirma parceria:** crédito «Dados: Duel Commander 500 (Farpas de Mana), <período>» no ecrã e na legenda; a collab só entra na legenda e no botão do Instagram depois do «sim», registado em `oraculo/autorizacoes/AAAA-MM-DD_farpas_dc500.md`.
+- **Pré-requisito:** acesso ao portal. Daqui ele não abriu a 16/11; se continuar sem abrir, o fundador envia a exportação ou prints com data, período e amostra, ou o episódio espera. Sem dados verificáveis não há episódio.
+- **Mensagem de envio** (o fundador envia do @binder_vision; nada foi enviado):
+  > Fala, Farpas! Sou o Ibisson, do BINDER Vision (Meta em Curto, análise de meta no Instagram). Fizemos um vídeo com os dados públicos do portal de Duel Commander 500 de vocês: o comandante mais jogado é o que mais vence? Segue a prévia, com crédito e link. Toparia publicar em collab? Se algum número ou definição estiver errado, corrigimos antes.
 
 ### 3 · MC-ESP04 · Preconauta — «Mesa de 4 ou 2x2: o mesmo precon joga igual?»
 - **Parceiro já ativo:** a autorização de 13/11 (`oraculo/autorizacoes/2026-11-13_preconauta_dados_2x2.md`) cobre collab e números dos sites deles; o envio pede só o OK desta peça.
@@ -63,7 +64,7 @@ Pautas auditadas a 16/11 com `memoria.py pauta`: as três LIVRES.
 - **Leitura:** comparar com o MC-ESP02. Se cair muito, a terceira collab seguida com o Preconauta fica em pausa.
 
 ## Depois destes três
-Farpas de Mana (fonte própria), Tenda da Liliana (Pauper), Cabrito Montês (reserva, só com atividade confirmada em 2026). Taverna Games fora.
+Tenda da Liliana (Pauper), Cabrito Montês (reserva, só com atividade confirmada em 2026). Taverna Games fora. Lojas com dados próprios (ex.: Lotus Games / MTGDC500) só como pauta nova, depois do piloto com o Farpas e com decisão do fundador.
 
 ## Registo de resultados
 
@@ -72,5 +73,6 @@ Farpas de Mana (fonte própria), Tenda da Liliana (Pauper), Cabrito Montês (res
 | MC-ESP01 | @montcardshop | — | aceitou | sim | | | | termo de comparação |
 | MC-ESP02 | Preconauta | — | aceitou | sim | | | | termo de comparação |
 | LL-ART20 | Caio Monteiro | | | | | | | |
+| MC-ESP03 | Farpas de Mana | | | | | | | |
 
 Sem dado = vazio, nunca 0.

@@ -28,6 +28,8 @@ O alvo do humor é a arrogância do Conde, nunca o artista. Elogio e crítica se
 
 Abertura "Meus caros apreciadores do duvidoso…" e veredito/carimbo conforme `CONTEXTO.md` §3; depois o fecho do scanner.
 
+Gancho visual (19/11/2026, `nucleo/SHOWRUNNER.md` §4.1): o quadro 0 mostra a obra inteira ou o detalhe que sustenta a análise (a «insolência» do §3 pode abrir como pergunta), e a abertura do Conde corre por cima dela. Nunca o Conde sozinho nem o título, e nunca estatística como gancho: isto é crítica e apreciação de ilustração.
+
 ## Formato
 
 Duração livre (constituição §6); referência histórica ~42–48 s. -14 LUFS, layout e paleta de `CONTEXTO.md` §6 (a paleta da série é própria; o verde BINDER só no fecho).

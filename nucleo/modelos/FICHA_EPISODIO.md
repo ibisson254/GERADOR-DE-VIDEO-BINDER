@@ -24,16 +24,38 @@ Copiar para a pasta do episódio (`<pasta da frente>/episodios/epNN_<slug>/ficha
 - Proposta de valor numa frase*: 
 - Público: 
 - Hipótese a testar (o que esperamos aprender): 
-- Tese: 
-- Gancho (0–3 s)*: 
+- Variável em teste (0 ou 1; peça de comparação; `comum/insights/LEIA-ME.md`): 
+- Tese (uma frase)*: 
+
+## Gancho visual* (`nucleo/SHOWRUNNER.md` §4.1; preencher antes do roteiro)
+1. Quadro 0 (o que se vê, sem áudio)*: 
+2. Objeto real que prende o olhar*: 
+3. Ação no primeiro segundo*: 
+4. Som que reforça a ação*: 
+5. Descoberta ou pergunta até 3 s*: 
+6. Promessa*: 
+7. Pagamento (segundo e imagem)*: 
+
+| Rubrica (1–5) | Prevista | Medida no final |
+|---|---|---|
+| Relevância visual | | |
+| Impacto inicial | | |
+| Clareza | | |
+| Curiosidade | | |
+| Pagamento | | |
+| Identidade | | |
 
 ## Roteiro definitivo*
 (Texto final tal como foi gravado, ou caminho do ficheiro: `roteiro.json`, `episode.json`, `guiao_definitivo.md`.)
 
 ## Fontes e evidências*
-| Afirmação | Tipo (facto/inferência/opinião/previsão) | Fonte (URL) | Data |
+| Afirmação | Tipo (facto/cálculo/inferência/opinião/previsão) | Fonte (URL) | Data |
 |---|---|---|---|
 | | | | |
+
+Limitações (amostra, período, o que a fonte não publica): 
+Capturas ou exportações guardadas em: 
+Créditos e autorizações de terceiros (`<frente>/autorizacoes/`): 
 
 ## Produção
 - Recursos reutilizados: 
@@ -55,6 +77,12 @@ Medido no ficheiro final (não na prévia), com `nucleo/CHECKLIST_QUALIDADE.md` 
 | Loudness / pico | −14 LUFS / < −1 dBFS | | |
 | Fecho do scanner | presente (exceto Órbita e exceções registadas) | | |
 | Factos = ficha | sim | | |
+| Quadro 0 | campo 1 do gancho, legível sem som | | |
+| Descoberta | ≤ 3,0 s | | |
+| Pagamento do gancho | segundo do campo 7 (± 3 s) | | |
+| Maior intervalo sem mudança visual | ≤ 3 s | | |
+| Retenção | quadro 0 com Magic · mudança ≤ 3 s · som em cada revelação | | |
+| P0 / P1 abertos | 0 / 0 (ou P1 aceites por escrito) | | |
 
 ## Ficheiros finais*
 Vídeos renderizados não entram no Git. Registar onde estão:
