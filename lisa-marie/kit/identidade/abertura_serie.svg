@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17151B"/>
+      <stop offset="1" stop-color="#29202E"/>
+    </linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF77AF"/>
+      <stop offset="1" stop-color="#EF4F91"/>
+    </linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#F3EBDD" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+  <rect width="1080" height="1920" fill="url(#grid)"/>
+  <circle cx="925" cy="390" r="265" fill="#53BFC0" opacity=".12"/>
+  <circle cx="925" cy="390" r="205" fill="none" stroke="#53BFC0" stroke-width="5" opacity=".65"/>
+  <circle cx="925" cy="390" r="160" fill="none" stroke="#EF4F91" stroke-width="2" stroke-dasharray="9 17" opacity=".9"/>
+  <path d="M80 220H1000" stroke="#EF4F91" stroke-width="9"/>
+  <text x="82" y="150" fill="#F3EBDD" font-family="Arial, sans-serif" font-size="30" letter-spacing="7">BINDER ORIGINALS</text>
+  <text x="83" y="520" fill="#F3EBDD" font-family="Impact, Arial Black, sans-serif" font-size="112" letter-spacing="-2">LISA MARIE</text>
+  <text x="78" y="675" fill="url(#pink)" font-family="Impact, Arial Black, sans-serif" font-size="190" letter-spacing="-4">NO AR</text>
+  <rect x="84" y="745" width="690" height="66" rx="8" fill="#53BFC0"/>
+  <text x="111" y="790" fill="#17151B" font-family="Arial, sans-serif" font-weight="bold" font-size="31" letter-spacing="2">VJ CULTURAL · MAGIC / TCG</text>
+  <g transform="translate(88 1020)">
+    <rect width="904" height="425" rx="28" fill="#F3EBDD"/>
+    <rect x="0" y="0" width="22" height="425" rx="11" fill="#EF4F91"/>
+    <text x="65" y="100" fill="#17151B" font-family="Arial, sans-serif" font-size="27" letter-spacing="5">PRIMEIRO QUADRO</text>
+    <text x="65" y="230" fill="#17151B" font-family="Impact, Arial Black, sans-serif" font-size="83">ELAS NO</text>
+    <text x="65" y="330" fill="#EF4F91" font-family="Impact, Arial Black, sans-serif" font-size="83">MULTIVERSO</text>
+    <text x="67" y="383" fill="#49434D" font-family="Arial, sans-serif" font-size="24" letter-spacing="2">PESSOAS · ARTE · COMUNIDADE</text>
+  </g>
+  <text x="84" y="1690" fill="#F3EBDD" opacity=".75" font-family="Arial, sans-serif" font-size="26" letter-spacing="5">SAIU DO ARQUIVO. FOI PRO AR.</text>
+  <g transform="translate(82 1780)">
+    <circle cx="18" cy="18" r="11" fill="#EF4F91"/>
+    <circle cx="62" cy="18" r="11" fill="#53BFC0"/>
+    <circle cx="106" cy="18" r="11" fill="#5267A8"/>
+    <text x="158" y="27" fill="#F3EBDD" opacity=".65" font-family="Arial, sans-serif" font-size="21" letter-spacing="3">IDENTIDADE EM DESENVOLVIMENTO · TEMPLATE</text>
+  </g>
+</svg>

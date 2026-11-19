@@ -35,6 +35,10 @@ Antes de perguntar ao fundador, procurar a resposta nestes documentos. Só se pe
 | Ilustração: composição, técnica, simbolismo, bastidores, artista | Conde de Manaforte | Território "ilustração" (`conde/PERFIL.md`) |
 | Arte de uma carta como curiosidade rápida, sem crítica encenada | Lambe-lambe | Formato espontâneo (série "Artistas de Magic") |
 | Carta do set de Star Trek | Órbita, ou uma série se o ângulo for o território dela | O ângulo decide; registar a escolha |
+| Perfil/entrevista de artista, jogadora, colecionadora ou criadora; foco na pessoa, trajetória e participação cultural na comunidade | Lisa Marie no Ar | Quadro `Elas no Multiverso`; a convidada é protagonista e a ligação com Magic/TCG tem de ser explícita (`lisa-marie/PERFIL.md`) |
+| Conexão entre música, anime, K-pop, moda, games ou outra cultura pop e Magic/TCG (crossover oficial, artista entre os dois mundos) | Lisa Marie no Ar, apenas quando a ligação é demonstrável | Separar influência documentada de interpretação estética; sem associação por semelhança superficial (`lisa-marie/CONTEXTO.md` §2.1) |
+
+A Lisa Marie pode perfilar uma artista quando o foco é a pessoa e a sua trajetória; análise técnica da ilustração continua no Conde de Manaforte. Curiosidade rápida de arte continua no Lambe-lambe. Hype e reação a um set crossover continuam no Mana & Burn.
 
 ### 2.3 Auditoria de originalidade (antes de propor a pauta)
 

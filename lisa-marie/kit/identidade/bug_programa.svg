@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="126" viewBox="0 0 360 126">
+  <rect x="2" y="2" width="356" height="122" rx="18" fill="#17151B" fill-opacity=".94" stroke="#F3EBDD" stroke-opacity=".3" stroke-width="2"/>
+  <rect x="2" y="2" width="14" height="122" rx="7" fill="#EF4F91"/>
+  <text x="38" y="54" fill="#F3EBDD" font-family="Impact, Arial Black, sans-serif" font-size="34">LISA MARIE</text>
+  <text x="40" y="91" fill="#53BFC0" font-family="Arial, sans-serif" font-weight="bold" font-size="23" letter-spacing="5">NO AR</text>
+  <circle cx="320" cy="63" r="16" fill="#EF4F91"/>
+</svg>

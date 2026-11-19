@@ -133,6 +133,22 @@ Tudo o que está no repositório foi testado, aprovado e lançado. O especial de
 | Conteúdo produzido | EX-01 «Nauctis: Primeiro Mergulho» (14/11/2026, prévia) |
 | Relação com o BINDER Vision | Fecho do scanner no fim; CTA de scanner na legenda |
 
+## Lisa Marie no Ar (VJ cultural · Elas no Multiverso)
+
+| Campo | Valor |
+|---|---|
+| Classificação | Série permanente · episódio de série |
+| Estado | Em desenvolvimento (direção editorial de 17/11/2026, integrada no repositório a 19/11/2026; piloto não produzido nem publicado; sem personagem-mestre, voz nem trilha aprovados) |
+| Objetivo editorial | Apresentar e investigar pessoas, arte e histórias da cultura Magic/TCG em linguagem de VJ, com a cultura pop como eixo; prioridade de visibilidade para mulheres que criam, jogam, colecionam e participam da comunidade |
+| Identidade | Lisa Marie, gata antropomórfica preta e branca com óculos pretos; VJ cultural muito ligada à cultura pop (anime, mangá, K-pop, vinil, moda, arte urbana, anos 90) num quarto-estúdio modular 2D; linguagem de televisão musical reinterpretada, sem imitar a MTV nem misturar a identidade do Lambe-lambe |
+| Documentação | Bíblia: `lisa-marie/CONTEXTO.md` · Perfil: `lisa-marie/PERFIL.md` · Visual: `lisa-marie/IDENTIDADE_VISUAL.md` · Produção: `lisa-marie/KIT_PRODUCAO.md` · Prompt do master: `lisa-marie/PROMPT_CLAUDE.md` |
+| Regras específicas | Quadro 0 com Magic/TCG visível; cada fala factual da Lisa tem evidência visual; a pessoa convidada é protagonista; factos e interpretações separados; ligação pop ↔ Magic só quando demonstrável; imagem, voz e testemunho só com autorização; voz e música próprias por definir; não usar ativos ou identidade da MTV |
+| Território | Perfis e entrevistas de mulheres da comunidade; histórias de artistas, jogadoras, colecionadoras e criadoras; pontes verificáveis entre cultura pop e Magic/TCG (crossovers oficiais, artistas entre os dois mundos) |
+| Fora do território | Competição → Meta em Curto; hype/polémicas/notícias (inclui hype de sets crossover) → Mana & Burn; crítica técnica de ilustração → Conde; curiosidade rápida de arte → Lambe-lambe; preço → Vince Vault; primeiro olhar de set → Expedição BINDER; Star Trek → Órbita |
+| Conteúdo produzido | Nenhum; primeiro quadro previsto: `Elas no Multiverso`. Quadros reservados, não ativos: `Replay Cultural`, `Pista de Arquivo` |
+| Formatos | Reel 9:16 principal; carrossel 4:5 e Stories derivados quando acrescentarem valor |
+| Relação com o BINDER Vision | Editorial; não forçar demonstração do app. Ponte só quando verdadeira; fecho comum do scanner segundo a constituição |
+
 ## Frente nova
 
 Criar a pasta, `PERFIL.md` (modelo em `modelos/PERFIL_SERIE.md`) e a bíblia (`CONTEXTO.md`), acrescentar uma secção aqui e uma entrada em `../series.yaml`, e registar em `DECISOES.md`. A constituição não muda.

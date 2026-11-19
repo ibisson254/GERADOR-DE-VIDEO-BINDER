@@ -7,6 +7,16 @@ Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `mai
 
 Gancho visual passa a componente do briefing (7 campos antes do roteiro, rubrica 1–5, aplicação por frente: `nucleo/SHOWRUNNER.md` §4.1); revisão narrativa antes da voz (§4.2); gates P0/P1/P2 consolidados e bloco F (`nucleo/CHECKLIST_QUALIDADE.md`); ficha com gancho, rubrica e linhas de retenção; testes comparáveis em `comum/insights/LEIA-ME.md`; constituição v1.7. MC-ESP03 corrigido: parceiro-alvo Farpas de Mana, fonte o portal DC500 do Farpas (MTGDC500 / Lotus fora). Relatório, inconsistências e decisões pendentes: `nucleo/auditorias/2026-11-19_missao_estrutural.md`.
 
+## Lisa Marie no Ar (19/11/2026, 19h) — série nova integrada na documentação; pré-produção
+
+**Consolidado:** pasta `lisa-marie/` (bíblia `CONTEXTO.md` com a cultura pop como eixo §2.1, `PERFIL.md`, `IDENTIDADE_VISUAL.md`, `KIT_PRODUCAO.md`, `PROMPT_CLAUDE.md`); 5 SVGs iniciais em `kit/identidade/` (sem a personagem); referências em `referencias/` (estúdio de 17/11, óculos do fundador, prancha «10 inspirações» de 19/11 + 10 recortes); palavra de arranque `lisa marie` no `AGENTS.md`; catálogo, router do Showrunner, `series.yaml` e decisão de 19/11 em `nucleo/DECISOES.md`.
+
+**Atenção:** as imagens atuais são **conceito, não personagem-mestre**. **Voz e trilha não estão escolhidas nem aprovadas** (`vozes: {}`, `trilha: []`). Nenhum episódio, ID ou pauta criados; nada publicado; zero créditos gastos.
+
+**Falta:** (1) personagem-mestre 2D (ficha frente/3/4/perfil, expressões, gestos VJ, recorte transparente) com `lisa-marie/PROMPT_CLAUDE.md`; (2) cenário modular em camadas; (3) voz e assinatura sonora originais (autorização de custo do fundador); (4) decisões do fundador listadas em `nucleo/DECISOES.md` 19/11 — teaser de estreia no Lambe-lambe (sim/não), estética de papel da prancha × estúdio, paleta, símbolos da Wizards e coroa; (5) pauta e piloto de `Elas no Multiverso` com convidada autorizada.
+
+**Próxima tarefa:** executar `lisa-marie/PROMPT_CLAUDE.md` para a ficha de modelo e um preview estático para aprovação do fundador; só depois assets recortáveis e o piloto.
+
 ## Missão Master (12/11/2026) — concluída e integrada na `main`
 
 Auditoria integral, matriz de integração, sistema de previsões do TUBO corrigido e testado, validador de integridade, memória editorial e protocolo de pré-release reconciliados — tudo na `main` (PRs #18, #19, #20; autorização de 01:32). Às 05:54 o fundador fechou os episódios («Todos episódios dê como fechados menos o tubo de segunda. Vince vault»): 12 pacotes de conteúdo integrados e CONCLUÍDOS, MC-EP06 aberto, frente Vince Vault aprovada (`nucleo/DECISOES.md`, 12/11). Relatório: `nucleo/auditorias/2026-11-12_missao_master.md` · Matriz: `2026-11-12_matriz_integracao.md`.
@@ -25,7 +35,7 @@ Auditoria integral, matriz de integração, sistema de previsões do TUBO corrig
 
 ## Estado editorial
 
-Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vince Vault (série, aprovada a 12/11, em desenvolvimento)**; Órbita (temática); Lambe-lambe (espontânea); especiais. Estados por conteúdo: `comum/REGISTRO_EDITORIAL.md` (86 conteúdos). Fecho de 12/11: MC-EP03/04/05/07, MB-ESP03, MB-EP10, MB-GIRO02, CM-EP004/005, LL-PRETRK, LL-SHEOL, LL-DIVCAR, LL-CAMPBR fechados; **MC-EP06 (episódio de segunda) aberto**. Pequeno Mestre (PR #2) em desenvolvimento, sem aprovação; o PR #17 era a direção 2D do próprio Vince Vault (integrado, reconciliado). Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
+Frentes ativas: Mana & Burn, Conde de Manaforte, Meta em Curto (séries); **Vince Vault (série, aprovada a 12/11, em desenvolvimento)**; **Lisa Marie no Ar (série nova, integrada a 19/11, em desenvolvimento: sem master, voz, trilha nem piloto; primeiro quadro `Elas no Multiverso`)**; Órbita (temática); Lambe-lambe (espontânea); especiais. Estados por conteúdo: `comum/REGISTRO_EDITORIAL.md` (86 conteúdos). Fecho de 12/11: MC-EP03/04/05/07, MB-ESP03, MB-EP10, MB-GIRO02, CM-EP004/005, LL-PRETRK, LL-SHEOL, LL-DIVCAR, LL-CAMPBR fechados; **MC-EP06 (episódio de segunda) aberto**. Pequeno Mestre (PR #2) em desenvolvimento, sem aprovação; o PR #17 era a direção 2D do próprio Vince Vault (integrado, reconciliado). Detalhe: `nucleo/CATALOGO_EDITORIAL.md`.
 
 ## Em produção e publicação (atualizado a 16/11/2026, 11:30)
 
@@ -147,6 +157,7 @@ EM PRODUÇÃO, **bloqueado no Gate A (dados)**. O portal duelcommander500.com.br
 
 ## Próximo passo concreto
 
+- Lisa Marie no Ar: ficha de modelo + preview estático com `lisa-marie/PROMPT_CLAUDE.md`, e respostas do fundador às decisões de 19/11 (teaser Lambe-lambe, paleta, estética de papel).
 0. Fundador: decisões da missão estrutural (`nucleo/auditorias/2026-11-19_missao_estrutural.md` §8), sobretudo integrar MB-EP11 + insights de 13–14/11 e o acesso ao portal do Farpas.
 
 1. Fundador: enviar a prévia do LL-ART20 a @caiomonteiroart (mensagem na ficha; três pedidos: foto, publicação, collab; prazo 21/11) e registar a resposta em `lambe-lambe/autorizacoes/`. Depois: MC-ESP03 com o Farpas de Mana (acesso ao portal DC500 do Farpas ou prints com data, período e amostra). Também: EX-01, vidIQ, prints das ligas Preconauta.
@@ -155,4 +166,4 @@ EM PRODUÇÃO, **bloqueado no Gate A (dados)**. O portal duelcommander500.com.br
 
 ## Handoff
 
-Último: 19/11/2026, no fim de `nucleo/auditorias/2026-11-19_missao_estrutural.md`. Anterior: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). 
+Último: 19/11/2026 (19h), Lisa Marie no Ar, em `lisa-marie/HANDOFF_2026-11-19.md`. Anterior no mesmo dia: fim de `nucleo/auditorias/2026-11-19_missao_estrutural.md`. Anterior: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). 

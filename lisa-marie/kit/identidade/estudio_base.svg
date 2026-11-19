@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B1720"/>
+      <stop offset="1" stop-color="#302337"/>
+    </linearGradient>
+    <linearGradient id="pinklight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EF4F91" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#EF4F91" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#wall)"/>
+  <path d="M0 0H390L0 690Z" fill="url(#pinklight)"/>
+  <path d="M1080 0H790L1080 590Z" fill="#53BFC0" opacity=".09"/>
+  <!-- Prateleira -->
+  <rect x="54" y="410" width="330" height="24" rx="8" fill="#5A4B5A"/>
+  <rect x="82" y="290" width="38" height="120" rx="5" fill="#EF4F91"/>
+  <rect x="128" y="315" width="31" height="95" rx="4" fill="#F3EBDD"/>
+  <rect x="167" y="278" width="45" height="132" rx="5" fill="#5267A8"/>
+  <rect x="220" y="300" width="32" height="110" rx="4" fill="#53BFC0"/>
+  <rect x="262" y="326" width="38" height="84" rx="4" fill="#E4D75A"/>
+  <rect x="312" y="290" width="30" height="120" rx="4" fill="#F3EBDD"/>
+  <!-- CRT -->
+  <rect x="612" y="280" width="402" height="330" rx="34" fill="#08080B" stroke="#4D4553" stroke-width="16"/>
+  <rect x="648" y="316" width="330" height="250" rx="18" fill="#53BFC0" opacity=".13"/>
+  <path d="M670 440H955M670 465H905M670 490H930" stroke="#53BFC0" stroke-width="7" opacity=".6"/>
+  <circle cx="940" cy="585" r="9" fill="#EF4F91"/>
+  <!-- Mesa -->
+  <path d="M70 1170H1010L950 1250H130Z" fill="#100F14" stroke="#59485A" stroke-width="8"/>
+  <rect x="140" y="1245" width="42" height="430" fill="#100F14"/>
+  <rect x="900" y="1245" width="42" height="430" fill="#100F14"/>
+  <!-- Mic stand -->
+  <path d="M550 1050V1165" stroke="#B8B2BE" stroke-width="12"/>
+  <rect x="504" y="1000" width="92" height="120" rx="42" fill="#17151B" stroke="#B8B2BE" stroke-width="7"/>
+  <path d="M525 1040H575M525 1060H575M525 1080H575" stroke="#53BFC0" stroke-width="5"/>
+  <!-- Turntable silhouette -->
+  <rect x="700" y="1070" width="230" height="74" rx="10" fill="#27232C" stroke="#EF4F91" stroke-width="4"/>
+  <circle cx="805" cy="1107" r="31" fill="#101015" stroke="#BFB8C2" stroke-width="4"/>
+  <circle cx="805" cy="1107" r="6" fill="#EF4F91"/>
+  <path d="M860 1088L900 1115" stroke="#F3EBDD" stroke-width="6"/>
+  <!-- Floor/base line -->
+  <rect x="0" y="1680" width="1080" height="240" fill="#100F14"/>
+  <path d="M0 1680H1080" stroke="#EF4F91" stroke-width="8" opacity=".8"/>
+  <text x="70" y="1780" fill="#F3EBDD" opacity=".55" font-family="Arial, sans-serif" font-size="22" letter-spacing="4">ESTÚDIO BASE · CAMADA DE FUNDO</text>
+  <text x="70" y="1840" fill="#53BFC0" opacity=".7" font-family="Arial, sans-serif" font-size="18" letter-spacing="3">SUBSTITUIR CONTEÚDO DOS MONITORES POR EVIDÊNCIA REAL</text>
+</svg>

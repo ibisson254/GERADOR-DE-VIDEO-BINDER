@@ -2,6 +2,18 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 19/11/2026 (19:11) · Nova série Lisa Marie no Ar integrada no repositório — VJ cultural ligada à cultura pop
+
+- **Pedido do fundador (19/11, 19:11):** integrar definitivamente a frente a partir do pacote de pré-produção de 17/11 («Lisa Marie no Ar», preparado no ChatGPT e nunca aplicado), com a nova personagem «que vai estrear no BINDER Originals» e que «tem que ser muito ligada à cultura pop»; enviou também a prancha «10 inspirações para sua identidade visual».
+- **Decisão:** `Lisa Marie no Ar` é série permanente **em desenvolvimento**, com Lisa Marie como VJ cultural e o quadro de estreia `Elas no Multiverso`. A linguagem VJ inspira a função (apresentar, chamar, entrevistar, ligar conteúdos); não se copiam logótipos, vinhetas, tipografia, grafismos, música nem personalidades da MTV.
+- **Cultura pop como eixo** (`lisa-marie/CONTEXTO.md` §2.1): anime, mangá, K-pop, música e vinil, moda, arte urbana, games e anos 90 são o repertório da personagem; ligações com Magic só quando demonstráveis (crossovers oficiais, artistas entre os dois mundos), leituras estéticas rotuladas como interpretação.
+- **Identidade:** gata antropomórfica preta e branca, óculos pretos conforme a referência do fundador, roupa jovem contemporânea, quarto-estúdio modular 2D. A imagem de 17/11 e a prancha de 19/11 são **conceito, não personagem-mestre**.
+- **Território e limites:** perfis e entrevistas de mulheres que criam, jogam, colecionam e participam da cultura Magic/TCG; competição → Meta em Curto; hype/polémica/notícia (incluindo hype de sets crossover) → Mana & Burn; análise técnica de ilustração → Conde; curiosidade rápida → Lambe-lambe; preço → Vince Vault; primeiro olhar de set → Expedição; Star Trek → Órbita. A pessoa entrevistada é protagonista.
+- **Produção:** Reel 9:16 principal; assets 2D reutilizáveis; quadro 0 com Magic/TCG e evidência visual para cada fala factual; fecho comum do scanner.
+- **Áudio:** voz e música próprias não escolhidas nem aprovadas; sem créditos, custos externos ou imitação de vozes reais sem autorização explícita. `series.yaml` fica com `vozes: {}` e `trilha: []`.
+- **Por decidir pelo fundador:** (a) o pedido «recorte essa foto e coloque no reels estilo lambe-lambe» chegou na mesma mensagem que «não criar episódio, não publicar»; os 10 looks foram recortados e guardados como referência, mas nenhum Reel foi feito. Se o fundador quiser um teaser de estreia no formato Lambe-lambe, é um conteúdo do Lambe-lambe (ID `LL-`, pauta e registo próprios), não um episódio da série. (b) A prancha tem papel creme e fita rosa, perto do Lambe-lambe, enquanto a bíblia da Lisa pede estúdio e não muro; vale a bíblia até decisão. (c) Paleta da prancha (preto, creme, rosa, roxo, azul-ardósia) × paleta oficial proposta. (d) Símbolo de planeswalker e verso da carta nos looks 4 e 6, e coroas ao estilo Basquiat: não adotar como marca da personagem.
+- **Impacto:** nova pasta `lisa-marie/`; entradas em `AGENTS.md`, `nucleo/CATALOGO_EDITORIAL.md`, `nucleo/SHOWRUNNER.md` §2.2 e `series.yaml`. Constituição, registo editorial, histórico e identidades das outras frentes não mudam. Nenhum conteúdo, ID ou pauta criados.
+
 ## 19/11/2026 (17:11) · Lições de custo do MC-ESP03 passam a regra do Meta em Curto
 - O fundador pediu para aprender com o custo elevado do MC-ESP03. As 8 lições ficam em `oraculo/PERFIL.md` («Lições do MC-ESP03»): dados antes de qualquer render; Newcombe para diferenças; fonte na voz e no ecrã desde o 0 s; voz numa só geração com orçamento de ~390 caracteres para 35 s; voz desde o 0 s; trilha por baixo do fecho; hierarquia visual v3 como padrão de episódios de dados; fotogramas antes de um único render.
 

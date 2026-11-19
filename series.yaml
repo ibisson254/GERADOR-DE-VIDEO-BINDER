@@ -114,3 +114,19 @@ series:
       narrador: {fornecedor: elevenlabs, nome: "Rafael Valente - Brazilian Professional Narrator", voice_id: dX7gRq1dIvLTgUaWpEFn, modelo: eleven_v4, atempo: 1.2}
     trilha: [expedicao/kit/tema_expedicao.mp3]
     referencia: expedicao/01-nauctis/
+
+  - slug: lisa-marie
+    nome: Lisa Marie no Ar (VJ cultural · Elas no Multiverso) — série em desenvolvimento, integrada 19/11/2026
+    palavras: [lisamarie, "lisa marie", "no ar"]
+    formato: reel_9x16                         # 1080x1920, 30 fps; duração livre (referência 30-50 s)
+    formatos_extra: [carrossel_4x5]
+    pasta: lisa-marie/
+    perfil: lisa-marie/PERFIL.md
+    identidade: lisa-marie/CONTEXTO.md         # cultura pop como eixo (§2.1, 19/11)
+    visual: lisa-marie/IDENTIDADE_VISUAL.md
+    tecnico: lisa-marie/KIT_PRODUCAO.md
+    assets: lisa-marie/kit/identidade/         # SVGs iniciais, sem a personagem; personagem-mestre ainda por criar
+    referencias: lisa-marie/referencias/       # conceitos (17/11 e 19/11), não master
+    vozes: {}                                  # voz ainda não escolhida nem aprovada
+    trilha: []                                 # tema e assinatura sonora por criar
+    referencia: null                           # sem episódio produzido

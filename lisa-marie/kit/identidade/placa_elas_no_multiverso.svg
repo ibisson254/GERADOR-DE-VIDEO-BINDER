@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17151B"/>
+      <stop offset="1" stop-color="#2D2230"/>
+    </linearGradient>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2" fill="#F3EBDD" opacity=".13"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="1350" fill="url(#dots)"/>
+  <path d="M0 190H1080" stroke="#EF4F91" stroke-width="10"/>
+  <text x="72" y="115" fill="#53BFC0" font-family="Arial, sans-serif" font-weight="bold" font-size="28" letter-spacing="5">LISA MARIE NO AR</text>
+  <text x="72" y="390" fill="#F3EBDD" font-family="Impact, Arial Black, sans-serif" font-size="112">ELAS NO</text>
+  <text x="68" y="535" fill="#EF4F91" font-family="Impact, Arial Black, sans-serif" font-size="112">MULTIVERSO</text>
+  <rect x="72" y="630" width="936" height="460" rx="24" fill="#F3EBDD" fill-opacity=".08" stroke="#53BFC0" stroke-opacity=".8" stroke-width="3" stroke-dasharray="13 15"/>
+  <text x="540" y="850" fill="#F3EBDD" fill-opacity=".65" font-family="Arial, sans-serif" font-size="30" text-anchor="middle" letter-spacing="3">INSERIR IMAGEM AUTORIZADA</text>
+  <text x="72" y="1170" fill="#F3EBDD" font-family="Arial, sans-serif" font-size="30">PESSOAS · ARTE · COMUNIDADE</text>
+  <text x="72" y="1250" fill="#F3EBDD" fill-opacity=".65" font-family="Arial, sans-serif" font-size="22" letter-spacing="4">BINDER ORIGINALS</text>
+</svg>
