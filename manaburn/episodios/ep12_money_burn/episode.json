@@ -1,0 +1,133 @@
+{
+ "schema": 2,
+ "chamada": "money burn",
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Mano, o deck tá *pronto*! Só falta *UMA* carta!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Você disse isso em *março*. A carta é *Unfinished Business*.",
+   "tts": "Você disse isso em março. A carta é Ânfínicht Bízness."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Agora vai! Troquei *DEZ* terrenos básicos por terreno *de grife*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Lê a carta: faz *azul ou vermelha*. E não faz *mais nada*."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Mas tava em *oportunidade*! Não dava pra deixar passar!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Lê a carta: *seis* manas pra *quatro* cartas. Oportunidade cara."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Gastar é *estratégia*! Tem até carta pra isso!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "*Greed*: paga *duas de vida* por carta. Você paga no *Pix*.",
+   "tts": "Grííd: paga duas de vida por carta. Você paga no Pix."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Agora meu deck é *INTOCÁVEL*! Dez terrenos de grife!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Price of Progress: *dois* por terreno não básico. Dez: *vinte*.",
+   "tts": "Práice óf Prógres: dois por terreno não básico. Dez: vinte."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "*VINTE*?! Meu upgrade virou *dano*?!",
+   "tts": "VINTE?! Meu ápgreide virou dano?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[tired]",
+   "legenda": "O upgrade mais caro do deck. E a resposta custa *duas manas*.",
+   "tts": "O ápgreide mais caro do deck. E a resposta custa duas manas."
+  },
+  {
+   "quem": "B",
+   "tags": "",
+   "legenda": "Seu deck: *A*, tá pronto. *B*, falta só *uma* carta.",
+   "tts": "Seu deck: Á, tá pronto. Bê, falta só uma carta."
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Comenta aí."
+  }
+ ],
+ "gap": [
+  0,
+  0.0,
+  -0.06,
+  0.0,
+  -0.08,
+  0.02,
+  -0.08,
+  0.02,
+  -0.08,
+  0.02,
+  -0.1,
+  0.02,
+  0.0,
+  0.38
+ ],
+ "ins": [
+  [
+   8,
+   0.3
+  ],
+  [
+   10,
+   0.25
+  ],
+  [
+   12,
+   0.15
+  ]
+ ],
+ "respiro_max": 0.1,
+ "tempo": {
+  "B": 1.1,
+  "M": 1.15
+ },
+ "mix": {
+  "intro_db": 0,
+  "fala_db": -14,
+  "pausa_db": -6,
+  "fecho_db": 0
+ },
+ "sfx": {
+  "tv": true,
+  "destaque": true,
+  "carta": "flick",
+  "raiva": true
+ },
+ "outro": {
+  "scanner": 0,
+  "hold": 2.75
+ }
+}

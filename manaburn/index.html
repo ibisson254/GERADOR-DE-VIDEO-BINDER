@@ -586,7 +586,8 @@ function render(t){
   if(sub.dataset.h!==html){ sub.innerHTML=html; sub.dataset.h=html; }
   // liga e desliga a TV
   let sx=1, sy=1, br=1, op=1;
-  if(t<0.22){ const p=clamp(t/0.22); sy=Math.max(0.006,ease(p)); sx=p<0.35?0.6+p:1; br=1+3*(1-p); }
+  // FX.tv_ligada (19/11/2026, MB-EP12): TV já acesa no quadro 0 (carta visível, «quadro 0 com Magic»); sem a flag, igual a antes
+  if(t<0.22 && !FX.tv_ligada){ const p=clamp(t/0.22); sy=Math.max(0.006,ease(p)); sx=p<0.35?0.6+p:1; br=1+3*(1-p); }
   if(t>=T_SLAM){ const a=clamp((t-T_SLAM)/0.24), b=clamp((t-T_SLAM-0.24)/0.18);
     sy=Math.max(0.004,1-ease(a)); sx=1-0.985*ease(b); br=1+5*a; op = t>T_SLAM+0.44 ? 0 : 1; }
   { const lz=world.querySelector('#luztv'); if(lz) lz.style.opacity = op*Math.min(1,sy); }  // reflexo da TV apaga com ela
