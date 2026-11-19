@@ -125,3 +125,4 @@ Formato: data · ID · frente · acontecimento · estado. Mais recente no fim.
 - 19/11/2026, 18h00 · AB-03 «Terrors of the Abyss» (ABISMO, Reel 20,58 s, sem voz, custo zero): comandantes vazados do precon Sultai de Nauctis. QC v2 sem problemas (−14,2 LUFS). CONCLUÍDO, publicação com o fundador.
 - 19/11/2026, 19h · Lisa Marie no Ar integrada no repositório (pasta `lisa-marie/`, catálogo, router, series.yaml, decisão). Sem episódio.
 - 19/11/2026, 19h40 · LL-LISA01 teaser de estreia da Lisa Marie no formato Lambe-lambe (Reel/Story 9 s + fecho, sem áudio, zero créditos). QC sem problemas além do «sem áudio» esperado. CONCLUÍDO; publicação com o fundador. Vídeo não versionado.
+- 19/11/2026, 19h55 · LL-LISA01 v2 (pedido do fundador): os 10 looks da prancha colados um a um com nome e tema pop, parede final 5×2 «10 jeitos de estar no ar»; 16 s + fecho, sem áudio, zero créditos; QC sem problemas além do «sem áudio». Versão a publicar.

@@ -15,7 +15,7 @@ Gancho visual passa a componente do briefing (7 campos antes do roteiro, rubrica
 
 **Falta:** (1) personagem-mestre 2D (ficha frente/3/4/perfil, expressões, gestos VJ, recorte transparente) com `lisa-marie/PROMPT_CLAUDE.md`; (2) cenário modular em camadas; (3) voz e assinatura sonora originais (autorização de custo do fundador); (4) decisões do fundador listadas em `nucleo/DECISOES.md` 19/11 — estética de papel da prancha × estúdio, paleta, símbolos da Wizards e coroa; (5) pauta e piloto de `Elas no Multiverso` com convidada autorizada.
 
-**Teaser LL-LISA01** (19/11, 19h40, pedido do fundador): Reel/Story Lambe-lambe de estreia, 9 s + fecho, zero créditos, CONCLUÍDO; vídeo e capa entregues na conversa; publicação com o fundador (`lambe-lambe/episodios/ll-lisa01_estreia_lisa_marie/`).
+**Teaser LL-LISA01** (19/11, pedido do fundador): v2 a publicar com os 10 looks (16 s + fecho, `teaser_v2.py`); v1 de 9 s + fecho, zero créditos, CONCLUÍDO; vídeo e capa entregues na conversa; publicação com o fundador (`lambe-lambe/episodios/ll-lisa01_estreia_lisa_marie/`).
 
 **Próxima tarefa:** executar `lisa-marie/PROMPT_CLAUDE.md` para a ficha de modelo e um preview estático para aprovação do fundador; só depois assets recortáveis e o piloto.
 
