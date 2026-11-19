@@ -2,8 +2,8 @@
 
 ## Identificação
 - ID editorial: `MB-EP12` (MB-EP11 = Numot, branch `manaburn/ep10-numot`; a branch `manaburn/ep11-niv-rodizio` também usa «EP11» como rascunho — por isso o 12)
-- Estado no registo: EM PRODUÇÃO (prévia sem voz pronta; falta voz)
-- Aprovação do fundador: pedido «MISSÃO AUTÓNOMA DE PRODUÇÃO — MONEY BURN» (19/11/2026, ~19h): autoriza desenvolver a proposta; **não** autoriza créditos ElevenLabs nem publicação.
+- Estado no registo: CONCLUÍDO (vídeo final com voz, 19/11/2026)
+- Aprovação do fundador: pedido «MISSÃO AUTÓNOMA DE PRODUÇÃO — MONEY BURN» (19/11/2026, ~19h) para desenvolver a proposta; voz autorizada a 19/11/2026, 19:39 («Pode terminar», depois da entrega da prévia). Publicação: com o fundador.
 
 ## Classificação
 - Frente: Mana & Burn (território «cultura e caos»: reação e comportamento da comunidade)
@@ -81,16 +81,16 @@ Faixas para colar no ElevenLabs: `faixas_elevenlabs.txt` (Burn: Talis · Mana: E
 - Cartas (PNG do Scryfall, 19/11/2026): `unfinished.png` (WOC 44), `volcanic.png` (VMA 324), `opportunity.png` (J25 338), `greed.png` (MH2 274), `pop.png` (EMA 141), `src/mountain.png` (FDN 279). Telas compostas: `telas_money.py` → `s03_grife`, `i09_upgrades`, `i11_vinte`, `s13_ab`.
 - TV SAL: um canal por assunto (7 canais), medidores só com dados do Oracle, tabela «DANO NO BURN 20» com a conta, 8 manchetes (sem pessoas reais; a do MTG Rocks tem fonte).
 - Easter egg: relógio da TV SAL em **10:20** = 10 terrenos de grife, 20 de dano do Price of Progress (todos os planos de TV, 0–40 s).
-- Vozes e créditos gastos: **0** (não autorizados). Prévia com tempos estimados (calibração do MB-EP11) e boca animada por envelope sintético: `previa_sem_voz.py`.
+- Vozes e créditos gastos: Talis (Burn, `E9a8LlXPNWtyvvSoZzrb`) 481 + Erik (Mana, `nfiLpQ54jEQninp3nNqL`) 497 = **978 créditos**, eleven_v4, 1 tomada cada, plano Starter (licença comercial). Flow ElevenLabs `HYKGpoXToo9F5YJOl01e` (gerações `rqCNtodWWFOeuMwbpKLm` e `OCIRZnMJGfiSuKIPWzIo`). A prévia anterior usou `previa_sem_voz.py`.
 - Riscos: pronúncia de «Unfinished Business» e «Price of Progress»; com as vozes reais os tempos mudam — repetir o QC de ritmo.
 
 ## Controlo de qualidade
-`qc.md` (medido no ficheiro da prévia). P0 aberto: sem voz. P1: 0 abertos.
+`qc.md` (medido no ficheiro final com voz). P0: 0. P1: 0.
 
 ## Ficheiros finais
-- Vídeo (prévia sem voz, não publicar): `MB_EP12_MoneyBurn_PREVIA_semvoz_916.mp4` · 44,40 s · entregue ao fundador na conversa de 19/11/2026 (não versionado).
+- Vídeo final: `MB_EP12_MoneyBurn_916.mp4` · 45,50 s (41,63 s + fecho) · entregue ao fundador na conversa de 19/11/2026 (não versionado). Recria-se com `burn.mp3`/`mana.mp3` do flow acima + `process.py` + `render.py` + `juntar_fecho.py`.
+- Prévia sem voz (substituída): `MB_EP12_MoneyBurn_PREVIA_semvoz_916.mp4`, 44,40 s.
 - Capa: `MB_EP12_CAPA.png` (nesta pasta) + `MB_EP12_CAPA_grelha.png` (recorte 3:4). Alternativas testadas: Price of Progress «Seu upgrade custou / 20 de vida» (estraga a virada) e Greed «Seu deck te faliu? / dinheiro» (genérica, carta secundária). Escolhida: Unfinished Business «Só falta uma carta / sempre» (é a carta do quadro 0 e a frase do gancho).
-- Vídeo final com voz: por fazer.
 
 ## Pacote de publicação
 - [x] `legenda.txt` · [x] `comentario_fixado.txt` · [x] `texto_alternativo.txt` · [x] `fontes.md`
@@ -100,14 +100,14 @@ Faixas para colar no ElevenLabs: `faixas_elevenlabs.txt` (Burn: Talis · Mana: E
 - [x] Briefing e roteiro definitivo nesta ficha
 - [x] Legenda, comentário fixado e texto alternativo na pasta
 - [x] Fontes e evidências
-- [x] Controlo de qualidade preenchido (prévia)
+- [x] Controlo de qualidade preenchido (ficheiro final)
 - [x] Localização do vídeo e da capa
-- [x] `comum/REGISTRO_EDITORIAL.md` (EM PRODUÇÃO)
+- [x] `comum/REGISTRO_EDITORIAL.md` (CONCLUÍDO)
 - [x] `comum/historico.md`
 - [x] Easter egg em `comum/easter_eggs.md`
 - [x] `STATUS.md`
-- [ ] `memoria.py encerramento MB-EP12` = OK — **não se aplica ainda** (falta a voz e o vídeo final)
-- [ ] Commit na `main` — fica na branch `manaburn/ep12-money-burn` até ao vídeo com voz (AGENTS §3)
+- [x] `memoria.py encerramento MB-EP12` = OK
+- [x] Commit na `main` (merge da branch `manaburn/ep12-money-burn`; hash no handoff)
 - [x] Handoff entregue
 
 ## Depois de publicar

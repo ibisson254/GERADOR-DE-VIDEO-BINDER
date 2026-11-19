@@ -1,14 +1,14 @@
-HANDOFF · 19/11/2026, ~21h (Lisboa) · Claude
-Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch manaburn/ep12-money-burn · último commit: ver `git log -1` da branch (conferido no remoto antes do fecho da sessão)
+HANDOFF · 19/11/2026, ~21h15 (Lisboa) · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · main (merge da branch manaburn/ep12-money-burn) · hash conferido no remoto (ver histórico do Git e a resposta da sessão)
 
-Objetivo atual: produzir o MB-EP12 «MONEY BURN» (Mana & Burn) até ao vídeo final com voz.
+Objetivo atual: MB-EP12 «MONEY BURN» concluído; resta a publicação pelo fundador.
 
 Conteúdos tocados (comum/REGISTRO_EDITORIAL.md):
-- MB-EP12 · (novo) → EM PRODUÇÃO
+- MB-EP12 · (novo) → EM PRODUÇÃO (prévia) → CONCLUÍDO (voz autorizada 19/11, 19:39)
 
 Encerramento:
-- MB-EP12 · memoria.py encerramento: falta 1 — estado EM PRODUÇÃO (falta a voz e o vídeo final). validar: OK. validar_repo: 0 graves (1 P2 antigo: vince/kit/v1/).
-- Prévia sem voz `MB_EP12_MoneyBurn_PREVIA_semvoz_916.mp4` (44,40 s) e capa entregues na conversa de 19/11; vídeo não versionado.
+- MB-EP12 · memoria.py encerramento: OK. validar: OK. validar_repo: 0 graves (1 P2 antigo: vince/kit/v1/).
+- Vídeo final `MB_EP12_MoneyBurn_916.mp4` (45,50 s) e capa `MB_EP12_CAPA.png` entregues na conversa de 19/11; vídeo não versionado. Vozes: flow ElevenLabs HYKGpoXToo9F5YJOl01e (978 créditos).
 
 Decisões tomadas nesta sessão (dentro das regras, sem mudar identidade):
 - ID MB-EP12 (o 11 é o Numot; há um rascunho «EP11» na branch niv-rodizio).
@@ -25,9 +25,8 @@ Alterações realizadas:
 - comum/REGISTRO_EDITORIAL.md · linha MB-EP12 · comum/historico.md · comum/easter_eggs.md («10:20») · STATUS.md
 
 Tarefas pendentes:
-- Autorizar ≈1.000 créditos ElevenLabs (Talis 481 + Erik 497 caracteres, eleven_v4, 1 tomada cada; texto em faixas_elevenlabs.txt) · fundador
-- Gerar vozes → process.py burn.mp3 mana.mp3 → render.py → juntar_fecho.py → qc_video.py + bordas.py → encerramento → merge na main · agente
+- Ouvir as pronúncias (Unfinished Business, Greed, Price of Progress) e publicar · fundador
 - Capturas reais do scanner/Binder para o carrossel do par de publicação · fundador
-- Escutar pronúncias (Unfinished Business, Price of Progress, Greed) · fundador
+- Domingo: medir respostas A/B por 1.000 views contra o MB-EP11 (sem impulso pago antes de medir) · agente
 
-Próximo passo concreto: com a autorização, colar as duas faixas de manaburn/episodios/ep12_money_burn/faixas_elevenlabs.txt no ElevenLabs e correr `python3 process.py burn.mp3 mana.mp3` na pasta do kit com o episode.json/js do EP12.
+Próximo passo concreto: fundador publica o MB-EP12 com a legenda e o comentário de manaburn/episodios/ep12_money_burn/ e confirma a data, para passar a PUBLICADO no registo.
