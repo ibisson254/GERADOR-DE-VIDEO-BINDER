@@ -14,6 +14,8 @@ O portal https://duelcommander500.com.br/ carrega os números por JavaScript. A 
 | 6 | Página do comandante A (mais jogado) | Listas, win rate/conversão, torneios em que aparece, período | `06_comandante_A.png` |
 | 7 | Página do comandante B (candidato) | O mesmo que a 6, mais a lista de torneios (para ver se o resultado está concentrado num só) | `07_comandante_B.png` |
 | 8 | Filtro de período (se existir): últimos 30/90 dias e «todo o período» | As mesmas leituras de 1 e 4 noutro período (teste de robustez 1) | `08_periodo_<x>.png` |
+| 5b | `/matchups`, célula A×B | Vitórias, derrotas e empates de A contra B (para retirar os jogos comuns da conta da diferença) | `05b_celula_AxB.png` |
+| 5c | Ajuda ou rodapé da matriz | Se o win rate conta partidas (match) ou jogos (game) e como trata empates | `05c_definicao_wr.png` |
 | 9 | `/stores` ou lista de torneios | Número total de torneios e lojas no período (universo de eventos) | `09_universo.png` |
 
 Depois das capturas: transcrever para `../dados/extracao.csv` (uma linha por comandante, vazio quando o portal não publica, nunca 0) e correr `python3 -I ../dados/calcular.py ../dados/extracao.csv`.

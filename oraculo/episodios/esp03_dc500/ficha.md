@@ -35,28 +35,29 @@
 
 Regras da escolha de B (fixadas **antes** de ver os números, para não escolher o contraste): mesmo período e filtros; sem alertas do script (≥ 20 listas, ≥ 50 partidas quando houver win rate, ≥ 3 torneios, ≤ 50 % das listas num só torneio); B = melhor indicador entre os que passam; nunca win rate de um contra conversão de outro.
 
-## Gancho visual* (`nucleo/SHOWRUNNER.md` §4.1) — estrutura fechada, números pendentes
+**Método estatístico (corrigido a 19/11, 16h):** a diferença B − A avalia-se com o intervalo de Newcombe a 95 % (método 10, híbrido de Wilson), validado no exemplo publicado. Os intervalos de Wilson de cada comandante não provam diferença e deixam de servir de veredito. Pressupostos que os totais não verificam (independência — jogos A×B contam nos dois lados; unidade partida × jogo; empates; universo dos 20) ficam escritos no ecrã e em `fontes.md`. Códigos do veredito: `B_fora_margem`, `dentro_margem`, `A_melhor`.
 
-1. Quadro 0*: grelha 2×2 em ecrã inteiro sobre o TUBO escurecido. Quadros: carta A (cima, esq.) · número A (cima, dir.) · número B (baixo, esq.) · carta B (baixo, dir.). Cabeçalho mono «DUEL COMMANDER 500 · <período>»; selo em cada carta: A «<n> LISTAS», B «<x>% WIN RATE · <p> PARTIDAS» (ou conversão, conforme o portal). Linha de fonte por baixo: «Dados: Duel Commander 500 (Farpas de Mana) · <período>».
-   *Porquê esta composição:* com dois comandantes, uma carta por quadro deixa-a inteira (arte e rodapé visíveis) e cada número fica ao lado da sua carta, em diagonal com o rival. Fica no render como `grelha_dupla()`.
-2. Objeto real*: **pendente** — as duas cartas de comandante (imagem oficial Scryfall, impressão a registar) definidas pelos dados.
-3. Ação no 1.º segundo*: 0–0,3 s as quatro peças entram com um passo (sem fade de preto); 0,3–1 s scan verde passa sobre a carta A, contorno verde acende e o número de A sobe em contagem.
-4. Som*: «tum» de desmagnetização do CRT a 0,0 s; chiado curto de modem no scan (0,3 s); bip seco no destaque (biblioteca do TUBO, `CONTEXTO.md` §7.2.1). Trilha do TUBO quase em silêncio.
-5. Descoberta até 3 s*: 1–3 s o destaque salta para B (resto escurece) e aparece a pergunta «O MAIS JOGADO É O QUE MAIS VENCE?» com os dois números lado a lado e os denominadores. Compreensível sem som.
-6. Promessa*: «vou mostrar se a diferença é real ou só amostra».
-7. Pagamento*: ~16 s, imagem do intervalo (barras com a faixa de 95 % de A e de B no mesmo eixo, a partir de 0) + veredito a verde ou âmbar; segundo exato depois da voz.
+## Gancho visual* (`nucleo/SHOWRUNNER.md` §4.1) — v2, 19/11 · estrutura fechada, números pendentes
 
-| Rubrica (1–5) | Prevista | Medida no final |
+1. Quadro 0*: grelha 2×2 completa sobre o TUBO escurecido — carta A (cima esq.) · «MAIS JOGADO · [nA] LISTAS · [qA] do meta» (cima dir.) · «MAIOR WIN RATE · [iB] · em [dB] partidas» (baixo esq.) · carta B (baixo dir.); «DUEL COMMANDER 500 · [per]» e linha de fonte. As quatro peças estão no quadro 0.
+2. Objeto real*: **pendente** — as cartas dos comandantes A e B (Scryfall, impressão registada), escolhidos pela regra fixada antes dos dados.
+3. Ação no 1.º segundo*: as peças assentam (1,05 → 1); 0,3–0,8 s scan verde sobre a carta A e contorno.
+4. Som*: tum de CRT a 0,0 s, quatro cliques, modem no scan, pop nos números (1,0 s) e no salto para B (1,6 s).
+5. Descoberta até 3 s*: aos 1,0 s as unidades (listas × win rate em N partidas); aos 2,0 s «O MAIS JOGADO É O QUE MAIS VENCE?».
+6. Promessa*: mostrar se a diferença é real ou só amostra.
+7. Pagamento*: 19,0 s — veredito ao lado do ponto e da margem de 95 % da diferença (painel A DIFERENÇA); segundo final ajustado à voz.
+
+| Rubrica (1–5) | Prevista | Medida na prévia v2 (sem dados) |
 |---|---|---|
-| Relevância visual | 5 (as cartas são a prova) | |
-| Impacto inicial | 4 | |
-| Clareza | 4 (dois números + pergunta; depende de legibilidade do denominador) | |
-| Curiosidade | 5 (pergunta específica do formato) | |
-| Pagamento | 4 (o intervalo paga; risco: veredito «não distinguível» parecer anticlímax) | |
-| Identidade | 5 (grelha + terminal + som do TUBO) | |
+| Relevância visual | 5 | 2 (marcadores no lugar das cartas — sobe com os dados) |
+| Impacto inicial | 4 | 3 |
+| Clareza | 4 | 4 (unidades e pergunta legíveis em miniatura) |
+| Curiosidade | 5 | 4 |
+| Pagamento | 4 | 3 (veredito existe, valor pendente) |
+| Identidade | 5 | 5 |
 
 ## Roteiro definitivo*
-**Pendente de dados.** Três versões prontas por cenário em `roteiro.md`; a gravada será uma delas com os números do portal. Revisão narrativa (§4.2) feita sobre a estrutura; repete-se com os números.
+**Pendente de dados.** Roteiro v2 em `roteiro.md` (texto comum + três cenários). Revisão narrativa (§4.2) feita sobre a estrutura; repete-se com os números. Auditoria da prévia v1 e correções: `auditoria_previa.md`.
 
 ## Fontes e evidências*
 Ver `fontes.md` (verificado V1–V5, tentativas de acesso, tabela final por preencher). Capturas em `capturas/` (lista do que falta em `capturas/LEIA-ME.md`). Cálculos em `dados/calcular.py` (testado com dados sintéticos; `extracao.csv` vazio).
@@ -72,7 +73,7 @@ Créditos e autorizações: nenhuma autorização do Farpas existe. Nada em `ora
 - Riscos: P0 se um número sair sem denominador ou se win rate e conversão se misturarem; risco de parceria se o vídeo sugerir collab.
 
 ## Controlo de qualidade*
-Ficheiro final: não existe. **Prévia técnica sem dados e sem voz** (19/11, `ESP03_PREVIA_TECNICA.mp4`, não versionada), `qc_video.py --frente tubo`: 1080×1920 · 30 fps · 30,37 s (26,5 s + fecho) · −14,3 LUFS · pico −4,9 dBTP · fecho presente · cortes duros a 12,0 / 16,0 / 20,0 / 26,5 s · «sem problemas mensuráveis». Conferido a olho na folha de contacto: quadro 0 com a grelha, pergunta até 3 s, cartas sem cortes nem texto por cima. Nada disto vale para o vídeo final: repete-se com os números e a voz.
+Ficheiro final: não existe. **Prévia técnica v2** (19/11, 16h30, `ESP03_PREVIA_TECNICA_v2.mp4`, não versionada; QC em `qc_previa_v2.json`): 1080×1920 · 30 fps · 27,5 s + fecho · −14,3 LUFS · pico −4,9 dBTP · fecho presente · sem problemas mensuráveis · maior intervalo sem mudança relevante 2,6 s · cropdetect sem corte lateral. **Prévia técnica v1, substituída**  (19/11, `ESP03_PREVIA_TECNICA.mp4`, não versionada), `qc_video.py --frente tubo`: 1080×1920 · 30 fps · 30,37 s (26,5 s + fecho) · −14,3 LUFS · pico −4,9 dBTP · fecho presente · cortes duros a 12,0 / 16,0 / 20,0 / 26,5 s · «sem problemas mensuráveis». Conferido a olho na folha de contacto: quadro 0 com a grelha, pergunta até 3 s, cartas sem cortes nem texto por cima. Nada disto vale para o vídeo final: repete-se com os números e a voz.
 
 ## Ficheiros finais*
 - Vídeo final: não existe. Prévia técnica `ESP03_PREVIA_TECNICA.mp4` entregue ao fundador na conversa de 19/11 (não versionada).

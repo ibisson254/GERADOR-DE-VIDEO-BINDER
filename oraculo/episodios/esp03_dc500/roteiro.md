@@ -1,66 +1,51 @@
-# MC-ESP03 · roteiro por cenário (PENDENTE DE DADOS)
+# MC-ESP03 · roteiro v2 (PENDENTE DE DADOS)
 
-Voz: Antonio de Jesus (eleven_v4, atempo 1,10). PT-BR, «você». Trilha: `oraculo/musica/tubo_tema.mp3`. Alvo: 28–32 s sem o fecho do scanner.
-Marcadores: `[A]`, `[B]` = nomes dos comandantes como o portal os escreve (lidos em voz em PT-BR natural, só o nome curto, sem o subtítulo); `[nA]` listas; `[qA]` quota do meta; `[iA]`/`[iB]` indicador (win rate ou conversão, nunca misturados); `[dB]` denominador de B (partidas ou listas); `[per]` período. Nenhum marcador pode chegar à voz sem valor da `fontes.md`.
-Pausas: `/` = 0,3 s · `//` = 0,6 s (corte seco da trilha). Entonação em *itálico*.
+Voz: Antonio de Jesus (eleven_v4, atempo 1,10). PT-BR, «você». Trilha: `oraculo/musica/tubo_tema.mp3`. Alvo: 27–29 s sem o fecho.
+Marcadores vêm de `dados/episodio.json` (gerado por `dados/calcular.py`): `[A]`, `[B]`, `[nA]`, `[nB]` listas; `[qA]` quota do meta; `[iA]`, `[iB]` win rate (ou conversão Top 4, nunca os dois); `[dA]`, `[dB]` partidas (ou listas); `[dif]` diferença B − A; `[per]` período. Nenhum marcador chega à voz sem valor em `fontes.md`.
+Pausas: `/` = 0,3 s · `//` = 0,6 s (corte seco da trilha).
 
-Só se grava **um** cenário: o que o `dados/calcular.py` devolver (ficha, tabela de teses). Os cenários 2 e 3 mudam a tese e vão ao fundador antes da voz (Gate B).
+Muda em relação à v1: popularidade e desempenho em blocos separados; a conclusão sai da margem da **diferença** (Newcombe), não dos intervalos individuais; o TUBO fala só duas vezes; a pergunta final nasce da descoberta.
 
----
+## Texto comum (todos os cenários)
 
-## Cenário 1 · «Popularidade e vitória contam histórias diferentes» (B supera A e resiste ao intervalo)
+| Tempo | Bloco | Locução | Evidência no ecrã |
+|---|---|---|---|
+| 0–3 s | Gancho | — (sem voz: a grelha e a pergunta fazem o gancho; a voz entra no mergulho) | cartas A e B, «[nA] LISTAS», «[iB] WIN RATE em [dB] partidas», pergunta |
+| 3–4 s | Mergulho | «[A]: / [nA] listas.» | o número no ecrã do TUBO |
+| 4–8,5 s | Popularidade | «O mais jogado do portal, / [qA] do meta. // [B]: / só [nB] listas.» | painel POPULARIDADE, barras de listas, cartas A e B |
+| 8,5–13,5 s | Desempenho | «No win rate, / [A] faz [iA]. / [B], / [iB]. // Em [dA] e [dB] partidas.» | painel DESEMPENHO, 0–100 %, linha de 50 %, denominadores a âmbar |
+| 13,5–16,5 s | Leitura (TUBO) | «Popularidade mede quem *escolhe*. / Win rate mede quem *ganha*.» | TUBO; «ESCOLHE ≠ GANHA» no ecrã |
+| 16,5–21,5 s | Diferença | por cenário (abaixo) | painel A DIFERENÇA: ponto, margem de 95 %, zero marcado, nota de independência |
+| 21,5–24,5 s | Pergunta | por cenário (abaixo) | cartas A × B com os números |
+| 24,5–27,5 s | Fecho | «Probabilidade calculada. / Humanos, imprevisíveis.» | TUBO |
 
-| Tempo | Bloco | Locução (texto exato) | Ecrã (dentro = dado verificado) | Dado e fonte |
+## Por cenário (o código sai de `calcular.py`)
+
+| Cenário | Diferença (16,5–21,5 s) | Pergunta (21,5–24,5 s) | Tese | Expressão do TUBO |
 |---|---|---|---|---|
-| 0–3 s | Gancho | «O comandante mais jogado do Duel Commander 500… / *não* é o que mais vence.» | grelha dupla; pergunta; números com denominador | listas de A; indicador de B e `[dB]` · portal, `[per]` |
-| 3–8 s | Prova A | «[A]: [nA] listas. / [qA] do meta. / Win rate: [iA].» | mergulho no terminal; barra de A; linha de fonte | galeria (listas), matchups (win rate) |
-| 8–12 s | Prova B | «[B] aparece bem menos. / Mas vence [iB]… / em [dB] partidas.» | barra de B no mesmo eixo, a partir de 0; carta B em insert | matchups |
-| 12–16 s | Leitura (fora) | «Popularidade mede quem *escolhe*. / Win rate mede quem *ganha*.» | TUBO sai do tubo, Analítico | — (opinião) |
-| 16–20 s | Pagamento | «E não é sorte: // com essa amostra, / a diferença aguenta.» | barras com faixa de 95 % das duas; veredito verde | cálculo do BINDER (Wilson 95 %) |
-| 20–26 s | Fecho | «Então, / qual comandante você acha que só *parece* forte? // Probabilidade calculada. / Humanos, imprevisíveis.» | TUBO Confiante; pergunta em mono | — |
+| `B_fora_margem` | «A diferença: / [dif]. // Mesmo com a margem de erro, / [B] fica à frente.» | «Você trocaria [A] por [B]?» | popularidade e vitória contam histórias diferentes | Confiante |
+| `dentro_margem` *(ajuste de tese → fundador)* | «A diferença: / [dif]. // Mas com essa amostra, / cabe na margem de erro.» | «Você apostaria em [B] com tão poucas partidas?» | números melhores, amostra curta | Desconfiado |
+| `A_melhor` | «[A] também lidera no win rate. // Desta vez, / a multidão fez a conta.» | «Alguém derruba [A] no próximo mês?» | o hype acertou | Confiante |
 
-≈ 65 palavras · ≈ 24–26 s com atempo 1,10 e as pausas (o resto até ~27 s é imagem).
+Se o portal só publicar conversão para Top 4: «win rate» passa a «conversão para o Top 4», «partidas» a «listas», e a pergunta do gancho a «O mais jogado é o que mais chega ao Top 4?» (ajuste de tese → fundador). Top 4 nunca é chamado de vitória.
 
-## Cenário 2 · tese ajustada: «Números melhores, amostra curta» (B > A, intervalo inclui A)
+Nunca dizer: «a diferença é real», «é mais forte», «prova». A frase do cenário `B_fora_margem` só se grava se o intervalo de Newcombe excluir zero **e** a definição do portal confirmar a unidade e os denominadores; a nota de independência fica no ecrã.
 
-| Tempo | Locução |
+## Revisão narrativa (`SHOWRUNNER.md` §4.2) — v2, sobre a estrutura
+
+| Critério | Resultado |
 |---|---|
-| 0–3 s | «O comandante mais jogado do Duel Commander 500… / *não* tem o melhor win rate.» |
-| 3–8 s | «[A]: [nA] listas, / [qA] do meta. / Win rate: [iA].» |
-| 8–12 s | «[B] tem [iB]. / Mas em só [dB] partidas.» |
-| 12–17 s | «Com essa amostra, / a diferença cabe no *acaso*. // Ainda não é força. / É suspeita.» |
-| 17–21 s | «Popularidade você vê na hora. / Força, / só com jogo.» |
-| 21–27 s | «Qual comandante você acha que só *parece* forte? // Probabilidade calculada. / Humanos, imprevisíveis.» |
+| Tese central | sim (uma por cenário, escolhida pelo cálculo) |
+| Originalidade | sim (pauta livre 19/11) |
+| Clareza | sim: quadro 0 com as quatro peças e as unidades |
+| Progressão | sim: conflito → popularidade → desempenho → leitura → diferença → pergunta; nenhum bloco repete o anterior |
+| Evidência | sim: cada número dito está no ecrã com fonte no mesmo segundo |
+| Ritmo | medido na prévia: maior intervalo 2,6 s |
+| Recompensa | sim: promessa (é real ou é amostra?) paga aos 19,0 s com o veredito ao lado da margem |
+| Relevância | sim |
+| CTA natural | sim: uma pergunta ligada à descoberta |
 
-## Cenário 3 · «O hype acertou» (A também tem o melhor indicador)
+Repete-se com os números antes da voz.
 
-| Tempo | Locução |
-|---|---|
-| 0–3 s | «O mais jogado do Duel Commander 500… / também é o que mais vence.» |
-| 3–9 s | «[A]: [nA] listas, / [qA] do meta. / E o melhor win rate entre os que têm amostra: [iA].» |
-| 9–14 s | «O segundo melhor, [B]: / [iB], / em [dB] partidas.» |
-| 14–19 s | «Desta vez, / a multidão *fez a conta*. // Raro. / Mas registado.» |
-| 19–26 s | «Qual comandante você acha que só *parece* forte? // Probabilidade calculada. / Humanos, imprevisíveis.» |
-
-Se o portal só publicar conversão para Top 4 (não win rate): trocar «vence / win rate» por «chega ao Top 4 / conversão para o Top 4» em todas as falas e a pergunta do gancho para «O mais jogado é o que mais chega ao Top 4?» — ajuste de tese, vai ao fundador.
-
----
-
-## Revisão narrativa (`SHOWRUNNER.md` §4.2) — sobre a estrutura; repetir com os números
-
-| Critério | Resultado | Nota |
-|---|---|---|
-| Tese central | sim | uma frase por cenário |
-| Originalidade | sim | pauta livre 19/11 |
-| Clareza | sim, condicionado | depende de o denominador caber legível no quadro 0 |
-| Progressão | sim | A → B → leitura → pagamento → pergunta; nenhum bloco sai sem perda |
-| Evidência | sim | cada número dito está no ecrã com fonte no mesmo segundo |
-| Ritmo | por medir | só no ficheiro final |
-| Recompensa | sim | pagamento previsto 16–20 s (cenário 1) |
-| Relevância | sim | o formato é discutido agora; o Farpas mantém o portal |
-| CTA natural | sim | uma pergunta; a legenda leva ao app |
-
-Nenhum «não»; dois itens condicionados aos dados. Voz só depois desta revisão repetida com os números e da autorização do fundador.
-
-## Custo da voz (por confirmar com o texto final)
-Cenário 1 ≈ 400 caracteres com números de exemplo. No eleven_v4 a conta é por caractere (sem confirmar o preço atual do plano): ≈ 400 créditos por tomada, ≈ 800 com duas — abaixo da estimativa documental (1.500–2.200), que vinha de roteiros de 40–60 s. Número final calculado sobre o texto gravado, antes de pedir a autorização.
+## Custo da voz
+Texto do cenário `B_fora_margem` com nomes e números típicos: ≈ 430 caracteres → ≈ 430 créditos por tomada no eleven_v4 (cobrança por caractere; preço do plano por confirmar). Pedido ao fundador: 1 tomada (≈ 430) ou 2 (≈ 860). Conta final sobre o texto gravado.
