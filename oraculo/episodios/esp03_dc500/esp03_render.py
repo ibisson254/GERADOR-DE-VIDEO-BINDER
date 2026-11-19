@@ -719,3 +719,34 @@ if __name__ == '__main__':
     elif MODO == 'stills':
         for x in map(float, sys.argv[3:]): frame(x).save(f'still_{x:05.2f}.png')
     else: render()
+
+# ---------- capa v2 (19/11, 17h30): mesmo modelo §7.3, mais contraste e hierarquia ----------
+def capa_v2():
+    im = Image.new('RGB', (W, H), BG)
+    for lado, y0, y1 in (('A', 0, 980), ('B', 900, 1920)):                               # arte das cartas reais ao fundo
+        c = CARD[lado].convert('RGB'); cw, ch = c.size; art = c.crop((int(cw * .08), int(ch * .11), int(cw * .92), int(ch * .55)))
+        hh = y1 - y0; ww = int(art.width * hh / art.height); art = art.resize((ww, hh), Image.LANCZOS); im.paste(art, ((W - ww) // 2, y0))
+    im = im.filter(ImageFilter.GaussianBlur(6)); im = Image.blend(im, Image.new('RGB', (W, H), BG), 0.55)
+    rain, _ = term_base(3.7); im = Image.blend(im, rain, 0.28).convert('RGBA')               # chuva de código por cima
+    vg = Image.new('L', (W, H), 0); ImageDraw.Draw(vg).ellipse((-200, 200, W + 200, H - 100), fill=255)
+    im = Image.composite(im, Image.new('RGBA', (W, H), BG + (255,)), vg.filter(ImageFilter.GaussianBlur(160)))
+    d = ImageDraw.Draw(im, 'RGBA')
+    l1, l2 = D.get('capa_l1', 'LIDERA'), D.get('capa_l2', 'POR UM FIO')                      # frase: 2 linhas, 3 palavras
+    f1 = fit(d, l1, INTB, 150, 900); f2 = fit(d, l2, INTB, 118, 900)
+    for txt, f, y, col in ((l1, f1, 330, WHITE), (l2, f2, 470, PH)):
+        d.text((W / 2 + 5, y + 6), txt, font=f, fill=(0, 0, 0, 200), anchor='mm'); d.text((W / 2, y), txt, font=f, fill=col, anchor='mm')
+    foco = str(D.get('capa_foco') or v('iA'))
+    g = Image.new('RGBA', (W, H), (0, 0, 0, 0)); gd = ImageDraw.Draw(g); ff = fit(gd, foco, INTB, 330, 960)
+    gd.text((W / 2, 790), foco, font=ff, fill=PH + (255,), anchor='mm')
+    im.alpha_composite(g.filter(ImageFilter.GaussianBlur(34))); im.alpha_composite(g.filter(ImageFilter.GaussianBlur(10))); im.alpha_composite(g)
+    d = ImageDraw.Draw(im, 'RGBA'); s = 'WIN RATE DO MAIS JOGADO'
+    d.text((W / 2, 975), s, font=F(MONOB, 46), fill=(220, 235, 230, 255), anchor='mm')
+    tubo = tubo_frame(0.5, 'desconfiado').crop((230, 380, 1010, 1080)).resize((640, 574), Image.LANCZOS).convert('RGBA')
+    m = Image.new('L', tubo.size, 0); ImageDraw.Draw(m).ellipse((110, 50, tubo.width - 110, tubo.height + 220), fill=255); tubo.putalpha(m.filter(ImageFilter.GaussianBlur(55)))
+    im.alpha_composite(tubo, (220, 1010))
+    d = ImageDraw.Draw(im, 'RGBA'); d.rectangle((0, 1572, W, 1662), fill=(5, 10, 16, 240)); d.line((0, 1572, W, 1572), fill=EM + (255,), width=4)
+    d.text((60, 1617), 'META EM CURTO · ESP. 03', font=F(MONOB, 50), fill=EM, anchor='lm')
+    im = im.convert('RGB'); im.save('ESP03_CAPA.png')
+    gr = im.crop((0, 240, W, 1680)); gr.save('ESP03_CAPA_grelha.png'); gr.resize((270, 360), Image.LANCZOS).save('ESP03_CAPA_grelha_mini.png')
+    print('ESP03_CAPA.png, ESP03_CAPA_grelha.png, ESP03_CAPA_grelha_mini.png')
+if __name__ == '__main__' and MODO == 'capa2': capa_v2()

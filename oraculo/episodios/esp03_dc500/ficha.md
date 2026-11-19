@@ -95,7 +95,7 @@ Medido no ficheiro final `ESP03_META_EM_CURTO.mp4` (19/11/2026, 17:05) com `qc_v
 
 ## Ficheiros finais*
 - Vídeo final: `ESP03_META_EM_CURTO.mp4` (v3) · 38,80 s (34,93 s + fecho) · entregue ao fundador na conversa de 19/11/2026 (não versionado; recria-se com `esp03_render.py final`). Versões anteriores (prévias técnicas v1, v2 e sem voz) só na conversa.
-- Capa: `ESP03_CAPA.png` («LIDERA POR POUCO · 63,1%», TUBO desconfiado, cartas Cloud e Phelia ao fundo) + `ESP03_CAPA_grelha.png` (recorte 3:4, conferido em miniatura), entregues na conversa de 19/11/2026 (`esp03_render.py capa`).
+- Capa v2 (19/11, 17h35): `ESP03_CAPA.png` («LIDERA / POR UM FIO» + «63,1%» com a unidade «WIN RATE DO MAIS JOGADO», TUBO desconfiado, arte das cartas Cloud e Phelia desfocada ao fundo com chuva de código, faixa «META EM CURTO · ESP. 03»; `esp03_render.py <raiz> capa2`). Substitui a capa anterior + `ESP03_CAPA_grelha.png` (recorte 3:4, conferido em miniatura), entregues na conversa de 19/11/2026 (`esp03_render.py capa`).
 
 ## Pacote de publicação* (rascunhos nesta pasta, com marcadores `[PENDENTE]`)
 - [x] `legenda.txt` · [x] `comentario_fixado.txt` · [x] `texto_alternativo.txt` · [x] `fontes.md` · [x] `mensagem_farpas.txt` (pronta, não enviada; prazo de 5 dias a contar do envio)
