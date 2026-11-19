@@ -131,7 +131,7 @@ Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por co
 
 ## MC-ESP03 · Farpas de Mana (19/11/2026, 15h10)
 
-EM PRODUÇÃO, **bloqueado no Gate A (dados)**. O portal duelcommander500.com.br carrega os números por JavaScript; daqui só se leram os rótulos (matriz dos 20 comandantes com mais matchups, com «Win Rate» e «Popularidade»; galeria ordenável por «Mais Populares» e «Maior Conversão»). Pronto sem dados: ficha com gancho e regras de escolha fixadas antes dos números, roteiro em três cenários, storyboard, `dados/calcular.py` (Wilson 95 %, alertas de amostra; testado com dados sintéticos), rascunhos da legenda, comentário, alt e mensagem. Falta: as 9 capturas de `oraculo/episodios/esp03_dc500/capturas/LEIA-ME.md` (ou sessão no computador com Claude in Chrome). Voz estimada ≈ 400 créditos por tomada; não pedida.
+EM PRODUÇÃO, **bloqueado no Gate A (dados)**. O portal duelcommander500.com.br carrega os números por JavaScript; daqui só se leram os rótulos (matriz dos 20 comandantes com mais matchups, com «Win Rate» e «Popularidade»; galeria ordenável por «Mais Populares» e «Maior Conversão»). Pronto sem dados: ficha com gancho e regras de escolha fixadas antes dos números, roteiro em três cenários, storyboard, `dados/calcular.py` (Wilson 95 %, alertas de amostra; testado com dados sintéticos), rascunhos da legenda, comentário, alt e mensagem. Falta: as 9 capturas de `oraculo/episodios/esp03_dc500/capturas/LEIA-ME.md` (ou sessão no computador com Claude in Chrome). Voz estimada ≈ 400 créditos por tomada; não pedida. 15h45: motor `esp03_render.py` pronto; prévia técnica sem dados e sem voz (QC sem problemas) e capa-modelo entregues na conversa, não versionadas.
 
 ## Próximo passo concreto
 

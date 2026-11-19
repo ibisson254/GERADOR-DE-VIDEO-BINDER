@@ -66,17 +66,17 @@ Créditos e autorizações: nenhuma autorização do Farpas existe. Nada em `ora
 
 ## Produção
 - Recursos reutilizados: `oraculo/esp01/esp01_render.py` (`hook()`, terminal, chuva, TUBO) e `oraculo/episodios/ep08b_render.py` como base do `esp03_render.py`; `oraculo/esp01/esp01_audio.py` para mix; `oraculo/assets/tubo_mestra_916.png`; `oraculo/musica/tubo_tema.mp3`; `comum/outro/outro_binder_916.mp4`. O TUBO não é regenerado.
-- Script de render: **não escrito ainda** — depende de quantas cartas, do indicador e do texto final; escrevê-lo antes seria trabalho a refazer. Estimativa: 1 sessão curta depois dos dados.
+- Script de render: `esp03_render.py` (19/11, derivado do ESP01): grelha dupla, mergulho, terminal com barras no mesmo eixo 0–100 %, faixa de 95 %, TUBO (imagem-mestra intacta), legendas terminal, trilha + SFX, fecho do scanner, capa e recorte da grelha. Lê `dados/episodio.json`; sem valor, mostra o marcador e a marca «PRÉVIA TÉCNICA · SEM DADOS», e nunca desenha barra sem número. Falta para a versão final: cartas do Scryfall, `episodio.json` com os números, tempos a partir de `words.json` da voz.
 - Voz: Antonio de Jesus (`MK5tXPmT83J5SUlpUo4K`, eleven_v4, atempo 1,10). Não gerada.
 - Easter egg: a decidir com os números (no máx. 1, chuva de código, registado em `comum/easter_eggs.md`).
 - Riscos: P0 se um número sair sem denominador ou se win rate e conversão se misturarem; risco de parceria se o vídeo sugerir collab.
 
 ## Controlo de qualidade*
-Não medido: não existe ficheiro final. Os testes só se declaram quando forem executados (`python3 -I comum/qc/qc_video.py VIDEO.mp4 --frente tubo`).
+Ficheiro final: não existe. **Prévia técnica sem dados e sem voz** (19/11, `ESP03_PREVIA_TECNICA.mp4`, não versionada), `qc_video.py --frente tubo`: 1080×1920 · 30 fps · 30,37 s (26,5 s + fecho) · −14,3 LUFS · pico −4,9 dBTP · fecho presente · cortes duros a 12,0 / 16,0 / 20,0 / 26,5 s · «sem problemas mensuráveis». Conferido a olho na folha de contacto: quadro 0 com a grelha, pergunta até 3 s, cartas sem cortes nem texto por cima. Nada disto vale para o vídeo final: repete-se com os números e a voz.
 
 ## Ficheiros finais*
-- Vídeo final: não existe.
-- Capa: não existe (precisa do número principal e das cartas).
+- Vídeo final: não existe. Prévia técnica `ESP03_PREVIA_TECNICA.mp4` entregue ao fundador na conversa de 19/11 (não versionada).
+- Capa: modelo `ESP03_CAPA.png` + `ESP03_CAPA_grelha.png` com marcadores, entregue na conversa de 19/11; a final precisa do número e das cartas.
 
 ## Pacote de publicação* (rascunhos nesta pasta, com marcadores `[PENDENTE]`)
 - [ ] `legenda.txt` · [ ] `comentario_fixado.txt` · [ ] `texto_alternativo.txt` · [x] `fontes.md` (parcial) · [x] `mensagem_farpas.txt` (rascunho, não enviada)
