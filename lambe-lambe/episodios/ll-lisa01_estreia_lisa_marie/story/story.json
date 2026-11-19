@@ -1,0 +1,13 @@
+{
+  "_nota": "LL-LISA01 · teaser de estreia da Lisa Marie no Ar com lambe-lambe/kit_story/motor_story.py. Os PNG vêm de capa.py (pasta de saída, não versionada): correr capa.py antes e ajustar os caminhos.",
+  "capa": "/home/claude/lisa01/out/01_capa.png",
+  "esquerda": "/home/claude/lisa01/out/03_dj_de_vinil.png",
+  "direita": {"carta": "/home/claude/lisa01/out/02_otaku_casual.png"},
+  "detalhe": "/home/claude/lisa01/out/08_nerd_de_cultura_pop.png",
+  "nome": "LISA MARIE NO AR",
+  "serie": "Nova série",
+  "creditos": {
+    "com_foto": "",
+    "sem_foto": "Lisa Marie · personagem original BINDER Originals · imagens conceituais<br>Em breve no @binder_vision"
+  }
+}

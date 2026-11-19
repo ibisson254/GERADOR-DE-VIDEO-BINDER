@@ -123,3 +123,5 @@ Formato: data · ID · frente · acontecimento · estado. Mais recente no fim.
 - 19/11/2026, 17h15 · Meta em Curto: lições de custo do MC-ESP03 em `oraculo/PERFIL.md` (decisão em nucleo/DECISOES.md); legenda e comentário fixado do MC-ESP03 refinados.
 - 19/11/2026, 17h40 · MC-ESP03 v4: cartas → TUBO a falar → carta entra no ecrã do TUBO e mergulho no terminal; chuva estilo Matrix no fundo das cartas. Sem créditos novos; QC sem problemas mensuráveis.
 - 19/11/2026, 18h00 · AB-03 «Terrors of the Abyss» (ABISMO, Reel 20,58 s, sem voz, custo zero): comandantes vazados do precon Sultai de Nauctis. QC v2 sem problemas (−14,2 LUFS). CONCLUÍDO, publicação com o fundador.
+- 19/11/2026, 19h · Lisa Marie no Ar integrada no repositório (pasta `lisa-marie/`, catálogo, router, series.yaml, decisão). Sem episódio.
+- 19/11/2026, 19h40 · LL-LISA01 teaser de estreia da Lisa Marie no formato Lambe-lambe (Reel/Story 9 s + fecho, sem áudio, zero créditos). QC sem problemas além do «sem áudio» esperado. CONCLUÍDO; publicação com o fundador. Vídeo não versionado.

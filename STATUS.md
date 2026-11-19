@@ -13,7 +13,9 @@ Gancho visual passa a componente do briefing (7 campos antes do roteiro, rubrica
 
 **Atenção:** as imagens atuais são **conceito, não personagem-mestre**. **Voz e trilha não estão escolhidas nem aprovadas** (`vozes: {}`, `trilha: []`). Nenhum episódio, ID ou pauta criados; nada publicado; zero créditos gastos.
 
-**Falta:** (1) personagem-mestre 2D (ficha frente/3/4/perfil, expressões, gestos VJ, recorte transparente) com `lisa-marie/PROMPT_CLAUDE.md`; (2) cenário modular em camadas; (3) voz e assinatura sonora originais (autorização de custo do fundador); (4) decisões do fundador listadas em `nucleo/DECISOES.md` 19/11 — teaser de estreia no Lambe-lambe (sim/não), estética de papel da prancha × estúdio, paleta, símbolos da Wizards e coroa; (5) pauta e piloto de `Elas no Multiverso` com convidada autorizada.
+**Falta:** (1) personagem-mestre 2D (ficha frente/3/4/perfil, expressões, gestos VJ, recorte transparente) com `lisa-marie/PROMPT_CLAUDE.md`; (2) cenário modular em camadas; (3) voz e assinatura sonora originais (autorização de custo do fundador); (4) decisões do fundador listadas em `nucleo/DECISOES.md` 19/11 — estética de papel da prancha × estúdio, paleta, símbolos da Wizards e coroa; (5) pauta e piloto de `Elas no Multiverso` com convidada autorizada.
+
+**Teaser LL-LISA01** (19/11, 19h40, pedido do fundador): Reel/Story Lambe-lambe de estreia, 9 s + fecho, zero créditos, CONCLUÍDO; vídeo e capa entregues na conversa; publicação com o fundador (`lambe-lambe/episodios/ll-lisa01_estreia_lisa_marie/`).
 
 **Próxima tarefa:** executar `lisa-marie/PROMPT_CLAUDE.md` para a ficha de modelo e um preview estático para aprovação do fundador; só depois assets recortáveis e o piloto.
 
@@ -157,7 +159,7 @@ EM PRODUÇÃO, **bloqueado no Gate A (dados)**. O portal duelcommander500.com.br
 
 ## Próximo passo concreto
 
-- Lisa Marie no Ar: ficha de modelo + preview estático com `lisa-marie/PROMPT_CLAUDE.md`, e respostas do fundador às decisões de 19/11 (teaser Lambe-lambe, paleta, estética de papel).
+- Lisa Marie no Ar: ficha de modelo + preview estático com `lisa-marie/PROMPT_CLAUDE.md`, e respostas do fundador às decisões de 19/11 (paleta, estética de papel, símbolos). Publicar o teaser LL-LISA01 (fundador).
 0. Fundador: decisões da missão estrutural (`nucleo/auditorias/2026-11-19_missao_estrutural.md` §8), sobretudo integrar MB-EP11 + insights de 13–14/11 e o acesso ao portal do Farpas.
 
 1. Fundador: enviar a prévia do LL-ART20 a @caiomonteiroart (mensagem na ficha; três pedidos: foto, publicação, collab; prazo 21/11) e registar a resposta em `lambe-lambe/autorizacoes/`. Depois: MC-ESP03 com o Farpas de Mana (acesso ao portal DC500 do Farpas ou prints com data, período e amostra). Também: EX-01, vidIQ, prints das ligas Preconauta.
