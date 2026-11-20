@@ -148,6 +148,9 @@ Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por co
 ## MB-EP14 · EVERYTHING, MENOS TUDO (20/11/2026, 02h — CONCLUÍDO; publicação com o fundador, antes de 30/11)
 
 Mana & Burn sobre o Secret Lair x Duna (My Arrakis, My Superdrop): o Desert Power Everything Bundle (US$ 174,99) leva só 2 dos 3 drops; o Spice (Halo Foil, US$ 59,99) fica de fora. Preços do anúncio oficial da Wizards (18/11). Vozes Talis + Erik, 1.036 créditos (missão do fundador de 00:37). Vídeo final 46,70 s, QC sem P0/P1; vídeo e capa entregues na conversa (não versionados). Pacote em `manaburn/episodios/ep14_everything/`. Kit: opção nova `EP.canais[].meio` (troca de tela a meio da fala). Falta: escuta das pronúncias e publicação antes da venda (30/11, 14h de Brasília); par de publicação (carrossel do app) precisa de capturas reais.
+## MB-EP13 · «97 terrenos» (20/11/2026, 01h30 — CONCLUÍDO; publicação com o fundador)
+
+Recuperado da branch `manaburn/ep10-97-terrenos` (produzido a 11/11 como candidato a Ep. 10, vozes já pagas) quando o fundador mandou o vídeo-fonte de @mtgmak e pediu um episódio. Re-render sem créditos, 45,83 s com fecho, −14,5 LUFS, QC sem problemas; capa nova no modelo de 14/11. Pacote em `manaburn/episodios/ep13_97_terrenos/`; vídeo e capa entregues na conversa (não versionados). O motor deste episódio (kit v3) continua só na branch. Falta: o fundador ver o quadro 0 (abre no close do Burn, sem carta na TV) e publicar.
 
 ## MB-EP12 · MONEY BURN (19/11/2026, 20h55 — CONCLUÍDO; publicação com o fundador)
 
@@ -184,4 +187,4 @@ A edição do MC-ESP03 v4 é o padrão da série: `oraculo/CONTEXTO.md` §7.4 e 
 
 ## Handoff
 
-Último: 20/11/2026 (02h), MB-EP14, em `manaburn/episodios/ep14_everything/handoff.md`. Anterior: 19/11/2026 (19h), Lisa Marie no Ar, em `lisa-marie/HANDOFF_2026-11-19.md`. Anterior no mesmo dia: fim de `nucleo/auditorias/2026-11-19_missao_estrutural.md`. Anterior: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). 
+Último: 20/11/2026 (02h), MB-EP14, em `manaburn/episodios/ep14_everything/handoff.md`. Anterior: 20/11/2026 (01h30), MB-EP13 recuperado, no fim de `manaburn/episodios/ep13_97_terrenos/ficha.md` §10. Anterior: 19/11/2026 (19h), Lisa Marie no Ar, em `lisa-marie/HANDOFF_2026-11-19.md`. Anterior no mesmo dia: fim de `nucleo/auditorias/2026-11-19_missao_estrutural.md`. Anterior: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). 

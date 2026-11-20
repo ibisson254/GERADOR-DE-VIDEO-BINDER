@@ -1,0 +1,14 @@
+{
+ "name": "Sanar, Innovative First-Year",
+ "set_name": "Lorwyn Eclipsed",
+ "set": "ecl",
+ "collector_number": "241",
+ "released_at": "2026-01-23",
+ "artist": "Steven Belledin",
+ "oracle_text": "Vivid — At the beginning of your first main phase, reveal cards from the top of your library until you reveal X nonland cards, where X is the number of colors among permanents you control. For each of those colors, you may exile a card of that color from among the revealed cards. Then shuffle. You may cast the exiled cards this turn.",
+ "scryfall_uri": "https://scryfall.com/card/ecl/241/sanar-innovative-first-year?utm_source=api",
+ "border_color": "black",
+ "frame_effects": [
+  "legendary"
+ ]
+}
