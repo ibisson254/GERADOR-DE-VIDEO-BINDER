@@ -18,3 +18,4 @@
 | 14/11/2026 | Meta em Curto · ESP02 (A Taça respondeu) | "29" na vertical na chuva de código = número de duplas da 1.ª edição da Taça Preconauta | cena da ordem de turno, ~14–24 s, canto inferior direito |
 | 16/11/2026 | Meta em Curto · EP08 (prestação de contas do Mundial 32) | "MOCS" na vertical na chuva de código = Stefan Schütz venceu o Magic Online Champions Showcase (2024, temporada 1) | cena da lista campeã, ~35–38 s, canto inferior direito |
 | 19/11/2026 | Mana & Burn · Ep. 12 (MONEY BURN) | relógio da TV SAL em "10:20" = os 10 terrenos de grife do Burn e os 20 de dano do Price of Progress | canto inferior direito da TV, em todos os planos da TV (0–40 s) |
+| 20/11/2026 | Mana & Burn · Ep. 13 (EVERYTHING, MENOS TUDO) | relógio da TV SAL em "14:00" = hora da abertura da venda do Secret Lair x Duna em Brasília (30/11, 9h PT) | canto inferior direito da TV, em todos os planos da TV (0–37 s) |
