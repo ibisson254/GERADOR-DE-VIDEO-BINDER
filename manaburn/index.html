@@ -79,7 +79,7 @@ function canalState(t,i){ if(!CANAIS) return null; const k=canalIdx(i), C=CANAIS
     if(j>0 && dt<0.10){ burst=1-dt/0.10*0.5; osd=ch; } }
   else if(C.de>0){ const dt=t-LINES[C.de].start; if(dt>=-0.02 && dt<0.34){ burst=dt<0.20?1:1-(dt-0.20)/0.14; osd=ch; } }
   // EP.canais[].meio = {at: 0.5, img}: troca a tela a meio da fala (variante da mesma tela, mesma grelha, para o destaque continuar alinhado).
-  // Opcional (MB-EP13, 20/11/2026): fala longa sem troca ganha uma mudança visual ≤ 3 s sem novo canal; sem a chave, igual a antes.
+  // Opcional (MB-EP14, 20/11/2026): fala longa sem troca ganha uma mudança visual ≤ 3 s sem novo canal; sem a chave, igual a antes.
   if(C.meio && C.meio.img){ const L=LINES[C.de]; if(L && t>=L.start+L.dur*C.meio.at) img=C.meio.img; }
   if(C.estatica){ burst=1; osd=ch; img=null; }
   return {k, img, cred, ch, burst:Math.round(burst*10)/10, osd, sub, est:!!C.estatica}; }
@@ -509,7 +509,7 @@ const credEl=document.getElementById('cred'), CRED_BASE=EP.card.cred;
 if(EP.bug) document.querySelector('#bug .b').textContent=EP.bug;   // tarja do quadro: "PLANTÃO DO PREÇO", "ESPECIAL DE HALLOWEEN"…
 INSERTS.forEach((c,i)=>{const im=new Image(); im.onload=()=>{INS_OK[i]=true;}; im.onerror=()=>{INS_OK[i]=false;}; im.src=c.file; c.el=document.createElement('img'); c.el.src=c.file; insEl.appendChild(c.el);});
 {const g=new Image(); g.onload=()=>{document.getElementById('gplay').style.display='block';}; g.src='cards/google_play.png';}
-// pré-carrega as telas de EP.canais[].meio (MB-EP13) para a troca a meio da fala não sair em branco no primeiro quadro
+// pré-carrega as telas de EP.canais[].meio (MB-EP14) para a troca a meio da fala não sair em branco no primeiro quadro
 const MEIO_IMG=(CANAIS||[]).filter(c=>c.meio&&c.meio.img).map(c=>{const im=new Image(); im.src=c.meio.img; return im;});
 window.READY=()=>MEIO_IMG.every(im=>im.complete) && INSERTS.every((c,i)=>i in INS_OK) && (!(FX.scanner&&SCAN) || [...Array(SCAN_N).keys()].every(k=>k in SCAN_OK));
 const TVSHOTS=['tv','tvtext','tvtext2','tv2'];

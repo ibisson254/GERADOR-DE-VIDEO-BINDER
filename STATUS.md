@@ -145,9 +145,9 @@ Atualização de 10/11/2026: regra geral no `oraculo/CICLO_SEMANAL.md` §0 (toda
 
 Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por confirmar: 57,4 s + fecho, QC sem problemas, −14,0 LUFS, sem corte lateral. Ficha `oraculo/episodios/ep07_mundial_ficha.md`, legenda `oraculo/legendas/ep07_mundial_legenda.txt`. Previsões PR-WC32-01 (pública) a 03 registadas antes da voz; conferência na segunda 16/11 (`ciclo.py segunda`). O vídeo não está no repositório: recria-se com `ep07_audio.py` + `ep07_render.py` a partir de `voz.mp3` (flow ElevenLabs em `ep07_mundial_fontes.txt`). v2 (17h): listas de Landfall e das duas campeãs de Jund no ecrã; 5 fotos dos brasileiros no ecrã (17:30); falta a de João Jorge Sales Junior. Depende do fundador: foto do Sales Junior (opcional), ouvir a pronúncia e publicar (de preferência antes de 13/11, dia 1 do Mundial).
 
-## MB-EP13 · EVERYTHING, MENOS TUDO (20/11/2026, 02h — CONCLUÍDO; publicação com o fundador, antes de 30/11)
+## MB-EP14 · EVERYTHING, MENOS TUDO (20/11/2026, 02h — CONCLUÍDO; publicação com o fundador, antes de 30/11)
 
-Mana & Burn sobre o Secret Lair x Duna (My Arrakis, My Superdrop): o Desert Power Everything Bundle (US$ 174,99) leva só 2 dos 3 drops; o Spice (Halo Foil, US$ 59,99) fica de fora. Preços do anúncio oficial da Wizards (18/11). Vozes Talis + Erik, 1.036 créditos (missão do fundador de 00:37). Vídeo final 46,70 s, QC sem P0/P1; vídeo e capa entregues na conversa (não versionados). Pacote em `manaburn/episodios/ep13_everything/`. Kit: opção nova `EP.canais[].meio` (troca de tela a meio da fala). Falta: escuta das pronúncias e publicação antes da venda (30/11, 14h de Brasília); par de publicação (carrossel do app) precisa de capturas reais.
+Mana & Burn sobre o Secret Lair x Duna (My Arrakis, My Superdrop): o Desert Power Everything Bundle (US$ 174,99) leva só 2 dos 3 drops; o Spice (Halo Foil, US$ 59,99) fica de fora. Preços do anúncio oficial da Wizards (18/11). Vozes Talis + Erik, 1.036 créditos (missão do fundador de 00:37). Vídeo final 46,70 s, QC sem P0/P1; vídeo e capa entregues na conversa (não versionados). Pacote em `manaburn/episodios/ep14_everything/`. Kit: opção nova `EP.canais[].meio` (troca de tela a meio da fala). Falta: escuta das pronúncias e publicação antes da venda (30/11, 14h de Brasília); par de publicação (carrossel do app) precisa de capturas reais.
 
 ## MB-EP12 · MONEY BURN (19/11/2026, 20h55 — CONCLUÍDO; publicação com o fundador)
 
@@ -184,4 +184,4 @@ A edição do MC-ESP03 v4 é o padrão da série: `oraculo/CONTEXTO.md` §7.4 e 
 
 ## Handoff
 
-Último: 20/11/2026 (02h), MB-EP13, em `manaburn/episodios/ep13_everything/handoff.md`. Anterior: 19/11/2026 (19h), Lisa Marie no Ar, em `lisa-marie/HANDOFF_2026-11-19.md`. Anterior no mesmo dia: fim de `nucleo/auditorias/2026-11-19_missao_estrutural.md`. Anterior: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). 
+Último: 20/11/2026 (02h), MB-EP14, em `manaburn/episodios/ep14_everything/handoff.md`. Anterior: 19/11/2026 (19h), Lisa Marie no Ar, em `lisa-marie/HANDOFF_2026-11-19.md`. Anterior no mesmo dia: fim de `nucleo/auditorias/2026-11-19_missao_estrutural.md`. Anterior: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). 

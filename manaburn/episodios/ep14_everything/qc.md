@@ -1,6 +1,6 @@
-# MB-EP13 · controlo de qualidade (ficheiro final com voz)
+# MB-EP14 · controlo de qualidade (ficheiro final com voz)
 
-Ficheiro medido: `MB_EP13_Everything_916.mp4` (20/11/2026, com as vozes), não a prévia sem voz.
+Ficheiro medido: `MB_EP14_Everything_916.mp4` (20/11/2026, com as vozes), não a prévia sem voz.
 Ferramentas: `comum/qc/qc_video.py --frente manaburn`, `manaburn/bordas.py`, `ffmpeg cropdetect`, lista de eventos visuais a partir do `data.js` (trocas de canal, cortes, destaques, variantes `meio`, inserts) e diferença de quadros, folha de contacto (um quadro a cada 1,5 s) e quadros ampliados dos destaques, vistos a olho.
 
 | Critério | Alvo | Medido | OK |

@@ -1,4 +1,4 @@
-# MB-EP13 · EVERYTHING, MENOS TUDO · fontes e evidências
+# MB-EP14 · EVERYTHING, MENOS TUDO · fontes e evidências
 
 Pesquisa feita a 20/11/2026 (00h40–01h30, Lisboa). Fonte primária: o anúncio da Wizards. As secundárias só confirmam e servem para descrever a reação; nenhuma opinião de jogadores é apresentada como informação oficial.
 

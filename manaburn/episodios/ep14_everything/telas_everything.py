@@ -1,4 +1,4 @@
-"""MB-EP13 · EVERYTHING, MENOS TUDO · telas da TV SAL e inserts (feedback visual em cada fala, decisão de 15/11/2026).
+"""MB-EP14 · EVERYTHING, MENOS TUDO · telas da TV SAL e inserts (feedback visual em cada fala, decisão de 15/11/2026).
 Estilo e CSS iguais a manaburn/episodios/ep12_money_burn/telas_money.py. Só cartas reais (PNG do Scryfall em cards/src/,
 Secret Lair Drop 2912–2930, 20/11/2026) e números do anúncio oficial da Wizards (18/11/2026) ou contas feitas com eles.
 Uso, na pasta do kit (com cards/src/ copiado):  python3 telas_everything.py   (CHROME=/caminho/do/chrome opcional)
@@ -133,7 +133,7 @@ TELAS = {
    <div class="opt" style="top:620px"><span class="l">B</span><span class="t">SÓ O SPICE<span class="p">US$ 59,99</span></span></div>
    <div class="fonte">Preços oficiais nos EUA (Wizards, 18/11/2026). Water of Life (SLD 2926). {CR}</div></div>""",
 }
-# variantes «a meio da fala» (EP.canais[].meio, MB-EP13): a mesma tela com um carimbo novo, sem tapar cartas nem as linhas destacadas
+# variantes «a meio da fala» (EP.canais[].meio, MB-EP14): a mesma tela com um carimbo novo, sem tapar cartas nem as linhas destacadas
 def _var(base, velho, novo):
     assert velho in TELAS[base], base
     return TELAS[base].replace(velho, novo)

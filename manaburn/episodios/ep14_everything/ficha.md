@@ -1,9 +1,9 @@
-# Ficha · Mana & Burn · EP13 · EVERYTHING, MENOS TUDO
+# Ficha · Mana & Burn · EP14 · EVERYTHING, MENOS TUDO
 
 ## Identificação
-- ID editorial: `MB-EP13` (último da série na `main`: MB-EP12; nenhuma branch ou ficha usa «EP13»; MB-EP11 = Numot, branch `manaburn/ep10-numot`)
+- ID editorial: `MB-EP14`. Na auditoria (00h45) o próximo livre era o MB-EP13 e a pauta foi registada com ele na branch de trabalho; às 01:29 outra sessão publicou na `main` o MB-EP13 «97 terrenos». Como os IDs não se reutilizam, este episódio passou a MB-EP14 antes do merge (o vídeo não mostra o número; capa refeita com «EP. 14»).
 - Estado no registo: CONCLUÍDO (vídeo final com voz, 20/11/2026)
-- Aprovação do fundador: «MISSÃO AUTÓNOMA — MANA & BURN · MB-EP13 · EVERYTHING, MENOS TUDO» (20/11/2026, 00:37), que autoriza só o uso do saldo pré-pago da ElevenLabs para as vozes aprovadas. Publicação: com o fundador.
+- Aprovação do fundador: «MISSÃO AUTÓNOMA — MANA & BURN · MB-EP14 · EVERYTHING, MENOS TUDO» (20/11/2026, 00:37), que autoriza só o uso do saldo pré-pago da ElevenLabs para as vozes aprovadas. Publicação: com o fundador.
 
 ## Classificação
 - Frente: Mana & Burn (território «cultura e caos»: notícia da Wizards e reação da comunidade)
@@ -95,9 +95,9 @@ Faixas coladas no ElevenLabs: `faixas_elevenlabs.txt` (Burn 447 + Mana 589 carac
 `qc.md` (medido no ficheiro final com voz). P0: 0. P1: 0.
 
 ## Ficheiros finais
-- Vídeo final: `MB_EP13_Everything_916.mp4` · 46,70 s (42,83 s + fecho 3,87 s) · entregue ao fundador na conversa de 20/11/2026 (não versionado). Recria-se com `burn.mp3`/`mana.mp3` do flow acima + `processar_vozes.py` + `render.py` + `juntar_fecho.py`, com `cards/` e `index.html` do kit.
-- Prévia sem voz (substituída): `MB_EP13_PREVIA_semvoz_916.mp4`.
-- Capa: `MB_EP13_CAPA.png` + `MB_EP13_CAPA_grelha.png` (recorte 3:4). Shai-Hulud, «O PACOTE DE TUDO» / «QUASE», selo «2 DE 3 DROPS», faixa «MANA & BURN · EP. 13 · SECRET LAIR x DUNA».
+- Vídeo final: `MB_EP14_Everything_916.mp4` · 46,70 s (42,83 s + fecho 3,87 s) · entregue ao fundador na conversa de 20/11/2026 (não versionado). Recria-se com `burn.mp3`/`mana.mp3` do flow acima + `processar_vozes.py` + `render.py` + `juntar_fecho.py`, com `cards/` e `index.html` do kit.
+- Prévia sem voz (substituída): `MB_EP14_PREVIA_semvoz_916.mp4`.
+- Capa: `MB_EP14_CAPA.png` + `MB_EP14_CAPA_grelha.png` (recorte 3:4). Shai-Hulud, «O PACOTE DE TUDO» / «QUASE», selo «2 DE 3 DROPS», faixa «MANA & BURN · EP. 14 · SECRET LAIR x DUNA».
 
 ## Pacote de publicação
 - [x] `legenda.txt` · [x] `comentario_fixado.txt` · [x] `texto_alternativo.txt` · [x] `fontes.md`
@@ -113,7 +113,7 @@ Faixas coladas no ElevenLabs: `faixas_elevenlabs.txt` (Burn 447 + Mana 589 carac
 - [x] `comum/historico.md`
 - [x] Easter egg em `comum/easter_eggs.md`
 - [x] `STATUS.md`
-- [x] `memoria.py encerramento MB-EP13`
+- [x] `memoria.py encerramento MB-EP14`
 - [x] Commit na `main` (hash no handoff)
 - [x] Handoff entregue
 

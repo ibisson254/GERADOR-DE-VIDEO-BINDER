@@ -1,4 +1,4 @@
-// MB-EP13 · EVERYTHING, MENOS TUDO · Secret Lair x Duna (My Arrakis, My Superdrop): o Desert Power Everything Bundle leva 2 dos 3 drops.
+// MB-EP14 · EVERYTHING, MENOS TUDO · Secret Lair x Duna (My Arrakis, My Superdrop): o Desert Power Everything Bundle leva 2 dos 3 drops.
 // Factos: anúncio oficial da Wizards (18/11/2026). Cartas: PNG do Scryfall (Secret Lair Drop 2912–2930, 20/11/2026). Kit v2 + sala v3.
 // Uma tela da TV SAL por assunto (EP.canais) ou insert nos cuB; falas longas trocam para a variante da tela a meio (EP.canais[].meio, opção nova do kit). pose por fala: [Burn, Mana, olharB, olharM, sobrancelhaB, sobrancelhaM, plano]
 const CR = '© Wizards of the Coast. Conteúdo de fã não oficial.';
@@ -10,7 +10,7 @@ const M_TOTAL = { title: 'OS 3 DROPS (EUA)', value: '$234,98', fill: 1, calc: ['
 const M_DATA = { title: 'VENDA', value: '30/11', fill: 0.8, calc: ['9h PT · 14h Brasília', '17h Lisboa', 'Wizards, 18/11/2026'], levels: [['VENDA', '#FF5A4E'], ['FILA', '#F4B414'], ['ANÚNCIO', '#6FB487']] };
 const T_DESC = { label: ['DESCONTO', 'DO BUNDLE'], value: '$4,97', note: ['avulso 179,96', 'bundle 174,99'] };
 const EP = {
-  id: 'ep13_everything',
+  id: 'ep14_everything',
   bug: 'TV SAL',
   poster: 'artefato',
   fx: { foco: true, tremor: true, poster: true, celular: true, scanner: false, tv_ligada: true },
