@@ -84,3 +84,11 @@ Mesa de noite de Commander (decks com sleeves, cartas genéricas, d20, dados, de
 
 Quando os créditos de voz não estão autorizados: `python3 previa_sem_voz.py` (cópia em `episodios/ep12_money_burn/`) corre o `process.py` sem o alterar, com cada fala em silêncio pela duração prevista (calibrada no MB-EP11) e a boca com envelope sintético. Serve para conferir ritmo, telas e QC; não se publica. Com as vozes, volta-se ao passo 3 (`process.py burn.mp3 mana.mp3`). Nesta sessão o Playwright usou o Chrome do sistema (`executable_path='/usr/bin/google-chrome'`) porque o download do Chromium falhou.
 
+
+## Troca de tela a meio da fala (20/11/2026, MB-EP14)
+
+`EP.canais[].meio = {at: 0.5, img: 'cards/<tela>_b.png'}` troca a tela da TV pela variante indicada a partir de `at` × duração da fala `de` (ex.: a mesma tela com um carimbo novo). Serve para falas longas manterem a mudança visual ≤ 3 s sem abrir outro canal. A variante deve ter a mesma grelha da tela original, para os destaques (`hl`) continuarem alinhados. As imagens `meio` são pré-carregadas antes do render (`window.READY`). Sem a chave, os episódios saem iguais.
+
+Atenção às frações do `hl` em telas compostas com moldura (`.f{inset:18px}`): somar os 18 px da moldura à posição do elemento antes de dividir por 744 × 1040.
+
+Corte das vozes quando a legenda mostra números em algarismos e a voz os diz por extenso: `episodios/ep14_everything/processar_vozes.py` corta pelo tamanho do `tts` (o `process.py` usa o da legenda e desalinha as falas).
