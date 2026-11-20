@@ -145,6 +145,10 @@ Atualização de 10/11/2026: regra geral no `oraculo/CICLO_SEMANAL.md` §0 (toda
 
 Integrado na `main` e CONCLUÍDO a 12/11 (05:54). Produzido, publicação por confirmar: 57,4 s + fecho, QC sem problemas, −14,0 LUFS, sem corte lateral. Ficha `oraculo/episodios/ep07_mundial_ficha.md`, legenda `oraculo/legendas/ep07_mundial_legenda.txt`. Previsões PR-WC32-01 (pública) a 03 registadas antes da voz; conferência na segunda 16/11 (`ciclo.py segunda`). O vídeo não está no repositório: recria-se com `ep07_audio.py` + `ep07_render.py` a partir de `voz.mp3` (flow ElevenLabs em `ep07_mundial_fontes.txt`). v2 (17h): listas de Landfall e das duas campeãs de Jund no ecrã; 5 fotos dos brasileiros no ecrã (17:30); falta a de João Jorge Sales Junior. Depende do fundador: foto do Sales Junior (opcional), ouvir a pronúncia e publicar (de preferência antes de 13/11, dia 1 do Mundial).
 
+## MB-EP13 · «97 terrenos» (20/11/2026, 01h30 — CONCLUÍDO; publicação com o fundador)
+
+Recuperado da branch `manaburn/ep10-97-terrenos` (produzido a 11/11 como candidato a Ep. 10, vozes já pagas) quando o fundador mandou o vídeo-fonte de @mtgmak e pediu um episódio. Re-render sem créditos, 45,83 s com fecho, −14,5 LUFS, QC sem problemas; capa nova no modelo de 14/11. Pacote em `manaburn/episodios/ep13_97_terrenos/`; vídeo e capa entregues na conversa (não versionados). O motor deste episódio (kit v3) continua só na branch. Falta: o fundador ver o quadro 0 (abre no close do Burn, sem carta na TV) e publicar.
+
 ## MB-EP12 · MONEY BURN (19/11/2026, 20h55 — CONCLUÍDO; publicação com o fundador)
 
 Mana & Burn «Só falta uma carta»: o deck que nunca fica pronto e o upgrade que vira 20 de dano (Price of Progress). Sem preços (sem conflito com o Vince). Vozes Talis + Erik, 978 créditos (autorizados 19/11, 19:39). Vídeo final 45,50 s, QC sem P0/P1; vídeo e capa entregues na conversa (não versionados). Pacote em `manaburn/episodios/ep12_money_burn/`. Falta só: escuta das pronúncias e publicação (fundador); par de publicação (carrossel do app) precisa de capturas reais do scanner/Binder.
@@ -180,4 +184,4 @@ A edição do MC-ESP03 v4 é o padrão da série: `oraculo/CONTEXTO.md` §7.4 e 
 
 ## Handoff
 
-Último: 19/11/2026 (19h), Lisa Marie no Ar, em `lisa-marie/HANDOFF_2026-11-19.md`. Anterior no mesmo dia: fim de `nucleo/auditorias/2026-11-19_missao_estrutural.md`. Anterior: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). 
+Último: 20/11/2026 (01h30), MB-EP13 recuperado, no fim de `manaburn/episodios/ep13_97_terrenos/ficha.md` §10. Anterior: 19/11/2026 (19h), Lisa Marie no Ar, em `lisa-marie/HANDOFF_2026-11-19.md`. Anterior no mesmo dia: fim de `nucleo/auditorias/2026-11-19_missao_estrutural.md`. Anterior: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). 

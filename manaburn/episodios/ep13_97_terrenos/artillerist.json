@@ -1,0 +1,12 @@
+{
+ "name": "Magmakin Artillerist",
+ "set_name": "Aetherdrift",
+ "set": "dft",
+ "collector_number": "137",
+ "released_at": "2025-02-14",
+ "artist": "Madeline Boni",
+ "oracle_text": "Whenever you discard one or more cards, this creature deals that much damage to each opponent.\nCycling {1}{R} ({1}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, it deals 1 damage to each opponent.",
+ "scryfall_uri": "https://scryfall.com/card/dft/137/magmakin-artillerist?utm_source=api",
+ "border_color": "black",
+ "frame_effects": null
+}
