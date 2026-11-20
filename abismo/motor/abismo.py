@@ -520,16 +520,36 @@ def timeline_story():
 
 def pilula_deck(im, dk, y, a=1.0, prefixo=None, x_off=0):
     d = ImageDraw.Draw(im, 'RGBA'); lab = prefixo or 'COMMANDER · NAUCTIS'; f = F('black', 32); wl = d.textlength(lab, font=f)
-    g = dk['guilda']; fg_ = F('bold', 31); wg = d.textlength(g, font=fg_); wd = len(dk['cores']) * 34 - 8
+    g = dk['guilda']; fg_ = F('bold', 31); wg = d.textlength(g, font=fg_); wd = len(dk['cores']) * (48 if CFG.get('simbolos_mana') else 34) - 8
     tw = 28 + wl + 22 + wg + 22 + wd + 28; xp = (W - tw) / 2 + x_off
     d.rounded_rectangle((xp, y - 32, xp + tw, y + 32), radius=32, fill=INK + (int(225 * a),))
     d.text((xp + 28, y), lab, font=f, fill=EM + (int(255 * a),), anchor='lm')
     d.text((xp + 28 + wl + 22, y), g, font=fg_, fill=WHITE + (int(255 * a),), anchor='lm')
-    dots(d, dk['cores'], xp + 28 + wl + 22 + wg + 22 + 13, y, r=13, a=int(255 * a))
+    if CFG.get('simbolos_mana'): simbolos(im, dk['cores'], xp + 28 + wl + 22 + wg + 22, y, r=20, a=a, gap=8); d = ImageDraw.Draw(im, 'RGBA')
+    else: dots(d, dk['cores'], xp + 28 + wl + 22 + wg + 22 + 13, y, r=13, a=int(255 * a))
     tracked(d, ' · '.join(MOD_CORES[c] for c in dk['cores']), y + 56, 'semi', 24, (225, 238, 240, int(210 * a)), track=0.14)
 MOD_CORES = {"W": "BRANCO", "U": "AZUL", "B": "PRETO", "R": "VERMELHO", "G": "VERDE"}
 MANA = {"W": (246, 232, 190), "U": (64, 150, 230), "B": (150, 132, 166), "R": (232, 72, 52), "G": (44, 176, 96)}
 if 'decks' not in MOD: MOD['decks'] = {'cores_mana': {k: list(v) for k, v in MANA.items()}, 'nomes_mana': MOD_CORES}
+
+MANA_GLIFO = {'W': '\ue600', 'U': '\ue601', 'B': '\ue602', 'R': '\ue603', 'G': '\ue604'}
+MANA_FUNDO = {'W': (240, 242, 192), 'U': (181, 205, 227), 'B': (172, 162, 154), 'R': (219, 134, 100), 'G': (147, 180, 131)}
+_mana = {}
+def simbolo_mana(c, r):
+    """símbolo de mana como num custo de carta: sombra, círculo de cor e glifo preto (fonte Mana, abismo/kit/mana/)."""
+    k = (c, r)
+    if k not in _mana:
+        s = 4; R = r * s; im = Image.new('RGBA', (2 * R + 3 * s, 2 * R + 3 * s), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+        d.ellipse((0 + 2 * s, 0 + 3 * s, 2 * R + 2 * s, 2 * R + 3 * s), fill=(0, 0, 0, 200))   # sombra dos custos
+        d.ellipse((0, 0, 2 * R, 2 * R), fill=MANA_FUNDO[c] + (255,))
+        f = ImageFont.truetype(f'{ROOT}/abismo/kit/mana/mana.ttf', int(R * 1.28))
+        d.text((R, R + s * 0.5), MANA_GLIFO[c], font=f, fill=(13, 13, 13, 255), anchor='mm')
+        _mana[k] = im.resize((im.width // s, im.height // s), Image.LANCZOS)
+    return _mana[k]
+def simbolos(im, cores, x, y, r=16, a=1.0, gap=8):
+    for i, c in enumerate(cores):
+        sm = alfa(simbolo_mana(c, r), a); im.alpha_composite(sm, (int(x + i * (2 * r + gap)), int(y - r)))
+    return len(cores) * (2 * r + gap) - gap
 
 def frame_story_deck(t, T):
     S = MOD['seguro']; dk = CFG['deck']; P = ID['musica']['periodo']; ef = CFG.get('efeito')

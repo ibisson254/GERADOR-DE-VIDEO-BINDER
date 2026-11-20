@@ -26,6 +26,7 @@ Rubrica prevista/medida: relevância 5/5 · impacto 4/4 · clareza 5/5 · curios
 - Ficheiro final (não versionado): `abismo/publicacoes/AB-07-blood-story/saida/AB-07-blood-story_story.mp4`.
 
 ## Controlo de qualidade
+v2 (20/11/2026, 17:10, pedido do fundador): na pílula do deck, as bolinhas de cor foram trocadas pelos símbolos de mana azul e vermelho (fonte Mana, `abismo/kit/mana/`, `"simbolos_mana": true`). Resto igual; re-render conferido (13,72 s, −14,1 LUFS, pico −2,1 dBTP, quadros 0,05/2,2/4,5/12,5 s).
 1080×1920, 30 fps, H.264/AAC 48 kHz, 13,72 s; −14,1 LUFS, pico −2,1 dBTP. Folha de contacto (0,05; 2,2; 3,6; 5,5; 12,5 s) sem sobreposição de texto, caixa identificável com crédito «Embalagem oficial», pergunta/CTA dentro da zona segura (base 1580), sem narração. Detalhe: `../CAMPANHA_NAUCTIS_EMBALAGENS.md` («QC»).
 
 ## Ficheiros finais (não versionados)

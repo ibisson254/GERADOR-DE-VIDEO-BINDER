@@ -5,3 +5,4 @@
 - Interpretação editorial: a linha de descrição em português (explicação das chamadas).
 - Música «Auction of Power» (fundador); sons do kit da Expedição.
 Detalhe completo: `../CAMPANHA_NAUCTIS_EMBALAGENS.md`.
+- Símbolos de mana: fonte Mana de Andrew Gioia (SIL OFL 1.1); símbolos © Wizards of the Coast.
