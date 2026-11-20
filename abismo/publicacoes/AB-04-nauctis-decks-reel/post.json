@@ -1,0 +1,187 @@
+{
+ "id": "AB-04-nauctis-decks-reel",
+ "formato": "reel",
+ "modo": "decks",
+ "medidor": false,
+ "porque_formato": "Reel de 48 batidas com «Auction of Power»: quatro decks em sequência, um por compasso duplo (8 batidas, ~3,4 s), o deck dos tubarões a entrar exatamente no drop e uma grelha-resumo antes da assinatura. Sem narração.",
+ "gancho": [
+  "OS 4 DECKS DE COMMANDER",
+  "DE NAUCTIS"
+ ],
+ "gancho_carta": {
+  "png": "saida/cartas/ignoble_nac6.png",
+  "set": "nac",
+  "num": "6",
+  "nome": "\"The Ignoble Serpent\"",
+  "colecao": "Nauctis: The Sunken Realm Commander",
+  "artista": "John Tedrick"
+ },
+ "batidas": {
+  "entrada": 4,
+  "resumo": 36,
+  "fim": 44
+ },
+ "decks": [
+  {
+   "nome": "Merfolk Regiment",
+   "titulo": [
+    "MERFOLK",
+    "REGIMENT"
+   ],
+   "guilda": "BANT",
+   "cores": [
+    "W",
+    "U",
+    "G"
+   ],
+   "batida": 4,
+   "batida_fim": 12,
+   "chips": [
+    [
+     "OFICIAL · CAPTAIN HANNO COROLEAN",
+     "info"
+    ],
+    [
+     "LEITURA · CONVOKE E IR LARGO",
+     "leitura"
+    ]
+   ],
+   "frase": {
+    "texto": "Tritões de toda a história do Magic.",
+    "amarelo": [
+     0,
+     4
+    ]
+   }
+  },
+  {
+   "nome": "Terrors of the Abyss",
+   "titulo": [
+    "TERRORS OF",
+    "THE ABYSS"
+   ],
+   "guilda": "SULTAI",
+   "cores": [
+    "U",
+    "B",
+    "G"
+   ],
+   "batida": 12,
+   "batida_fim": 20,
+   "carta": {
+    "png": "saida/cartas/ignoble_nac6.png",
+    "set": "nac",
+    "num": "6",
+    "nome": "\"The Ignoble Serpent\"",
+    "colecao": "Nauctis: The Sunken Realm Commander",
+    "artista": "John Tedrick"
+   },
+   "chips": [
+    [
+     "OFICIAL · MONSTROS COLOSSAIS",
+     "info"
+    ],
+    [
+     "VAZADO · NOME PROVISÓRIO",
+     "mau"
+    ]
+   ],
+   "frase": {
+    "texto": "Monstros marinhos voltam do cemitério.",
+    "amarelo": [
+     0,
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "nome": "Blood in the Water",
+   "titulo": [
+    "BLOOD IN",
+    "THE WATER"
+   ],
+   "guilda": "IZZET",
+   "cores": [
+    "U",
+    "R"
+   ],
+   "batida": 20,
+   "batida_fim": 28,
+   "chips": [
+    [
+     "OFICIAL · SHREDMOUTH",
+     "info"
+    ],
+    [
+     "OFICIAL · DESCARTE",
+     "info"
+    ],
+    [
+     "LEITURA · DECK AGRESSIVO",
+     "leitura"
+    ]
+   ],
+   "frase": {
+    "texto": "Tubarões atacam e criam fichas de Sangue.",
+    "amarelo": [
+     0,
+     6
+    ]
+   }
+  },
+  {
+   "nome": "Seal the Deal",
+   "titulo": [
+    "SEAL THE",
+    "DEAL"
+   ],
+   "guilda": "BOROS",
+   "cores": [
+    "W",
+    "R"
+   ],
+   "batida": 28,
+   "batida_fim": 36,
+   "chips": [
+    [
+     "OFICIAL · GALLORTE",
+     "info"
+    ],
+    [
+     "OFICIAL · GROUP HUG",
+     "info"
+    ],
+    [
+     "LEITURA · VIDA POR TESOUROS",
+     "leitura"
+    ]
+   ],
+   "frase": {
+    "texto": "Troque dor por Tesouro.",
+    "amarelo": [
+     1,
+     3
+    ]
+   }
+  }
+ ],
+ "resumo": {
+  "titulo": [
+   "LISTAS AINDA",
+   "NÃO REVELADAS"
+  ],
+  "selo": "LANÇAMENTO · 05/02/2027"
+ },
+ "pergunta": [
+  "QUAL VOCÊ QUER?",
+  "COMENTE 1, 2, 3 OU 4"
+ ],
+ "capa": {
+  "texto": [
+   "OS 4 DECKS",
+   "DE NAUCTIS"
+  ],
+  "sub": "COMMANDER · O QUE JÁ FOI REVELADO"
+ }
+}

@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 20/11/2026 (10:00) · ABISMO: modo «decks» no motor e etiqueta de leitura
+
+**O quê:** (1) o motor do ABISMO aceita `"modo": "decks"` no `post.json` de um Reel: gancho, um segmento por deck (batidas no post), grelha-resumo com pergunta e a assinatura de sempre; layout em `abismo/modelos/reel.json` → `decks`. Cada deck distingue-se só pelas suas cores de mana (pontos e filete do espaço da carta); deck sem carta pública mostra um espaço de carta vazio com «?», nunca arte inventada. (2) Novo estilo de etiqueta `leitura` (contorno branco sem preenchimento) para interpretação estratégica, ao lado das etiquetas oficiais (branco preenchido) e de condição/vazamento (vermelho).
+**Porquê:** missão de produção do fundador de 20/11/2026 (09:28) — AB-04, «Nauctis: os quatro Commander decks», com identidade própria por deck dentro do ABISMO e a regra de distinguir informação oficial de interpretações.
+**Impacto:** só a frente ABISMO. Posts antigos (modo de uma carta) renderizam igual (testado no AB-03). Documentado em `abismo/IDENTIDADE.md` e `abismo/README.md`.
+
 ## 19/11/2026 (19:11) · Nova série Lisa Marie no Ar integrada no repositório — VJ cultural ligada à cultura pop
 
 - **Pedido do fundador (19/11, 19:11):** integrar definitivamente a frente a partir do pacote de pré-produção de 17/11 («Lisa Marie no Ar», preparado no ChatGPT e nunca aplicado), com a nova personagem «que vai estrear no BINDER Originals» e que «tem que ser muito ligada à cultura pop»; enviou também a prancha «10 inspirações para sua identidade visual».

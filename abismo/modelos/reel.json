@@ -45,5 +45,48 @@
   "revelação de informação": "batida 12 (+2 por etiqueta)",
   "maior impacto": "batida 20 = drop da faixa (64)",
   "encerramento": "batida 44, assinatura até 48"
+ },
+ "decks": {
+  "descricao": "modo \"decks\" (AB-04): sequência de N decks no mesmo Reel; gancho, um segmento por deck (batidas em post.json), grelha-resumo com pergunta, assinatura. Cada deck tem a sua cor de identidade (pontos de cor), dentro do sistema gráfico do ABISMO.",
+  "pill_y": 262,
+  "titulo_y": 348,
+  "titulo_tam": 104,
+  "slot_escala": 0.44,
+  "slot_topo": 612,
+  "chips_y": 1340,
+  "cores_mana": {
+   "W": [
+    246,
+    232,
+    190
+   ],
+   "U": [
+    64,
+    150,
+    230
+   ],
+   "B": [
+    150,
+    132,
+    166
+   ],
+   "R": [
+    232,
+    72,
+    52
+   ],
+   "G": [
+    44,
+    176,
+    96
+   ]
+  },
+  "nomes_mana": {
+   "W": "BRANCO",
+   "U": "AZUL",
+   "B": "PRETO",
+   "R": "VERMELHO",
+   "G": "VERDE"
+  }
  }
 }

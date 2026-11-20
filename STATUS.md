@@ -3,6 +3,10 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
+## ABISMO · AB-04 (20/11/2026, 10h) — os quatro decks de Commander de Nauctis
+
+**CONCLUÍDO, não publicado.** Reel sem voz de 20,57 s com «Auction of Power» (Blood in the Water no drop), capa em grelha 2×2, legenda, comentário fixado, texto alternativo, fontes e ficha em `abismo/publicacoes/AB-04-nauctis-decks-reel/`. Motor do ABISMO com o modo `"modo": "decks"` e a etiqueta de leitura (contorno) — `nucleo/DECISOES.md` 20/11. Só o Terrors tem carta pública (NAC 6); os outros três decks entram com espaço «?» até a Wizards revelar comandantes (basta pôr `"carta"` no deck e voltar a renderizar). Custo zero. **Depende do fundador:** aprovar e publicar.
+
 ## Missão estrutural (19/11/2026) — gancho visual, gates e testes
 
 Gancho visual passa a componente do briefing (7 campos antes do roteiro, rubrica 1–5, aplicação por frente: `nucleo/SHOWRUNNER.md` §4.1); revisão narrativa antes da voz (§4.2); gates P0/P1/P2 consolidados e bloco F (`nucleo/CHECKLIST_QUALIDADE.md`); ficha com gancho, rubrica e linhas de retenção; testes comparáveis em `comum/insights/LEIA-ME.md`; constituição v1.7. MC-ESP03 corrigido: parceiro-alvo Farpas de Mana, fonte o portal DC500 do Farpas (MTGDC500 / Lotus fora). Relatório, inconsistências e decisões pendentes: `nucleo/auditorias/2026-11-19_missao_estrutural.md`.

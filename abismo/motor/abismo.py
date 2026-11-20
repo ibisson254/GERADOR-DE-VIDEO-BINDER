@@ -103,6 +103,11 @@ def zonas_calma():
     """hierarquia: a carta é o único destaque. Atrás dela e do texto, o movimento do fundo quase desaparece."""
     k = ID['vida']['calma']; mg = k['margem_px']
     if 'carta' not in MOD: return [(140, 120, W - 140, H - 120, k['carta'], mg)]
+    if CFG.get('modo') == 'decks':   # sequência de decks: calma atrás do título, da carta e das etiquetas
+        L = MOD['decks']; cw = W * L['slot_escala']
+        return [(90, L['titulo_y'] - 80, W - 90, L['titulo_y'] + 190, k['texto'], mg),
+                ((W - cw) / 2, L['slot_topo'], (W + cw) / 2, L['slot_topo'] + cw * 1040 / 745, k['carta'], mg),
+                (90, L['chips_y'] - 20, W - 90, MOD['seguro']['legenda'] + 60, k['texto'], mg)]
     h = MOD['carta']; cw = W * h['escala']; S = MOD['seguro']
     return [((W - cw) / 2, h['topo'], (W + cw) / 2, h['topo'] + cw * 1040 / 745, k['carta'], mg),
             (90, h['topo_info'] + W * h['escala_info'] * 1040 / 745, W - 90, S['legenda'] + 60, k['texto'], mg)]
@@ -231,20 +236,23 @@ def timeline():
     for fr in CFG.get('frases', []): fr['t'] = fr['batida'] * P; fr['dur'] = fr.get('batidas', 6) * P
     return T
 
+def assinatura(t, t_fim):
+    """assinatura final: só recursos oficiais (logótipo) e texto real."""
+    im = Image.new('RGBA', (W, H), INK + (255,)); g = Image.new('L', (W, H), 0); ImageDraw.Draw(g).ellipse((140, H * 0.16, 940, H * 0.58), fill=70)
+    im.paste(EM, (0, 0), g.filter(ImageFilter.GaussianBlur(160))); k = eout((t - t_fim) / 0.35); s = int(240 * (0.8 + 0.2 * k))
+    lg = LOGO.resize((s, s), Image.LANCZOS); im.alpha_composite(lg, (int(W / 2 - s / 2), int(H * 0.36 - s / 2)))
+    d = ImageDraw.Draw(im, 'RGBA'); f = F('black', 100); w1 = d.textlength('BINDER ', font=f); w2 = d.textlength('Vision', font=f); xx = (W - w1 - w2) / 2; yy = H * 0.36 + 220
+    d.text((xx, yy), 'BINDER ', font=f, fill=WHITE, anchor='lm'); d.text((xx + w1, yy), 'Vision', font=f, fill=EM, anchor='lm')
+    for i, ln in enumerate(ID['marca']['assinatura']): text_center(d, ln, yy + 110 + i * 64, 'semi' if i < 2 else 'black', 42 if i < 2 else 48, (EM if i == 2 else WHITE))
+    return im.convert('RGB')
+
 def frame_anim(t, T):
     c = CFG['carta']; S = MOD['seguro']; hero = MOD['carta']
     cw = W * hero['escala']; ch_ = cw * 1040 / 745; x = (W - cw) / 2; y = hero['topo'] + 4 * math.sin(2 * math.pi * t / 3)
     lit = ease((t - T['impacto']) / 0.6) if t >= T['impacto'] else 0.0
     im = fundo(t, lotus=lit, energy=0.6, pulse=0.0, glitch=1.0 if any(0 <= t - u < 2.5 / FPS for u in (T['entrada'], T['impacto'])) else 0.0)
     d = ImageDraw.Draw(im, 'RGBA')
-    if t >= T['fim']:   # assinatura: só recursos oficiais (logótipo) e texto real
-        im = Image.new('RGBA', (W, H), INK + (255,)); g = Image.new('L', (W, H), 0); ImageDraw.Draw(g).ellipse((140, H * 0.16, 940, H * 0.58), fill=70)
-        im.paste(EM, (0, 0), g.filter(ImageFilter.GaussianBlur(160))); k = eout((t - T['fim']) / 0.35); s = int(240 * (0.8 + 0.2 * k))
-        lg = LOGO.resize((s, s), Image.LANCZOS); im.alpha_composite(lg, (int(W / 2 - s / 2), int(H * 0.36 - s / 2)))
-        d = ImageDraw.Draw(im, 'RGBA'); f = F('black', 100); w1 = d.textlength('BINDER ', font=f); w2 = d.textlength('Vision', font=f); xx = (W - w1 - w2) / 2; yy = H * 0.36 + 220
-        d.text((xx, yy), 'BINDER ', font=f, fill=WHITE, anchor='lm'); d.text((xx + w1, yy), 'Vision', font=f, fill=EM, anchor='lm')
-        for i, ln in enumerate(ID['marca']['assinatura']): text_center(d, ln, yy + 110 + i * 64, 'semi' if i < 2 else 'black', 42 if i < 2 else 48, (EM if i == 2 else WHITE))
-        return im.convert('RGB')
+    if t >= T['fim']: return assinatura(t, T['fim'])
     if t < T['entrada']:      # gancho: promessa escrita desde o quadro 0 sobre a silhueta
         br = 0.16 + 0.45 * math.exp(-((t - 0.33) / 0.06) ** 2)
         paste_card(im, silhouette(c, cw, round(br, 2)), x, y)
@@ -296,7 +304,168 @@ def zoom(im, cx, cy, z):
     w, h = W / z, H / z; x0 = min(max(cx - w / 2, 0), W - w); y0 = min(max(cy - h / 2, 0), H - h)
     return im.resize((W, H), Image.BICUBIC, box=(x0, y0, x0 + w, y0 + h))
 
+# ---------- modo "decks": vários decks no mesmo Reel (AB-04) ----------
+# Mesmo fundo, vida, cartão, etiquetas, legendas, música e assinatura do modelo de uma carta. Cada deck ganha identidade
+# própria só pelos pontos das suas cores de mana e pelo filete do espaço da carta; o resto é o sistema do ABISMO.
+# Decks sem carta revelada mostram um espaço de carta vazio com «?» (nunca arte inventada).
+CHIP['leitura'] = (None, WHITE)   # interpretação estratégica: contorno branco, sem preenchimento (≠ facto oficial)
+def mana_cols(cores): return [tuple(MOD['decks']['cores_mana'][c]) for c in cores]
+def dots(d, cores, x, y, r=13, a=255):
+    for i, col in enumerate(mana_cols(cores)):
+        cx = x + i * (2 * r + 8)
+        d.ellipse((cx - r - 3, y - r - 3, cx + r + 3, y + r + 3), fill=INK + (int(a * 0.9),)); d.ellipse((cx - r, y - r, cx + r, y + r), fill=col + (a,))
+    return len(cores) * (2 * r + 8) - 8
+_slots = {}
+def slot(dk, w):
+    """espaço de carta ainda não revelada: vidro escuro, filete nas cores do deck, «?»."""
+    k = (dk['nome'], int(w))
+    if k in _slots: return _slots[k]
+    w = int(w); h = round(w * 1040 / 745); r = int(w * 0.045); cols = mana_cols(dk['cores'])
+    im = Image.new('RGBA', (w, h), (0, 0, 0, 0)); g = np.zeros((h, w, 3), np.float32); yy = np.linspace(0, 1, h)[:, None]
+    for i, col in enumerate(cols):   # gradiente vertical suave entre as cores do deck
+        c0 = i / max(1, len(cols) - 1) if len(cols) > 1 else 0.5
+        wgt = np.exp(-((yy - c0) / 0.45) ** 2); g += wgt[..., None] * np.array(col, np.float32)[None, None, :] * np.ones((1, w, 1))
+    g = g / max(1e-6, g.max()) * 120
+    base = Image.fromarray(np.clip(g * 0.35 + np.array(INK, np.float32) * 0.9, 0, 255).astype(np.uint8)).convert('RGBA')
+    m = Image.new('L', (w, h), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w - 1, h - 1), radius=r, fill=225); base.putalpha(m)
+    im.alpha_composite(base); d = ImageDraw.Draw(im, 'RGBA')
+    for i, col in enumerate(cols):   # filete: um segmento por cor
+        y0 = i * h / len(cols); y1 = (i + 1) * h / len(cols)
+        d.rectangle((0, y0, 7, y1), fill=col + (255,)); d.rectangle((w - 8, y0, w - 1, y1), fill=col + (255,))
+    d.rounded_rectangle((0, 0, w - 1, h - 1), radius=r, outline=(255, 255, 255, 70), width=2)
+    d.text((w / 2, h * 0.43), '?', font=F('black', int(w * 0.5)), fill=(255, 255, 255, 235), anchor='mm')
+    fs = min(34, int(w * 0.072))
+    for j, ln in enumerate(('CARTAS AINDA', 'NÃO REVELADAS')): d.text((w / 2, h * 0.74 + j * fs * 1.3), ln, font=F('bold', fs), fill=(225, 238, 240, 230), anchor='mm')
+    m2 = Image.new('L', (w, h), 0); ImageDraw.Draw(m2).rounded_rectangle((0, 0, w - 1, h - 1), radius=r, fill=255)
+    im.putalpha(Image.fromarray(np.minimum(np.array(im.getchannel('A')), np.array(m2)))); _slots[k] = im; return im
+
+def chips_row(im, chips, chips_t, t, y, a_glob=1.0):
+    """etiquetas centradas (mesmo desenho do cartão informativo); 'leitura' = contorno, para separar facto de interpretação."""
+    d = ImageDraw.Draw(im, 'RGBA'); f = F('bold', 28); maxw = W - 160; rows, row, rw = [], [], 0
+    for c, tc in zip(chips, chips_t):
+        cw_ = d.textlength(c[0], font=f) + 40
+        if row and rw + cw_ > maxw: rows.append((row, rw - 12)); row, rw = [], 0
+        row.append((c, tc, cw_)); rw += cw_ + 12
+    if row: rows.append((row, rw - 12))
+    for r_, tot in rows:
+        x = (W - tot) / 2
+        for (c, tc, cw_) in r_:
+            kk = eout((t - tc) / 0.2) * a_glob
+            if kk > 0:
+                bg, fg = CHIP[c[1]]; sc = 0.85 + 0.15 * kk; x0, x1 = x, x + cw_ * sc; y0, y1 = y + (1 - sc) * 24, y + 48 - (1 - sc) * 24
+                if bg is None:
+                    d.rounded_rectangle((x0, y0, x1, y1), radius=24, fill=INK + (int(170 * kk),), outline=fg + (int(235 * kk),), width=3)
+                else:
+                    d.rounded_rectangle((x0, y0, x1, y1), radius=24, fill=bg + (int(240 * kk),))
+                d.text(((x0 + x1) / 2, y + 24), c[0], font=F('bold', int(28 * sc)), fill=fg + (int(255 * kk),), anchor='mm')
+            x += cw_ + 12
+        y += 60
+
+def timeline_decks():
+    P = ID['musica']['periodo']; T = {'total': MOD['batidas_total'] * P, 'impacto': MOD['momentos']['impacto'] * P}
+    for k in ('entrada', 'resumo', 'fim'): T[k] = CFG['batidas'][k] * P
+    for dk in CFG['decks']:
+        dk['t0'] = dk['batida'] * P; dk['t1'] = dk['batida_fim'] * P
+        dk['chips_t'] = [dk['t0'] + (dk.get('chips_batida', 2) + i) * P for i in range(len(dk['chips']))]
+    fr = []
+    for dk in CFG['decks']:
+        if dk.get('frase'): fr.append(dict(dk['frase'], t=dk['t0'] + 0.5 * P, dur=(dk['batida_fim'] - dk['batida'] - 0.9) * P))
+    CFG['frases'] = fr
+    return T
+
+def frame_decks(t, T):
+    S = MOD['seguro']; L = MOD['decks']; P = ID['musica']['periodo']
+    lit = ease((t - T['impacto']) / 0.6) if t >= T['impacto'] else 0.0
+    gl = 1.0 if any(0 <= t - u < 2.5 / FPS for u in [T['impacto']] + [dk['t0'] for dk in CFG['decks']]) else 0.0
+    im = fundo(t, lotus=lit, energy=0.6, pulse=0.0, glitch=gl)
+    if t >= T['fim']: return assinatura(t, T['fim'])
+    if t < T['entrada']:   # gancho: carta real (silhueta) + promessa escrita desde o quadro 0 + os 4 decks em pílulas
+        c = CFG['gancho_carta']; hero = MOD['carta']; cw = W * hero['escala']; ch_ = cw * 1040 / 745; x = (W - cw) / 2; y = hero['topo'] + 4 * math.sin(2 * math.pi * t / 3)
+        br = 0.16 + 0.45 * math.exp(-((t - 0.33) / 0.06) ** 2)
+        paste_card(im, silhouette(c, cw, round(br, 2)), x, y)
+        im = zoom(im, W / 2, y + ch_ / 2, lerp(1.0, 1.08, t / T['entrada'])); d = ImageDraw.Draw(im, 'RGBA')
+        tracked(d, ID['etiqueta'], S['topo'] + 6, 'bold', 24, EM + (230,), track=0.2)
+        for i, ln in enumerate(CFG['gancho']): text_center(d, ln, S['topo'] + 100 + i * 100, 'black', 92, YEL if i == len(CFG['gancho']) - 1 else WHITE, stroke=6)
+        n = len(CFG['decks']); pw = 240; gap = 10; x0 = (W - n * pw - (n - 1) * gap) / 2; yp = S['legenda'] - 60
+        for i, dk in enumerate(CFG['decks']):
+            k = 1.0   # visíveis desde o quadro 0 (miniatura sem som: percebe-se que são 4 decks)
+            xx = x0 + i * (pw + gap); d.rounded_rectangle((xx, yp - 34, xx + pw, yp + 34), radius=34, fill=INK + (int(220 * k),))
+            d.text((xx + 30, yp), str(i + 1), font=F('black', 36), fill=EM + (int(255 * k),), anchor='mm')
+            wd = dots(d, dk['cores'], 0, -100, r=9, a=0)   # largura das bolinhas
+            dots(d, dk['cores'], xx + pw - 26 - wd + 9, yp, r=9, a=int(255 * k))
+            d.text((xx + 54, yp), dk['guilda'], font=fit(d, dk['guilda'], 'bold', 26, pw - 54 - 26 - wd - 12), fill=WHITE + (int(255 * k),), anchor='lm')
+        logo_small(im); return im.convert('RGB')
+    if t >= T['resumo']: return resumo(im, t, T)
+    dk = None
+    for x in CFG['decks']:
+        if x['t0'] <= t < x['t1']: dk = x
+    if dk is None: logo_small(im); return im.convert('RGB')
+    i = CFG['decks'].index(dk); n = len(CFG['decks']); dt = t - dk['t0']
+    kin = eout(dt / 0.25); kout = 1 - ease((t - (dk['t1'] - 0.16)) / 0.16) if t > dk['t1'] - 0.16 else 1.0
+    a = kin * kout; dx = (1 - kin) * 70 - (1 - kout) * 70
+    d = ImageDraw.Draw(im, 'RGBA')
+    # pílula: DECK n/N · guilda · cores
+    lab = f'DECK {i + 1}/{n}'; f = F('black', 34); wl = d.textlength(lab, font=f); g = dk['guilda']; fg_ = F('bold', 31); wg = d.textlength(g, font=fg_)
+    wd = len(dk['cores']) * 34 - 8; tw = 28 + wl + 22 + wg + 22 + wd + 28; xp = (W - tw) / 2 + dx; yp = L['pill_y']
+    d.rounded_rectangle((xp, yp - 32, xp + tw, yp + 32), radius=32, fill=INK + (int(225 * a),))
+    d.text((xp + 28, yp), lab, font=f, fill=EM + (int(255 * a),), anchor='lm')
+    d.text((xp + 28 + wl + 22, yp), g, font=fg_, fill=WHITE + (int(255 * a),), anchor='lm')
+    dots(d, dk['cores'], xp + 28 + wl + 22 + wg + 22 + 13, yp, r=13, a=int(255 * a))
+    tracked(d, ' · '.join(L['nomes_mana'][c] for c in dk['cores']), yp + 56, 'semi', 24, (225, 238, 240, int(210 * a)), track=0.14)
+    # título do deck (duas linhas, mesma escala para os 4)
+    for j, ln in enumerate(dk['titulo']):
+        ty = L['titulo_y'] + 40 + j * (L['titulo_tam'] + 4)
+        d.text((W / 2 + dx, ty), ln, font=fit(d, ln, 'black', L['titulo_tam'], W - 140), fill=WHITE + (int(255 * a),), anchor='mm', stroke_width=6, stroke_fill=INK)
+    # carta real ou espaço por revelar
+    pz = pulso(t, t >= T['impacto']); cw = round(W * L['slot_escala'] * pz / 2) * 2; ch_ = cw * 1040 / 745
+    x = (W - cw) / 2 + dx; y = L['slot_topo'] + 4 * math.sin(2 * math.pi * t / 3) - W * L['slot_escala'] * 1040 / 745 * (pz - 1) / 2
+    if lit > 0 and dk['t0'] >= T['impacto'] - 1e-6: glow(im, x, y, cw, ch_, lit * 0.6 * (0.75 + 12 * (pz - 1)) * a)
+    elif dk.get('carta'): glow(im, x, y, cw, ch_, 0.25 * a)
+    cc = card(dk['carta'], cw) if dk.get('carta') else slot(dk, cw)
+    if dt < 1.0: cc = entry_luz(cc, dt / 0.95)
+    if a < 1: cc = cc.copy(); cc.putalpha(Image.fromarray((np.array(cc.getchannel('A')) * a).astype(np.uint8)))
+    paste_card(im, cc, x, y)
+    if dk.get('carta'): credit(im, dk['carta'], y + ch_ + 24)
+    else:
+        d = ImageDraw.Draw(im, 'RGBA'); s = dk.get('nota_slot', 'Wizards ainda não mostrou cartas deste deck')
+        d.text((W / 2 + dx, y + ch_ + 26), s, font=fit(d, s, 'med', 22, W - 180), fill=(225, 238, 240, int(205 * a)), anchor='mm')
+    chips_row(im, dk['chips'], dk['chips_t'], t, L['chips_y'], a_glob=kout)
+    logo_small(im)
+    frase(im, t, S['legenda'])
+    return im.convert('RGB')
+
+def resumo(im, t, T):
+    """grelha 2×2 dos decks + o que ainda falta + pergunta (uma só ação)."""
+    S = MOD['seguro']; d = ImageDraw.Draw(im, 'RGBA'); k0 = eout((t - T['resumo']) / 0.3); R = CFG['resumo']
+    tracked(d, ID['etiqueta'], S['topo'] + 6, 'bold', 24, EM + (int(230 * k0),), track=0.2)
+    for j, ln in enumerate(R['titulo']): text_center(d, ln, S['topo'] + 92 + j * 86, 'black', 78, WHITE + (int(255 * k0),), stroke=6)
+    tw, th, gx, gy = 440, 300, 24, 24; x0 = (W - 2 * tw - gx) / 2; y0 = S['topo'] + 260
+    for i, dk in enumerate(CFG['decks']):
+        k = eout((t - T['resumo'] - 0.1 - i * 0.07) / 0.25)
+        if k <= 0: continue
+        xx = x0 + (i % 2) * (tw + gx); yy = y0 + (i // 2) * (th + gy) + (1 - k) * 30
+        d.rounded_rectangle((xx, yy, xx + tw, yy + th), radius=24, fill=INK + (int(205 * k),))
+        for j, col in enumerate(mana_cols(dk['cores'])):   # filete nas cores do deck
+            h3 = (th - 40) / len(dk['cores']); d.rectangle((xx, yy + 20 + j * h3, xx + 7, yy + 20 + (j + 1) * h3), fill=col + (int(255 * k),))
+        d.text((xx + 34, yy + 46), str(i + 1), font=F('black', 54), fill=EM + (int(255 * k),), anchor='lm')
+        dots(d, dk['cores'], xx + tw - 34 - (len(dk['cores']) * 34 - 8) + 13, yy + 46, r=13, a=int(255 * k))
+        for j, ln in enumerate(dk['titulo']):
+            d.text((xx + 34, yy + 128 + j * 54), ln, font=fit(d, ln, 'black', 50, tw - 60), fill=WHITE + (int(255 * k),), anchor='lm')
+        d.text((xx + 34, yy + th - 40), dk['guilda'], font=F('bold', 28), fill=(225, 238, 240, int(220 * k)), anchor='lm')
+    yq = y0 + 2 * th + gy + 70; kq = eout((t - T['resumo'] - 0.9) / 0.3)
+    if kq > 0:
+        cw_ = d.textlength(R['selo'], font=F('bold', 30)) + 48
+        d.rounded_rectangle(((W - cw_) / 2, yq - 26, (W + cw_) / 2, yq + 26), radius=26, fill=EM + (int(240 * kq),))
+        d.text((W / 2, yq), R['selo'], font=F('bold', 30), fill=INK + (int(255 * kq),), anchor='mm')
+    kp = eout((t - T['resumo'] - 1.5) / 0.3)
+    if kp > 0:
+        p1, p2 = CFG['pergunta']
+        text_center(d, p1, yq + 110, 'black', 66, WHITE + (int(255 * kp),), stroke=5)
+        text_center(d, p2, yq + 200, 'black', 78, YEL + (int(255 * kp),), stroke=5)
+    logo_small(im); return im.convert('RGB')
+
 def render_anim():
+    if CFG.get('modo') == 'decks': return render_decks()
     T = timeline(); P = ID['musica']['periodo']
     if CFG.get('comparacao'):
         T['comparacao'] = CFG['comparacao']['batida'] * P; T['comparacao_fim'] = CFG['comparacao']['batida_fim'] * P
@@ -305,13 +474,25 @@ def render_anim():
         mus, _ = musica(MOD['musica'])
         sfx = [(T['entrada'], 'descida'), (T['impacto'], 'swell')] + [(t, 'glitch') for t, ch in zip(T['chips'], CFG['chamada']['chips']) if ch[1] == 'mau']
         mix(mus, sfx, T['total'])
-    n = int(round(T['total'] * FPS)); path = f'{OUT}/video.mp4'
+    encode(frame_anim, T, som)
+
+def render_decks():
+    T = timeline_decks(); som = CFG.get('audio', True)
+    if som:
+        mus, _ = musica(MOD['musica'])
+        sfx = [(dk['t0'], 'descida') for dk in CFG['decks']] + [(T['impacto'], 'swell')]
+        sfx += [(tc, 'glitch') for dk in CFG['decks'] for tc, ch in zip(dk['chips_t'], dk['chips']) if ch[1] == 'mau']
+        mix(mus, sfx, T['total'])
+    encode(frame_decks, T, som)
+
+def encode(frame_fn, T, som):
+    n = int(round(T['total'] * FPS))
     aud = ['-i', f'{OUT}/mix.wav'] if som else []
     enc = ['-c:a', 'aac', '-b:a', '256k', '-ar', '48000', '-shortest'] if som else ['-an']
     p = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
                           *aud, '-c:v', 'libx264', '-preset', 'medium', '-crf', '16', '-pix_fmt', 'yuv420p',
                           *enc, '-movflags', '+faststart', f'{OUT}/{CFG["id"]}_{FMT}.mp4'], stdin=subprocess.PIPE)
-    for fi in range(n): p.stdin.write(frame_anim(fi / FPS, T).tobytes())
+    for fi in range(n): p.stdin.write(frame_fn(fi / FPS, T).tobytes())
     p.stdin.close(); p.wait(); print(f'{OUT}/{CFG["id"]}_{FMT}.mp4', round(T['total'], 2), 's')
 
 # ---------- carrossel (4:5, PNG) ----------
@@ -357,6 +538,9 @@ if __name__ == '__main__':
         n = len(CFG['slides'])
         for i, s in enumerate(CFG['slides']): slide(s, i, n).save(f'{OUT}/{CFG["id"]}_carrossel_{i + 1:02d}.png')
         print(OUT)
+    elif MODE == 'stills' and CFG.get('modo') == 'decks':
+        T = timeline_decks()
+        for s in sys.argv[3:]: frame_decks(float(s), T).save(f'{OUT}/still_{float(s):05.2f}.png')
     elif MODE == 'stills':
         T = timeline(); P = ID['musica']['periodo']
         if CFG.get('comparacao'): T['comparacao'] = CFG['comparacao']['batida'] * P; T['comparacao_fim'] = CFG['comparacao']['batida_fim'] * P

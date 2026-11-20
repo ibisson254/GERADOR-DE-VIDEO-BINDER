@@ -7,7 +7,25 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import abismo as A
 from PIL import ImageDraw
 
-cfg = A.CFG; c = cfg['carta']; cap = cfg.get('capa', {})
+cfg = A.CFG; cap = cfg.get('capa', {})
+if cfg.get('modo') == 'decks':   # AB-04: grelha 2×2 dos decks; carta real onde existe, espaço «?» onde ainda não há
+    im = A.fundo(3.0, lotus=1.0); d = ImageDraw.Draw(im, 'RGBA')
+    A.tracked(d, A.ID['etiqueta'], 300, 'bold', 24, A.EM + (235,), track=0.2); A.logo_small(im, 270)
+    for j, ln in enumerate(cap['texto']): A.text_center(d, ln, 384 + j * 104, 'black', 100, A.YEL if j == len(cap['texto']) - 1 else A.WHITE, stroke=7)
+    cw = 300; ch = cw * 1040 / 745; gx = 70; x0 = (A.W - 2 * cw - gx) / 2; y0 = 660; credito = None
+    for i, dk in enumerate(cfg['decks']):
+        x = x0 + (i % 2) * (cw + gx); y = y0 + (i // 2) * (ch + 96)
+        if dk.get('carta'): A.glow(im, x, y, cw, ch, 0.6); A.paste_card(im, A.card(dk['carta'], cw), x, y); credito = dk['carta']
+        else: A.paste_card(im, A.slot(dk, cw), x, y)
+        d = ImageDraw.Draw(im, 'RGBA'); nome = f'{i + 1} · {dk["nome"].upper()}'
+        d.text((x + cw / 2, y + ch + 34), nome, font=A.fit(d, nome, 'black', 30, cw + 60), fill=A.WHITE, anchor='mm', stroke_width=4, stroke_fill=A.INK)
+    if cap.get('sub'):
+        f = A.fit(d, cap['sub'], 'black', 38, A.W - 220); tw = d.textlength(cap['sub'], font=f); yy = 586
+        d.rounded_rectangle(((A.W - tw) / 2 - 28, yy - 30, (A.W + tw) / 2 + 28, yy + 30), radius=30, fill=A.INK + (225,))
+        d.text((A.W / 2, yy), cap['sub'], font=f, fill=A.WHITE, anchor='mm')
+    if credito: A.credit(im, credito, A.H - 150)
+    out = f'{A.OUT}/{cfg["id"]}_capa.png'; im.convert('RGB').save(out); print(out); sys.exit(0)
+c = cfg['carta']
 linhas = cap.get('texto', cfg.get('gancho', [])); sub = cap.get('sub', '')
 im = A.fundo(3.0, lotus=1.0)
 d = ImageDraw.Draw(im, 'RGBA')

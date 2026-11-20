@@ -25,6 +25,8 @@ O fundo das duas últimas cartas do vídeo de referência (Tecton e Abyssal Lotu
 - **Ficha**: pílula escura `NOME · Tipo · Camada` antes da informação.
 - **Cartão informativo**: fundo tinta #050A10 a ~78%, filete esmeralda à esquerda, sobretítulo esmeralda, título Inter Display Black;
   etiquetas só quando informam: verde = vantagem, vermelho = condição/custo, branco = dado neutro.
+- **Etiqueta de leitura** (desde 20/11/2026): contorno branco sem preenchimento = interpretação estratégica (não confirmada); branco preenchido = facto oficial; vermelho = condição ou vazamento.
+- **Modo «decks»** (Reel com vários decks, AB-04): cada deck só se distingue pelas suas cores de mana (pontos e filete do espaço da carta, nomes das cores por extenso); deck sem carta pública = espaço de carta vazio com «?». Layout em `modelos/reel.json` → `decks`.
 - **Legendas de ecrã** (Reel; no Story o cartão informativo substitui-as, para não sobrepor): Inter Display Black 58, branco com palavras-chave a amarelo #FFD640, contorno tinta.
 - **Marca**: só o logótipo oficial (`manaburn/logo/logo_mark.png`), canto superior direito a 60%; assinatura final
   com logótipo, "BINDER Vision" e "Link na bio". O símbolo nunca é redesenhado.

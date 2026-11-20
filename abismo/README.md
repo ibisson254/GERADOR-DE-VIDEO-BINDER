@@ -22,7 +22,7 @@ Kit de produção isolado e reutilizável, exclusivo da edição **Nauctis**, de
 | `PROCESSO.md` | pesquisa, escolha de formato, QC, pacote de entrega |
 | `REGISTRO.md` | memória do projeto: uma linha por publicação |
 | `kit/` | fundo mestre em placa (9:16 e 4:5) para usos fora do motor |
-| `motor/abismo.py` | motor único dos três formatos |
+| `motor/abismo.py` | motor único dos três formatos; Reel com vários decks: `"modo": "decks"` (exemplo: `publicacoes/AB-04-nauctis-decks-reel/post.json`) |
 | `motor/capa.py` | capa do Reel 9:16 (essencial no recorte 3:4 da grelha); lê `"capa"` do post.json |
 | `modelos/{reel,story,carrossel}.json` | tempos, zonas seguras e sincronia com a música |
 | `publicacoes/<ID>/post.json` | conteúdo de cada publicação (renders em `saida/`, fora do Git) |
