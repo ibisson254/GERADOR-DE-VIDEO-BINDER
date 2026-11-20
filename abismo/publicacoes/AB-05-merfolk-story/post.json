@@ -1,0 +1,40 @@
+{
+ "id": "AB-05-merfolk-story",
+ "formato": "story",
+ "modo": "deck",
+ "medidor": false,
+ "deck": {
+  "nome": "Merfolk Regiment",
+  "titulo": [
+   "MERFOLK",
+   "REGIMENT"
+  ],
+  "guilda": "BANT",
+  "cores": [
+   "W",
+   "U",
+   "G"
+  ],
+  "embalagem": "abismo/kit/embalagens_nauctis/saida/merfolk.png"
+ },
+ "efeito": "eco",
+ "conceito": [
+  "UM EXÉRCITO",
+  "QUE CRESCE NAS",
+  "PROFUNDEZAS"
+ ],
+ "caixa": [
+  "GO WIDE MERFOLK",
+  "TAP AND CONVOKE"
+ ],
+ "destaque": 1,
+ "descricao": [
+  "Muitos Tritões na mesa, e as criaturas",
+  "viradas ajudam a pagar as mágicas."
+ ],
+ "pergunta": [
+  "VOCÊ PREFERE ENCHER",
+  "A MESA DE CRIATURAS?"
+ ],
+ "porque_formato": "Story de 13,72 s (32 batidas, drop na 8) com a embalagem oficial como protagonista. Go wide: os ecos da caixa abrem-se para os lados no drop (presença coletiva); destaque tipográfico em TAP AND CONVOKE."
+}

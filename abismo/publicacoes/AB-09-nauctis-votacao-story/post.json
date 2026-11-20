@@ -1,0 +1,71 @@
+{
+ "id": "AB-09-nauctis-votacao-story",
+ "formato": "story",
+ "modo": "votacao",
+ "medidor": false,
+ "decks": [
+  {
+   "nome": "Merfolk Regiment",
+   "titulo": [
+    "MERFOLK",
+    "REGIMENT"
+   ],
+   "guilda": "BANT",
+   "cores": [
+    "W",
+    "U",
+    "G"
+   ],
+   "embalagem": "abismo/kit/embalagens_nauctis/saida/merfolk.png"
+  },
+  {
+   "nome": "Terrors of the Abyss",
+   "titulo": [
+    "TERRORS OF",
+    "THE ABYSS"
+   ],
+   "guilda": "SULTAI",
+   "cores": [
+    "U",
+    "B",
+    "G"
+   ],
+   "embalagem": "abismo/kit/embalagens_nauctis/saida/terrors.png"
+  },
+  {
+   "nome": "Blood in the Water",
+   "titulo": [
+    "BLOOD IN",
+    "THE WATER"
+   ],
+   "guilda": "IZZET",
+   "cores": [
+    "U",
+    "R"
+   ],
+   "embalagem": "abismo/kit/embalagens_nauctis/saida/blood.png"
+  },
+  {
+   "nome": "Seal the Deal",
+   "titulo": [
+    "SEAL THE",
+    "DEAL"
+   ],
+   "guilda": "BOROS",
+   "cores": [
+    "W",
+    "R"
+   ],
+   "embalagem": "abismo/kit/embalagens_nauctis/saida/seal.png",
+   "premium": true
+  }
+ ],
+ "pergunta": [
+  "QUAL DESSES DECKS",
+  "VOCÊ LEVARIA PARA",
+  "SUA MESA?"
+ ],
+ "instrucao": "Responda com 1, 2, 3 ou 4.",
+ "credito": "Embalagens oficiais (Seal the Deal: Premium Edition) · © Wizards of the Coast",
+ "porque_formato": "Story de 13,72 s: as 4 caixas acendem uma por batida (4–7), todas juntas no drop; a interação é a caixa de perguntas nativa do Instagram, posta na app na zona livre por baixo (y 1210–1580)."
+}

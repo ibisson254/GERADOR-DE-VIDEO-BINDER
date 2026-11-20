@@ -1,0 +1,118 @@
+{
+ "id": "AB-10-nauctis-carrossel",
+ "formato": "carrossel",
+ "medidor": false,
+ "decks": [
+  {
+   "nome": "Merfolk Regiment",
+   "titulo": [
+    "MERFOLK",
+    "REGIMENT"
+   ],
+   "guilda": "BANT",
+   "cores": [
+    "W",
+    "U",
+    "G"
+   ],
+   "embalagem": "abismo/kit/embalagens_nauctis/saida/merfolk.png"
+  },
+  {
+   "nome": "Terrors of the Abyss",
+   "titulo": [
+    "TERRORS OF",
+    "THE ABYSS"
+   ],
+   "guilda": "SULTAI",
+   "cores": [
+    "U",
+    "B",
+    "G"
+   ],
+   "embalagem": "abismo/kit/embalagens_nauctis/saida/terrors.png"
+  },
+  {
+   "nome": "Blood in the Water",
+   "titulo": [
+    "BLOOD IN",
+    "THE WATER"
+   ],
+   "guilda": "IZZET",
+   "cores": [
+    "U",
+    "R"
+   ],
+   "embalagem": "abismo/kit/embalagens_nauctis/saida/blood.png"
+  },
+  {
+   "nome": "Seal the Deal",
+   "titulo": [
+    "SEAL THE",
+    "DEAL"
+   ],
+   "guilda": "BOROS",
+   "cores": [
+    "W",
+    "R"
+   ],
+   "embalagem": "abismo/kit/embalagens_nauctis/saida/seal.png",
+   "premium": true
+  }
+ ],
+ "slides": [
+  {
+   "tipo": "nauctis_capa",
+   "titulo": "NAUCTIS",
+   "sub": [
+    "QUATRO DECKS.",
+    "QUATRO IDENTIDADES."
+   ],
+   "rodape": "ARRASTE PARA COMPARAR →"
+  },
+  {
+   "tipo": "deck",
+   "deck": 0,
+   "caixa": [
+    "GO WIDE MERFOLK",
+    "TAP AND CONVOKE"
+   ],
+   "destaque": 0,
+   "descricao_oficial": "Captain Hanno Corolean e Tritões de toda a história do Magic.",
+   "proposta": "Encher a mesa de Tritões e virar criaturas para ajudar a pagar mágicas (convoke)."
+  },
+  {
+   "tipo": "deck",
+   "deck": 1,
+   "caixa": [
+    "DISCARD AND MILL",
+    "REANIMATE SEA MONSTERS"
+   ],
+   "destaque": 0,
+   "descricao_oficial": "The Noble Serpent e os monstros colossais das profundezas.",
+   "proposta": "Descartar e moer para encher o cemitério e trazer monstros marinhos de volta."
+  },
+  {
+   "tipo": "deck",
+   "deck": 2,
+   "caixa": [
+    "SHARK ATTACKERS",
+    "DRAW BLOOD AND DISCARD"
+   ],
+   "destaque": 0,
+   "descricao_oficial": "Shredmouth; tubarões que atacam criam fichas de Sangue.",
+   "proposta": "Atacar com tubarões, criar fichas de Sangue e trocar cards descartados por novos."
+  },
+  {
+   "tipo": "deck",
+   "deck": 3,
+   "caixa": [
+    "GROUP HUG",
+    "TRADE PAIN FOR TREASURE"
+   ],
+   "destaque": 0,
+   "descricao_oficial": "Gallorte e sua maestria mercantil.",
+   "proposta": "Group hug: um deck que também dá recursos à mesa, transformando dor em Tesouro."
+  }
+ ],
+ "porque_formato": "Carrossel 4:5 de consulta: capa com as 4 caixas e um slide por deck com os mesmos campos (na caixa, na descrição do produto, a proposta) e uma tira de comparação 1–4."
+}

@@ -1,0 +1,32 @@
+# AB-06 · Story · Terrors of the Abyss (ABISMO, campanha Nauctis)
+
+- **Pedido:** missão de expansão editorial do fundador, 20/11/2026 (10:05). Extensão da pauta AB-04 (decisão em `nucleo/DECISOES.md`, 20/11).
+- **Mensagem única:** As criaturas do abismo não ficam no cemitério. **Objetivo:** resposta ao Story. **Público:** jogadores de Commander PT-BR.
+- **Conceito próprio:** ascensão: a caixa começa no fundo da tela e sobe no drop (reanimar).
+- **Não repete o AB-03:** nenhuma carta vazada, nenhum nome de comandante; o foco é a caixa e a estratégia impressa nela.
+
+## Gancho visual (§4.1)
+1. Quadro 0: a caixa oficial (escurecida) sob «AS CRIATURAS DO ABISMO NÃO FICAM NO CEMITÉRIO». 2. Objeto: embalagem oficial do Terrors of the Abyss. 3. Ação: a caixa pisca e aproxima-se; acende com a faixa de luz aos 1,71 s. 4. Som: descida. 5. Até 3 s: nome do deck e a caixa a acender. 6. Promessa: o que o deck faz. 7. Pagamento: 3,43 s (drop, «REANIMATE SEA MONSTERS» em destaque) e 4,3 s (descrição).
+Rubrica prevista/medida: relevância 5/5 · impacto 4/4 · clareza 5/5 · curiosidade 4/4 · pagamento 5/5 · identidade 5/5.
+
+## Roteiro definitivo (sem voz)
+| Batida | Tempo | Ecrã |
+|---|---|---|
+| 0 | 0,00 | «AS CRIATURAS DO ABISMO NÃO FICAM NO CEMITÉRIO» sobre a caixa escurecida |
+| 4 | 1,71 | Caixa acende · pílula «COMMANDER · NAUCTIS · guilda · cores» · nome do deck |
+| 8 | 3,43 | **Drop** · efeito (ascensão) · chamadas da caixa, «REANIMATE SEA MONSTERS» a amarelo |
+| 10 | 4,29 | Descrição curta em português |
+| 24–32 | 10,29–13,72 | «Você comandaria os monstros das profundezas?» |
+
+## Produção
+- Formato: Story ABISMO (`modelos/story.json`): 32 batidas, 13,72 s, «Auction of Power» batidas 56–64 e 64–88, drop na batida 8 (3,43 s). Sem voz; sons descida (1,71 s) e swell até ao drop. Custo zero.
+- Hierarquia: 1) nome do deck (Inter Display Black 100); 2) chamadas impressas na caixa (a destacada a amarelo, 64 px; a outra branca, 42 px); 3) descrição curta (Inter SemiBold 34). Crédito «Embalagem oficial» sempre visível com a caixa.
+- Fontes: `../CAMPANHA_NAUCTIS_EMBALAGENS.md`. QC: secção «QC» da campanha.
+- Recriar: `python3 -I abismo/motor/abismo.py abismo/publicacoes/AB-06-terrors-story` (precisa das embalagens em `abismo/kit/embalagens_nauctis/saida/`).
+- Ficheiro final (não versionado): `abismo/publicacoes/AB-06-terrors-story/saida/AB-06-terrors-story_story.mp4`.
+
+## Controlo de qualidade
+1080×1920, 30 fps, H.264/AAC 48 kHz, 13,72 s; −14,1 LUFS, pico −2,1 dBTP. Folha de contacto (0,05; 2,2; 3,6; 5,5; 12,5 s) sem sobreposição de texto, caixa identificável com crédito «Embalagem oficial», pergunta/CTA dentro da zona segura (base 1580), sem narração. Detalhe: `../CAMPANHA_NAUCTIS_EMBALAGENS.md` («QC»).
+
+## Ficheiros finais (não versionados)
+`abismo/publicacoes/AB-06-terrors-story/saida/AB-06-terrors-story_story.mp4` (Story: sem capa; o quadro 0 é a abertura).

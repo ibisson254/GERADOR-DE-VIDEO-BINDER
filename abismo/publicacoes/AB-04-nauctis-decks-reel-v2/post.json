@@ -1,0 +1,171 @@
+{
+ "id": "AB-04-nauctis-decks-reel-v2",
+ "formato": "reel",
+ "modo": "decks",
+ "medidor": false,
+ "porque_formato": "Reel de 48 batidas com «Auction of Power»: quatro decks em sequência, um por compasso duplo (8 batidas, ~3,4 s), o deck dos tubarões a entrar exatamente no drop e uma grelha-resumo antes da assinatura. Sem narração. v2: as quatro embalagens oficiais no lugar dos espaços «?» e da carta NAC 6; etiquetas = chamadas impressas nas caixas.",
+ "gancho": [
+  "OS 4 DECKS DE COMMANDER",
+  "DE NAUCTIS"
+ ],
+ "batidas": {
+  "entrada": 4,
+  "resumo": 36,
+  "fim": 44
+ },
+ "decks": [
+  {
+   "nome": "Merfolk Regiment",
+   "titulo": [
+    "MERFOLK",
+    "REGIMENT"
+   ],
+   "guilda": "BANT",
+   "cores": [
+    "W",
+    "U",
+    "G"
+   ],
+   "batida": 4,
+   "batida_fim": 12,
+   "chips": [
+    [
+     "GO WIDE MERFOLK",
+     "info"
+    ],
+    [
+     "TAP AND CONVOKE",
+     "info"
+    ]
+   ],
+   "frase": {
+    "texto": "Tritões de toda a história do Magic.",
+    "amarelo": [
+     0,
+     4
+    ]
+   },
+   "embalagem": "abismo/kit/embalagens_nauctis/saida/merfolk.png"
+  },
+  {
+   "nome": "Terrors of the Abyss",
+   "titulo": [
+    "TERRORS OF",
+    "THE ABYSS"
+   ],
+   "guilda": "SULTAI",
+   "cores": [
+    "U",
+    "B",
+    "G"
+   ],
+   "batida": 12,
+   "batida_fim": 20,
+   "chips": [
+    [
+     "DISCARD AND MILL",
+     "info"
+    ],
+    [
+     "REANIMATE SEA MONSTERS",
+     "info"
+    ]
+   ],
+   "frase": {
+    "texto": "Monstros marinhos voltam do cemitério.",
+    "amarelo": [
+     0,
+     1,
+     4
+    ]
+   },
+   "embalagem": "abismo/kit/embalagens_nauctis/saida/terrors.png"
+  },
+  {
+   "nome": "Blood in the Water",
+   "titulo": [
+    "BLOOD IN",
+    "THE WATER"
+   ],
+   "guilda": "IZZET",
+   "cores": [
+    "U",
+    "R"
+   ],
+   "batida": 20,
+   "batida_fim": 28,
+   "chips": [
+    [
+     "SHARK ATTACKERS",
+     "info"
+    ],
+    [
+     "DRAW BLOOD AND DISCARD",
+     "info"
+    ]
+   ],
+   "frase": {
+    "texto": "Tubarões atacam e criam fichas de Sangue.",
+    "amarelo": [
+     0,
+     6
+    ]
+   },
+   "embalagem": "abismo/kit/embalagens_nauctis/saida/blood.png"
+  },
+  {
+   "nome": "Seal the Deal",
+   "titulo": [
+    "SEAL THE",
+    "DEAL"
+   ],
+   "guilda": "BOROS",
+   "cores": [
+    "W",
+    "R"
+   ],
+   "batida": 28,
+   "batida_fim": 36,
+   "chips": [
+    [
+     "GROUP HUG",
+     "info"
+    ],
+    [
+     "TRADE PAIN FOR TREASURE",
+     "info"
+    ]
+   ],
+   "frase": {
+    "texto": "Troque dor por Tesouro.",
+    "amarelo": [
+     1,
+     3
+    ]
+   },
+   "embalagem": "abismo/kit/embalagens_nauctis/saida/seal.png",
+   "premium": true
+  }
+ ],
+ "resumo": {
+  "titulo": [
+   "LISTAS AINDA",
+   "NÃO REVELADAS"
+  ],
+  "selo": "LANÇAMENTO · 05/02/2027"
+ },
+ "pergunta": [
+  "QUAL VOCÊ QUER?",
+  "COMENTE 1, 2, 3 OU 4"
+ ],
+ "capa": {
+  "texto": [
+   "OS 4 DECKS",
+   "DE NAUCTIS"
+  ],
+  "sub": "COMMANDER · O QUE JÁ FOI REVELADO",
+  "credito": "Embalagens oficiais (Seal the Deal: Premium Edition) · © Wizards of the Coast"
+ },
+ "versao": "v2 · alternativa com as embalagens oficiais (20/11/2026); v1 intacto em ../AB-04-nauctis-decks-reel/",
+ "gancho_embalagens": true
+}

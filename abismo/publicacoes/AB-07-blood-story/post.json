@@ -1,0 +1,39 @@
+{
+ "id": "AB-07-blood-story",
+ "formato": "story",
+ "modo": "deck",
+ "medidor": false,
+ "deck": {
+  "nome": "Blood in the Water",
+  "titulo": [
+   "BLOOD IN",
+   "THE WATER"
+  ],
+  "guilda": "IZZET",
+  "cores": [
+   "U",
+   "R"
+  ],
+  "embalagem": "abismo/kit/embalagens_nauctis/saida/blood.png"
+ },
+ "efeito": "mare",
+ "conceito": [
+  "QUANDO OS TUBARÕES",
+  "ATACAM, O MAR",
+  "FICA VERMELHO"
+ ],
+ "caixa": [
+  "SHARK ATTACKERS",
+  "DRAW BLOOD AND DISCARD"
+ ],
+ "destaque": 0,
+ "descricao": [
+  "Tubarões atacam e criam fichas de Sangue,",
+  "que trocam um card descartado por outro."
+ ],
+ "pergunta": [
+  "VOCÊ ENFRENTARIA UMA",
+  "MESA CHEIA DE TUBARÕES?"
+ ],
+ "porque_formato": "Story de 13,72 s (32 batidas, drop na 8) com a embalagem oficial como protagonista. Sangue na água: mancha vermelha cresce atrás da caixa no drop; destaque em SHARK ATTACKERS."
+}

@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 20/11/2026 (10:05) · ABISMO: campanha Nauctis com as embalagens oficiais (AB-04 v2, AB-05 a AB-10)
+
+**O quê:** (1) as imagens oficiais das embalagens dos decks são material válido e preferível a espaços vazios quando ainda não há cartas: entram como «Embalagem oficial», nunca como carta (`abismo/kit/embalagens_nauctis/`, não versionadas). (2) AB-04 v2 é alternativa ao v1 (v1 intacto; o fundador escolhe qual publica). (3) AB-05 a AB-10 são extensões editoriais da pauta AB-04: o `memoria.py pauta` bloqueou por mesmo objeto (AB-04, AB-03) e por falso positivo (ORB-21); a missão do fundador é a decisão para avançar. (4) Motor do ABISMO: embalagens no modo `decks`, Story `"modo": "deck"`/`"votacao"`, slides de carrossel `nauctis_capa`/`deck`.
+**Porquê:** missão de expansão editorial do fundador de 20/11/2026 (10:05): «Essa decisão confunde duas coisas diferentes: faces de cartas de Commander ainda não reveladas; imagens oficiais das embalagens dos decks, que já existem para os quatro produtos».
+**Impacto:** só ABISMO. Correção factual no v2: «convoke» está impresso na caixa (deixa de ser leitura) e sai «vida por Tesouros» (sem fonte). Regressão do motor testada (AB-03, AB-04 v1). Relatório: `abismo/publicacoes/CAMPANHA_NAUCTIS_EMBALAGENS.md`.
+
 ## 20/11/2026 (10:00) · ABISMO: modo «decks» no motor e etiqueta de leitura
 
 **O quê:** (1) o motor do ABISMO aceita `"modo": "decks"` no `post.json` de um Reel: gancho, um segmento por deck (batidas no post), grelha-resumo com pergunta e a assinatura de sempre; layout em `abismo/modelos/reel.json` → `decks`. Cada deck distingue-se só pelas suas cores de mana (pontos e filete do espaço da carta); deck sem carta pública mostra um espaço de carta vazio com «?», nunca arte inventada. (2) Novo estilo de etiqueta `leitura` (contorno branco sem preenchimento) para interpretação estratégica, ao lado das etiquetas oficiais (branco preenchido) e de condição/vazamento (vermelho).

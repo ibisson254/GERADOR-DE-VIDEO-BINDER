@@ -3,9 +3,9 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
-## ABISMO · AB-04 (20/11/2026, 10h) — os quatro decks de Commander de Nauctis
+## ABISMO · campanha Nauctis (20/11/2026, 11h) — AB-04 v2 e AB-05 a AB-10
 
-**CONCLUÍDO, não publicado.** Reel sem voz de 20,57 s com «Auction of Power» (Blood in the Water no drop), capa em grelha 2×2, legenda, comentário fixado, texto alternativo, fontes e ficha em `abismo/publicacoes/AB-04-nauctis-decks-reel/`. Motor do ABISMO com o modo `"modo": "decks"` e a etiqueta de leitura (contorno) — `nucleo/DECISOES.md` 20/11. Só o Terrors tem carta pública (NAC 6); os outros três decks entram com espaço «?» até a Wizards revelar comandantes (basta pôr `"carta"` no deck e voltar a renderizar). Custo zero. **Depende do fundador:** aprovar e publicar.
+**CONCLUÍDOS, não publicados.** Correção do AB-04: as imagens oficiais das 4 embalagens substituem os «?» num **v2 alternativo** (`abismo/publicacoes/AB-04-nauctis-decks-reel-v2/`); o v1 fica intacto. Novas peças: 4 Stories (AB-05 a AB-08, um conceito por deck), Story de votação AB-09 (caixa de perguntas na app) e carrossel AB-10. Relatório, fontes, QC e limitações: `abismo/publicacoes/CAMPANHA_NAUCTIS_EMBALAGENS.md`. Imagens das caixas: `abismo/kit/embalagens_nauctis/` (não versionadas; Seal = Premium Edition). **Depende do fundador:** escolher v1 ou v2 do Reel, aprovar e publicar; trocar a caixa do Seal pela padrão, se quiser.
 
 ## Missão estrutural (19/11/2026) — gancho visual, gates e testes
 

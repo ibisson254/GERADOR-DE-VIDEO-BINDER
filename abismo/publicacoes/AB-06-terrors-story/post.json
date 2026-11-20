@@ -1,0 +1,40 @@
+{
+ "id": "AB-06-terrors-story",
+ "formato": "story",
+ "modo": "deck",
+ "medidor": false,
+ "deck": {
+  "nome": "Terrors of the Abyss",
+  "titulo": [
+   "TERRORS OF",
+   "THE ABYSS"
+  ],
+  "guilda": "SULTAI",
+  "cores": [
+   "U",
+   "B",
+   "G"
+  ],
+  "embalagem": "abismo/kit/embalagens_nauctis/saida/terrors.png"
+ },
+ "efeito": "ascensao",
+ "conceito": [
+  "AS CRIATURAS DO ABISMO",
+  "NÃO FICAM NO",
+  "CEMITÉRIO"
+ ],
+ "caixa": [
+  "DISCARD AND MILL",
+  "REANIMATE SEA MONSTERS"
+ ],
+ "destaque": 1,
+ "descricao": [
+  "Descartar e moer enchem o cemitério;",
+  "depois os monstros marinhos voltam."
+ ],
+ "pergunta": [
+  "VOCÊ COMANDARIA OS",
+  "MONSTROS DAS PROFUNDEZAS?"
+ ],
+ "porque_formato": "Story de 13,72 s (32 batidas, drop na 8) com a embalagem oficial como protagonista. Reanimar: a caixa está no fundo e sobe no drop. Produto, não os comandantes vazados (AB-03)."
+}

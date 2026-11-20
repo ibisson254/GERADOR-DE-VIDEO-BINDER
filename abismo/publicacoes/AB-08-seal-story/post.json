@@ -1,0 +1,40 @@
+{
+ "id": "AB-08-seal-story",
+ "formato": "story",
+ "modo": "deck",
+ "medidor": false,
+ "deck": {
+  "nome": "Seal the Deal",
+  "titulo": [
+   "SEAL THE",
+   "DEAL"
+  ],
+  "guilda": "BOROS",
+  "cores": [
+   "W",
+   "R"
+  ],
+  "embalagem": "abismo/kit/embalagens_nauctis/saida/seal.png",
+  "premium": true
+ },
+ "efeito": "acordo",
+ "conceito": [
+  "NO FUNDO DO MAR,",
+  "ATÉ AS NEGOCIAÇÕES",
+  "TÊM PREÇO"
+ ],
+ "caixa": [
+  "GROUP HUG",
+  "TRADE PAIN FOR TREASURE"
+ ],
+ "destaque": 1,
+ "descricao": [
+  "Group hug: o deck também dá recursos à mesa.",
+  "A caixa fala em trocar dor por Tesouro."
+ ],
+ "pergunta": [
+  "VOCÊ PREFERE NEGOCIAR",
+  "OU QUEBRAR AS ALIANÇAS?"
+ ],
+ "porque_formato": "Story de 13,72 s (32 batidas, drop na 8) com a embalagem oficial como protagonista. Acordo: as duas chamadas da caixa entram de lados opostos e encontram-se no centro."
+}
