@@ -19,6 +19,8 @@ Gancho visual passa a componente do briefing (7 campos antes do roteiro, rubrica
 
 **Prova de recorte (19/11, 23h45, custo zero):** depois de duas personagens caras e com qualidade fraca, o fundador pediu uma linha alternativa: Lisa de recorte (motion comic), com a arte desenhada uma vez por uma ilustradora em PSD de camadas, boca automática pelo Rhubarb Lip Sync (local, modo fonético) e o motor de montagem. A prova de 5,8 s com o look 1, bocas provisórias e voz sintética foi entregue na conversa. Scripts e defeitos conhecidos em `lisa-marie/kit/prova_recorte/LEIA-ME.md`. **Aguarda veredito do fundador** sobre o estilo antes de encomendar arte; se aprovado, regista-se em `nucleo/DECISOES.md` e substitui a via SVG do `PROMPT_CLAUDE.md` para a personagem.
 
+**Prompts do Gemini (20/11, 00h):** a pedido do fundador, `lisa-marie/PROMPTS_GEMINI.md` gera no app Gemini as 32 imagens do recorte e da douga (mestra M1 primeiro; depois bocas, olhos, expressões, gestos-chave e estúdio ilustrado em 5 conversas paralelas). O ComfyUI **não foi encontrado** no PC do fundador (procurado em Documentos, Ambiente de trabalho, AppData, Program Files, C:\ e D:\, só pelos nomes das pastas, sem acesso aos ficheiros).
+
 **Próxima tarefa:** executar `lisa-marie/PROMPT_CLAUDE.md` para a ficha de modelo e um preview estático para aprovação do fundador; só depois assets recortáveis e o piloto.
 
 ## Missão Master (12/11/2026) — concluída e integrada na `main`
