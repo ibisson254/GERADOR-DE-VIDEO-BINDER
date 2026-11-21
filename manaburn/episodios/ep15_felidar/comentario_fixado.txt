@@ -1,0 +1,16 @@
+A: bato no dono do gato. B: tiro o gato da mesa. Qual você faz?
+
+Como o Felidar ganha no Commander:
+1. Todo mundo começa com 40 de vida (Regras Completas, 903.7).
+2. Você conjura o Felidar Sovereign (6 manas).
+3. A mesa inteira joga.
+4. No início da sua manutenção, se você tiver 40 ou mais, o gatilho dispara. Ao resolver, ele confere de novo. Ainda com 40 ou mais? Você vence.
+
+A pegadinha: ganhar vida durante a manutenção (Oloro, por exemplo) não liga o Felidar nessa mesma manutenção. Ele confere quando a manutenção começa. Com 38, nem dispara.
+
+Como parar: deixar você abaixo de 40 antes da sua manutenção; tirar o Felidar da mesa; ou, se você estiver cravado em 40, causar 1 ponto de dano em resposta ao gatilho.
+
+Texto da carta (Oracle): "Vigilance, lifelink. At the beginning of your upkeep, if you have 40 or more life, you win the game."
+Ruling oficial (25/08/2015): o Felidar confere a vida quando a manutenção começa; se não tiver 40, a habilidade nem dispara; se disparar, confere de novo ao resolver.
+
+Fontes (21/11/2026): Oracle e rulings no Scryfall; Regras Completas, 903.7.

@@ -3,6 +3,10 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
+## MB-EP15 · Felidar Sovereign (21/11/2026, 02h) — EM ANÁLISE, à espera de aprovação
+
+Missão autónoma «PRÓXIMO MANA & BURN» (referência de desempenho: MB-EP13). Três candidatos pesquisados (Felidar Sovereign; Thassa's Oracle + Demonic Consultation; Biovisionary + Rite of Replication); vencedor **Felidar Sovereign** («ganha com 40 de vida; no Commander a gente começa com 40»), rubrica 32 × 28 × 29. Pacote completo de pré-produção em `manaburn/episodios/ep15_felidar/` (ficha com fontes, gancho de 7 campos, roteiro de 14 falas, storyboard, TV SAL, voz, métrica; legenda, comentário fixado, alt; capa no modelo de 14/11). **Zero créditos.** Biovisionary fica como reserva forte. **Depende do fundador:** aprovar o roteiro e autorizar as vozes (~1.000 créditos, estimativa); teaser da manchete 8; confirmar data e impulso do MB-EP13 (as métricas indicam que saiu; o registo ainda diz CONCLUÍDO).
+
 ## ABISMO · campanha Nauctis (20/11/2026, 11h) — AB-04 v2 e AB-05 a AB-10
 
 **CONCLUÍDOS, não publicados.** Correção do AB-04: as imagens oficiais das 4 embalagens substituem os «?» num **v2 alternativo** (`abismo/publicacoes/AB-04-nauctis-decks-reel-v2/`); o v1 fica intacto. Novas peças: 4 Stories (AB-05 a AB-08, um conceito por deck), Story de votação AB-09 (caixa de perguntas na app) e carrossel AB-10. Relatório, fontes, QC e limitações: `abismo/publicacoes/CAMPANHA_NAUCTIS_EMBALAGENS.md`. Imagens das caixas: `abismo/kit/embalagens_nauctis/` (não versionadas; Seal = Premium Edition). **Depende do fundador:** escolher v1 ou v2 do Reel, aprovar e publicar; trocar a caixa do Seal pela padrão, se quiser.
