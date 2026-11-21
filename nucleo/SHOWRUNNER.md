@@ -101,7 +101,7 @@ O gancho decide-se **antes do roteiro**, a partir da evidência visual mais fort
 | Frente | Quadro 0 e objeto | Som | Onde está a regra |
 |---|---|---|---|
 | Meta em Curto | Grelha 2×2 do MC-ESP01 com cartas ou deck reais (e foto do jogador autorizada); revelação até 3 s; mergulho no terminal; dados e fonte legíveis; mudança ≤ 3 s; pagamento; fecho oficial | sonoplastia do TUBO (CRT, modem, glitch) | `oraculo/CONTEXTO.md` §7 |
-| Mana & Burn | Carta ou objeto de Magic na TV SAL com a dor da mesa e um número na 1.ª fala do Burn; evidência visual em cada fala | troca de canal da TV SAL | `manaburn/PERFIL.md` |
+| Mana & Burn | Abertura de carta: a carta falada em tela cheia no quadro 0 (linha destacada + selo com o número), só até o número do gancho ser dito, e depois entra na TV SAL; dor da mesa e número na 1.ª fala do Burn; evidência visual em cada fala | pancada no quadro 0 e troca de canal da TV SAL | `manaburn/PERFIL.md` («Abertura de carta») |
 | Conde de Manaforte | A obra (ou o detalhe que sustenta a análise) já no ecrã enquanto corre a abertura; nunca estatística como gancho | trilha e sons do Tribunal | `conde/PERFIL.md` |
 | Vince Vault | Carta real + número + data, só com os recursos 2D aprovados (3D é arquivo) | só sons aprovados da frente (Fonte sintetizada) | `vince/PERFIL.md` |
 | Órbita | Carta Star Trek inteira e parada desde o quadro 0 (loop de 12 s); nada de outras frentes | sem áudio no ficheiro (música no Instagram) | `orbita/CONTEXTO.md` §4 |

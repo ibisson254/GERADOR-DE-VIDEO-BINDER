@@ -51,6 +51,15 @@ Todas as capas do Mana & Burn, de episódios novos ou pedidas para episódios an
 
 Exemplo: `python3 capas/capa_mb.py --scryfall cmd/215 --frase "O dragão que come" --foco "terreno" --selo "−2 por pancada" --ep 11 --tag Commander --saida MB_EP11_CAPA.png`
 
+## Abertura de carta (padrão desde 21/11/2026)
+
+Decisão do fundador de 21/11/2026, 02:51 (`nucleo/DECISOES.md`). O vídeo abre com a carta de que se fala **em tela cheia**, antes da sala, com `EP.abertura` no `episode.js` e `"abertura": {"ate": …}` no `episode.json` (o mesmo valor).
+- **Quadro 0:** carta inteira (PNG do Scryfall), a linha de regra do gancho destacada (`hl`, mesmas frações do `EP.canais[].hl`) e um selo com o número do gancho sobre a arte, nunca sobre o texto nem a criatura. Legível sem som, em miniatura.
+- **Impacto:** 0–0,18 s escala 1,06→1 com tremor; pancada + pop no áudio.
+- **Tempo:** só o necessário. Sai quando o Burn acaba de dizer a palavra-chave ou o número do gancho (`ate` = fração da 1.ª fala; medir no texto: fim da frase com o número). Mínimo ~1 s, máximo 2,5 s. Se a 1.ª fala não diz o número cedo, reescreve-se a fala, não se estica a abertura.
+- **Saída:** 0,32 s a voar para dentro da TV SAL (som de troca de canal); a tela da TV continua o assunto. A troca a meio da 1.ª tela (`meio.at`) fica depois da aterragem.
+- Não conta como easter egg nem substitui a carta na TV: a TV SAL continua a mostrar a prova de cada fala.
+
 ## Quadro do Conde (padrão desde 21/11/2026)
 
 Decisão do fundador de 21/11/2026 (`nucleo/DECISOES.md`), a partir do MB-EP13. Em todos os episódios novos, o retrato do Conde de Manaforte fica na parede da sala, no lugar do quadro torto, e reage à conversa: `EP.quadroDir: 'kit/v3/conde/'` e `EP.quadro` com uma expressão por fala (`neutro`, `desconfiado`, `indignado`, `admirado`; o `medalhao` não é expressão). A expressão só muda no início de cada plano, nunca com o quadro à vista. Mapa pela emoção da fala do plano: dúvida → desconfiado; exagero ou desdém → indignado; revelação → admirado; abertura e fecho → neutro. Não conta como easter egg.
@@ -61,7 +70,7 @@ Decisão do fundador de 15/11/2026 (`nucleo/DECISOES.md`). O seguidor tem de per
 
 - **Uma imagem real por fala.** Cada fala tem a imagem do que está a ser dito: na TV SAL (um canal por fala, `EP.canais`, com som de troca de canal) ou, quando o plano é de reação (`cuB`/`cuM`), em insert ao lado da personagem (`EP.inserts`). Produto → foto oficial com crédito; carta → PNG do Scryfall; episódio da casa → capa ou quadro real; comunidade → print real do comentário; número → o número gigante na tela, com a fonte.
 - **Leitura de regra = carta com a linha destacada** (`tvtext`), sempre.
-- **Quadro 0 com Magic:** a primeira tela da TV tem uma carta ou um objeto de Magic reconhecível.
+- **Quadro 0 com Magic:** abertura de carta em tela cheia (secção «Abertura de carta»); depois, a primeira tela da TV tem a carta ou o objeto de Magic.
 - **Ritmo:** troca de imagem a cada ≤ 3 s; fala longa sem troca leva insert ou destaque a meio.
 - **Sem imagem real, não há fala sobre isso.** Se a sessão não consegue a imagem, pede-se ao fundador antes do render final; a prévia sai com a moldura «FOTO EM FALTA» e não se publica.
 - Ferramenta de referência: `manaburn/giro/2026-11-15/telas_visuais.py` (gerador de telas com foto, carta, carimbo, número gigante e miniaturas numeradas).

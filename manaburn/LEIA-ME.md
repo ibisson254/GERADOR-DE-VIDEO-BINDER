@@ -97,3 +97,7 @@ Corte das vozes quando a legenda mostra números em algarismos e a voz os diz po
 
 `kit/v3/` veio da branch `manaburn/ep10-97-terrenos` (MB-EP13) e o `index.html` já tem os ganchos aplicados (`patch_index_v3.py` não se volta a correr: recusa um `index.html` que já os tenha). Campos do `episode.js`, todos opcionais: `quadro` + `quadroDir` (retrato do Conde, **padrão** desde 21/11), `calendario` (folhinha), `pilha`, `cams`, `gancho`, `marca`, `loop`, `desliga`, `canais[].subir`. Sem eles, o episódio sai igual ao kit v2 (testado com o Ep. 9). Conferir que as trocas de expressão caem em cortes: `python3 kit/v3/check_quadro.py`. Episódio de referência com o quadro e a TV acesa no quadro 0: `episodios/ep15_felidar/`.
 
+## Abertura de carta (21/11/2026, padrão)
+
+`kit/abertura/patch_abertura.py` já está aplicado ao `index.html`, `sfx.py` e `process.py` (não voltar a correr; reconhece um kit que já o tenha). Campos: `EP.abertura = {img, ate, hl, selo:{txt,x,y,rot,size}, w (660), top (330), saida (0.32), fundoTop (200)}` no `episode.js` e `"abertura": {"ate": …}` no `episode.json` (o mesmo `ate`: o `process.py` põe a pancada no quadro 0 e o «zap» na saída). Regras de uso em `PERFIL.md` («Abertura de carta»). Referência: `episodios/ep15_felidar/`.
+

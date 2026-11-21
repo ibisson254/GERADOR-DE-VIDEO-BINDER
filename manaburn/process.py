@@ -155,7 +155,8 @@ import sfx
 SFX = EPI.get('sfx', {})
 fxt = sfx.track(n, SR, lines, T_SLAM, ins_t, cuts, sh,
                 destaques=destaques if SFX.get('destaque') else (), raiva=raiva if SFX.get('raiva') else (),
-                carta=SFX.get('carta', 'pop'), tv=SFX.get('tv', True), zaps=zaps, zaps_leves=zaps_leves)
+                carta=SFX.get('carta', 'pop'), tv=SFX.get('tv', True), zaps=zaps, zaps_leves=zaps_leves,
+                abertura=(lines[0]['start'] + lines[0]['dur'] * EPI['abertura'].get('ate', 0.45)) if EPI.get('abertura') else None)
 mix = m * g[:, None] + voice[:, None] + fxt
 mix /= np.max(np.abs(mix)) * 1.05
 with wave.open('_mix.wav', 'wb') as o:

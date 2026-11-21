@@ -85,7 +85,7 @@ def zap(sr, dur=0.30, forte=True):
     return out * (1.0 if forte else 0.45)
 
 def track(n, sr, lines, t_slam, inserts=(), tv_cuts=(), shuffle_at=None, destaques=(), raiva=(), carta='pop', tv=True,
-          zaps=(), zaps_leves=()):
+          zaps=(), zaps_leves=(), abertura=None):
     """Camada de efeitos. Os eventos chegam com os horários do process.py (os mesmos que vão para o data.js)."""
     out = np.zeros((n, 2), np.float32)
     def put(t, x, pan=0.0):
@@ -102,4 +102,7 @@ def track(n, sr, lines, t_slam, inserts=(), tv_cuts=(), shuffle_at=None, destaqu
     for t in inserts: put(t, flick(sr) if carta == 'flick' else pop(sr), 0.25)   # on_secondary_card_pop
     for t in destaques: put(t, marker(sr), 0.1)                      # on_oracle_highlight
     for t in raiva: put(t, thump(sr), 0.15)                          # on_rage_arms_up
+    if abertura is not None:                                         # abertura de carta (21/11/2026)
+        put(0.0, thump(sr) * 1.2); put(0.02, pop(sr) * 0.8, 0.1)       # impacto no quadro 0
+        put(max(0, abertura - 0.02), zap(sr), -0.1)                  # a carta entra na TV
     return out

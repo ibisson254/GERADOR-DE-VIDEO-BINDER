@@ -18,6 +18,9 @@ const EP = {
   fx: { foco: true, tremor: true, poster: true, celular: true, scanner: false, tv_ligada: true },
   outro: { assinatura: 'Escaneie suas cartas e organize sua coleção.' },
   card: { img: 'cards/s01_quarenta.png', cred: FEL },
+  // abertura de carta (padrão desde 21/11/2026): o Felidar inteiro em grande no quadro 0, com a linha da vitória destacada
+  // e o selo do gancho; sai para dentro da TV quando o Burn acaba de dizer «40 de vida» (46 % da fala 1)
+  abertura: { img: 'cards/felidar.png', ate: 0.46, hl: HL_UPKEEP, selo: { txt: '40 = VITÓRIA', x: 0.07, y: 0.44, rot: -6, size: 58 } },
   pose: [
     ['point_tv', 'rest', 'tv', 'other', 'angry', 'flat', 'tv'],      // 1 B ganha com 40, começa com 40 (quadro 0: carta + 40)
     ['point_tv', 'finger', 'left', 'x', 'up', 'x', 'tvtext'],        // 2 M Lê a carta: manutenção destacada; custo 6
@@ -47,7 +50,7 @@ const EP = {
     { file: 'cards/s13_ab.png', line: 12, at: 0.05, until: 13, cred: 'Felidar Sovereign (J25 198, arte Zoltan Boros & Gabor Szikszai).' },
   ],
   canais: [
-    { de: 0, ch: 4, canal: 'O GATO DOS 40', img: 'cards/s01_quarenta.png', meio: { at: 0.5, img: 'cards/s01_quarenta_b.png' }, cred: FEL, meter: V40, table: null },
+    { de: 0, ch: 4, canal: 'O GATO DOS 40', img: 'cards/s01_quarenta.png', meio: { at: 0.65, img: 'cards/s01_quarenta_b.png' }, cred: FEL, meter: V40, table: null },
     { de: 1, ch: 6, canal: 'LÊ A CARTA', img: 'cards/felidar.png', meio: { at: 0.55, img: 'cards/c02_custo.png' }, cred: FEL,
       hl: { tvtext: { rects: HL_UPKEEP, zoom: 1.5 } }, meter: V40, table: null },
     { de: 3, ch: 9, canal: 'UMA VOLTA', img: 'cards/s04_mesa.png', meio: { at: 0.5, img: 'cards/s04_mesa_b.png' },

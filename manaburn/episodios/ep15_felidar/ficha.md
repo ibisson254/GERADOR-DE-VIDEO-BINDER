@@ -243,17 +243,17 @@ Relógio da TV SAL em «20:40» = os 20 de vida do formato para que o Felidar fo
 |---|---|---|---|
 | Resolução / fps | 1080×1920, 30 | 1080×1920, 30 | ✔ |
 | Duração | livre; ref. EP13 45,83 s | **46,20 s** (42,33 s + fecho 3,87 s) | ✔ |
-| Loudness / pico | −14 LUFS / < −1 dBTP | −14,7 LUFS / −1,3 dBTP | ✔ (EP13: −14,5) |
+| Loudness / pico | −14 LUFS / < −1 dBTP | −14,8 LUFS / −1,1 dBTP (v2) | ✔ (EP13: −14,5) |
 | Fecho do scanner | presente | presente a 42,33 s | ✔ |
 | Bordas da TV (`bordas.py`) | OK | 748 quadros, laterais 12–1068 px | ✔ |
-| Quadro 0 | carta + 40 legíveis sem som | Felidar + «VIDA 40» + linha da carta na TV SAL acesa | ✔ |
+| Quadro 0 | carta + 40 legíveis sem som | v2: Felidar em tela cheia, linha da vitória destacada, selo «40 = VITÓRIA» | ✔ |
 | Mudança visual ≤ 3 s | ≤ 3 s | maior intervalo ≈ 2,8 s (31,43→34,27) | ✔ |
 | Som em cada revelação | sim | troca de canal, destaque, cartas, raiva (process.py: 4 destaques, 5 cartas, 7 zaps) | ✔ |
 | Pagamento do gancho | ~37,5 s | «VOCÊ VENCEU» a 36,46 s | ✔ |
 | Destaques alinhados | sim | conferidos a 6,5 s (manutenção) e 19,5 s (ruling) | ✔ |
 | Factos = ficha | sim | sim | ✔ |
 
-Nota: o medidor «SUA VIDA» do quadro 0 ainda está a subir (mostra 0 nos primeiros 0,35 s e chega a 40 com a animação padrão do kit); a tela ao lado já mostra «40» gigante.
+**v2 (21/11, 02:51–03:15) · abertura de carta (padrão novo):** quadro 0 com o Felidar em tela cheia (660 px), as três linhas «At the beginning of your upkeep, if you have 40 or more life, you win the game.» destacadas e o selo «40 = VITÓRIA» sobre as montanhas da arte; impacto 0–0,18 s com pancada; sai a 2,21 s (46 % da fala 1, logo depois de «40 de vida») e aterra na TV a 2,53 s com «zap». A troca a meio da 1.ª tela passou de 0,50 para 0,65 da fala (2,98 s), depois da aterragem. Sem créditos novos (mesmas vozes). O medidor «SUA VIDA», que subia de 0 no quadro 0, fica escondido pela abertura.
 
 | Rubrica (medida na folha de contacto, sem som) | Medida |
 |---|---|

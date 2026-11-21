@@ -140,5 +140,8 @@
  "outro": {
   "scanner": 0,
   "hold": 2.75
+ },
+ "abertura": {
+  "ate": 0.46
  }
 }
