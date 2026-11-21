@@ -7,6 +7,7 @@ Ponto de entrada para qualquer agente (Claude, ChatGPT ou outro). As instruçõe
 ## 1. Ordem de leitura
 
 1. `STATUS.md`: estado atual, bloqueios e próxima tarefa.
+   - Produto: `binder-vision/LEIA-ME.md`: o que é o app BINDER Vision e para que existe o estúdio; `PRODUTO.md` antes de mostrar ou citar o app; `ESTRATEGIA.md` antes de planear a semana ou uma campanha.
 2. `nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md`: regras do estúdio; §1 tem a hierarquia documental.
 3. `nucleo/CATALOGO_EDITORIAL.md`: frentes, classificação e estado.
 4. `nucleo/SHOWRUNNER.md`: como classificar o pedido, escolher a frente e preparar o briefing.
