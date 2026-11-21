@@ -114,6 +114,10 @@ Não existe duração rígida para episódios de série. Como ponto de partida d
 
 ### 7.1 Ambiente
 
+**Direção atual (fundador, 21/11/2026):** o cenário principal dos protótipos passa a ser **filmagem urbana real** (biblioteca com licença verificada em `biblioteca_urbana/`), com a Lisa ilustrada em primeiro plano e integrada na cena. A cidade é contemporânea, viva e ligeiramente noturna; não é cyberpunk nem a «casa» da Lisa. O quarto-estúdio abaixo continua como **ambiente alternativo**, não por defeito. A personagem continua desenhada em recorte 2D (motion comic), com boca pelo Rhubarb, piscar, respiração e cortes VJ entre plano médio e grande plano; desenha-se uma vez e reutiliza-se. Regras de composição: `IDENTIDADE_VISUAL.md` («Filmagem urbana»); comportamento: `COMPORTAMENTO.md`.
+
+**Ambiente alternativo (estúdio):**
+
 Um pequeno quarto-estúdio de VJ: espaço pessoal e usado, não uma televisão corporativa. Elementos-base reutilizáveis:
 
 - Uma secretária/mesa de apresentação.

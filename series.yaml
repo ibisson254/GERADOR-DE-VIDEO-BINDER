@@ -129,4 +129,5 @@ series:
     referencias: lisa-marie/referencias/       # conceitos (17/11 e 19/11), não master
     vozes: {}                                  # voz ainda não escolhida nem aprovada
     trilha: []                                 # tema e assinatura sonora por criar
-    referencia: null                           # sem episódio produzido
+    referencia: lisa-marie/episodios/lm-ep00_piloto_mulheres_da_alpha/   # LM-EP00 piloto (EM PRODUÇÃO, 21/11)
+    motor: lisa-marie/motor/piloto_lm_ep00.py

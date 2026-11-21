@@ -25,6 +25,8 @@ Gancho visual passa a componente do briefing (7 campos antes do roteiro, rubrica
 
 **Prompts do Gemini (20/11, 00h):** a pedido do fundador, `lisa-marie/PROMPTS_GEMINI.md` gera no app Gemini as 32 imagens do recorte e da douga (mestra M1 primeiro; depois bocas, olhos, expressões, gestos-chave e estúdio ilustrado em 5 conversas paralelas). O ComfyUI **não foi encontrado** no PC do fundador (procurado em Documentos, Ambiente de trabalho, AppData, Program Files, C:\ e D:\, só pelos nomes das pastas, sem acesso aos ficheiros).
 
+**LM-EP00 piloto sem voz (21/11, 01h–02h):** decisão do fundador de usar recorte 2D com cidade real (`nucleo/DECISOES.md`, 21/11). Piloto «Elas no Multiverso: as cinco mulheres da Alpha» renderizado (37,87 s, clipe Pexels 14957612 e «Hazy After Hours» da Mixkit enviados pelo fundador, Flip 3D nas cartas, SFX originais) e entregue na conversa. Estado: **EM PRODUÇÃO**, à espera do veredito do fundador. A arte da Lisa continua a ser conceito. Novos: `lisa-marie/motor/piloto_lm_ep00.py`, `biblioteca_urbana/` (manifesto com 11 clipes, 1 usado; 3 recomendados ainda por descarregar porque o Pexels não é acessível a partir da sessão), `COMPORTAMENTO.md`, `BRIEFING_ILUSTRADORA.md`. **Por fazer:** personagem-mestre, voz e trilha oficiais, contratação da ilustradora.
+
 **Próxima tarefa:** executar `lisa-marie/PROMPT_CLAUDE.md` para a ficha de modelo e um preview estático para aprovação do fundador; só depois assets recortáveis e o piloto.
 
 ## Missão Master (12/11/2026) — concluída e integrada na `main`

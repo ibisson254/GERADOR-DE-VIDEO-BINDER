@@ -45,7 +45,7 @@ Bloqueiam pautas novas com o mesmo objeto ou tema: todos os estados exceto `REJE
 
 ID · Tema central · Objeto (carta, pessoa, deck ou evento; vários separados por `;`) · Tese e ângulo narrativo · Gancho · Estado · Fonte do estado · Aprovação · Publicação · Ficha (caminho no repositório, `branch:<nome>:<caminho>` ou `projeto:<caminho>` no projeto claude.ai) · Relações (IDs) · Originalidade (resultado da auditoria). `—` = não se aplica; `LACUNA` = falta informação.
 
-Prefixos de ID: `MB` Mana & Burn · `MC` Meta em Curto · `CM` Conde de Manaforte · `ESP` especiais entre séries · `ORB` Órbita · `LL` Lambe-lambe · `PM` Pequeno Mestre (frente em desenvolvimento, fora da `main`). · `EX` Expedição BINDER (desde 14/11/2026).
+Prefixos de ID: `MB` Mana & Burn · `MC` Meta em Curto · `CM` Conde de Manaforte · `ESP` especiais entre séries · `ORB` Órbita · `LL` Lambe-lambe · `PM` Pequeno Mestre (frente em desenvolvimento, fora da `main`). · `EX` Expedição BINDER (desde 14/11/2026) · `LM` Lisa Marie no Ar (desde 21/11/2026).
 
 ## Mana & Burn
 
@@ -210,6 +210,12 @@ Peças de 18–19/10/2026 descritas em projeto:claude/reel-lambe-lambe-pop.md ("
 | AB-08 | ABISMO · Story Seal the Deal: no fundo do mar, até as negociações têm preço | embalagem oficial Seal the Deal (Premium Edition) | Boros, group hug e trocar dor por Tesouro, pela caixa | No fundo do mar, até as negociações têm preço. | CONCLUÍDO | missão de expansão do fundador 20/11/2026 (10:05) | 20/11/2026 | não publicada | abismo/publicacoes/AB-08-seal-story/ficha.md | AB-04 (pauta-mãe), AB-03 | extensão da pauta AB-04 (missão do fundador 20/11 10:05; memoria.py pauta bloqueou por AB-04/AB-03, decisão em nucleo/DECISOES.md 20/11) |
 | AB-09 | ABISMO · Story interativo: qual desses decks você levaria para sua mesa? | as 4 embalagens oficiais | escolha 1–4 com caixa de perguntas nativa | Qual desses decks você levaria para sua mesa? | CONCLUÍDO | missão de expansão do fundador 20/11/2026 (10:05) | 20/11/2026 | não publicada | abismo/publicacoes/AB-09-nauctis-votacao-story/ficha.md | AB-04 (pauta-mãe), AB-03 | extensão da pauta AB-04 (missão do fundador 20/11 10:05; memoria.py pauta bloqueou por AB-04/AB-03, decisão em nucleo/DECISOES.md 20/11) |
 | AB-10 | ABISMO · Carrossel Nauctis: quatro decks, quatro identidades | as 4 embalagens oficiais | comparação dos 4 decks pelos mesmos campos | Nauctis. Quatro decks. Quatro identidades. | CONCLUÍDO | missão de expansão do fundador 20/11/2026 (10:05) | 20/11/2026 | não publicada | abismo/publicacoes/AB-10-nauctis-carrossel/ficha.md | AB-04 (pauta-mãe), AB-03 | extensão da pauta AB-04 (missão do fundador 20/11 10:05; memoria.py pauta bloqueou por AB-04/AB-03, decisão em nucleo/DECISOES.md 20/11) |
+
+## Lisa Marie no Ar
+
+| ID | Tema central | Objeto | Tese · ângulo | Gancho | Estado | Fonte do estado | Aprovação | Publicação | Ficha | Relações | Originalidade |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| LM-EP00 | Elas no Multiverso (piloto sem voz): as cinco mulheres entre os 25 artistas da Alpha | Shivan Dragon; Mind Twist; Giant Growth; Time Walk; Melissa A. Benson; Julie Baroh; Sandra Everingham; Amy Weber; Fay Jones | Já no primeiro set, em 1993, cinco das 25 pessoas que ilustraram a Alpha eram mulheres, incluindo quem pintou o Shivan Dragon | O dragão mais famoso da Alpha foi pintado por uma mulher. | EM PRODUÇÃO | Pedido do fundador 21/11/2026 (01:14): piloto sem voz com transição Flip; render final 21/11 com clipe Pexels e música Mixkit enviados pelo fundador | — | — | lisa-marie/episodios/lm-ep00_piloto_mulheres_da_alpha/ficha.md | LL-LISA01 | Pauta LIVRE (21/11/2026) depois de retirar Stasis (MB-EP02) e Dark Ritual (LL-R03) |
 
 ## Lacunas da auditoria retroativa (01/11/2026)
 

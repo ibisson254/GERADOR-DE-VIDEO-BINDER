@@ -28,8 +28,8 @@ NAO_BLOQUEIAM = {'REJEITADO'}
 COLUNAS = ['ID', 'Tema central', 'Objeto', 'Tese · ângulo', 'Gancho', 'Estado', 'Fonte do estado',
            'Aprovação', 'Publicação', 'Ficha', 'Relações', 'Originalidade']
 PREFIXOS = {'MB': 'Mana & Burn', 'MC': 'Meta em Curto', 'CM': 'Conde de Manaforte', 'ESP': 'Especiais',
-            'ORB': 'Órbita', 'LL': 'Lambe-lambe', 'PM': 'Pequeno Mestre', 'VV': 'Vince Vault', 'EX': 'Expedição BINDER', 'AB': 'ABISMO'}
-RE_ID = re.compile(r'^(MB|MC|CM|ESP|ORB|LL|PM|VV|EX|AB)-[A-Z0-9-]+$')
+            'ORB': 'Órbita', 'LL': 'Lambe-lambe', 'PM': 'Pequeno Mestre', 'VV': 'Vince Vault', 'EX': 'Expedição BINDER', 'AB': 'ABISMO', 'LM': 'Lisa Marie no Ar'}
+RE_ID = re.compile(r'^(MB|MC|CM|ESP|ORB|LL|PM|VV|EX|AB|LM)-[A-Z0-9-]+$')
 PROMOCAO = {'SIM', 'NÃO', 'PARCIAL', 'A CONFIRMAR'}
 CSV_COLUNAS = ['semana_fim', 'periodo', 'id_editorial', 'frente', 'post_ref', 'formato', 'idade',
                'visualizacoes', 'alcance', 'impressoes', 'curtidas', 'comentarios', 'guardados',
@@ -119,7 +119,7 @@ def validar_registo(raiz, entradas):
         if e['Estado'] == 'POR AUDITAR':
             avisos.append(i)
     for e in entradas:
-        for rel in re.findall(r'\b(?:MB|MC|CM|ESP|ORB|LL|PM)-[A-Z0-9]+(?:-[A-Z0-9]+)*', e['Relações']):
+        for rel in re.findall(r'\b(?:MB|MC|CM|ESP|ORB|LL|PM|LM)-[A-Z0-9]+(?:-[A-Z0-9]+)*', e['Relações']):
             if rel not in ids:
                 erros.append(f'{e["ID"]}: relação para ID inexistente {rel}')
     return erros, avisos

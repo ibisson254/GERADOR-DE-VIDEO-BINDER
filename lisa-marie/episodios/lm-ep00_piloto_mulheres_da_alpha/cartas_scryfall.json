@@ -1,0 +1,50 @@
+{
+ "Shivan Dragon": {
+  "artist": "Melissa A. Benson",
+  "set": "Limited Edition Alpha",
+  "released": "1993-08-05",
+  "scryfall": "https://scryfall.com/card/lea/174/shivan-dragon",
+  "img": "https://cards.scryfall.io/png/front/f/e/fefbf149-f988-4f8b-9f53-56f5878116a6.png?1783948681",
+  "file": "cartas/shivan_dragon.png"
+ },
+ "Mind Twist": {
+  "artist": "Julie Baroh",
+  "set": "Limited Edition Alpha",
+  "released": "1993-08-05",
+  "scryfall": "https://scryfall.com/card/lea/115/mind-twist",
+  "img": "https://cards.scryfall.io/png/front/e/e/eee9e106-a248-49d2-b8c8-6bbcd56ce739.png?1783948693",
+  "file": "cartas/mind_twist.png"
+ },
+ "Giant Growth": {
+  "artist": "Sandra Everingham",
+  "set": "Limited Edition Alpha",
+  "released": "1993-08-05",
+  "scryfall": "https://scryfall.com/card/lea/197/giant-growth",
+  "img": "https://cards.scryfall.io/png/front/3/6/367dbefe-3366-408e-9fcf-7dc00f8cc201.png?1783948676",
+  "file": "cartas/giant_growth.png"
+ },
+ "Time Walk": {
+  "artist": "Amy Weber",
+  "set": "Limited Edition Alpha",
+  "released": "1993-08-05",
+  "scryfall": "https://scryfall.com/card/lea/83/time-walk",
+  "img": "https://cards.scryfall.io/png/front/e/0/e0139f60-d48e-46fb-9f5a-1e3d7558c834.png?1783948701",
+  "file": "cartas/time_walk.png"
+ },
+ "Clone": {
+  "artist": "Julie Baroh",
+  "set": "Limited Edition Alpha",
+  "released": "1993-08-05",
+  "scryfall": "https://scryfall.com/card/lea/51/clone",
+  "img": "https://cards.scryfall.io/png/front/f/0/f00d33dd-4eb2-4446-9813-1923d8e2d2f3.png?1783948707",
+  "file": "cartas/clone.png"
+ },
+ "Nightmare": {
+  "artist": "Melissa A. Benson",
+  "set": "Limited Edition Alpha",
+  "released": "1993-08-05",
+  "scryfall": "https://scryfall.com/card/lea/118/nightmare",
+  "img": "https://cards.scryfall.io/png/front/b/8/b8cdd6a7-f772-4ccb-914f-63f52ed54d6b.png?1783948692",
+  "file": "cartas/nightmare.png"
+ }
+}

@@ -137,4 +137,20 @@ OUTRO: fecho comum BINDER
 - A fotografia fornecida é referência dos óculos; não fornece uma fotografia da gata para reproduzir marcações específicas.
 - Voz, fornecedor, música e efeitos finais não estão definidos.
 - O modo real de renderização no ambiente Claude Pro precisa de ser testado antes de declarar o kit de vídeo concluído.
-- O primeiro episódio e a pauta ainda não foram criados nem registados.
+- Piloto LM-EP00 (sem voz) em produção desde 21/11; arte da personagem ainda é conceito.
+
+## 10. Fluxo com filmagem urbana (desde 21/11/2026)
+
+Decisão do fundador (`nucleo/DECISOES.md`, 21/11): recorte 2D + Rhubarb + filmagem urbana real. Primeiro uso: LM-EP00 (`episodios/lm-ep00_piloto_mulheres_da_alpha/`).
+
+1. **Pauta e factos** primeiro (`memoria.py pauta`, ficha com o gancho §4.1 e as fontes).
+2. **Cartas:** `cartas.py` do episódio (Scryfall, PNG 745×1040, não versionadas, nunca ampliadas).
+3. **Camadas da Lisa:** `kit/prova_recorte/` (arte-conceito; trocar pela arte definitiva quando existir).
+4. **Fundo:** clipes de `biblioteca_urbana/clipes/` com o nome do `manifesto.csv`. Sem clipe, o motor desenha um fundo provisório assinalado no quadro, e esse vídeo não é publicável.
+5. **Música:** só com a licença registada em `biblioteca_urbana/musica.csv`. Sem música, o ficheiro sai só com SFX e a música entra pela biblioteca do Instagram.
+6. **Render:** `python3 -I lisa-marie/motor/piloto_lm_ep00.py --camadas DIR --cartas DIR [--musica F.mp3] --saida F.mp4`, com `--previa` para a folha de fotogramas. O motor junta o fecho comum e normaliza a −14 LUFS. Conferir o pico (< −1 dBFS) no ficheiro final.
+7. **Troca de carta:** rotação 3D no eixo Y (0,34 s), a mesma técnica do Meta em Curto, reimplementada.
+
+### Direção musical (não é trilha oficial)
+
+Assinatura original a criar: eletrónica alternativa, baixo quente, percussão leve, textura analógica, uma pequena frase de sintetizador e um sinal de emissão próprio. Os anos 90 entram pela energia e pela textura, nunca copiando uma música, um artista ou um jingle. Nada de MTV, programas conhecidos ou música comercial. Até haver trilha aprovada usa-se: (a) SFX originais do motor e (b) faixas de biblioteca com licença registada, como provisórias. «Hazy After Hours» (Mixkit, Alejandro Magaña) no LM-EP00.

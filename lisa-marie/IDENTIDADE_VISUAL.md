@@ -66,8 +66,36 @@ Regra de proporção: carvão e marfim dominam; rosa e azul-petróleo funcionam 
 - A carta citada surge inteira e legível; não pôr texto por cima da arte nem cortar o rodapé.
 - Para 4:5, criar composição própria; não cortar o Reel automaticamente.
 
+## Filmagem urbana (desde 21/11/2026)
+
+Decisão do fundador: a Lisa ilustrada em primeiro plano sobre filmagem real de cidade (`biblioteca_urbana/`). Aplicado pela primeira vez no LM-EP00.
+
+**Hierarquia (do mais ao menos importante):** 1) evidência da história (carta, obra, pessoa, imagem real); 2) Lisa; 3) legendas; 4) grafismos (identificador, tarja, etiqueta); 5) cidade. Nunca todos os grafismos ao mesmo tempo. A tarja entra quando acrescenta informação e sai. O identificador é pequeno.
+
+**Integração da personagem:**
+- Fundo com menos exposição (55–78%) e saturação (70–80%), ligeira deriva para carvão, rosa e azul-petróleo, vinheta e desfoque leve (1,5–6 px). A personagem fica nítida.
+- Sombra suave deslocada atrás da Lisa, **sem contorno luminoso**.
+- Harmonização de cor: a ilustração puxa no máximo ~6% para a cor média do fundo, sem mudar pelagem, olhos ou óculos.
+- Base escurecida (gradiente de carvão) onde o recorte termina: a cintura não acaba num corte seco.
+- Grão fino comum a filmagem e ilustração, só para os unir.
+- O recorte encosta a uma borda do quadro, para a aresta reta do desenho ficar fora do ecrã.
+- A cidade nunca compete com os olhos ou a boca: sem luzes fortes atrás do rosto.
+
+**Escala:** plano médio a 35–55% da altura do quadro. O grande plano destaca a expressão **sem ampliar além do que a arte aguenta**: com a arte-conceito atual (262 px de origem) o limite é ≈2× no plano médio e ≈3× no grande plano. A arte definitiva tem de vir em alta resolução (`BRIEFING_ILUSTRADORA.md`: ≥ 4000 px de altura no plano médio).
+
+**Abertura:** o quadro 0 mostra Magic/TCG ou a evidência central, nunca a cidade sozinha nem a apresentação da Lisa.
+
+**Troca de carta:** rotação 3D no eixo Y (~0,34 s, perspetiva e sombra), a mesma técnica do Meta em Curto, reimplementada no motor da Lisa. As cartas aparecem no tamanho nativo do Scryfall (745×1040), sem ampliação.
+
+**Falas sem voz:** caixa com o rótulo «LISA», junto à personagem e sem tapar o rosto (`COMPORTAMENTO.md` §6).
+
+## Personagem colecionável
+
+A silhueta deve ler-se em miniatura (orelhas altas, óculos grossos, auscultadores, bomber). Assinaturas candidatas e regras de direitos: `BRIEFING_ILUSTRADORA.md` §4–5. Nenhum símbolo de terceiros como assinatura permanente.
+
 ## Não fazer
 
+- Não transformar a cidade em cyberpunk, colagem de néons ou fundo de videojogo, nem apresentar um clipe como o sítio onde a Lisa vive.
 - Não usar o M-ball, logótipo, paleta/identidade exata, vinheta, tipografia ou elementos proprietários da MTV.
 - Não usar a identidade de Lambe-lambe: sem muro rosa, papel rasgado e fita nos cantos como cenário principal.
 - Não usar cenário de streaming genérico com RGB por todo o lado.

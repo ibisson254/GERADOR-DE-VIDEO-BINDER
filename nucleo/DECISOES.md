@@ -2,6 +2,15 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 21/11/2026 (01:14–01:30) · Lisa Marie no Ar: recorte 2D e cidade real; piloto LM-EP00 sem voz
+- **Pedido do fundador:** missão «Evolução da prova de recorte para VJ cultural com cenário urbano real» e, a 01:14, «Refine essa idéia. crie um episódio piloto sem voz e use também transição de Flip que estamos usando no tudo e faça melhorias necessárias». A 01:30 enviou um clipe do Pexels (14957612) e a faixa «Hazy After Hours» (Mixkit): «todas tenho licença».
+- **Decisão (direção técnica aprovada para os protótipos):** personagem 2D em recorte (motion comic), boca pelo Rhubarb, olhos, pálpebras e respiração controlados, cortes VJ entre plano médio e grande plano; a Lisa desenha-se uma vez e reutiliza-se. **Isto não aprova** a personagem-mestre, a arte definitiva, a voz nem a trilha oficial.
+- **Cenário:** filmagem urbana real de banco gratuito com licença verificada passa a ser o fundo principal (`lisa-marie/biblioteca_urbana/`, fonte escolhida: Pexels); o estúdio vetorial fica como alternativa. Regras em `lisa-marie/IDENTIDADE_VISUAL.md` («Filmagem urbana») e `CONTEXTO.md` §7.1.
+- **Piloto:** o pedido explícito do fundador autoriza o LM-EP00 (a missão dizia para não criar piloto nem ID). Prefixo novo `LM` no registo e no `memoria.py`. Pauta livre: mulheres da Alpha, só com factos públicos e arte das cartas, sem convidada nem fotos de pessoas.
+- **Flip:** a troca de carta em rotação 3D do Meta em Curto é reimplementada no motor da Lisa (`lisa-marie/motor/piloto_lm_ep00.py`), sem importar código de outra frente.
+- **Música:** faixa de biblioteca com licença registada (`biblioteca_urbana/musica.csv`) é provisória; a assinatura sonora original continua por criar (`KIT_PRODUCAO.md` §10).
+- **Novos documentos:** `lisa-marie/COMPORTAMENTO.md` e `lisa-marie/BRIEFING_ILUSTRADORA.md` (rascunho, sem encomenda nem pagamento).
+
 ## 20/11/2026 (10:05) · ABISMO: campanha Nauctis com as embalagens oficiais (AB-04 v2, AB-05 a AB-10)
 
 **O quê:** (1) as imagens oficiais das embalagens dos decks são material válido e preferível a espaços vazios quando ainda não há cartas: entram como «Embalagem oficial», nunca como carta (`abismo/kit/embalagens_nauctis/`, não versionadas). (2) AB-04 v2 é alternativa ao v1 (v1 intacto; o fundador escolhe qual publica). (3) AB-05 a AB-10 são extensões editoriais da pauta AB-04: o `memoria.py pauta` bloqueou por mesmo objeto (AB-04, AB-03) e por falso positivo (ORB-21); a missão do fundador é a decisão para avançar. (4) Motor do ABISMO: embalagens no modo `decks`, Story `"modo": "deck"`/`"votacao"`, slides de carrossel `nauctis_capa`/`deck`.
