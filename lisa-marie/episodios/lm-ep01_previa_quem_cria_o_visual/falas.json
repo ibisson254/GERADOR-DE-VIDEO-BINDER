@@ -1,0 +1,74 @@
+[
+ {
+  "id": "L01",
+  "cena": "gancho",
+  "texto": "Você já olhou pra uma carta de Magic como quem olha uma coleção de moda?",
+  "tela": "Você já olhou pra uma\ncarta de Magic como quem\nolha uma coleção de moda?"
+ },
+ {
+  "id": "L02",
+  "cena": "lisa_apresenta",
+  "texto": "Essa é a Coat of Arms, de um Secret Lair lançado em julho.",
+  "tela": "Essa é a Coat of Arms,\nde um Secret Lair lançado em julho."
+ },
+ {
+  "id": "L03",
+  "cena": "lisa_apresenta",
+  "texto": "E ela não nasceu de uma pessoa só.",
+  "tela": "E ela não nasceu de uma pessoa só."
+ },
+ {
+  "id": "L04",
+  "cena": "carta_gariba",
+  "texto": "A ilustração é da brasileira Caroline Gariba.",
+  "tela": "A ilustração é da brasileira\nCaroline Gariba."
+ },
+ {
+  "id": "L05",
+  "cena": "carta_gariba",
+  "texto": "Um exército inteiro e um escudo. O desafio era não virar bagunça.",
+  "tela": "Um exército inteiro e um escudo.\nO desafio: não virar bagunça."
+ },
+ {
+  "id": "L06",
+  "cena": "detalhe_felothar",
+  "texto": "A resposta foi a pose: Felothar gritando, com a bandeira ao vento.",
+  "tela": "A resposta foi a pose: Felothar gritando,\ncom a bandeira ao vento."
+ },
+ {
+  "id": "L07",
+  "cena": "detalhe_escudo",
+  "texto": "E esse brilho no escudo? É um elemento gráfico da Anh Nguyen, designer gráfica.",
+  "tela": "E esse brilho no escudo? É um elemento\ngráfico da Anh Nguyen, designer gráfica."
+ },
+ {
+  "id": "L08",
+  "cena": "lisa_leitura",
+  "texto": "Pra mim, isso é styling. O detalhe que amarra o look na coleção.",
+  "tela": "Pra mim, isso é styling: o detalhe\nque amarra o look na coleção."
+ },
+ {
+  "id": "L09",
+  "cena": "flip_colecao",
+  "texto": "A direção criativa pediu isso em todas: figura pintada e um elemento gráfico.",
+  "tela": "A direção criativa pediu isso em todas:\nfigura pintada + elemento gráfico."
+ },
+ {
+  "id": "L10",
+  "cena": "alinhamento",
+  "texto": "Cartas diferentes. Mesma coleção.",
+  "tela": "Cartas diferentes.\nMesma coleção."
+ },
+ {
+  "id": "L11",
+  "cena": "lisa_close",
+  "texto": "Ilustração, direção de arte, design gráfico. Cada uma no seu papel.",
+  "tela": "Ilustração, direção de arte, design gráfico.\nCada uma no seu papel."
+ },
+ {
+  "id": "L12",
+  "cena": "lisa_cta",
+  "texto": "E aí: qual carta do seu deck tem o melhor figurino?",
+  "tela": "E aí: qual carta do seu deck\ntem o melhor figurino?"
+ }
+]

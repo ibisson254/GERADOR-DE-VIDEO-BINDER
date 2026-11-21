@@ -1,0 +1,79 @@
+{
+ "Coat of Arms": [
+  {
+   "set": "sld",
+   "num": "2682",
+   "artist": "Caroline Gariba",
+   "uri": "https://scryfall.com/card/sld/2682/coat-of-arms",
+   "png": "https://cards.scryfall.io/png/front/e/0/e09f1823-f2b1-4fa2-8e8c-4a3bf0473a14.png?1784715311",
+   "art": "https://cards.scryfall.io/art_crop/front/e/0/e09f1823-f2b1-4fa2-8e8c-4a3bf0473a14.jpg?1784715311",
+   "released": "2026-07-20"
+  }
+ ],
+ "Lathril, Blade of the Elves": [
+  {
+   "set": "sld",
+   "num": "2681",
+   "artist": "Magali Villeneuve",
+   "uri": "https://scryfall.com/card/sld/2681/lathril-blade-of-the-elves",
+   "png": "https://cards.scryfall.io/png/front/f/7/f7f00791-de5e-4f10-9931-8694afcd580c.png?1784715333",
+   "art": "https://cards.scryfall.io/art_crop/front/f/7/f7f00791-de5e-4f10-9931-8694afcd580c.jpg?1784715333",
+   "released": "2026-07-20"
+  }
+ ],
+ "Finale of Devastation": [
+  {
+   "set": "sld",
+   "num": "2680",
+   "artist": "Julie Dillon",
+   "uri": "https://scryfall.com/card/sld/2680/finale-of-devastation",
+   "png": "https://cards.scryfall.io/png/front/0/a/0a481bb9-d213-4cb4-ace4-f8a2ebf663c9.png?1784715342",
+   "art": "https://cards.scryfall.io/art_crop/front/0/a/0a481bb9-d213-4cb4-ace4-f8a2ebf663c9.jpg?1784715342",
+   "released": "2026-07-20"
+  }
+ ],
+ "Cultivate": [
+  {
+   "set": "sld",
+   "num": "2679",
+   "artist": "Ivy Dolamore",
+   "uri": "https://scryfall.com/card/sld/2679/cultivate",
+   "png": "https://cards.scryfall.io/png/front/2/b/2b7f7699-caf5-4fc8-a4e5-13a3d992639d.png?1784715347",
+   "art": "https://cards.scryfall.io/art_crop/front/2/b/2b7f7699-caf5-4fc8-a4e5-13a3d992639d.jpg?1784715347",
+   "released": "2026-07-20"
+  }
+ ],
+ "Sol Ring": [
+  {
+   "set": "sld",
+   "num": "2683",
+   "artist": "Olena Richards",
+   "uri": "https://scryfall.com/card/sld/2683/sol-ring",
+   "png": "https://cards.scryfall.io/png/front/c/a/cadcddad-2f37-4a5c-81e4-242a20573952.png?1791470696",
+   "art": "https://cards.scryfall.io/art_crop/front/c/a/cadcddad-2f37-4a5c-81e4-242a20573952.jpg?1791470696",
+   "released": "2026-07-20"
+  }
+ ],
+ "Path of Ancestry": [
+  {
+   "set": "sld",
+   "num": "2684",
+   "artist": "Livia Prima",
+   "uri": "https://scryfall.com/card/sld/2684/path-of-ancestry",
+   "png": "https://cards.scryfall.io/png/front/1/7/17ed79a4-6c88-4061-8b08-d94ad58d0234.png?1791470690",
+   "art": "https://cards.scryfall.io/art_crop/front/1/7/17ed79a4-6c88-4061-8b08-d94ad58d0234.jpg?1791470690",
+   "released": "2026-07-20"
+  }
+ ],
+ "Dark Ritual": [
+  {
+   "set": "sld",
+   "num": "2678",
+   "artist": "Fury Galluzzi",
+   "uri": "https://scryfall.com/card/sld/2678/dark-ritual",
+   "png": "https://cards.scryfall.io/png/front/2/2/227f249f-a1da-4db0-a1a5-34378375fa8e.png?1784715354",
+   "art": "https://cards.scryfall.io/art_crop/front/2/2/227f249f-a1da-4db0-a1a5-34378375fa8e.jpg?1784715354",
+   "released": "2026-07-20"
+  }
+ ]
+}
