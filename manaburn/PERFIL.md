@@ -93,6 +93,22 @@ O MB-EP11 é o post mais visto do canal (7.138 views, 71 guardados, 73 seguidore
 - Hipótese: o padrão «dor da mesa + número na 1.ª fala + carta na TV» segura nos 3 s o público de Commander, não o público frio. Testar com um episódio sem impulso (`comum/insights/LEIA-ME.md`, «Testes comparáveis»).
 - Recomendação: a base continua (decisão de 15/11); não se torna regra nova sem padrão em 2+ semanas. Não importar a grelha nem o terminal do TUBO: o equivalente aqui é a TV SAL e a reação do Burn.
 
+## Método permanente de pauta orientado por desempenho (desde 21/11/2026)
+
+Decisão do fundador de 21/11/2026 (`nucleo/DECISOES.md`). Toda nova pauta do Mana & Burn começa pela análise comparativa dos episódios de melhor desempenho da série; é a camada da série sobre a pesquisa de pauta geral (`nucleo/SHOWRUNNER.md` §2.4).
+
+1. Selecionar pelo menos dois episódios de referência, considerando visualizações, alcance, retenção, partilhas, guardados e comentários disponíveis.
+2. Comparar publicações com idade, duração, formato e estado de impulsionamento equivalentes. Não misturar alcance pago e orgânico; o que não se sabe fica `A CONFIRMAR`.
+3. Identificar os elementos comuns: objeto, comandante, mecânica, conflito de mesa, surpresa, número, clareza, recompensa e potencial de discussão.
+4. Separar facto observado, interpretação, hipótese e recomendação. Visualizações não demonstram causalidade.
+5. Transformar os padrões encontrados numa hipótese editorial testável, escrita na ficha do episódio.
+6. Pesquisar pelo menos três candidatos diferentes, ou dois ângulos quando o fundador já definiu o tema (§2.4).
+7. Escolher pela rubrica de seleção, sem privilegiar automaticamente o candidato mais parecido com um sucesso anterior.
+8. Preservar os padrões técnicos aprovados da série: abertura de carta, TV SAL, evidência visual, personagens, vozes e fecho.
+9. Depois da publicação, avaliar às 48 h e aos 7 dias e atualizar a aprendizagem com os Insights.
+
+Este método orienta a seleção; não autoriza repetir temas, mecânicas ou episódios já publicados, não altera conteúdos aprovados e não substitui a auditoria de originalidade. Primeira aplicação: MB-EP16 (`manaburn/episodios/ep16_alexander/ficha.md`, secção «Análise comparativa»).
+
 ## Entrega ao fundador
 
 No fim de cada conteúdo: a capa como ficheiro e, na mensagem, a **legenda** e o **comentário fixado** em blocos separados, prontos a copiar e colar (sem títulos dentro dos blocos).

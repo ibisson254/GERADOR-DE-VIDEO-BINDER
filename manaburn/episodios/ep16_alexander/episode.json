@@ -1,0 +1,146 @@
+{
+ "schema": 2,
+ "chamada": "o comandante que dá carta e bate no sorteio",
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Esse comandante dá carta pra *QUATRO*. E *um* oponente apanha no sorteio!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "*Lê a carta.* Ele vira, e *cada jogador* revela o topo e *compra*."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Carta de graça pra mesa toda? Isso é deck ou *instituição de caridade*?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "O *maior custo* revelado vira *dano*. Num oponente *aleatório*."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Eu ganho carta *e* posso nem apanhar? Tô *dentro*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[tired]",
+   "legenda": "*Lê a ruling.* A carta que você revela é *a que você compra*. A mesa *viu*."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "E daí? Eu comprei uma *remoção*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "E todo mundo sabe. *Inclusive* o dono do Alexander.",
+   "tts": "E todo mundo sabe. Inclusive o dono do Aléxander."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Então eu jogo ela *agora*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Tem lista com *Rule of Law*: cada jogador só conjura *uma mágica* por turno.",
+   "tts": "Tem lista com Rúl óf Ló: cada jogador só conjura uma mágica por turno."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "*UMA?!* Ou eu tiro o Alexander, ou faço a *minha* jogada?!",
+   "tts": "UMA?! Ou eu tiro o Aléxander, ou faço a minha jogada?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "E a habilidade *não* é mágica. Com algo que *desvira*, ele revela e bate *de novo*."
+  },
+  {
+   "quem": "B",
+   "tags": "",
+   "legenda": "Isso não é group hug, é *ameaça com brinde*! *A*: encaro. *B*: troco de deck.",
+   "tts": "Isso não é grup râg, é ameaça com brinde! Á: encaro. Bê: troco de deck."
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Comenta aí."
+  }
+ ],
+ "gap": [
+  0,
+  0.0,
+  -0.06,
+  0.0,
+  -0.08,
+  0.02,
+  -0.08,
+  0.02,
+  -0.08,
+  0.02,
+  -0.1,
+  0.02,
+  0.0,
+  0.38
+ ],
+ "ins": [
+  [
+   2,
+   0.1
+  ],
+  [
+   4,
+   0.1
+  ],
+  [
+   6,
+   0.1
+  ],
+  [
+   8,
+   0.1
+  ],
+  [
+   10,
+   0.1
+  ],
+  [
+   12,
+   0.1
+  ]
+ ],
+ "respiro_max": 0.1,
+ "tempo": {
+  "B": 1.1,
+  "M": 1.15
+ },
+ "mix": {
+  "intro_db": 0,
+  "fala_db": -14,
+  "pausa_db": -6,
+  "fecho_db": 0
+ },
+ "sfx": {
+  "tv": true,
+  "destaque": true,
+  "carta": "flick",
+  "raiva": true
+ },
+ "outro": {
+  "scanner": 0,
+  "hold": 2.75
+ },
+ "abertura": {
+  "ate": 0.52
+ }
+}

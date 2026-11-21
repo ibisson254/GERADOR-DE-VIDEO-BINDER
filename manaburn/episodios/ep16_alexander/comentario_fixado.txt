@@ -1,0 +1,16 @@
+A: encaro a mesa. B: troco de deck. Qual você escolhe?
+
+Como o Alexander funciona:
+1. Ele vira (vigilância e ímpeto, então já ataca e ainda ativa).
+2. Cada jogador revela a carta do topo e compra uma carta.
+3. O maior valor de mana entre as cartas reveladas vira dano.
+4. O dano vai para um oponente aleatório. Nunca para quem controla o Alexander.
+
+O detalhe: pela ruling oficial, a carta revelada é a que cada um compra. Todo mundo sabe o que você acabou de comprar.
+
+Com Rule of Law, cada jogador só conjura uma mágica por turno. A habilidade do Alexander não é mágica: com um efeito de desvirar (ex.: Thousand-Year Elixir), ele ativa de novo.
+
+Texto da carta (Oracle): "Vigilance, haste. {T}: Each player reveals the top card of their library, then draws a card. Alexander deals X damage to a random opponent, where X is the greatest mana value among cards revealed this way."
+Ruling oficial (07/10/2026): exceto em casos muito raros, a carta que cada jogador revela é a que vai comprar.
+
+Fontes (21/11/2026): Oracle e rulings no Scryfall; listas de Alexander no EDHREC.

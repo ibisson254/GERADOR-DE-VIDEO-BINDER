@@ -458,3 +458,10 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - **Formato:** `lambe-lambe/kit_story/motor_story.py` + `story.json` por episódio (referência LL-ART20). 9 s, 1080×1920, sem áudio, zero créditos. Com foto de terceiros por autorizar: prévia privada + versão sem foto.
 - **Refinamento:** o Story publica-se logo depois do carrossel, com o sticker de link para o post (texto em `story/story_sticker.txt`), e serve só para levar ao post.
 - **Entrega:** no fim de cada lambe, capa, legenda, comentário fixado e texto do sticker enviados no chat, separados e prontos a copiar (reforça a preferência de 15/11).
+
+## 21/11/2026 · Mana & Burn: método comparativo de seleção de pautas
+- **Fundador** (aprovado na conversa com o ChatGPT de 21/11 e entregue a esta sessão): tornar permanente a criação de pautas a partir da análise comparativa dos episódios de melhor desempenho do Mana & Burn.
+- Antes de cada nova pauta, comparar pelo menos dois episódios de referência e identificar elementos comuns de história, objeto, mecânica, conflito, gancho e recompensa.
+- Separar factos, interpretações, hipóteses e recomendações. Visualizações isoladas não demonstram causalidade. Regras de comparabilidade dos Insights: idade, duração, formato e impulsionamento.
+- Transformar a aprendizagem numa hipótese testável, pesquisar candidatos e escolher pela rubrica do SHOWRUNNER §2.4. Método em `manaburn/PERFIL.md`; regras técnicas e identidade da série inalteradas.
+- **Primeira aplicação:** MB-EP16, Alexander, Ship's Fool (tema aprovado pelo fundador a 21/11). `memoria.py pauta`: PAUTA LIVRE (21/11/2026). Roteiro e vozes por aprovar.
