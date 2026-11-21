@@ -49,6 +49,30 @@ A Lisa Marie pode perfilar uma artista quando o foco é a pessoa e a sua trajet�
 
 Quando um tema cabe em duas frentes: propor a escolha com uma frase de justificação e pedir aprovação antes do roteiro. Tema fora de todos os territórios: dizer isso e propor alternativa; não forçar.
 
+### 2.4 Pesquisa de pauta (padrão desde 21/11/2026, a partir do MB-EP15)
+
+Primeiro descobre-se **qual história merece ser contada**; só depois se escreve. O método é o mesmo em todas as frentes; muda o que cada personagem procura (tabela abaixo).
+
+1. **Ler antes de pesquisar:** estado, decisões, registo, easter eggs e as fichas dos 2 últimos episódios da frente (o que funcionou e o que não se pode repetir). Métricas só como referência: sem causalidade, sem confundir visualizações com pessoas, sem presumir alcance orgânico.
+2. **Pergunta de pesquisa da personagem:** cada frente procura a reação-alvo da sua personagem (tabela). Não se escolhe um tema só porque parece viral.
+3. **Candidatos:** episódio de série ou especial, **pelo menos 3** candidatos diferentes (objeto, tese e mecânica distintos); Lambe-lambe e Órbita, pelo menos 2. Se o fundador já deu o tema, não há candidatos de tema: compara-se pelo menos **2 ângulos** do mesmo objeto.
+4. **Ficha de cada candidato** (9 campos): objeto e materiais reais; tese numa frase; como funciona ou o que mostra, passo a passo; condições; como falha, onde a tese pode estar errada ou o que a contradiz; fontes verificáveis com data; potencial visual (qual será a **abertura de objeto**, §4.1.1); potencial de entretenimento na voz da personagem; diferença face aos episódios anteriores.
+5. **Originalidade de cada candidato:** `memoria.py pauta` + comparação manual (§2.3) antes de o pontuar. Bloqueado sai da lista.
+6. **Rubrica de seleção (1–5, interna):** impacto do gancho, originalidade, facilidade de compreensão, potencial visual, potencial de compartilhamento, recompensa narrativa e adequação à personagem (critério próprio da frente, tabela). Escolhe-se um vencedor com uma frase sobre **porque supera os outros**; os preteridos ficam como **reserva** na ficha (não entram no registo). Se nenhum tiver pelo menos 4 em impacto, compreensão e adequação, continua-se a pesquisar.
+7. **Verificação antes do roteiro:** cada facto que vai para o ecrã é conferido na fonte primária da frente; dados de terceiros com fonte, data, período e amostra; o que não abre na sessão fica como limitação declarada e sai do vídeo.
+8. **Custo:** a pesquisa é gratuita; consultas pagas (vidIQ e afins) só quando mudam uma decisão.
+
+| Frente | Reação-alvo (pergunta de pesquisa) | Onde procurar (fonte primária primeiro) | Critério de adequação na rubrica |
+|---|---|---|---|
+| Mana & Burn | «Peraí… isso funciona mesmo?!» / «isso devia ser banido»: carta, combo ou regra que a mesa sente, com recompensa demonstrável | Oracle e rulings (Scryfall), Regras Completas; EDHREC (inclui Salt Score), Commander Spellbook; Reddit r/EDH e r/magicTCG, Moxfield/Archidekt, MTGGoldfish | dá pelo menos 3 correções reais do Mana («Lê a carta») e uma pergunta A/B de mesa |
+| Meta em Curto (TUBO) | «Então foi por isso que ganhou»: decisão, deck ou dado de um torneio recente que muda como se joga | resultados e listas oficiais do torneio (organizador, coverage, Melee/MTGO), MTGTop8, MTGGoldfish; win rate só de quem o publica | dado verificado «dentro do tubo», com data e amostra; alternativa plausível comparável (`oraculo/PERFIL.md`) |
+| Conde de Manaforte | «Nunca tinha reparado nisso»: um detalhe visível da ilustração que muda a leitura da obra | a obra em boa resolução (Scryfall, galeria oficial da Wizards), portefólio, site e entrevistas do artista | as três camadas separáveis (observação verificável, interpretação, facto com fonte); alvo do humor é o Conde, nunca o artista |
+| Vince Vault | «Por isso é que essa carta subiu (ou caiu)»: uma causa de preço documentada | LigaMagic (reais), MTGStocks/TCGplayer, anúncios oficiais da Wizards, listas de torneio; sem Cardmarket, sem republicar preços do Scryfall | cotação com fonte, data e hora e a nota «estimativa, não oferta de compra»; causa demonstrada, não só coincidência |
+| Lisa Marie no Ar | «Eu não conhecia ela (ou essa ligação)»: pessoa ou ponte cultural com Magic/TCG demonstrável | Wizards/Magic.gg, canais oficiais da convidada, entrevista autorizada, organizadores e lojas com publicação oficial | ligação com Magic explícita e verificável; autorização da convidada quando há imagem ou voz dela |
+| Expedição BINDER | «É isto que vem aí»: a carta ou o produto mais revelador do primeiro olhar de um set | revelações oficiais (Wizards, Card Image Gallery), Scryfall; reação da comunidade só como contexto (Reddit, EDHREC) | revelação oficial confirmada, com tiragens e tratamentos só de fonte oficial (`abismo/PROCESSO.md`) |
+| Órbita | contemplação: uma carta do set Star Trek que se sustenta parada | Scryfall e galeria oficial | carta inteira legível parada no loop; nada de outras frentes |
+| Lambe-lambe | «Não sabia disso» (cultura) ou «isso me ajuda» (app) | Scryfall, Wizards, artistas; para o app, só funções confirmadas no repositório e capturas reais | uma leitura simples; no cartaz BINDER, só funções reais do app |
+
 ## 3. O que o Showrunner decide sozinho e o que pede
 
 **Decide e regista:** pesquisa e fontes; estrutura dentro da fórmula da bíblia; escolha de faixas e efeitos já existentes na biblioteca da frente; cortes; ordem de produção.
@@ -96,12 +120,12 @@ O gancho decide-se **antes do roteiro**, a partir da evidência visual mais fort
 - O som reforça a ação da imagem; não substitui a imagem nem depende de volume acima do alvo de loudness da frente.
 - Curiosidade legítima: a promessa é paga dentro do vídeo com a mesma evidência (constituição §5). Promessa nunca paga = engano (P0 no checklist).
 
-**Aplicação por frente** (critérios comuns, identidades próprias; o detalhe está na bíblia ou no perfil, aqui só o mínimo):
+**Aplicação por frente** (critérios comuns, identidades próprias; o detalhe está na bíblia ou no perfil, aqui só o mínimo). Desde 21/11/2026 o quadro 0 de todas as frentes segue a **abertura de objeto** (§4.1.1):
 
 | Frente | Quadro 0 e objeto | Som | Onde está a regra |
 |---|---|---|---|
 | Meta em Curto | Grelha 2×2 do MC-ESP01 com cartas ou deck reais (e foto do jogador autorizada); revelação até 3 s; mergulho no terminal; dados e fonte legíveis; mudança ≤ 3 s; pagamento; fecho oficial | sonoplastia do TUBO (CRT, modem, glitch) | `oraculo/CONTEXTO.md` §7 |
-| Mana & Burn | Abertura de carta: a carta falada em tela cheia no quadro 0 (linha destacada + selo com o número), só até o número do gancho ser dito, e depois entra na TV SAL; dor da mesa e número na 1.ª fala do Burn; evidência visual em cada fala | pancada no quadro 0 e troca de canal da TV SAL | `manaburn/PERFIL.md` («Abertura de carta») |
+| Mana & Burn | Abertura de objeto (§4.1.1): a carta falada em tela cheia no quadro 0 (linha destacada + selo com o número), só até o número do gancho ser dito, e depois entra na TV SAL; dor da mesa e número na 1.ª fala do Burn; evidência visual em cada fala | pancada no quadro 0 e troca de canal da TV SAL | `manaburn/PERFIL.md` («Abertura de carta») |
 | Conde de Manaforte | A obra (ou o detalhe que sustenta a análise) já no ecrã enquanto corre a abertura; nunca estatística como gancho | trilha e sons do Tribunal | `conde/PERFIL.md` |
 | Vince Vault | Carta real + número + data, só com os recursos 2D aprovados (3D é arquivo) | só sons aprovados da frente (Fonte sintetizada) | `vince/PERFIL.md` |
 | Órbita | Carta Star Trek inteira e parada desde o quadro 0 (loop de 12 s); nada de outras frentes | sem áudio no ficheiro (música no Instagram) | `orbita/CONTEXTO.md` §4 |
@@ -119,6 +143,31 @@ O gancho decide-se **antes do roteiro**, a partir da evidência visual mais fort
 | Identidade | parece outra frente | parcial | inconfundível desta frente |
 
 Nota 1 em Pagamento = P0 (engano); nota ≤ 2 em Relevância, Clareza ou Identidade = P1. **Não há média que compense um P0.** A rubrica é opinião interna: não declara um gancho vencedor nem muda uma regra; isso só com dados do Insights comparáveis (constituição §12).
+
+### 4.1.1 Abertura de objeto (padrão de todos os vídeos novos desde 21/11/2026)
+
+Generaliza a «abertura de carta» do Mana & Burn (MB-EP15) a todas as frentes. O vídeo abre com **o objeto de que se fala em tela cheia**, com a prova marcada, e fica **só o tempo necessário** antes de entrar no mundo da personagem. Concretiza os campos 1–5 da §4.1.
+
+1. **Objeto inteiro e real no quadro 0:** a carta, o deck, a obra, a foto ou o gráfico de que trata o episódio, em grande e inteiro (carta do Scryfall, obra oficial, foto autorizada, captura real). Sem objeto real verificável não há abertura: abre-se com a melhor evidência real disponível e regista-se o desvio na ficha. Nunca se gera ou simula o objeto.
+2. **Prova marcada já no quadro 0:** a linha de regra, o detalhe da arte, o número ou o dado que sustenta o gancho, destacado; um selo com o número ou a palavra do gancho, sobre a arte ou uma zona vazia, nunca sobre o texto, a criatura ou o rosto. Legível em miniatura e sem som.
+3. **Impacto curto (0–0,2 s):** um movimento (entrada com escala, tremor que decai, acender, virar) com **um som da biblioteca da frente**. O primeiro quadro fica limpo e legível: o impacto não começa com ecrã branco nem com o objeto fora de quadro.
+4. **Tempo = o gancho falado:** sai quando a personagem acaba de dizer a palavra-chave ou o número do gancho (marcado como fração da 1.ª fala ou com o tempo da locução). Mínimo ~1 s, máximo 2,5 s. Se o número chega tarde, reescreve-se a 1.ª frase; não se estica a abertura.
+5. **Saída para o mundo da personagem (0,3 s):** o objeto entra no cenário da frente (tabela), sem corte seco, e o ecrã seguinte continua o assunto.
+6. **Sem tempo extra:** a abertura corre por cima da 1.ª fala; legendas, crédito da obra e tarja da série ficam por cima dela. Bordões e aberturas das bíblias correm por cima ou logo a seguir, nunca antes do objeto.
+7. **Medir no ficheiro final:** quadro 0 (miniatura sem som), instante de saída face à palavra do gancho, nada sobre o texto do objeto; regista-se na ficha (§4.1, rubrica medida).
+
+| Frente | Objeto em tela cheia | Prova marcada e selo | Saída para o mundo da personagem | Som | Estado técnico |
+|---|---|---|---|---|---|
+| Mana & Burn | a carta falada | linha do Oracle destacada; selo com o número da dor | voa para dentro da TV SAL | pancada + pop; zap de canal na saída | **implementado** (`EP.abertura`, `manaburn/kit/abertura/`; ref. MB-EP15) |
+| Meta em Curto | a carta-chave ou a grelha 2×2 do deck (quando o tema é o deck) | o número do torneio (resultado, %, amostra) em caixa sob a carta | entra no ecrã do CRT do TUBO e mergulha nos dados (ordem v4 de `oraculo/CONTEXTO.md` §7.4) | sonoplastia do TUBO (CRT, glitch) | já próximo (ordem v4); falta alinhar a saída à palavra do gancho no `oraculo/motor/` |
+| Conde de Manaforte | a obra inteira | o detalhe da análise com elipse, seta ou lupa crítica (observação verificável); carimbo bordô do Conde sem tapar a arte | a obra recua para o cenário do Tribunal, com a lupa crítica ainda no detalhe, enquanto corre «Meus caros apreciadores do duvidoso…» | só da biblioteca da frente (ex.: carimbo) | a implementar no próximo episódio da frente |
+| Vince Vault | a carta | preço com fonte, data e a seta da variação | a carta pousa na mesa do Vince (traço 2D aprovado) | só sons aprovados da frente | a implementar no próximo episódio |
+| Lisa Marie no Ar | a obra, a carta ou a foto autorizada da convidada | a ligação com Magic (carta, créditos, crossover) marcada | entra no quarto-estúdio da VJ | a definir com a voz e a música da frente (ainda por definir em `lisa-marie/CONTEXTO.md`) | a implementar no próximo episódio |
+| Expedição BINDER | a carta ou o produto revelado | ficha de espécie com o dado oficial | desce para o abismo (medidor de descida) | ping de sonar | a implementar no próximo episódio |
+| Órbita | já é a carta inteira e parada desde o quadro 0 | — (sem selo: o formato é contemplativo) | não sai: loop de 12 s | sem áudio no ficheiro | conforme; sem mudança |
+| Lambe-lambe | o objeto no 1.º slide/quadro 0 | adesivo da frente com a palavra do gancho | o cartaz é colado no muro | efeitos próprios, pico −6 dBFS | aplicar no próximo post em vídeo; carrossel: 1.º slide = objeto |
+
+Desvio a estes pontos (por exemplo, especial sem objeto, homenagem a uma pessoa) só com registo em `DECISOES.md` ou na ficha, com a razão.
 
 ### 4.2 Revisão narrativa (antes da voz)
 

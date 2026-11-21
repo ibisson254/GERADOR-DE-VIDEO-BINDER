@@ -53,7 +53,7 @@ Exemplo: `python3 capas/capa_mb.py --scryfall cmd/215 --frase "O dragão que com
 
 ## Abertura de carta (padrão desde 21/11/2026)
 
-Decisão do fundador de 21/11/2026, 02:51 (`nucleo/DECISOES.md`). O vídeo abre com a carta de que se fala **em tela cheia**, antes da sala, com `EP.abertura` no `episode.js` e `"abertura": {"ate": …}` no `episode.json` (o mesmo valor).
+Decisão do fundador de 21/11/2026, 02:51 (`nucleo/DECISOES.md`); é a versão do Mana & Burn da **abertura de objeto** de todas as frentes (`nucleo/SHOWRUNNER.md` §4.1.1, 16:31). O vídeo abre com a carta de que se fala **em tela cheia**, antes da sala, com `EP.abertura` no `episode.js` e `"abertura": {"ate": …}` no `episode.json` (o mesmo valor).
 - **Quadro 0:** carta inteira (PNG do Scryfall), a linha de regra do gancho destacada (`hl`, mesmas frações do `EP.canais[].hl`) e um selo com o número do gancho sobre a arte, nunca sobre o texto nem a criatura. Legível sem som, em miniatura.
 - **Impacto:** 0–0,18 s escala 1,06→1 com tremor; pancada + pop no áudio.
 - **Tempo:** só o necessário. Sai quando o Burn acaba de dizer a palavra-chave ou o número do gancho (`ate` = fração da 1.ª fala; medir no texto: fim da frase com o número). Mínimo ~1 s, máximo 2,5 s. Se a 1.ª fala não diz o número cedo, reescreve-se a fala, não se estica a abertura.

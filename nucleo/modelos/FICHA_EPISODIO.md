@@ -19,6 +19,14 @@ Copiar para a pasta do episódio (`<pasta da frente>/episodios/epNN_<slug>/ficha
 - Se bloqueada: decisão do fundador que liberta (data em `nucleo/DECISOES.md`) e porque o ângulo é novo:
 - Relações com conteúdos anteriores (IDs): 
 
+## Pesquisa de pauta* (`nucleo/SHOWRUNNER.md` §2.4)
+- Reação-alvo da personagem: 
+- Candidatos (≥ 3 em série/especial; ≥ 2 em Lambe-lambe/Órbita; ≥ 2 ângulos se o tema veio do fundador), cada um com os 9 campos: 
+- Rubrica (1–5: gancho, originalidade, compreensão, visual, compartilhamento, recompensa, adequação à personagem) e totais: 
+- Vencedor e porque supera os outros*: 
+- Reserva (candidatos preteridos, sem entrar no registo): 
+- Limitações das fontes (o que não abriu ou não se confirmou e saiu do vídeo): 
+
 ## Editorial (briefing)
 - Objetivo*: 
 - Proposta de valor numa frase*: 
@@ -35,6 +43,8 @@ Copiar para a pasta do episódio (`<pasta da frente>/episodios/epNN_<slug>/ficha
 5. Descoberta ou pergunta até 3 s*: 
 6. Promessa*: 
 7. Pagamento (segundo e imagem)*: 
+
+Abertura de objeto* (§4.1.1): objeto em tela cheia · prova marcada e selo · instante de saída (palavra do gancho e segundo) · saída para o mundo da personagem · som. Medido no final: 
 
 | Rubrica (1–5) | Prevista | Medida no final |
 |---|---|---|
