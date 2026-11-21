@@ -92,3 +92,8 @@ Quando os créditos de voz não estão autorizados: `python3 previa_sem_voz.py` 
 Atenção às frações do `hl` em telas compostas com moldura (`.f{inset:18px}`): somar os 18 px da moldura à posição do elemento antes de dividir por 744 × 1040.
 
 Corte das vozes quando a legenda mostra números em algarismos e a voz os diz por extenso: `episodios/ep14_everything/processar_vozes.py` corta pelo tamanho do `tts` (o `process.py` usa o da legenda e desalinha as falas).
+
+## Kit v3 na `main` (21/11/2026, MB-EP15)
+
+`kit/v3/` veio da branch `manaburn/ep10-97-terrenos` (MB-EP13) e o `index.html` já tem os ganchos aplicados (`patch_index_v3.py` não se volta a correr: recusa um `index.html` que já os tenha). Campos do `episode.js`, todos opcionais: `quadro` + `quadroDir` (retrato do Conde, **padrão** desde 21/11), `calendario` (folhinha), `pilha`, `cams`, `gancho`, `marca`, `loop`, `desliga`, `canais[].subir`. Sem eles, o episódio sai igual ao kit v2 (testado com o Ep. 9). Conferir que as trocas de expressão caem em cortes: `python3 kit/v3/check_quadro.py`. Episódio de referência com o quadro e a TV acesa no quadro 0: `episodios/ep15_felidar/`.
+

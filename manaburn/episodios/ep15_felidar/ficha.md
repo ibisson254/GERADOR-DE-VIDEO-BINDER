@@ -1,12 +1,12 @@
 # Ficha · Mana & Burn · EP15 · «O gato que já nasce ganhando» (Felidar Sovereign)
 
-Pacote de pré-produção para aprovação. Nenhum crédito gasto (sem voz, música, imagem nem vídeo pagos). Capa gerada localmente com o gerador oficial (`manaburn/capas/capa_mb.py`, sem custo).
+Pré-produção (01:51) e produção completa (02:13–02:50). Créditos: só as vozes (ElevenLabs, 1.037 créditos). Capa gerada localmente com o gerador oficial (`manaburn/capas/capa_mb.py`, sem custo).
 Marcação: **C** = confirmada (com fonte) · **I** = interpretação · **P** = piada.
 
 ## 1. Identificação e classificação*
 - ID editorial*: `MB-EP15` (próximo livre: o último no registo é o MB-EP14).
-- Estado no registo*: **EM ANÁLISE** (pesquisa feita, pauta livre, roteiro proposto; falta a aprovação do fundador antes da voz).
-- Pedido: «MISSÃO AUTÓNOMA — PRÓXIMO MANA & BURN» (fundador, 21/11/2026, 01:51). Aprovação: pendente.
+- Estado no registo*: **CONCLUÍDO** (vídeo final com voz, 21/11/2026). Publicação: com o fundador.
+- Pedido: «MISSÃO AUTÓNOMA — PRÓXIMO MANA & BURN» (fundador, 21/11/2026, 01:51). Aprovação e produção: «Refine oque achar interessante e coloque o quadro do conde igual o episódio citado […] Comece a criar o vídeo e só pare quando terminar» (fundador, 21/11/2026, 02:13).
 - Frente*: Mana & Burn (território «cultura e caos»: carta que provoca reação forte na mesa; não é análise de metagame → não é TUBO).
 - Classe*: leitura de carta (carta polémica / regra do Commander). Estratégia: verificação rápida (Oracle + rulings oficiais + regra 903.7).
 - Complexidade: baixa. Formato: episódio base (padrão MB-EP11: 14 falas, Burn abre, ≥3 leituras do Mana, pergunta A/B).
@@ -226,3 +226,43 @@ Relógio da TV SAL em «20:40» = os 20 de vida do formato para que o Felidar fo
 3. Teaser da manchete 8 (ou retirar).
 4. Confirmar o estado de impulso e a data de publicação do MB-EP13 (as métricas da missão indicam que já saiu; o registo ainda diz CONCLUÍDO, não publicado).
 5. Par de publicação (carrossel do app no dia seguinte) precisa de capturas reais do scanner/coleção.
+
+## 18. Produção e controlo de qualidade final (21/11/2026)
+
+**Refinamentos face à proposta das 01:51:** roteiro encurtado de 166 para 143 palavras (EP13 ≈ 110, EP14 ≈ 142) para não alongar; «Vigilância e vínculo com a vida» → «Vigilância e vínculo» na fala (a tela mostra a palavra inteira); fala 12 com revelação em dois tempos na TV (aos 62 % da fala entra «VOCÊ VENCEU», em «vitória») para pagar o gancho com som e imagem e manter a troca ≤ 3 s; destaques reais sobre o texto do Felidar (manutenção nas falas 2; vigilância e vínculo na fala 10) e sobre a ruling (falas 6 e 8); Oloro com a linha «you gain 2 life» marcada no insert; contador da TV SAL «SUA VIDA» (exemplo de partida: 40 · 38 · 39 · 44) com a conta «início: 40 · regra 903.7».
+**Quadro do Conde de Manaforte na parede** como no MB-EP13 (kit v3 integrado na `main` a 21/11; padrão da série desde esta data, `nucleo/DECISOES.md`). Expressões: 1–2 neutro · 3–4 desconfiado · 5 indignado · 6 desconfiado · 7–8 admirado · 9 indignado · 10 admirado · 11 indignado · 12 admirado · 13–14 neutro (só mudam no início de cada plano).
+**Mensagem subliminar pedida pelo fundador: não aplicada** (proibida em Portugal e abusiva no Brasil; ver `nucleo/DECISOES.md`, 21/11). O easter egg visível (relógio 20:40) e a linha «Tem um detalhe escondido na TV» no comentário fixado ficam como alternativa honesta.
+
+**Vozes:** ElevenLabs eleven_v4, flow «Mana & Burn — MB-EP15 (Felidar)» (1IYxWFcByrxAhJZACiLR). Burn: Talis (E9a8LlXPNWtyvvSoZzrb), 500 créditos, 28,32 s. Mana: Erik (nfiLpQ54jEQninp3nNqL), 537 créditos, 31,52 s. Uma geração cada, sem repetição. Faixas: `faixas_elevenlabs.txt`. Corte pelo `tts` (`episodios/ep14_everything/processar_vozes.py`), ritmo Burn ×1,1, Mana ×1,15, silêncios internos ≤ 0,10 s.
+
+**Montagem:** kit da `main` + `kit/v3` (quadro do Conde); telas `telas_felidar.py` → `cards/`; `processar_vozes.py burn.mp3 mana.mp3` → `render.py` → `episodios/ep14_everything/juntar_fecho.py kit.mp4 comum/outro/outro_binder_916.mp4 final.mp4 0`. Playwright com o Chrome do sistema.
+
+**Tempos reais (process.py):** 1 B 0,35 · 2 M 4,39 · 3 B 7,52 · 4 M 9,53 · 5 B 12,94 · 6 M 17,36 · 7 B 20,85 · 8 M 22,37 · 9 B 26,13 · 10 M 28,20 · 11 B 31,45 · 12 M 34,28 (VOCÊ VENCEU a 36,46) · 13 B 37,79 · 14 M 40,56 · pancada 41,81 · fecho 42,33.
+
+| Critério | Alvo | Medido | OK |
+|---|---|---|---|
+| Resolução / fps | 1080×1920, 30 | 1080×1920, 30 | ✔ |
+| Duração | livre; ref. EP13 45,83 s | **46,20 s** (42,33 s + fecho 3,87 s) | ✔ |
+| Loudness / pico | −14 LUFS / < −1 dBTP | −14,7 LUFS / −1,3 dBTP | ✔ (EP13: −14,5) |
+| Fecho do scanner | presente | presente a 42,33 s | ✔ |
+| Bordas da TV (`bordas.py`) | OK | 748 quadros, laterais 12–1068 px | ✔ |
+| Quadro 0 | carta + 40 legíveis sem som | Felidar + «VIDA 40» + linha da carta na TV SAL acesa | ✔ |
+| Mudança visual ≤ 3 s | ≤ 3 s | maior intervalo ≈ 2,8 s (31,43→34,27) | ✔ |
+| Som em cada revelação | sim | troca de canal, destaque, cartas, raiva (process.py: 4 destaques, 5 cartas, 7 zaps) | ✔ |
+| Pagamento do gancho | ~37,5 s | «VOCÊ VENCEU» a 36,46 s | ✔ |
+| Destaques alinhados | sim | conferidos a 6,5 s (manutenção) e 19,5 s (ruling) | ✔ |
+| Factos = ficha | sim | sim | ✔ |
+
+Nota: o medidor «SUA VIDA» do quadro 0 ainda está a subir (mostra 0 nos primeiros 0,35 s e chega a 40 com a animação padrão do kit); a tela ao lado já mostra «40» gigante.
+
+| Rubrica (medida na folha de contacto, sem som) | Medida |
+|---|---|
+| Relevância visual | 5 |
+| Impacto inicial | 4 |
+| Clareza | 5 |
+| Curiosidade | 5 |
+| Pagamento | 5 |
+| Identidade | 5 |
+
+### Ficheiros finais
+- Vídeo `ManaBurn_Ep15_Felidar_916.mp4` (46,20 s) e capa `MB_EP15_CAPA.png`: entregues na conversa de 21/11/2026 (vídeo não versionado). Folha de contacto: `folha_contacto.png`.

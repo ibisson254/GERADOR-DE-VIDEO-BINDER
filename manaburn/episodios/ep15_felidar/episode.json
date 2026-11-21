@@ -1,0 +1,144 @@
+{
+ "schema": 2,
+ "chamada": "o gato dos 40",
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Esse gato ganha com *40 de vida*. E no Commander a gente *COMEÇA* com 40!",
+   "tts": "Esse gato ganha com quarenta de vida. E no Comânder a gente COMEÇA com quarenta!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "*Lê a carta.* Na *sua manutenção*. E custa *seis*."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Baixo no turno seis, ganho no *sete*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Se a vez voltar com *40 ou mais*. A mesa *inteira* joga antes.",
+   "tts": "Se a vez voltar com quarenta ou mais. A mesa inteira joga antes."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Meu comandante, *Oloro*, me dá *2 na manutenção*: 38 vira 40 e *ganho na hora*!",
+   "tts": "Meu comandante, Olôro, me dá dois na manutenção: trinta e oito vira quarenta e ganho na hora!"
+  },
+  {
+   "quem": "M",
+   "tags": "[tired]",
+   "legenda": "Não. Ele confere quando a manutenção *começa*. Com 38, *nem dispara*.",
+   "tts": "Não. Ele confere quando a manutenção começa. Com trinta e oito, nem dispara."
+  },
+  {
+   "quem": "B",
+   "tags": "",
+   "legenda": "Tá. Mas disparou? *Já era*."
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Confere *de novo* ao resolver. Cravado em 40? *Um* ponto em resposta e *acabou*.",
+   "tts": "Confere de novo ao resolver. Cravado em quarenta? Um ponto em resposta e acabou."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "*UM PONTO?!* Esse gato é *inútil*!",
+   "tts": "UM PONTO?! Esse gato é inútil!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "*Vigilância* e *vínculo*: bate, *ganha vida* e fica de guarda."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "A mesa *inteira* tem que me bater… ou *perde pra um gato*?!",
+   "tts": "A mesa inteira tem que me bater... ou perde pra um gato?!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Ou some com o gato. Se não: manutenção, *40*… *vitória*.",
+   "tts": "Ou some com o gato. Se não: manutenção, quarenta... vitória."
+  },
+  {
+   "quem": "B",
+   "tags": "",
+   "legenda": "*A*: bato no dono. *B*: tiro o gato da mesa.",
+   "tts": "Á: bato no dono. Bê: tiro o gato da mesa."
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Comenta aí."
+  }
+ ],
+ "gap": [
+  0,
+  0.0,
+  -0.06,
+  0.0,
+  -0.08,
+  0.02,
+  -0.08,
+  0.02,
+  -0.08,
+  0.02,
+  -0.1,
+  0.02,
+  0.0,
+  0.38
+ ],
+ "ins": [
+  [
+   2,
+   0.1
+  ],
+  [
+   4,
+   0.1
+  ],
+  [
+   8,
+   0.1
+  ],
+  [
+   10,
+   0.1
+  ],
+  [
+   12,
+   0.1
+  ]
+ ],
+ "respiro_max": 0.1,
+ "tempo": {
+  "B": 1.1,
+  "M": 1.15
+ },
+ "mix": {
+  "intro_db": 0,
+  "fala_db": -14,
+  "pausa_db": -6,
+  "fecho_db": 0
+ },
+ "sfx": {
+  "tv": true,
+  "destaque": true,
+  "carta": "flick",
+  "raiva": true
+ },
+ "outro": {
+  "scanner": 0,
+  "hold": 2.75
+ }
+}

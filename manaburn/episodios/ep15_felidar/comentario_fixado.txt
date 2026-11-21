@@ -14,3 +14,5 @@ Texto da carta (Oracle): "Vigilance, lifelink. At the beginning of your upkeep, 
 Ruling oficial (25/08/2015): o Felidar confere a vida quando a manutenção começa; se não tiver 40, a habilidade nem dispara; se disparar, confere de novo ao resolver.
 
 Fontes (21/11/2026): Oracle e rulings no Scryfall; Regras Completas, 903.7.
+
+Tem um detalhe escondido na TV. Achou? Diga o segundo.

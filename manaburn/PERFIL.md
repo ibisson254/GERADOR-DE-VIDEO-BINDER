@@ -51,6 +51,10 @@ Todas as capas do Mana & Burn, de episódios novos ou pedidas para episódios an
 
 Exemplo: `python3 capas/capa_mb.py --scryfall cmd/215 --frase "O dragão que come" --foco "terreno" --selo "−2 por pancada" --ep 11 --tag Commander --saida MB_EP11_CAPA.png`
 
+## Quadro do Conde (padrão desde 21/11/2026)
+
+Decisão do fundador de 21/11/2026 (`nucleo/DECISOES.md`), a partir do MB-EP13. Em todos os episódios novos, o retrato do Conde de Manaforte fica na parede da sala, no lugar do quadro torto, e reage à conversa: `EP.quadroDir: 'kit/v3/conde/'` e `EP.quadro` com uma expressão por fala (`neutro`, `desconfiado`, `indignado`, `admirado`; o `medalhao` não é expressão). A expressão só muda no início de cada plano, nunca com o quadro à vista. Mapa pela emoção da fala do plano: dúvida → desconfiado; exagero ou desdém → indignado; revelação → admirado; abertura e fecho → neutro. Não conta como easter egg.
+
 ## Feedback visual em cada fala (padrão desde 15/11/2026)
 
 Decisão do fundador de 15/11/2026 (`nucleo/DECISOES.md`). O seguidor tem de perceber de que se fala só a olhar para o ecrã.

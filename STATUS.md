@@ -3,9 +3,9 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
-## MB-EP15 · Felidar Sovereign (21/11/2026, 02h) — EM ANÁLISE, à espera de aprovação
+## MB-EP15 · O gato dos 40 (21/11/2026, 02h45) — CONCLUÍDO; publicação com o fundador
 
-Missão autónoma «PRÓXIMO MANA & BURN» (referência de desempenho: MB-EP13). Três candidatos pesquisados (Felidar Sovereign; Thassa's Oracle + Demonic Consultation; Biovisionary + Rite of Replication); vencedor **Felidar Sovereign** («ganha com 40 de vida; no Commander a gente começa com 40»), rubrica 32 × 28 × 29. Pacote completo de pré-produção em `manaburn/episodios/ep15_felidar/` (ficha com fontes, gancho de 7 campos, roteiro de 14 falas, storyboard, TV SAL, voz, métrica; legenda, comentário fixado, alt; capa no modelo de 14/11). **Zero créditos.** Biovisionary fica como reserva forte. **Depende do fundador:** aprovar o roteiro e autorizar as vozes (~1.000 créditos, estimativa); teaser da manchete 8; confirmar data e impulso do MB-EP13 (as métricas indicam que saiu; o registo ainda diz CONCLUÍDO).
+Felidar Sovereign: vence na sua manutenção com 40 de vida, e no Commander todo mundo começa com 40. Escolhido entre 3 candidatos (missão de 01:51); produzido a pedido do fundador (02:13). Vozes Talis + Erik, 1.037 créditos. Vídeo final 46,20 s com fecho (EP13: 45,83 s), −14,7 LUFS, QC sem problemas, `bordas.py` OK; vídeo e capa entregues na conversa (não versionados). Pacote em `manaburn/episodios/ep15_felidar/`. **Novo padrão:** quadro do Conde na parede em todos os episódios novos; kit v3 integrado na `main` (`nucleo/DECISOES.md`, 21/11). Mensagem subliminar pedida: não adotada (proibição legal). Falta: escuta das pronúncias e publicação; confirmar data e impulso do MB-EP13 (as métricas indicam que saiu); par de publicação (carrossel do app) com capturas reais.
 
 ## ABISMO · campanha Nauctis (20/11/2026, 11h) — AB-04 v2 e AB-05 a AB-10
 
