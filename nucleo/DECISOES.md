@@ -475,3 +475,9 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - **Fundador:** «O tema não vamos fazer de achismo, pesquise sempre temas mais falados na comunidade tanto do Brasil, Europa e Estados Unidos e faça uma correlação para construir a narrativa do episódio e adaptando ao personagem.»
 - **Regra (todas as frentes):** novo passo 2a em `nucleo/SHOWRUNNER.md` §2.4: tabela «Região · o que se discute · fonte com data» na ficha; a narrativa nasce da correlação entre as três regiões e adapta-se à personagem. Comentários de seguidores provam interesse, não substituem a pesquisa.
 - **Primeira aplicação:** MC-ESP04 (`oraculo/esp04/ficha.md`).
+
+## 22/11/2026 (16:47) · Série do TUBO sobre Pauper, semanal; MC-PAU01 com vozes
+- **Fundador:** «Vamos fazer uma série do tubo falando sobre pauper. Vamos dividir todas essas informações e ideias de conteúdo, em vez de querer juntar tudo em um só […]. Começa com o vídeo que você mais acha que vai dar view […]. Cada semana, botar um episódio a mais do tubo […] sobre Pauper. Crie o episódio, pode colocar as vozes […] e só pare quando ele estiver pronto.»
+- **Série:** «Meta em Curto · Pauper», IDs `MC-PAU01…`, um por semana, backlog e método em `oraculo/PAUPER.md`.
+- **MC-PAU01 «86 dólares»** (padrão A do top 10 de audiência): voz autorizada neste pedido (1 geração, 404 créditos). Fronteira com o Vince: o preço entra como comparação entre os decks mais jogados de dois formatos competitivos (decisão de produção; o fundador pode rever).
+- **Motor:** `mc_render.py` aceita `pergunta_rotulos` (rótulos livres na cena `pergunta`).

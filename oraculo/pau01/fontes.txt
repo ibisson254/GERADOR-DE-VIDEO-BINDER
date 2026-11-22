@@ -1,0 +1,9 @@
+MC-PAU01 · fontes (lidas a 22/11/2026)
+- MTGGoldfish, Pauper Metagame (30 dias, papel): https://www.mtggoldfish.com/metagame/pauper/full · Mono Red Madness 15,0% (328 listas), US$ 86; 25 arquétipos com ≥ 1%.
+- MTGGoldfish, Modern Metagame (30 dias, papel): https://www.mtggoldfish.com/metagame/modern/full · Eldrazi Ramp 11,8% (281), US$ 622.
+- Nota: a página do arquétipo Mono Red Madness mostra US$ 77,57 (lista média); usamos o valor da página de metagame, a mesma fonte do Modern.
+- Eldrazi Ramp: listas recentes com Ugin, Eye of the Storms (MTGGoldfish, Modern League 26/08/2026).
+- Cartas: Scryfall (creditos em cartas/creditos.json).
+- Comentários: @kaioribeir.o e @dpannos, públicos no post MB-GIRO03 (prints do fundador, 22/11/2026).
+- Pesquisa de audiência: ../esp04/pesquisa_audiencia.md.
+- Voz: ElevenLabs, Antonio de Jesus, eleven_v4, geração QfhehA5E9sKpw55yQAF2 (404 créditos), flow QlaW7gjXhfYRES5T3RnV; transcrição de conferência UDMgyrz36EerggXKgJoZ (texto confere).

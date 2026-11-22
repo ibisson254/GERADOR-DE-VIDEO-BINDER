@@ -3,6 +3,10 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
+## MC-PAU01 · «86 dólares» (22/11/2026, 17h10) — CONCLUÍDO; publicação com o fundador
+
+Série nova **Meta em Curto · Pauper**, semanal (pedido do fundador 16:47; `oraculo/PAUPER.md`, `nucleo/DECISOES.md`). Pauta escolhida pela pesquisa de audiência (top 10 de Pauper: «barato × caro» lidera) e pela escuta em três regiões (regra nova §2.4 2a). Vídeo 29,03 s, −14,0 LUFS, QC sem problemas; voz 404 créditos; vidIQ 15 créditos. Entregáveis em `oraculo/pau01/`. Próximo: MC-PAU02 «Vai ter ban?» até 29/11 (anúncio de banidos a 30/11). Pendente: ligar a @binder_vision no vidIQ (hoje @ibisson.mendes; plano só aceita 1 conta).
+
 ## MB-EP16 · Alexander, Ship's Fool (22/11/2026, 01h45) — CONCLUÍDO; publicação com o fundador
 
 v2 aprovada e **plano de prova com flip entre cartas passa a padrão do Mana & Burn** (fundador, 01:03; `nucleo/DECISOES.md`, `manaburn/PERFIL.md`). Vozes Talis + Erik, 974 créditos. Vídeo final 44,13 s, −14,7 LUFS, pico −1,3 dBTP, QC sem problemas, bordas e check_quadro OK; vídeo entregue na conversa (não versionado). Falta: escuta do fundador e publicação (UTM `utm_campaign=MB-EP16`).

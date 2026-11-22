@@ -1,0 +1,26 @@
+{
+ "kessig_flamebreather.png": {
+  "nome": "Kessig Flamebreather",
+  "set": "VOW",
+  "num": "164",
+  "raridade": "common",
+  "artista": "Lius Lasahido",
+  "fonte": "Scryfall"
+ },
+ "ugin_eye_of_the_storms.png": {
+  "nome": "Ugin, Eye of the Storms",
+  "set": "TDM",
+  "num": "1",
+  "raridade": "mythic",
+  "artista": "Joshua Raphael",
+  "fonte": "Scryfall"
+ },
+ "spellstutter_sprite.png": {
+  "nome": "Spellstutter Sprite",
+  "set": "MMA",
+  "num": "65",
+  "raridade": "common",
+  "artista": "Rebecca Guay",
+  "fonte": "Scryfall"
+ }
+}

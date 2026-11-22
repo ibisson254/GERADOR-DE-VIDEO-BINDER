@@ -516,7 +516,7 @@ def cena_pergunta(t, i):
         c2 = c.rotate(ang, expand=True, resample=Image.BICUBIC); im.alpha_composite(c2, (int(x + (1 - k) * (-100 if lado == 'A' else 100)), 520))
     d = ImageDraw.Draw(im, 'RGBA'); d.text((540, 840), '×', font=F(INTB, 120), fill=PH, anchor='mm')
     for lado, x in (('A', 307), ('B', 772)):
-        s = f"{D['i' + lado]} · {D['n' + lado]} decks"; d.text((x, 1235), s, font=fit(d, s, MONOB, 40, 420), fill=WHITE, anchor='mm')
+        s = (D.get('pergunta_rotulos') or {}).get(lado) or f"{D['i' + lado]} · {D['n' + lado]} decks"; d.text((x, 1235), s, font=fit(d, s, MONOB, 40, 420), fill=WHITE, anchor='mm')
     f = fala(t); legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
     selo_fonte(im); marca(d); return im.convert('RGB')
 

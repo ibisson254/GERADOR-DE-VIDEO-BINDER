@@ -1,0 +1,196 @@
+{
+ "_leia": "MC-PAU01 · Meta em Curto · Pauper #1 «86 dólares». Dados: MTGGoldfish, metagame Pauper e Modern, filtro 30 dias, preço de papel (tabletop), lidos a 22/11/2026.",
+ "confirmado": true,
+ "faixa": "META EM CURTO · PAUPER #1",
+ "pergunta_gancho": "QUANTO CUSTA O DECK MAIS JOGADO DO PAUPER?",
+ "linha_fonte": "Dados: MTGGoldfish · 30 dias · 22/11/2026",
+ "selo_fonte": "FONTE: MTGGOLDFISH · 30 DIAS · PREÇO DE PAPEL · 22/11/2026",
+ "per": "30 dias",
+ "extraido": "22/11/2026",
+ "A": "Mono Red Madness",
+ "B": "Eldrazi Ramp",
+ "carta_A": "cartas/kessig_flamebreather.png",
+ "carta_B": "cartas/ugin_eye_of_the_storms.png",
+ "carta_L": "cartas/spellstutter_sprite.png",
+ "pergunta_rotulos": {
+  "A": "US$ 86 · PAUPER",
+  "B": "US$ 622 · MODERN"
+ },
+ "pergunta": "QUAL DECK VOCÊ MONTARIA COM US$ 86?",
+ "capa_l1": "O MAIS JOGADO",
+ "capa_l2": "DO PAUPER CUSTA",
+ "capa_foco": "US$ 86",
+ "capa_unidade": "O DO MODERN: US$ 622",
+ "saida": "MC_PAU01_FINAL.mp4",
+ "frases": [
+  "NO MTGGOLDFISH, ÚLTIMOS 30 DIAS:",
+  "O DECK MAIS JOGADO DO PAUPER CUSTA US$ 86.",
+  "O MAIS JOGADO DO MODERN: US$ 622.",
+  "SETE VEZES MAIS.",
+  "BARATO NÃO É FRACO: 25 DECKS COM 1% OU MAIS.",
+  "O @DPANNOS TINHA RAZÃO.",
+  "O @KAIORIBEIR.O PEDIU MAIS GENTE. A PORTA ESTÁ ABERTA.",
+  "QUAL DECK VOCÊ MONTARIA COM US$ 86?",
+  "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
+ ],
+ "voz_cfg": {
+  "atempo": 1.1,
+  "alvo_s": 35.0,
+  "pausa": 0.15,
+  "pausa_min": 0.08,
+  "pausas_longas": {
+   "3": 0.35,
+   "4": 0.25,
+   "6": 0.25,
+   "8": 0.4
+  }
+ },
+ "voz": {
+  "arquivo": "voz_montada.wav (geração QfhehA5E9sKpw55yQAF2, 404 créditos, flow ElevenLabs QlaW7gjXhfYRES5T3RnV)",
+  "atempo": 1.1,
+  "lead": 0.0,
+  "pausas": []
+ },
+ "seq": [
+  [
+   0,
+   "gancho"
+  ],
+  [
+   1.5,
+   "tubo_abertura",
+   "@1-0.6",
+   "@1-0.25"
+  ],
+  [
+   "@1+0.1",
+   "carta",
+   "A",
+   "US$ 86",
+   "MAIS JOGADO DO PAUPER",
+   "COMUM"
+  ],
+  [
+   "@2-0.05",
+   "carta",
+   "B",
+   "US$ 622",
+   "MAIS JOGADO DO MODERN",
+   "MÍTICA"
+  ],
+  [
+   "@3-0.05",
+   "tubo",
+   "desconfiado"
+  ],
+  [
+   "@4-0.05",
+   "carta",
+   "L",
+   "25",
+   "DECKS COM 1% OU MAIS",
+   "PAUPER",
+   [
+    "@5-0.1",
+    "top5",
+    "PRINT · COMENTÁRIO · @DPANNOS"
+   ]
+  ],
+  [
+   "@6-0.05",
+   "carta",
+   "A",
+   "US$ 86",
+   "PORTA DE ENTRADA",
+   "",
+   [
+    "@6+0.3",
+    "matriz",
+    "PRINT · COMENTÁRIO · @KAIORIBEIR.O"
+   ]
+  ],
+  [
+   "@7-0.05",
+   "pergunta"
+  ],
+  [
+   "@8-0.15",
+   "tubo",
+   "analitico"
+  ]
+ ],
+ "beats": {
+  "SCAN": 0.5,
+  "NUM": 1.0,
+  "HLB": 1.6,
+  "Q": 2.0,
+  "RISE": 1.5,
+  "DIVE": "@1-0.25",
+  "POP": "@1+0.1",
+  "POP_BAR": "@1+0.35",
+  "POP_A": "@1+0.5",
+  "POP_B": "@2+0.3",
+  "PERF": "@4",
+  "PERF_A": "@4+0.3",
+  "PERF_B": "@5-0.1",
+  "PERF_DEN": "@6+0.3",
+  "LEIT": "@3-0.05",
+  "LEIT2": "@6",
+  "DIF": "@3-0.1",
+  "DIF_PT": "@4+0.6",
+  "DIF_IC": "@4+0.9",
+  "DIF_VER": "@5+0.3",
+  "DIF_NOTA": "@6+0.6",
+  "ASK": "@7-0.05",
+  "CLOSE": "@8-0.15",
+  "CLOSE2": "@8+1",
+  "END": 25.18
+ },
+ "voz_tempos": [
+  [
+   0.0,
+   2.65,
+   "NO MTGGOLDFISH, ÚLTIMOS 30 DIAS:"
+  ],
+  [
+   2.8,
+   5.98,
+   "O DECK MAIS JOGADO DO PAUPER CUSTA US$ 86."
+  ],
+  [
+   6.13,
+   9.27,
+   "O MAIS JOGADO DO MODERN: US$ 622."
+  ],
+  [
+   9.62,
+   10.9,
+   "SETE VEZES MAIS."
+  ],
+  [
+   11.15,
+   14.88,
+   "BARATO NÃO É FRACO: 25 DECKS COM 1% OU MAIS."
+  ],
+  [
+   15.03,
+   16.19,
+   "O @DPANNOS TINHA RAZÃO."
+  ],
+  [
+   16.44,
+   19.05,
+   "O @KAIORIBEIR.O PEDIU MAIS GENTE. A PORTA ESTÁ ABERTA."
+  ],
+  [
+   19.2,
+   21.64,
+   "QUAL DECK VOCÊ MONTARIA COM US$ 86?"
+  ],
+  [
+   22.04,
+   25.03,
+   "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
+  ]
+ ]
+}
