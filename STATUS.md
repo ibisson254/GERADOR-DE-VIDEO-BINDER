@@ -5,7 +5,7 @@ Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `mai
 
 ## Insights · semana até 21/11 (22/11/2026, 18h40) — REGISTADO
 
-Prints do fundador (18:19–18:21): 46.697 views em 7 dias (+96,6%), 22.117 visualizadores, 611 seguidores (+588 em 30 dias). MB-EP13: 19.688 views, 361 guardados, 64 seguidores, impulso A CONFIRMAR. App (Supabase): 4 contas novas na semana de 16/11 contra 9 na anterior. Relatório `comum/insights/semanas/2026-11-21.md`. Falta: ecrã Conteúdo, visitas ao perfil, toques no link, data e impulso do MB-EP13.
+Prints do fundador (18:19–18:21): 46.697 views em 7 dias (+96,6%), 22.117 visualizadores, 611 seguidores (+588 em 30 dias). MB-EP13 (publicado 20/11, 09:00): 19.688 views, 282 partilhas, 361 guardados, 64 seguidores. **Semana toda orgânica** (fundador, 18:36). App (Supabase): 4 contas novas na semana de 16/11 contra 9 na anterior. Relatório `comum/insights/semanas/2026-11-21.md`. Falta: ecrã Conteúdo, visitas ao perfil, toques no link, impulso da semana de 8–14/11.
 
 ## MC-PAU01 · «86 dólares» (22/11/2026, 17h10) — CONCLUÍDO; publicação com o fundador
 
