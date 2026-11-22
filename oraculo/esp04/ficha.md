@@ -1,3 +1,47 @@
+# MC-ESP04 · v3 PROPOSTA ATUAL: «86 dólares» (o Pauper que as pessoas veem)
+
+Estado: **BRIEFING v3 para aprovação** (22/11/2026, 17:10). Substitui a tese da v2 (mais abaixo, guardada como histórico).
+Base: `pesquisa_audiencia.md` (top 10 mais vistos sobre Pauper). Conclusão: «% do meta» sozinho não está entre os mais vistos; o motor n.º 1 é **comum barata vs. caro** (5 de 10, ≈ 2,9 M views), depois **combo «é real?!»** e **«quebrado/ban»**.
+
+## Tese v3
+O deck mais jogado do Pauper custa **US$ 86**; o mais jogado do Modern, **US$ 622**. E o Pauper não é só barato: tem 25 decks com 1 % ou mais do meta. Barato, competitivo e com escolha. É a resposta ao @kaioribeir.o (porta de entrada para mais gente) e prova do que o @dpannos disse.
+
+## Factos (MTGGoldfish, filtro 30 dias, papel, lidos a 22/11/2026)
+- Pauper: Mono Red Madness 15,0 %, **$86** · Blue Terror 8,1 %, $97 · Dimir Faeries 7,7 %, $106 · Bogles 4,7 %, $55 · Elves 4,4 %, $73. Os 10 primeiros custam entre $55 e $182. Mais barato do top 25: Rakdos Madness, $52 (1,5 %).
+- Modern: Eldrazi Ramp 11,8 %, **$622** · Affinity 7,8 %, $1.204 · Boros Energy 7,2 %, $985.
+- Preços de referência do MTGGoldfish em dólares (papel, EUA); no Brasil e na Europa variam. Dizer «preço de referência» e a data.
+
+## Fronteira (decisão do fundador)
+Preço é território do Vince; o TUBO entra porque a comparação é **entre os decks mais jogados de dois formatos competitivos** (meta + custo). Alternativa: passar a pauta ao Vince. Recomendo TUBO, com o preço como prova e não como finança.
+
+## Abertura (teste «chuta antes + odómetro + marcador»)
+- **0–2,5 s:** grelha 2×2: print @kaioribeir.o · print @dpannos · Kessig Flamebreather (Pauper) · carta-ícone do Eldrazi Ramp (Modern, confirmar a carta). «Quanto custa o deck mais jogado do Pauper? US$ ??». Marcador 1/3.
+- **2,5 s:** odómetro → **86**. Acende 1/3.
+- **≈ 7 s:** «O do Modern: 622». Acende 2/3. Barra 86 × 622 (7×).
+- **≈ 12 s:** «25 decks com 1 % ou mais». Print @dpannos a verde. Acende 3/3.
+
+## Roteiro v3 (rascunho ≈ 370 caracteres)
+| Plano | Voz |
+|---|---|
+| 0–3 s | «Quanto custa o deck mais jogado do Pauper? Oitenta e seis dólares.» |
+| 3–8 s | «O mais jogado do Modern: seiscentos e vinte e dois. Sete vezes mais.» |
+| 8–14 s | «E barato não é pobre: vinte e cinco decks com um por cento ou mais. O dpannos tem razão.» |
+| 14–19 s | «O kaioribeir quer mais gente jogando. A porta está aberta.» |
+| 19–26 s | «Dia trinta tem lista de banidos. Previsão registrada: Pauper sem ban.» |
+| 26–32 s | «Você chutou quanto? Probabilidade calculada. Humanos, imprevisíveis.» |
+Pergunta do comentário fixado: «Qual deck de Pauper você montaria com 86 dólares?»
+CTA: o BINDER Vision mostra o valor de referência das cartas que você já tem (função real); confirmar a frase com o fundador.
+
+## Pendentes v3
+1. Aprovar a tese v3 e a fronteira (TUBO, não Vince).
+2. Confirmar a carta-ícone do Eldrazi Ramp (lista do MTGGoldfish).
+3. Manter ou retirar a previsão PR-PAU-01 no fecho.
+4. Voz: 1 geração, depois da contagem no `mc_voz.py`.
+
+---
+
+# Histórico: v2 (12:30)
+
 # MC-ESP04 · «Pauper tem dono?» (A comunidade pediu Pauper)
 
 Estado: **BRIEFING v2 para aprovação do fundador** (22/11/2026, 12:30). Sem voz, sem render, sem créditos gastos.
