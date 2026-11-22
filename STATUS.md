@@ -3,7 +3,11 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
-## MB-EP16 v2 · direção artística (22/11/2026, 01h30) — versão de teste; estado sem mudança
+## MB-EP16 · Alexander, Ship's Fool (22/11/2026, 01h45) — CONCLUÍDO; publicação com o fundador
+
+v2 aprovada e **plano de prova com flip entre cartas passa a padrão do Mana & Burn** (fundador, 01:03; `nucleo/DECISOES.md`, `manaburn/PERFIL.md`). Vozes Talis + Erik, 974 créditos. Vídeo final 44,13 s, −14,7 LUFS, pico −1,3 dBTP, QC sem problemas, bordas e check_quadro OK; vídeo entregue na conversa (não versionado). Falta: escuta do fundador e publicação (UTM `utm_campaign=MB-EP16`).
+
+### Histórico da v2 (22/11/2026, 01h30)
 
 Missão do fundador (00:05). Auditoria da v1 e versão de teste em `manaburn/episodios/ep16_alexander/v2/` (v1 intacta): plano de prova com a carta grande e inteira, aproximação ao texto, flip 3D só na troca de carta, reações do Burn sem cartas sobre o rosto, painéis com 3 níveis, legenda paginada. Motor: `kit/prova/patch_prova.py` **opcional e retrocompatível** (MB-EP15 igual píxel a píxel e com o mesmo MD5 de mistura); não é padrão sem decisão. Roteiro de 12 falas: **PROPOSTA DE REVISÃO — AGUARDA APROVAÇÃO DO FUNDADOR** (`v2/AUDITORIA_V2.md`). Prévia v2 44,70 s; bordas, check_quadro e 1080×1920/30 fps OK; áudio pendente (sem vozes). Zero créditos.
 

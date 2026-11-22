@@ -60,6 +60,17 @@ Decisão do fundador de 21/11/2026, 02:51 (`nucleo/DECISOES.md`); é a versão d
 - **Saída:** 0,32 s a voar para dentro da TV SAL (som de troca de canal); a tela da TV continua o assunto. A troca a meio da 1.ª tela (`meio.at`) fica depois da aterragem.
 - Não conta como easter egg nem substitui a carta na TV: a TV SAL continua a mostrar a prova de cada fala.
 
+## Plano de prova e flip entre cartas (padrão desde 22/11/2026)
+
+Decisão do fundador de 22/11/2026, 01:03 (`nucleo/DECISOES.md`), a partir do MB-EP16 v2. Substitui, nos episódios novos, a prova nos planos `tvtext` e os inserts ao lado da cabeça do Burn.
+- **Hierarquia:** 1) carta em destaque quando a fala é sobre a carta ou a regra; 2) personagem quando reage, brinca ou discute; 3) texto de apoio numa faixa por baixo da carta, nunca por cima. Não mostrar tudo ao mesmo tempo.
+- **Plano de prova (`EP.prova`):** carta inteira (nome, arte, texto e rodapé) a ~620 px de largura sobre a sala escurecida; primeiro inteira, depois aproximação ao texto (`zoom`) quando é preciso ler a regra. Destaque num bloco por frase (caixas sobrepostas cortam o texto). Oracle nunca redesenhado.
+- **Flip:** só quando a fala passa para outra carta (mesma posição e escala, 0,32 s). Mesma carta = muda o destaque ou a aproximação. Painéis que não são carta (mesa, ruling, diagrama) entram com corte seco. Nunca como decoração.
+- **Reação:** grandes planos do Burn com o rosto livre; nada de cartas, selos ou textos sobre cabeças ou rostos. A TV SAL continua a abrir e fechar o episódio (abertura de carta → TV; pergunta A/B na TV).
+- **Painéis e tipografia:** no máximo 3 níveis (principal em Bangers, explicação em Geist, fonte/crédito); amarelo #FFD84A principal, vermelho alerta, verde positivo; sem fontes novas. Exemplos marcados «EXEMPLO» (p. ex. «mesa de 4»). Sem probabilidades nem estatísticas sem fonte.
+- **Legenda:** `EP.legenda_paginas` (≈58): páginas de até 2 linhas, sem tapar carta nem rosto.
+- **Ritmo:** renovação visual ≤ 3 s (aproximação, painel ou troca a meio contam). Referência: `episodios/ep16_alexander/v2/`.
+
 ## Quadro do Conde (padrão desde 21/11/2026)
 
 Decisão do fundador de 21/11/2026 (`nucleo/DECISOES.md`), a partir do MB-EP13. Em todos os episódios novos, o retrato do Conde de Manaforte fica na parede da sala, no lugar do quadro torto, e reage à conversa: `EP.quadroDir: 'kit/v3/conde/'` e `EP.quadro` com uma expressão por fala (`neutro`, `desconfiado`, `indignado`, `admirado`; o `medalhao` não é expressão). A expressão só muda no início de cada plano, nunca com o quadro à vista. Mapa pela emoção da fala do plano: dúvida → desconfiado; exagero ou desdém → indignado; revelação → admirado; abertura e fecho → neutro. Não conta como easter egg.
@@ -68,7 +79,7 @@ Decisão do fundador de 21/11/2026 (`nucleo/DECISOES.md`), a partir do MB-EP13. 
 
 Decisão do fundador de 15/11/2026 (`nucleo/DECISOES.md`). O seguidor tem de perceber de que se fala só a olhar para o ecrã.
 
-- **Uma imagem real por fala.** Cada fala tem a imagem do que está a ser dito: na TV SAL (um canal por fala, `EP.canais`, com som de troca de canal) ou, quando o plano é de reação (`cuB`/`cuM`), em insert ao lado da personagem (`EP.inserts`). Produto → foto oficial com crédito; carta → PNG do Scryfall; episódio da casa → capa ou quadro real; comunidade → print real do comentário; número → o número gigante na tela, com a fonte.
+- **Uma imagem real por fala.** Cada fala de prova tem a imagem do que está a ser dito no plano de prova (desde 22/11, secção acima) ou na TV SAL; as falas de reação curtas (≤ 3 s) ficam com o rosto do Burn, sem insert sobre a cabeça. Produto → foto oficial com crédito; carta → PNG do Scryfall; episódio da casa → capa ou quadro real; comunidade → print real do comentário; número → o número gigante na tela, com a fonte.
 - **Leitura de regra = carta com a linha destacada** (`tvtext`), sempre.
 - **Quadro 0 com Magic:** abertura de carta em tela cheia (secção «Abertura de carta»); depois, a primeira tela da TV tem a carta ou o objeto de Magic.
 - **Ritmo:** troca de imagem a cada ≤ 3 s; fala longa sem troca leva insert ou destaque a meio.

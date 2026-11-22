@@ -169,3 +169,15 @@ Missão do fundador de 22/11 (00:05). **Estado sem mudança: EM PRODUÇÃO · pr
 - **Executado:** auditoria da v1 em quadros 1080×1920; plano de prova com a carta grande e inteira, aproximação ao texto, flip 3D só na troca de carta (Alexander → Rule of Law → Thousand-Year Elixir), reações do Burn sem cartas sobre o rosto, painéis com 3 níveis, legenda paginada; roteiro de 12 falas como **PROPOSTA DE REVISÃO — AGUARDA APROVAÇÃO DO FUNDADOR** (verificação fala a fala em `v2/AUDITORIA_V2.md` §3).
 - **Motor:** `kit/prova/patch_prova.py`, opcional e retrocompatível (MB-EP15 igual píxel a píxel e com o mesmo MD5 de mistura). Não é padrão da série sem decisão do fundador.
 - **Controlos e prévia:** ver `v2/AUDITORIA_V2.md` §4.
+
+## 18. Produção final (22/11/2026, 01:03–01:45)
+
+Fundador, 01:03: «Aprovado pode colocar as vozes e que agora a esse estilo de edição se torne padrão.» Roteiro v2 de 12 falas aprovado (fala 6 com «na maioria dos casos»); plano de prova passa a padrão da série (`nucleo/DECISOES.md`, `manaburn/PERFIL.md`).
+- **Vozes:** ElevenLabs eleven_v4, flow «Mana & Burn — MB-EP16 v2 (Alexander)» (VxpFnbideg7SBtXJtLTA). Burn: Talis (E9a8LlXPNWtyvvSoZzrb), 473 créditos, 24,0 s. Mana: Erik (nfiLpQ54jEQninp3nNqL), 501 créditos, 31,84 s. **Total 974 créditos**, uma geração cada, sem repetição. Faixas: `v2/faixas_elevenlabs.txt`. Corte pelo `tts` (`v2/processar_vozes.py`), conferido contra os silêncios das faixas.
+- **Montagem:** kit da `main` com o plano de prova; `v2/telas_v2.py` → `cards/`; `processar_vozes.py burn.mp3 mana.mp3` → `render.py` → `juntar_fecho.py`.
+- **QC final:** 44,13 s (40,27 s + fecho), 1080×1920, 30 fps; −14,7 LUFS; pico −1,3 dBTP; fecho presente; `qc_video.py`: sem problemas mensuráveis; `bordas.py` OK; `check_quadro.py` OK; conferência a olho dos planos de prova, flips (falas 5, 8, 10) e legendas (`v2/folha_contacto_final.png`).
+- **Legenda, comentário fixado e texto alternativo** atualizados para a v2 (valor de mana, condicional da Rule of Law, ressalva da ruling).
+
+### Ficheiros finais
+- Vídeo: `MB_EP16_Alexander_FINAL_916.mp4` (entregue na conversa a 22/11/2026; não versionado).
+- Capa: `MB_EP16_CAPA.png` (nesta pasta; selo ALEATÓRIO).

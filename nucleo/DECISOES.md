@@ -465,3 +465,8 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - Separar factos, interpretações, hipóteses e recomendações. Visualizações isoladas não demonstram causalidade. Regras de comparabilidade dos Insights: idade, duração, formato e impulsionamento.
 - Transformar a aprendizagem numa hipótese testável, pesquisar candidatos e escolher pela rubrica do SHOWRUNNER §2.4. Método em `manaburn/PERFIL.md`; regras técnicas e identidade da série inalteradas.
 - **Primeira aplicação:** MB-EP16, Alexander, Ship's Fool (tema aprovado pelo fundador a 21/11). `memoria.py pauta`: PAUTA LIVRE (21/11/2026). Roteiro e vozes por aprovar.
+
+## 22/11/2026 (01:03) · Mana & Burn: plano de prova com flip entre cartas passa a padrão; MB-EP16 v2 aprovado
+- **Fundador:** «Aprovado pode colocar as vozes e que agora a esse estilo de edição se torne padrão.»
+- **MB-EP16:** a v2 (roteiro de 12 falas de `manaburn/episodios/ep16_alexander/v2/AUDITORIA_V2.md` §3, com «na maioria dos casos» na fala 6) fica aprovada; vozes autorizadas (uma geração por personagem). A v1 fica como arquivo.
+- **Padrão da série (episódios novos):** a carta é a protagonista da prova. `EP.prova` (carta grande e inteira sobre a sala escurecida, aproximação ao texto, flip 3D só quando muda a carta, painéis com corte seco), reações do Burn em grande plano sem cartas sobre o rosto (sem `EP.inserts` sobre a cabeça), painéis com no máximo 3 níveis de informação, `EP.legenda_paginas` (legenda em páginas de até 2 linhas) e `sfx_flip`/`sfx_destaque`. Regras em `manaburn/PERFIL.md` («Plano de prova»); técnica em `manaburn/LEIA-ME.md`. Episódios publicados não se reabrem; o motor continua retrocompatível.
