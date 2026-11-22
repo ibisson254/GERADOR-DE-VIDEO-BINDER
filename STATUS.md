@@ -3,6 +3,10 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
+## Insights · semana até 21/11 (22/11/2026, 18h40) — REGISTADO
+
+Prints do fundador (18:19–18:21): 46.697 views em 7 dias (+96,6%), 22.117 visualizadores, 611 seguidores (+588 em 30 dias). MB-EP13: 19.688 views, 361 guardados, 64 seguidores, impulso A CONFIRMAR. App (Supabase): 4 contas novas na semana de 16/11 contra 9 na anterior. Relatório `comum/insights/semanas/2026-11-21.md`. Falta: ecrã Conteúdo, visitas ao perfil, toques no link, data e impulso do MB-EP13.
+
 ## MC-PAU01 · «86 dólares» (22/11/2026, 17h10) — CONCLUÍDO; publicação com o fundador
 
 Série nova **Meta em Curto · Pauper**, semanal (pedido do fundador 16:47; `oraculo/PAUPER.md`, `nucleo/DECISOES.md`). Pauta escolhida pela pesquisa de audiência (top 10 de Pauper: «barato × caro» lidera) e pela escuta em três regiões (regra nova §2.4 2a). Vídeo 29,03 s, −14,0 LUFS, QC sem problemas; voz 404 créditos; vidIQ 15 créditos. Entregáveis em `oraculo/pau01/`. Próximo: MC-PAU02 «Vai ter ban?» até 29/11 (anúncio de banidos a 30/11). Pendente: ligar a @binder_vision no vidIQ (hoje @ibisson.mendes; plano só aceita 1 conta).
