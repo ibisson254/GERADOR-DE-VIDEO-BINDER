@@ -101,3 +101,11 @@ Corte das vozes quando a legenda mostra números em algarismos e a voz os diz po
 
 `kit/abertura/patch_abertura.py` já está aplicado ao `index.html`, `sfx.py` e `process.py` (não voltar a correr; reconhece um kit que já o tenha). Campos: `EP.abertura = {img, ate, hl, selo:{txt,x,y,rot,size}, w (660), top (330), saida (0.32), fundoTop (200)}` no `episode.js` e `"abertura": {"ate": …}` no `episode.json` (o mesmo `ate`: o `process.py` põe a pancada no quadro 0 e o «zap» na saída). Regras de uso em `PERFIL.md` («Abertura de carta»). Referência: `episodios/ep15_felidar/`.
 
+
+## Plano de prova, flip entre cartas e legenda paginada (22/11/2026, opcional · teste do MB-EP16 v2)
+
+`kit/prova/patch_prova.py` já está aplicado ao `index.html` e ao `process.py` (não voltar a correr; recusa um kit que já o tenha). **Nada liga por defeito:** sem as chaves, os episódios saem iguais (MB-EP15 conferido: quadros idênticos píxel a píxel e `trilha_final.wav` com o mesmo MD5). Não é padrão da série sem decisão do fundador.
+- `EP.prova = {w, top, segs:[{fala, de, img, tipo, hl, zoom:{de, alvo, s}, faixa}]}`: a carta grande e inteira por cima da sala escurecida. Carta diferente da última mostrada = flip 3D no eixo Y (0,32 s; ao entrar depois de um plano de personagem, a carta anterior aparece 0,14 s e vira). Mesma carta = só muda o destaque ou a aproximação ao texto (`zoom`). `tipo: 'tela'` = painel que não é carta, com corte seco. `faixa` = uma linha de apoio por baixo da carta, nunca por cima.
+- `EP.legenda_paginas = N`: fala com mais de N caracteres aparece em duas páginas (corte na pontuação mais perto do meio).
+- `episode.json` `"sfx_flip"` e `"sfx_destaque"` = `[[fala, fração]]`: som de carta e de destaque nos momentos do plano de prova.
+- O `bordas.py` só confere a TV; a carta do plano de prova fica centrada (x 230–850 com `w: 620`) e a aproximação é recortada pela janela do plano.

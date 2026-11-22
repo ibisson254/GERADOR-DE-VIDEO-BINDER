@@ -162,3 +162,10 @@ Métrica principal: respostas A/B no comentário fixado. Avaliar às 48 h e aos 
 2. Autorizar as vozes (estimativa: ~1.050 caracteres, 514 Burn + 539 Mana; uma geração).
 3. Se quiser a referência do Reddit no episódio: enviar o link da publicação de 17/11.
 4. Decidir o registo do «EP. 12» do Olag publicado no Instagram.
+
+## 17. Versão de teste v2 (22/11/2026) · direção artística e refinamento
+
+Missão do fundador de 22/11 (00:05). **Estado sem mudança: EM PRODUÇÃO · prévia sem voz.** A v1 fica intacta; a v2 está em `v2/` (`episode.js`, `episode.json`, `telas_v2.py`, `cards/`, `AUDITORIA_V2.md`).
+- **Executado:** auditoria da v1 em quadros 1080×1920; plano de prova com a carta grande e inteira, aproximação ao texto, flip 3D só na troca de carta (Alexander → Rule of Law → Thousand-Year Elixir), reações do Burn sem cartas sobre o rosto, painéis com 3 níveis, legenda paginada; roteiro de 12 falas como **PROPOSTA DE REVISÃO — AGUARDA APROVAÇÃO DO FUNDADOR** (verificação fala a fala em `v2/AUDITORIA_V2.md` §3).
+- **Motor:** `kit/prova/patch_prova.py`, opcional e retrocompatível (MB-EP15 igual píxel a píxel e com o mesmo MD5 de mistura). Não é padrão da série sem decisão do fundador.
+- **Controlos e prévia:** ver `v2/AUDITORIA_V2.md` §4.

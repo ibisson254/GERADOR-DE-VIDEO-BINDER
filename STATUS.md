@@ -3,6 +3,10 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
+## MB-EP16 v2 · direção artística (22/11/2026, 01h30) — versão de teste; estado sem mudança
+
+Missão do fundador (00:05). Auditoria da v1 e versão de teste em `manaburn/episodios/ep16_alexander/v2/` (v1 intacta): plano de prova com a carta grande e inteira, aproximação ao texto, flip 3D só na troca de carta, reações do Burn sem cartas sobre o rosto, painéis com 3 níveis, legenda paginada. Motor: `kit/prova/patch_prova.py` **opcional e retrocompatível** (MB-EP15 igual píxel a píxel e com o mesmo MD5 de mistura); não é padrão sem decisão. Roteiro de 12 falas: **PROPOSTA DE REVISÃO — AGUARDA APROVAÇÃO DO FUNDADOR** (`v2/AUDITORIA_V2.md`). Prévia v2 44,70 s; bordas, check_quadro e 1080×1920/30 fps OK; áudio pendente (sem vozes). Zero créditos.
+
 ## MB-EP16 · Alexander, Ship's Fool (21/11/2026, 23h45) — EM PRODUÇÃO; prévia sem voz entregue
 
 Tema aprovado pelo fundador (conversa com o ChatGPT); **método comparativo de pautas** adotado como padrão do Mana & Burn (`manaburn/PERFIL.md`, `nucleo/DECISOES.md`). Roteiro de 14 falas corrigido contra Oracle, ruling oficial (07/10/2026) e EDHREC: a publicação do Reddit de 17/11 citada no briefing não abriu e saiu do vídeo; selo da capa ALEATÓRIO; selo da abertura «4 COMPRAM». Prévia sem voz renderizada (48,2 s sem o fecho), `bordas.py` OK, `check_quadro.py` OK, capa pronta. Pacote em `manaburn/episodios/ep16_alexander/`. **Zero créditos.** **Falta (fundador):** aprovar o roteiro e autorizar as vozes (~1.050 caracteres); decidir como registar o «EP. 12» do Olag publicado no Instagram (no registo MB-EP12 é o MONEY BURN). MB-EP13 e MB-EP15 passaram a PUBLICADO pelos prints de 21/11 (16:41); datas e impulso por confirmar nos Insights de domingo.

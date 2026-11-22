@@ -114,6 +114,8 @@ raiva = [lines[k]['start'] for k in range(len(lines)) if raivoso(k)]
 ins_files = re.findall(r"file:\s*'([^']+)'", js)
 INS = [tuple(x) for k, x in enumerate(EPI.get('ins', [])) if k < len(ins_files) and os.path.exists(ins_files[k])]
 ins_t = [round(lines[k]['start'] + lines[k]['dur'] * a, 3) for k, a in INS]
+ins_t += [round(lines[k]['start'] + lines[k]['dur'] * a, 3) for k, a in EPI.get('sfx_flip', [])]   # plano de prova (opcional, kit/prova)
+destaques += [round(lines[k]['start'] + lines[k]['dur'] * a, 3) for k, a in EPI.get('sfx_destaque', [])]
 sh = next((l['start'] + l['dur'] * 0.6 for l in lines if 'embaralh' in l['text']), None)
 EV = dict(cortes_tv=cuts, destaque=destaques, raiva=raiva, cartas=ins_t, zaps=zaps, zaps_leves=zaps_leves)
 open('data.js', 'w').write('const DATA=' + json.dumps(dict(lines=lines, T_SLAM=round(T_SLAM, 3), T_END=T_END, T_SCAN=T_SCAN, SCAN_DUR=SCAN_DUR, ev=EV), ensure_ascii=False) + ';')
