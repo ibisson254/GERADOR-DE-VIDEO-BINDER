@@ -470,3 +470,8 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - **Fundador:** «Aprovado pode colocar as vozes e que agora a esse estilo de edição se torne padrão.»
 - **MB-EP16:** a v2 (roteiro de 12 falas de `manaburn/episodios/ep16_alexander/v2/AUDITORIA_V2.md` §3, com «na maioria dos casos» na fala 6) fica aprovada; vozes autorizadas (uma geração por personagem). A v1 fica como arquivo.
 - **Padrão da série (episódios novos):** a carta é a protagonista da prova. `EP.prova` (carta grande e inteira sobre a sala escurecida, aproximação ao texto, flip 3D só quando muda a carta, painéis com corte seco), reações do Burn em grande plano sem cartas sobre o rosto (sem `EP.inserts` sobre a cabeça), painéis com no máximo 3 níveis de informação, `EP.legenda_paginas` (legenda em páginas de até 2 linhas) e `sfx_flip`/`sfx_destaque`. Regras em `manaburn/PERFIL.md` («Plano de prova»); técnica em `manaburn/LEIA-ME.md`. Episódios publicados não se reabrem; o motor continua retrocompatível.
+
+## 22/11/2026 (12:16) · Pesquisa de pauta: escuta da comunidade em três regiões (Brasil, Europa, EUA) e correlação
+- **Fundador:** «O tema não vamos fazer de achismo, pesquise sempre temas mais falados na comunidade tanto do Brasil, Europa e Estados Unidos e faça uma correlação para construir a narrativa do episódio e adaptando ao personagem.»
+- **Regra (todas as frentes):** novo passo 2a em `nucleo/SHOWRUNNER.md` §2.4: tabela «Região · o que se discute · fonte com data» na ficha; a narrativa nasce da correlação entre as três regiões e adapta-se à personagem. Comentários de seguidores provam interesse, não substituem a pesquisa.
+- **Primeira aplicação:** MC-ESP04 (`oraculo/esp04/ficha.md`).
