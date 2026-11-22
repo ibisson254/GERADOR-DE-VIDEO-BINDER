@@ -1,22 +1,25 @@
 MC-ESP04 · fontes (lidas a 22/11/2026)
 
-Representação
-- MTGGoldfish, Pauper Metagame (All Decks), últimos 30 dias: https://www.mtggoldfish.com/metagame/pauper/full
+EUA
+- Joe Dyer, The Power of Pauper: Is Madness Really the Problem? (MTGGoldfish, 20/11/2026): https://www.mtggoldfish.com/articles/the-power-of-pauper-is-madness-really-the-problem
+- Paige Smith, Top 8 finish Paupergenesis (CoolStuffInc, 22/07/2026): https://www.coolstuffinc.com/a/top-8-finish-paupergenesis-07222026
 
-Pauper Challenges (MTGO, via MTGGoldfish)
-- 03/11 Challenge 16: https://www.mtggoldfish.com/tournament/67785
-- 06/11 Challenge 32: https://www.mtggoldfish.com/tournament/67847
-- 09/11 Challenge 32: https://www.mtggoldfish.com/tournament/67920
-- 10/11 Challenge 16: https://www.mtggoldfish.com/tournament/67930
-- 13/11 Challenge 32: https://www.mtggoldfish.com/tournament/68003 (68110 é a mesma página)
-- 15/11 Challenge 32: https://www.mtggoldfish.com/tournament/68055
-- 16/11 Challenge 32: https://www.mtggoldfish.com/tournament/68084
-- Por incluir após recolha completa (Gate A): 12/11 https://www.mtggoldfish.com/tournament/67985 · 14/11 https://www.mtggoldfish.com/tournament/68023 · 17/11 https://www.mtggoldfish.com/tournament/68121 · 68095 (data por confirmar)
+Painel (três regiões)
+- Wizards, Pauper Format Check-In (10/08/2026): https://magic.wizards.com/en/news/announcements/pauper-format-check-in-august-10-2026
+
+Europa
+- metagame.info, Pauper Top 8 (lido 22/11/2026): https://metagame.info/en-us/mtg/tournaments/top-8/pauper
+
+Brasil
+- Next Level Pauper (NLPT 2026: 264 jogadores, R$ 30 mil; 22/05/2026): https://nextlevelpauper.com.br/
+
+Online
+- MTGGoldfish, Pauper Metagame, 30 dias (lido 22/11/2026): https://www.mtggoldfish.com/metagame/pauper/full
 
 Banidos
 - Wizards, B&R 12/10/2026 (próximo: 30/11/2026): https://magic.wizards.com/en/news/announcements/banned-and-restricted-october-12-2026
-- Wizards, B&R 10/08/2026 (Pauper sem mudanças): https://magic.wizards.com/en/news/announcements/banned-and-restricted-august-10-2026
-- Wizards, On the Zeta Set in Pauper (04/09/2026): https://magic.wizards.com/en/news/announcements/on-the-zeta-set-in-pauper
+
+Reserva (ângulo B, Challenges 03–17/11): MTGGoldfish tournament 67785, 67847, 67920, 67930, 67985, 68003, 68023, 68055, 68084, 68121
 
 Comentários
 - @kaioribeir.o e @dpannos, comentários públicos no post MB-GIRO03 (prints do fundador, 22/11/2026): comentarios/
