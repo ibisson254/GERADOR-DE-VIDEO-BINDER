@@ -35,7 +35,7 @@ Legenda: ✅ confirmado nesta sessão · ⚠️ confirmado só em parte · ❌ n
 | Artigo de Tiago Fuguete de 27/08/2026 | ❌ removido | 404 no site novo; a lista de artigos atual não o inclui |
 | Evento ligado à Tenda da Liliana | ✅ parcial | Nome oficial «FUGUETE NA TENDA - 200 Tix» e regra das salas «[FUGUETE+TENDA] R1 Vs …» na página do torneio. A página não traz logótipo nem texto «em parceria com»: no ecrã dizer «Fuguete na Tenda (Tiago Fuguete × Tenda da Liliana)» só depois de a loja confirmar; até lá «evento Fuguete na Tenda» |
 | Tenda da Liliana | ✅ | Loja online de singles com foco em Pauper (descrição própria na página de organizador do melee.gg); site tendadaliliana.com.br; organizou «Pauper 15k da Tenda» (16/11/2025, 83 jogadores) e «Super Pauper TnT (Tenda na Taverna)» (12/09/2026, 23 jogadores, mtgdecks) |
-| PauperPilot 19/11: 1.318 decks · 56 eventos · 21/10–19/11 · Red Madness 15,1 % (199) · Snacker em 23,7 % dos decks | ❌ | pauperpilot.com não aparece na pesquisa e está fora do alcance da sessão. **Nenhum número confirmado** |
+| PauperPilot: 1.318 decks · 56 eventos · 21/10–19/11 · Red Madness 15,1 % (199) · Snacker em 23,7 % dos decks | ✅ | Lido a 23/11 no navegador integrado (janela de 30 dias ainda 21/10–19/11): todos os números conferem. Snacker = 5.ª carta mais jogada. Método do site: leagues (só 5-0) e Challenges juntos, sem ponderação. Rakdos Madness separado: 1,3 % (17) |
 | 29/06/2026: Seeker of Skybreak banido; Snacker «a observar» | ✅ | Wizards (Gavin Verhey, pelo Pauper Format Panel): sem ação sobre a Snacker, carta a observar com cuidado durante o verão |
 | 10/08/2026: Pauper sem mudanças; continuariam a observar | ✅ | B&R de 10/08: Pauper «No changes»; artigo próprio «Pauper Format Check-in» (Verhey): sem evidência nem necessidade de ban agora, continuam a observar; Snacker «mais chata que divertida, mas tolerável»; Paupergeddon (~1.100): carta não-terreno mais jogada, 0 no top 8, 11 no top 64 |
 | 12/10/2026: Pauper sem mudanças; próximo anúncio 30/11/2026 | ✅ | B&R de 12/10: Pauper «No changes»; Snacker só citada como alvo de Dispatch; Madness citado entre os decks em alta; próximo anúncio 30/11 (antecipado de dezembro) |
@@ -59,6 +59,19 @@ Alternativas confirmáveis para o meta global (se o PauperPilot falhar): MTGGold
 - Hipótese: previsão datada + pergunta binária («você baniria?») gera mais comentários que o MC-PAU01.
 - Tese: a Snacker está em quase um quarto dos decks, mas observar não é banir — o TUBO aposta que ela sobrevive a 30/11.
 - Representação ≠ desempenho: 17 decks e 23,7 % são presença, não vitórias. O vídeo não diz que a Snacker «vence»; o campeão do torneio foi Elfos (se confirmado).
+
+## Proposta v2 do roteiro (23/11, 02h15) — sem o 68/17
+
+Enquanto não houver fonte para 68/17, o gancho passa ao número confirmado do PauperPilot e o Fuguete na Tenda conta a história do campo (Madness mais jogado, Elfos campeão), com o quadro da Tenda intacto.
+
+Quadro 0: Sneaky Snacker inteira + grelha 2×2 (Snacker · Guttersnipe/Red Madness · Faithless Looting · carta dos Elfos campeões) · selo **23,7 % DOS DECKS** · linha «PAUPERPILOT · MTGO · 21/10–19/11».
+
+Locução (~418 caracteres ≈ 35 s; aparar na revisão se passar de 35 s):
+No Pauper Pilot, trinta dias de Magic Online: Sneaky Snacker em quase um quarto dos decks. / No Fuguete na Tenda, setenta e quatro jogadores: o Madness foi o mais jogado, mas quem fez seis a zero foi Elfos. / A Wizards disse duas vezes que estava de olho, e não baniu. Observar não é banir. / Previsão registrada: a Snacker sobrevive ao anúncio de trinta de novembro. / Você baniria? / Probabilidade calculada. Humanos, imprevisíveis.
+
+Ecrã do bloco Tenda: «FUGUETE NA TENDA · 23/08/2026 · 74 jogadores · 6 rodadas» · barras Mono Red Madness 7 · Rakdos Madness 5 · Grixis Affinity 5 · White Weenie 5 · «CAMPEÃO: Barradas · Elfos Mono Green · 6–0» · logótipo (Versão A).
+
+O roteiro v1 (68/17) fica abaixo, válido só se o fundador trouxer o print do artigo removido.
 
 ## Gancho visual (7 campos)
 1. **Quadro 0:** Sneaky Snacker inteira em tela cheia sobre o TUBO escurecido; à volta, grelha 2×2 com cartas reais do contexto (Sneaky Snacker em destaque · Faithless Looting (motor do Madness) · Kessig Flamebreather (Mono Red Madness, ponte com o PAU01) · Llanowar Elves ou carta-ícone dos Elfos campeões, se confirmado). Cabeçalho mono «FUGUETE NA TENDA · PAUPER · 23/08/2026»; selo grande **68 CÓPIAS** e selo **17 DECKS** na caixa sob a carta (nunca sobre a arte ou o texto de regras).
