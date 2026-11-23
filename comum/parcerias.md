@@ -63,6 +63,14 @@ Pautas auditadas a 16/11 com `memoria.py pauta`: as três LIVRES.
 - **Material em falta:** prints ou exportação das ligas (presencial e online), com período e amostra — o site deles não abre a partir do ambiente do agente.
 - **Leitura:** comparar com o MC-ESP02. Se cair muito, a terceira collab seguida com o Preconauta fica em pausa.
 
+## MC-PAU02 · Tenda da Liliana (missão do fundador, 23/11/2026)
+- **Antecipada pelo fundador**: a Tenda estava na lista «depois destes três»; a missão de 23/11 pede a collab já. Conflito com a regra «uma parceria nova de cada vez» (LL-ART20 e MC-ESP03 em aberto) **por confirmar com o fundador**.
+- Peça: MC-PAU02 «68 cópias. 17 decks.» (`oraculo/episodios/pau02_tenda_snacker/`). Fonte do evento: artigo de Tiago Fuguete (27/08) e listas do Fuguete na Tenda 200 (23/08). A Tenda é parceira do evento, não dona dos dados de metagame.
+- Versão A (prévia privada, logótipo oficial, marca PRÉVIA) · Versão B (publicação; logótipo só com autorização; sem collab se não houver «sim»).
+- Se disser não ou não responder até 29/11: publicar a Versão B com crédito textual ao evento, sem logótipo.
+- Material em falta: confirmação dos números (artigo e PauperPilot, fora do alcance da sessão), logótipo oficial (SVG/PNG transparente).
+- Mensagem pronta: `oraculo/episodios/pau02_tenda_snacker/mensagem_collab.md`. Nada enviado.
+
 ## Depois destes três
 Tenda da Liliana (Pauper), Cabrito Montês (reserva, só com atividade confirmada em 2026). Taverna Games fora. Lojas com dados próprios (ex.: Lotus Games / MTGDC500) só como pauta nova, depois do piloto com o Farpas e com decisão do fundador.
 
@@ -74,5 +82,6 @@ Tenda da Liliana (Pauper), Cabrito Montês (reserva, só com atividade confirmad
 | MC-ESP02 | Preconauta | — | aceitou | sim | | | | termo de comparação |
 | LL-ART20 | Caio Monteiro | | | | | | | |
 | MC-ESP03 | Farpas de Mana | | | | | | | |
+| MC-PAU02 | Tenda da Liliana | | | | | | | |
 
 Sem dado = vazio, nunca 0.

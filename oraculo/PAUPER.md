@@ -12,7 +12,7 @@ Decisão do fundador (22/11/2026, 16:47): série do TUBO sobre Pauper, **um epis
 | # | Pauta | Padrão | Janela | Estado |
 |---|---|---|---|---|
 | PAU01 | «86 dólares»: o mais jogado do Pauper custa 7× menos que o do Modern; 25 decks com ≥ 1 % | A | já | CONCLUÍDO (22/11) |
-| PAU02 | «Vai ter ban?»: Madness n.º 1 e o debate sobre Sneaky Snacker (EUA, Dyer 20/11); previsão registada para 30/11 | C | publicar até 29/11 | IDEIA |
+| PAU02 | «Vai ter ban?»: Madness n.º 1 e o debate sobre Sneaky Snacker (EUA, Dyer 20/11); previsão registada para 30/11 (PR-PAU02-01); fonte do evento Fuguete na Tenda (collab-alvo Tenda da Liliana) | C | publicar até 29/11 | EM PRODUÇÃO (23/11; `episodios/pau02_tenda_snacker/`) |
 | PAU03 | Prestação de contas do anúncio de 30/11 (acertou/errou) | C | 01/12 | IDEIA (depende do PAU02) |
 | PAU04 | «Ruby Storm é real?»: o combo de 5,9 % do meta, como vence, quanto custa | B | dezembro | IDEIA |
 | PAU05 | «A comum mais cara»: comuns que valem mais que o deck inteiro (fronteira Vince: decidir) | A | dezembro | IDEIA |

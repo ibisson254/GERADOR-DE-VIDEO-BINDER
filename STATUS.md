@@ -3,6 +3,10 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
+## MC-PAU02 · «68 cópias. 17 decks.» (23/11/2026, 02h30) — EM PRODUÇÃO; gate do fundador
+
+Missão do fundador (01:26): Pauper #2 sobre Sneaky Snacker antes do anúncio de 30/11, com o torneio Fuguete na Tenda (collab-alvo Tenda da Liliana). Fase 1 em `oraculo/episodios/pau02_tenda_snacker/`: ficha com verificação dado a dado, roteiro de 400 caracteres (~34 s, ~400 créditos), legenda (rascunho), comentário fixado, texto alternativo, fontes, mensagem de collab. Previsão **PR-PAU02-01** registada (grau 3, proposto). **Bloqueios:** artigo do Fuguete, listas e PauperPilot fora do alcance da sessão (68/17, campeão, Madness 8/7 e todos os números do PauperPilot por confirmar); logótipo oficial não obtido. **Falta (fundador):** prints do artigo e do PauperPilot (ou sessão com Claude in Chrome), logótipo SVG/PNG, aprovar roteiro e voz, confirmar a antecipação da Tenda face a «uma parceria nova de cada vez». Envio da prévia idealmente até 24/11 para caber nos 5 dias antes de 29/11. Zero créditos.
+
 ## Insights · semana até 21/11 (22/11/2026, 18h40) — REGISTADO
 
 Prints do fundador (18:19–18:21): 46.697 views em 7 dias (+96,6%), 22.117 visualizadores, 611 seguidores (+588 em 30 dias). MB-EP13 (publicado 20/11, 09:00): 19.688 views, 282 partilhas, 361 guardados, 64 seguidores. **Semana toda orgânica** (fundador, 18:36). App (Supabase): 4 contas novas na semana de 16/11 contra 9 na anterior. Relatório `comum/insights/semanas/2026-11-21.md`. Falta: ecrã Conteúdo, visitas ao perfil, toques no link, impulso da semana de 8–14/11.

@@ -46,6 +46,12 @@ previsoes:
         evidencia_recebida: "nenhuma do tipo do critério"
         muda_estado: false
         estado: PENDENTE
+      - data: 2026-11-23
+        episodio: "sem episódio (continuação no arranque do MC-PAU02)"
+        dado: "sem ranking público acessível do Sealed de TRK no 17Lands nesta conferência (pesquisa de 23/11: só Premier Draft citado por terceiros; 17Lands e MTGMeta fora do alcance da sessão)"
+        evidencia_recebida: "nenhuma do tipo do critério"
+        muda_estado: false
+        estado: PENDENTE
     estado: PENDENTE
     erro_de_sistema_se_refutada: true
 
@@ -67,6 +73,12 @@ previsoes:
       - data: 2026-11-16
         episodio: "MC-EP08 (comentário fixado)"
         dado: "sem ranking público acessível do Sealed de TRK no 17Lands nesta conferência (página do MTGMeta fora do alcance da sessão; só dados de Premier Draft citados por terceiros)"
+        evidencia_recebida: "nenhuma do tipo do critério"
+        muda_estado: false
+        estado: PENDENTE
+      - data: 2026-11-23
+        episodio: "sem episódio (continuação no arranque do MC-PAU02)"
+        dado: "sem ranking público acessível do Sealed de TRK no 17Lands nesta conferência (pesquisa de 23/11: só Premier Draft citado por terceiros; 17Lands e MTGMeta fora do alcance da sessão)"
         evidencia_recebida: "nenhuma do tipo do critério"
         muda_estado: false
         estado: PENDENTE
@@ -103,6 +115,12 @@ previsoes:
       - data: 2026-11-16
         episodio: "MC-EP08 (comentário fixado)"
         dado: "sem ranking público acessível do Sealed de TRK no 17Lands nesta conferência (página do MTGMeta fora do alcance da sessão; só dados de Premier Draft citados por terceiros)"
+        evidencia_recebida: "nenhuma do tipo do critério"
+        muda_estado: false
+        estado: PENDENTE
+      - data: 2026-11-23
+        episodio: "sem episódio (continuação no arranque do MC-PAU02)"
+        dado: "sem ranking público acessível do Sealed de TRK no 17Lands nesta conferência (pesquisa de 23/11: só Premier Draft citado por terceiros; 17Lands e MTGMeta fora do alcance da sessão)"
         evidencia_recebida: "nenhuma do tipo do critério"
         muda_estado: false
         estado: PENDENTE
@@ -198,3 +216,27 @@ previsoes:
         muda_estado: true
         estado: CONFIRMADA
     estado: CONFIRMADA
+
+  # --- MC-PAU02 · Pauper «Vai ter ban?», registada a 23/11/2026 antes de qualquer voz ---
+  # Previsão definida pelo fundador na missão de produção (23/11/2026 01:26). Grau de certeza proposto pelo agente
+  # (painel em 10/08: sem evidência nem necessidade de ban; 12/10: Pauper sem mudanças e Snacker só citada como alvo de Dispatch).
+  - id: PR-PAU02-01
+    episodio: MC-PAU02
+    data_registo: 2026-11-23
+    publicacao: publica
+    texto_original: "Sneaky Snacker NÃO será banida no Pauper no anúncio de Banned & Restricted de 30/11/2026"
+    fala_no_video: "Previsão registrada: a Snacker sobrevive ao anúncio de trinta de novembro."
+    grau_certeza: 3
+    evidencias: "Wizards 29/06 (a observar, sem ação), 10/08 (Pauper Format Check-in: sem evidência nem necessidade de ban; continua a observar), 12/10 (Pauper sem mudanças); nenhum comunicado posterior até 23/11"
+    riscos: "presença alta em vários arquétipos (Fuguete na Tenda e PauperPilot, por confirmar); painel já a chamou de mais chata que divertida; anúncio de fim de ano costuma ser de manutenção"
+    criterio:
+      fonte: "Wizards of the Coast, anúncio oficial de Banned and Restricted de 30/11/2026, secção Pauper"
+      confirma: "Sneaky Snacker continua legal no Pauper depois do anúncio"
+      parcial: "não se aplica"
+      refuta: "Sneaky Snacker banida no Pauper no anúncio de 30/11/2026"
+      inconclusiva: "anúncio adiado ou sem secção de Pauper até 01/12/2026"
+    prazo: 2026-11-30
+    conferencias_marcadas: [2026-11-30]
+    conferencias: []
+    estado: PENDENTE
+    erro_de_sistema_se_refutada: true
