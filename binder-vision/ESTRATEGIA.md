@@ -41,7 +41,7 @@ Com isto, a decisão fica assim: se **visitas ao perfil/1.000 views** forem baix
 | **Fricção zero** | Link nos Stories, DM automática, destaque «Comece aqui», Reel fixado | — |
 | **Proporção 4:1** | Em cada 5 peças, 4 entretêm com ponte leve e 1 demonstra o app diretamente | — |
 
-**Não usar:** falsa urgência ou escassez, «grátis», «o melhor», promessas de preço, iPhone, funções congeladas (trocas, lojas, torneios, Explorar como argumento).
+**Não usar:** falsa urgência ou escassez, «o melhor», promessas de preço, iPhone, trocas e funções de loja (congeladas). Desde 23/11/2026, «gratuito», jogadores perto (Explorar/Radar), chat e campeonatos podem ser argumento (confirmação do fundador, `nucleo/DECISOES.md`).
 
 ## 4. Arquitetura de conteúdo em três camadas
 
@@ -136,6 +136,6 @@ Uma regra nova só com padrão em 2+ semanas ou decisão do fundador (constitui�
 
 1. Ferramenta de DM automática (sim/não, qual).
 2. Texto da bio e criação do destaque «Comece aqui».
-3. Confirmar: «grátis», cartas em português, regra da insígnia Early Adopter, versão em produção.
+3. Confirmar: ~~«grátis»~~ (confirmado a 23/11), cartas em português, regra da insígnia Early Adopter, versão em produção.
 4. Gravações do §8.
 5. Aprovar as pautas das peças novas (Camada 2) para receberem ID.

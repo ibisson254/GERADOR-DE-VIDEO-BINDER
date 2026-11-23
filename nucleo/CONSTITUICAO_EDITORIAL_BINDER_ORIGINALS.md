@@ -114,7 +114,8 @@ As 12 perguntas da orquestração (série, objetivo, interesse, investigação, 
 
 - Objetivo do funil: levar colecionadores a experimentar a beta (Android). Views não são instalações.
 - Funções que podem ser citadas (confirmadas em 19/10/2026, `claude/00-comece-aqui.md` do projeto): scanner (aponta a câmara, identifica a carta, escolhe a impressão), Binder com valor de referência (estimativa), decks, lista de desejos, Explorar e chat entre colecionadores. Qualquer outra função: confirmar com o Ibisson antes. Mapa completo e estado de cada função (anunciável · confirmar · não anunciar): `binder-vision/PRODUTO.md` (desde 21/11/2026).
-- Proibido: "grátis" (pendente de confirmação), "o melhor", "milhares de utilizadores", números de utilizadores.
+- "Grátis"/"gratuitamente": permitido desde 23/11/2026 para coleção, impressão, exportação LigaMagic, jogadores próximos, chat e campeonatos (confirmação do fundador, `nucleo/DECISOES.md`).
+- Proibido: "o melhor", "milhares de utilizadores", números de utilizadores.
 - A prova do produto no vídeo é só o fecho real do scanner.
 
 ## 10. Entrega e registo (comum)

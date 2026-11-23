@@ -52,7 +52,7 @@ Som nos Reels: efeitos sintetizados próprios, pico a −6 dBFS; a música é es
 - Créditos (artista e © Wizards of the Coast; personagens licenciados aos titulares) no post e na legenda.
 - Produto só com gravação ou captura real do app. Nada acelerado: os cortes só tiram esperas. Dizer "Gravação real do app" na legenda.
 - Pontes para o produto só com funções confirmadas (constituição §9), com as palavras da página do Google Play: scanner ("ajuda a identificar"), Binder com valor de referência ("estimativa, não oferta de compra"), decks, lista de desejos, Explorar e chat ("o app não intermedia pagamentos").
-- Lojas, torneios e trocas ficam fora das pontes até haver lojas e utilizadores suficientes.
+- Trocas e funções de loja ficam fora das pontes. Desde 23/11/2026 (confirmação do fundador): jogadores perto, chat, campeonatos, exportação LigaMagic e «gratuito» podem entrar, sem telas inventadas (LL-ECO01).
 
 ## 5. Legenda (fórmula v3)
 
