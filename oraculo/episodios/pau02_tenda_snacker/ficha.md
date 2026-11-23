@@ -60,18 +60,31 @@ Alternativas confirmáveis para o meta global (se o PauperPilot falhar): MTGGold
 - Tese: a Snacker está em quase um quarto dos decks, mas observar não é banir — o TUBO aposta que ela sobrevive a 30/11.
 - Representação ≠ desempenho: 17 decks e 23,7 % são presença, não vitórias. O vídeo não diz que a Snacker «vence»; o campeão do torneio foi Elfos (se confirmado).
 
-## Proposta v2 do roteiro (23/11, 02h15) — sem o 68/17
+## Conceito refinado v3 (23/11, 02:15) — collab tripla, sem marca PRÉVIA · **ROTEIRO EM VIGOR**
 
-Enquanto não houver fonte para 68/17, o gancho passa ao número confirmado do PauperPilot e o Fuguete na Tenda conta a história do campo (Madness mais jogado, Elfos campeão), com o quadro da Tenda intacto.
+**Ideia:** «Quem move o Pauper». O TUBO trata a pergunta do ban com dois recortes e dá rosto e marca a quem fez um deles. Os dois parceiros aparecem como **autores do torneio** (dados públicos), nunca como fonte do metagame global nem como parceiros do BINDER.
 
-Quadro 0: Sneaky Snacker inteira + grelha 2×2 (Snacker · Guttersnipe/Red Madness · Faithless Looting · carta dos Elfos campeões) · selo **23,7 % DOS DECKS** · linha «PAUPERPILOT · MTGO · 21/10–19/11».
+**Porquê os dois juntos:** o Tiago é dono dos dados e da comunidade (site, lives, torneios grátis); a Tenda é a loja de Pauper que pôs o nome no evento. Collab com os dois soma as audiências de ambos num só post e é verdadeira: os dois organizaram o mesmo torneio. Para o Instagram, convite de colaboração aos dois perfis no mesmo post (confirmar no app que a conta permite mais de um colaborador; senão, collab com um e marcação do outro na legenda e na imagem).
 
-Locução (~418 caracteres ≈ 35 s; aparar na revisão se passar de 35 s):
-No Pauper Pilot, trinta dias de Magic Online: Sneaky Snacker em quase um quarto dos decks. / No Fuguete na Tenda, setenta e quatro jogadores: o Madness foi o mais jogado, mas quem fez seis a zero foi Elfos. / A Wizards disse duas vezes que estava de olho, e não baniu. Observar não é banir. / Previsão registrada: a Snacker sobrevive ao anúncio de trinta de novembro. / Você baniria? / Probabilidade calculada. Humanos, imprevisíveis.
+**Estrutura (≈ 35 s + fecho)**
+| Tempo | Locução | Ecrã |
+|---|---|---|
+| 0–5 s | No Pauper Pilot, um mês de Magic Online: Sneaky Snacker em quase um quarto dos decks. | **Quadro 0:** Sneaky Snacker inteira + grelha 2×2 (Snacker · Guttersnipe · Faithless Looting · carta dos Elfos campeões) · selo **23,7 % DOS DECKS** · «PAUPERPILOT · MTGO · 21/10–19/11 · 1.318 decks». Carta voa para o ecrã do TUBO aos ~3 s |
+| 5–14 s | No torneio do Tiago Fuguete com a Tenda da Liliana, setenta e quatro jogadores: o Madness foi o mais jogado. Mas quem fez seis a zero foi Elfos. | **Cartão «QUEM FEZ O TORNEIO»** (2,5 s): foto do Tiago (círculo) à esquerda · logótipo da Tenda (círculo) à direita · por baixo «FUGUETE NA TENDA · 23/08/2026 · 74 jogadores · 6 rodadas» e os @ dos dois. Depois barras: Mono Red Madness 7 · Rakdos Madness 5 · Grixis Affinity 5 · White Weenie 5; carimbo «CAMPEÃO: Barradas · Elfos · 6–0». Foto e logótipo pequenos no canto enquanto os dados do torneio estão no ecrã |
+| 14–21 s | A Wizards disse duas vezes que estava de olho, e não baniu. | Linha do tempo 29/06 → 10/08 → 12/10 → **30/11 ?** + texto no ecrã «OBSERVAR ≠ BANIR» |
+| 21–28 s | Previsão registrada: a Snacker sobrevive a trinta de novembro. | TUBO Confiante + cartão «PREVISÃO REGISTRADA · PR-PAU02-01 · OPINIÃO» |
+| 28–35 s | Você baniria? Probabilidade calculada. Humanos, imprevisíveis. | «VOCÊ BANIRIA SNEAKY SNACKER?» · cartão final de 1 s com créditos: «Torneio: Tiago Fuguete × Tenda da Liliana · Meta: PauperPilot · Histórico: Wizards» |
+| fim | — | fecho do scanner |
 
-Ecrã do bloco Tenda: «FUGUETE NA TENDA · 23/08/2026 · 74 jogadores · 6 rodadas» · barras Mono Red Madness 7 · Rakdos Madness 5 · Grixis Affinity 5 · White Weenie 5 · «CAMPEÃO: Barradas · Elfos Mono Green · 6–0» · logótipo (Versão A).
+Locução: ~420 caracteres (≈ 35 s; se passar, corta-se «um mês de»). Voz: Antonio de Jesus, eleven_v4, atempo 1,10, **uma geração, ~420 créditos** (referência MC-PAU01: 403 → 404).
 
-O roteiro v1 (68/17) fica abaixo, válido só se o fundador trouxer o print do artigo removido.
+**Camadas dependentes de autorização** (`episodio.json`, chave `terceiros`): `foto_tiago`, `logo_tenda`. Recusa de um deles → re-render local sem essa camada; o cartão vira só texto. A voz só diz os nomes públicos («Tiago Fuguete», «Tenda da Liliana»), por isso nunca se regenera.
+
+**Regras de imagem:** foto e logótipo intactos (só recorte circular, sem filtro, sem deformar); nunca ao lado dos números do PauperPilot nem da Wizards; nenhum texto diz «parceria com o BINDER».
+
+**Capa (§7.3):** frase «VAI SER BANIDA?» · foco «23,7%» · TUBO Confiante · faixa «META EM CURTO · PAUPER #2» à esquerda e, depois do «sim», «× FUGUETE × TENDA» a âmbar à direita (antes do «sim» a faixa fica sem collab; mudar a faixa é re-render da capa, zero créditos).
+
+Roteiros v1 (68/17, sem fonte) e v2 ficam como histórico abaixo.
 
 ## Gancho visual (7 campos)
 1. **Quadro 0:** Sneaky Snacker inteira em tela cheia sobre o TUBO escurecido; à volta, grelha 2×2 com cartas reais do contexto (Sneaky Snacker em destaque · Faithless Looting (motor do Madness) · Kessig Flamebreather (Mono Red Madness, ponte com o PAU01) · Llanowar Elves ou carta-ícone dos Elfos campeões, se confirmado). Cabeçalho mono «FUGUETE NA TENDA · PAUPER · 23/08/2026»; selo grande **68 CÓPIAS** e selo **17 DECKS** na caixa sob a carta (nunca sobre a arte ou o texto de regras).
@@ -116,12 +129,11 @@ Créditos completos do encerramento editorial (Versão A e B): na legenda e num 
 ## Estimativa de voz
 - 400 caracteres numa geração (eleven_v4) → custo de referência: MC-PAU01 (403 caracteres) gastou **404 créditos**. Estimativa: **~400 créditos**. Correr `estimate_only` depois da aprovação do texto e antes de gerar.
 
-## Collab · Tenda da Liliana
+## Collab · Tiago Fuguete + Tenda da Liliana
 - Mensagem: `mensagem_collab.md`. Prazo de resposta: 5 dias (`comum/parcerias.md`).
-- Versão A (prévia privada): logótipo oficial, créditos completos, marca «PRÉVIA», sem afirmação de parceria BINDER × Tenda.
-- Versão B (publicação): igual; logótipo só com autorização; sem collab se não houver «sim» — crédito textual verdadeiro ao evento e às fontes.
+- **Sem marca PRÉVIA** (fundador, 23/11): o vídeo enviado aos dois é o final. Quem não autorizar a imagem sai num re-render sem nova voz.
 - Se disser não ou não responder até 29/11: publicar a Versão B sem logótipo e sem collab (o episódio tem prazo de 30/11).
-- **Logótipo: NÃO OBTIDO.** Ver `logo/LEIA-ME.md`.
+- Foto do Tiago e logótipo da Tenda: `terceiros/` (recortes de prints de perfil enviados pelo fundador).
 - Conflito com o painel: `parcerias.md` pede «uma parceria nova de cada vez» e tem LL-ART20 e MC-ESP03 em aberto. A missão do fundador põe a Tenda agora; registado como decisão a confirmar.
 
 ## Fontes e evidências

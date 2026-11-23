@@ -481,3 +481,9 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - **Série:** «Meta em Curto · Pauper», IDs `MC-PAU01…`, um por semana, backlog e método em `oraculo/PAUPER.md`.
 - **MC-PAU01 «86 dólares»** (padrão A do top 10 de audiência): voz autorizada neste pedido (1 geração, 404 créditos). Fronteira com o Vince: o preço entra como comparação entre os decks mais jogados de dois formatos competitivos (decisão de produção; o fundador pode rever).
 - **Motor:** `mc_render.py` aceita `pergunta_rotulos` (rótulos livres na cena `pergunta`).
+
+## 23/11/2026 (02:05) · Sem marca «PRÉVIA»; MC-PAU02 em collab tripla com foto do Tiago Fuguete
+- **Fundador:** «Nunca faça marca de prévia pós não quero gastar com crédito para refazer trabalho já feito. Recorte a foto dele e coloque no vídeo para citarmos a loja e o Tiago vou tentar colab com os dois simultaneamente.»
+- **Regra geral (todas as frentes):** o vídeo enviado ao parceiro é **o ficheiro final de publicação**, sem marca «PRÉVIA». Substitui o ponto 5 do método «episódio pronto primeiro» (`comum/parcerias.md`).
+- **Consequência técnica:** o que depende de autorização (foto, logótipo) fica numa camada própria do `episodio.json`; se o parceiro recusar, sai num re-render local **sem nova voz** (zero créditos). A voz nunca cita nada que dependa de autorização além do nome público do evento e dos organizadores.
+- **MC-PAU02:** collab tripla BINDER × Tiago Fuguete × Tenda da Liliana. Foto do Tiago (recorte do print da foto de perfil do Instagram enviado pelo fundador) e logótipo da Tenda (idem) entram no vídeo antes da resposta; autorizações a registar em `oraculo/autorizacoes/`. Exceção registada à regra 1 do método («nada que precise de autorização para ser produzido»), por decisão do fundador.

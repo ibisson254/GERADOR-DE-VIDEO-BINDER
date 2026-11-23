@@ -1,3 +1,14 @@
+# Imagens de terceiros · MC-PAU02
+
+| Ficheiro | O quê | Origem | Uso | Autorização |
+|---|---|---|---|---|
+| `tiago_fuguete_perfil_instagram.png` (708×708, círculo transparente) | foto de perfil de Tiago Fuguete | print do perfil do Instagram enviado pelo fundador a 23/11/2026 02:04; só recorte circular | cartão «Quem fez o torneio» + canto dos planos do torneio | por pedir (`oraculo/autorizacoes/`) |
+| `tenda_da_liliana_perfil_instagram.png` (708×708) | logótipo da Tenda da Liliana | print do perfil do Instagram enviado pelo fundador a 23/11/2026 01:48; só recorte circular | idem | por pedir |
+
+Decisão do fundador (23/11, 02:05, `nucleo/DECISOES.md`): entram no vídeo final antes da resposta; quem recusar sai num re-render sem nova voz. Resolução de print: aceitável no tamanho do cartão (~300 px no ecrã); pedir os originais na mensagem de collab.
+
+---
+Notas anteriores do logótipo:
 # Logótipo da Tenda da Liliana · PROVISÓRIO (23/11/2026, 02h)
 
 `tenda_da_liliana_perfil_instagram.png` (708×708, círculo com transparência à volta): recorte direto, sem alterar cores nem formas, do print da foto de perfil oficial da loja no Instagram, enviado pelo fundador a 23/11/2026 01:48. Serve para a Versão A (prévia). Resolução e compressão de print: para publicar, pedir à loja o SVG/PNG original. O site oficial respondeu com verificação anti-bot (Cloudflare) e não foi aberto.

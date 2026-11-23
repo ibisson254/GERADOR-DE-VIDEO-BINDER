@@ -22,7 +22,7 @@ Todos os outros conteúdos com terceiros já foram feitos, publicados e registad
 2. **O vídeo não afirma parceria.** Nada de «em parceria com…» no ecrã nem na voz. A collab vive na legenda e no botão de collab do Instagram, que se ajustam depois da resposta. Se o parceiro disser não, o episódio não fica com mentira gravada.
 3. **Plano B decidido antes de produzir** (campo «Se disser não» em cada projeto): publicar com crédito e marcação, ou arquivar. Se o plano B for arquivar, o episódio tem de ser barato (carrossel, sem voz).
 4. **Créditos:** voz e imagem só com autorização do fundador, uma geração. Começa-se pelos formatos sem créditos.
-5. **Pacote de envio** (o fundador envia por DM, do @binder_vision): o vídeo ou carrossel final com marca «PRÉVIA», a legenda já com o @ deles, uma frase curta a pedir duas coisas — collab e OK para publicar — e um prazo.
+5. **Pacote de envio** (o fundador envia por DM, do @binder_vision): o vídeo ou carrossel **final, sem marca «PRÉVIA»** (fundador, 23/11/2026: nunca marcar prévia, para não refazer trabalho; o que depende de autorização sai num re-render sem nova voz), a legenda já com o @ deles, uma frase curta a pedir duas coisas — collab e OK para publicar — e um prazo.
 6. **Prazo:** resposta em até 5 dias. Os episódios com dados têm data de corte; depois de ~10 dias, refaz-se a conta ou cai o episódio.
 7. **Ajustes pedidos pelo parceiro:** aceitam-se correções de facto e de crédito; mudanças de tese ou de tom passam pelo fundador.
 8. **Registo:** a pauta entra no `REGISTRO_EDITORIAL.md` ao começar a produção (estado EM PRODUÇÃO); a resposta do parceiro vai para `<frente>/autorizacoes/`; só passa a PUBLICADO depois de o fundador publicar.
@@ -66,7 +66,7 @@ Pautas auditadas a 16/11 com `memoria.py pauta`: as três LIVRES.
 ## MC-PAU02 · Tenda da Liliana (missão do fundador, 23/11/2026)
 - **Antecipada pelo fundador**: a Tenda estava na lista «depois destes três»; a missão de 23/11 pede a collab já. Conflito com a regra «uma parceria nova de cada vez» (LL-ART20 e MC-ESP03 em aberto) **por confirmar com o fundador**.
 - Peça: MC-PAU02 «68 cópias. 17 decks.» (`oraculo/episodios/pau02_tenda_snacker/`). Fonte do evento: artigo de Tiago Fuguete (27/08) e listas do Fuguete na Tenda 200 (23/08). A Tenda é parceira do evento, não dona dos dados de metagame.
-- Versão A (prévia privada, logótipo oficial, marca PRÉVIA) · Versão B (publicação; logótipo só com autorização; sem collab se não houver «sim»).
+- **Atualização 23/11, 02:05 (fundador):** collab **tripla** BINDER × Tiago Fuguete × Tenda da Liliana; sem marca PRÉVIA (o vídeo enviado é o final). Foto do Tiago e logótipo da Tenda no vídeo desde já; quem recusar sai num re-render sem nova voz.
 - Se disser não ou não responder até 29/11: publicar a Versão B com crédito textual ao evento, sem logótipo.
 - Material em falta: confirmação dos números (artigo e PauperPilot, fora do alcance da sessão), logótipo oficial (SVG/PNG transparente).
 - Mensagem pronta: `oraculo/episodios/pau02_tenda_snacker/mensagem_collab.md`. Nada enviado.
@@ -82,6 +82,6 @@ Tenda da Liliana (Pauper), Cabrito Montês (reserva, só com atividade confirmad
 | MC-ESP02 | Preconauta | — | aceitou | sim | | | | termo de comparação |
 | LL-ART20 | Caio Monteiro | | | | | | | |
 | MC-ESP03 | Farpas de Mana | | | | | | | |
-| MC-PAU02 | Tenda da Liliana | | | | | | | |
+| MC-PAU02 | Tiago Fuguete + Tenda da Liliana | | | | | | | |
 
 Sem dado = vazio, nunca 0.

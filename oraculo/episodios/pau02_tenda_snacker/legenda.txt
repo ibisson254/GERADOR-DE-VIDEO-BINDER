@@ -1,12 +1,12 @@
-RASCUNHO · depende da confirmação dos números do torneio e do PauperPilot. Versão B (sem collab aceite).
+RASCUNHO v3 (collab tripla; @ a confirmar: @tiagofuguete e @[tenda]).
 
-68 CÓPIAS. 17 DECKS. SNEAKY SNACKER VAI SER BANIDA?
+SNEAKY SNACKER VAI SER BANIDA?
 
-No Fuguete na Tenda 200 (23/08/2026), torneio de Pauper organizado por Tiago Fuguete em parceria com a @[tenda]: 74 jogadores, 6 rodadas, e 68 cópias de Sneaky Snacker em 17 decks. O campeão foi Barradas, com Elfos, 6–0. Dados do artigo do Tiago Fuguete e das listas do torneio.
+No PauperPilot, projeto independente que reúne listas públicas do Magic Online (1.318 decks de 56 eventos, 21/10 a 19/11): a Snacker está em 23,7% dos decks, e o Red Madness tem 15,1% do meta.
 
-No PauperPilot, projeto independente que reúne listas públicas do Magic Online (1.318 decks, 56 eventos, 21/10 a 19/11): a Snacker aparece em 23,7% dos decks, e o Red Madness tem 15,1% do meta. Um torneio é um recorte; o MTGO é outro. Os dois apontam na mesma direção.
+No Fuguete na Tenda 200 (23/08/2026), torneio do @tiagofuguete com a @[tenda]: 74 jogadores, 6 rodadas, Mono Red Madness como deck mais jogado (7 listas) e Barradas campeão com Elfos, 6–0. Dados do site do Tiago Fuguete (standings e metagame do torneio). Obrigado aos dois por movimentarem o Pauper brasileiro.
 
-A Wizards já disse que estava de olho na carta (29/06) e voltou ao assunto em 10/08, sem banir. Em 12/10, o Pauper ficou sem mudanças. O próximo anúncio é em 30/11.
+A Wizards disse que estava de olho na Snacker (29/06), voltou ao assunto em 10/08 sem banir, e em 12/10 o Pauper ficou sem mudanças. O próximo anúncio é em 30/11.
 
 Previsão do TUBO (opinião, registrada como PR-PAU02-01): a Sneaky Snacker NÃO será banida no anúncio de 30/11/2026. Dia 1º de dezembro a gente confere.
 
@@ -17,6 +17,3 @@ Na tela: Sneaky Snacker (Modern Horizons 3, 2024), nº 205. Arte: Irina Nordsol.
 Quer saber quanto vale o que já está no seu fichário? Baixe o BINDER Vision.
 
 #MTG #MagicTheGathering #Pauper #MTGPauper #MTGBrasil
-
----
-Versão com collab aceite: trocar «em parceria com a @[tenda]» por nada de novo (a parceria do evento é Fuguete × Tenda; a collab BINDER × Tenda vive só no botão do Instagram). Não escrever «em parceria com Tenda da Liliana» como parceria do BINDER.
