@@ -147,7 +147,7 @@ def caixa(w, h, html, pad=(0, 0)):
     """camada de texto centrada num canvas CWxCH, para imprimir numa folha de w×h centrada"""
     x0, y0 = (CW - w) / 2 + pad[0], (CH - h) / 2 + pad[1]
     return html_camada(f'<div style="position:absolute;left:{x0}px;top:{y0}px;width:{w}px;height:{h}px;display:flex;align-items:center;justify-content:center">'
-                       f'<div style="position:relative;width:{w}px">{html}</div></div>', CW, CH)
+                       f'<div style="position:relative;width:{w}px;min-height:{h if "<svg" in html else 0}px">{html}</div></div>', CW, CH)
 
 def pecas(cfg):
     C = cfg['cartas']; c = lambda n, k='png': os.path.join(C, f'sld_{n}_{k}.png' if k == 'png' else f'sld_{n}_art_crop.jpg')
@@ -473,3 +473,5 @@ if __name__ == '__main__':
         video(cfg, saida, '--reel' in sys.argv, '--audio' in sys.argv, '--sem-fecho' not in sys.argv)
     elif modo == 'carrossel':
         sys.path.insert(0, AQUI); import carrossel; carrossel.gerar(cfg, saida)
+    elif modo == 'capa':
+        sys.path.insert(0, AQUI); import carrossel; carrossel.capas(cfg, saida)

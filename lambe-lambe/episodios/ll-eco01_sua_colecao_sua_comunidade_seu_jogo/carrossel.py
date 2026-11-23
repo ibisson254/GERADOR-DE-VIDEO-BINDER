@@ -6,11 +6,12 @@ from campanha import M, peca_folha, peca_carta, peca_img, matte, caixa, T, rende
 
 W, H = 1080, 1350
 
-def put(base, P, cx, cy, sc=1.0):
+def put(base, P, cx, cy, sc=1.0, ang=0.0):
     rgb, al, off = P; h, w = al.shape
     cx, cy = cx + off[0] * sc, cy + off[1] * sc
-    Mx = np.float64([[sc, 0, cx - sc * w / 2], [0, sc, cy - sc * h / 2], [0, 0, 1]])
-    return K.blend(base.astype(np.float32), rgb, al, Mx, 1.0, (W, H))
+    R = cv2.getRotationMatrix2D((w / 2, h / 2), -ang, sc); R[:, 2] += [cx - w / 2, cy - h / 2]
+    Mx = np.vstack([R, [0, 0, 1]])
+    return K.blend(base.astype(np.float32), rgb, al, Mx, 1.0, (base.shape[1], base.shape[0]))
 
 def chave(base, x0, y0, s=.8):
     """chaveamento a marcador (mesmo desenho do vídeo), sem nomes"""
@@ -37,6 +38,7 @@ def gerar(cfg, out):
     for i, txt in enumerate(CRED):
         t[f'cr{i}'] = caixa(980, 40, f'<div style="font-family:Geist;font-weight:500;font-size:18px;color:#050A10;text-align:center;white-space:nowrap">'
                                      f'{txt}{"" if i in (2, 6) else " · © Wizards of the Coast"}</div>')
+    capa_textos(t)
     render_textos()
     lig = cv2.imread(cfg['ligamagic']); mg, ma = K.logo_magic(); lb = K.logo_binder()
     fita2 = ((-.94, -1, -40), (.94, -1, 40))
@@ -103,6 +105,65 @@ def gerar(cfg, out):
     S.append(b)
     for i in range(len(S) - 1):          # o slide 7 já leva a nota de marcas
         S[i] = put(S[i], peca_folha(1000, 40, 'creme', 60 + i, 0, t[f'cr{i}']), 540, 1300, .95)
+    # capa (23/11, 18:06): o slide da comunidade, refinado, passa a 1.º; o antigo slide 4 sai
+    capa = comunidade(M.fundo(3).astype(np.float32), t, c, 0, arrasta=True)
+    capa = put(capa, peca_folha(1000, 40, 'creme', 63, 0, t['cr3']), 540, 1300, .95)
+    S = [capa] + S[:3] + S[4:]
     for i, s in enumerate(S, 1):
         cv2.imwrite(os.path.join(out, f'LL-ECO01_carrossel_{i:02d}.png'), np.clip(s, 0, 255).astype(np.uint8))
+    print('ok', out)
+
+
+# ------------------------------------------------------------------ capa (pedido do fundador 23/11, 18:06): slide da comunidade como capa
+def capa_textos(t):
+    t['q_pin'] = caixa(170, 210, K.svg(170, 210, '<path d="M85 12 c-40 0 -70 30 -70 68 c0 50 70 118 70 118 s70 -68 70 -118 c0 -38 -30 -68 -70 -68z" fill="#10B981"/>'
+                                         '<circle cx="85" cy="78" r="38" fill="#F2EDE2"/><text x="85" y="98" text-anchor="middle" font-family="AB" font-size="56" fill="#050A10">?</text>'))
+    t['gratis'] = caixa(230, 230, K.svg(230, 230, '<polygon points="' + ' '.join(
+        f"{115 + (108 if i % 2 == 0 else 86) * np.cos(np.pi * i / 12):.1f},{115 + (108 if i % 2 == 0 else 86) * np.sin(np.pi * i / 12):.1f}" for i in range(24)) +
+        '" fill="#FFD84A"/><text x="115" y="132" text-anchor="middle" font-family="AB" font-size="46" fill="#050A10">GRÁTIS</text>'))
+    t['nota'] = caixa(420, 120, '<div style="font-family:CB;font-size:58px;line-height:.95;color:#E61E6E;text-align:left;transform:rotate(-4deg)">quem joga<br>perto de você?</div>')
+    t['arrasta'] = caixa(420, 80, '<div style="font-family:CB;font-size:50px;color:#050A10;text-align:right;white-space:nowrap">arrasta pro lado <svg width="70" height="34" style="vertical-align:middle"><path d="M4 18 H58 M42 4 L62 18 L42 32" stroke="#E61E6E" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>')
+
+def comunidade(b, t, c, dy=0, arrasta=False):
+    """slide da comunidade, refinado para capa: ? no alfinete, selo GRÁTIS, nota a marcador; dy desloca tudo (capa 9:16)"""
+    fita2 = ((-.94, -1, -40), (.94, -1, 40))
+    b = put(b, peca_folha(940, 240, 'creme', 12, -1, t['s3a'], fitas=fita2), 540, 215 + dy, .95)
+    b = put(b, peca_carta(c(7029), 420, 1.5), 540, 700 + dy, .92)
+    for P, x, y in ((peca_folha(190, 230, 'creme', 13, -5, t['q_pin']), 170, 530), (peca_folha(170, 170, 'creme', 14, 4, t['ic_av']), 170, 765),
+                    (peca_folha(170, 170, 'creme', 15, -3, t['ic_av2']), 915, 530), (peca_folha(260, 150, 'creme', 16, 4, t['ic_bal']), 905, 770)):
+        b = put(b, P, x, y + dy, .9)
+    b = put(b, peca_folha(430, 140, 'creme', 44, -3, t['nota']), 228, 1003 + dy, .66, -2)
+    b = put(b, peca_folha(880, 140, 'preto', 18, 1, t['s3b'], claro=True), 540, 1120 + dy, .95)
+    b = put(b, matte(lambda x: K.tinta(np.ascontiguousarray(x), t['gratis'], claro=True)), 922, 352 + dy, .76, 12)
+    if arrasta:
+        b = put(b, peca_folha(430, 90, 'creme', 45, 2, t['arrasta']), 770, 1232 + dy, .85)
+    return b
+
+def folha_fundo(base, seed, cy):
+    """mesma folha kraft do motor_padrao.fundo(), colada noutra altura (para a capa 9:16)"""
+    FW, FH = 1000, 1290
+    folha = M.kraft(FW, FH, 0, seed)
+    rel = cv2.resize(cv2.cvtColor(M.cp[480:900, 120:960], cv2.COLOR_BGR2GRAY), (FW, FH)).astype(np.float32)
+    if seed % 2: rel = rel[::-1]
+    folha = np.clip(folha + np.clip(rel - cv2.GaussianBlur(rel, (0, 0), 2), -10, 10)[..., None] * .7, 0, 255).astype(np.uint8)
+    return colar(base, folha, K.rasgo_alpha(FW, FH, 16, 9 + seed), 540, cy, -0.4 + 0.15 * (seed % 3))
+
+def capas(cfg, out):
+    os.makedirs(out, exist_ok=True)
+    t, c = K.pecas(cfg); capa_textos(t)
+    t['cred'] = caixa(980, 40, '<div style="font-family:Geist;font-weight:500;font-size:18px;color:#050A10;text-align:center;white-space:nowrap">'
+                                'Command Tower (SLD 7029) · Dan Black · © Wizards of the Coast</div>')
+    render_textos()
+    # 4:5 (1080×1350): 1.º slide do carrossel
+    b = comunidade(M.fundo(3).astype(np.float32), t, c, 0, arrasta=True)
+    b = put(b, peca_folha(1000, 40, 'creme', 63, 0, t['cred']), 540, 1300, .95)
+    cv2.imwrite(os.path.join(out, 'LL-ECO01_capa_4x5_1080x1350.png'), np.clip(b, 0, 255).astype(np.uint8))
+    # 9:16 (1080×1920) do Reel, com o conteúdo inteiro dentro do recorte 3:4 da grelha (y 240–1680)
+    b = K.muro().astype(np.uint8)
+    b = folha_fundo(b, 3, 960).astype(np.float32)
+    b = comunidade(b, t, c, 285)
+    b = put(b, peca_folha(1000, 40, 'creme', 63, 0, t['cred']), 540, 1585, .95)
+    b = np.clip(b, 0, 255).astype(np.uint8)
+    cv2.imwrite(os.path.join(out, 'LL-ECO01_capa_reel_1080x1920.png'), b)
+    cv2.imwrite(os.path.join(out, 'LL-ECO01_capa_grelha_3x4_previa.png'), b[240:1680])
     print('ok', out)

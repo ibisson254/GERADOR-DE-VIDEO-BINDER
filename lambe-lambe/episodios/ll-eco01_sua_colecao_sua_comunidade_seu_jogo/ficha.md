@@ -39,6 +39,13 @@ Pedido do fundador (17:46): «Escolha outra cor que não seja o preto para servi
 - Selo: arte vetorial oficial do Google (EPS do kit de selos, variante pt-BR) via pacote npm `localized-responsive-google-play-badge` 1.0.2; o site de selos do Google não é acessível a partir da sessão. É o desenho de 2016 do logótipo Play; se o fundador quiser o PNG atual de play.google.com/intl/pt-BR/badges, basta substituir `comum/marcas/google_play_badge_ptbr.png`.
 - Durações iguais (Story 19,87 s, Reel 22,27 s); QC igual ao da v1.
 
+## v3 · capa a partir do slide da comunidade (23/11/2026, 18h30)
+Pedido do fundador (18:06): «Quero essa imagem para usar de capa, coloque nas proporções exatas, e [...] algum elemento para que quando o seguidor olhar o Instagram fique com vontade de clicar.»
+- Formatos: `LL-ECO01_capa_4x5_1080x1350.png` (1.º slide do carrossel, 4:5) e `LL-ECO01_capa_reel_1080x1920.png` (capa do Reel, 9:16, com tudo dentro do recorte 3:4 da grelha do perfil, y 240–1680; prévia `LL-ECO01_capa_grelha_3x4_previa.png`). Comando: `python3 -I campanha.py capa config.json <pasta>`.
+- Elementos de clique (lacuna de curiosidade + recompensa, sem prometer nada que não exista): «?» dentro do alfinete (quem está perto?), nota a marcador rosa «quem joga perto de você?», selo amarelo «GRÁTIS» (confirmado pelo fundador) e, só no carrossel, «arrasta pro lado →». Nada sobre a arte nem sobre o rodapé da carta.
+- Carrossel reordenado: comunidade (capa) → Magic é muito mais → coleção → LigaMagic → jogo → grátis → marca (7 slides; o antigo slide 4 passou a capa).
+- Correção encontrada: os ícones dos autocolantes saíam meio fora do papel (camada SVG ancorada ao centro); corrigido em `caixa()`, vídeos re-renderizados.
+
 ## Materiais reutilizados
 - Física de colagem do Story aprovado (`kit_story/motor_story.py`, 16/11): voo com aceleração, curvatura, impacto com mola, tremor de câmara, sombra projetada. Copiada para `campanha.py` sem alterar o motor.
 - Muro rosa com restos dos modelos aprovados (`referencias/carrossel_padrao_01/02.png`), kraft, fita, carta com fita nos cantos de cima, faixa preta, fontes livres (`kit_carrossel/motor_padrao.py`, `compor.py`), sem alterações.
