@@ -29,10 +29,11 @@ def gerar(cfg, out):
     t, c = K.pecas(cfg)
     t['c3'] = caixa(560, 220, '<div style="font-family:RB;font-weight:800;font-size:34px;line-height:1.2;color:#050A10;text-align:left">'
                     'Copie a coleção do BINDER em lista ou CSV e importe na <span style="color:#E61E6E">LigaMagic</span>.</div>')
+    t['beta'] = caixa(820, 70, T('Beta para Android · Link na bio', 40, PRETO, 'RB', 'font-weight:900;font-style:italic;', w=820))
     t['capa'] = caixa(900, 120, T('Sua coleção. Sua comunidade. <span class="g">Seu jogo.</span>', 40, '#fff', 'RB', 'font-weight:900;font-style:italic;', w=900))
     CRED = ['Lightning Bolt (SLD 901) · Christopher Rush', 'Reliquary Tower (SLD 7104) · Arthur Yuan  ·  Mystical Tutor (SLD 334) · Mateus Manhanini',
             'Ícone LigaMagic: marca dos seus titulares, sem parceria', 'Command Tower (SLD 7029) · Dan Black', 'Lightning Bolt (SLD 83) · Noah Bradley',
-            'Generous Gift (SLD 369) · Ayako Ishiguro', 'Magic: The Gathering © Wizards of the Coast']
+            'Generous Gift (SLD 369) · Ayako Ishiguro', '']
     for i, txt in enumerate(CRED):
         t[f'cr{i}'] = caixa(980, 40, f'<div style="font-family:Geist;font-weight:500;font-size:18px;color:#050A10;text-align:center;white-space:nowrap">'
                                      f'{txt}{"" if i in (2, 6) else " · © Wizards of the Coast"}</div>')
@@ -86,19 +87,21 @@ def gerar(cfg, out):
     b = put(b, peca_folha(840, 150, 'amarelo', 29, 1.5, t['s6b']), 548, 335, 1.0)
     b = put(b, peca_carta(c(369), 420, -2), 540, 790, 1.0)
     S.append(b)
-    # 7 · marca + CTA (cartaz preto BINDER)
+    # 7 · marca + CTA — cartaz verde-esmeralda (pedido do fundador 23/11), logos em etiquetas pretas, selo oficial do Google Play
+    pb, pa = K.logo_play()
     b = M.fundo(6).astype(np.float32)
-    b = put(b, peca_folha(1000, 1290, 'preto', 24, .4), 540, 677, 1.0)
-    b = put(b, peca_folha(860, 110, 'preto', 25, -1, t['s5a'], claro=True), 540, 150, .9)
-    b = put(b, peca_folha(940, 250, 'preto', 26, 0, t['s5b'], claro=True), 540, 300, .9)
-    b = put(b, peca_img(mg, 470, ma, ang=-1, margem=0, fitas=()), 540, 455, .85)
-    b = put(b, matte(lambda x: colar(x, lb, np.full(lb.shape[:2], 255, np.uint8), CW / 2, CH / 2, 0, sombra=False)), 540, 680, .62)
-    b = put(b, peca_img(lig, 120, ang=-3, margem=8, seed=31), 360, 880, .85)
-    b = put(b, peca_folha(380, 100, 'preto', 32, 0, t['s5d'], claro=True), 610, 882, .9)
-    b = put(b, peca_folha(940, 230, 'preto', 30, -.8, t['s6c'], claro=True), 540, 1060, .95)
-    b = put(b, peca_folha(880, 100, 'preto', 27, 0, t['s5c'], claro=True), 540, 1215, .95)
+    b = put(b, peca_folha(1000, 1290, 'verde', 24, .4), 540, 677, 1.0)
+    b = put(b, peca_folha(860, 110, 'verde', 25, -1, t['s5a'], claro=True), 540, 115, .85)
+    b = put(b, peca_folha(960, 270, 'verde', 26, 0, t['s5b'], claro=True), 540, 270, .85)
+    b = put(b, peca_img(mg, 430, ma, ang=-1.5, margem=26, fundo=(16, 10, 5), seed=34, fitas=((-1, -1, -40), (1, -1, 40))), 540, 470, .78)
+    b = put(b, peca_img(lb, 430, ang=1, margem=22, fundo=(16, 10, 5), seed=35, fitas=((-1, -1, -40), (1, -1, 40))), 540, 715, .78)
+    b = put(b, peca_img(lig, 110, ang=-3, margem=8, seed=31), 375, 935, .8)
+    b = put(b, peca_folha(380, 100, 'verde', 32, 0, t['s5d'], claro=True), 610, 937, .85)
+    b = put(b, matte(lambda x: colar(x, pb, pa, CW / 2, CH / 2, 0, sombra=False)), 540, 1065, .44)
+    b = put(b, peca_folha(820, 70, 'verde', 43, 0, t['beta']), 540, 1160, .9)
+    b = put(b, peca_folha(900, 110, 'verde', 27, 0, t['s5c'], claro=True), 540, 1240, .95)
     S.append(b)
-    for i in range(len(S)):
+    for i in range(len(S) - 1):          # o slide 7 já leva a nota de marcas
         S[i] = put(S[i], peca_folha(1000, 40, 'creme', 60 + i, 0, t[f'cr{i}']), 540, 1300, .95)
     for i, s in enumerate(S, 1):
         cv2.imwrite(os.path.join(out, f'LL-ECO01_carrossel_{i:02d}.png'), np.clip(s, 0, 255).astype(np.uint8))

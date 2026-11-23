@@ -12,7 +12,7 @@ O muro de lambe-lambe pop é o caos da coleção; o BINDER Vision é a lente que
 
 - Muro rosa de lambe-lambe pop. Papel rasgado com canto descolado, fibras na borda, rugas, grão, tinta lascada, restos de cartazes antigos, cola, tags, fita-cola e calçada.
 - **Cartaz pop no muro rosa = cultura TCG. Cartaz preto BINDER no muro rosa = produto.**
-- A marca entra sempre em preto #050A10 e verde-esmeralda #10B981, nunca tingida de rosa.
+- A marca entra sempre em preto #050A10 e verde-esmeralda #10B981, nunca tingida de rosa. Desde 23/11/2026 (LL-ECO01, pedido do fundador) o cartaz de produto pode ser verde-esmeralda, com os logótipos em etiquetas pretas; o selo oficial do Google Play entra sem alterações.
 - Adesivos de série: amarelo "Curiosidade de Magic", azul "Artistas de Magic".
 - Etiquetas: "Quem pintou?" (nome do artista a marcador), "Do Brasil" (verde) e "De Portugal" (vermelha) para artistas lusófonos, "ARTE" com o nome do artista nas peças em vídeo, selo "TELA REAL DO APP" nas demonstrações.
 - Cartazes pop desenhados para ilustrar a curiosidade sem copiar a arte da carta; lupas com detalhes ampliados ao lado da carta, que fica inteira.

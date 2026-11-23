@@ -22,6 +22,7 @@ os.chdir(_cwd)
 from compor import colar, rasgo_alpha, aplicar, CSS
 FECHO = os.path.join(RAIZ, 'comum/outro/outro_binder_916.mp4')
 MAGIC = os.path.join(RAIZ, 'comum/marcas/magic_logo_recortado.png')
+PLAY = os.path.join(RAIZ, 'comum/marcas/google_play_badge_ptbr.png')
 
 PRETO, VERDE, ROSA, AMAR = '#050A10', '#10B981', '#E61E6E', '#FFD84A'
 
@@ -92,7 +93,7 @@ def folha(base, w, h, tipo='creme', seed=0, ang=0.0, cx=CW / 2, cy=CH / 2):
         elif tipo == 'amarelo':
             p = p * .30 + np.array((40, 200, 248), np.float32) * .70
         elif tipo == 'verde':
-            p = p * .25 + np.array((129, 185, 16), np.float32) * .75
+            p = p * .16 + np.array((122, 182, 12), np.float32) * .84
     return colar(base, np.clip(p, 0, 255).astype(np.uint8), rasgo_alpha(w, h, 12 if w > 400 else 7, 50 + seed), cx, cy, ang)
 
 def peca_folha(w, h, tipo, seed, ang=0.0, tx=None, claro=False, fitas=()):
@@ -161,16 +162,16 @@ def pecas(cfg):
     t['s3b'] = caixa(860, 120, T('Converse. <span class="g">Conecte-se.</span>', 54, '#fff', w=840))
     t['s4a'] = caixa(860, 150, T('Crie <span class="k">campeonatos.</span>', 74, w=860))
     t['s4b'] = caixa(860, 150, T('Reúna a comunidade.<br><span class="g">Jogue.</span>', 58, '#fff', w=860))
-    t['s5a'] = caixa(900, 90, T('Não é só um aplicativo.', 56, '#fff', 'RB', 'font-weight:900;font-style:italic;', w=900))
-    t['s5b'] = caixa(900, 230, T('É um <span class="g">ecossistema</span><br>para quem vive', 82, '#fff', w=900))
-    t['s5c'] = caixa(860, 90, '<div style="font-family:Geist;font-weight:500;font-size:19px;line-height:1.35;color:#9AA3AE;text-align:center">'
+    t['s5a'] = caixa(900, 90, T('Não é só um aplicativo.', 56, PRETO, 'RB', 'font-weight:900;font-style:italic;', w=900))
+    t['s5b'] = caixa(940, 250, T('É um <span style="background:#050A10;color:#fff;padding:2px 18px 6px;-webkit-box-decoration-break:clone">ecossistema</span><br>para quem vive', 82, PRETO, w=940, extra='line-height:1.12;'))
+    t['s5c'] = caixa(860, 90, '<div style="font-family:Geist;font-weight:500;font-size:19px;line-height:1.35;color:#06281D;text-align:center">'
                      'BINDER Vision é um app independente. Magic: The Gathering é marca da Wizards of the Coast.<br>'
-                     'LigaMagic é marca dos seus titulares. Sem afiliação, parceria ou patrocínio.</div>')
-    t['s5d'] = caixa(330, 70, '<div style="font-family:RB;font-weight:800;font-size:26px;color:#fff;text-align:left;line-height:1.1">exporte a coleção<br>para a LigaMagic</div>')
+                     'LigaMagic é marca dos seus titulares. Google Play e o logotipo do Google Play são marcas da Google LLC. Sem afiliação, parceria ou patrocínio.</div>')
+    t['s5d'] = caixa(330, 70, '<div style="font-family:RB;font-weight:800;font-size:26px;color:#050A10;text-align:left;line-height:1.1">exporte a coleção<br>para a LigaMagic</div>')
     t['s6a'] = caixa(760, 120, T('Tudo isso,', 92, w=760))
     t['s6b'] = caixa(800, 130, T('gratuitamente.', 76, PRETO, w=800))
-    t['s6c'] = caixa(880, 200, '<div style="text-align:center"><div style="font-family:AB;font-size:52px;line-height:1;color:#fff;letter-spacing:-1px;text-transform:uppercase;white-space:nowrap">'
-                     'Conheça o <span class="g">BINDER Vision.</span></div><div style="margin-top:22px;font-family:RB;font-weight:800;font-size:40px;color:#FFD84A">'
+    t['s6c'] = caixa(880, 170, '<div style="text-align:center"><div style="font-family:AB;font-size:52px;line-height:1;color:#fff;letter-spacing:-1px;text-transform:uppercase;white-space:nowrap">'
+                     'Conheça o <span class="g">BINDER Vision.</span></div><div style="margin-top:18px;font-family:RB;font-weight:800;font-size:34px;color:#FFD84A">'
                      'Beta para Android · Link na bio</div></div>')
     # ícones (tinta preta/verde em papel creme)
     t['ic_pin'] = caixa(160, 200, svg(160, 200, pin(80, 10, VERDE)))
@@ -262,6 +263,8 @@ def logo_binder():
                        capture_output=True, check=True).stdout
     f = np.frombuffer(f, np.uint8).reshape(1920, 1080, 3)
     return f[686:1114, 236:844].copy()
+def logo_play():
+    m = cv2.imread(PLAY, cv2.IMREAD_UNCHANGED); return m[..., :3], m[..., 3]
 def logo_magic():
     m = cv2.imread(MAGIC, cv2.IMREAD_UNCHANGED); return m[..., :3], m[..., 3]
 
@@ -302,23 +305,25 @@ def cena(cfg, S=1.0):
     ap(Peca(peca_carta(c(83), 330, 3), 800, 900, 8.62, .34, de=(800, -200), rot0=-12))
     ap(Peca(peca_folha(190, 200, 'creme', 22, -4, t['ic_tro']), 815, 1235, 9.35, .2, modo='pop', ang=-4, som='pop'))
     ap(Peca(peca_folha(900, 190, 'preto', 23, .8, t['s4b'], claro=True), 540, 1390, 9.15, .32, de=(-900, 0), rot0=-6))
-    # 5 · REVELAÇÃO DA MARCA — cartaz preto BINDER (produto)
-    ap(Peca(peca_folha(1040, 1640, 'preto', 24, .4), 540, 955, 10.20, .40, de=(0, -1900), rot0=4, z0=1.15, som='grande'))
-    ap(Peca(peca_folha(860, 110, 'preto', 25, -1, t['s5a'], claro=True), 540, 360, 10.45, .18, modo='carimbo', som='pop'))
-    ap(Peca(peca_folha(940, 250, 'preto', 26, 0, t['s5b'], claro=True), 540, 560, 11.0, .18, modo='carimbo', som='pop'))
+    # 5 · REVELAÇÃO DA MARCA — cartaz verde-esmeralda (pedido do fundador 23/11: fundo que não seja preto); logos em etiquetas pretas
+    ap(Peca(peca_folha(1040, 1640, 'verde', 24, .4), 540, 955, 10.20, .40, de=(0, -1900), rot0=4, z0=1.15, som='grande'))
+    ap(Peca(peca_folha(860, 110, 'verde', 25, -1, t['s5a'], claro=True), 540, 350, 10.45, .18, modo='carimbo', som='pop'))
+    ap(Peca(peca_folha(960, 270, 'verde', 26, 0, t['s5b'], claro=True), 540, 555, 11.0, .18, modo='carimbo', som='pop'))
     mg, ma = logo_magic()
-    ap(Peca(peca_img(mg, 470, ma, ang=-1, margem=0, fitas=()), 540, 765, 11.55, .3, modo='pop', som='pop'))
+    ap(Peca(peca_img(mg, 430, ma, ang=-1.5, margem=26, fundo=(16, 10, 5), seed=34, fitas=((-1, -1, -40), (1, -1, 40))), 540, 785, 11.55, .3, modo='pop', som='pop'))
     lb = logo_binder()
-    ap(Peca(matte(lambda b: colar(b, lb, np.full(lb.shape[:2], 255, np.uint8), CW / 2, CH / 2, 0, sombra=False)), 540, 1060, 12.00, .30, modo='pop', esc=.78, som='pop'))
-    ap(Peca(peca_folha(880, 100, 'preto', 27, 0, t['s5c'], claro=True), 540, 1505, 12.3, .25, modo='carimbo'))
-    ap(Peca(peca_img(lig, 120, ang=-3, margem=8, seed=31), 350, 1370, 12.25, .25, modo='pop', som='pop'))
-    ap(Peca(peca_folha(380, 100, 'preto', 32, 0, t['s5d'], claro=True), 610, 1372, 12.3, .25, modo='carimbo'))
+    ap(Peca(peca_img(lb, 430, ang=1, margem=22, fundo=(16, 10, 5), seed=35, fitas=((-1, -1, -40), (1, -1, 40))), 540, 1100, 12.00, .30, modo='pop', som='pop'))
+    ap(Peca(peca_img(lig, 110, ang=-3, margem=8, seed=31), 360, 1395, 12.25, .25, modo='pop', som='pop'))
+    ap(Peca(peca_folha(380, 100, 'verde', 32, 0, t['s5d'], claro=True), 610, 1397, 12.3, .25, modo='carimbo'))
+    ap(Peca(peca_folha(900, 110, 'verde', 27, 0, t['s5c'], claro=True), 540, 1515, 12.3, .25, modo='carimbo'))
     # 6 · GRATUIDADE E CTA
     ap(Peca(peca_folha(1010, 1560, 'creme', 33, .6), 540, 950, 13.20, .40, de=(0, -1900), rot0=-5, z0=1.15, som='grande'))
-    ap(Peca(peca_folha(840, 150, 'kraft', 28, -2, t['s6a'], fitas=((-.94, -1, -40), (.94, -1, 40))), 540, 380, 13.42, .32, de=(-900, -200), rot0=-10))
-    ap(Peca(peca_folha(840, 150, 'amarelo', 29, 1.5, t['s6b']), 548, 530, 13.70, .30, de=(900, -100), rot0=10))
-    ap(Peca(peca_carta(c(369), 360, -2), 540, 930, 13.95, .34, de=(0, 1500), rot0=-8))
-    ap(Peca(peca_folha(940, 230, 'preto', 30, -.8, t['s6c'], claro=True), 540, 1345, 14.35, .32, de=(0, 1400), rot0=4))
+    ap(Peca(peca_folha(840, 150, 'kraft', 28, -2, t['s6a'], fitas=((-.94, -1, -40), (.94, -1, 40))), 540, 370, 13.42, .32, de=(-900, -200), rot0=-10))
+    ap(Peca(peca_folha(840, 150, 'amarelo', 29, 1.5, t['s6b']), 548, 520, 13.70, .30, de=(900, -100), rot0=10))
+    ap(Peca(peca_carta(c(369), 300, -2), 540, 885, 13.95, .34, de=(0, 1500), rot0=-8))
+    ap(Peca(peca_folha(940, 200, 'preto', 30, -.8, t['s6c'], claro=True), 540, 1215, 14.30, .32, de=(0, 1400), rot0=4))
+    pb, pa = logo_play()      # selo oficial do Google Play: sem rotação, sem fita, sem textura por cima
+    ap(Peca(matte(lambda b: colar(b, pb, pa, CW / 2, CH / 2, 0, sombra=False)), 540, 1385, 14.65, .25, modo='carimbo', esc=.42, som='pop'))
     for p in L:
         p.t0 *= S; p.dur *= S if p.modo not in ('pop', 'carimbo') else 1; p.assenta = p.t0 + p.dur + .8
     DUR = 16.0 * S

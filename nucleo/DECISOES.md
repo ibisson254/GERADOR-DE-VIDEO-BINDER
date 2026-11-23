@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 23/11/2026 (18:10) · Lambe-lambe: cartaz de produto verde-esmeralda e selo oficial do Google Play (LL-ECO01 v2)
+
+**O quê:** no LL-ECO01, o cartaz da marca deixa o preto e passa a verde-esmeralda (#10B981 sobre papel), com Magic e BINDER Vision em etiquetas pretas e «ECOSSISTEMA» em faixa preta; entra o selo oficial «Disponível no Google Play» (pt-BR) no slide 7 e na chamada para ação do vídeo, sem alterações, com a nota de marca da Google. Fica como opção do Lambe-lambe para cartazes de produto (`lambe-lambe/CONTEXTO.md` §2); o cartaz preto continua válido.
+**Porquê:** fundador, 23/11/2026 (17:46): «Escolha outra cor que não seja o preto para servir de fundo, escolha a cor que melhor se encaixa. use logo oficial da Google play. Refine essa idéia».
+**Impacto:** selo em `comum/marcas/google_play_badge_ptbr.png` (origem e regras no `LEIA-ME`). Desenho do selo de 2016 (o site de selos do Google não abre na sessão); troca-se pelo PNG atual se o fundador o enviar.
+
 ## 23/11/2026 (17:40) · BINDER Vision: funções sociais e de jogo confirmadas e gratuitas; LL-ECO01 com cartas Secret Lair e logótipos autorizados
 
 **O quê:** (1) O fundador confirmou expressamente que organizar a coleção, identificar a carta e escolher a impressão, exportar para a LigaMagic, encontrar jogadores perto, conversar (chat) e organizar/participar em campeonatos **funcionam e são gratuitos**. Passam a ANUNCIÁVEIS em `binder-vision/PRODUTO.md` (§2.1); «grátis/gratuitamente» sai da lista de proibidos (constituição §9, `binder-vision/LEIA-ME.md`, `ESTRATEGIA.md`, `lambe-lambe/CONTEXTO.md` §4). Trocas e as restantes funções de loja continuam congeladas. (2) Uso autorizado dos logótipos BINDER Vision, Magic: The Gathering e LigaMagic, sem alterar proporções e sem sugerir parceria; LigaMagic só associada à exportação; nota de independência na peça. (3) Campanha LL-ECO01 «Sua coleção. Sua comunidade. Seu jogo.» (Story, Reel e carrossel) no Lambe-lambe, com cartas Secret Lair (pedido do fundador), sem telas inventadas.

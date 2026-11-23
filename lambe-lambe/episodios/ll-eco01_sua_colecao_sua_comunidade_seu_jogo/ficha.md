@@ -32,6 +32,13 @@ Objeto: carta Lightning Bolt (SLD 901, arte original de Christopher Rush) inteir
 
 Easter eggs (comentário fixado): Reliquary Tower = sem limite de mão; Command Tower = ponto de encontro; Generous Gift = presente/grátis; Mystical Tutor de um ilustrador carioca (Mateus Manhanini); escondido: o Lightning Bolt de abertura é a arte original de Christopher Rush (Alpha) reeditada em Secret Lair.
 
+## v2 · cartaz da marca verde-esmeralda e selo do Google Play (23/11/2026, 18h10)
+Pedido do fundador (17:46): «Escolha outra cor que não seja o preto para servir de fundo [...] use logo oficial da Google play. Refine essa ideia.»
+- Fundo do cartaz da marca (cena 5 do vídeo e slide 7): **verde-esmeralda** (papel kraft tingido de #10B981). É a cor da marca, contrasta com o muro rosa (complementar) e com o creme/kraft das outras cenas, e deixa o texto preto legível. O preto passa a etiqueta: Magic e BINDER Vision entram como autocolantes pretos colados no cartaz (os dois logótipos precisam de fundo escuro; nada é tingido nem redesenhado). «ECOSSISTEMA» em faixa preta.
+- Selo oficial «Disponível no Google Play» (pt-BR): no slide 7 e por baixo da chamada para ação da cena 6; sem rotação, fita, textura ou sombra por cima. Nota de marcas atualizada com «Google Play e o logotipo do Google Play são marcas da Google LLC.»
+- Selo: arte vetorial oficial do Google (EPS do kit de selos, variante pt-BR) via pacote npm `localized-responsive-google-play-badge` 1.0.2; o site de selos do Google não é acessível a partir da sessão. É o desenho de 2016 do logótipo Play; se o fundador quiser o PNG atual de play.google.com/intl/pt-BR/badges, basta substituir `comum/marcas/google_play_badge_ptbr.png`.
+- Durações iguais (Story 19,87 s, Reel 22,27 s); QC igual ao da v1.
+
 ## Materiais reutilizados
 - Física de colagem do Story aprovado (`kit_story/motor_story.py`, 16/11): voo com aceleração, curvatura, impacto com mola, tremor de câmara, sombra projetada. Copiada para `campanha.py` sem alterar o motor.
 - Muro rosa com restos dos modelos aprovados (`referencias/carrossel_padrao_01/02.png`), kraft, fita, carta com fita nos cantos de cima, faixa preta, fontes livres (`kit_carrossel/motor_padrao.py`, `compor.py`), sem alterações.
