@@ -42,6 +42,7 @@ Pedido do fundador (17:46): «Escolha outra cor que não seja o preto para servi
 ## v3 · capa a partir do slide da comunidade (23/11/2026, 18h30)
 Pedido do fundador (18:06): «Quero essa imagem para usar de capa, coloque nas proporções exatas, e [...] algum elemento para que quando o seguidor olhar o Instagram fique com vontade de clicar.»
 - Formatos: `LL-ECO01_capa_4x5_1080x1350.png` (1.º slide do carrossel, 4:5) e `LL-ECO01_capa_reel_1080x1920.png` (capa do Reel, 9:16, com tudo dentro do recorte 3:4 da grelha do perfil, y 240–1680; prévia `LL-ECO01_capa_grelha_3x4_previa.png`). Comando: `python3 -I campanha.py capa config.json <pasta>`.
+- Grelha do perfil (18:23): o Instagram cortava os lados da capa 4:5; nova `LL-ECO01_capa_grelha_1080x1440.png` em 3:4 exato, com tudo dentro e margem nas bordas. É esta que se usa em «Cortar imagem do perfil».
 - Elementos de clique (lacuna de curiosidade + recompensa, sem prometer nada que não exista): «?» dentro do alfinete (quem está perto?), nota a marcador rosa «quem joga perto de você?», selo amarelo «GRÁTIS» (confirmado pelo fundador) e, só no carrossel, «arrasta pro lado →». Nada sobre a arte nem sobre o rodapé da carta.
 - Carrossel reordenado: comunidade (capa) → Magic é muito mais → coleção → LigaMagic → jogo → grátis → marca (7 slides; o antigo slide 4 passou a capa).
 - Correção encontrada: os ícones dos autocolantes saíam meio fora do papel (camada SVG ancorada ao centro); corrigido em `caixa()`, vídeos re-renderizados.

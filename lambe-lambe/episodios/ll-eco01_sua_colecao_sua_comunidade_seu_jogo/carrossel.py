@@ -166,4 +166,10 @@ def capas(cfg, out):
     b = np.clip(b, 0, 255).astype(np.uint8)
     cv2.imwrite(os.path.join(out, 'LL-ECO01_capa_reel_1080x1920.png'), b)
     cv2.imwrite(os.path.join(out, 'LL-ECO01_capa_grelha_3x4_previa.png'), b[240:1680])
+    # 3:4 (1080×1440): o recorte da grelha do perfil (pedido do fundador 23/11, 18:23), sem nada encostado às bordas
+    b = K.muro(H=1440).astype(np.uint8)
+    b = folha_fundo(b, 3, 720).astype(np.float32)
+    b = comunidade(b, t, c, 45)
+    b = put(b, peca_folha(1000, 40, 'creme', 63, 0, t['cred']), 540, 1342, .95)
+    cv2.imwrite(os.path.join(out, 'LL-ECO01_capa_grelha_1080x1440.png'), np.clip(b, 0, 255).astype(np.uint8))
     print('ok', out)
