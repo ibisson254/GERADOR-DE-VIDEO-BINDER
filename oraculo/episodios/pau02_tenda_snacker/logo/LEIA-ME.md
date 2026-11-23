@@ -1,4 +1,9 @@
-# Logótipo da Tenda da Liliana · NÃO OBTIDO (23/11/2026)
+# Logótipo da Tenda da Liliana · PROVISÓRIO (23/11/2026, 02h)
+
+`tenda_da_liliana_perfil_instagram.png` (708×708, círculo com transparência à volta): recorte direto, sem alterar cores nem formas, do print da foto de perfil oficial da loja no Instagram, enviado pelo fundador a 23/11/2026 01:48. Serve para a Versão A (prévia). Resolução e compressão de print: para publicar, pedir à loja o SVG/PNG original. O site oficial respondeu com verificação anti-bot (Cloudflare) e não foi aberto.
+
+## Histórico
+Antes (01h30): NÃO OBTIDO.
 
 Nenhum ficheiro foi gerado, redesenhado ou imitado. O site oficial (tendadaliliana.com.br) e os perfis não abriram a partir da sessão.
 

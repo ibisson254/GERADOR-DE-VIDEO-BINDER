@@ -27,12 +27,13 @@ Legenda: ✅ confirmado nesta sessão · ⚠️ confirmado só em parte · ❌ n
 
 | Dado do briefing | Estado | Como |
 |---|---|---|
-| Fuguete na Tenda 200 · 23/08/2026 · 74 jogadores · 6 rodadas · 200 tix ao top 16 | ✅ | Relato independente do jogador Elfoman (elfoman.com.br, post do dia seguinte): 74 inscritos, 6 rodadas suíças, 14h, organizado por Tiago Fuguete |
-| Artigo de Tiago Fuguete de 27/08/2026 com metagame, cartas mais jogadas e campeão | ⚠️ existe | Tweet de @tiagofuguete (04/09) anuncia o artigo com esse URL; **o texto do artigo não abriu daqui** |
-| Campeão Barradas, Elfos Mono Green, 6–0 | ❌ | Só no artigo/listas (bloqueados) |
-| **68 cópias de Sneaky Snacker em 17 decks** | ❌ | Só no artigo/listas (bloqueados) |
-| Rakdos Madness 8 listas · Mono Red Madness 7 listas | ❌ | Só no artigo/listas (bloqueados) |
-| Evento «em parceria entre Tiago Fuguete e Tenda da Liliana» | ⚠️ | O nome do evento indica a ligação; o relato do Elfoman atribui o torneio ao Fuguete e não menciona a Tenda. **Confirmar a redação exata no artigo** |
+| Fuguete na Tenda 200 · 23/08/2026, 14h · 74 jogadores · 6 rodadas suíças · 200 tix ao top 16 | ✅ | **Fonte primária** (23/11, navegador integrado no PC do fundador): página do torneio no site do Tiago Fuguete, estado FINALIZADO, 74/500 inscritos, rodada 6/6, 2.245 visualizações; confirmado também pelo relato do Elfoman |
+| Campeão Barradas, Elfos Mono Green, 6–0 | ✅ | Standings oficiais: 1.º Barradas, 18 pts, 6–0, Elfos Mono Green. Top 8: Land Spy, Rakdos Madness, Gruul Ramp, Jeskai Ephemerate, Grixis Affinity, Tron Monster, Mono Blue Fadas |
+| Mono Red Madness: 7 listas | ✅ | Breakdown oficial: 7 de 74 (9,5 %), o arquétipo mais jogado; 30 arquétipos no total |
+| **Rakdos Madness: 8 listas** | ❌ **ERRADO** | Breakdown e standings oficiais: **5 de 74 (6,8 %)**. Corrigido no roteiro |
+| **68 cópias de Sneaky Snacker em 17 decks** | ❌ **sem fonte** | O artigo de 27/08 **foi removido** (o URL dá 404 desde a mudança do site; não está no Wayback Machine). A página do torneio e o breakdown não publicam contagem de cartas. **Não entra no vídeo sem o print do artigo** |
+| Artigo de Tiago Fuguete de 27/08/2026 | ❌ removido | 404 no site novo; a lista de artigos atual não o inclui |
+| Evento ligado à Tenda da Liliana | ✅ parcial | Nome oficial «FUGUETE NA TENDA - 200 Tix» e regra das salas «[FUGUETE+TENDA] R1 Vs …» na página do torneio. A página não traz logótipo nem texto «em parceria com»: no ecrã dizer «Fuguete na Tenda (Tiago Fuguete × Tenda da Liliana)» só depois de a loja confirmar; até lá «evento Fuguete na Tenda» |
 | Tenda da Liliana | ✅ | Loja online de singles com foco em Pauper (descrição própria na página de organizador do melee.gg); site tendadaliliana.com.br; organizou «Pauper 15k da Tenda» (16/11/2025, 83 jogadores) e «Super Pauper TnT (Tenda na Taverna)» (12/09/2026, 23 jogadores, mtgdecks) |
 | PauperPilot 19/11: 1.318 decks · 56 eventos · 21/10–19/11 · Red Madness 15,1 % (199) · Snacker em 23,7 % dos decks | ❌ | pauperpilot.com não aparece na pesquisa e está fora do alcance da sessão. **Nenhum número confirmado** |
 | 29/06/2026: Seeker of Skybreak banido; Snacker «a observar» | ✅ | Wizards (Gavin Verhey, pelo Pauper Format Panel): sem ação sobre a Snacker, carta a observar com cuidado durante o verão |
@@ -42,7 +43,9 @@ Legenda: ✅ confirmado nesta sessão · ⚠️ confirmado só em parte · ❌ n
 
 **Cálculo nosso (só se os dados se confirmarem):** 68 ÷ 17 = 4 → todos os 17 decks usaram as 4 cópias. Se as 74 listas estiverem publicadas, 17 ÷ 74 = 23,0 % do campo, quase igual aos 23,7 % do PauperPilot (recortes diferentes; dizer como coincidência de dois recortes, nunca como a mesma amostra).
 
-**Gate de dados (lição 1 do MC-ESP03): FECHADO.** Sem os números do torneio e do PauperPilot confirmados, não se grava voz nem se renderiza. Para abrir:
+**Atualização 23/11, 02h (PC do fundador ligado):** fonte primária do torneio lida; Rakdos Madness corrigido para 5; 68/17 sem fonte (artigo removido); PauperPilot ainda por abrir; logótipo provisório recortado do print do perfil oficial do Instagram enviado pelo fundador (`logo/`).
+
+**Gate de dados (lição 1 do MC-ESP03): AINDA FECHADO** para o gancho 68/17 e para o PauperPilot. Sem os números do torneio e do PauperPilot confirmados, não se grava voz nem se renderiza. Para abrir:
 1. Print ou PDF do artigo do Fuguete de 27/08 (metagame, cartas mais jogadas, campeão, frase sobre a Tenda) e da página das listas.
 2. Print do PauperPilot com data, período, total de decks/eventos, linha do Red Madness e da Sneaky Snacker (% de decks), feito no dia da produção (o de 19/11 serve se for esse o print; dizer «consulta de 19/11» no ecrã).
 3. Ou uma sessão com o Claude in Chrome aberto no PC.
