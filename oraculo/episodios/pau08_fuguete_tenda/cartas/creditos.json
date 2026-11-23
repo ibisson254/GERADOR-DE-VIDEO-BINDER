@@ -1,0 +1,58 @@
+{
+ "timberwatch_elf": {
+  "nome": "Timberwatch Elf",
+  "colecao": "Kaldheim Commander",
+  "ano": "2021",
+  "numero": "76",
+  "artista": "Yohann Schepacz"
+ },
+ "galvanic_blast": {
+  "nome": "Galvanic Blast",
+  "colecao": "Double Masters",
+  "ano": "2020",
+  "numero": "125",
+  "artista": "Marc Simonetti"
+ },
+ "fiery_temper": {
+  "nome": "Fiery Temper",
+  "colecao": "Innistrad Remastered",
+  "ano": "2025",
+  "numero": "154",
+  "artista": "Johannes Voss"
+ },
+ "priest_of_titania": {
+  "nome": "Priest of Titania",
+  "colecao": "Modern Horizons 3",
+  "ano": "2024",
+  "numero": "286",
+  "artista": "Rebecca Guay"
+ },
+ "llanowar_elves": {
+  "nome": "Llanowar Elves",
+  "colecao": "Foundations",
+  "ano": "2024",
+  "numero": "227",
+  "artista": "Kev Walker"
+ },
+ "nyxborn_hydra": {
+  "nome": "Nyxborn Hydra",
+  "colecao": "Modern Horizons 3",
+  "ano": "2024",
+  "numero": "164",
+  "artista": "Vincent Christiaens"
+ },
+ "generous_ent": {
+  "nome": "Generous Ent",
+  "colecao": "The Lord of the Rings: Tales of Middle-earth",
+  "ano": "2023",
+  "numero": "169",
+  "artista": "Simon Dominic"
+ },
+ "lead_the_stampede": {
+  "nome": "Lead the Stampede",
+  "colecao": "Ikoria: Lair of Behemoths",
+  "ano": "2020",
+  "numero": "163",
+  "artista": "Lius Lasahido"
+ }
+}

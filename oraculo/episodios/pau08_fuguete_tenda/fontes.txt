@@ -1,0 +1,6 @@
+MC-PAU08 · fontes (lidas a 23/11/2026 no navegador integrado do PC do fundador)
+- Torneio: https://tiagofuguete.com.br/torneios/23f368a1-8665-4d52-9bae-dfe0776e87c0 · FUGUETE NA TENDA - 200 Tix · 23/08/2026 14:00 · 74 inscritos · 6/6 rodadas · top 8 dos standings finais · lista do campeão Barradas (Elfos Mono Green, 60 + 15).
+- Metagame: https://tiagofuguete.com.br/metagame/breakdown?torneioId=23f36-fuguete-na-tenda-200-tix · 74 decks · 30 arquétipos · Mono Red Madness 7 (9,5 %), 14 V / 16 D / 0 E (46,7 %) · Rakdos Madness 5 · Grixis Affinity 5 · White Weenie 5 · Elfos Mono Green 4 (5,4 %).
+- Imagens de terceiros: foto de perfil do Tiago Fuguete e logótipo da Tenda da Liliana (recortes de prints do Instagram enviados pelo fundador; camada removível).
+- Cartas: Scryfall (cartas/creditos.json).
+- Voz: ElevenLabs, Antonio de Jesus, eleven_v4, geração vTJhkxw4aahyPczQ7mun (576 créditos), flow UuDiDVeSWIBa2hnnJjf0, atempo 1,0.

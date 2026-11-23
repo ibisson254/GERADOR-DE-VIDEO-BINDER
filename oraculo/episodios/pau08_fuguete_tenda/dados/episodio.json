@@ -1,0 +1,330 @@
+{
+ "_leia": "MC-PAU08 · Meta em Curto · Pauper #3 «O mais jogado não ganhou». Só o torneio Fuguete na Tenda 200 (23/08/2026): standings, metagame e lista do campeão no site do Tiago Fuguete, lidos a 23/11/2026. Imagens de terceiros em 'terceiros' (camada removível: re-render sem nova voz).",
+ "confirmado": true,
+ "faixa": "META EM CURTO · PAUPER #3",
+ "pergunta_gancho": "QUEM FEZ 6–0 NO FUGUETE NA TENDA?",
+ "selo_fonte": "FONTE: SITE DO TIAGO FUGUETE · FUGUETE NA TENDA · 23/08/2026",
+ "carta_A": "cartas/timberwatch_elf.png",
+ "carta_B": "cartas/galvanic_blast.png",
+ "carta_C": "cartas/fiery_temper.png",
+ "grade": {
+  "rotulo": "FUGUETE NA TENDA",
+  "numero": "6–0",
+  "unidade": "SÓ 1 DE 74",
+  "contexto": "30 decks diferentes"
+ },
+ "terceiros": {
+  "tiago": "terceiros/tiago_fuguete_perfil_instagram.png",
+  "tenda": "terceiros/tenda_da_liliana_perfil_instagram.png"
+ },
+ "creditos": {
+  "titulo": "QUEM FEZ O TORNEIO",
+  "itens": [
+   {
+    "img": "tiago",
+    "nome": "TIAGO FUGUETE",
+    "sub": "@tiagofuguete"
+   },
+   {
+    "img": "tenda",
+    "nome": "TENDA DA LILIANA",
+    "sub": "@tendadaliliana"
+   }
+  ],
+  "evento": [
+   "FUGUETE NA TENDA · 23/08/2026",
+   "74 jogadores · 6 rodadas · 200 tix · MTGO"
+  ],
+  "selo": "FONTE: SITE DO TIAGO FUGUETE · FUGUETE NA TENDA · 23/08/2026"
+ },
+ "barras": {
+  "titulo": "OS MAIS JOGADOS",
+  "cantos": [
+   "tiago",
+   "tenda"
+  ],
+  "linhas": [
+   [
+    "Mono Red Madness",
+    7
+   ],
+   [
+    "Rakdos Madness",
+    5
+   ],
+   [
+    "Grixis Affinity",
+    5
+   ],
+   [
+    "White Weenie",
+    5
+   ]
+  ],
+  "destaque": [
+   "Mono Red Madness"
+  ],
+  "rodape": "listas por arquétipo · 74 decks · 30 arquétipos",
+  "carimbo": [
+   "14 V · 16 D",
+   "Mono Red Madness no torneio"
+  ],
+  "selo": "FONTE: SITE DO TIAGO FUGUETE · METAGAME DO TORNEIO"
+ },
+ "lista": {
+  "titulo": "TOP 8 · 8 ARQUÉTIPOS",
+  "destaque": 1,
+  "janela": 2.2,
+  "linhas": [
+   [
+    1,
+    "Elfos Mono Green",
+    "Barradas · 6–0"
+   ],
+   [
+    2,
+    "Land Spy",
+    "PedroStark"
+   ],
+   [
+    3,
+    "Rakdos Madness",
+    "GustavoRVieira"
+   ],
+   [
+    4,
+    "Gruul Ramp",
+    "DrPerugia"
+   ],
+   [
+    5,
+    "Jeskai Ephemerate",
+    "Phyrexian_Machinist"
+   ],
+   [
+    6,
+    "Grixis Affinity",
+    "Elfoman_br"
+   ],
+   [
+    7,
+    "Tron Monster",
+    "mehanske"
+   ],
+   [
+    8,
+    "Mono Blue Fadas",
+    "Baldo13"
+   ]
+  ],
+  "selo": "FONTE: SITE DO TIAGO FUGUETE · STANDINGS FINAIS"
+ },
+ "galeria": {
+  "titulo": "A LISTA DO BARRADAS · ELFOS MONO GREEN",
+  "cartas": [
+   "cartas/timberwatch_elf.png",
+   "cartas/priest_of_titania.png",
+   "cartas/llanowar_elves.png",
+   "cartas/nyxborn_hydra.png",
+   "cartas/generous_ent.png",
+   "cartas/lead_the_stampede.png"
+  ],
+  "carimbo": [
+   "6–0",
+   "só 4 de 74 jogaram Elfos"
+  ],
+  "selo": "FONTE: SITE DO TIAGO FUGUETE · LISTA DO CAMPEÃO"
+ },
+ "previsao": {
+  "tela1": "MAIS JOGADO",
+  "tela2": "≠ CAMPEÃO",
+  "linhas": [
+   "NEM SEMPRE VENCE",
+   "Fuguete na Tenda · 23/08/2026"
+  ]
+ },
+ "pergunta1": {
+  "sim": "MADNESS",
+  "nao": "ELFOS"
+ },
+ "creditos_fecho": [
+  "Torneio: Tiago Fuguete × Tenda da Liliana",
+  "Dados: tiagofuguete.com.br · standings e metagame"
+ ],
+ "capa_l1": "O MAIS JOGADO",
+ "capa_l2": "NÃO GANHOU",
+ "capa_foco": "6–0",
+ "capa_unidade": "ELFOS NO FUGUETE NA TENDA",
+ "saida": "MC_PAU08_FINAL.mp4",
+ "frases": [
+  "74 JOGADORES. 30 DECKS DIFERENTES.",
+  "SÓ UM FEZ 6 A 0.",
+  "ESSE É O FUGUETE NA TENDA:",
+  "TORNEIO DO TIAGO FUGUETE COM A TENDA DA LILIANA,",
+  "6 RODADAS DE PAUPER NO MAGIC ONLINE.",
+  "O DECK MAIS JOGADO FOI O MONO RED MADNESS: 7 LISTAS.",
+  "E TERMINOU COM MAIS DERROTAS QUE VITÓRIAS.",
+  "NO TOP 8, 8 DECKS DIFERENTES. NENHUM REPETIDO.",
+  "E LÁ EM CIMA, BARRADAS, DE ELFOS.",
+  "SÓ 4 JOGADORES LEVARAM ELFOS. ELE GANHOU AS 6.",
+  "NO PAUPER, O MAIS JOGADO NEM SEMPRE É O QUE VENCE.",
+  "QUAL DECK VOCÊ LEVARIA PRO PRÓXIMO FUGUETE?",
+  "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
+ ],
+ "voz_cfg": {
+  "atempo": 1.0,
+  "alvo_s": 41.0,
+  "pausa": 0.2,
+  "pausa_min": 0.1,
+  "pausas_longas": {
+   "2": 0.35,
+   "5": 0.35,
+   "7": 0.35,
+   "8": 0.3,
+   "10": 0.4,
+   "11": 0.35,
+   "12": 0.45
+  }
+ },
+ "voz": {
+  "arquivo": "voz_montada.wav (geração vTJhkxw4aahyPczQ7mun, 576 créditos, flow ElevenLabs UuDiDVeSWIBa2hnnJjf0)",
+  "atempo": 1.0,
+  "lead": 0.0,
+  "pausas": []
+ },
+ "seq": [
+  [
+   0,
+   "gancho_grade"
+  ],
+  [
+   "@1+0.1",
+   "tubo_abertura",
+   "@1+0.6",
+   "@1>-0.2"
+  ],
+  [
+   "@2-0.05",
+   "creditos",
+   "@4"
+  ],
+  [
+   "@5-0.05",
+   "barras",
+   "@6"
+  ],
+  [
+   "@7-0.05",
+   "lista"
+  ],
+  [
+   "@8-0.05",
+   "galeria",
+   "@9"
+  ],
+  [
+   "@10-0.05",
+   "previsao"
+  ],
+  [
+   "@11-0.05",
+   "pergunta1"
+  ],
+  [
+   "@12-0.1",
+   "tubo_fecho",
+   "analitico"
+  ]
+ ],
+ "beats": {
+  "SCAN": 0.3,
+  "NUM": 0.0,
+  "HLB": 1.5,
+  "Q": 2.0,
+  "RISE": "@1+0.1",
+  "DIVE": "@1>-0.2",
+  "POP_BAR": "@5",
+  "POP_A": "@2",
+  "POP_B": "@6",
+  "PERF_A": "@7",
+  "PERF_B": "@8",
+  "PERF_DEN": "@9",
+  "LEIT": "@10",
+  "LEIT2": "@10+0.5",
+  "DIF": "@9>",
+  "DIF_PT": "@11",
+  "DIF_VER": "@11+0.3",
+  "DIF_NOTA": "@11+0.6",
+  "ASK": "@11",
+  "CLOSE": "@12-0.1",
+  "CLOSE2": "@12+1",
+  "END": 38.63
+ },
+ "voz_tempos": [
+  [
+   0.0,
+   3.65,
+   "74 JOGADORES. 30 DECKS DIFERENTES."
+  ],
+  [
+   3.85,
+   5.58,
+   "SÓ UM FEZ 6 A 0."
+  ],
+  [
+   5.93,
+   7.45,
+   "ESSE É O FUGUETE NA TENDA:"
+  ],
+  [
+   7.65,
+   10.17,
+   "TORNEIO DO TIAGO FUGUETE COM A TENDA DA LILIANA,"
+  ],
+  [
+   10.37,
+   12.6,
+   "6 RODADAS DE PAUPER NO MAGIC ONLINE."
+  ],
+  [
+   12.95,
+   16.34,
+   "O DECK MAIS JOGADO FOI O MONO RED MADNESS: 7 LISTAS."
+  ],
+  [
+   16.54,
+   18.76,
+   "E TERMINOU COM MAIS DERROTAS QUE VITÓRIAS."
+  ],
+  [
+   19.11,
+   22.65,
+   "NO TOP 8, 8 DECKS DIFERENTES. NENHUM REPETIDO."
+  ],
+  [
+   22.95,
+   25.06,
+   "E LÁ EM CIMA, BARRADAS, DE ELFOS."
+  ],
+  [
+   25.26,
+   28.65,
+   "SÓ 4 JOGADORES LEVARAM ELFOS. ELE GANHOU AS 6."
+  ],
+  [
+   29.05,
+   32.01,
+   "NO PAUPER, O MAIS JOGADO NEM SEMPRE É O QUE VENCE."
+  ],
+  [
+   32.36,
+   34.56,
+   "QUAL DECK VOCÊ LEVARIA PRO PRÓXIMO FUGUETE?"
+  ],
+  [
+   35.01,
+   38.48,
+   "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
+  ]
+ ]
+}

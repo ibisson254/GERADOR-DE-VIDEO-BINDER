@@ -3,6 +3,10 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
+## MC-PAU08 · «O mais jogado não ganhou» (23/11/2026, 12h30) — CONCLUÍDO; publicação com o fundador
+
+Só o torneio Fuguete na Tenda (Mono Red Madness 7 listas, 14 V · 16 D; Elfos 6–0, 4 de 74; top 8 com 8 arquétipos). Collab Tiago Fuguete + Tenda da Liliana. Voz 576 créditos; vídeo 42,50 s, QC sem problemas. Faixa «PAUPER #3»; a prestação de contas de 01/12 passa a #4.
+
 ## MC-PAU02 · «Vai ser banida?» (23/11/2026, 02h20) — CONCLUÍDO; envio e publicação com o fundador
 
 Collab tripla BINDER × Tiago Fuguete × Tenda da Liliana (decisão 02:05: sem marca de prévia; foto e logótipo em camada removível, re-render sem nova voz se alguém recusar). Gancho 23,7 % (PauperPilot); torneio pela fonte primária (Rakdos Madness 5, não 8; 68/17 sem fonte e fora do vídeo); previsão PR-PAU02-01 (conferência 30/11 → MC-PAU03). Voz 416 créditos; vídeo 29,03 s, −14,1 LUFS, QC sem problemas; vídeo e capa entregues na conversa. Motor: 7 cenas genéricas novas. **Falta (fundador):** escutar a pronúncia, enviar as duas mensagens (`oraculo/episodios/pau02_tenda_snacker/mensagem_collab.md`) com resposta até 28/11, publicar a 29/11 com `utm_campaign=MC-PAU02`.

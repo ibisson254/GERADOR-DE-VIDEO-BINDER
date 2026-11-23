@@ -675,9 +675,12 @@ def cena_creditos(t, i):
         d.text((cx, 1010), item['nome'], font=fit(d, item['nome'], INTB, 50, 420), fill=WHITE + (int(255 * k),), anchor='mm')
         if item.get('sub'): d.text((cx, 1062), item['sub'], font=fit(d, item['sub'], MONO, 32, 420), fill=(170, 190, 195, int(255 * k)), anchor='mm')
     d.text((540, 790), '×', font=F(INTB, 90), fill=PH, anchor='mm')
-    ke = eio((t - p[0] - 0.5) / 0.3)
-    for j, s in enumerate(cr.get('evento', [])):
-        d.text((540, 1180 + j * 64), s, font=fit(d, s, MONOB if j == 0 else COND, 46 if j == 0 else 38, 880), fill=(PH if j == 0 else WHITE) + (int(255 * ke),), anchor='mm')
+    ke = eio((t - (p[2] if len(p) > 2 else p[0] + 0.5)) / 0.3)
+    if ke > 0:                                                       # camada própria: em RGBA o ImageDraw não mistura alfa
+        lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
+        for j, s in enumerate(cr.get('evento', [])):
+            dl.text((540, 1180 + j * 64), s, font=fit(dl, s, MONOB if j == 0 else COND, 46 if j == 0 else 38, 880), fill=tuple((PH if j == 0 else WHITE)[:3]) + (int(255 * ke),), anchor='mm')
+        im.alpha_composite(lay)
     topo_fala(im, t); selo_txt(im, cr.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
 
 def cena_barras(t, i):
@@ -695,7 +698,7 @@ def cena_barras(t, i):
         d.text((990, y + 68), str(n), font=F(MONOB, 46), fill=WHITE, anchor='rm'); y += 118
     d.text((90, y + 4), b.get('rodape', ''), font=fit(d, b.get('rodape', ''), COND, 34, 860), fill=GREY)
     if len(p) > 2 and t >= p[2]:                                     # carimbo do campeão com a carta
-        k = eio((t - p[2]) / 0.25); c = card_img('C', 230); im.alpha_composite(c, (int(760 + 60 * (1 - k)), 1030))
+        k = eio((t - p[2]) / 0.25); c = card_img('C', 200); im.alpha_composite(c, (int(800 + 60 * (1 - k)), 1110))
         d = ImageDraw.Draw(im, 'RGBA'); s1, s2 = b.get('carimbo', ['', ''])
         f = F(INTB, int(64 * (1.25 - .25 * k))); wd = max(d.textlength(s1, font=f), d.textlength(s2, font=F(MONOB, 38))) + 60
         d.rounded_rectangle((90, 1150, 90 + wd, 1330), 18, fill=(8, 20, 16, 245), outline=PH, width=5)
@@ -755,6 +758,47 @@ def cena_tubo_fecho(t, i):
         d.rounded_rectangle((60, 1300, 1020, 1330 + 54 * len(ls)), 18, fill=(5, 10, 16, int(225 * k)))
         for j, s in enumerate(ls): d.text((540, 1340 + j * 54), s, font=fit(d, s, COND, 36, 900), fill=(220, 232, 236, int(255 * k)), anchor='mm')
     topo_fala(im, t); return im.convert('RGB')
+_GAL = {}
+def _gal(f, w):
+    k = (f, int(w))
+    if k not in _GAL:
+        c = Image.open(HERE + f).convert('RGB'); h = int(w * c.size[1] / c.size[0]); c = c.resize((int(w), h), Image.LANCZOS)
+        m = Image.new('L', c.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, c.size[0] - 1, c.size[1] - 1), 14, fill=255)
+        c = c.convert('RGBA'); c.putalpha(m); _GAL[k] = c
+    return _GAL[k]
+
+def cena_lista(t, i):
+    """Lista numerada que entra linha a linha (D['lista'] = {'titulo','linhas':[[n, texto, sub]], 'destaque': n, 'selo'})."""
+    p = SEQ[i]; im = fundo(t); L = D.get('lista', {}); d = ImageDraw.Draw(im, 'RGBA')
+    d.rounded_rectangle((60, 440, 1020, 1430), 26, fill=(5, 10, 16, 228))
+    d.text((90, 490), L.get('titulo', ''), font=fit(d, L.get('titulo', ''), MONOB, 40, 860), fill=EM, anchor='lm')
+    rows = L.get('linhas', []); y = 560; dur = max(.12, (L.get('janela', 2.4)) / max(1, len(rows)))
+    for j, (n, txt, sub) in enumerate(rows):
+        k = eio((t - p[0] - dur * j) / .2)
+        if k <= 0: break
+        hl = str(n) == str(L.get('destaque', '')); col = PH if hl else WHITE
+        d.text((90 + 30 * (1 - k), y), str(n), font=F(MONOB, 46), fill=(PH if hl else GREY) + (int(255 * k),))
+        d.text((170 + 30 * (1 - k), y - 2), txt, font=fit(d, txt, INTB, 44, 520), fill=col + (int(255 * k),))
+        d.text((990, y + 26), sub, font=fit(d, sub, MONO, 30, 300), fill=(170, 190, 195, int(255 * k)), anchor='rm'); y += 104
+    topo_fala(im, t); selo_txt(im, L.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
+
+def cena_galeria(t, i):
+    """Grelha 3×2 de cartas reais (D['galeria'] = {'titulo','cartas':[ficheiros],'carimbo':[l1,l2],'selo'}); p[2] = tempo do carimbo."""
+    p = SEQ[i]; im = fundo(t); G = D.get('galeria', {}); d = ImageDraw.Draw(im, 'RGBA')
+    d.text((540, 470), G.get('titulo', ''), font=fit(d, G.get('titulo', ''), MONOB, 40, 900), fill=EM, anchor='mm')
+    w = 290
+    for j, f in enumerate(G.get('cartas', [])[:6]):
+        k = eio((t - p[0] - .1 * j) / .3)
+        if k <= 0: continue
+        c = _gal(f, w); x = 75 + (j % 3) * (w + 20); y = 520 + (j // 3) * (int(w * 1.396) + 20) + 40 * (1 - k)
+        a = c.getchannel('A').point(lambda v, k=k: int(v * k)); c2 = c.copy(); c2.putalpha(a); im.alpha_composite(c2, (int(x), int(y)))
+    if len(p) > 2 and t >= p[2]:
+        k = eio((t - p[2]) / .25); d = ImageDraw.Draw(im, 'RGBA'); s1, s2 = G.get('carimbo', ['', ''])
+        f = F(INTB, int(96 * (1.3 - .3 * k))); wd = max(d.textlength(s1, font=f), d.textlength(s2, font=F(MONOB, 40))) + 80
+        d.rounded_rectangle((540 - wd / 2, 1020, 540 + wd / 2, 1240), 22, fill=(8, 20, 16, 245), outline=PH, width=6)
+        d.text((540, 1095), s1, font=f, fill=PH, anchor='mm'); d.text((540, 1190), s2, font=F(MONOB, 40), fill=WHITE, anchor='mm')
+    topo_fala(im, t); selo_txt(im, G.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
+CENAS.update(lista=cena_lista, galeria=cena_galeria)
 CENAS.update(gancho_grade=cena_gancho_grade, creditos=cena_creditos, barras=cena_barras, linha_tempo=cena_linha_tempo,
              previsao=cena_previsao, pergunta1=cena_pergunta1, tubo_fecho=cena_tubo_fecho)
 
