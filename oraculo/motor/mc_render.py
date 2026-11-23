@@ -567,24 +567,43 @@ def tubo_falando(t, expr, zoom=1.0, tela=None):
     return im.convert('RGBA')
 
 def cena_tubo_abertura(t, i):
-    """Depois das cartas, o TUBO aparece a falar; as cartas sobem para uma fila; a carta citada a seguir voa para o ecrã dele."""
+    """Depois das cartas, o TUBO aparece a falar; as cartas saem da posição do gancho (sem salto); a carta-herói voa
+    para o ecrã do TUBO com rasto e acende ao entrar; mergulho."""
     p = SEQ[i]; t0 = p[0]; t_voo, t_mergulho, t_fim = p[2], p[3], SEQ[i + 1][0]
     im = tubo_falando(t, 'confiante')
-    k = eio((t - t0) / .4)
-    pos = {'A': [(70, 452, 470), (80, 560, 200)], 'B': [(540, 452, 470), (800, 560, 200)]}
-    for lado in ('B', 'A'):
+    k = eio((t - t0) / .45)
+    grade = SEQ[i - 1][1] == 'gancho_grade' if i > 0 else False
+    if grade:
+        pos = {'A': [GRADE_POS['A'], (80, 560, 220)], 'B': [GRADE_POS['B'], (800, 600, 180)], 'C': [GRADE_POS['C'], (860, 1500, 120)]}
+        if t < t0 + .45:                                              # o número e a pergunta saem a desvanecer
+            kf = 1 - k; tl = tile_num(370, 420, D['grade'].get('numero', ''), D['grade'].get('unidade', ''), D['grade'].get('contexto', ''), PH, 0, D['grade'].get('rotulo', ''))
+            a = tl.getchannel('A').point(lambda v: int(v * kf)); tl.putalpha(a); im.alpha_composite(tl, (650, int(440 - 80 * k)))
+    else:
+        pos = {'A': [(70, 452, 470), (80, 560, 200)], 'B': [(540, 452, 470), (800, 560, 200)]}
+    for lado in [l for l in ('C', 'B', 'A') if l in pos]:
         (x0, y0, w0), (x1, y1, w1) = pos[lado]; x, y, w = x0 + (x1 - x0) * k, y0 + (y1 - y0) * k, w0 + (w1 - w0) * k
-        if lado == 'A' and t >= t_voo:                       # voa para dentro do ecrã do TUBO
+        esc = 0.0 if lado == 'A' else 0.45
+        if lado != 'A' and t >= t_voo:                                # as de apoio saem quando o herói voa
+            kk = 1 - ease((t - t_voo) / .3)
+            if kk <= 0: continue
+            c = card_img(lado, w, esc); a = c.getchannel('A').point(lambda v, kk=kk: int(v * kk)); c = c.copy(); c.putalpha(a); im.alpha_composite(c, (int(x), int(y))); continue
+        if lado == 'A' and t >= t_voo:                                # voa para o ecrã do TUBO, com rasto
             kv = ease((t - t_voo) / (t_mergulho - t_voo)); sw = SCR[2] - SCR[0] - 40
-            w = w1 + (sw * .55 - w1) * kv; x = x1 + (SCX - w / 2 - x1) * kv; y = y1 + (SCY - w * 0.7 - y1) * kv
-        if lado == 'B' and t >= t_voo:
-            continue
-        c = card_img(lado, w); im.alpha_composite(c, (int(x), int(y)))
+            def at(q): ww = w1 + (sw * .55 - w1) * q; return x1 + (SCX - ww / 2 - x1) * q, y1 + (SCY - ww * 0.7 - y1) * q, ww
+            for g_, a_ in ((0.18, 50), (0.09, 95)):                    # rasto: duas cópias fantasma atrás
+                if kv - g_ > 0:
+                    gx, gy, gw = at(max(0, kv - g_)); gc = card_img('A', gw); al = gc.getchannel('A').point(lambda v, a_=a_: int(v * a_ / 255)); gc = gc.copy(); gc.putalpha(al)
+                    im.alpha_composite(gc, (int(gx), int(gy)))
+            x, y, w = at(kv)
+        c = card_img(lado, w, esc); im.alpha_composite(c, (int(x), int(y)))
+        if lado == 'A': glow_box(im, (int(x), int(y), int(x + c.width), int(y + c.height)))
+    if t_mergulho - .12 <= t < t_mergulho + .1:                       # flash verde no ecrã quando a carta entra
+        kf = 1 - abs(t - (t_mergulho - .01)) / .11; fl = Image.new('RGBA', im.size, (0, 0, 0, 0))
+        ImageDraw.Draw(fl).rectangle(SCR, fill=PH + (int(85 * max(0, kf)),)); im.alpha_composite(fl.filter(ImageFilter.GaussianBlur(18)))
     if t < t_voo + 0.05:
         f = fala(t); legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
-        d = ImageDraw.Draw(im, 'RGBA')
     out = im.convert('RGB')
-    if t >= t_mergulho:                                       # mergulho no ecrã (como nos episódios antigos)
+    if t >= t_mergulho:                                               # mergulho no ecrã
         z = 1 + 9 * ease((t - t_mergulho) / (t_fim - t_mergulho))
         cw, ch = W / z, H / z; x0 = min(max(SCX - cw / 2, 0), W - cw); y0 = min(max(SCY - ch / 2, 0), H - ch)
         out = out.resize((W, H), Image.LANCZOS, box=(x0, y0, x0 + cw, y0 + ch))
@@ -645,18 +664,32 @@ def circulo(im, key, cx, cy, diam, k=1.0, contorno=PH):
 def topo_fala(im, t):
     f = fala(t); return legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
 
+GRADE_POS = {'A': (60, 440, 560), 'N': (650, 440, 370), 'B': (650, 900, 175), 'C': (845, 900, 175)}   # herói · número · apoio
 def cena_gancho_grade(t, i):
-    """Quadro 0: grelha 2×2 (carta A · número · carta B · carta C), pergunta no topo, selo de fonte."""
-    im = fundo(t); g = D.get('grade', {}); w = 360; h = int(w * 1.396)
-    pos = [(160, 440), (560, 440), (160, 960), (560, 960)]
-    for j, (x, y) in enumerate(pos):
-        ks = eio((t + 0.12 - 0.04 * j) / 0.3); w2 = w * (1.05 - 0.05 * ks); xx = x - (w2 - w) / 2; yy = y - (w2 - w) * 0.7
-        if j == 1:
-            c = tile_num(w2, w2 * 1.396, g.get('numero', '') if t >= BEAT['NUM'] else '', g.get('unidade', ''), g.get('contexto', ''), PH, 0, g.get('rotulo', ''))
-        else: c = card_img({0: 'A', 2: 'B', 3: 'C'}[j], w2, 0.0 if j == 0 else (0.35 if t >= BEAT['HLB'] else 0.0))
-        im.alpha_composite(c, (int(xx), int(yy)))
-        if (j == 0 and t >= BEAT['SCAN']) or (j == 1 and t >= BEAT['NUM']):
-            glow_box(im, (int(xx), int(yy), int(xx + c.width), int(yy + c.height)))
+    """Quadro 0 (modelo do MC-EP08B): carta-herói grande a acender; número ao lado; duas cartas de apoio pequenas e escurecidas."""
+    im = fundo(t); g = D.get('grade', {}); h = lambda w: int(w * 1.396)
+    # herói: entra no quadro 0 com «tum» (escala 1,12 → 1 em 0,25 s) e fica aceso
+    x, y, w = GRADE_POS['A']; k = eio(t / .25); w2 = w * (1.12 - .12 * k); xx, yy = x - (w2 - w) / 2, y - (h(w2) - h(w)) / 2
+    c = card_img('A', w2); im.alpha_composite(c, (int(xx), int(yy))); glow_box(im, (int(xx), int(yy), int(xx + c.width), int(yy + c.height)))
+    if t < .12:                                                       # flash do impacto
+        fl = Image.new('RGBA', im.size, (255, 255, 255, int(90 * (1 - t / .12)))); im.alpha_composite(fl)
+    d = ImageDraw.Draw(im, 'RGBA'); r = g.get('heroi', '')
+    if r:
+        f = fit(d, r, MONOB, 40, 540); wd = d.textlength(r, font=f) + 40
+        d.rounded_rectangle((x + w / 2 - wd / 2, y + h(w) + 22, x + w / 2 + wd / 2, y + h(w) + 86), 12, fill=(8, 20, 16, 245), outline=PH, width=4)
+        d.text((x + w / 2, y + h(w) + 54), r, font=f, fill=PH, anchor='mm')
+    # número: aparece em BEAT['NUM'] com «pop»
+    if t >= BEAT['NUM']:
+        x, y, w = GRADE_POS['N']; kn = eio((t - BEAT['NUM']) / .22); hh = 420
+        tl = tile_num(w, hh, g.get('numero', ''), g.get('unidade', ''), g.get('contexto', ''), PH, 0, g.get('rotulo', ''))
+        tl = tl.resize((max(2, int(w * (0.85 + .15 * kn))), max(2, int(hh * (0.85 + .15 * kn)))))
+        im.alpha_composite(tl, (int(x + (w - tl.width) / 2), int(y + (hh - tl.height) / 2)))
+    # apoio: entram em BEAT['HLB'], já escurecidas (contexto, não protagonistas)
+    for j, lado in enumerate(('B', 'C')):
+        ka = eio((t - BEAT['HLB'] - .08 * j) / .25)
+        if ka <= 0: continue
+        x, y, w = GRADE_POS[lado]; c = card_img(lado, w, 0.45); a = c.getchannel('A').point(lambda v, ka=ka: int(v * ka)); c = c.copy(); c.putalpha(a)
+        im.alpha_composite(c, (int(x), int(y + 30 * (1 - ka))))
     legenda_topo(im, D.get('pergunta_gancho', ''), 0.0, max(t, .3))
     selo_txt(im, D.get('selo_fonte', '')); return im.convert('RGB')
 
@@ -806,7 +839,7 @@ CENAS.update(gancho_grade=cena_gancho_grade, creditos=cena_creditos, barras=cena
 OUTRO = None
 def _dur_outro():
     return float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', K + 'comum/outro/outro_binder_916.mp4'], capture_output=True, text=True).stdout)
-def audio_previa(out='mix_previa.wav'):
+def audio_previa(out='mix_previa.wav', sem_sfx=False):
     SR = 48000; TOT = BEAT['END'] + _dur_outro(); N = int(TOT * SR)
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', K + 'oraculo/musica/tubo_tema.mp3', '-t', str(TOT), '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
     M = np.zeros(N, np.float32); m = np.frombuffer(raw, np.float32)[:N]; M[:len(m)] = m
@@ -819,17 +852,27 @@ def audio_previa(out='mix_previa.wav'):
         return ((np.sin(2 * np.pi * np.cumsum(fr) / SR) * .18 + r.normal(0, 1, len(x)) * .08) * np.minimum(1, x / .03) * np.minimum(1, (d - x) / .12)).astype(np.float32)
     def click(d=0.18): x = tt(d); return (np.sin(2 * np.pi * 120 * x) * np.exp(-x * 30) * .7).astype(np.float32)
     def pop(d=0.13, f0=650, f1=1300): x = tt(d); return (np.sin(2 * np.pi * np.cumsum(f0 + (f1 - f0) * x / d) / SR) * np.exp(-x * 18) * .45).astype(np.float32)
+    def stamp(d=0.18): x = tt(d); return (np.sin(2 * np.pi * 120 * x) * np.exp(-x * 30) * .7 + np.random.default_rng(4).normal(0, 1, len(x)) * np.exp(-x * 80) * .25).astype(np.float32)
+    def whoosh(d=0.45):
+        x = tt(d); r = np.random.default_rng(7).normal(0, 1, len(x)); e = np.sin(np.pi * x / d) ** 2
+        lp = np.convolve(r, np.ones(24) / 24, 'same'); return (lp * e * .9).astype(np.float32)
     S = np.zeros(N, np.float32)
     def put(x, at, g): i = int(at * SR); n = min(len(x), N - i); S[i:i + n] += x[:n] * g
-    put(thump(), 0, .8); [put(click(), .04 * k, .45) for k in range(4)]
-    put(modem(), BEAT['SCAN'], .5); put(pop(), BEAT['NUM'], .5); put(pop(f0=800, f1=1600), BEAT['HLB'], .5); put(click(), BEAT['Q'], .35)
+    if D.get('grade', {}).get('heroi'):                         # abertura do MC-EP08B: «tum» + carimbo na carta-herói no quadro 0
+        put(thump(), 0, .9); put(stamp(), 0, .6); put(pop(), BEAT['NUM'], .55); put(click(), BEAT['HLB'], .4); put(click(), BEAT['HLB'] + .08, .3)
+        if 'VOO' in BEAT: put(whoosh(), BEAT['VOO'], .6)
+        put(stamp(), BEAT['DIVE'] - .05, .5)
+    else:
+        put(thump(), 0, .8); [put(click(), .04 * k, .45) for k in range(4)]
+        put(modem(), BEAT['SCAN'], .5); put(pop(), BEAT['NUM'], .5); put(pop(f0=800, f1=1600), BEAT['HLB'], .5); put(click(), BEAT['Q'], .35)
     put(modem(), BEAT['DIVE'], .55); put(click(), BEAT['POP_BAR'], .35); put(pop(), BEAT['POP_A'], .45); put(pop(.09, 900, 1400), BEAT['POP_B'], .4)
     put(click(), BEAT['PERF_A'], .4); put(pop(f0=800, f1=1600), BEAT['PERF_B'], .5); put(click(), BEAT['PERF_DEN'], .4)
     put(thump(.4, 70), BEAT['LEIT'], .35); put(click(), BEAT['LEIT2'], .4)
     put(pop(), BEAT['DIF_PT'], .45); put(pop(f0=800, f1=1600), BEAT['DIF_VER'], .5); put(click(), BEAT['DIF_NOTA'], .3)
     put(click(), BEAT['ASK'], .4); put(thump(.4, 70), BEAT['CLOSE'], .3)
     import wave
-    x = M * .9 + S; x = (x / max(1e-6, np.abs(x).max()) * .9 * 32767).astype(np.int16)
+    global _SFX; _SFX = S.copy()                                  # o audio_final junta os SFX sem ducking
+    x = M * .9 + (0 if sem_sfx else S); x = (x / max(1e-6, np.abs(x).max()) * .9 * 32767).astype(np.int16)
     with wave.open('mix_raw.wav', 'wb') as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(x.tobytes())
     mm = subprocess.run(['ffmpeg', '-v', 'info', '-i', 'mix_raw.wav', '-af', 'loudnorm=I=-14:TP=-2.2:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr
     js = json.loads(mm[mm.rfind('{'):mm.rfind('}') + 1])
@@ -849,12 +892,13 @@ def audio_final(voz, out='mix_final.wav'):
         if n > 0: V[i:i + n] = vz[a:a + n]
         if k < len(cfg['pausas']): desloc += cfg['pausas'][k][1]
     V *= 10 ** (cfg.get('ganho_db', 0) / 20)
-    mix_trilha = audio_previa('so_trilha_sfx.wav')
+    mix_trilha = audio_previa('so_trilha.wav', sem_sfx=True); Sfx = np.zeros(N, np.float32); Sfx[:min(N, len(_SFX))] = _SFX[:N]
+    Sfx *= 0.6 * np.abs(V).max() / max(1e-6, np.abs(Sfx).max())        # SFX à parte, sem ducking (como no MC-EP08B): pico a 60 % do pico da voz
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', mix_trilha, '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
     M = np.zeros(N, np.float32); m = np.frombuffer(raw, np.float32)[:N]; M[:len(m)] = m
     env = np.convolve((np.abs(V) > 0.01).astype(np.float32), np.ones(int(.25 * SR)) / int(.25 * SR), 'same')
     duck = 10 ** (-12 * np.clip(env * 3, 0, 1) / 20)
-    x = V * 1.0 + M * 0.55 * duck; x = (x / max(1e-6, np.abs(x).max()) * .9 * 32767).astype(np.int16)
+    x = V * 1.0 + M * 0.55 * duck + Sfx; x = (x / max(1e-6, np.abs(x).max()) * .9 * 32767).astype(np.int16)
     with wave.open('mix_raw.wav', 'wb') as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(x.tobytes())
     mm = subprocess.run(['ffmpeg', '-v', 'info', '-i', 'mix_raw.wav', '-af', 'loudnorm=I=-14:TP=-2.2:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr
     js = json.loads(mm[mm.rfind('{'):mm.rfind('}') + 1])

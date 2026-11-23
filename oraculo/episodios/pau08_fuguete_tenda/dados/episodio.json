@@ -11,7 +11,8 @@
   "rotulo": "FUGUETE NA TENDA",
   "numero": "6–0",
   "unidade": "SÓ 1 DE 74",
-  "contexto": "30 decks diferentes"
+  "contexto": "30 decks diferentes",
+  "heroi": "CAMPEÃO · ELFOS MONO GREEN"
  },
  "terceiros": {
   "tiago": "terceiros/tiago_fuguete_perfil_instagram.png",
@@ -238,8 +239,8 @@
  ],
  "beats": {
   "SCAN": 0.3,
-  "NUM": 0.0,
-  "HLB": 1.5,
+  "NUM": 0.45,
+  "HLB": 0.9,
   "Q": 2.0,
   "RISE": "@1+0.1",
   "DIVE": "@1>-0.2",
@@ -258,7 +259,8 @@
   "ASK": "@11",
   "CLOSE": "@12-0.1",
   "CLOSE2": "@12+1",
-  "END": 38.63
+  "END": 38.63,
+  "VOO": "@1+0.6"
  },
  "voz_tempos": [
   [

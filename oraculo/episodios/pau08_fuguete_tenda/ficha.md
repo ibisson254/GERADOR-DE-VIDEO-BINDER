@@ -42,6 +42,13 @@ gancho_grade (6–0, só 1 de 74) → tubo_abertura → creditos (Tiago × Tenda
 | Factos = fonte | sim | tabela acima | ✓ |
 Corrigido nesta produção: as linhas do evento no cartão de créditos apareciam antes do tempo (o ImageDraw em RGBA não mistura alfa); passam a ser desenhadas numa camada própria.
 
+## Versão 2 (23/11/2026, 12h45) · pedido do fundador (12:24)
+Modelo do MC-EP08B (o TUBO mais visto):
+- **Hierarquia do quadro 0:** a carta-herói (Timberwatch Elf, campeão) grande e acesa, com o selo «CAMPEÃO · ELFOS MONO GREEN»; o «6–0» entra aos 0,45 s ao lado; Galvanic Blast e Fiery Temper pequenas e escurecidas aos 0,9 s.
+- **Som no quadro 0:** «tum» grave + carimbo com flash, pop no número, cliques nas cartas de apoio, whoosh no voo e carimbo na entrada no ecrã. Os SFX passam a ir numa pista própria, sem ducking (antes iam dentro da trilha e baixavam 12 dB sob a voz: quase não se ouviam). Medido: 0–0,25 s a −12,1 dB RMS contra −14,9 dB da voz.
+- **Transição:** as cartas partem da posição da grelha (antes saltavam para outra disposição); a herói voa para o ecrã com rasto e acende com um flash verde suave; o número e as de apoio saem a desvanecer.
+QC v2: 42,50 s, −14,0 LUFS, pico −4,1 dBTP, sem problemas. Sem créditos novos (mesma voz).
+
 ## Ficheiros finais
 `MC_PAU08_FINAL.mp4` (42,50 s) e `CAPA.png`, entregues na conversa de 23/11/2026 (não versionados). Regeneráveis com `oraculo/motor/mc_render.py` a partir de `dados/episodio.json` + voz da geração vTJhkxw4aahyPczQ7mun montada com `mc_voz.py`.
 
