@@ -22,3 +22,6 @@ POR CONFIRMAR (fonte fora do alcance da sessão; não entra no vídeo sem print)
 - Listas do torneio: https://app.tiagofuguete.com.br/torneios/23f368a1-8665-4d52-9bae-dfe0776e87c0
 
 CARTAS (a descarregar na fase 2): Scryfall — Sneaky Snacker (MH3 205, arte Irina Nordsol); Faithless Looting; Kessig Flamebreather (VOW 164); carta dos Elfos campeões (depois de ver a lista).
+
+VOZ: ElevenLabs, Antonio de Jesus, eleven_v4, geração OCZE5f1Fc22y3EgLLuns (416 créditos), flow UuDiDVeSWIBa2hnnJjf0, 23/11/2026.
+CARTAS: Scryfall (cartas/creditos.json).

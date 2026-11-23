@@ -2,7 +2,7 @@
 
 ## Identificação
 - ID editorial: `MC-PAU02` (Meta em Curto · Pauper #2)
-- Estado no registo: **EM PRODUÇÃO** — fase 1 (pesquisa, ficha, roteiro, estimativa de voz). **Parado no gate de aprovação do fundador**: sem voz, sem montagem, sem render.
+- Estado no registo: **CONCLUÍDO** (23/11/2026, 02h20). Voz autorizada pelo fundador («Pode fazer episódio final», 02:11). Publicação e envio das mensagens com o fundador.
 - Pedido: missão de produção do fundador, 23/11/2026 01:26 (`MISSÃO DE PRODUÇÃO — MC-PAU02`).
 - Prazo editorial: publicar até 29/11/2026 (anúncio de banidos a 30/11/2026).
 
@@ -143,7 +143,34 @@ Ver `fontes.txt`.
 Motor `oraculo/motor/mc_render.py` + `mc_voz.py`, `dados/episodio.json` a partir de `episodio_modelo.json`; cartas do Scryfall; uma voz, uma montagem, folha de contacto (10–15 fotogramas), um render final, QC (`comum/qc/qc_video.py --frente tubo`), capa §7.3 («VAI SER BANIDA?» / foco «68» / «CÓPIAS EM 17 DECKS»).
 
 ## Controlo de qualidade
-Por preencher no ficheiro final.
+Medido no ficheiro final `MC_PAU02_FINAL.mp4` (`comum/qc/qc_video.py --frente tubo`) + folha de contacto de 11 fotogramas conferida a olho.
+
+| Critério | Alvo | Medido | OK |
+|---|---|---|---|
+| Resolução / fps | 1080×1920 / 30 | 1080×1920 / 30 | ✓ |
+| Duração | 25–35 s sem fecho | 25,16 s (29,03 s com fecho) | ✓ |
+| Corte lateral | nenhum | nenhum (QC) | ✓ |
+| Loudness / pico | −14 LUFS / < −1 dBTP | −14,1 LUFS / −4,1 dBTP | ✓ |
+| Fecho do scanner | presente | a partir de 25,16 s | ✓ |
+| Factos = ficha | sim | PauperPilot, standings e breakdown do torneio, Wizards; Rakdos 5 (corrigido); sem 68/17 | ✓ |
+| Quadro 0 | Snacker + 23,7 % legível sem som | sim (grelha 2×2, número visível no quadro 0) | ✓ |
+| Descoberta | ≤ 3 s | 0 s (selo) / voz aos 2,6 s | ✓ |
+| Pagamento | previsão ~17–20 s | 17,24 s (cartão «SOBREVIVE A 30/11») | ✓ |
+| Maior intervalo sem mudança visual | ≤ 3 s | cortes 2,8 · 5,33 · 8,17 · 11,16 · 13,51 · 14–16 (marcos) · 17,27 · 20,83 · 22,0 | ✓ |
+| Retenção | Magic no quadro 0 · mudança ≤ 3 s · som em cada revelação | sim · sim · SFX do motor | ✓ |
+| Texto | sem citações inventadas | marcos da Wizards parafraseados sem aspas | ✓ |
+| P0 / P1 | 0 / 0 | 0 / 0 | ✓ |
+
+Rubrica medida: relevância 5 · impacto 4 · clareza 5 · curiosidade 5 · pagamento 4 · identidade 5.
+Por confirmar pelo fundador na escuta: pronúncia de «Sneaky Snacker» e «Pauper Pilot» (sem transcrição paga).
+
+## Ficheiros finais
+- Vídeo `MC_PAU02_FINAL.mp4` (29,03 s) e capa `CAPA.png` / `CAPA_grelha.png`: entregues ao fundador na conversa de 23/11/2026 (não versionados). Regeneráveis com `oraculo/motor/mc_render.py <raiz> <pasta> final voz_montada.wav` a partir de `dados/episodio.json` + a voz da geração OCZE5f1Fc22y3EgLLuns (flow UuDiDVeSWIBa2hnnJjf0) montada com `mc_voz.py`.
+- Sem autorização de imagem de um parceiro: apagar a chave em `terceiros` e re-renderizar (zero créditos; o cartão fica com o contorno vazio e os nomes).
+- Motor: cenas novas genéricas `gancho_grade`, `creditos`, `barras`, `linha_tempo`, `previsao`, `pergunta1`, `tubo_fecho` (`oraculo/motor/mc_render.py`).
+
+## Voz
+Antonio de Jesus, eleven_v4, uma geração, **416 créditos**; 27,3 s em bruto, 25,01 s montada com atempo 1,10.
 
 ## Encerramento
-Por fazer (episódio em produção).
+Feito a 23/11/2026 (registo, histórico, STATUS, memoria.py encerramento, commit na main).

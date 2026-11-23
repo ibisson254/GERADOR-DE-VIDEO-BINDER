@@ -1,0 +1,26 @@
+{
+ "sneaky_snacker": {
+  "nome": "Sneaky Snacker",
+  "colecao": "Modern Horizons 3",
+  "ano": "2024",
+  "numero": "205",
+  "artista": "Irina Nordsol",
+  "scryfall": "https://scryfall.com/card/mh3/205/sneaky-snacker?utm_source=api"
+ },
+ "guttersnipe": {
+  "nome": "Guttersnipe",
+  "colecao": "The Hobbit Eternal",
+  "ano": "2026",
+  "numero": "196",
+  "artista": "Simon Dominic",
+  "scryfall": "https://scryfall.com/card/hoc/196/guttersnipe?utm_source=api"
+ },
+ "lead_the_stampede": {
+  "nome": "Lead the Stampede",
+  "colecao": "Ikoria: Lair of Behemoths",
+  "ano": "2020",
+  "numero": "163",
+  "artista": "Lius Lasahido",
+  "scryfall": "https://scryfall.com/card/iko/163/lead-the-stampede?utm_source=api"
+ }
+}

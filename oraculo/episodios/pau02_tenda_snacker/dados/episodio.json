@@ -1,0 +1,268 @@
+{
+ "_leia": "MC-PAU02 · Meta em Curto · Pauper #2 «Vai ser banida?». Dados: PauperPilot (MTGO, 21/10–19/11, lido a 23/11) · torneio Fuguete na Tenda 200 (site do Tiago Fuguete, standings e breakdown, lidos a 23/11) · Wizards (29/06, 10/08, 12/10). Imagens de terceiros em 'terceiros' (camada removível: re-render sem nova voz).",
+ "confirmado": true,
+ "faixa": "META EM CURTO · PAUPER #2",
+ "pergunta_gancho": "SNEAKY SNACKER VAI SER BANIDA?",
+ "selo_fonte": "FONTE: PAUPERPILOT · MTGO · 21/10–19/11 · 1.318 DECKS",
+ "carta_A": "cartas/sneaky_snacker.png",
+ "carta_B": "cartas/guttersnipe.png",
+ "carta_C": "cartas/lead_the_stampede.png",
+ "grade": {
+  "rotulo": "PAUPERPILOT · 30 DIAS",
+  "numero": "23,7%",
+  "unidade": "DOS DECKS",
+  "contexto": "1.318 decks · MTGO"
+ },
+ "terceiros": {
+  "tiago": "terceiros/tiago_fuguete_perfil_instagram.png",
+  "tenda": "terceiros/tenda_da_liliana_perfil_instagram.png"
+ },
+ "creditos": {
+  "titulo": "QUEM FEZ O TORNEIO",
+  "itens": [
+   {
+    "img": "tiago",
+    "nome": "TIAGO FUGUETE",
+    "sub": "@tiagofuguete"
+   },
+   {
+    "img": "tenda",
+    "nome": "TENDA DA LILIANA",
+    "sub": "loja de Pauper"
+   }
+  ],
+  "evento": [
+   "FUGUETE NA TENDA · 23/08/2026",
+   "74 jogadores · 6 rodadas · Pauper no MTGO"
+  ],
+  "selo": "FONTE: SITE DO TIAGO FUGUETE · STANDINGS · 23/08/2026"
+ },
+ "barras": {
+  "titulo": "FUGUETE NA TENDA · DECKS",
+  "cantos": [
+   "tiago",
+   "tenda"
+  ],
+  "linhas": [
+   [
+    "Mono Red Madness",
+    7
+   ],
+   [
+    "Rakdos Madness",
+    5
+   ],
+   [
+    "Grixis Affinity",
+    5
+   ],
+   [
+    "White Weenie",
+    5
+   ]
+  ],
+  "destaque": [
+   "Madness"
+  ],
+  "rodape": "listas por arquétipo · 74 decks · 30 arquétipos",
+  "carimbo": [
+   "CAMPEÃO: ELFOS",
+   "Barradas · 6–0"
+  ],
+  "selo": "FONTE: SITE DO TIAGO FUGUETE · METAGAME DO TORNEIO"
+ },
+ "linha_tempo": {
+  "titulo": "WIZARDS × SNEAKY SNACKER",
+  "marcos": [
+   [
+    "29/06",
+    "de olho na carta · sem ban",
+    "cinza"
+   ],
+   [
+    "10/08",
+    "segue de olho · sem ban",
+    "cinza"
+   ],
+   [
+    "12/10",
+    "Pauper sem mudanças",
+    "cinza"
+   ],
+   [
+    "30/11",
+    "próximo anúncio",
+    "ambar"
+   ]
+  ],
+  "tese": "OBSERVAR ≠ BANIR",
+  "selo": "FONTE: WIZARDS OF THE COAST · ANÚNCIOS OFICIAIS"
+ },
+ "previsao": {
+  "tela1": "PREVISÃO",
+  "tela2": "REGISTRADA",
+  "linhas": [
+   "SOBREVIVE A 30/11",
+   "PR-PAU02-01 · OPINIÃO DO TUBO"
+  ]
+ },
+ "pergunta1": {
+  "sim": "BANE",
+  "nao": "DEIXA"
+ },
+ "creditos_fecho": [
+  "Torneio: Tiago Fuguete × Tenda da Liliana",
+  "Meta: PauperPilot · Histórico: Wizards of the Coast"
+ ],
+ "capa_l1": "VAI SER",
+ "capa_l2": "BANIDA?",
+ "capa_foco": "23,7%",
+ "capa_unidade": "DOS DECKS TÊM SNEAKY SNACKER",
+ "saida": "MC_PAU02_FINAL.mp4",
+ "frases": [
+  "NO PAUPERPILOT, UM MÊS DE MAGIC ONLINE:",
+  "SNEAKY SNACKER EM QUASE UM QUARTO DOS DECKS.",
+  "NO TORNEIO DO TIAGO FUGUETE COM A TENDA DA LILIANA,",
+  "74 JOGADORES: O MADNESS FOI O MAIS JOGADO.",
+  "MAS QUEM FEZ 6 A 0 FOI ELFOS.",
+  "A WIZARDS DISSE DUAS VEZES QUE ESTAVA DE OLHO.",
+  "E NÃO BANIU.",
+  "PREVISÃO REGISTRADA: A SNACKER SOBREVIVE A 30 DE NOVEMBRO.",
+  "VOCÊ BANIRIA?",
+  "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
+ ],
+ "voz_cfg": {
+  "atempo": 1.1,
+  "alvo_s": 30.0,
+  "pausa": 0.2,
+  "pausa_min": 0.1,
+  "pausas_longas": {
+   "2": 0.35,
+   "5": 0.35,
+   "7": 0.45,
+   "8": 0.3,
+   "9": 0.45
+  }
+ },
+ "voz": {
+  "arquivo": "voz_montada.wav (geração OCZE5f1Fc22y3EgLLuns, 416 créditos, flow ElevenLabs UuDiDVeSWIBa2hnnJjf0)",
+  "atempo": 1.1,
+  "lead": 0.0,
+  "pausas": []
+ },
+ "seq": [
+  [
+   0,
+   "gancho_grade"
+  ],
+  [
+   "@1+0.2",
+   "tubo_abertura",
+   "@1+0.9",
+   "@1>-0.35"
+  ],
+  [
+   "@2-0.05",
+   "creditos"
+  ],
+  [
+   "@3-0.05",
+   "barras",
+   "@4"
+  ],
+  [
+   "@5-0.05",
+   "linha_tempo",
+   "@6"
+  ],
+  [
+   "@7-0.05",
+   "previsao"
+  ],
+  [
+   "@8-0.05",
+   "pergunta1"
+  ],
+  [
+   "@9-0.1",
+   "tubo_fecho",
+   "analitico"
+  ]
+ ],
+ "beats": {
+  "SCAN": 0.3,
+  "NUM": 0.0,
+  "HLB": 1.5,
+  "Q": 2.0,
+  "RISE": "@1+0.2",
+  "DIVE": "@1>-0.35",
+  "POP_BAR": "@3+0.6",
+  "POP_A": "@2",
+  "POP_B": "@4",
+  "PERF_A": "@5",
+  "PERF_B": "@6",
+  "PERF_DEN": "@6+0.4",
+  "LEIT": "@7",
+  "LEIT2": "@7+0.5",
+  "DIF": "@7>",
+  "DIF_PT": "@8",
+  "DIF_VER": "@8+0.3",
+  "DIF_NOTA": "@8+0.6",
+  "ASK": "@8",
+  "CLOSE": "@9-0.1",
+  "CLOSE2": "@9+1",
+  "END": 25.16
+ },
+ "voz_tempos": [
+  [
+   0.0,
+   2.38,
+   "NO PAUPERPILOT, UM MÊS DE MAGIC ONLINE:"
+  ],
+  [
+   2.58,
+   5.03,
+   "SNEAKY SNACKER EM QUASE UM QUARTO DOS DECKS."
+  ],
+  [
+   5.38,
+   8.02,
+   "NO TORNEIO DO TIAGO FUGUETE COM A TENDA DA LILIANA,"
+  ],
+  [
+   8.22,
+   10.96,
+   "74 JOGADORES: O MADNESS FOI O MAIS JOGADO."
+  ],
+  [
+   11.16,
+   13.21,
+   "MAS QUEM FEZ 6 A 0 FOI ELFOS."
+  ],
+  [
+   13.56,
+   15.97,
+   "A WIZARDS DISSE DUAS VEZES QUE ESTAVA DE OLHO."
+  ],
+  [
+   16.17,
+   16.84,
+   "E NÃO BANIU."
+  ],
+  [
+   17.29,
+   20.56,
+   "PREVISÃO REGISTRADA: A SNACKER SOBREVIVE A 30 DE NOVEMBRO."
+  ],
+  [
+   20.86,
+   21.62,
+   "VOCÊ BANIRIA?"
+  ],
+  [
+   22.07,
+   25.01,
+   "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
+  ]
+ ]
+}

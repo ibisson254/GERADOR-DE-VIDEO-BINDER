@@ -623,6 +623,141 @@ def frame(t):
         return im.convert('RGB')
     return CENAS[p[1]](t, i)
 
+# ---------- cenas genéricas novas (MC-PAU02, 23/11/2026): grelha 2×2 com número, créditos de terceiros, barras,
+# linha do tempo, previsão registada, pergunta com uma carta, fecho com créditos. Todo o texto vem do episodio.json ----------
+def selo_txt(im, s, a=255):
+    d = ImageDraw.Draw(im, 'RGBA'); y = 1462
+    d.rounded_rectangle((80, y, 940, y + 64), 14, fill=(8, 16, 20, int(235 * a / 255)), outline=(200, 40, 40, a), width=3)
+    d.text((100, y + 32), s, font=fit(d, s, CONDB if os.path.exists(CONDB) else COND, 32, 830), fill=(235, 240, 242, a), anchor='lm')
+for _l in ('C',):
+    if D.get('carta_' + _l) and os.path.exists(HERE + D['carta_' + _l]):
+        _c = Image.open(HERE + D['carta_' + _l]).convert('RGB'); _m = Image.new('L', _c.size, 0)
+        ImageDraw.Draw(_m).rounded_rectangle((0, 0, _c.size[0] - 1, _c.size[1] - 1), 24, fill=255); _c = _c.convert('RGBA'); _c.putalpha(_m); CARD[_l] = _c
+TERC = {}
+for _k, _f in (D.get('terceiros') or {}).items():                 # imagens que dependem de autorização (recortes circulares)
+    if _f and os.path.exists(HERE + _f): TERC[_k] = Image.open(HERE + _f).convert('RGBA')
+def circulo(im, key, cx, cy, diam, k=1.0, contorno=PH):
+    if key not in TERC or k <= 0: return False
+    dd = max(2, int(diam * (0.85 + 0.15 * k))); c = TERC[key].resize((dd, dd), Image.LANCZOS)
+    a = c.getchannel('A').point(lambda x: int(x * min(1, k))); c.putalpha(a)
+    g = Image.new('RGBA', im.size, (0, 0, 0, 0)); ImageDraw.Draw(g).ellipse((cx - dd / 2 - 6, cy - dd / 2 - 6, cx + dd / 2 + 6, cy + dd / 2 + 6), outline=contorno + (int(255 * min(1, k)),), width=8)
+    im.alpha_composite(g.filter(ImageFilter.GaussianBlur(10))); im.alpha_composite(g); im.alpha_composite(c, (int(cx - dd / 2), int(cy - dd / 2))); return True
+def topo_fala(im, t):
+    f = fala(t); return legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
+
+def cena_gancho_grade(t, i):
+    """Quadro 0: grelha 2×2 (carta A · número · carta B · carta C), pergunta no topo, selo de fonte."""
+    im = fundo(t); g = D.get('grade', {}); w = 360; h = int(w * 1.396)
+    pos = [(160, 440), (560, 440), (160, 960), (560, 960)]
+    for j, (x, y) in enumerate(pos):
+        ks = eio((t + 0.12 - 0.04 * j) / 0.3); w2 = w * (1.05 - 0.05 * ks); xx = x - (w2 - w) / 2; yy = y - (w2 - w) * 0.7
+        if j == 1:
+            c = tile_num(w2, w2 * 1.396, g.get('numero', '') if t >= BEAT['NUM'] else '', g.get('unidade', ''), g.get('contexto', ''), PH, 0, g.get('rotulo', ''))
+        else: c = card_img({0: 'A', 2: 'B', 3: 'C'}[j], w2, 0.0 if j == 0 else (0.35 if t >= BEAT['HLB'] else 0.0))
+        im.alpha_composite(c, (int(xx), int(yy)))
+        if (j == 0 and t >= BEAT['SCAN']) or (j == 1 and t >= BEAT['NUM']):
+            glow_box(im, (int(xx), int(yy), int(xx + c.width), int(yy + c.height)))
+    legenda_topo(im, D.get('pergunta_gancho', ''), 0.0, max(t, .3))
+    selo_txt(im, D.get('selo_fonte', '')); return im.convert('RGB')
+
+def cena_creditos(t, i):
+    """Cartão «quem fez»: duas imagens de terceiros em círculo, nomes e ficha do evento (D['creditos'])."""
+    p = SEQ[i]; im = fundo(t); cr = D.get('creditos', {}); d = ImageDraw.Draw(im, 'RGBA')
+    d.rounded_rectangle((60, 470, 1020, 1400), 26, fill=(5, 10, 16, 225), outline=(16, 185, 129, 120), width=3)
+    s = cr.get('titulo', ''); d.text((540, 530), s, font=fit(d, s, MONOB, 44, 860), fill=EM, anchor='mm')
+    for j, (key, cx) in enumerate(cr.get('pessoas', [])):
+        pass
+    for j, item in enumerate(cr.get('itens', [])):
+        cx = 300 if j == 0 else 780; k = eio((t - p[0] - 0.15 * j) / 0.35)
+        ok = circulo(im, item['img'], cx, 790, 330, k); d = ImageDraw.Draw(im, 'RGBA')
+        if not ok:                                                   # sem autorização: só texto
+            d.ellipse((cx - 165, 625, cx + 165, 955), outline=(60, 80, 90), width=4)
+        d.text((cx, 1010), item['nome'], font=fit(d, item['nome'], INTB, 50, 420), fill=WHITE + (int(255 * k),), anchor='mm')
+        if item.get('sub'): d.text((cx, 1062), item['sub'], font=fit(d, item['sub'], MONO, 32, 420), fill=(170, 190, 195, int(255 * k)), anchor='mm')
+    d.text((540, 790), '×', font=F(INTB, 90), fill=PH, anchor='mm')
+    ke = eio((t - p[0] - 0.5) / 0.3)
+    for j, s in enumerate(cr.get('evento', [])):
+        d.text((540, 1180 + j * 64), s, font=fit(d, s, MONOB if j == 0 else COND, 46 if j == 0 else 38, 880), fill=(PH if j == 0 else WHITE) + (int(255 * ke),), anchor='mm')
+    topo_fala(im, t); selo_txt(im, cr.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
+
+def cena_barras(t, i):
+    """Barras de representação de um evento (D['barras']): linhas destacadas a verde; carimbo opcional (p[2] = tempo)."""
+    p = SEQ[i]; im = fundo(t); b = D.get('barras', {}); d = ImageDraw.Draw(im, 'RGBA')
+    d.rounded_rectangle((60, 440, 1020, 1430), 26, fill=(5, 10, 16, 228))
+    d.text((90, 490), b.get('titulo', ''), font=fit(d, b.get('titulo', ''), MONOB, 40, 700), fill=EM, anchor='lm')
+    for j, key in enumerate(b.get('cantos', [])): circulo(im, key, 870 + j * 92, 490, 80, 1.0, contorno=EM)
+    d = ImageDraw.Draw(im, 'RGBA'); rows = b.get('linhas', []); mx = max(r[1] for r in rows); y = 580
+    for j, (nome, n) in enumerate(rows):
+        k = eio((t - p[0] - 0.08 * j) / 0.5); hl = any(x in nome for x in b.get('destaque', []))
+        col = PH if hl else (90, 130, 140)
+        d.text((90, y), nome, font=fit(d, nome, MONOB, 38, 560), fill=WHITE if hl else (190, 205, 210))
+        d.rectangle((90, y + 50, 90 + 640 * n / mx * k, y + 86), fill=col + (255,))
+        d.text((990, y + 68), str(n), font=F(MONOB, 46), fill=WHITE, anchor='rm'); y += 118
+    d.text((90, y + 4), b.get('rodape', ''), font=fit(d, b.get('rodape', ''), COND, 34, 860), fill=GREY)
+    if len(p) > 2 and t >= p[2]:                                     # carimbo do campeão com a carta
+        k = eio((t - p[2]) / 0.25); c = card_img('C', 230); im.alpha_composite(c, (int(760 + 60 * (1 - k)), 1030))
+        d = ImageDraw.Draw(im, 'RGBA'); s1, s2 = b.get('carimbo', ['', ''])
+        f = F(INTB, int(64 * (1.25 - .25 * k))); wd = max(d.textlength(s1, font=f), d.textlength(s2, font=F(MONOB, 38))) + 60
+        d.rounded_rectangle((90, 1150, 90 + wd, 1330), 18, fill=(8, 20, 16, 245), outline=PH, width=5)
+        d.text((120, 1205), s1, font=f, fill=PH, anchor='lm'); d.text((120, 1285), s2, font=F(MONOB, 38), fill=WHITE, anchor='lm')
+    topo_fala(im, t); selo_txt(im, b.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
+
+def cena_linha_tempo(t, i):
+    """Linha do tempo vertical (D['linha_tempo']['marcos'] = [[data, texto, cor]]); p[2] = tempo da frase-tese no fim."""
+    p = SEQ[i]; im = fundo(t); lt = D.get('linha_tempo', {}); d = ImageDraw.Draw(im, 'RGBA')
+    d.rounded_rectangle((60, 440, 1020, 1430), 26, fill=(5, 10, 16, 228))
+    d.text((90, 490), lt.get('titulo', ''), font=fit(d, lt.get('titulo', ''), MONOB, 40, 860), fill=EM, anchor='lm')
+    ms = lt.get('marcos', []); y0, step = 600, 170; x = 160
+    d.line((x, y0, x, y0 + step * (len(ms) - 1)), fill=(60, 90, 100), width=6)
+    for j, (dt, txt, cor) in enumerate(ms):
+        k = eio((t - p[0] - 0.35 * j) / 0.3)
+        if k <= 0: continue
+        col = {'verde': PH, 'ambar': AMBER, 'cinza': (150, 170, 175)}.get(cor, WHITE); y = y0 + step * j
+        r = 22 + (6 * math.sin(t * 6) if cor == 'ambar' else 0)
+        d.ellipse((x - r, y - r, x + r, y + r), fill=col + (int(255 * k),))
+        d.text((x + 60, y - 26), dt, font=F(INTB, 52), fill=col + (int(255 * k),), anchor='lm')
+        d.text((x + 60, y + 34), txt, font=fit(d, txt, MONO, 34, 760), fill=(210, 222, 226, int(255 * k)), anchor='lm')
+    if len(p) > 2 and t >= p[2]:
+        k = eio((t - p[2]) / 0.22); s = lt.get('tese', ''); f = fit(d, s, INTB, int(76 * (1.2 - .2 * k)), 820); wd = d.textlength(s, font=f) + 70
+        d.rounded_rectangle((540 - wd / 2, 1250, 540 + wd / 2, 1380), 18, fill=(30, 22, 4, 245), outline=AMBER, width=5)
+        d.text((540, 1315), s, font=f, fill=AMBER, anchor='mm')
+    topo_fala(im, t); selo_txt(im, lt.get('selo', '')); return im.convert('RGB')
+
+def cena_previsao(t, i):
+    """TUBO confiante com o cartão da previsão registada (D['previsao'])."""
+    p = SEQ[i]; pv = D.get('previsao', {})
+    k = (t - p[0]) / .5; z = 1 + 7 * (1 - eio(k)) if k < 1 else 1 + 0.04 * ease((t - p[0] - .5) / 3)
+    im = tubo_falando(t, 'confiante', zoom=z, tela=[(pv.get('tela1', 'PREVISÃO'), 46, WHITE), (pv.get('tela2', 'REGISTRADA'), 46, PH)] if t >= p[0] + .5 else None)
+    if t >= p[0] + .6:
+        kc = eio((t - p[0] - .6) / .3); d = ImageDraw.Draw(im, 'RGBA'); y = 1250 + 60 * (1 - kc)
+        d.rounded_rectangle((90, y, 990, y + 200), 22, fill=(5, 12, 14, int(245 * kc)), outline=PH + (int(255 * kc),), width=5)
+        for j, s in enumerate(pv.get('linhas', [])):
+            d.text((540, y + 60 + j * 80), s, font=fit(d, s, INTB if j == 0 else MONOB, 58 if j == 0 else 36, 840), fill=(PH if j == 0 else WHITE) + (int(255 * kc),), anchor='mm')
+    topo_fala(im, t); return im.convert('RGB')
+
+def cena_pergunta1(t, i):
+    """Uma carta grande e a pergunta binária (D['pergunta1'] = {'sim': ..., 'nao': ...})."""
+    p = SEQ[i]; im = fundo(t); k = eio((t - p[0]) / .35); pq = D.get('pergunta1', {})
+    c = card_img('A', 470); c2 = c.rotate((1 - k) * 5, expand=True, resample=Image.BICUBIC); im.alpha_composite(c2, (int(540 - c2.width / 2), int(470 + 60 * (1 - k))))
+    d = ImageDraw.Draw(im, 'RGBA')
+    for j, (s, col, x) in enumerate(((pq.get('sim', 'SIM'), AMBER, 300), (pq.get('nao', 'NÃO'), PH, 780))):
+        kk = eio((t - p[0] - .3 - .12 * j) / .25)
+        d.rounded_rectangle((x - 200, 1170, x + 200, 1300), 22, fill=(8, 16, 20, int(245 * kk)), outline=col + (int(255 * kk),), width=5)
+        d.text((x, 1235), s, font=fit(d, s, INTB, 60, 360), fill=col + (int(255 * kk),), anchor='mm')
+    topo_fala(im, t); return im.convert('RGB')
+
+def cena_tubo_fecho(t, i):
+    """Fecho com o TUBO e uma faixa de créditos por baixo (D['creditos_fecho'])."""
+    p = SEQ[i]; expr = p[2] if len(p) > 2 else 'analitico'
+    im = tubo_falando(t, expr, zoom=1 + 0.04 * ease((t - p[0]) / 3)); d = ImageDraw.Draw(im, 'RGBA')
+    ls = D.get('creditos_fecho', []); k = eio((t - p[0] - .3) / .4)
+    if ls:
+        d.rounded_rectangle((60, 1300, 1020, 1330 + 54 * len(ls)), 18, fill=(5, 10, 16, int(225 * k)))
+        for j, s in enumerate(ls): d.text((540, 1340 + j * 54), s, font=fit(d, s, COND, 36, 900), fill=(220, 232, 236, int(255 * k)), anchor='mm')
+    topo_fala(im, t); return im.convert('RGB')
+CENAS.update(gancho_grade=cena_gancho_grade, creditos=cena_creditos, barras=cena_barras, linha_tempo=cena_linha_tempo,
+             previsao=cena_previsao, pergunta1=cena_pergunta1, tubo_fecho=cena_tubo_fecho)
+
 # ---------- áudio da prévia: trilha do TUBO + SFX do ESP01 (sem voz) ----------
 OUTRO = None
 def _dur_outro():

@@ -3,9 +3,9 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
-## MC-PAU02 · «68 cópias. 17 decks.» (23/11/2026, 02h30) — EM PRODUÇÃO; gate do fundador
+## MC-PAU02 · «Vai ser banida?» (23/11/2026, 02h20) — CONCLUÍDO; envio e publicação com o fundador
 
-Missão do fundador (01:26): Pauper #2 sobre Sneaky Snacker antes do anúncio de 30/11, com o torneio Fuguete na Tenda (collab-alvo Tenda da Liliana). Fase 1 em `oraculo/episodios/pau02_tenda_snacker/`: ficha com verificação dado a dado, roteiro v3 (collab tripla, ~420 caracteres) (~34 s, ~400 créditos), legenda (rascunho), comentário fixado, texto alternativo, fontes, mensagem de collab. Previsão **PR-PAU02-01** registada (grau 3, proposto). **Atualização 02h15 (PC ligado):** torneio confirmado na fonte primária (74, 6 rodadas, Barradas 6–0 Elfos, Mono Red Madness 7); **Rakdos Madness é 5, não 8**; **68/17 sem fonte** (artigo de 27/08 removido, 404); PauperPilot todo confirmado; logótipo provisório do print do Instagram. Roteiro v2 sem 68/17 na ficha. **Falta (fundador):** escolher v1 (só com print do artigo) ou v2, aprovar voz, pedir o logótipo original à loja, confirmar a antecipação da Tenda. Envio da prévia idealmente até 24/11 para caber nos 5 dias antes de 29/11. Zero créditos.
+Collab tripla BINDER × Tiago Fuguete × Tenda da Liliana (decisão 02:05: sem marca de prévia; foto e logótipo em camada removível, re-render sem nova voz se alguém recusar). Gancho 23,7 % (PauperPilot); torneio pela fonte primária (Rakdos Madness 5, não 8; 68/17 sem fonte e fora do vídeo); previsão PR-PAU02-01 (conferência 30/11 → MC-PAU03). Voz 416 créditos; vídeo 29,03 s, −14,1 LUFS, QC sem problemas; vídeo e capa entregues na conversa. Motor: 7 cenas genéricas novas. **Falta (fundador):** escutar a pronúncia, confirmar o @ da Tenda, enviar as duas mensagens (`oraculo/episodios/pau02_tenda_snacker/mensagem_collab.md`) com resposta até 28/11, publicar a 29/11 com `utm_campaign=MC-PAU02`.
 
 ## Insights · semana até 21/11 (22/11/2026, 18h40) — REGISTADO
 
