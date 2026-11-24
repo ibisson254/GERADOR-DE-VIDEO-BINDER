@@ -61,11 +61,12 @@ Origem: missão autónoma do fundador «REACT COLLAB COM MAGIC AMADOR» (24/11/2
 Verificação: falas 4 e 6 conferidas no Oracle PT e na regra 702.15b (`fontes.md`). Duas leituras de regra reais (não se forçou a terceira). A piada da 51 não insulta nem sugere consumo; a marca aparece 0,9 s e no plano original.
 
 ## 6. Montagem
-- Kit da `main` + `kit/v3` (quadro do Conde) + abertura de carta + plano de prova (flip Ocelot → Luz). `processar_vozes.py` (do EP14) → `render.py` (kit.mp4, 40,1 s) → `montar_react.py` (intercala original, cartas e blocos; fecho do scanner com a trilha).
+- Kit da `main` + `kit/v3` (quadro do Conde) + abertura de carta + plano de prova (flip Ocelot → Luz). `processar_vozes.py` (do EP14) → `render.py` (kit.mp4, 40,1 s) → `stems_kit.py burn.mp3 mana.mp3` → `montar_react.py` (intercala original, cartas e blocos; fecho do scanner com a trilha).
 - Original escalado 480×854 → 1080×1920 sem corte (diferença de proporção 0,07 %); crédito fixo «Partida: @magicamador». Cartas em tela cheia a 940 px de largura sobre o original desfocado, com o áudio do narrador contínuo; flip 0,32 s entre cartas diferentes.
 
 ## 7. Controlo de qualidade (24/11/2026)
-- `qc_video.py`: 1080×1920 · 30 fps · 79,89 s (75,93 s + fecho) · **−13,8 LUFS · pico −1,4 dBTP** · fecho presente · «Sem problemas mensuráveis».
+- `qc_video.py` (v2, 24/11 02:58): 1080×1920 · 30 fps · 79,9 s (75,97 s + fecho) · **−14,2 LUFS · pico −1,1 dBTP** · fecho presente · «Sem problemas mensuráveis».
+- **v2 (pedido do fundador, 02:54):** a música continua por baixo do vídeo do @magicamador. Uma só faixa contínua (musica.mp3 a partir de 50,93 s, parada seca no «Comenta aí» aos 74,12 s); ducking do kit nos blocos da dupla, −18 dB por baixo do narrador, −6 dB na pausa da garrafa. Voz+sfx do kit em faixas separadas (`stems_kit.py`); narrador igualado ao nível das vozes da dupla. Sem novos créditos.
 - `bordas.py`: OK (455 quadros de TV). `kit/v3/check_quadro.py`: OK.
 - Folha de contacto conferida a olho (`folha_contacto_final.png`): cartas inteiras e legíveis; destaques sobre o texto certo (corrigido: a 1.ª montagem escurecia o texto destacado); garrafa com «51» legível na pausa.
 - Maior trecho sem troca forte medida: 3,6 s (70,5 s, fala A/B com a TV). **P2:** dentro da fala há animação da boca e TV; não se trocou.
