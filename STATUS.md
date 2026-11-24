@@ -3,6 +3,12 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
+## MB-EP17 · React «A proposta da Vingadora» · collab @magicamador (24/11/2026, 02h50) — CONCLUÍDO; publicação com o fundador
+
+Primeiro React do Mana & Burn (`manaburn/episodios/ep17_react_magicamador/`). Reel de @magicamador (12/12/2025) como imagem principal; cartas em tela cheia quando ditas (Bando de Ocelot → flip Luz da Promessa; Vingadora Phyrexiana com destaque); Mana prova a regra (dano prevenido não é causado; 702.15b); piada da 51 com pausa de 0,9 s. Transcrição feita pelo fundador no ElevenLabs (o modelo local não descarrega daqui). Vozes 870 créditos; 79,89 s; −13,8 LUFS; QC sem problemas. Montagem nova e reutilizável: `montar_react.py`.
+
+**Próximo passo concreto:** fundador ouve o corte aos 43,6 s do original (ficha §7) e pede ao @magicamador o OK do âmbito (reutilizar e editar trechos, piada da 51, rostos) + collab; resposta em `manaburn/autorizacoes/2026-11-24_magicamador_react.md`. Se recusar: arquivar.
+
 ## LL-ECO01 · «Sua coleção. Sua comunidade. Seu jogo.» (23/11/2026, 17h40) — CONCLUÍDO; publicação com o fundador
 
 Campanha de posicionamento (prompt do fundador 16:52): Story 19,87 s (mudo), Reel 22,27 s (com efeitos próprios e mudo), carrossel 7 × 1080×1350, a partir da animação aprovada do Story e das peças do carrossel; cartas Secret Lair; logótipos Magic, BINDER Vision e LigaMagic autorizados, com nota de independência. Funções sociais, de jogo e gratuidade confirmadas pelo fundador e atualizadas em `binder-vision/PRODUTO.md`, constituição §9, `LEIA-ME`, `ESTRATEGIA` e `lambe-lambe/CONTEXTO.md` (`nucleo/DECISOES.md`). Zero créditos. **Falta (fundador):** confirmar se qualquer utilizador cria campeonatos (no código, torneios estão no perfil de loja); publicar carrossel + Reel + Story com `utm_campaign=LL-ECO01`.

@@ -1,0 +1,29 @@
+{
+ "schema": 2,
+ "versao": "MB-EP17 · React collab @magicamador (24/11/2026)",
+ "chamada": "a proposta da Vingadora",
+ "falas": [
+  {"quem": "B", "tags": "[shouting]", "legenda": "Ela quer bloquear um *16/16*… e escolher *quem leva* o dano!", "tts": "Ela quer bloquear um dezesseis por dezesseis… e escolher quem leva o dano!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Calma. Primeiro, *ouve a proposta*."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "*Correto?!* Ela vai tomar uma pancada de *16* de propósito?!", "tts": "Correto?! Ela vai tomar uma pancada de dezesseis de propósito?!"},
+  {"quem": "M", "tags": "[bored]", "legenda": "*Lê a carta.* O dano nela é *prevenido*. E *ela* escolhe o outro alvo."},
+  {"quem": "B", "tags": "[shouting]", "legenda": "Mas o gato tem *vínculo com a vida*! Ganha *16* de vida!", "tts": "Mas o gato tem vínculo com a vida! Ganha dezesseis de vida!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Não ganha. Dano *prevenido* não é dano *causado*. E a *Luz* não dá marcador."},
+  {"quem": "B", "tags": "[excited]", "legenda": "Olha a *51* entrando no campo de batalha sem pagar *custo de mana*!", "tts": "Olha a cinquenta e um entrando no campo de batalha sem pagar custo de mana!"},
+  {"quem": "M", "tags": "[bored]", "legenda": "*Lê o rótulo.* Não é *terreno*. Não produz mana."},
+  {"quem": "B", "tags": "[laughs]", "legenda": "Mas *roubou a cena* sem precisar de combate!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "E *ninguém* quer ser o alvo."},
+  {"quem": "B", "tags": "[shouting]", "legenda": "*A*: você aceitava o acordo. *B*: atacava outra pessoa.", "tts": "Á: você aceitava o acordo. Bê: atacava outra pessoa."},
+  {"quem": "M", "tags": "[bored]", "legenda": "Comenta aí."}
+ ],
+ "gap": [0, 0.0, 0.45, 0.0, -0.06, 0.0, 0.45, 0.0, -0.06, 0.02, 0.45, 0.38],
+ "ins": [[2, 0.1], [4, 0.1], [8, 0.1]],
+ "respiro_max": 0.1,
+ "tempo": {"B": 1.1, "M": 1.15},
+ "mix": {"intro_db": 0, "fala_db": -14, "pausa_db": -6, "fecho_db": 0},
+ "sfx": {"tv": true, "destaque": true, "carta": "flick", "raiva": true},
+ "outro": {"scanner": 0, "hold": 2.75},
+ "abertura": {"ate": 0.55},
+ "sfx_flip": [[4, 0.4], [5, 0.55]],
+ "sfx_destaque": [[3, 0.06], [3, 0.5], [4, 0.45]]
+}

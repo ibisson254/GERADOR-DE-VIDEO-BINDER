@@ -83,5 +83,6 @@ Tenda da Liliana (Pauper), Cabrito Montês (reserva, só com atividade confirmad
 | LL-ART20 | Caio Monteiro | | | | | | | |
 | MC-ESP03 | Farpas de Mana | | | | | | | |
 | MC-PAU02 | Tiago Fuguete + Tenda da Liliana | | | | | | | |
+| MB-EP17 | Magic Amador (@magicamador) | | collab aceite segundo o fundador (24/11); âmbito da reutilização por confirmar | | | | | |
 
 Sem dado = vazio, nunca 0.
