@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 26/11/2026 (23:30) · Lambe-lambe: o vídeo do LL-ECO01 passa a padrão de todos os vídeos; LL-ART21 V3 no padrão
+
+**O quê:** todos os vídeos 9:16 do Lambe-lambe passam a seguir a linguagem do LL-ECO01 (cartaz grande por cena, peças a bater no muro, carimbos, autocolantes, abertura em tela cheia, tremor, efeitos próprios, fecho do scanner), feitos com o motor novo `lambe-lambe/kit_video/motor_video.py` (`kit_video/LEIA-ME.md`; `lambe-lambe/CONTEXTO.md` §3). Primeiro episódio no kit: **LL-ART21 V3** (Will Murai, 44,47 s). V1 e V2 ficam intactas.
+**Porquê:** fundador, claude.ai, 26/11/2026 (22:41): «Faça o vídeo do Will murai com base nesse vídeo e torne padrão esse vídeo para todos os vídeos do lambe lambe» (nessa conversa, «esse vídeo» = LL-ECO01).
+**Impacto:** o `kit_story/motor_story.py` e os scripts de episódio antigos não mudam (reproduzem peças aprovadas). Som: pico real ≤ −6 dBFS garantido pelo motor; o P1 de loudness (−14 LUFS) é aceite no Lambe-lambe porque a música entra no Instagram. O LL-ART21 tem agora V1, V2 e V3: o fundador escolhe qual publica.
+
 ## 26/11/2026 (21:45) · Mana & Burn: «Episódio de combo» passa a padrão editorial recorrente (MB-EP19)
 **O quê:** o Mana & Burn ganha um formato recorrente, **não exclusivo**, para combos de Commander: carta ou par improvável → interação surpreendente → demonstração passo a passo na TV SAL e no plano de prova → condição de vitória concreta → reação do Burn → pergunta final (A/B de ação **ou** de conta, sem repetir o CTA do episódio anterior). Critérios: 2–3 peças centrais; resultado visual (fichas, dano, vida, grimório); vitória explicada sem saltos; condições, limitações e formas de interrupção ditas no vídeo ou no comentário (nunca «impossível de parar»); preferência por combos que a mesa conhece pouco ou explica mal, em vez do mais famoso; nada de lista de 100 cartas, orçamento ou disponibilidade sem fonte. Regras completas em `manaburn/PERFIL.md` («Episódio de combo»). Episódios publicados ou concluídos (MB-EP13, MB-EP18) não mudam.
 **Porquê:** missão do fundador «Consolidar a fórmula dos combos + produzir dois reels em paralelo» (projeto claude.ai, 26/11/2026 21:02), com o MB-EP13 como referência de desempenho (19.688 views orgânicas, 361 guardados, 282 partilhas e 31,5 s de tempo médio em 45 s, export de 22/11) e o MB-EP18 na mesma direção. Visualizações não provam causalidade; a hipótese fica por testar (fichas do MB-EP18 e MB-EP19).

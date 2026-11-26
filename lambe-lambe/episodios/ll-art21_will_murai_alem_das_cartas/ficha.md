@@ -204,6 +204,34 @@ A 1.ª montagem da V2 (87,9 s) foi vista inteira e corrigida: (1) 27 s seguidos 
 - Folhas de contacto: `ll-art21_v2_<versão>_folha_01…06.jpg`
 - Pacote: `legenda_v2.txt`, `comentario_fixado_v2.txt`, `texto_alternativo_v2.txt`, `fontes_v2.md`, `catalogo_cartas_v2.md`
 
+## V3 · no padrão de vídeo do Lambe-lambe (26/11/2026, 23h30)
+
+Pedido do fundador (claude.ai, 22:41): «Faça o vídeo do Will Murai com base nesse vídeo [LL-ECO01] e torne padrão esse vídeo para todos os vídeos do lambe lambe». Decisão em `nucleo/DECISOES.md` (26/11, 23:30). V1 e V2 intactas.
+
+- Script: `reel_v3.py` (usa `lambe-lambe/kit_video/motor_video.py`; cartas do cache do `catalogo_cartas.py`). Comando: `python3 -I reel_v3.py <cache> <saida.mp4> [--mudo]`.
+- Factos: só os já verificados na V1/V2 (`fontes.md`, `fontes_v2.md`); nada novo. Sem foto do artista; obras pessoais não reproduzidas (só títulos).
+- Duração: 40,6 s + fecho = **44,47 s** (V2: 94,17 s). Mais curta e mais rápida: 10 cartazes, um por ideia.
+
+| Tempo | Cartaz | Texto / peças |
+|---|---|---|
+| 0–3,2 | muro | Vendilion Clique (MM2 67) em tela cheia no quadro 0 · «VOCÊ JÁ VIU ESTA ARTE.» · «MAS SABE QUEM PINTOU?» · selo Artistas de Magic |
+| 3,2–6,8 | kraft | «NOS CRÉDITOS DA CARTA:» · crédito impresso ampliado 3× (067/249 · MM2 · Willian Murai) com círculo a marcador · «WILLIAN MURAI» · «No site dele, assina: WILL MURAI» |
+| 6,8–10,6 | creme | «WILL MURAI» · «Do Brasil» · «ILUSTRADOR E CONCEPT ARTIST» · «Já trabalhou com» WIZARDS OF THE COAST / BLIZZARD / PHOENIX LABS (tipografia) |
+| 10,6–14,3 | kraft | «ANTES DOS VIDEOGAMES, PASSOU POR:» QUADRINHOS → PUBLICIDADE → EDITORAS → VIDEOGAMES · fonte Shoutout LA |
+| 14,3–18,9 | creme | «E NO MAGIC?» · «54 ILUSTRAÇÕES creditadas a ele no Scryfall» · seis cartas coladas por cima umas das outras em dois lugares (Master Biomancer, Reflector Mage, Prime Speaker Zegana, Nissa, Gideon, Wrath of God) |
+| 18,9–23,1 | preto | «MAS EXISTE UM LADO MAIS PESSOAL.» · «ELE É DE TERCEIRA GERAÇÃO JAPONESA.» · «NASCEU E CRESCEU NO BRASIL.» · «Do Brasil» |
+| 23,1–26,4 | creme | 秀樹 · «HIDEKI» · «o nome do meio, dado pela avó» |
+| 26,4–31,0 | kraft | «No próprio site, ele conta que explora a cultura e a história dos antepassados.» · «E diz que o site é uma HOMENAGEM a essa herança.» · Momotaro · Zen · Chrysanthemum (títulos) |
+| 31,0–36,2 | creme | «54 ILUSTRAÇÕES · 2012 A 2016» · mosaico das 54 em ordem de lançamento · «DAS CARTAS DE MAGIC À PRÓPRIA HISTÓRIA.» |
+| 36,2–40,6 | preto | selo · «WILL MURAI» · «Um artista, muitos universos.» · Saheeli Rai, Master Biomancer, Vendilion Clique · faixa de créditos e fontes |
+| 40,6–44,47 | — | fecho do scanner |
+
+### QC V3 · `python3 -I comum/qc/qc_video.py ll-art21_v3.mp4 --frente lambe` (26/11/2026)
+- 1080×1920, 30 fps, 44,47 s; fecho a 40,6 s (dif. 0,06).
+- Áudio: −22,6 LUFS, pico real −9,7 dBTP (≤ −6 dBFS da bíblia). P1 de loudness aceite (regra da frente: música no Instagram). Versão `ll-art21_v3_mudo.mp4` para escolher a música no Instagram.
+- Conferido na folha de contacto: carta inteira no quadro 0; nenhuma faixa por cima de arte ou rodapé; sem texto cortado depois das correções (selo sobre o título, círculo a riscar o nome, «WIZARDS OF THE COAST» partido, «54 ILUSTRAÇÕES» em duas linhas, setas a tapar o percurso, mosaico encostado à borda, texto branco em kraft).
+- Ficheiros (não versionados; entregues na conversa claude.ai de 26/11/2026): `ll-art21_v3.mp4`, `ll-art21_v3_mudo.mp4`, `ll-art21_v3_folha.jpg`. Legenda e comentário fixado: os da V2 (`legenda_v2.txt`, `comentario_fixado_v2.txt`) servem tal e qual; texto alternativo: `texto_alternativo_v3.txt`.
+
 ## Handoff
 
 ```
