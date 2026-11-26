@@ -185,9 +185,20 @@ def card_img(lado, w, dim=0.0):
         if len(_cc) > 300: _cc.clear()
         _cc[key] = r
     return _cc[key]
+def _desfoque_local(im, g, caixa, raio, com_original=False):
+    """Compõe em im a camada g desfocada, desfocando só a zona desenhada (caixa) com margem de 3,5×raio+12 px.
+    Igual píxel a píxel ao desfoque do quadro inteiro (fora da margem a camada é transparente e o desfoque não chega lá),
+    mas ~20× mais barato (26/11/2026, missão de engenharia; conferido em mc_render_regressao.py)."""
+    m = int(raio * 3.5) + 12
+    x0, y0 = max(0, int(caixa[0]) - m), max(0, int(caixa[1]) - m)
+    x1, y1 = min(im.width, int(math.ceil(caixa[2])) + m), min(im.height, int(math.ceil(caixa[3])) + m)
+    if x1 <= x0 or y1 <= y0: return
+    reg = g.crop((x0, y0, x1, y1))
+    im.alpha_composite(reg.filter(ImageFilter.GaussianBlur(raio)), (x0, y0))
+    if com_original: im.alpha_composite(reg, (x0, y0))
 def glow_box(im, box, col=PH, r=26):
     g = Image.new('RGBA', im.size, (0, 0, 0, 0)); ImageDraw.Draw(g).rounded_rectangle(box, r, outline=col + (255,), width=16)
-    im.alpha_composite(g.filter(ImageFilter.GaussianBlur(14))); ImageDraw.Draw(im).rounded_rectangle(box, r, outline=col + (255,), width=6)
+    _desfoque_local(im, g, box, 14); ImageDraw.Draw(im).rounded_rectangle(box, r, outline=col + (255,), width=6)
 
 # ---------- gancho: grelha 2×2 (carta A · popularidade A / desempenho B · carta B) ----------
 GW, GH = 400, 557
@@ -599,7 +610,7 @@ def cena_tubo_abertura(t, i):
         if lado == 'A': glow_box(im, (int(x), int(y), int(x + c.width), int(y + c.height)))
     if t_mergulho - .12 <= t < t_mergulho + .1:                       # flash verde no ecrã quando a carta entra
         kf = 1 - abs(t - (t_mergulho - .01)) / .11; fl = Image.new('RGBA', im.size, (0, 0, 0, 0))
-        ImageDraw.Draw(fl).rectangle(SCR, fill=PH + (int(85 * max(0, kf)),)); im.alpha_composite(fl.filter(ImageFilter.GaussianBlur(18)))
+        ImageDraw.Draw(fl).rectangle(SCR, fill=PH + (int(85 * max(0, kf)),)); _desfoque_local(im, fl, SCR, 18)
     if t < t_voo + 0.05:
         f = fala(t); legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
     out = im.convert('RGB')
@@ -660,7 +671,7 @@ def circulo(im, key, cx, cy, diam, k=1.0, contorno=PH):
     dd = max(2, int(diam * (0.85 + 0.15 * k))); c = TERC[key].resize((dd, dd), Image.LANCZOS)
     a = c.getchannel('A').point(lambda x: int(x * min(1, k))); c.putalpha(a)
     g = Image.new('RGBA', im.size, (0, 0, 0, 0)); ImageDraw.Draw(g).ellipse((cx - dd / 2 - 6, cy - dd / 2 - 6, cx + dd / 2 + 6, cy + dd / 2 + 6), outline=contorno + (int(255 * min(1, k)),), width=8)
-    im.alpha_composite(g.filter(ImageFilter.GaussianBlur(10))); im.alpha_composite(g); im.alpha_composite(c, (int(cx - dd / 2), int(cy - dd / 2))); return True
+    _desfoque_local(im, g, (cx - dd / 2 - 10, cy - dd / 2 - 10, cx + dd / 2 + 10, cy + dd / 2 + 10), 10, com_original=True); im.alpha_composite(c, (int(cx - dd / 2), int(cy - dd / 2))); return True
 def topo_fala(im, t):
     f = fala(t); return legenda_topo(im, f[1] if f else '', f[0] if f else 0, t)
 
@@ -912,15 +923,17 @@ def audio_final(voz, out='mix_final.wav'):
     return out
 
 def render(out='MC_PREVIA_SEM_VOZ.mp4', audio=None):
-    nf = int(round(BEAT['END'] * FPS))
-    p = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
-                          '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', 'corpo.mp4'], stdin=subprocess.PIPE)
+    # Uma só codificação (26/11/2026, missão de engenharia): os quadros entram em bruto no mesmo grafo de filtros que junta
+    # o fecho (antes: corpo.mp4 a CRF 18 e depois tudo recodificado outra vez). Mesmos filtros e parâmetros; menos uma
+    # geração de compressão e ~13 s a menos por episódio. O fecho não tem faixa de áudio: silêncio com a duração dele.
+    nf = int(round(BEAT['END'] * FPS)); outro = K + 'comum/outro/outro_binder_916.mp4'
+    p = subprocess.Popen(['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-', '-i', outro,
+                          '-filter_complex', '[0:v]fps=30,format=yuv420p,setsar=1[v0];[1:v]scale=1080:1920,fps=30,format=yuv420p,setsar=1[v1];[v0][v1]concat=n=2:v=1:a=0[v]',
+                          '-map', '[v]', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', 'video_so.mp4'], stdin=subprocess.PIPE)
     for i in range(nf): p.stdin.write(frame(i / FPS).tobytes())
-    p.stdin.close(); p.wait()
-    a = audio or audio_previa(); outro = K + 'comum/outro/outro_binder_916.mp4'   # o fecho não tem faixa de áudio: silêncio com a duração dele
-    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', 'corpo.mp4', '-i', outro, '-filter_complex',
-                    '[0:v]fps=30,format=yuv420p,setsar=1[v0];[1:v]scale=1080:1920,fps=30,format=yuv420p,setsar=1[v1];[v0][v1]concat=n=2:v=1:a=0[v]',
-                    '-map', '[v]', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', 'video_so.mp4'], check=True)
+    p.stdin.close()
+    if p.wait(): raise SystemExit('ffmpeg falhou ao codificar o vídeo')
+    a = audio or audio_previa()
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', 'video_so.mp4', '-i', a, '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k',
                     '-shortest', '-movflags', '+faststart', out], check=True)
     print(out)

@@ -3,6 +3,10 @@
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.
 Missão "Visual Evolution & Character Excellence" (02/11/2026) integrada em `main` por PR (aprovação do fundador, 02/11, 01:27). Anterior: "Consolidação estrutural do BINDER Originals" (31/10/2026), concluída.
 
+## Missão de engenharia · motores (26/11/2026, 14h30) — CONCLUÍDA; propostas com o fundador
+
+Mana & Burn `render.py` em paralelo (MB-EP16 prévia: 371 s → 240 s, 2 núcleos; `--workers=1` = antigo). Meta em Curto `mc_render.py`: desfoque local e uma só codificação (MC-PAU08 prévia: 105 s → 50 s; quadros iguais píxel a píxel; corpo com menos uma geração de compressão). Teste novo `oraculo/motor/mc_render_regressao.py`. Nenhuma identidade, regra ou asset alterado; zero créditos. **Falta (fundador):** decidir E1 (STATUS só com o estado ativo, ≈ 9 mil tokens a menos por sessão), E2 (Radar Editorial Semanal) e E3 (originalidade verificada uma vez) em `nucleo/auditorias/2026-11-26_engenharia.md` §E.
+
 ## MB-EP17 · React «A proposta da Vingadora» · collab @magicamador (24/11/2026, 02h50) — CONCLUÍDO; publicação com o fundador
 
 Primeiro React do Mana & Burn (`manaburn/episodios/ep17_react_magicamador/`). Reel de @magicamador (12/12/2025) como imagem principal; cartas em tela cheia quando ditas (Bando de Ocelot → flip Luz da Promessa; Vingadora Phyrexiana com destaque); Mana prova a regra (dano prevenido não é causado; 702.15b); piada da 51 com pausa de 0,9 s. Transcrição feita pelo fundador no ElevenLabs (o modelo local não descarrega daqui). Vozes 870 créditos; 79,89 s; −13,8 LUFS; QC sem problemas. Montagem nova e reutilizável: `montar_react.py`.
@@ -249,4 +253,4 @@ A edição do MC-ESP03 v4 é o padrão da série: `oraculo/CONTEXTO.md` §7.4 e 
 
 ## Handoff
 
-Último: 20/11/2026 (02h), MB-EP14, em `manaburn/episodios/ep14_everything/handoff.md`. Anterior: 20/11/2026 (01h30), MB-EP13 recuperado, no fim de `manaburn/episodios/ep13_97_terrenos/ficha.md` §10. Anterior: 19/11/2026 (19h), Lisa Marie no Ar, em `lisa-marie/HANDOFF_2026-11-19.md`. Anterior no mesmo dia: fim de `nucleo/auditorias/2026-11-19_missao_estrutural.md`. Anterior: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). 
+Último: 26/11/2026 (14h30), missão de engenharia, no fim de `nucleo/auditorias/2026-11-26_engenharia.md`. Anterior: 20/11/2026 (02h), MB-EP14, em `manaburn/episodios/ep14_everything/handoff.md`. Anterior: 20/11/2026 (01h30), MB-EP13 recuperado, no fim de `manaburn/episodios/ep13_97_terrenos/ficha.md` §10. Anterior: 19/11/2026 (19h), Lisa Marie no Ar, em `lisa-marie/HANDOFF_2026-11-19.md`. Anterior no mesmo dia: fim de `nucleo/auditorias/2026-11-19_missao_estrutural.md`. Anterior: 16/11/2026, no fim de `nucleo/auditorias/2026-11-16_parcerias.md` (mais a adenda das 11:30). 

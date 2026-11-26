@@ -28,3 +28,8 @@ Ao voltar do `tubo` para um plano de dados, o motor mergulha no ecrã automatica
 
 ## O que ainda é específico de episódios «popularidade × desempenho»
 As cenas `dif` e `duas` e os campos `iA/iB/dif_*` foram feitos para comparar dois comandantes. Outros tipos de episódio (deck, previsão, campeão) reutilizam o fundo, as legendas, `carta`, `tubo`, `gancho`, a voz e a capa; uma cena nova acrescenta-se aqui, não num motor novo.
+
+## Performance e regressão (26/11/2026, `nucleo/auditorias/2026-11-26_engenharia.md`)
+- Brilhos (`glow_box`, `circulo`, flash do mergulho) desfocam só a zona desenhada (`_desfoque_local`), não o quadro inteiro; o render faz **uma** codificação (quadros em bruto direto no grafo que junta o fecho). MC-PAU08 prévia: 105–108 s → 49–51 s; quadros iguais píxel a píxel; fecho idêntico; corpo mais fiel aos quadros compostos (menos uma geração de compressão).
+- Antes de integrar qualquer alteração ao motor que não deva mudar a imagem: `python3 -I oraculo/motor/mc_render_regressao.py` (compara com a `HEAD`, todos os episódios com `dados/episodio.json`; `--ref <commit>`, `--passo N`). Sai com erro se algum quadro mudar.
+- Paralelizar a composição foi medido e **não** compensou numa máquina de 2 núcleos (o ffmpeg disputa a CPU); não foi adotado.

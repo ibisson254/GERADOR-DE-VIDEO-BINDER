@@ -42,7 +42,7 @@ Python 3 (numpy, scipy, Pillow, playwright com Chromium, num2words) e ffmpeg.
 2. `python3 roteiro.py` → vozes no ElevenLabs (com autorização para gastar créditos).
 3. `python3 process.py burn.mp3 mana.mp3`
 4. `python3 preview.py 1.5 13 16.5` e `python3 bordas.py` (tem de dizer OK).
-5. `python3 render.py ManaBurn_EpN_Nome_916.mp4`
+5. `python3 render.py ManaBurn_EpN_Nome_916.mp4` (captura em paralelo desde 26/11/2026: um Chromium por núcleo, até 4; `--workers=1` ou `MB_WORKERS=1` repõe o modo sequencial antigo. MB-EP16 prévia, 2 núcleos: 371 s → 240 s, quadros iguais; relatório `nucleo/auditorias/2026-11-26_engenharia.md`)
 6. Fecho do scanner: `comum/outro/outro_binder_916.mp4`. Controlo de qualidade: `python3 -I ../comum/qc/qc_video.py ManaBurn_EpN_Nome_916.mp4 --frente manaburn`.
 
 ## Melhorias de 02/11/2026 (auditoria `nucleo/auditorias/2026-11-02_evolucao_visual.md`)

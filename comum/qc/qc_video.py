@@ -137,6 +137,8 @@ def main():
     ap.add_argument('--saida', default=None)
     a = ap.parse_args()
 
+    if not os.path.isfile(a.video):
+        print(f'ficheiro não encontrado: {a.video}'); return 2
     f = FRENTES[a.frente]
     base = os.path.splitext(os.path.basename(a.video))[0]
     out = a.saida or os.path.join(os.path.dirname(os.path.abspath(a.video)), f'qc_{base}')
