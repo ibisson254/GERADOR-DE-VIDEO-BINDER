@@ -6,7 +6,7 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Última sessão
 
-**Missão de engenharia (26/11/2026)** — CONCLUÍDA. Motores mais rápidos com a mesma imagem: Mana & Burn `render.py` em paralelo (371 s → 240 s), Meta em Curto `mc_render.py` (105 s → 50 s; quadros iguais píxel a píxel); teste `oraculo/motor/mc_render_regressao.py`. Propostas E1–E3 aprovadas e aplicadas (STATUS ativo, Radar Editorial Semanal, originalidade verificada uma vez). Relatório: `nucleo/auditorias/2026-11-26_engenharia.md`.
+**MB-EP18 «O Lagarto Infinito» (26/11/2026)** — CONCLUÍDO, à espera de publicação. Basking Broodscale + Rosie Cotton (2 cartas) + Corpse Knight; deck Abzan de Frodo e Sam em `DECK.md` (estimativa R$ 290,15; **preços por confirmar na LigaMagic** com `lista_ligamagic.txt`); vozes 1.143 créditos; 51,17 s, QC sem problemas.
 
 **Instruções das plataformas (26/11, 17h)** — no repositório; **falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` nas instruções do projeto claude.ai e `nucleo/prompts/CHATGPT.md` no ChatGPT. Roteiro vindo do ChatGPT: `nucleo/SHOWRUNNER.md` §4.3 + `nucleo/modelos/PACOTE_ROTEIRO.md`.
 
@@ -14,6 +14,7 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 | ID | O que falta | Onde |
 |---|---|---|
+| MB-EP18 O Lagarto Infinito | escuta e publicação; confirmar preços na LigaMagic antes de citar valores | `manaburn/episodios/ep18_lagarto_infinito/` |
 | MB-EP17 React @magicamador | ouvir o corte aos 43,6 s; pedir ao parceiro o OK do âmbito + collab; resposta em `manaburn/autorizacoes/2026-11-24_magicamador_react.md` (se recusar: arquivar) | `manaburn/episodios/ep17_react_magicamador/` |
 | MC-PAU02 «Vai ser banida?» | escutar a pronúncia; enviar as duas mensagens (resposta até 28/11); publicar a 29/11 com `utm_campaign=MC-PAU02` | `oraculo/episodios/pau02_tenda_snacker/` |
 | MC-PAU08 «O mais jogado não ganhou» | publicar (collab Tiago Fuguete + Tenda da Liliana) | `oraculo/episodios/pau08_fuguete_tenda/` |

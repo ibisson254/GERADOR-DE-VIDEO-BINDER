@@ -1,0 +1,31 @@
+{
+ "schema": 2,
+ "versao": "MB-EP18 · O Lagarto Infinito (26/11/2026)",
+ "chamada": "o lagarto infinito",
+ "falas": [
+  {"quem": "B", "tags": "[shouting]", "legenda": "Esse lagarto de *duas manas* pode criar criaturas *infinitas*… e acabar com a *mesa*!"},
+  {"quem": "M", "tags": "[bored]", "legenda": "*Lê a carta.* Sozinho, não. Cada vez que ganha *marcador +1/+1*, ele pode criar um *Spawn 0/1*.", "tts": "Lê a carta. Sozinho, não. Cada vez que ganha marcador mais um, mais um, ele pode criar um Spáun zero barra um."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "E quem dá *marcador infinito* pra um lagarto?!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "A *Rosie Cotton*. Ela entra e cria uma *Comida*. E *toda ficha* criada põe *um marcador* no lagarto.", "tts": "A Rôzi Cóton. Ela entra e cria uma Comida. E toda ficha criada põe um marcador no lagarto."},
+  {"quem": "B", "tags": "[shouting]", "legenda": "Peraí… *Comida* é ficha?!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "É. Marcador no lagarto: nasce um *Spawn*. Spawn é ficha: *Rosie de novo*. E *de novo*.", "tts": "É. Marcador no lagarto: nasce um Spáun. Spáun é ficha: Rôzi de novo. E de novo."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Isso não acaba *nunca*?!"},
+  {"quem": "M", "tags": "[tired]", "legenda": "*Lê a carta.* O lagarto diz *pode criar*. Acaba quando *você* quiser."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Tá. Um monte de ficha *0/1*. Isso não mata *ninguém*!", "tts": "Tá. Um monte de ficha zero barra um. Isso não mata ninguém!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Por isso a terceira carta: *Corpse Knight*. Cada criatura que entra, *cada oponente* perde *1 de vida*.", "tts": "Por isso a terceira carta: Córps Náit. Cada criatura que entra, cada oponente perde um de vida."},
+  {"quem": "B", "tags": "[shouting]", "legenda": "*Quarenta* Spawns… e a mesa *inteira* cai!", "tts": "Quarenta Spáuns… e a mesa inteira cai!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Se ninguém responder. Removeu o lagarto *no meio*, o ciclo *para*."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Então na sua mesa: *A*, mata o lagarto. *B*, mata o cavaleiro.", "tts": "Então na sua mesa: Á, mata o lagarto. Bê, mata o cavaleiro."},
+  {"quem": "M", "tags": "[bored]", "legenda": "Comenta aí."}
+ ],
+ "gap": [0, 0.0, -0.06, 0.0, -0.08, 0.02, -0.08, 0.02, -0.08, 0.02, -0.06, 0.02, 0.0, 0.38],
+ "ins": [[2, 0.1], [4, 0.1], [6, 0.1], [8, 0.1], [10, 0.1], [12, 0.1]],
+ "respiro_max": 0.1,
+ "tempo": {"B": 1.1, "M": 1.15},
+ "mix": {"intro_db": 0, "fala_db": -14, "pausa_db": -6, "fecho_db": 0},
+ "sfx": {"tv": true, "destaque": true, "carta": "flick", "raiva": true},
+ "outro": {"scanner": 0, "hold": 2.75},
+ "abertura": {"ate": 0.55},
+ "sfx_flip": [[1, 0.72], [3, 0.035], [3, 0.4], [3, 0.62], [7, 0.035], [9, 0.035]],
+ "sfx_destaque": [[1, 0.06], [3, 0.08], [3, 0.7], [7, 0.13], [9, 0.13]]
+}

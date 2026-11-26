@@ -1,0 +1,27 @@
+A: mato o lagarto. B: mato o cavaleiro. Qual você escolhe?
+
+Como o combo funciona:
+1. Basking Broodscale em campo.
+2. A Rosie Cotton entra e cria uma ficha de Comida.
+3. Criar uma ficha dispara a Rosie: ela põe um marcador +1/+1 no lagarto (alvo: criatura sua que não seja ela).
+4. O marcador dispara o lagarto: você pode criar uma ficha Eldrazi Spawn 0/1.
+5. Criar o Spawn dispara a Rosie de novo. Volta ao passo 3.
+São duas cartas para fichas, marcadores e mana incolor (sacrificando os Spawns) quantos você quiser. O lagarto diz «you may»: você escolhe quando parar.
+
+A vitória vem da terceira carta: com o Corpse Knight, cada Spawn que entra faz cada oponente perder 1 de vida. Em Commander todos começam com 40, então 40 Spawns bastam (sem ganho de vida da mesa). Alternativa: Mirkwood Bats (cada ficha criada ou sacrificada faz cada oponente perder 1).
+
+Como parar: cada gatilho usa a pilha. Removeu o lagarto ou a Rosie em resposta, o ciclo acaba. Removeu o Corpse Knight, as fichas continuam, mas a mesa para de perder vida.
+
+Texto Oracle:
+Basking Broodscale: "Whenever one or more +1/+1 counters are put on this creature, you may create a 0/1 colorless Eldrazi Spawn creature token with 'Sacrifice this token: Add {C}.'"
+Rosie Cotton of South Lane: "When Rosie Cotton enters, create a Food token. Whenever you create a token, put a +1/+1 counter on target creature you control other than Rosie Cotton."
+Corpse Knight: "Whenever another creature you control enters, each opponent loses 1 life."
+Ruling da Rosie (16/06/2023): se você cria várias fichas de uma vez, a habilidade dispara uma vez para cada ficha.
+
+Putômetro da TV SAL: Salt Score do Basking Broodscale no EDHREC 0,53 ÷ 4 = 13% (26/11/2026). A mesa ainda não aprendeu a ter medo do lagarto.
+
+Lista completa de 100 cartas (Frodo e Sam, Abzan) feita para este episódio: pede aqui nos comentários que a gente manda.
+
+Fontes (26/11/2026): Oracle e rulings no Scryfall; combo 2433-5641 no Commander Spellbook e no EDHREC; Salt Score no EDHREC.
+
+Achou o easter egg do relógio da TV SAL?

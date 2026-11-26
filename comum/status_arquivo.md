@@ -4,6 +4,12 @@ Histórico do `STATUS.md` até 26/11/2026 (14h30), copiado sem alterações quan
 
 ---
 
+## Arquivado a 26/11/2026 (17h50): «Última sessão» do STATUS
+
+**Missão de engenharia (26/11/2026)** — CONCLUÍDA. Motores mais rápidos com a mesma imagem: Mana & Burn `render.py` em paralelo (371 s → 240 s), Meta em Curto `mc_render.py` (105 s → 50 s; quadros iguais píxel a píxel); teste `oraculo/motor/mc_render_regressao.py`. Propostas E1–E3 aprovadas e aplicadas (STATUS ativo, Radar Editorial Semanal, originalidade verificada uma vez). Relatório: `nucleo/auditorias/2026-11-26_engenharia.md`.
+
+---
+
 ## Arquivado a 26/11/2026 (14h30): STATUS.md integral
 
 Branch principal: `main` (consolidação integrada a 31/10/2026, PR #1, aprovado pelo fundador). A branch `consolidacao-estudio` fica como histórico.

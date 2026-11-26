@@ -20,3 +20,4 @@
 | 19/11/2026 | Mana & Burn · Ep. 12 (MONEY BURN) | relógio da TV SAL em "10:20" = os 10 terrenos de grife do Burn e os 20 de dano do Price of Progress | canto inferior direito da TV, em todos os planos da TV (0–40 s) |
 | 20/11/2026 | Mana & Burn · Ep. 14 (EVERYTHING, MENOS TUDO) | relógio da TV SAL em "14:00" = hora da abertura da venda do Secret Lair x Duna em Brasília (30/11, 9h PT) | canto inferior direito da TV, em todos os planos da TV (0–37 s) |
 | 21/11/2026 | Mana & Burn · Ep. 15 (O gato dos 40) | relógio da TV SAL em "20:40" = os 20 de vida do formato para que o Felidar Sovereign foi feito e os 40 com que o Commander começa | canto inferior direito da TV, em todos os planos da TV (0–41 s) |
+| 26/11/2026 | Mana & Burn · Ep. 18 (O Lagarto Infinito) | relógio da TV SAL em "01:45" = nº de coleção 145 do Basking Broodscale (Modern Horizons 3) | canto inferior direito da TV, em todos os planos da TV (0–46 s) |
