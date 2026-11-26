@@ -121,10 +121,39 @@ Versões: v1 tinha texto rosa no muro rosa (ilegível); v2 com a lupa a tocar a 
 - [x] `comum/historico.md`
 - [x] `STATUS.md`
 - [x] `memoria.py encerramento LL-ART21`
-- [ ] Commit conferido no GitHub (hash no handoff)
+- [x] Commit conferido no GitHub (d1d269b)
 - [x] Handoff
 
 ## Depois de publicar
 - Publicar com `utm_campaign=LL-ART21` no link da bio, se for possível rodar o link nesse dia.
 - Ler na rotina de domingo: tempo médio de visualização, retenção aos 3 s, partilhas, guardados.
 - Decidir se o Reel documental passa a padrão de «Artistas de Magic», ao lado do carrossel.
+
+## Handoff
+
+```
+HANDOFF · 26/11/2026 19h · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main · último commit d1d269b (conferido no remoto: sim; workflow validar verde)
+
+Objetivo atual: piloto documental de «Artistas de Magic» (Will Murai), pronto a publicar.
+
+Conteúdos tocados:
+- LL-ART21 · não registado → CONCLUÍDO
+
+Encerramento:
+- LL-ART21 · memoria.py encerramento: OK
+- Vídeo ll-art21_v7.mp4 (57,87 s) e capa ll-art21_capa.png: entregues na conversa claude.ai de 26/11 (não versionados)
+
+Decisões tomadas nesta sessão:
+- Piloto de Reel documental no Lambe-lambe, sem voz por defeito (nucleo/DECISOES.md, 26/11 19h: sim)
+
+Alterações realizadas:
+- lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ (reel.py, ficha, legenda, comentário, alt, fontes) · registo · histórico · DECISOES · STATUS · commit d1d269b
+
+Tarefas pendentes:
+- Ver o vídeo, escolher a música no Instagram e publicar com utm_campaign=LL-ART21 · fundador
+- Locução opcional por cima do mesmo render · fundador
+- Ler a métrica (tempo médio de visualização) no domingo seguinte à publicação · agente
+
+Próximo passo concreto: o fundador publica o LL-ART21; depois, a rotina de domingo (comum/insights/LEIA-ME.md).
+```
