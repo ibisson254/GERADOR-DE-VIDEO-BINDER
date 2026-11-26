@@ -164,3 +164,43 @@ Kit numa cópia de trabalho (manaburn/ sem episodios/), `episode.js`/`episode.js
 - Métrica principal: respostas à pergunta do comentário fixado; guardados e partilhas às 48 h e aos 7 dias contra MB-EP13 e MB-EP18
 - Resultado observado: 
 - Aprendizagem: 
+
+## Handoff
+
+```
+HANDOFF · 26/11/2026, 21h50 (Lisboa) · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main · commit do episódio 2fc9422 (conferido no remoto: sim)
+
+Objetivo atual: fórmula dos combos consolidada; MB-EP18 e MB-EP19 prontos para o fundador publicar.
+
+Conteúdos tocados (comum/REGISTRO_EDITORIAL.md):
+- MB-EP19 · (novo) → CONCLUÍDO
+- MB-EP18 · CONCLUÍDO → CONCLUÍDO (verificado; sem alterações; re-render das vozes já pagas, 0 créditos)
+
+Encerramento:
+- MB-EP19 · memoria.py encerramento: OK · memoria.py validar: OK · validar_repo: 0 graves (P2 antigo: vince/kit/v1/)
+- Vídeos e capas: entregues na conversa do projeto claude.ai de 26/11/2026 (21h); capas também nas pastas dos episódios. Vídeos não versionados.
+
+Decisões tomadas nesta sessão:
+- «Episódio de combo» passa a padrão recorrente, não exclusivo (nucleo/DECISOES.md, 26/11/2026 21:45; manaburn/PERFIL.md) · sim
+- Vozes do MB-EP19 autorizadas pelo fundador no cartão da sessão (1.112 créditos, uma geração cada) · na ficha
+- Sem Salt verificado: o medidor da TV mostra o bracket mínimo do combo (EDHREC) em vez do putômetro · na ficha
+
+Documentos consultados:
+- AGENTS.md, STATUS.md, manaburn/PERFIL.md, manaburn/LEIA-ME.md, skill binder-mana-burn-episodio, nucleo/DECISOES.md, comum/REGISTRO_EDITORIAL.md, comum/easter_eggs.md, comum/radar/2026-W48.md, comum/insights/semanas/2026-11-21.md, fichas MB-EP13 e MB-EP18, nucleo/modelos/FICHA_EPISODIO.md e HANDOFF.md
+
+Alterações realizadas:
+- manaburn/episodios/ep19_robo_imortal/ · episódio completo · 2fc9422
+- manaburn/PERFIL.md, nucleo/DECISOES.md · padrão «Episódio de combo» · 2fc9422
+- comum/REGISTRO_EDITORIAL.md, comum/historico.md, comum/easter_eggs.md, comum/radar/2026-W48.md, STATUS.md, comum/status_arquivo.md · 2fc9422
+
+Insights (domingo): não se aplica (quinta-feira)
+
+Tarefas pendentes:
+- Escutar e publicar o MB-EP19 (e o MB-EP18), em dias diferentes · fundador
+- Confirmar os preços do deck do MB-EP18 na LigaMagic antes de citar valores · fundador
+- Medir às 48 h e aos 7 dias contra o MB-EP13 (guardados, partilhas, respostas) · agente, com prints do fundador
+- Escuta Brasil/Europa do radar W48 continua em falta (LigaMagic/MYP/Reddit) · agente noutra sessão
+
+Próximo passo concreto: publicar o MB-EP19 com legenda.txt e comentario_fixado.txt desta pasta (utm_campaign=MB-EP19).
+```
