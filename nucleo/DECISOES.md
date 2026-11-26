@@ -2,6 +2,10 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 26/11/2026 (19:00) · Piloto de Reel documental em «Artistas de Magic» (LL-ART21)
+**Decisão:** o Lambe-lambe pode ter, além do carrossel, um Reel documental 9:16 de «Artistas de Magic»: muro rosa, selo azul, papéis e faixa preta do kit, tipografia cinética, efeitos sintetizados próprios, sem voz por defeito, cartas inteiras sem texto por cima e fecho do scanner. É um **piloto**: só passa a padrão depois de lida a métrica (tempo médio de visualização) e com nova decisão do fundador. Uma locução do fundador pode entrar mais tarde por cima do mesmo render, se ele a gravar. Inspiração de edição explicativa sem copiar logótipos, fontes nem identidade de terceiros.
+**Porquê:** fundador escolheu Will Murai e a linguagem documental no ChatGPT (26/11/2026) e respondeu «Prossiga» (claude.ai, 18:19) à proposta com a variante sem voz. Render só do episódio: `lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/reel.py`; nenhum motor genérico novo.
+
 ## 26/11/2026 (16:55) · Roteiro pensado no ChatGPT e produzido no Claude; instruções das plataformas revistas
 
 **O quê:** (1) Nova `nucleo/SHOWRUNNER.md` §4.3: quando o roteiro chega de outro agente, quem produz não refaz ideação nem roteiro; faz ID, `memoria.py pauta` (uma vez), verificação dos factos, revisão narrativa §4.2 e encaixe no motor, corrigindo só o P1, e regista as alterações na ficha (tabela «Alterações ao roteiro de origem», agora em `modelos/FICHA_EPISODIO.md`). «Aprovado» no outro agente vale para o roteiro tal como veio; mudança de sentido volta ao fundador antes da voz. (2) Novo `nucleo/modelos/PACOTE_ROTEIRO.md`: formato de entrega do ChatGPT para o Claude. (3) `nucleo/prompts/CLAUDE_PROJECT.md` e `nucleo/prompts/CHATGPT.md` revistos (STATUS ativo, radar semanal, pacote de roteiro, economia de leitura).

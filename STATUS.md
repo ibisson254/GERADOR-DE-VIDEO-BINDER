@@ -6,7 +6,7 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Última sessão
 
-**MB-EP18 «O Lagarto Infinito» (26/11/2026)** — CONCLUÍDO, à espera de publicação. Basking Broodscale + Rosie Cotton (2 cartas) + Corpse Knight; deck Abzan de Frodo e Sam em `DECK.md` (estimativa R$ 290,15; **preços por confirmar na LigaMagic** com `lista_ligamagic.txt`); vozes 1.143 créditos; 51,17 s, QC sem problemas.
+**LL-ART21 «Will Murai — Além das cartas» (26/11/2026)**: CONCLUÍDO, à espera de publicação. É o primeiro Reel documental do Lambe-lambe (piloto, `nucleo/DECISOES.md` 26/11 19h). Pauta e roteiro vieram do ChatGPT com três correções de factos; não tem voz e gastou 0 créditos; 57,87 s, QC sem problemas.
 
 **Instruções das plataformas (26/11, 17h)** — no repositório; **falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` nas instruções do projeto claude.ai e `nucleo/prompts/CHATGPT.md` no ChatGPT. Roteiro vindo do ChatGPT: `nucleo/SHOWRUNNER.md` §4.3 + `nucleo/modelos/PACOTE_ROTEIRO.md`.
 
@@ -14,6 +14,7 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 | ID | O que falta | Onde |
 |---|---|---|
+| LL-ART21 Will Murai (Reel piloto) | ver e publicar (`utm_campaign=LL-ART21`); música no Instagram; locução opcional do fundador | `lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/` |
 | MB-EP18 O Lagarto Infinito | escuta e publicação; confirmar preços na LigaMagic antes de citar valores | `manaburn/episodios/ep18_lagarto_infinito/` |
 | MB-EP17 React @magicamador | ouvir o corte aos 43,6 s; pedir ao parceiro o OK do âmbito + collab; resposta em `manaburn/autorizacoes/2026-11-24_magicamador_react.md` (se recusar: arquivar) | `manaburn/episodios/ep17_react_magicamador/` |
 | MC-PAU02 «Vai ser banida?» | escutar a pronúncia; enviar as duas mensagens (resposta até 28/11); publicar a 29/11 com `utm_campaign=MC-PAU02` | `oraculo/episodios/pau02_tenda_snacker/` |
@@ -61,4 +62,4 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Handoff
 
-Último: 26/11/2026 (17h55), MB-EP18, no fim de `manaburn/episodios/ep18_lagarto_infinito/ficha.md`. Anteriores: `comum/status_arquivo.md` («Handoff»).
+Último: 26/11/2026 (19h), LL-ART21, no fim de `lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ficha.md`. Anterior: MB-EP18 (`manaburn/episodios/ep18_lagarto_infinito/ficha.md`). Anteriores: `comum/status_arquivo.md` («Handoff»).
