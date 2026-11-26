@@ -9,8 +9,8 @@ const LOOP = 'Na tela: Triskelion (MOC 387, arte Christopher Moeller) e Mikaeus,
 const VID = 'Na tela: exemplo de mesa de 4 a 40 de vida. Triskelion (MOC 387, arte Christopher Moeller).<br>' + CR;
 const RIP = 'Na tela: Rest in Peace (The Big Score, 2024), nº 4. Arte: Grady Frederick.<br>' + CR;
 // linhas medidas nos PNG do Scryfall (744x1040), 26/11/2026
-const BRK = { title: 'BRACKET', value: '3+', fill: 0.6, calc: ['combo de 2 cartas', 'fora do 1 e do 2', 'EDHREC · 26/11'],
-              levels: [['CASUAL', '#6FB487'], ['UPGRADED', '#F4B414'], ['cEDH', '#FF5A4E']] };
+const BRK = { title: 'BRACKET', value: '3+', fill: 0.6, calc: ['2 cartas:', 'fora do 1 e 2', 'EDHREC · 26/11'],
+              levels: [['cEDH', '#FF5A4E'], ['UPGRADED', '#F4B414'], ['CASUAL', '#6FB487']] };  // levels[0] = topo da barra (vermelho)
 const HL_UNDY = [[0.07, 0.748, 0.85, 0.062]];          // «Other non-Human creatures… +1/+1 and have undying»
 const HL_SEM = [[0.07, 0.806, 0.85, 0.032]];           // «…dies, if it had no +1/+1 counters on it»
 const HL_ENTRA = [[0.07, 0.659, 0.86, 0.058]];         // «enters the battlefield with three +1/+1 counters»
@@ -24,7 +24,7 @@ const EP = {
   fx: { foco: true, tremor: true, poster: true, celular: true, scanner: false, tv_ligada: true },
   outro: { assinatura: 'Escaneie suas cartas e organize sua coleção.' },
   card: { img: 'cards/t00_robo.png', cred: TRI },
-  abertura: { img: 'cards/triskelion.png', ate: 0.42, hl: HL_REMOVE, selo: { txt: '2 TIROS → ∞', x: 0.07, y: 0.11, rot: -6, size: 54 } },
+  abertura: { img: 'cards/triskelion.png', ate: 0.42, hl: HL_REMOVE, selo: { txt: '2 TIROS → ∞', x: 0.645, y: 0.125, rot: -3, size: 38 } },
   legenda_paginas: 58,
   prova: { w: 620, top: 330, segs: [
     { fala: 1, de: 0, img: 'cards/mikaeus.png', hl: HL_UNDY, zoom: { de: 0.4, alvo: TXT, s: 1.6 }, faixa: 'NÃO HUMANAS GANHAM UNDYING' },

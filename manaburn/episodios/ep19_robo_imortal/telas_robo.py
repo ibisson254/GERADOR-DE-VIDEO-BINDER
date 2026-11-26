@@ -105,7 +105,7 @@ TELAS = {
    <div class="fonte">Rest in Peace (BIG 4, arte Grady Frederick). {TRI}. {CR}</div></div>""",
  # fala 13 (TV): pergunta A/B
  't12_ab': f"""<div class="f"><span class="badge">PRIMEIRA VOLTA</span>
-   <div class="lv2" style="top:130px;font-size:38px">quanto de dano <em>na mesa</em>?</div>
+   <div class="lv2" style="top:118px;font-size:34px">Triskelion <em>recém-jogado</em>, com 3 marcadores:<br>quanto de dano <em>na mesa</em>?</div>
    <div class="opt" style="top:250px"><span class="l">A</span><span class="t">1 DE DANO</span></div>
    <div class="opt" style="top:560px"><span class="l">B</span><span class="t">2 DE DANO</span></div>
    <div class="fonte">{TRI} · {MIK}. {CR}</div></div>""",

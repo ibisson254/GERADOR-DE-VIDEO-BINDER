@@ -1,4 +1,4 @@
-Na primeira volta, a mesa toma A: 1 de dano, ou B: 2 de dano? Responde antes de abrir o resto.
+Triskelion recém-jogado, com 3 marcadores: na primeira volta, a mesa toma A: 1 de dano, ou B: 2 de dano? Responde antes de abrir o resto.
 
 Como o combo funciona (Mike e Trike):
 1. Mikaeus, the Unhallowed em campo: suas outras criaturas não humanas ganham +1/+1 e undying. O Triskelion é um Construto, então conta.

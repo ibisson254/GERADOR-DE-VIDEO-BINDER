@@ -111,7 +111,7 @@ Revisão narrativa (§4.2): cada fala do Mana corrige ou acrescenta uma regra (u
 - Riscos: factuais (mitigados pelo Oracle, pela ruling e pelo Spellbook); direitos (cartas e artes © Wizards of the Coast, com crédito na tela e na legenda; conteúdo de fã).
 
 ## Controlo de qualidade
-Medido no ficheiro final `ManaBurn_Ep19_RoboQueNaoMorre_916.mp4` com `python3 -I comum/qc/qc_video.py … --frente manaburn` (26/11/2026, ~21h40).
+Medido no ficheiro final `ManaBurn_Ep19_RoboQueNaoMorre_916.mp4` (v2, revisão de 26/11/2026 22h45) com `python3 -I comum/qc/qc_video.py … --frente manaburn`; valores iguais aos da v1.
 
 | Critério | Alvo | Medido | OK |
 |---|---|---|---|
@@ -124,15 +124,27 @@ Medido no ficheiro final `ManaBurn_Ep19_RoboQueNaoMorre_916.mp4` com `python3 -I
 | Carta mostrada = carta falada | sim | Mikaeus nas falas 2 e 4, ruling na 6, Triskelion nas 7–8, loop na 10, Rest in Peace na 12 | ✓ |
 | Sequência do combo | ordem da fala | fala 10: «2 TIROS NELE / MORREU» → «VOLTA COM 4» | ✓ (painel reordenado depois da 1.ª prévia) |
 | Condição de vitória | demonstrada | mesa 40 → 0 (exemplo, 120 de dano ≈ 60 voltas) | ✓ |
-| Quadro 0 | carta + selo | Triskelion inteiro, linha do dano destacada, selo «2 TIROS → ∞» (na arte, sobre o céu e a ponta da cauda) | ✓ |
+| Quadro 0 | carta + selo | Triskelion inteiro, linha do dano destacada, selo «2 TIROS → ∞» no céu, canto superior direito da arte (v2) | ✓ |
 | Saída da abertura | ≤ 2,5 s | 2,2 s | ✓ |
 | Maior intervalo sem troca forte | ≤ 3 s | 4,1 s na fala 13 (pergunta na TV; troca `meio` discreta «COMENTA AÍ» a meio e câmara em movimento) e 3,3 s na fala 9 (Burn no sofá, personagens em movimento) | aceite (P2, mesmo caso do MB-EP18) |
 | P0 / P1 abertos | 0 / 0 | 0 / 0 | ✓ |
 
 Outros controlos: folha de contacto conferida a olho (`folha_contacto_final.png`): cartas inteiras, destaques alinhados nas linhas citadas, nada sobre o texto das cartas, legendas na zona segura. Na aproximação ao texto do Mikaeus (fala 4) as margens da carta ficam fora da janela, como em todos os zooms do plano de prova.
 
+## Revisão (26/11/2026, 22h45, pedido do fundador «Revise o episódio do robô»)
+Revisão de factos, roteiro, telas e quadros do ficheiro final. Factos, roteiro e áudio sem erros: não se mexeu nas vozes (0 créditos). Três correções visuais, novo render (v2):
+
+| Problema na v1 | Correção na v2 | Gravidade |
+|---|---|---|
+| Medidor da TV com «cEDH» em baixo e «CASUAL» em cima, ao contrário da barra (verde em baixo, vermelho em cima): o «3+» parecia perto do cEDH | `levels` invertidos: cEDH no topo, CASUAL em baixo | P1 (leitura errada de um dado) |
+| Conta do medidor cortada pela moldura da TV («combo de 2 carta:») | conta encurtada: «2 cartas: / fora do 1 e 2 / EDHREC · 26/11» | P2 |
+| Selo da abertura sobre a cauda do robô (canto superior esquerdo da arte) | selo menor no céu, canto superior direito, fora da criatura e do nome | P2 |
+| Pergunta «primeira volta» com duas leituras possíveis (recém-jogado com 3 marcadores ou depois do 1.º undying com 4) | tela da pergunta diz «Triskelion recém-jogado, com 3 marcadores: quanto de dano na mesa?» (a fala do Burn não muda) | P1 (resposta do comentário fixado tem de ser inequívoca) |
+
+Mantidos (P2, sem mudança): 4,1 s na fala 13 com a pergunta na TV (troca «COMENTA AÍ» a meio) e 3,3 s do Burn no sofá na fala 9. A manchete «Plantão anterior: lagarto de duas manas cria infinito» pressupõe o MB-EP18 publicado antes: publicar o EP18 primeiro.
+
 ## Ficheiros finais
-- Vídeo final: `ManaBurn_Ep19_RoboQueNaoMorre_916.mp4` · 50,90 s · entregue ao fundador na conversa de 26/11/2026 (projeto claude.ai); não versionado.
+- Vídeo final: `ManaBurn_Ep19_RoboQueNaoMorre_916.mp4` **v2** (revisão de 22h45) · 50,90 s · entregue ao fundador na conversa de 26/11/2026 (projeto claude.ai); a v1 não se publica; não versionado.
 - Capa: `MB_EP19_CAPA.png` (frase «O ROBÔ QUE NÃO» + foco «MORRE», selo «2 TIROS NELE», faixa «MANA & BURN · EP. 19», tag COMMANDER). Grelha 3:4: `MB_EP19_CAPA_grelha.png`.
 - Telas: `cards/t*.png` (geradas por `telas_robo.py`).
 
