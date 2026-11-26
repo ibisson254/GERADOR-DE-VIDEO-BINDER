@@ -121,6 +121,31 @@ def peca_img(img_bgr, larg, alpha=None, ang=0.0, margem=0, fundo=(238, 240, 240)
         return b
     return matte(d)
 
+# ------------------------------------------------------------------ carta recortada à mão (padrão das cartas grandes, 26/11/2026)
+def peca_carta_recortada(path, larg, ang=0.0, seed=1, margem=16, fitas=True):
+    """carta inteira dentro de uma margem branca cortada à tesoura (segmentos retos irregulares) + fita nos cantos de cima"""
+    im = cv2.imread(path, cv2.IMREAD_UNCHANGED); h = int(im.shape[0] * larg / im.shape[1])
+    im = cv2.resize(im, (larg, h), interpolation=cv2.INTER_AREA)
+    rgb, a = im[..., :3], (im[..., 3] if im.shape[2] == 4 else np.full((h, larg), 255, np.uint8))
+    rng = np.random.default_rng(seed); W2, H2 = larg + 2 * margem + 20, h + 2 * margem + 20
+    cx0, cy0 = W2 / 2, H2 / 2; pts = []
+    for (x0, y0), (x1, y1) in (((-1, -1), (1, -1)), ((1, -1), (1, 1)), ((1, 1), (-1, 1)), ((-1, 1), (-1, -1))):
+        for k in range(4):                      # 4 cortes de tesoura por lado
+            u = k / 4 + rng.uniform(-.03, .03)
+            x = cx0 + (x0 + (x1 - x0) * u) * (larg / 2 + margem) + rng.uniform(-margem * .45, margem * .45)
+            y = cy0 + (y0 + (y1 - y0) * u) * (h / 2 + margem) + rng.uniform(-margem * .45, margem * .45)
+            pts.append((x, y))
+    msk = np.zeros((H2, W2), np.uint8); cv2.fillPoly(msk, [np.array(pts, np.int32)], 255, cv2.LINE_AA)
+    papel = (cv2.resize(cv2.imread(os.path.join(KIT, 'kit_papel.png')), (W2, H2)).astype(np.float32) * .3 + np.array((236, 240, 242)) * .7).astype(np.uint8)
+    def d(b):
+        b = colar(b, papel, msk, CW / 2, CH / 2, ang)
+        b = colar(b, rgb, a, CW / 2, CH / 2, ang, sombra=False)
+        if fitas:
+            for dx, fa in ((-1, -40), (1, 40)):
+                b = M.fita(b, CW / 2 + dx * (larg / 2 + margem) * np.cos(np.deg2rad(ang)) + 0, CH / 2 - (h / 2 + margem - 4) + dx * (larg / 2) * np.sin(np.deg2rad(ang)), ang + fa, 120)
+        return b
+    return matte(d)
+
 # ------------------------------------------------------------------ ícones (desenho conceitual, não telas do app)
 def svg(w, h, corpo):
     return f'<svg style="position:absolute;left:0;top:0" width="{w}" height="{h}" viewBox="0 0 {w} {h}">{corpo}</svg>'

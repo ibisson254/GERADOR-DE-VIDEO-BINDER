@@ -232,6 +232,19 @@ Pedido do fundador (claude.ai, 22:41): «Faça o vídeo do Will Murai com base n
 - Conferido na folha de contacto: carta inteira no quadro 0; nenhuma faixa por cima de arte ou rodapé; sem texto cortado depois das correções (selo sobre o título, círculo a riscar o nome, «WIZARDS OF THE COAST» partido, «54 ILUSTRAÇÕES» em duas linhas, setas a tapar o percurso, mosaico encostado à borda, texto branco em kraft).
 - Ficheiros (não versionados; entregues na conversa claude.ai de 26/11/2026): `ll-art21_v3.mp4`, `ll-art21_v3_mudo.mp4`, `ll-art21_v3_folha.jpg`. Legenda e comentário fixado: os da V2 (`legenda_v2.txt`, `comentario_fixado_v2.txt`) servem tal e qual; texto alternativo: `texto_alternativo_v3.txt`.
 
+## V4 · foto do artista e cartas uma de cada vez (26/11/2026, 23h55)
+
+Pedido do fundador (claude.ai, 23:27): pôr a foto do artista na melhor posição, no estilo lambe-lambe; dar mais destaque às cartas e ao artista; cartas **uma de cada vez, coladas umas por cima das outras**, como se recortadas à mão. V1–V3 intactas.
+
+- Script: `reel_v4.py` (kit `lambe-lambe/kit_video`). `python3 -I reel_v4.py <cache> <saida.mp4> [--foto retrato.png] [--mudo]`.
+- **Foto**: a mesma imagem da V2 (`1000154776.jpg`, enviada pelo fundador), recortada só no retrato (sem a marca «@magic.cg», sem nome nem contactos impressos), em cartaz P&B fotocopiado (`recorte_foto.py` do kit, escala uniforme, sem recortar a pessoa). Entra como cartaz principal da cena «quem é» (7,0 s, com «ESTE É ELE.») e na assinatura final.
+- **Cartas**: novo `peca_carta_recortada` (no kit): carta inteira dentro de margem branca cortada à tesoura. Gancho com a Vendilion Clique grande; seis cartas-herói a 600 px, uma de cada vez por cima da anterior, com etiqueta «n/54 · nome» (17,1–23,4 s); as outras 47 numa pilha rápida em ordem de lançamento, 560 px, 0,125 s cada (36,45–42,3 s). O mosaico de cartas pequenas saiu.
+- Duração: 48,63 s + fecho = **52,50 s**.
+- QC (`qc_video.py --frente lambe`): 1080×1920, 30 fps, fecho a 48,63 s; −21,0 LUFS, pico real −7,8 dBTP (≤ −6 da bíblia; P1 de loudness aceite). Folha de contacto conferida: corrigida a colisão das etiquetas das cartas com os textos da herança e o título «E NO MAGIC? 54 ILUSTRAÇÕES» que saía do papel.
+- Ficheiros (não versionados; conversa claude.ai de 26/11/2026): `ll-art21_v4_foto.mp4`, `ll-art21_v4_foto_mudo.mp4`, `ll-art21_v4_semfoto.mp4`, folha de contacto.
+- **Autorização da foto: continua não confirmada** (ver «Fotografia e autorização», V2). Publicável sem condições: `ll-art21_v4_semfoto.mp4`. A versão com foto publica-se depois de registar a autorização do artista (ou de quem detém a foto) em `lambe-lambe/autorizacoes/`.
+- Legenda e comentário fixado: os da V2. Texto alternativo: `texto_alternativo_v4.txt`.
+
 ## Handoff
 
 ```

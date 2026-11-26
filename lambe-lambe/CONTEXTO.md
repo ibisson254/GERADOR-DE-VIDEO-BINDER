@@ -36,7 +36,7 @@ No fim de cada lambe, enviar ao fundador, separados e prontos a copiar: capa, le
 
 ## 3. Formatos já usados
 
-**Padrão de vídeo (26/11/2026, decisão do fundador):** todos os vídeos 9:16 do Lambe-lambe seguem a linguagem do LL-ECO01 e são feitos com `lambe-lambe/kit_video/motor_video.py` (instruções em `kit_video/LEIA-ME.md`): muro rosa; cada cena abre com um cartaz grande colado por cima do anterior (creme, kraft, preto, amarelo ou verde); faixas de papel com texto, cartas e autocolantes voam e batem no muro com mola e sombra; texto carimbado; câmara com recuo de abertura (objeto em tela cheia no quadro 0) e tremor em cada impacto; efeitos sintetizados próprios; fecho do scanner. Primeiras aplicações: LL-ECO01 e LL-ART21 V3. Os formatos abaixo continuam válidos como conteúdo, mas passam a ser montados neste padrão.
+**Padrão de vídeo (26/11/2026, decisão do fundador):** todos os vídeos 9:16 do Lambe-lambe seguem a linguagem do LL-ECO01 e são feitos com `lambe-lambe/kit_video/motor_video.py` (instruções em `kit_video/LEIA-ME.md`): muro rosa; cada cena abre com um cartaz grande colado por cima do anterior (creme, kraft, preto, amarelo ou verde); faixas de papel com texto, cartas e autocolantes voam e batem no muro com mola e sombra; texto carimbado; câmara com recuo de abertura (objeto em tela cheia no quadro 0) e tremor em cada impacto; efeitos sintetizados próprios; fecho do scanner. Primeiras aplicações: LL-ECO01 e LL-ART21 V3/V4. Cartas grandes, uma de cada vez, coladas por cima da anterior e recortadas à mão (margem branca cortada à tesoura); nada de cartas pequenas lado a lado (fundador, 26/11/2026, 23:27). Os formatos abaixo continuam válidos como conteúdo, mas passam a ser montados neste padrão.
 
 | Formato | Descrição |
 |---|---|

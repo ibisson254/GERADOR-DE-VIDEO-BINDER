@@ -10,6 +10,8 @@ Decisão do fundador (26/11/2026, 22:41): «torne padrão esse vídeo para todos
 
 ## Regras
 - Zona segura do texto: y 280–1500, x 80–1000 (cabe nos Stories e nos Reels).
+- Cartas grandes: `peca_carta_recortada(png, larg)` (carta inteira dentro de uma margem branca cortada à tesoura, fita nos cantos de cima). **Uma carta de cada vez**, grande (≥ 560 px de largura), colada por cima da anterior; nada de cartas lado a lado pequenas nem mosaicos ilegíveis (pedido do fundador, 26/11/2026, 23:27). Uma etiqueta curta por carta (nº, nome) fora da carta.
+- Foto de pessoa: cartaz P&B fotocopiado (`kit_carrossel/recorte_foto.py`, máscara retangular), só com autorização da imagem registada para publicar.
 - Carta inteira, sem filtro; fita só nos cantos de cima; nada sobre a arte nem sobre o rodapé (artista e ©). Para repetir cartas no mesmo sítio, colar a nova **por cima e do mesmo tamanho**.
 - Texto: nunca maior do que o papel (o `caixa()` centra; use `white-space:nowrap` em palavras longas e confira na folha de contacto).
 - Som: `audio=True` gera os efeitos (papel, cola, autocolante, carimbo) + leito de ar; pico real ≤ −6 dBFS verificado depois do AAC. `som='nada'` para peças em série (mosaicos).
