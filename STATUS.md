@@ -6,14 +6,15 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Última sessão
 
-**LL-ART21 «Will Murai — Além das cartas» (26/11/2026)**: CONCLUÍDO, à espera de publicação. É o primeiro Reel documental do Lambe-lambe (piloto, `nucleo/DECISOES.md` 26/11 19h). Pauta e roteiro vieram do ChatGPT com três correções de factos; não tem voz e gastou 0 créditos; 57,87 s, QC sem problemas.
+**Fórmula dos combos + MB-EP19 «O Robô Que Não Morre» (26/11/2026, 21h45)**: CONCLUÍDO, à espera de publicação. «Episódio de combo» passa a padrão recorrente (não exclusivo) do Mana & Burn (`manaburn/PERFIL.md`; `nucleo/DECISOES.md` 21:45). MB-EP19: Mikaeus, the Unhallowed + Triskelion, escolhido entre 3 candidatos; vozes 1.112 créditos; 50,90 s, QC sem P0/P1. MB-EP18 verificado sem alterações; re-render das vozes já pagas (0 créditos).
 
-**Instruções das plataformas (26/11, 17h)** — no repositório; **falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` nas instruções do projeto claude.ai e `nucleo/prompts/CHATGPT.md` no ChatGPT. Roteiro vindo do ChatGPT: `nucleo/SHOWRUNNER.md` §4.3 + `nucleo/modelos/PACOTE_ROTEIRO.md`.
+**Falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` (claude.ai) e `nucleo/prompts/CHATGPT.md` (ChatGPT).
 
 ## Prontos, à espera do fundador (publicação ou envio)
 
 | ID | O que falta | Onde |
 |---|---|---|
+| MB-EP19 O Robô Que Não Morre | escuta e publicação (`utm_campaign=MB-EP19`); não publicar no mesmo dia do MB-EP18 | `manaburn/episodios/ep19_robo_imortal/` |
 | LL-ART21 Will Murai (Reel piloto) | ver e publicar (`utm_campaign=LL-ART21`); música no Instagram; locução opcional do fundador | `lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/` |
 | MB-EP18 O Lagarto Infinito | escuta e publicação; confirmar preços na LigaMagic antes de citar valores | `manaburn/episodios/ep18_lagarto_infinito/` |
 | MB-EP17 React @magicamador | ouvir o corte aos 43,6 s; pedir ao parceiro o OK do âmbito + collab; resposta em `manaburn/autorizacoes/2026-11-24_magicamador_react.md` (se recusar: arquivar) | `manaburn/episodios/ep17_react_magicamador/` |
@@ -62,4 +63,4 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Handoff
 
-Último: 26/11/2026 (19h), LL-ART21, no fim de `lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ficha.md`. Anterior: MB-EP18 (`manaburn/episodios/ep18_lagarto_infinito/ficha.md`). Anteriores: `comum/status_arquivo.md` («Handoff»).
+Último: 26/11/2026 (21h45), MB-EP19 + fórmula dos combos, no fim de `manaburn/episodios/ep19_robo_imortal/ficha.md`. Anterior: LL-ART21 (`lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ficha.md`). Anteriores: `comum/status_arquivo.md` («Handoff»).

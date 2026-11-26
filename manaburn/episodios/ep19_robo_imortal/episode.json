@@ -1,0 +1,31 @@
+{
+ "schema": 2,
+ "versao": "MB-EP19 · O Robô Que Não Morre (26/11/2026)",
+ "chamada": "o robô que não morre",
+ "falas": [
+  {"quem": "B", "tags": "[shouting]", "legenda": "Esse robô atira *duas vezes* nele mesmo… morre… e volta pra *sempre*!"},
+  {"quem": "M", "tags": "[bored]", "legenda": "É o *Mike e Trike*. O Mikaeus dá *undying* pras outras criaturas não humanas.", "tts": "É o Máik e Tráik. O Micaéus dá ândaiin pras outras criaturas não humanas."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Undying?! Então tudo volta *toda vez*! Bane!", "tts": "Ândaiin?! Então tudo volta toda vez! Bâne!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "*Lê a carta.* Só volta se morreu *sem marcador +1/+1*.", "tts": "Lê a carta. Só volta se morreu sem marcador mais um, mais um."},
+  {"quem": "B", "tags": "[shouting]", "legenda": "Mas o Mikaeus *dá* +1/+1! Pronto, tem marcador!", "tts": "Mas o Micaéus dá mais um, mais um! Pronto, tem marcador!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "*Bônus* não é *marcador*. Tá na ruling. O undying funciona.", "tts": "Bônus não é marcador. Tá na rúling. O ândaiin funciona."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "E esse robô? *Seis manas* num *1/1*?!", "tts": "E esse robô? Seis manas num um barra um?!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Entra com *três marcadores*. Tira um: *1 de dano* em qualquer alvo.", "tts": "Entra com três marcadores. Tira um: um de dano em qualquer alvo."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Tirou todos, ficou sem marcador… e *não morreu*, gênio!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Porque os *dois últimos* tiros vão *nele*. Morre sem marcador… e volta com *quatro*."},
+  {"quem": "B", "tags": "[shouting]", "legenda": "Quatro?! *Dois* na mesa, *dois* nele… e *repete*?!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Sem gastar mana, até a mesa *zerar*. Com *Rest in Peace* na mesa, ele nem morre: vai pro *exílio*.", "tts": "Sem gastar mana, até a mesa zerar. Com Rést in Pís na mesa, ele nem morre: vai pro exílio."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Pergunta: na *primeira* volta, a mesa toma *A*, um de dano, ou *B*, dois?", "tts": "Pergunta: na primeira volta, a mesa toma Á, um de dano, ou Bê, dois?"},
+  {"quem": "M", "tags": "[bored]", "legenda": "Comenta aí."}
+ ],
+ "gap": [0, 0.0, -0.06, 0.0, -0.08, 0.02, -0.08, 0.02, -0.08, 0.02, -0.06, 0.02, 0.0, 0.38],
+ "ins": [[2, 0.1], [4, 0.1], [6, 0.1], [8, 0.1], [10, 0.1], [12, 0.1]],
+ "respiro_max": 0.1,
+ "tempo": {"B": 1.1, "M": 1.15},
+ "mix": {"intro_db": 0, "fala_db": -14, "pausa_db": -6, "fecho_db": 0},
+ "sfx": {"tv": true, "destaque": true, "carta": "flick", "raiva": true},
+ "outro": {"scanner": 0, "hold": 2.75},
+ "abertura": {"ate": 0.42},
+ "sfx_flip": [[1, 0.035], [6, 0.035]],
+ "sfx_destaque": [[1, 0.1], [3, 0.08], [6, 0.12], [7, 0.1]]
+}

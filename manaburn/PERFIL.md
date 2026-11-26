@@ -51,6 +51,17 @@ Todas as capas do Mana & Burn, de episódios novos ou pedidas para episódios an
 
 Exemplo: `python3 capas/capa_mb.py --scryfall cmd/215 --frase "O dragão que come" --foco "terreno" --selo "−2 por pancada" --ep 11 --tag Commander --saida MB_EP11_CAPA.png`
 
+## Episódio de combo (padrão recorrente desde 26/11/2026)
+
+Decisão do fundador de 26/11/2026 (`nucleo/DECISOES.md`, 21:45). Um dos formatos da série, não o único: notícias, preço, cultura e o Giro continuam. Referências: MB-EP13 (desempenho), MB-EP18 e MB-EP19 (fichas com a hipótese a testar).
+
+- **Fórmula:** carta ou par improvável → interação surpreendente → demonstração passo a passo → condição de vitória → reação do Burn → pergunta final. A estrutura de falas é referência, não guião fixo: gancho absurdo com número (Burn) → «isso funciona?» → Mana lê a 1.ª peça → Burn aponta a aparente impossibilidade → Mana traz a peça seguinte → painéis do loop → vitória na TV → reação → pergunta.
+- **Escolha do combo:** 2–3 peças centrais; resultado que se vê (fichas, dano, vida, grimório); pelo menos 3 correções reais do Mana (regras que a mesa erra); diferença clara de mecânica, cores e vitória face aos combos já feitos (MB-EP13 limite de mão + descarte; MB-EP18 fichas + drenagem por entrada; MB-EP19 morte e retorno com undying). O mais famoso do formato não ganha por ser famoso: pesa surpresa, clareza e originalidade (rubrica §2.4).
+- **Rigor:** Oracle e rulings (Scryfall), Commander Spellbook/EDHREC com data, Regras Completas quando há regra (ex.: 700.4, 903.7). Distinguir loop infinito de vitória automática; dizer se o loop é opcional («you may»); dizer como a mesa o interrompe (pilha, exílio, cemitério fechado). Nunca «impossível de parar». Sem lista de 100 cartas, preços ou orçamento sem fonte; números de mesa marcados «EXEMPLO».
+- **Visual:** abertura de carta com a linha do motor do combo e um selo com o número; painéis do loop com contador real (marcadores, fichas, vida) na ordem exata da fala; a vitória na TV SAL (vida 40 → 0); medidor só com dado real (Salt ÷ 4 ou, sem Salt, o bracket mínimo do combo com fonte).
+- **Pergunta final:** A/B de ação («mata o lagarto / mata o cavaleiro») ou de conta («primeira volta: 1 ou 2?»), sem repetir o tipo do episódio anterior de combo; resposta e passo a passo no comentário fixado.
+- **Métrica:** respostas, guardados e partilhas às 48 h e aos 7 dias contra o MB-EP13, com idade e impulso equivalentes (`comum/insights/LEIA-ME.md`).
+
 ## Abertura de carta (padrão desde 21/11/2026)
 
 Decisão do fundador de 21/11/2026, 02:51 (`nucleo/DECISOES.md`); é a versão do Mana & Burn da **abertura de objeto** de todas as frentes (`nucleo/SHOWRUNNER.md` §4.1.1, 16:31). O vídeo abre com a carta de que se fala **em tela cheia**, antes da sala, com `EP.abertura` no `episode.js` e `"abertura": {"ate": …}` no `episode.json` (o mesmo valor).

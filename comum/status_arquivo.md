@@ -4,6 +4,14 @@ Histórico do `STATUS.md` até 26/11/2026 (14h30), copiado sem alterações quan
 
 ---
 
+## Arquivado a 26/11/2026 (21h45): «Última sessão» do STATUS
+
+**LL-ART21 «Will Murai — Além das cartas» (26/11/2026)**: CONCLUÍDO, à espera de publicação. É o primeiro Reel documental do Lambe-lambe (piloto, `nucleo/DECISOES.md` 26/11 19h). Pauta e roteiro vieram do ChatGPT com três correções de factos; não tem voz e gastou 0 créditos; 57,87 s, QC sem problemas.
+
+**Instruções das plataformas (26/11, 17h)** — no repositório; **falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` nas instruções do projeto claude.ai e `nucleo/prompts/CHATGPT.md` no ChatGPT. Roteiro vindo do ChatGPT: `nucleo/SHOWRUNNER.md` §4.3 + `nucleo/modelos/PACOTE_ROTEIRO.md`.
+
+---
+
 ## Arquivado a 26/11/2026 (17h50): «Última sessão» do STATUS
 
 **Missão de engenharia (26/11/2026)** — CONCLUÍDA. Motores mais rápidos com a mesma imagem: Mana & Burn `render.py` em paralelo (371 s → 240 s), Meta em Curto `mc_render.py` (105 s → 50 s; quadros iguais píxel a píxel); teste `oraculo/motor/mc_render_regressao.py`. Propostas E1–E3 aprovadas e aplicadas (STATUS ativo, Radar Editorial Semanal, originalidade verificada uma vez). Relatório: `nucleo/auditorias/2026-11-26_engenharia.md`.

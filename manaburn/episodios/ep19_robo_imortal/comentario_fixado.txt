@@ -1,0 +1,26 @@
+Na primeira volta, a mesa toma A: 1 de dano, ou B: 2 de dano? Responde antes de abrir o resto.
+
+Como o combo funciona (Mike e Trike):
+1. Mikaeus, the Unhallowed em campo: suas outras criaturas não humanas ganham +1/+1 e undying. O Triskelion é um Construto, então conta.
+2. O Triskelion entra com três marcadores +1/+1 (com o Mikaeus, é um 5/5).
+3. Tire um marcador: 1 de dano em qualquer alvo. Os primeiros tiros vão nos oponentes.
+4. Os dois últimos vão nele mesmo. Sem marcadores, ele é um 2/2 com 2 de dano: morre.
+5. Morreu sem marcador +1/+1: o undying devolve ele com um marcador, mais os três com que ele sempre entra. São quatro.
+6. Dois tiros na mesa, dois nele. Volta ao passo 4. Sem gastar mana.
+
+Resposta da pergunta: A. Recém-jogado, o Triskelion tem só três marcadores: um vai para a mesa e dois nele. A partir da segunda volta, são dois por volta.
+
+Por que funciona: a ruling do Mikaeus (07/12/2018) diz que o +1/+1 que ele dá não é marcador e não impede o undying. E o Walking Ballista não faz o mesmo: ele volta com um marcador só.
+
+Como parar: cada ativação e o gatilho do undying usam a pilha. Exilar o Triskelion ou o Mikaeus em resposta corta o loop. Com Rest in Peace na mesa, o robô vai para o exílio em vez do cemitério: ele nem "morre", e o undying não dispara.
+
+Faixa de poder: combo de duas cartas, fora dos brackets 1 e 2 (EDHREC, 26/11/2026).
+
+Texto Oracle:
+Mikaeus, the Unhallowed: "Other non-Human creatures you control get +1/+1 and have undying. (When a creature with undying dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)"
+Triskelion: "This creature enters with three +1/+1 counters on it. Remove a +1/+1 counter from this creature: It deals 1 damage to any target."
+Rest in Peace: "If a card or token would be put into a graveyard from anywhere, exile it instead."
+
+Fontes (26/11/2026): Oracle e rulings no Scryfall; combo 628-1495 no Commander Spellbook e no EDHREC (8,69 mil decks); Regras Completas 903.7 (40 de vida no Commander).
+
+Achou o easter egg do relógio da TV SAL?
