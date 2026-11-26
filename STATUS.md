@@ -61,4 +61,4 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Handoff
 
-Último: 26/11/2026, missão de engenharia, no fim de `nucleo/auditorias/2026-11-26_engenharia.md` (adenda: E1–E3 aplicados). Anteriores: `comum/status_arquivo.md` («Handoff»).
+Último: 26/11/2026 (17h55), MB-EP18, no fim de `manaburn/episodios/ep18_lagarto_infinito/ficha.md`. Anteriores: `comum/status_arquivo.md` («Handoff»).

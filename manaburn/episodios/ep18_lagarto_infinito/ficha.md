@@ -145,3 +145,40 @@ Kit numa cópia de trabalho (manaburn/ sem episodios/), `episode.js`/`episode.js
 - Métrica principal: respostas A/B; guardados e partilhas às 48 h e aos 7 dias contra MB-EP15/MB-EP16
 - Resultado observado: 
 - Aprendizagem: 
+
+## Handoff
+
+```
+HANDOFF · 26/11/2026, 17h55 (Brasília) · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main · último commit fcd8069 (conferido no remoto: sim; workflow validar verde, run 45870577393)
+
+Objetivo atual: MB-EP18 pronto para o fundador publicar.
+
+Conteúdos tocados (comum/REGISTRO_EDITORIAL.md):
+- MB-EP18 · (novo) → CONCLUÍDO
+
+Encerramento:
+- MB-EP18 · memoria.py encerramento: OK
+- Vídeo e capa finais: entregues na conversa do projeto claude.ai a 26/11/2026 (ficheiros do projeto, manaburn/ep18/); capa também nesta pasta. Vídeo não versionado.
+
+Decisões tomadas nesta sessão:
+- Orçamento do deck até R$ 300 e vozes liberadas (fundador, cartão de 26/11 17:18). Registada na ficha; sem entrada em nucleo/DECISOES.md (decisão do episódio, não da série).
+- Corpse Knight mantido como finalizador; Mirkwood Bats só como alternativa no comentário fixado (ficha, «Auditoria técnica»).
+- `ate` da abertura 0,55 (saída aos 2,73 s, acima dos 2,5 s da skill) para cair em «infinitas» (ficha, QC).
+
+Documentos consultados:
+- AGENTS.md, STATUS.md, nucleo/SHOWRUNNER.md, manaburn/PERFIL.md, manaburn/LEIA-ME.md, nucleo/modelos/FICHA_EPISODIO.md, nucleo/modelos/HANDOFF.md, comum/REGISTRO_EDITORIAL.md, comum/easter_eggs.md, fichas MB-EP15/16/17, comum/radar/LEIA-ME.md
+
+Alterações realizadas:
+- manaburn/episodios/ep18_lagarto_infinito/ · episódio completo (ficha, deck, telas, episode.*, faixas, capa, pacote de publicação) · commit fcd8069
+- comum/REGISTRO_EDITORIAL.md, comum/historico.md, comum/easter_eggs.md, STATUS.md, comum/status_arquivo.md, comum/radar/2026-W48.md · commit fcd8069
+
+Insights (domingo): não se aplica (quinta-feira)
+
+Tarefas pendentes:
+- Escutar e publicar o MB-EP18 · fundador
+- Confirmar os preços do deck na LigaMagic (colar lista_ligamagic.txt) antes de citar valores em público · fundador
+- Comprar ou não o Sam, Loyal Attendant (só uma oferta, R$ 237,56) ou trocar pelo substituto de DECK.md · fundador
+
+Próximo passo concreto: publicar o MB-EP18 com legenda.txt e comentario_fixado.txt desta pasta.
+```
