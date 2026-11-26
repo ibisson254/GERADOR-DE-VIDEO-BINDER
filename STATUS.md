@@ -8,6 +8,8 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 **Missão de engenharia (26/11/2026)** — CONCLUÍDA. Motores mais rápidos com a mesma imagem: Mana & Burn `render.py` em paralelo (371 s → 240 s), Meta em Curto `mc_render.py` (105 s → 50 s; quadros iguais píxel a píxel); teste `oraculo/motor/mc_render_regressao.py`. Propostas E1–E3 aprovadas e aplicadas (STATUS ativo, Radar Editorial Semanal, originalidade verificada uma vez). Relatório: `nucleo/auditorias/2026-11-26_engenharia.md`.
 
+**Instruções das plataformas (26/11, 17h)** — no repositório; **falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` nas instruções do projeto claude.ai e `nucleo/prompts/CHATGPT.md` no ChatGPT. Roteiro vindo do ChatGPT: `nucleo/SHOWRUNNER.md` §4.3 + `nucleo/modelos/PACOTE_ROTEIRO.md`.
+
 ## Prontos, à espera do fundador (publicação ou envio)
 
 | ID | O que falta | Onde |

@@ -189,6 +189,17 @@ Feita no roteiro, antes de gastar créditos. Cada item é uma pergunta de sim/n�
 
 Corta-se: informação que não muda a compreensão; frases genéricas («Magic é incrível», «vamos ver»); introduções antes da evidência; conclusões sem prova; repetições; efeitos sem função (som ou animação que não marca uma revelação).
 
+### 4.3 Roteiro que chega de outro agente (ex.: ChatGPT) (desde 26/11/2026)
+
+O fundador pode pensar a pauta e o roteiro noutro agente e trazê-los para produzir. O agente que produz **não refaz** o que veio feito (ideação, candidatos, rubrica, escrita do roteiro) e faz só o que o outro agente não pode fazer ou não fez:
+
+1. **Receber:** o ideal é o pacote de `modelos/PACOTE_ROTEIRO.md`; se vier só o texto do roteiro, preencher os campos em falta a partir da conversa e perguntar só o que não estiver escrito.
+2. **ID e originalidade:** reservar o ID no registo e correr `memoria.py pauta` (§2.3) **uma vez** (o ChatGPT não corre scripts). Bloqueio → mostrar ao fundador antes de produzir.
+3. **Factos:** confirmar cada afirmação nas fontes (texto e impressão da carta no Scryfall; números com fonte, data, período e amostra). O que não se confirma sai ou fica marcado; nunca se produz sobre um número não verificado.
+4. **Revisão narrativa (§4.2) e encaixe no motor:** corrigir só o que for P1 (falha de um critério da §4.2, gancho §4.1 ou abertura de objeto §4.1.1, fórmula e duração da bíblia, fala que não cabe no tempo). Não se reescreve tom, piadas nem estrutura que passem nos critérios.
+5. **Registar:** na ficha, tabela «Alterações ao roteiro de origem» (rascunho · final · porquê), como na ficha do MC-EP04.
+6. **Aprovação:** «aprovado» no outro agente vale para a pauta e para o roteiro **tal como veio**. Se o passo 4 mudou o sentido de uma fala, uma afirmação ou o gancho, mostra-se a tabela ao fundador antes de gastar créditos de voz; mudanças só de forma (tempo, pronúncia, pontuação) não pedem nova aprovação.
+
 ## 5. Manter o estado
 
 - Decisão nova do fundador que muda uma regra → entrada em `DECISOES.md` + alteração no documento canónico que ela afeta.

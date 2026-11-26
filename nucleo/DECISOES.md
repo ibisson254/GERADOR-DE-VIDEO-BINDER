@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 26/11/2026 (16:55) · Roteiro pensado no ChatGPT e produzido no Claude; instruções das plataformas revistas
+
+**O quê:** (1) Nova `nucleo/SHOWRUNNER.md` §4.3: quando o roteiro chega de outro agente, quem produz não refaz ideação nem roteiro; faz ID, `memoria.py pauta` (uma vez), verificação dos factos, revisão narrativa §4.2 e encaixe no motor, corrigindo só o P1, e regista as alterações na ficha (tabela «Alterações ao roteiro de origem», agora em `modelos/FICHA_EPISODIO.md`). «Aprovado» no outro agente vale para o roteiro tal como veio; mudança de sentido volta ao fundador antes da voz. (2) Novo `nucleo/modelos/PACOTE_ROTEIRO.md`: formato de entrega do ChatGPT para o Claude. (3) `nucleo/prompts/CLAUDE_PROJECT.md` e `nucleo/prompts/CHATGPT.md` revistos (STATUS ativo, radar semanal, pacote de roteiro, economia de leitura).
+**Porquê:** fundador, 26/11/2026 (16:55): «Precisamos atualizar as instruções aqui do Claude e o showrunner do chatgpt [...] as vezes crio o roteiro do EPISÓDIO lá e depois trago pra cá o roteiro já pensando». Precedente: MC-EP04 (roteiro do ChatGPT, alterações registadas na ficha).
+**Impacto:** o trabalho feito no ChatGPT não é repetido no Claude (menos uso do Claude Pro); a verificação de factos e a originalidade continuam obrigatórias antes de produzir. O fundador cola os textos novos nas instruções do projeto claude.ai e do ChatGPT.
+
 ## 26/11/2026 (14:03) · STATUS só com o estado ativo; Radar Editorial Semanal; originalidade verificada uma vez
 
 **O quê:** (1) **E1** · o `STATUS.md` passa a guardar só o estado ativo (em curso, depende do fundador, próximo passo; alvo ≤ 6 KB); o histórico (36,6 KB até 26/11) foi copiado sem alterações para `comum/status_arquivo.md`, onde entram no topo as secções que fecham (`AGENTS.md` §4). (2) **E2** · Radar Editorial Semanal: a escuta em três regiões (`SHOWRUNNER.md` §2.4 2a) parte de `comum/radar/<AAAA-Www>.md` quando tem menos de 7 dias e só se atualiza o que mudou; linhas com validade; a escolha da pauta não muda. (3) **E3** · a auditoria de originalidade corre uma vez (§2.3) e a revisão narrativa (§4.2) e o checklist A citam o resultado com a data; repete-se só se a pauta mudar de objeto, tema ou ângulo.

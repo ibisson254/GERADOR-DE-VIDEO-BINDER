@@ -33,7 +33,7 @@ Ponto de entrada para qualquer agente (Claude, ChatGPT ou outro). As instruçõe
 ## 2. Produzir um conteúdo
 
 1. Pauta: auditoria de originalidade (`python3 comum/ferramentas/memoria.py pauta …`) e linha nova em `comum/REGISTRO_EDITORIAL.md`.
-2. Ficha a partir de `nucleo/modelos/FICHA_EPISODIO.md`; estratégia pela constituição §3; **gancho visual (7 campos) e revisão narrativa antes do roteiro e da voz** (`nucleo/SHOWRUNNER.md` §4.1–4.2).
+2. Ficha a partir de `nucleo/modelos/FICHA_EPISODIO.md`; estratégia pela constituição §3; **gancho visual (7 campos) e revisão narrativa antes do roteiro e da voz** (`nucleo/SHOWRUNNER.md` §4.1–4.2). Roteiro pensado noutro agente (ex.: ChatGPT): não se refaz; segue `nucleo/SHOWRUNNER.md` §4.3.
 3. Produzir; validar com `nucleo/CHECKLIST_QUALIDADE.md` e os critérios do perfil.
 4. Entregar: vídeo, capa, legenda, comentário fixado, texto alternativo, fontes, e as limitações reais.
 5. **Encerramento obrigatório** (`nucleo/SHOWRUNNER.md` §6): pacote e ficha na pasta do episódio, registo, histórico, STATUS, handoff, `memoria.py encerramento <ID>` OK, commit enviado e conferido no GitHub. Nunca vídeos renderizados. Não se declara um episódio arquivado sem o commit conferido.

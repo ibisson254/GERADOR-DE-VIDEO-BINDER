@@ -58,6 +58,10 @@ Abertura de objeto* (§4.1.1): objeto em tela cheia · prova marcada e selo · i
 ## Roteiro definitivo*
 (Texto final tal como foi gravado, ou caminho do ficheiro: `roteiro.json`, `episode.json`, `guiao_definitivo.md`.)
 
+## Alterações ao roteiro de origem (só se o roteiro veio de outro agente; `nucleo/SHOWRUNNER.md` §4.3)
+| Rascunho | Final | Porquê |
+|---|---|---|
+
 ## Fontes e evidências*
 | Afirmação | Tipo (facto/cálculo/inferência/opinião/previsão) | Fonte (URL) | Data |
 |---|---|---|---|

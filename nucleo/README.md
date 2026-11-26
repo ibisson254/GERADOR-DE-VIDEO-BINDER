@@ -12,7 +12,7 @@ Um documento canónico por matéria. Este índice diz onde cada uma vive; nada s
 | Memória editorial (todos os conteúdos e estados) | `../comum/REGISTRO_EDITORIAL.md` |
 | Métricas do Instagram (snapshots semanais) | `../comum/insights/` |
 | Controlo de qualidade | `CHECKLIST_QUALIDADE.md` |
-| Modelos (ficha, perfil, handoff, previsões de pré-release) | `modelos/` |
+| Modelos (ficha, perfil, handoff, previsões de pré-release, pacote de roteiro vindo do ChatGPT) | `modelos/` |
 | Instruções para o projeto claude.ai e para o ChatGPT | `prompts/` |
 | Configuração técnica das frentes | `../series.yaml` |
 | Estado atual do estúdio | `../STATUS.md` |
