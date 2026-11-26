@@ -102,3 +102,11 @@ Tarefas pendentes:
 
 Próximo passo concreto: o fundador responde a E1–E3; se aprovar E1, mover as secções fechadas do STATUS.md para comum/status_arquivo.md.
 ```
+
+## Adenda · 26/11/2026 (14:10) · E1–E3 aprovados e aplicados
+
+Fundador, 14:03: «Aprovado». Aplicado e registado em `nucleo/DECISOES.md` (26/11, 14:03):
+- **E1:** `STATUS.md` 36,7 KB → 5,8 KB (só o estado ativo); histórico integral em `comum/status_arquivo.md`; regra em `AGENTS.md` §4.
+- **E2:** Radar Editorial Semanal em `nucleo/SHOWRUNNER.md` §2.4 2a; modelo e regras em `comum/radar/LEIA-ME.md`. Nenhum radar criado com dados: o primeiro é feito pelo primeiro episódio da semana, com fontes lidas na sessão.
+- **E3:** `nucleo/SHOWRUNNER.md` §4.2 («Originalidade») e `nucleo/CHECKLIST_QUALIDADE.md` A citam o resultado do `memoria.py pauta` em vez de o repetir.
+- E4 e E5 ficam como estavam (E4 já existia; E5 depende de uma máquina com mais núcleos).

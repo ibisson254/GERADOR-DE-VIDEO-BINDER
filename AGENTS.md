@@ -60,5 +60,6 @@ Frente nova: fim de `nucleo/CATALOGO_EDITORIAL.md`. Mudança de regra: `nucleo/D
 
 - Clonar com profundidade 1 e ler `STATUS.md` antes de qualquer outra coisa.
 - No fim de cada sessão: commit, `STATUS.md` atualizado e handoff no formato de `nucleo/modelos/HANDOFF.md`.
+- O `STATUS.md` guarda só o estado ativo (≤ 6 KB); o que fecha passa para o topo de `comum/status_arquivo.md` (decisão de 26/11/2026). Não se lê o arquivo no arranque, só quando um item antigo é preciso.
 - Nada do que importa fica só na conversa: decisões em `nucleo/DECISOES.md`, conteúdos e estados em `comum/REGISTRO_EDITORIAL.md`, cronologia em `comum/historico.md`, números em `comum/insights/`, episódios nas fichas.
 - Antes de fechar: `python3 comum/ferramentas/memoria.py validar` sem erros.

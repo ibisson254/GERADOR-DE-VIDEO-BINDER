@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 26/11/2026 (14:03) · STATUS só com o estado ativo; Radar Editorial Semanal; originalidade verificada uma vez
+
+**O quê:** (1) **E1** · o `STATUS.md` passa a guardar só o estado ativo (em curso, depende do fundador, próximo passo; alvo ≤ 6 KB); o histórico (36,6 KB até 26/11) foi copiado sem alterações para `comum/status_arquivo.md`, onde entram no topo as secções que fecham (`AGENTS.md` §4). (2) **E2** · Radar Editorial Semanal: a escuta em três regiões (`SHOWRUNNER.md` §2.4 2a) parte de `comum/radar/<AAAA-Www>.md` quando tem menos de 7 dias e só se atualiza o que mudou; linhas com validade; a escolha da pauta não muda. (3) **E3** · a auditoria de originalidade corre uma vez (§2.3) e a revisão narrativa (§4.2) e o checklist A citam o resultado com a data; repete-se só se a pauta mudar de objeto, tema ou ângulo.
+**Porquê:** fundador, 26/11/2026 (14:03): «Aprovado», sobre as propostas E1–E3 da missão de engenharia (`nucleo/auditorias/2026-11-26_engenharia.md` §E). O limite de utilização do Claude Pro tem sido atingido antes do fim da semana; a leitura de arranque custava ≈ 30 mil tokens, um terço no `STATUS.md`.
+**Impacto:** ≈ 9 mil tokens a menos por sessão (STATUS 36,7 KB → 5,8 KB); a escuta deixa de ser refeita do zero em cada episódio da mesma semana; a mesma verificação de originalidade deixa de aparecer 4 vezes. Nenhuma proteção sai: o arquivo guarda todo o histórico, o radar tem validade e a originalidade continua obrigatória. Sem mudança de identidade de nenhuma frente.
+
 ## 23/11/2026 (18:10) · Lambe-lambe: cartaz de produto verde-esmeralda e selo oficial do Google Play (LL-ECO01 v2)
 
 **O quê:** no LL-ECO01, o cartaz da marca deixa o preto e passa a verde-esmeralda (#10B981 sobre papel), com Magic e BINDER Vision em etiquetas pretas e «ECOSSISTEMA» em faixa preta; entra o selo oficial «Disponível no Google Play» (pt-BR) no slide 7 e na chamada para ação do vídeo, sem alterações, com a nota de marca da Google. Fica como opção do Lambe-lambe para cartazes de produto (`lambe-lambe/CONTEXTO.md` §2); o cartaz preto continua válido.

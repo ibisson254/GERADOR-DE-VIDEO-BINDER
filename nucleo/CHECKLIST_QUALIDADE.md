@@ -19,7 +19,7 @@ Um conteúdo só está aprovado sem P0 e com os P1 corrigidos ou aceites. **Nenh
 - [ ] Série, classe de conteúdo e objetivo identificados (ficha, Etapa 1).
 - [ ] A pauta pertence ao território da série (perfil · "Fora do território").
 - [ ] Proposta de valor numa frase.
-- [ ] Auditoria de originalidade: `memoria.py pauta` livre (ou decisão do fundador registada) e linha no `comum/REGISTRO_EDITORIAL.md`; egg não repete `comum/easter_eggs.md`.
+- [ ] Auditoria de originalidade: a ficha cita o resultado de `memoria.py pauta` com a data (ou a decisão do fundador registada) e há linha no `comum/REGISTRO_EDITORIAL.md`; egg não repete `comum/easter_eggs.md`. Verificação única (`SHOWRUNNER.md` §2.3): só se repete se a pauta mudou de objeto, tema ou ângulo.
 - [ ] Fontes necessárias acessíveis **e números lidos antes de qualquer render** (nada de prévias com marcadores); se não, plano de bloqueio (constituição §11).
 - [ ] Texto da voz cabe na duração da frente antes de gravar (orçamento de caracteres no perfil da frente); uma geração por fala, aprovada com o custo.
 - [ ] Recursos do kit inspecionados e na versão atual.
