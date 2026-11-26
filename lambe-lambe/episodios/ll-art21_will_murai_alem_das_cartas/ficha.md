@@ -2,7 +2,7 @@
 
 ## Identificação
 - ID editorial: `LL-ART21`
-- Estado no registo: CONCLUÍDO (à espera de escuta e publicação)
+- Estado no registo: CONCLUÍDO (à espera de escuta e publicação) · **V2 em 26/11/2026 (secção «V2» abaixo); a V1 fica preservada e documentada**
 - Aprovação do fundador: escolheu Will Murai e a linguagem documental (pacote do ChatGPT, 26/11/2026); «Prossiga» às alterações ao roteiro (claude.ai, 26/11/2026, 18:19)
 
 ## Classificação
@@ -128,6 +128,81 @@ Versões: v1 tinha texto rosa no muro rosa (ilegível); v2 com a lupa a tocar a 
 - Publicar com `utm_campaign=LL-ART21` no link da bio, se for possível rodar o link nesse dia.
 - Ler na rotina de domingo: tempo médio de visualização, retenção aos 3 s, partilhas, guardados.
 - Decidir se o Reel documental passa a padrão de «Artistas de Magic», ao lado do carrossel.
+
+## V2 · reconstrução (26/11/2026, 22h–23h30)
+
+Autorizada pelo fundador (missão «LL-ART21 V2», claude.ai, 26/11/2026): a V1 não atingiu a qualidade visual e narrativa desejada. A V1 (`reel.py`, `ll-art21_v7.mp4`) continua intacta e passa a chamar-se **V1**; a V2 tem script e ficheiros próprios.
+
+### Motivo e diferenças V1 → V2
+| | V1 | V2 |
+|---|---|---|
+| Cartas | 3 | **todas as 54 ilustrações distintas** do Scryfall |
+| Estrutura | gancho → bio → herança → 3 cartas | gancho → bio e percurso → número + 6 cartas-herói → lado pessoal → «faltam 46» → galeria por mundo → montagem → mosaico das 54 → assinatura |
+| Foto do artista | nenhuma | recorte P&B do kit na versão privada (entra depois do nome, «ESTE É ELE.»; de novo na avó e na assinatura) |
+| Contador | — | etiqueta «n / 54» em cada carta (ordem de aparição) |
+| Duração | 54,0 s + fecho | 90,3 s + fecho (94,17 s) |
+| Som | −14,4 LUFS, −1,5 dBTP | −15,0 LUFS, **pico −6,4 dBFS** (regra da bíblia) |
+| Render | inteiro | por cenas com cache em disco (texto, cartas, foto e segmentos), folha de contacto automática |
+
+### Cartas
+- Consulta `artist:"Willian Murai"` (API Scryfall, paginada, 26/11/2026): 176 impressões, 53 cartas com arte distinta (`unique=art`), **54 ilustrações** por `illustration_id` (a Kytheon // Gideon tem as duas faces dele; as duas Jeering Instigator, KTK e UGIN, são artes diferentes). Catálogo completo com edição, nº, ano, crédito, URL, `illustration_id` e observação visual: `catalogo_cartas_v2.md` (gerado por `catalogo_cartas.py`).
+- **Usadas: 54 de 54.** Cartas-herói (individuais, 600 px): Master Biomancer, Prime Speaker Zegana, Reflector Mage, Gideon, Battle-Forged, Nissa, Nature's Artisan, Wrath of God; gancho: Vendilion Clique, Saheeli Rai; galeria por mundo: 29; montagem: 17; mosaico final: as 54.
+- Todas inteiras, PNG oficial sem filtro, fita só nos cantos de cima (nenhuma no mosaico), rodapé com artista e © livre.
+
+### Roteiro V2 (texto no ecrã; sem locução)
+| Tempo | Ecrã |
+|---|---|
+| 0–2,4 | Vendilion Clique inteira no muro · selo · «VOCÊ JÁ VIU ESTA ARTE.» |
+| 2,4–5,4 | Lupa no crédito impresso (MM2 · Willian Murai, 2,7 s) · «MAS SABE QUEM PINTOU?» |
+| 5,4–8,4 | Saheeli Rai · «Nos créditos das cartas: WILLIAN MURAI» → «No site dele, assina: WILL MURAI» |
+| 8,4–12,6 | foto + «ESTE É ELE.» (sem foto: cartaz WILL MURAI) · ILUSTRADOR E CONCEPT ARTIST · «Do Brasil» |
+| 12,6–16,0 | «Já trabalhou com» WIZARDS OF THE COAST · BLIZZARD · PHOENIX LABS |
+| 16,0–20,8 | Quadrinhos → publicidade → editoras → videogames (Shoutout LA) |
+| 20,8–24,2 | «E no Magic? 54 ILUSTRAÇÕES creditadas a ele no Scryfall.» · Vendilion + Saheeli (1/54, 2/54) · «Vamos ver todas.» |
+| 24,2–32,9 | 6 cartas-herói, 1,45 s cada, com nome · coleção · ano · nº (3/54 → 8/54) |
+| 32,9–53,8 | «MAS EXISTE UM LADO MAIS PESSOAL.» · terceira geração japonesa · nasceu e cresceu no Brasil (em 2021 vivia na Califórnia) · 秀樹 HIDEKI, nome dado pela avó · a avó foi a primeira da família a ir do Japão para o Brasil (+ foto) · site: cultura e história dos antepassados · HOMENAGEM a essa herança · Momotaro, Zen, Chrysanthemum |
+| 53,8–55,8 | «De volta às cartas: FALTAM 46.» |
+| 55,8–70,8 | Galeria por mundo: Ravnica, Theros, Tarkir, Zendikar, Innistrad, Magic Origins (9/54 → 37/54) |
+| 70,8–79,2 | Montagem: cartas sozinhas e em pares (38/54 → 54/54) |
+| 79,2–85,2 | Mosaico das 54 em ordem de lançamento · «54 ILUSTRAÇÕES em 53 cartas de Magic · de 2012 a 2016» |
+| 85,2–90,3 | (foto) WILL MURAI · o artista por trás DAS CARTAS · 3 cartas · faixa de créditos |
+| 90,3–94,17 | Fecho `comum/outro/outro_binder_916.mp4` |
+
+### Alterações técnicas
+- `reel_v2.py` (novo, só deste episódio): importa `reel.py` como biblioteca (matte, em_papel, na_faixa, muro, animação, efeitos) e o kit (`motor_padrao.carta/selo`, `recorte_foto.recorte`, `compor.rasgo_alpha`). Nenhum motor genérico novo; `reel.py` e o kit não foram alterados.
+- `catalogo_cartas.py` (novo): consulta paginada ao Scryfall, agrupamento por `illustration_id`, cache dos PNG (`<cache>/cartas/<illustration_id>.png`), verificação de ficheiros em falta, catálogo em JSON e Markdown.
+- Cache: peças (carta, lupa, foto, textos) em `.npz` por chave de conteúdo; cada cena em segmento H.264 próprio, refeito só se mudar; folha de contacto 2 q/s gerada no fim.
+- Som: reamostragem para 48 kHz antes do limitador e passa-baixo a 11 kHz (a 1.ª montagem da V2 dava picos de −4,2 dBFS); verificação automática do pico ≤ −6 dBFS no ficheiro final.
+- Comandos: `python3 -I catalogo_cartas.py <cache>` · `python3 -I reel_v2.py <cache> <saida.mp4> [--foto foto.png mascara.png] [--capa capa.png] [--cenas 3,7] [--roteiro]`.
+
+### Revisão da V2 (antes de fechar)
+A 1.ª montagem da V2 (87,9 s) foi vista inteira e corrigida: (1) 27 s seguidos só com texto (16,8–44 s) → as cartas-herói passaram para logo depois do percurso profissional e o lado pessoal ficou entre elas e a galeria; (2) pico de −4,2 dBFS → cadeia de som refeita; (3) «mora na Califórnia» assentava numa entrevista de 2021 → «em 2021, vivia na Califórnia (EUA)»; (4) a etiqueta «Vamos ver todas.» tapava o rodapé das duas cartas → cena reposicionada.
+
+### Fotografia e autorização
+- Fonte: imagem enviada pelo fundador na conversa claude.ai de 26/11/2026 (`1000154776.jpg`, 399×501), cartão de perfil com a marca «@magic.cg». Usado só o retrato; marca, nome impresso e contactos ficaram fora do recorte. Sem retoque nem geração por IA; escala uniforme.
+- **Autorização de publicação: não confirmada.** `ll-art21_v2_foto.mp4` é só para avaliação privada; **publicável: `ll-art21_v2_semfoto.mp4`**. Para publicar a versão com foto: autorização do artista (ou de quem detém a foto) em `lambe-lambe/autorizacoes/`.
+
+### QC V2 · `python3 -I comum/qc/qc_video.py <video> --frente lambe` (26/11/2026)
+| Critério | Alvo | sem foto | com foto | OK |
+|---|---|---|---|---|
+| Resolução / fps | 1080×1920, 30 | 1080×1920, 30 | 1080×1920, 30 | sim |
+| Duração | pela narrativa | 94,17 s (90,3 + fecho) | 94,17 s | sim |
+| Loudness | −14 ± 1 LUFS | −15,0 | −15,0 | sim |
+| Pico | ≤ −6 dBFS (bíblia) | −6,4 | −6,4 | sim |
+| Fecho | presente | 90,3 s (dif. 0,06) | 90,3 s (dif. 0,06) | sim |
+| Quadro 0 | carta real | Vendilion Clique inteira | idem | sim |
+| Descoberta do artista | primeiros segundos | crédito na lupa 2,7 s; «WILL MURAI» 7,1 s | idem | sim |
+| Cartas inteiras, sem filtro, rodapé livre | sim | conferido a olho nas 6 folhas de contacto | idem | sim |
+| Foto sem deformação | escala uniforme | — | sim | sim |
+| Texto cortado / ortografia / acentos | 0 | 0 (VOCÊ, JÁ, ILUSTRAÇÕES, HOMENAGEM, 秀樹) | 0 | sim |
+| Intervalo sem mudança | ≤ 3 s | 1,97 s (42,1 → 44,1, kanji/Hideki; medido por diferença de quadros) | idem | sim |
+| P0 / P1 | 0 / 0 | 0 / 0 | 0 / 0 | sim |
+
+### Ficheiros V2 (não versionados; entregues na conversa claude.ai de 26/11/2026)
+- **Publicável:** `ll-art21_v2_semfoto.mp4` · capa `ll-art21_v2_capa_semfoto.png`
+- Privado: `ll-art21_v2_foto.mp4` · capa `ll-art21_v2_capa_foto.png`
+- Folhas de contacto: `ll-art21_v2_<versão>_folha_01…06.jpg`
+- Pacote: `legenda_v2.txt`, `comentario_fixado_v2.txt`, `texto_alternativo_v2.txt`, `fontes_v2.md`, `catalogo_cartas_v2.md`
 
 ## Handoff
 

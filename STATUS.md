@@ -6,6 +6,8 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Última sessão
 
+**LL-ART21 V2 «Will Murai — o artista por trás das cartas» (26/11/2026, 23h)**: reconstrução autorizada pelo fundador. As 54 ilustrações de Willian Murai no Scryfall, foto do artista só na versão privada; 94,17 s, sem voz, 0 créditos, QC sem problemas. Publicável: `ll-art21_v2_semfoto.mp4`; V1 preservada. Ficha, secção «V2».
+
 **Fórmula dos combos + MB-EP19 «O Robô Que Não Morre» (26/11/2026, 21h45)**: CONCLUÍDO, à espera de publicação. «Episódio de combo» passa a padrão recorrente (não exclusivo) do Mana & Burn (`manaburn/PERFIL.md`; `nucleo/DECISOES.md` 21:45). MB-EP19: Mikaeus, the Unhallowed + Triskelion, escolhido entre 3 candidatos; vozes 1.112 créditos; 50,90 s, QC sem P0/P1. MB-EP18 verificado sem alterações; re-render das vozes já pagas (0 créditos).
 
 **Falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` (claude.ai) e `nucleo/prompts/CHATGPT.md` (ChatGPT).
@@ -15,7 +17,7 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 | ID | O que falta | Onde |
 |---|---|---|
 | MB-EP19 O Robô Que Não Morre | escuta e publicação (`utm_campaign=MB-EP19`); não publicar no mesmo dia do MB-EP18 | `manaburn/episodios/ep19_robo_imortal/` |
-| LL-ART21 Will Murai (Reel piloto) | ver e publicar (`utm_campaign=LL-ART21`); música no Instagram; locução opcional do fundador | `lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/` |
+| LL-ART21 Will Murai (Reel **V2**) | ver a V2 e escolher V1 ou V2; publicar a versão **sem foto** (`utm_campaign=LL-ART21`); música no Instagram; versão com foto só com autorização da imagem | `lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/` |
 | MB-EP18 O Lagarto Infinito | escuta e publicação; confirmar preços na LigaMagic antes de citar valores | `manaburn/episodios/ep18_lagarto_infinito/` |
 | MB-EP17 React @magicamador | ouvir o corte aos 43,6 s; pedir ao parceiro o OK do âmbito + collab; resposta em `manaburn/autorizacoes/2026-11-24_magicamador_react.md` (se recusar: arquivar) | `manaburn/episodios/ep17_react_magicamador/` |
 | MC-PAU02 «Vai ser banida?» | escutar a pronúncia; enviar as duas mensagens (resposta até 28/11); publicar a 29/11 com `utm_campaign=MC-PAU02` | `oraculo/episodios/pau02_tenda_snacker/` |
