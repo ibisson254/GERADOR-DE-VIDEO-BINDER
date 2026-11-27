@@ -1,0 +1,435 @@
+{
+ "_leia": "MC-EP09 · Meta em Curto · cEDH na Mercadia Games (Lisboa, 22/11/2026). Campo (39 comandantes): TopDeck via cEDH Stats; lista do campeão: MTGTop8 (fonte TopDeck); combos: Commander Spellbook find-my-combos (27/11/2026); Oracle: Scryfall. Logótipo da loja: camada 'terceiros.loja' (opcional; sem ficheiro, não aparece). voz_tempos ESTIMADOS a 11,8 car/s até haver voz (mc_voz.py substitui).",
+ "confirmado": true,
+ "faixa": "META EM CURTO · EP. 09",
+ "faixa_collab": "",
+ "pergunta_gancho": "O QUE O DECK CAMPEÃO TINHA?",
+ "selo_fonte": "FONTE: TOPDECK (VIA cEDH STATS) · MERCADIA GAMES · 22/11/2026",
+ "carta_A": "cartas/thrasios.png",
+ "carta_B": "cartas/kraum.png",
+ "carta_C": "cartas/tymna.png",
+ "grade": {
+  "rotulo": "cEDH · LISBOA",
+  "numero": "1 DE 39",
+  "unidade": "THRASIOS + TYMNA",
+  "contexto": "8 levaram Kraum + Tymna",
+  "heroi": "CAMPEÃO · THRASIOS + TYMNA"
+ },
+ "terceiros": {
+  "loja": "terceiros/mercadia_logo.png"
+ },
+ "barras": {
+  "titulo": "COMANDANTES DOS 39",
+  "cantos": [
+   "loja"
+  ],
+  "linhas": [
+   [
+    "Kraum + Tymna",
+    8
+   ],
+   [
+    "Rograkh + Thrasios",
+    3
+   ],
+   [
+    "Sisay",
+    3
+   ],
+   [
+    "Thrasios + Tymna",
+    1
+   ]
+  ],
+  "destaque": [
+   "Thrasios + Tymna"
+  ],
+  "rodape": "39 de 39 com comandante · 25 comandantes diferentes",
+  "carimbo": [
+   "1 DE 39",
+   "Renato Faria · campeão"
+  ],
+  "selo": "FONTE: TOPDECK (VIA cEDH STATS) · 39 JOGADORES · 5 RODADAS"
+ },
+ "decklist": {
+  "titulo": "LISTA DO CAMPEÃO · THRASIOS + TYMNA",
+  "sub": "Renato Faria · 1.º · 100 cartas · ▶ peça de combo",
+  "colunas": [
+   [
+    [
+     "COMANDANTES",
+     [
+      "Thrasios, Triton Hero",
+      "Tymna the Weaver"
+     ]
+    ],
+    [
+     "CRIATURAS",
+     [
+      "Badgermole Cub",
+      "Biomancer's Familiar",
+      "Birds of Paradise",
+      "Bloom Tender",
+      "Captain America, Living Legend",
+      "Cloud of Faeries",
+      "Deathrite Shaman",
+      "Delighted Halfling",
+      "Derevi, Empyrial Tactician",
+      "Devoted Druid",
+      "Elvish Spirit Guide",
+      "Emiel the Blessed",
+      "Endurance",
+      "Enduring Vitality",
+      "Esper Sentinel",
+      "Eternal Witness",
+      "Faerie Mastermind",
+      "Formidable Speaker",
+      "Gilded Drake",
+      "Hazel's Brewmaster",
+      "Kinnan, Bonder Prodigy",
+      "Lotho, Corrupt Shirriff",
+      "Magus of the Candelabra",
+      "Noble Hierarch",
+      "Oboro Breezecaller",
+      "Orcish Bowmasters",
+      "Ranger-Captain of Eos",
+      "Shang-Chi, Master of Kung Fu",
+      "Sowing Mycospawn",
+      "Spellseeker",
+      "The Queen of Dale",
+      "Voice of Victory"
+     ]
+    ],
+    [
+     "ARTEFATOS E ENCANTAMENTOS",
+     [
+      "Candelabra of Tawnos",
+      "Chrome Mox",
+      "Cryptolith Rite",
+      "Lotus Petal",
+      "Mana Vault",
+      "Mox Amber",
+      "Mox Diamond",
+      "Mystic Remora",
+      "Rhystic Study",
+      "Smothering Tithe",
+      "Sol Ring",
+      "Swift Reconfiguration",
+      "Training Grounds"
+     ]
+    ]
+   ],
+   [
+    [
+     "INSTANTÂNEAS E FEITIÇOS",
+     [
+      "Borne Upon a Wind",
+      "Chord of Calling",
+      "Crop Rotation",
+      "Culling Ritual",
+      "Deadly Rollick",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Fierce Guardianship",
+      "Finale of Devastation",
+      "Flusterstorm",
+      "Force of Negation",
+      "Force of Vigor",
+      "Force of Will",
+      "Green Sun's Zenith",
+      "Imperial Seal",
+      "Legolas's Quick Reflexes",
+      "Mental Misstep",
+      "Mindbreak Trap",
+      "Nature's Rhythm",
+      "Neoform",
+      "Pact of Negation",
+      "Silence",
+      "Snap",
+      "Summoner's Pact",
+      "Swan Song",
+      "Vampiric Tutor",
+      "Veil of Summer"
+     ]
+    ],
+    [
+     "TERRENOS",
+     [
+      "Ancient Tomb",
+      "Bayou",
+      "Boseiju, Who Endures",
+      "City of Brass",
+      "Command Tower",
+      "Deserted Temple",
+      "Dryad Arbor",
+      "Emergence Zone",
+      "Flooded Strand",
+      "Gaea's Cradle",
+      "Gemstone Caverns",
+      "Mana Confluence",
+      "Marsh Flats",
+      "Misty Rainforest",
+      "Otawara, Soaring City",
+      "Polluted Delta",
+      "Savannah",
+      "Scrubland",
+      "Shifting Woodland",
+      "Talon Gates of Madara",
+      "Tarnished Citadel",
+      "Tropical Island",
+      "Tundra",
+      "Underground Sea",
+      "Verdant Catacombs",
+      "Windswept Heath"
+     ]
+    ]
+   ]
+  ],
+  "chave": [
+   "Thrasios, Triton Hero",
+   "Devoted Druid",
+   "Swift Reconfiguration",
+   "Hazel's Brewmaster",
+   "Eternal Witness",
+   "Snap",
+   "Gaea's Cradle",
+   "Oboro Breezecaller",
+   "Talon Gates of Madara",
+   "Derevi, Empyrial Tactician",
+   "Emiel the Blessed",
+   "Bloom Tender",
+   "Mana Vault",
+   "Faerie Mastermind",
+   "Smothering Tithe",
+   "Kinnan, Bonder Prodigy",
+   "Badgermole Cub",
+   "Training Grounds",
+   "Biomancer's Familiar",
+   "Cloud of Faeries"
+  ],
+  "carimbo": [
+   "13 COMBOS",
+   "12 terminam em mana infinita ou quase"
+  ],
+  "selo": "FONTE: MTGTOP8 (LISTA) · COMMANDER SPELLBOOK (COMBOS)"
+ },
+ "combo": {
+  "druida": {
+   "titulo": "COMBO · 2 CARTAS · MANA VERDE INFINITA",
+   "cartas": [
+    "cartas/devoted_druid.png",
+    "cartas/swift_reconfiguration.png"
+   ],
+   "passos": [
+    [
+     "@5+0.5",
+     "1 · O DRUIDA VIRA VEÍCULO: NÃO É CRIATURA",
+     "branco"
+    ],
+    [
+     "@6",
+     "2 · MARCADOR −1/−1 NÃO O DESTRÓI",
+     "branco"
+    ],
+    [
+     "@6+1.1",
+     "3 · VIRA, DESVIRA, REPETE: ∞ MANA VERDE",
+     "verde"
+    ]
+   ],
+   "selo": "FONTE: ORACLE (SCRYFALL) · REGRAS 704.5f · COMMANDER SPELLBOOK"
+  },
+  "thrasios": {
+   "titulo": "A SAÍDA · O COMANDANTE",
+   "cartas": [
+    "cartas/thrasios.png"
+   ],
+   "passos": [
+    [
+     "@7+0.2",
+     "{4}: TERRENO ENTRA · SENÃO, COMPRA",
+     "branco"
+    ],
+    [
+     "@7+0.9",
+     "MANA INFINITA → CARTAS",
+     "verde"
+    ]
+   ],
+   "selo": "FONTE: ORACLE (SCRYFALL)"
+  }
+ },
+ "previsao": {
+  "tela1": "MANA ∞",
+  "tela2": "→ CARTAS",
+  "linhas": [
+   "MOTOR NO COMANDO",
+   "a lista não mostra como cada mesa acabou"
+  ]
+ },
+ "pergunta1": {
+  "sim": "A · CARTAS",
+  "nao": "B · DANO"
+ },
+ "creditos_fecho": [
+  "Torneio: Mercadia Games · Lisboa · 22/11/2026",
+  "Dados: TopDeck · cEDH Stats · MTGTop8 · Commander Spellbook"
+ ],
+ "capa_l1": "SÓ ELE LEVOU",
+ "capa_l2": "E GANHOU",
+ "capa_foco": "1 DE 39",
+ "capa_unidade": "THRASIOS + TYMNA · cEDH LISBOA",
+ "saida": "MC_EP09_FINAL.mp4",
+ "saida_previa": "MC_EP09_PREVIA_SEM_VOZ.mp4",
+ "frases": [
+  "NO cEDH PORTUGUÊS, DADOS DO TOPDECK:",
+  "39 JOGADORES NA MERCADIA GAMES.",
+  "O CAMPEÃO FOI O ÚNICO THRASIOS E TYMNA.",
+  "NA LISTA DELE, 13 COMBOS.",
+  "12 TERMINAM EM MANA INFINITA, OU QUASE.",
+  "DEVOTED DRUID COM SWIFT RECONFIGURATION:",
+  "VIRA VEÍCULO E DESVIRA SEM MORRER.",
+  "E O THRASIOS TROCA MANA INFINITA POR CARTAS.",
+  "SEU COMANDANTE TRANSFORMA MANA EM QUÊ?",
+  "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
+ ],
+ "voz_cfg": {
+  "atempo": 1.0,
+  "alvo_s": 34.0,
+  "pausa": 0.15,
+  "pausa_min": 0.08,
+  "pausas_longas": {
+   "7": 0.3,
+   "8": 0.6,
+   "9": 0.35
+  }
+ },
+ "voz": {
+  "arquivo": "voz_montada.wav (geração YkwAr3wZs9AcTA1I2Wjd, 411 créditos, flow ElevenLabs C9N8wFG5EUxZ2AMtdLlQ)",
+  "atempo": 1.0,
+  "lead": 0.0,
+  "pausas": []
+ },
+ "seq": [
+  [
+   0,
+   "gancho_grade"
+  ],
+  [
+   "@1+0.05",
+   "tubo_abertura",
+   "@1+0.55",
+   "@1>-0.2"
+  ],
+  [
+   "@2-0.05",
+   "barras",
+   "@2+1.0"
+  ],
+  [
+   "@3-0.05",
+   "decklist",
+   "@4"
+  ],
+  [
+   "@5-0.05",
+   "combo",
+   "druida"
+  ],
+  [
+   "@7-0.05",
+   "combo",
+   "thrasios"
+  ],
+  [
+   "@7+1.7",
+   "previsao"
+  ],
+  [
+   "@8-0.05",
+   "pergunta1"
+  ],
+  [
+   "@9-0.1",
+   "tubo_fecho",
+   "analitico"
+  ]
+ ],
+ "beats": {
+  "SCAN": 0.3,
+  "NUM": 0.45,
+  "HLB": 0.9,
+  "Q": 2.0,
+  "RISE": "@1+0.05",
+  "VOO": "@1+0.55",
+  "DIVE": "@1>-0.2",
+  "POP_BAR": "@2",
+  "POP_A": "@2+1.0",
+  "POP_B": "@3",
+  "PERF_A": "@4",
+  "PERF_B": "@5+0.5",
+  "PERF_DEN": "@6+1.1",
+  "LEIT": "@7+1.7",
+  "LEIT2": "@7+0.9",
+  "DIF": "@7>",
+  "DIF_PT": "@8",
+  "DIF_VER": "@8+0.3",
+  "DIF_NOTA": "@8+0.6",
+  "ASK": "@8",
+  "CLOSE": "@9-0.1",
+  "CLOSE2": "@9+1",
+  "END": 26.75
+ },
+ "voz_tempos": [
+  [
+   0.0,
+   2.79,
+   "NO cEDH PORTUGUÊS, DADOS DO TOPDECK:"
+  ],
+  [
+   2.94,
+   5.27,
+   "39 JOGADORES NA MERCADIA GAMES."
+  ],
+  [
+   5.42,
+   7.85,
+   "O CAMPEÃO FOI O ÚNICO THRASIOS E TYMNA."
+  ],
+  [
+   8.0,
+   9.81,
+   "NA LISTA DELE, 13 COMBOS."
+  ],
+  [
+   9.96,
+   12.5,
+   "12 TERMINAM EM MANA INFINITA, OU QUASE."
+  ],
+  [
+   12.65,
+   15.19,
+   "DEVOTED DRUID COM SWIFT RECONFIGURATION:"
+  ],
+  [
+   15.34,
+   17.6,
+   "VIRA VEÍCULO E DESVIRA SEM MORRER."
+  ],
+  [
+   17.9,
+   20.38,
+   "E O THRASIOS TROCA MANA INFINITA POR CARTAS."
+  ],
+  [
+   20.98,
+   23.08,
+   "SEU COMANDANTE TRANSFORMA MANA EM QUÊ?"
+  ],
+  [
+   23.43,
+   26.6,
+   "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
+  ]
+ ]
+}

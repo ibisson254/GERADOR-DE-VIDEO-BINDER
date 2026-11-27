@@ -1,0 +1,47 @@
+{
+ "thrasios": {
+  "nome": "Thrasios, Triton Hero",
+  "colecao": "Commander 2016",
+  "set": "C16",
+  "numero": "46",
+  "artista": "Josu Hernaiz",
+  "scryfall": "https://scryfall.com/card/c16/46/thrasios-triton-hero",
+  "oracle": "{4}: Scry 1, then reveal the top card of your library. If it's a land card, put it onto the battlefield tapped. Otherwise, draw a card.\nPartner (You can have two commanders if both have partner.)"
+ },
+ "tymna": {
+  "nome": "Tymna the Weaver",
+  "colecao": "Commander 2016",
+  "set": "C16",
+  "numero": "48",
+  "artista": "Winona Nelson",
+  "scryfall": "https://scryfall.com/card/c16/48/tymna-the-weaver",
+  "oracle": "Lifelink\nAt the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards.\nPartner (You can have two commanders if both have partner.)"
+ },
+ "kraum": {
+  "nome": "Kraum, Ludevic's Opus",
+  "colecao": "Commander 2016",
+  "set": "C16",
+  "numero": "34",
+  "artista": "Aaron Miller",
+  "scryfall": "https://scryfall.com/card/c16/34/kraum-ludevics-opus",
+  "oracle": "Flying, haste\nWhenever an opponent casts their second spell each turn, draw a card.\nPartner (You can have two commanders if both have partner.)"
+ },
+ "devoted_druid": {
+  "nome": "Devoted Druid",
+  "colecao": "Lorwyn Eclipsed Commander",
+  "set": "ECC",
+  "numero": "104",
+  "artista": "Kimonas Theodossiou",
+  "scryfall": "https://scryfall.com/card/ecc/104/devoted-druid",
+  "oracle": "{T}: Add {G}.\nPut a -1/-1 counter on this creature: Untap this creature."
+ },
+ "swift_reconfiguration": {
+  "nome": "Swift Reconfiguration",
+  "colecao": "Neon Dynasty Commander",
+  "set": "NEC",
+  "numero": "10",
+  "artista": "Nicholas Gregory",
+  "scryfall": "https://scryfall.com/card/nec/10/swift-reconfiguration",
+  "oracle": "Flash\nEnchant creature or Vehicle\nEnchanted permanent is a Vehicle artifact with crew 5 and it loses all other card types. (It's not a creature unless it's crewed.)"
+ }
+}

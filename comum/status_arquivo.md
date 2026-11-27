@@ -4,6 +4,10 @@ Histórico do `STATUS.md` até 26/11/2026 (14h30), copiado sem alterações quan
 
 ---
 
+## Saído do STATUS a 27/11/2026 (15h20, MC-EP09)
+
+**MB-ESP05 «A Nova Aliança» · especial BINDER × Taverna de Avalon (27/11/2026, 00h45)**: CONCLUÍDO, à espera de publicação. Mana & Burn de mago e guerreiro numa taverna (imagem e logo do fundador), números do MTGDC500 em plaquinhas, histórico da loja num pergaminho, selo da parceria; vozes 969 créditos; 47,07 s, QC sem problemas. Cenário com marca d'água por decisão do fundador (`nucleo/DECISOES.md` 27/11). Ficha: `manaburn/episodios/esp05_taverna_avalon/ficha.md`.
+
 ## Saído do STATUS a 27/11/2026 (09h30, MB-EP20)
 
 **LL-ART21 V4 (26/11/2026, 23h55)**: foto do artista em cartaz P&B e cartas uma de cada vez, recortadas à mão (52,50 s). Publicável: `ll-art21_v4_semfoto.mp4`; com foto só após autorização registada. Ficha, secção «V4».

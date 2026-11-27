@@ -1,0 +1,9 @@
+Seu comandante transforma mana em quê? A) cartas · B) dano. Responda com a letra.
+
+Passo a passo (Oracle, Scryfall): Swift Reconfiguration encanta o Devoted Druid e ele vira um Veículo artefato, sem o tipo criatura. Toque o druida: G. Pague o custo da segunda habilidade (um marcador −1/−1) e ele desvira. Como não é criatura, a resistência 0 não o manda para o cemitério (regra 704.5f só vale para criaturas). Repita: mana verde infinita. Com ela, o Thrasios (4: vidência 1 e revela o topo; terreno entra no campo, senão você compra) passa pelo grimório.
+
+Limitação: não há VOD do torneio. Sabemos o que a lista consegue fazer, não como cada mesa terminou.
+
+Lista completa das 100 cartas: na resposta a este comentário.
+
+Fontes: TopDeck e cEDH Stats (classificação e comandantes dos 39), MTGTop8 (lista), Commander Spellbook (13 combos encontrados na lista a 27/11/2026), Scryfall (Oracle e regras).
