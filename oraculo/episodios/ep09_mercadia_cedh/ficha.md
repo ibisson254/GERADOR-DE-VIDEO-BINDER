@@ -172,6 +172,11 @@ QC v3 (`qc_final_v3.json`): 1080×1920, 30 fps, 31,77 s (27,9 s sem fecho), −1
 Ficheiros: `MC_EP09_FINAL_v3.mp4`, `MC_EP09_FOLHA_CONTACTO_v3.png`, `MC_EP09_QC_v3.json`, `mercadia_logo_recorte.png` (projeto claude.ai, `tubo/mc-ep09/`). Capa da v1 mantém-se (não precisa da loja).
 Comparação v2 → v3: Mercadia identificada pelo logótipo e nome em destaque (v2: só texto); cartão em 6 níveis em vez de 3 blocos densos; TUBO volta a aparecer aos 2,4 s (v2: só aos 20,5 s); mesma duração (27,9 s + fecho), mesma voz, 0 créditos.
 
+## Capa «bandeira» (pedido do fundador, 27/11/2026 16:14)
+Referência do fundador (imagem gerada) usada para a ideia: bandeira de Portugal, Mercadia, informação do evento. Correções para nível profissional: logótipo **real** da Mercadia (a referência tinha um «M» inventado); **sem** logótipo do Magic, símbolo de mana nem verso de carta (Política de Conteúdo de Fãs da Wizards); **sem** fotografia da Torre de Belém (sem licença); as cartas reais do campeão (Thrasios + Tymna, inteiras, rodapé visível, nada por cima) e o TUBO da imagem-mestra em vez de um título «TUBO» de pincel; hierarquia em 4 níveis (cartas + «1 DE 39» → «SÓ ELE LEVOU / E GANHOU.» → loja → evento) com margem de 72 px; faixa fixa «META EM CURTO · EP. 09» (CONTEXTO §7.3); tudo o que importa dentro da grelha 3:4 (y 240–1680).
+Bandeira: SVG do flag-icons (MIT, `dados/bandeira/`), em tecido com dobras e luz rasante calculadas (sem IA), cores aprofundadas (vermelho 196/18/36, verde 0/102/52), a dissolver-se no fundo escuro do TUBO.
+Ficheiros: `MC_EP09_CAPA_BANDEIRA.png` + `_grelha.png` (projeto claude.ai, `tubo/mc-ep09/`); recriar: `python3 -I capa_bandeira.py <raiz> <pt.svg renderizado 2400×1800> <saída.png>`.
+
 ## Handoff
 
 ```
