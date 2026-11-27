@@ -557,3 +557,10 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - **Fundador (15:53):** missão «MC-EP09 V3 · acabamento premium» com o print do perfil de Instagram da Mercadia como logomarca: integrar o logótipo no cartão do evento (hierarquia loja → OFFICIAL P9Q SIDE QUEST → Lisboa · Portugal → data → 39 jogadores → 5 rodadas + mesa final), sem «×», sem «parceiro oficial», sem selo, sem marca d'água; sem créditos; não sobrescrever a v2.
 - **Logótipo:** recorte circular do print (700 px; precedente MC-PAU02). O botão de «gosto» do Instagram tapava parte do fundo de tijolos no canto inferior direito: a zona foi reposta com o espelho do lado esquerdo do mesmo fundo (simétrico); o crânio e o arco não foram tocados. Camada `terceiros.loja` (`terceiros/mercadia_logo.png`); o original em PNG da loja, se chegar, substitui-o num re-render sem voz.
 - **Motor:** cenas `mosaico`, `evento` (v2) e `evento_v3`; `tubo_abertura` aceita as cartas que vêm do mosaico; deixas `sfx`, `abalos`, `transicoes` nos dados (episódios sem estas chaves não mudam; regressão ESP03/PAU02/PAU08 igual).
+
+## 27/11/2026 (18:01 UTC) · MC-EP10: tema escolhido pelo fundador; pauta bloqueada por «Mundial 32» liberada
+- **Fundador (17:56 UTC):** «Vamos fazer outro episódio ache um que viralize». O agente comparou três temas com os dados de audiência (MB-EP13 = melhor orgânico; MC-EP08B = TUBO mais visto) e o radar da semana, e pôs-os num cartão de decisão.
+- **Escolha do fundador (cartão, 18:01 UTC):** «Larsen: de 1-3 a Jogador do Ano» (Mundial 32). Preteridos: P9 Quest Lisboa (cEDH, colado ao MC-EP09) e moinho infinito no Top 8 do RC de Sydney.
+- **Pauta:** `memoria.py pauta` bloqueou por MB-GIRO03 (mesmo objeto «Mundial 32»). O cartão do fundador liberta-a; o MC-EP08/EP08B não se reabre (ângulo novo: Larsen e Jogador do Ano).
+- **Motor:** `cena_linha_tempo` aceita o tempo de cada marco (4.º campo opcional); regressão sem diferenças.
+

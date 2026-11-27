@@ -6,6 +6,8 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Última sessão
 
+**MC-EP10 «Larsen: de 1-3 a Jogador do Ano» (27/11/2026, ~18h30 UTC)**: EM PRODUÇÃO, prévia sem voz pronta (branch `tubo/mc-ep10-larsen`). Pedido «ache um que viralize»; tema escolhido pelo fundador no cartão. Mundial 32 (MagicCon Atlanta): Larsen começou 1-3, quase abandonou, ganhou 8 das 10 seguintes (9-5, 20.º) e ficou Jogador do Ano porque o Sajgalik perdeu a final por 3-0. Falta: autorização da voz (~440 créditos), render final, capa, encerramento e merge. Ficha: `oraculo/episodios/ep10_larsen_jogador_ano/ficha.md`.
+
 **MC-EP09 «cEDH na Mercadia Games» v3 (27/11/2026, 16h10)**: CONCLUÍDO, à espera de publicação (publicar a **v4** com a capa da bandeira: logótipo da Mercadia, TUBO aos 2,4 s, nome do campeão e lista em destaque). v2: campeão primeiro (voz reordenada, 0 créditos), mosaico dos 39, mapa de Lisboa e cartão da Mercadia, efeitos novos; cenas `mosaico`/`evento` + deixas `sfx` no motor. Primeiro cEDH do TUBO: Official P9Q Side Quest na Mercadia Games (Lisboa, 22/11, 39 jogadores, TopDeck); o campeão foi o único Thrasios + Tymna; 13 combos na lista (Commander Spellbook), Devoted Druid + Swift Reconfiguration. Cenas novas `decklist` e `combo` no motor TUBO (regressão sem diferenças); voz 411 créditos; 30,60 s, QC sem problemas. Falta o logótipo da loja (re-render sem voz). Ficha: `oraculo/episodios/ep09_mercadia_cedh/ficha.md`.
 
 **MB-EP20 «O Monólito Infinito» (27/11/2026, 09h30)**: CONCLUÍDO, à espera de publicação. Basalt Monolith + Rings of Brighthearth (mana incolor infinita por cópia de habilidade, pilha desenhada passo a passo) e Walking Ballista de finalizador; roteiro do fundador produzido pela SHOWRUNNER §4.3; vozes 1.423 créditos; 62,20 s, QC sem problemas. Novo **módulo de pesquisa «deck Commander»** (`nucleo/SHOWRUNNER.md` §2.4 passo 9; `nucleo/DECISOES.md` 27/11). Ficha: `manaburn/episodios/ep20_monolito_infinito/ficha.md`.
@@ -16,6 +18,7 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 | ID | O que falta | Onde |
 |---|---|---|
+| MC-EP10 Larsen, Jogador do Ano | ver a prévia sem voz e autorizar a voz (~440 créditos) | `oraculo/episodios/ep10_larsen_jogador_ano/` |
 | MC-EP09 cEDH na Mercadia Games | escuta e publicação da **v4** (`MC_EP09_FINAL_v4.mp4`, capa `MC_EP09_CAPA_BANDEIRA.png`, `utm_campaign=MC-EP09`); opcionais: PNG original do logótipo e foto do campeão (re-render sem voz), não no mesmo dia do MB-EP20; enviar o logótipo da Mercadia (re-render sem voz) ou publicar sem ele; loja só como contexto, sem collab | `oraculo/episodios/ep09_mercadia_cedh/` |
 | MB-EP20 O Monólito Infinito | escuta e publicação (`utm_campaign=MB-EP20`); não publicar no mesmo dia do MB-EP18/EP19 | `manaburn/episodios/ep20_monolito_infinito/` |
 | MB-ESP05 A Nova Aliança (Taverna de Avalon) | escuta e publicação (`utm_campaign=MB-ESP05`); decidir marca d'água vs licença da imagem (re-render 0 créditos); collab com a loja só por convite do fundador | `manaburn/episodios/esp05_taverna_avalon/` |
@@ -68,4 +71,4 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Handoff
 
-Último: 27/11/2026 (16h10), MC-EP09 v3, no fim de `oraculo/episodios/ep09_mercadia_cedh/ficha.md`. Anterior: 27/11/2026 (09h30), MB-EP20, no fim de `manaburn/episodios/ep20_monolito_infinito/ficha.md`. Anterior: 27/11/2026 (00h45), MB-ESP05, no fim de `manaburn/episodios/esp05_taverna_avalon/ficha.md`. Anterior: 26/11/2026 (21h45), MB-EP19, no fim de `manaburn/episodios/ep19_robo_imortal/ficha.md`. Anterior: LL-ART21 (`lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ficha.md`). Anteriores: `comum/status_arquivo.md` («Handoff»).
+Último: 27/11/2026 (~18h30 UTC), MC-EP10 (prévia), no fim de `oraculo/episodios/ep10_larsen_jogador_ano/ficha.md`. Anterior: 27/11/2026 (16h10), MC-EP09 v3, no fim de `oraculo/episodios/ep09_mercadia_cedh/ficha.md`. Anterior: 27/11/2026 (09h30), MB-EP20, no fim de `manaburn/episodios/ep20_monolito_infinito/ficha.md`. Anterior: 27/11/2026 (00h45), MB-ESP05, no fim de `manaburn/episodios/esp05_taverna_avalon/ficha.md`. Anterior: 26/11/2026 (21h45), MB-EP19, no fim de `manaburn/episodios/ep19_robo_imortal/ficha.md`. Anterior: LL-ART21 (`lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ficha.md`). Anteriores: `comum/status_arquivo.md` («Handoff»).

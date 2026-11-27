@@ -1,0 +1,82 @@
+{
+ "mossborn_hydra.png": {
+  "nome": "Mossborn Hydra",
+  "set": "FDN",
+  "numero": "107",
+  "artista": "Monztre",
+  "scryfall": "https://scryfall.com/card/fdn/107/mossborn-hydra",
+  "oracle": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nThis creature enters with a +1/+1 counter on it.\nLandfall — Whenever a land you control enters, double the number of +1/+1 counters on this creature.",
+  "tipo": "Creature — Elemental Hydra",
+  "legal_standard": "legal"
+ },
+ "mightform_harmonizer.png": {
+  "nome": "Mightform Harmonizer",
+  "set": "EOE",
+  "numero": "200",
+  "artista": "Bartek Fedyczak",
+  "scryfall": "https://scryfall.com/card/eoe/200/mightform-harmonizer",
+  "oracle": "Landfall — Whenever a land you control enters, double the power of target creature you control until end of turn.\nWarp {2}{G} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)",
+  "tipo": "Creature — Insect Druid",
+  "legal_standard": "legal"
+ },
+ "earthbender_ascension.png": {
+  "nome": "Earthbender Ascension",
+  "set": "TLA",
+  "numero": "175",
+  "artista": "Logan Feliciano",
+  "scryfall": "https://scryfall.com/card/tla/175/earthbender-ascension",
+  "oracle": "When this enchantment enters, earthbend 2. Then search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\nLandfall — Whenever a land you control enters, put a quest counter on this enchantment. When you do, if it has four or more quest counters on it, put a +1/+1 counter on target creature you control. It gains trample until end of turn.",
+  "tipo": "Enchantment",
+  "legal_standard": "legal"
+ },
+ "jadzia_dax.png": {
+  "nome": "Jadzia Dax, Living Legacy",
+  "set": "TRK",
+  "numero": "204",
+  "artista": "John Tyler Christopher",
+  "scryfall": "https://scryfall.com/card/trk/204/jadzia-dax-living-legacy",
+  "oracle": "At the beginning of your first main phase, put a +1/+1 counter on Jadzia Dax, then add an amount of {G} equal to the number of counters on her.\nTransfer Symbiont — {2}{G}, Discard this card: Put two +1/+1 counters on target creature.",
+  "tipo": "Legendary Creature — Trill Scientist",
+  "legal_standard": "legal"
+ },
+ "michelangelo.png": {
+  "nome": "Michelangelo, Weirdness to 11",
+  "set": "TMT",
+  "numero": "121",
+  "artista": "Jason Kiantoro",
+  "scryfall": "https://scryfall.com/card/tmt/121/michelangelo-weirdness-to-11",
+  "oracle": "When Michelangelo enters, create a Mutagen token. (It's an artifact with \"{1}, {T}, Sacrifice this token: Put a +1/+1 counter on target creature. Activate only as a sorcery.\")\nIf one or more +1/+1 counters would be put on a creature you control, that many plus one +1/+1 counters are put on it instead.",
+  "tipo": "Legendary Creature — Mutant Ninja Turtle",
+  "legal_standard": "legal"
+ },
+ "anthropological_mission.png": {
+  "nome": "Anthropological Mission",
+  "set": "TRK",
+  "numero": "46",
+  "artista": "Pablo Mendoza",
+  "scryfall": "https://scryfall.com/card/trk/46/anthropological-mission",
+  "oracle": "Whenever you cast a noncreature spell, put a quest counter on this enchantment. Draw a card. Then discard a card unless this enchantment has three or more quest counters on it.",
+  "tipo": "Enchantment",
+  "legal_standard": "legal"
+ },
+ "carnivorous_cultivator.png": {
+  "nome": "Carnivorous Cultivator // Enroot",
+  "set": "FRA",
+  "numero": "100",
+  "artista": "Martina Fačková",
+  "scryfall": "https://scryfall.com/card/fra/100/carnivorous-cultivator-enroot",
+  "oracle": "Deathtouch\nThis creature enters prepared.\nWhenever this creature deals combat damage to a player, return target land card from your graveyard to your hand.",
+  "tipo": "Creature — Elf Warlock // Sorcery",
+  "legal_standard": "legal"
+ },
+ "icetill_explorer.png": {
+  "nome": "Icetill Explorer",
+  "set": "EOE",
+  "numero": "192",
+  "artista": "Warren Mahy",
+  "scryfall": "https://scryfall.com/card/eoe/192/icetill-explorer",
+  "oracle": "You may play an additional land on each of your turns.\nYou may play lands from your graveyard.\nLandfall — Whenever a land you control enters, mill a card.",
+  "tipo": "Creature — Insect Scout",
+  "legal_standard": "legal"
+ }
+}

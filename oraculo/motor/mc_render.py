@@ -758,8 +758,9 @@ def cena_linha_tempo(t, i):
     d.text((90, 490), lt.get('titulo', ''), font=fit(d, lt.get('titulo', ''), MONOB, 40, 860), fill=EM, anchor='lm')
     ms = lt.get('marcos', []); y0, step = 600, 170; x = 160
     d.line((x, y0, x, y0 + step * (len(ms) - 1)), fill=(60, 90, 100), width=6)
-    for j, (dt, txt, cor) in enumerate(ms):
-        k = eio((t - p[0] - 0.35 * j) / 0.3)
+    for j, m in enumerate(ms):
+        dt, txt, cor = m[:3]                                       # MC-EP10: 4.º campo opcional = tempo do marco («@frase»)
+        k = eio((t - (_tempo(m[3]) if len(m) > 3 else p[0] + 0.35 * j)) / 0.3)
         if k <= 0: continue
         col = {'verde': PH, 'ambar': AMBER, 'cinza': (150, 170, 175)}.get(cor, WHITE); y = y0 + step * j
         r = 22 + (6 * math.sin(t * 6) if cor == 'ambar' else 0)
