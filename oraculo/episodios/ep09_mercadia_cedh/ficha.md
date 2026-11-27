@@ -2,8 +2,8 @@
 
 ## Identificação
 - ID editorial: `MC-EP09` (próximo número livre da série; MC-EP08/EP08B são os últimos; PAU e ESP têm numeração própria)
-- Estado no registo: EM PRODUÇÃO
-- Pedido do fundador: «MISSÃO DE PRODUÇÃO — META EM CURTO (TUBO) · Episódio competitivo · Torneio em Portugal» (27/11/2026, 10:31), com a escolha do campeonato delegada ao agente. Voz: estimativa de 411 créditos pedida em cartão a 27/11 (sem autorização herdada).
+- Estado no registo: CONCLUÍDO (27/11/2026, 15h20)
+- Pedido do fundador: «MISSÃO DE PRODUÇÃO — META EM CURTO (TUBO) · Episódio competitivo · Torneio em Portugal» (27/11/2026, 10:31), com a escolha do campeonato delegada ao agente. Voz: estimativa de 411 créditos pedida em cartão; autorizada pelo fundador a 27/11, 15:05 («Pode prosseguir»).
 
 ## Classificação
 - Frente: Meta em Curto (TUBO). Router (`SHOWRUNNER.md` §2.2): torneio recente, deck e decisão de construção → competição.
@@ -14,7 +14,7 @@
 - Objeto: Official P9Q Side Quest at Mercadia Games 2.0 (Lisboa, 22/11/2026); Renato Faria; Thrasios + Tymna; Devoted Druid + Swift Reconfiguration.
 - `python3 comum/ferramentas/memoria.py pauta --objeto "Official P9Q Side Quest cEDH Mercadia Games Lisboa; Thrasios + Tymna; Renato Faria" --tema "torneio cEDH em Portugal: porque o deck vencedor ganhou"` (27/11/2026): **BLOQUEADA** por MB-EP05 (palavras «cedh, ganhou, porque, torneio»).
 - Comparação manual: MB-EP05 é Mana & Burn sobre o preço da Knacksaw Clique num combo de Kinnan; outra frente, outro objeto, outra tese. MB-EP09 (Dack Fayden) e MB-EP20 (Basalt Monolith + Rings, mana infinita) são Mana & Burn, outros combos e sem torneio. No Meta em Curto, nenhum episódio de cEDH. A tese «o mais jogado não ganhou» já existe (MC-PAU08, MC-EP08B): por isso não é a tese deste episódio.
-- Decisão: o fundador pediu este torneio expressamente; confirmação da pauta pedida em cartão a 27/11 (como no MB-ESP05). Só depois da resposta entra em `nucleo/DECISOES.md`.
+- Decisão: liberada pelo fundador no cartão de decisão «Sim, avançar» (`nucleo/DECISOES.md` 27/11/2026 11:03).
 - Relações: MC-PAU08 (mesma estrutura de campo, tese diferente); MB-EP20 (mana infinita: não publicar no mesmo dia).
 
 ## Pesquisa de pauta (§2.4)
@@ -66,12 +66,12 @@ Abertura de objeto: carta inteira no quadro 0, prova = «1 DE 39», saída no fi
 
 | Rubrica | Prevista | Medida |
 |---|---|---|
-| Relevância visual | 5 | (no final) |
-| Impacto inicial | 4 | |
-| Clareza | 4 | |
-| Curiosidade | 4 | |
-| Pagamento | 5 | |
-| Identidade | 5 | |
+| Relevância visual | 5 | 5 |
+| Impacto inicial | 4 | 4 |
+| Clareza | 4 | 4 |
+| Curiosidade | 4 | 4 |
+| Pagamento | 5 | 5 |
+| Identidade | 5 | 5 |
 
 ## Roteiro definitivo (frases = legendas; voz com fonética)
 1. No cEDH português, dados do TopDeck:
@@ -85,7 +85,7 @@ Abertura de objeto: carta inteira no quadro 0, prova = «1 DE 39», saída no fi
 9. Seu comandante transforma mana em quê?
 10. Probabilidade calculada. Humanos, imprevisíveis.
 
-Texto enviado ao ElevenLabs (Antonio de Jesus, eleven_v4, 1 geração): «No cê é dê agá português, dados do Tóp Déqui: Trinta e nove jogadores na Mercádia Guêims. O campeão foi o único Trássios e Tímna. Na lista dele, treze combos. Doze terminam em mana infinita, ou quase. Dêvôutid Drúid com Suífit Riconfiguréixon: vira veículo e desvira sem morrer. E o Trássios troca mana infinita por cartas. Seu comandante transforma mana em quê? Probabilidade calculada. Humanos, imprevisíveis.» Estimativa: 411 créditos (estimate_only, 27/11).
+Texto enviado ao ElevenLabs (Antonio de Jesus, eleven_v4, 1 geração): «No cê é dê agá português, dados do Tóp Déqui: Trinta e nove jogadores na Mercádia Guêims. O campeão foi o único Trássios e Tímna. Na lista dele, treze combos. Doze terminam em mana infinita, ou quase. Dêvôutid Drúid com Suífit Riconfiguréixon: vira veículo e desvira sem morrer. E o Trássios troca mana infinita por cartas. Seu comandante transforma mana em quê? Probabilidade calculada. Humanos, imprevisíveis.» Gerado: 411 créditos, geração YkwAr3wZs9AcTA1I2Wjd (flow C9N8wFG5EUxZ2AMtdLlQ), 27,28 s em bruto; montada com `mc_voz.py` a atempo 1,0 (a 1,10 ficava abaixo dos 25 s): 26,60 s.
 
 Referência a Portugal: só na frase 1 («No cEDH português») e no rótulo «cEDH · LISBOA». A identidade do criador fica na legenda.
 
@@ -106,16 +106,33 @@ Cenas novas no motor: `decklist` e `combo` (regressão: ESP03, PAU02 e PAU08 com
 
 ## Produção
 - Recursos reutilizados: imagem-mestra do TUBO, trilha oficial, SFX do motor, fecho do scanner.
-- Vozes e créditos: (por gerar; estimativa 411).
+- Vozes e créditos: 411 créditos ElevenLabs (Antonio de Jesus, eleven_v4, 1 geração).
 - Easter egg: nenhum.
 - Ferramentas: Scryfall e Commander Spellbook pela shell; TopDeck, cEDH Stats, MTGTop8, cedhdiff e mtgcontent pelo agente de leitura web; navegador integrado indisponível nesta sessão.
 - Prévia sem voz: 39,2 s (36 s estimados + fecho), sem marca «PRÉVIA» (decisão de 23/11); folha de contacto revista (20 quadros).
 
-## Controlo de qualidade
-(preencher no ficheiro final)
+## Controlo de qualidade (ficheiro final, `qc_final.json`)
+| Critério | Alvo | Medido | OK |
+|---|---|---|---|
+| Resolução / fps | 1080×1920 / 30 | 1080×1920 / 30 | ✓ |
+| Duração | 25–35 s sem o fecho | 26,73 s (30,60 s com o fecho) | ✓ |
+| Corte lateral | nenhum | cropdetect 1072×1920 (conteúdo de ponta a ponta) | ✓ |
+| Loudness / pico | −14 LUFS / < −1 dBTP | −14,0 LUFS / −4,1 dBTP | ✓ |
+| Fecho do scanner | presente | a partir de 26,73 s | ✓ |
+| Factos = ficha | sim | `fontes.md` | ✓ |
+| Quadro 0 | Thrasios + pergunta + selo | sim (folha de contacto) | ✓ |
+| Descoberta | ≤ 3 s | «1 DE 39» aos 0,45 s | ✓ |
+| Pagamento | lista e combos | carimbo «13 COMBOS» aos 9,96 s; combo 12,6–17,9 s; Thrasios 17,9 s | ✓ |
+| Maior intervalo sem mudança visual | ≤ 3 s | fecho do TUBO 23,3–26,7 s com créditos a entrar e LED a pulsar (P2) | ✓ |
+| Pronúncia | nomes em inglês por fonética | texto fonético na ficha; escuta final do fundador recomendada | — |
+| P0 / P1 | 0 / 0 | 0 / 0 | ✓ |
+Desvio registado: a lista de 100 cartas é mostrada inteira a descer durante 4,6 s (em Commander não cabe parada em 2 colunas a ≥ 28 px); a mesma lista vai em texto na resposta ao comentário fixado.
 
-## Ficheiros finais
-- Prévia sem voz: `/mnt/project-files/tubo/mc-ep09/MC_EP09_PREVIA_SEM_VOZ.mp4` (projeto claude.ai), não versionada.
+## Ficheiros finais (não versionados)
+- Vídeo: `MC_EP09_FINAL.mp4` · 30,60 s · ficheiros do projeto claude.ai `tubo/mc-ep09/`
+- Capa: `MC_EP09_CAPA.png` + `MC_EP09_CAPA_grelha.png` · mesma pasta
+- Prévia sem voz e folhas de contacto: mesma pasta
+- Regenerável com `oraculo/motor/mc_render.py` a partir de `dados/episodio.json` + voz da geração YkwAr3wZs9AcTA1I2Wjd montada com `mc_voz.py` (atempo 1,0). Logótipo da Mercadia: re-render sem nova voz quando chegar (`terceiros/mercadia_logo.png`).
 
 ## Pacote de publicação
 - [x] `legenda.txt`
@@ -123,3 +140,43 @@ Cenas novas no motor: `decklist` e `combo` (regressão: ESP03, PAU02 e PAU08 com
 - [x] `texto_alternativo.txt`
 - [x] `fontes.md`
 - Publicação: `utm_campaign=MC-EP09`; não no mesmo dia do MB-EP20.
+
+## Handoff
+
+```
+HANDOFF · 27/11/2026, 15h20 (UTC) · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (merge de tubo/mc-ep09) · commit do episódio: COMMIT_EP (conferido no remoto: CONF)
+
+Objetivo atual: MC-EP09 pronto para o fundador publicar; falta só o logótipo opcional da Mercadia.
+
+Conteúdos tocados (comum/REGISTRO_EDITORIAL.md):
+- MC-EP09 · (novo) → CONCLUÍDO
+
+Encerramento:
+- MC-EP09 · memoria.py encerramento: OK · memoria.py validar: OK · validar_repo: 0 graves (P2 antigo: vince/kit/v1/)
+- Vídeo, capa, grelha e folha de contacto finais: /mnt/project-files/tubo/mc-ep09/ (projeto claude.ai, Binder_original). Vídeo não versionado.
+
+Decisões tomadas nesta sessão:
+- Campeonato escolhido pelo agente (Mercadia, 39/39 comandantes conhecidos); pauta liberada pelo fundador no cartão (11:03) · nucleo/DECISOES.md 27/11 sim
+- Voz autorizada pelo fundador («Pode prosseguir», 15:05; 411 créditos, uma geração) · na ficha
+- Tese: motor do deck campeão; descartados «o mais jogado não ganhou» (repete MC-PAU08) e taxa de vitória por mesa (amostra pequena) · na ficha
+- Lista de 100 cartas em resposta ao comentário fixado (limite de 2.200 caracteres) · na ficha
+
+Documentos consultados:
+- AGENTS.md, STATUS.md, nucleo/SHOWRUNNER.md, oraculo/PERFIL e LEIA-ME do TUBO, nucleo/DECISOES.md (fim), comum/REGISTRO_EDITORIAL.md, comum/radar/2026-W48.md, fichas MC-PAU08 e MC-EP08B, nucleo/modelos/HANDOFF.md
+
+Alterações realizadas:
+- oraculo/episodios/ep09_mercadia_cedh/ · episódio completo (dados, cartas, ficha, pacote, qc_final.json)
+- oraculo/motor/mc_render.py · cenas `decklist` e `combo` (regressão ESP03/PAU02/PAU08 idêntica)
+- comum/REGISTRO_EDITORIAL.md, comum/historico.md, comum/radar/2026-W48.md, nucleo/DECISOES.md, STATUS.md, comum/status_arquivo.md
+
+Insights (domingo): não se aplica (sexta-feira)
+
+Tarefas pendentes:
+- Escutar e publicar o MC-EP09 (utm_campaign=MC-EP09), em dia diferente do MB-EP20 · fundador
+- Enviar o logótipo da Mercadia, se quiser no canto do gráfico de barras (terceiros/mercadia_logo.png; re-render sem voz) · fundador → agente
+- P9 Quest Lisboa (104 jogadores) e contraste entre os dois eventos ficam de reserva para um MC futuro · agente
+
+Próximo passo concreto: publicar o MC-EP09 com legenda.txt, comentario_fixado.txt e comentario_lista.txt desta pasta.
+```
+

@@ -544,3 +544,10 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - **Regra:** `nucleo/SHOWRUNNER.md` §2.4, passo 9 (listas públicas com URL e data; EDHREC, Commander Spellbook, Moxfield/Archidekt/MTGGoldfish; Scryfall e Regras Completas; 3 candidatos com 8 campos; contagem ≠ popularidade ≠ opinião ≠ resultado; sem copiar listas nem inventar preços, rankings ou bracket).
 - **MB-EP20:** roteiro do fundador (pensado noutro agente) produzido pela §4.3; cartas, finalizador, tese e pergunta definidos pelo fundador. Sem Salt nem bracket no vídeo (amostras pequenas); o medidor da TV mostra a conta do ciclo (+3 −3 −2 +3 = +1, Oracle).
 
+
+## 27/11/2026 (11:03) · MC-EP09: primeiro cEDH do TUBO; pauta bloqueada por palavras liberada pelo fundador; cenas de deck no motor
+- **Fundador:** missão «META EM CURTO (TUBO) · Episódio competitivo · Torneio em Portugal» (27/11/2026, 10:31): escolher o campeonato (ponto de partida: Official P9Q Side Quest @ Mercadia Games, Lisboa, 22/11), análise competitiva até ao vídeo final, loja só como contexto, sem patrocínio nem parceria afirmada.
+- **Pauta:** `memoria.py pauta` bloqueou por semelhança de palavras com MB-EP05 (outra frente, objeto e tese). O fundador confirmou no cartão de decisão «Sim, avançar» (27/11/2026, 11:03).
+- **Escolha do agente (delegada na missão):** Mercadia (campo completo de 39 comandantes + lista do campeão) contra o P9 Quest principal (24 de 104 sem comandante) e um cEDH alemão (afinal de 2025). Tese: o motor do deck campeão; «o mais jogado não ganhou» posto de lado por repetir o MC-PAU08.
+- **Motor:** `oraculo/motor/mc_render.py` ganha as cenas `decklist` (lista completa de 100 cartas a descer em 2 colunas, peças-chave a verde; aplica CONTEXTO §6.4 ao Commander) e `combo` (1–2 cartas + passos com tempos da voz). Regressão: ESP03, PAU02 e PAU08 com quadros iguais.
+- **Loja:** logótipo (a enviar pelo fundador) como camada removível `terceiros.loja`, discreto, sem «×» nem selo; a voz só cita o nome do local do evento.

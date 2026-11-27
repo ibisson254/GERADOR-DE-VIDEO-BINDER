@@ -1,0 +1,43 @@
+{
+  "video": "MC_EP09_FINAL.mp4",
+  "frente": "tubo",
+  "formato": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30.0,
+    "dur": 30.6
+  },
+  "duracao_sem_fecho": 26.73,
+  "lufs": -14.0,
+  "pico_dbtp": -4.1,
+  "fecho": {
+    "exigido": true,
+    "presente": true,
+    "diferenca_media": 0.06,
+    "inicio_s": 26.73
+  },
+  "cortes_s": [
+    3.0,
+    5.1,
+    5.4,
+    17.87,
+    19.6,
+    20.93,
+    23.33,
+    26.73
+  ],
+  "quadros_na_folha": 31,
+  "problemas": [],
+  "zona_segura_aprox_px": {
+    "topo": 220,
+    "base": 380,
+    "direita": 140
+  },
+  "conferir_a_olho": [
+    "legendas e textos fora da zona vermelha",
+    "carta inteira, também nos zooms",
+    "nada a tapar fontes ou rodapés",
+    "personagens inteiros e no modelo",
+    "sem corte lateral"
+  ]
+}

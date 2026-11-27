@@ -6,9 +6,9 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Última sessão
 
-**MB-EP20 «O Monólito Infinito» (27/11/2026, 09h30)**: CONCLUÍDO, à espera de publicação. Basalt Monolith + Rings of Brighthearth (mana incolor infinita por cópia de habilidade, pilha desenhada passo a passo) e Walking Ballista de finalizador; roteiro do fundador produzido pela SHOWRUNNER §4.3; vozes 1.423 créditos; 62,20 s, QC sem problemas. Novo **módulo de pesquisa «deck Commander»** (`nucleo/SHOWRUNNER.md` §2.4 passo 9; `nucleo/DECISOES.md` 27/11). Ficha: `manaburn/episodios/ep20_monolito_infinito/ficha.md`.
+**MC-EP09 «cEDH na Mercadia Games» (27/11/2026, 15h20)**: CONCLUÍDO, à espera de publicação. Primeiro cEDH do TUBO: Official P9Q Side Quest na Mercadia Games (Lisboa, 22/11, 39 jogadores, TopDeck); o campeão foi o único Thrasios + Tymna; 13 combos na lista (Commander Spellbook), Devoted Druid + Swift Reconfiguration. Cenas novas `decklist` e `combo` no motor TUBO (regressão sem diferenças); voz 411 créditos; 30,60 s, QC sem problemas. Falta o logótipo da loja (re-render sem voz). Ficha: `oraculo/episodios/ep09_mercadia_cedh/ficha.md`.
 
-**MB-ESP05 «A Nova Aliança» · especial BINDER × Taverna de Avalon (27/11/2026, 00h45)**: CONCLUÍDO, à espera de publicação. Mana & Burn de mago e guerreiro numa taverna (imagem e logo do fundador), números do MTGDC500 em plaquinhas, histórico da loja num pergaminho, selo da parceria; vozes 969 créditos; 47,07 s, QC sem problemas. Cenário com marca d'água por decisão do fundador (`nucleo/DECISOES.md` 27/11). Ficha: `manaburn/episodios/esp05_taverna_avalon/ficha.md`.
+**MB-EP20 «O Monólito Infinito» (27/11/2026, 09h30)**: CONCLUÍDO, à espera de publicação. Basalt Monolith + Rings of Brighthearth (mana incolor infinita por cópia de habilidade, pilha desenhada passo a passo) e Walking Ballista de finalizador; roteiro do fundador produzido pela SHOWRUNNER §4.3; vozes 1.423 créditos; 62,20 s, QC sem problemas. Novo **módulo de pesquisa «deck Commander»** (`nucleo/SHOWRUNNER.md` §2.4 passo 9; `nucleo/DECISOES.md` 27/11). Ficha: `manaburn/episodios/ep20_monolito_infinito/ficha.md`.
 
 **Falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` (claude.ai) e `nucleo/prompts/CHATGPT.md` (ChatGPT).
 
@@ -16,6 +16,7 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 | ID | O que falta | Onde |
 |---|---|---|
+| MC-EP09 cEDH na Mercadia Games | escuta e publicação (`utm_campaign=MC-EP09`), não no mesmo dia do MB-EP20; enviar o logótipo da Mercadia (re-render sem voz) ou publicar sem ele; loja só como contexto, sem collab | `oraculo/episodios/ep09_mercadia_cedh/` |
 | MB-EP20 O Monólito Infinito | escuta e publicação (`utm_campaign=MB-EP20`); não publicar no mesmo dia do MB-EP18/EP19 | `manaburn/episodios/ep20_monolito_infinito/` |
 | MB-ESP05 A Nova Aliança (Taverna de Avalon) | escuta e publicação (`utm_campaign=MB-ESP05`); decidir marca d'água vs licença da imagem (re-render 0 créditos); collab com a loja só por convite do fundador | `manaburn/episodios/esp05_taverna_avalon/` |
 | MB-EP19 O Robô Que Não Morre | escuta e publicação (`utm_campaign=MB-EP19`); não publicar no mesmo dia do MB-EP18 | `manaburn/episodios/ep19_robo_imortal/` |
@@ -67,4 +68,4 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Handoff
 
-Último: 27/11/2026 (09h30), MB-EP20, no fim de `manaburn/episodios/ep20_monolito_infinito/ficha.md`. Anterior: 27/11/2026 (00h45), MB-ESP05, no fim de `manaburn/episodios/esp05_taverna_avalon/ficha.md`. Anterior: 26/11/2026 (21h45), MB-EP19, no fim de `manaburn/episodios/ep19_robo_imortal/ficha.md`. Anterior: LL-ART21 (`lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ficha.md`). Anteriores: `comum/status_arquivo.md` («Handoff»).
+Último: 27/11/2026 (15h20), MC-EP09, no fim de `oraculo/episodios/ep09_mercadia_cedh/ficha.md`. Anterior: 27/11/2026 (09h30), MB-EP20, no fim de `manaburn/episodios/ep20_monolito_infinito/ficha.md`. Anterior: 27/11/2026 (00h45), MB-ESP05, no fim de `manaburn/episodios/esp05_taverna_avalon/ficha.md`. Anterior: 26/11/2026 (21h45), MB-EP19, no fim de `manaburn/episodios/ep19_robo_imortal/ficha.md`. Anterior: LL-ART21 (`lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ficha.md`). Anteriores: `comum/status_arquivo.md` («Handoff»).

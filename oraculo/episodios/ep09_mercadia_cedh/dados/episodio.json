@@ -294,8 +294,8 @@
   "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
  ],
  "voz_cfg": {
-  "atempo": 1.1,
-  "alvo_s": 36.0,
+  "atempo": 1.0,
+  "alvo_s": 34.0,
   "pausa": 0.15,
   "pausa_min": 0.08,
   "pausas_longas": {
@@ -305,8 +305,8 @@
   }
  },
  "voz": {
-  "arquivo": "(por gerar)",
-  "atempo": 1.1,
+  "arquivo": "voz_montada.wav (geração YkwAr3wZs9AcTA1I2Wjd, 411 créditos, flow ElevenLabs C9N8wFG5EUxZ2AMtdLlQ)",
+  "atempo": 1.0,
   "lead": 0.0,
   "pausas": []
  },
@@ -378,57 +378,57 @@
   "ASK": "@8",
   "CLOSE": "@9-0.1",
   "CLOSE2": "@9+1",
-  "END": "@9>+0.15"
+  "END": 26.75
  },
  "voz_tempos": [
   [
-   0,
-   3.05,
+   0.0,
+   2.79,
    "NO cEDH PORTUGUÊS, DADOS DO TOPDECK:"
   ],
   [
-   3.2,
-   6.76,
+   2.94,
+   5.27,
    "39 JOGADORES NA MERCADIA GAMES."
   ],
   [
-   6.91,
-   10.22,
+   5.42,
+   7.85,
    "O CAMPEÃO FOI O ÚNICO THRASIOS E TYMNA."
   ],
   [
-   10.37,
-   12.74,
+   8.0,
+   9.81,
    "NA LISTA DELE, 13 COMBOS."
   ],
   [
-   12.89,
-   16.36,
+   9.96,
+   12.5,
    "12 TERMINAM EM MANA INFINITA, OU QUASE."
   ],
   [
-   16.51,
-   19.9,
+   12.65,
+   15.19,
    "DEVOTED DRUID COM SWIFT RECONFIGURATION:"
   ],
   [
-   20.05,
-   22.93,
+   15.34,
+   17.6,
    "VIRA VEÍCULO E DESVIRA SEM MORRER."
   ],
   [
-   23.23,
-   26.96,
+   17.9,
+   20.38,
    "E O THRASIOS TROCA MANA INFINITA POR CARTAS."
   ],
   [
-   27.56,
-   30.78,
+   20.98,
+   23.08,
    "SEU COMANDANTE TRANSFORMA MANA EM QUÊ?"
   ],
   [
-   31.13,
-   35.2,
+   23.43,
+   26.6,
    "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
   ]
  ]
