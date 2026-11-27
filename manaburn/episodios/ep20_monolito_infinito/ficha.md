@@ -187,3 +187,42 @@ Kit numa cópia de trabalho (manaburn/ sem episodios/), `episode.js`/`episode.js
 - [x] `memoria.py encerramento MB-EP20`: ENCERRAMENTO OK · `memoria.py validar`: OK · `validar_repo.py`: 0 graves
 - [x] Commit enviado e conferido no GitHub (hash no handoff abaixo)
 - [x] Handoff entregue
+
+## Handoff
+
+```
+HANDOFF · 27/11/2026, 09h35 (UTC) · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main · commit do episódio 1ea6347 (conferido no remoto: sim)
+
+Objetivo atual: MB-EP20 pronto para o fundador publicar; módulo «deck Commander» em vigor.
+
+Conteúdos tocados (comum/REGISTRO_EDITORIAL.md):
+- MB-EP20 · (novo) → CONCLUÍDO
+
+Encerramento:
+- MB-EP20 · memoria.py encerramento: OK · memoria.py validar: OK · validar_repo: 0 graves (P2 antigo: vince/kit/v1/)
+- Vídeo e capa finais: /mnt/project-files/manaburn/ep20/ (projeto claude.ai, Binder_original); capa e grelha também nesta pasta. Vídeo não versionado.
+
+Decisões tomadas nesta sessão:
+- Módulo de pesquisa de decks Commander (gatilho «deck Commander»), SHOWRUNNER §2.4 passo 9 · nucleo/DECISOES.md 27/11 sim
+- Vozes do MB-EP20 autorizadas pelo fundador no cartão da sessão (1.423 créditos, uma geração cada) · na ficha
+- Sem Salt nem bracket no vídeo (amostras pequenas); medidor da TV com a conta do ciclo (Oracle) · na ficha e em DECISOES
+
+Documentos consultados:
+- AGENTS.md, STATUS.md, nucleo/SHOWRUNNER.md (§2.4, §4.1–4.3), manaburn/PERFIL.md, manaburn/LEIA-ME.md, skill binder-mana-burn-episodio, nucleo/DECISOES.md (fim), comum/REGISTRO_EDITORIAL.md, comum/easter_eggs.md, comum/radar/2026-W48.md, ficha MB-EP19, binder-vision/PRODUTO.md, nucleo/modelos/HANDOFF.md
+
+Alterações realizadas:
+- manaburn/episodios/ep20_monolito_infinito/ · episódio completo · 1ea6347
+- nucleo/SHOWRUNNER.md, nucleo/DECISOES.md · módulo «deck Commander» · 1ea6347
+- comum/REGISTRO_EDITORIAL.md, comum/historico.md, comum/easter_eggs.md, comum/radar/2026-W48.md, STATUS.md, comum/status_arquivo.md · 1ea6347
+
+Insights (domingo): não se aplica (sexta-feira)
+
+Tarefas pendentes:
+- Escutar e publicar o MB-EP20 (utm_campaign=MB-EP20), em dia diferente do MB-EP18 e do MB-EP19 · fundador
+- A manchete «Plantão anterior: robô que não morre» pressupõe o MB-EP19 publicado antes · fundador
+- Medir às 48 h e aos 7 dias contra MB-EP13/EP18/EP19 · agente, com prints do fundador
+- Moxfield e fontes Brasil/Europa não abriram nesta sessão · agente noutra sessão
+
+Próximo passo concreto: publicar o MB-EP20 com legenda.txt e comentario_fixado.txt desta pasta.
+```
