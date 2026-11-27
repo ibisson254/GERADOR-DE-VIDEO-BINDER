@@ -246,6 +246,7 @@ Pedido do fundador (claude.ai, 23:27): pôr a foto do artista na melhor posiçã
 - Legenda e comentário fixado: os da V2. Texto alternativo: `texto_alternativo_v4.txt`.
 - Variante `--verde` (fundador, 26/11 23:56): os dois cartazes de fundo preto (lado pessoal e assinatura) passam ao verde-esmeralda do LL-ECO01. Só a versão muda com foto: `ll-art21_v4_foto_verde_mudo.mp4` (0 créditos).
 - Ritmo (fundador, 27/11 00:04: máximo 45 s): tudo antes da pilha das 47 fica 18 % mais rápido (voos 10 % mais curtos); a pilha mantém 0,125 s por carta; entrada da pilha e assinatura encurtadas. Total **44,77 s** (40,9 + fecho). Refino: com fundo verde, a etiqueta «Do Brasil» do lado pessoal passa a amarela com texto preto (verde sobre verde não se lia). `--lento` repõe o ritmo anterior. Entregue: `ll-art21_v4b_foto_verde_mudo.mp4`.
+- Uma carta por take (fundador, 27/11 00:29): cada cena de texto ganha uma carta recortada com autocolante amarelo «n/54 · nome» ao lado: Saheeli Rai (com quem trabalhou), Brainstorm (percurso; a ilustração mais antiga dele no Scryfall, DDJ 2012), Ojutai Exemplars (lado pessoal), Ojutai's Command (Hideki), Kynaios and Tiro of Meletis (herança). Cartas-herói renumeradas 4–9/54; a pilha final passa a «E as outras 42?» (verificado no script: 54 − 12 = 42). Setas do percurso retiradas para caber a carta. Sem afirmações novas sobre as cartas além de nome e ordem. Total **44,13 s**. Entregue: `ll-art21_v4c_foto_verde_mudo.mp4`.
 
 ## Handoff
 

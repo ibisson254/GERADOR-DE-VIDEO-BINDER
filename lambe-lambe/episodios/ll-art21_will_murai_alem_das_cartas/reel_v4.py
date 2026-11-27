@@ -56,7 +56,7 @@ t['f2'] = caixa(900, 220, T('Ele é de<br><span class="k">terceira geração<br>
 t['f3'] = caixa(880, 170, T('Nasceu e cresceu<br>no Brasil.', 72, PRETO, w=880))
 t['g1'] = caixa(640, 380, '<div style="font-family:JP,\'Noto Serif CJK JP\',serif;font-weight:900;font-size:300px;line-height:1;color:#111;text-align:center">秀樹</div>')
 t['g2'] = caixa(760, 150, T('Hideki', 130, '#fff', w=760))
-t['g3'] = caixa(700, 110, CB('o nome do meio, dado pela avó', 60, PRETO, 700))
+t['g3'] = caixa(700, 110, CB('o nome do meio, dado pela avó', 50, PRETO, 700))
 t['h1'] = caixa(900, 300, T('No próprio site, ele conta que explora a <span class="k">cultura e a história</span> dos antepassados.', 58, w=900))
 t['h2'] = caixa(900, 210, T('E diz que o site é uma <span class="g">homenagem</span> a essa herança.', 60, '#fff', w=900))
 for k, s, w in (('h3', 'Momotaro', 300), ('h4', 'Zen', 180), ('h5', 'Chrysanthemum', 420)):
@@ -72,14 +72,18 @@ t['j3'] = caixa(900, 110, GE('Cartas: ilustrações de Willian Murai · © Wizar
 t['c_br2'] = caixa(260, 90, CB('Do Brasil', 62, PRETO, 260))
 t['este'] = caixa(620, 110, RB('Este é ele.', 64, PRETO, 620))
 t['e0'] = caixa(900, 120, T('E no Magic? <span style="color:#FFD84A">54 ilustrações.</span>', 54, '#fff', w=900, extra='white-space:nowrap;'))
-t['p0'] = caixa(900, 120, T('E as outras <span class="k">47?</span>', 80, w=900))
+t['p0'] = caixa(900, 120, T('E as outras <span class="k">42?</span>', 80, w=900))
 t['p1'] = caixa(900, 120, T('Uma por cima da outra:', 58, w=900))
 HEROI = [('Master Biomancer', 'Ravnica · Gatecrash', '2013'), ('Prime Speaker Zegana', 'Ravnica · Gatecrash', '2013'),
          ('Reflector Mage', 'Zendikar · Oath of the Gatewatch', '2016'), ('Gideon, Battle-Forged', 'Magic Origins', '2015'),
          ("Nissa, Nature's Artisan", 'Kaladesh', '2016'), ('Wrath of God', 'From the Vault: Annihilation', '2014')]
 for i, (n, s_, a) in enumerate(HEROI):
     t[f'hr{i}'] = caixa(860, 80, f'<div style="text-align:center;font-family:RB;font-weight:900;font-style:italic;font-size:40px;color:#fff;white-space:nowrap">'
-                                f'{i + 2}/54 · {n}</div>')
+                                f'{i + 4}/54 · {n}</div>')
+EXTRA = [('Saheeli Rai', 2, 'Saheeli Rai'), ('Brainstorm', 3, 'Brainstorm · a mais antiga no Scryfall (2012)'),
+         ('Ojutai Exemplars', 10, 'Ojutai Exemplars'), ("Ojutai's Command", 11, "Ojutai's Command"), ('Kynaios and Tiro of Meletis', 12, 'Kynaios and Tiro of Meletis')]
+for n, num, rot in EXTRA:
+    t['tag_' + n] = caixa(300, 200, f'<div class="e" style="position:relative;font-family:CB;font-size:46px;line-height:1;color:#050A10;text-align:center;width:280px;white-space:normal">{num}/54<br><span style="font-size:32px">{rot}</span></div>')
 V.render_textos()
 
 # ------------------------------------------------------------------ peças novas
@@ -124,20 +128,24 @@ else:
     ap(Peca(peca_folha(900, 300, 'preto', 12, -1, t['c1'], claro=True), 540, 560, 7.02, .36, de=(-900, -200), rot0=-10))
     ap(Peca(peca_folha(280, 110, 'verde', 13, -6, t['c_br'], claro=True), 830, 420, 7.55, .22, modo='pop', ang=-6, som='pop'))
     ap(Peca(peca_folha(880, 200, 'kraft', 14, 1, t['c2'], fitas=F2), 540, 860, 7.95, .32, de=(900, 0), rot0=8))
-# 4 · com quem trabalhou
+def carta_info(nome, x, y, larg, t0, ang, seed, lado=1):
+    """carta recortada + autocolante amarelo ao lado com nº e nome (fora da carta)"""
+    ap(Peca(carta_recortada(png(nome), larg, ang, seed), x, y, t0, .30, de=(-900 * lado, 300), rot0=10 * lado))
+    ap(Peca(peca_folha(300, 210, 'amarelo', seed + 300, 4 * lado, t['tag_' + nome]), x + lado * (larg / 2 + 165), y - 40, t0 + .3, .2, modo='pop', ang=4 * lado, som='pop'))
+
+# 4 · com quem trabalhou (+ Saheeli Rai: trabalho para a Wizards)
 ap(COB('kraft', 59, 10.40, -.5))
-ap(Peca(peca_folha(720, 100, 'creme', 15, -1, t['c3']), 540, 560, 10.62, .18, modo='carimbo', som='pop'))
-for i, (k, y) in enumerate((('c4', 760), ('c5', 920), ('c6', 1080))):
-    ap(Peca(peca_folha(780, 120, 'preto', 16 + i, (-1) ** i * 1.2, t[k], claro=True), 540, y, 10.95 + .35 * i, .28, de=(900 * (-1) ** i, 0), rot0=8 * (-1) ** i))
-# 5 · o percurso
+ap(Peca(peca_folha(720, 100, 'creme', 15, -1, t['c3']), 540, 420, 10.62, .18, modo='carimbo', som='pop'))
+for i, (k, y) in enumerate((('c4', 545), ('c5', 670), ('c6', 795))):
+    ap(Peca(peca_folha(780, 120, 'preto', 16 + i, (-1) ** i * 1.2, t[k], claro=True), 540, y, 10.85 + .3 * i, .26, de=(900 * (-1) ** i, 0), rot0=8 * (-1) ** i))
+carta_info('Saheeli Rai', 380, 1170, 360, 11.75, -2, 71)
+# 5 · o percurso (+ Brainstorm, a ilustração mais antiga dele no Scryfall)
 ap(COB('creme', 19, 12.90, -.5))
-ap(Peca(peca_folha(900, 230, 'kraft', 20, -1.2, t['d1'], fitas=F2), 540, 450, 13.12, .34, de=(900, -300), rot0=10))
-pos = ((360, 640), (700, 860), (380, 1080), (680, 1300)); SETAS = ((800, 748), (280, 968), (800, 1188))
-for i, (k, (x, y)) in enumerate(zip(('d2', 'd3', 'd4', 'd5'), pos)):
-    ap(Peca(peca_folha(560, 130, 'amarelo' if k == 'd5' else 'creme', 21 + i, (-1) ** i * 2, t[k]), x, y, 13.60 + .55 * i, .28, de=(-900 * (-1) ** i, 0), rot0=-10 * (-1) ** i))
-    if i < 3:
-        ap(Peca(peca_folha(180, 130, 'creme', 26 + i, 0, t['seta' if i % 2 == 0 else 'seta2']), SETAS[i][0], SETAS[i][1], 13.85 + .55 * i, .18, modo='pop', som='nada'))
-ap(Peca(peca_folha(780, 60, 'creme', 30, 0, t['d6']), 540, 1400, 15.35, .2, modo='carimbo', som='nada'))
+ap(Peca(peca_folha(900, 230, 'kraft', 20, -1.2, t['d1'], fitas=F2), 540, 420, 13.12, .34, de=(900, -300), rot0=10))
+for i, (k, (x, y)) in enumerate(zip(('d2', 'd3', 'd4', 'd5'), ((330, 600), (750, 715), (330, 830), (750, 945)))):
+    ap(Peca(peca_folha(480, 120, 'amarelo' if k == 'd5' else 'creme', 21 + i, (-1) ** i * 2, t[k]), x, y, 13.55 + .42 * i, .26, de=(-900 * (-1) ** i, 0), rot0=-10 * (-1) ** i))
+ap(Peca(peca_folha(780, 60, 'creme', 30, 0, t['d6']), 540, 1035, 15.0, .2, modo='carimbo', som='nada'))
+carta_info('Brainstorm', 380, 1305, 280, 15.3, 2, 72)
 # 6 · no Magic: seis cartas-herói, uma de cada vez, grandes, coladas por cima
 ap(COB('kraft', 31, 16.40, .6))
 ap(Peca(peca_folha(960, 140, 'preto', 33, -1, t['e0'], claro=True), 540, 360, 16.62, .30, de=(-900, 0), rot0=-8))
@@ -147,28 +155,32 @@ for i, (n, _, _) in enumerate(HEROI):
             de=((-900, -500), (900, -400), (-700, 600), (800, 500), (0, -1500), (-900, 0))[i], rot0=(12, -12, 9, -10, 7, -8)[i]))
     ap(Peca(peca_folha(860, 90, 'preto', 60 + i, (-1) ** i * .8, t[f'hr{i}'], claro=True), 540, 1475, t0 + .25, .18, modo='carimbo', som='nada'))
 ap(Peca(peca_folha(780, 60, 'creme', 34, 0, t['e3']), 540, 455, 17.0, .2, modo='carimbo', som='nada'))
-# 7 · o lado pessoal
+# 7 · o lado pessoal (+ Ojutai Exemplars)
 ap(Peca(peca_folha(1040, 1640, FUNDO, 35, .4), 540, 955, 23.60, .40, de=(0, -1900), rot0=4, z0=1.15, som='grande'))
-ap(Peca(peca_folha(940, 250, 'preto', 36, 0, t['f1'], claro=True), 540, 470, 23.85, .2, modo='carimbo', som='pop'))
-ap(Peca(peca_folha(900, 260, 'creme', 37, -1.5, t['f2'], fitas=F2), 540, 820, 24.85, .34, de=(-900, -100), rot0=-10))
-ap(Peca(peca_folha(900, 200, 'kraft', 38, 1.2, t['f3']), 540, 1130, 26.10, .32, de=(900, 100), rot0=8))
-ap(Peca(peca_folha(280, 110, 'amarelo', 39, 5, t['c_br2']) if FUNDO == 'verde' else peca_folha(280, 110, 'verde', 39, 5, t['c_br'], claro=True), 830, 1280, 26.65, .22, modo='pop', ang=5, som='pop'))
-# 8 · Hideki
+ap(Peca(peca_folha(940, 250, 'preto', 36, 0, t['f1'], claro=True), 540, 410, 23.85, .2, modo='carimbo', som='pop'))
+ap(Peca(peca_folha(900, 260, 'creme', 37, -1.5, t['f2'], fitas=F2), 540, 665, 24.65, .34, de=(-900, -100), rot0=-10))
+ap(Peca(peca_folha(900, 200, 'kraft', 38, 1.2, t['f3']), 540, 890, 25.55, .32, de=(900, 100), rot0=8))
+ap(Peca(peca_folha(280, 110, 'amarelo', 39, 5, t['c_br2']) if FUNDO == 'verde' else peca_folha(280, 110, 'verde', 39, 5, t['c_br'], claro=True), 830, 1015, 26.0, .22, modo='pop', ang=5, som='pop'))
+carta_info('Ojutai Exemplars', 380, 1280, 320, 26.3, -2, 73)
+# 8 · Hideki (+ Ojutai's Command)
 ap(COB('creme', 40, 27.80, -.6))
-ap(Peca(peca_folha(680, 420, 'kraft', 41, -1, t['g1'], fitas=F2), 540, 640, 28.05, .34, de=(0, -1500), rot0=-8))
-ap(Peca(peca_folha(780, 180, 'preto', 42, 1, t['g2'], claro=True), 540, 990, 28.75, .30, de=(900, 0), rot0=8))
-ap(Peca(peca_folha(720, 130, 'creme', 43, -2, t['g3']), 540, 1170, 29.45, .2, modo='carimbo', som='pop'))
-# 9 · a herança
+ap(Peca(peca_folha(680, 420, 'kraft', 41, -1, t['g1'], fitas=F2), 540, 540, 28.05, .34, de=(0, -1500), rot0=-8))
+ap(Peca(peca_folha(780, 180, 'preto', 42, 1, t['g2'], claro=True), 540, 850, 28.6, .30, de=(900, 0), rot0=8))
+ap(Peca(peca_folha(720, 130, 'creme', 43, -2, t['g3']), 540, 1000, 29.1, .2, modo='carimbo', som='pop'))
+carta_info("Ojutai's Command", 700, 1265, 300, 29.6, 2, 74, lado=-1)
+# 9 · a herança (+ Kynaios and Tiro of Meletis)
 ap(COB('kraft', 44, 31.10, .7))
-ap(Peca(peca_folha(940, 330, 'creme', 45, -1, t['h1'], fitas=F2), 540, 540, 31.32, .34, de=(-900, -200), rot0=-10))
-ap(Peca(peca_folha(940, 240, 'preto', 46, 1, t['h2'], claro=True), 540, 860, 32.75, .32, de=(900, 0), rot0=8))
+ap(Peca(peca_folha(940, 330, 'creme', 45, -1, t['h1'], fitas=F2), 540, 435, 31.32, .34, de=(-900, -200), rot0=-10))
+ap(Peca(peca_folha(940, 240, 'preto', 46, 1, t['h2'], claro=True), 540, 700, 32.4, .32, de=(900, 0), rot0=8))
 for i, (k, x, w) in enumerate((('h3', 240, 320), ('h4', 520, 200), ('h5', 780, 440))):
-    ap(Peca(peca_folha(w, 110, 'creme', 47 + i, (-1) ** i * 4, t[k]), x, 1090 + 40 * (i == 2), 33.7 + .25 * i, .2, modo='pop', ang=(-1) ** i * 4, som='pop'))
-ap(Peca(peca_folha(880, 80, 'creme', 50, 0, t['h6']), 540, 1250, 34.2, .2, modo='carimbo', som='nada'))
+    ap(Peca(peca_folha(w, 110, 'creme', 47 + i, (-1) ** i * 4, t[k]), x, 885 + 30 * (i == 2), 33.1 + .2 * i, .2, modo='pop', ang=(-1) ** i * 4, som='pop'))
+ap(Peca(peca_folha(880, 80, 'creme', 50, 0, t['h6']), 540, 995, 33.6, .2, modo='carimbo', som='nada'))
+carta_info('Kynaios and Tiro of Meletis', 380, 1295, 300, 33.9, -2, 75)
 # 10 · as outras 47: uma por cima da outra, em ordem de lançamento
 ap(COB('creme', 51, 35.70, .4))
 ap(Peca(peca_folha(900, 130, 'kraft', 52, -1, t['p0'], fitas=F2), 540, 360, 35.92, .30, de=(-900, 0), rot0=-8))
-usadas = {'Vendilion Clique'} | {n for n, _, _ in HEROI}
+usadas = {'Vendilion Clique'} | {n for n, _, _ in HEROI} | {n for n, _, _ in EXTRA}
+assert len(CAT) - len(usadas) == 42, len(CAT) - len(usadas)
 resto = [c for c in CAT if c['nome'] not in usadas]
 rng = np.random.default_rng(7)
 for k, c in enumerate(resto):
