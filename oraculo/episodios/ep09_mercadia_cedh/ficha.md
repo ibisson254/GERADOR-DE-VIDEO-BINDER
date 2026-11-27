@@ -163,7 +163,7 @@ Por fazer: foto do campeão (com autorização) pode entrar no quadro 0, como no
 
 ```
 HANDOFF · 27/11/2026, 15h35 (UTC) · Claude (v2)
-Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (merge de tubo/mc-ep09) · v1: commit 3256997, merge 1d51eaa; v2: branch tubo/mc-ep09-v2, ver git log (conferido no remoto: ver resposta no fio)
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (merge de tubo/mc-ep09) · v1: commit 3256997, merge 1d51eaa; v2: commit 76304c2, merge 56f86ce (conferido no remoto: sim)
 
 Objetivo atual: MC-EP09 v2 pronto para o fundador publicar (MC_EP09_FINAL_v2.mp4); opcionais: logótipo da Mercadia e foto do campeão.
 
