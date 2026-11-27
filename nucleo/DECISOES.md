@@ -564,3 +564,6 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - **Pauta:** `memoria.py pauta` bloqueou por MB-GIRO03 (mesmo objeto «Mundial 32»). O cartão do fundador liberta-a; o MC-EP08/EP08B não se reabre (ângulo novo: Larsen e Jogador do Ano).
 - **Motor:** `cena_linha_tempo` aceita o tempo de cada marco (4.º campo opcional); regressão sem diferenças.
 
+## 27/11/2026 (18:10) · MB-EP21: pauta bloqueada por palavra liberada pelo fundador
+- **Fundador:** «faça um episódio inspirado nesse» (Reel do Instagram DRF269kE1bZ, combo Helm of Obedience + Rest in Peace; 27/11/2026, 18:00). «Inspirado» = formato e ideia; roteiro, telas e piadas próprios do Mana & Burn.
+- **Pauta:** `memoria.py pauta` bloqueou por «mesmo objeto» com o MB-EP19 (a Rest in Peace aparece lá só como resposta ao combo do robô). O fundador escolheu «Avançar com Helm + RiP» no cartão de decisão (27/11/2026, 18:10). Objeto principal, tese, mecânica e vitória diferentes; a fala 7 faz a ponte com o MB-EP19.

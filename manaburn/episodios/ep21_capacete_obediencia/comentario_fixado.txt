@@ -1,0 +1,25 @@
+Sem Rest in Peace, X = 3, e a primeira carta moída é uma criatura: o oponente mói A, uma, ou B, três?
+
+A resposta do Mana: A, uma. O Helm para quando X cartas OU uma carta de criatura chegam ao cemitério, o que vier primeiro. A criatura chegou na primeira: o processo para ali. E tem bônus: você sacrifica o Helm e coloca essa criatura no campo sob o seu controle.
+
+Como o combo funciona (Helm of Obedience + Rest in Peace em campo):
+1. Pague X = 1 e vire o Helm, escolhendo um oponente.
+2. Ele mói uma carta. A Rest in Peace substitui: em vez de ir para o cemitério, a carta vai para o exílio.
+3. Nenhuma carta chegou ao cemitério, então o Helm repete o processo.
+4. Isso continua até o grimório acabar. Ruling oficial: "Your opponent's entire library will be exiled, even if X is 1."
+Por exilar tudo, a parte da criatura nunca acontece.
+
+O que a mesa costuma errar:
+- Grimório vazio não é derrota imediata. O jogador perde quando tentar comprar sem cartas (regra 704.5b), normalmente na próxima etapa de compra dele.
+- É um oponente por ativação ("target opponent") e o Helm vira para ativar. Sem outra carta que desvire, é uma ativação por volta da mesa: numa mesa de 4, três voltas para pegar os três.
+- A Rest in Peace também exila o seu cemitério quando entra e tudo o que iria para o seu cemitério depois.
+
+Como a mesa para: com a habilidade na pilha, destruir ou exilar a Rest in Peace em resposta faz a primeira carta chegar ao cemitério, e com X = 1 o Helm para ali. Destruir o Helm em resposta não adianta: a habilidade já está na pilha e resolve mesmo assim.
+
+Texto Oracle:
+Helm of Obedience: "{X}, {T}: Target opponent mills a card, then repeats this process until a creature card or X cards have been put into their graveyard this way, whichever comes first. If one or more creature cards were put into that graveyard this way, sacrifice this artifact and put one of them onto the battlefield under your control. X can't be 0."
+Rest in Peace: "When this enchantment enters, exile all graveyards. If a card or token would be put into a graveyard from anywhere, exile it instead."
+
+Fontes (27/11/2026): Oracle e rulings no Scryfall (ruling do Helm de 01/10/2008); combo 3002-5065 no Commander Spellbook (4.387 decks no EDHREC com as duas cartas: é contagem de listas, não de partidas); Salt Score do Helm no EDHREC 0,60 (putômetro 15 %); Regras Completas 704.5b.
+
+A mesma Rest in Peace que parou o robô no episódio 19. Lembra?

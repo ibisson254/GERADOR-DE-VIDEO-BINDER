@@ -1,0 +1,31 @@
+{
+ "schema": 2,
+ "versao": "MB-EP21 · O Capacete Que Nunca Para (27/11/2026)",
+ "chamada": "o capacete que nunca para",
+ "falas": [
+  {"quem": "B", "tags": "[shouting]", "legenda": "Paga *UMA* mana… e o oponente perde o grimório *INTEIRO*!", "tts": "Paga UMA mana… e o oponente perde o grimório INTEIRO!"},
+  {"quem": "M", "tags": "[bored]", "legenda": "É o *Helm of Obedience*. Paga X e vira: o oponente mói até X cartas *chegarem ao cemitério*.", "tts": "É o Rélm óf Obídiens. Paga xis e vira: o oponente mói até xis cartas chegarem ao cemitério."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Então com X igual a *um*, mói *uma* e acabou! Que capacete fraco!", "tts": "Então com xis igual a um, mói uma e acabou! Que capacete fraco!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "*Lê a carta.* Ele para quando a carta *chega* ao cemitério. E se *nenhuma* chegar?"},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Como assim nenhuma? Moeu, caiu no cemitério, *gênio*!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Não com *Rest in Peace*. Tudo que iria pro cemitério vai pro *exílio*.", "tts": "Não com Rést in Pís. Tudo que iria pro cemitério vai pro exílio."},
+  {"quem": "B", "tags": "[shouting]", "legenda": "A mesma *Rest in Peace* que parou o *robô*?!", "tts": "A mesma Rést in Pís que parou o robô?!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Ela mesma. Nenhuma carta chega, e o capacete *nunca para*. Tá na *ruling*: grimório *inteiro*, mesmo com X igual a *um*.", "tts": "Ela mesma. Nenhuma carta chega, e o capacete nunca para. Tá na rúling: grimório inteiro, mesmo com xis igual a um."},
+  {"quem": "B", "tags": "[shouting]", "legenda": "Grimório zerado! *Ganhei*, mano!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "*Ainda não.* Ele só perde quando tiver que *comprar* e não tiver carta."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Tá, então faço na *mesa inteira*, de uma vez!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "*Um* oponente por vez, e o capacete *vira*: numa mesa de quatro, *três voltas*. E a mesa responde tirando a *Rest in Peace*.", "tts": "Um oponente por vez, e o capacete vira: numa mesa de quatro, três voltas. E a mesa responde tirando a Rést in Pís."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Pergunta: *sem* Rest in Peace, X igual a *três*, e a primeira carta é uma *criatura*. Ele mói *A*, uma, ou *B*, três?", "tts": "Pergunta: sem Rést in Pís, xis igual a três, e a primeira carta é uma criatura. Ele mói Á, uma, ou Bê, três?"},
+  {"quem": "M", "tags": "[bored]", "legenda": "Comenta aí."}
+ ],
+ "gap": [0, 0.0, -0.06, 0.0, -0.08, 0.02, -0.08, 0.02, -0.08, 0.02, -0.06, 0.02, 0.0, 0.38],
+ "ins": [[2, 0.1], [4, 0.1], [6, 0.1], [8, 0.1], [10, 0.1], [12, 0.1]],
+ "respiro_max": 0.1,
+ "tempo": {"B": 1.1, "M": 1.15},
+ "mix": {"intro_db": 0, "fala_db": -14, "pausa_db": -6, "fecho_db": 0},
+ "sfx": {"tv": true, "destaque": true, "carta": "flick", "raiva": true},
+ "outro": {"scanner": 0, "hold": 2.75},
+ "abertura": {"ate": 0.36},
+ "sfx_flip": [[1, 0.035], [5, 0.035]],
+ "sfx_destaque": [[1, 0.1], [1, 0.55], [3, 0.08], [5, 0.12], [7, 0.1], [9, 0.1], [11, 0.1]]
+}
