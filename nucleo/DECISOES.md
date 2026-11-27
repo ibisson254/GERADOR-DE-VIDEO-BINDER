@@ -538,3 +538,9 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 - **Pauta:** `memoria.py pauta` bloqueou por semelhança de palavras com MB-ESP04 (nome da série); avançou por pedido expresso do fundador.
 - **Imagem de cenário:** pré-visualização de banco de imagens com marca d'água, usada por decisão do fundador, sem licença; não versionada. Trocar por versão licenciada é um re-render sem nova voz (0 créditos).
 - **ID:** MB-ESP05 (MB-ESP04 já existia).
+
+## 27/11/2026 (10:30) · Módulo de pesquisa de decks Commander; MB-EP20 «O Monólito Infinito»
+- **Fundador:** missão «MB-EP20 — O MONÓLITO INFINITO» (27/11/2026, 08:44): «implementa a regra de pesquisa que deverá ser acionada futuramente quando o fundador escrever: «deck Commander», «deck de Commander», «decks Commander». O gatilho ativa o módulo de pesquisa de decks, mas não substitui o router editorial.»
+- **Regra:** `nucleo/SHOWRUNNER.md` §2.4, passo 9 (listas públicas com URL e data; EDHREC, Commander Spellbook, Moxfield/Archidekt/MTGGoldfish; Scryfall e Regras Completas; 3 candidatos com 8 campos; contagem ≠ popularidade ≠ opinião ≠ resultado; sem copiar listas nem inventar preços, rankings ou bracket).
+- **MB-EP20:** roteiro do fundador (pensado noutro agente) produzido pela §4.3; cartas, finalizador, tese e pergunta definidos pelo fundador. Sem Salt nem bracket no vídeo (amostras pequenas); o medidor da TV mostra a conta do ciclo (+3 −3 −2 +3 = +1, Oracle).
+

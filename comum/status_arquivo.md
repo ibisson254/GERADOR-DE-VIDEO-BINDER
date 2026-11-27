@@ -4,6 +4,18 @@ Histórico do `STATUS.md` até 26/11/2026 (14h30), copiado sem alterações quan
 
 ---
 
+## Saído do STATUS a 27/11/2026 (09h30, MB-EP20)
+
+**LL-ART21 V4 (26/11/2026, 23h55)**: foto do artista em cartaz P&B e cartas uma de cada vez, recortadas à mão (52,50 s). Publicável: `ll-art21_v4_semfoto.mp4`; com foto só após autorização registada. Ficha, secção «V4».
+
+**Fórmula dos combos + MB-EP19 «O Robô Que Não Morre» (26/11/2026, 21h45)**: CONCLUÍDO, à espera de publicação. «Episódio de combo» passa a padrão recorrente (não exclusivo) do Mana & Burn (`manaburn/PERFIL.md`; `nucleo/DECISOES.md` 21:45). MB-EP19: Mikaeus, the Unhallowed + Triskelion, escolhido entre 3 candidatos; vozes 1.112 créditos; 50,90 s, QC sem P0/P1. MB-EP18 verificado sem alterações; re-render das vozes já pagas (0 créditos).
+
+**Padrão de vídeo do Lambe-lambe + LL-ART21 V3 (26/11/2026, 23h30)**: o vídeo do LL-ECO01 passa a padrão de todos os vídeos do Lambe-lambe (`lambe-lambe/kit_video/`, `nucleo/DECISOES.md`). LL-ART21 V3 «Will Murai» feito no padrão: 44,47 s, sem foto, 0 créditos, QC com P1 de loudness aceite. Ficha, secção «V3».
+
+**LL-ART21 V2 «Will Murai — o artista por trás das cartas» (26/11/2026, 23h)**: reconstrução autorizada pelo fundador. As 54 ilustrações de Willian Murai no Scryfall, foto do artista só na versão privada; 94,17 s, sem voz, 0 créditos, QC sem problemas. Publicável: `ll-art21_v2_semfoto.mp4`; V1 preservada. Ficha, secção «V2».
+
+---
+
 ## Arquivado a 26/11/2026 (21h45): «Última sessão» do STATUS
 
 **LL-ART21 «Will Murai — Além das cartas» (26/11/2026)**: CONCLUÍDO, à espera de publicação. É o primeiro Reel documental do Lambe-lambe (piloto, `nucleo/DECISOES.md` 26/11 19h). Pauta e roteiro vieram do ChatGPT com três correções de factos; não tem voz e gastou 0 créditos; 57,87 s, QC sem problemas.

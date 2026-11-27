@@ -6,15 +6,9 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Última sessão
 
+**MB-EP20 «O Monólito Infinito» (27/11/2026, 09h30)**: CONCLUÍDO, à espera de publicação. Basalt Monolith + Rings of Brighthearth (mana incolor infinita por cópia de habilidade, pilha desenhada passo a passo) e Walking Ballista de finalizador; roteiro do fundador produzido pela SHOWRUNNER §4.3; vozes 1.423 créditos; 62,20 s, QC sem problemas. Novo **módulo de pesquisa «deck Commander»** (`nucleo/SHOWRUNNER.md` §2.4 passo 9; `nucleo/DECISOES.md` 27/11). Ficha: `manaburn/episodios/ep20_monolito_infinito/ficha.md`.
+
 **MB-ESP05 «A Nova Aliança» · especial BINDER × Taverna de Avalon (27/11/2026, 00h45)**: CONCLUÍDO, à espera de publicação. Mana & Burn de mago e guerreiro numa taverna (imagem e logo do fundador), números do MTGDC500 em plaquinhas, histórico da loja num pergaminho, selo da parceria; vozes 969 créditos; 47,07 s, QC sem problemas. Cenário com marca d'água por decisão do fundador (`nucleo/DECISOES.md` 27/11). Ficha: `manaburn/episodios/esp05_taverna_avalon/ficha.md`.
-
-**LL-ART21 V4 (26/11/2026, 23h55)**: foto do artista em cartaz P&B e cartas uma de cada vez, recortadas à mão (52,50 s). Publicável: `ll-art21_v4_semfoto.mp4`; com foto só após autorização registada. Ficha, secção «V4».
-
-**Padrão de vídeo do Lambe-lambe + LL-ART21 V3 (26/11/2026, 23h30)**: o vídeo do LL-ECO01 passa a padrão de todos os vídeos do Lambe-lambe (`lambe-lambe/kit_video/`, `nucleo/DECISOES.md`). LL-ART21 V3 «Will Murai» feito no padrão: 44,47 s, sem foto, 0 créditos, QC com P1 de loudness aceite. Ficha, secção «V3».
-
-**LL-ART21 V2 «Will Murai — o artista por trás das cartas» (26/11/2026, 23h)**: reconstrução autorizada pelo fundador. As 54 ilustrações de Willian Murai no Scryfall, foto do artista só na versão privada; 94,17 s, sem voz, 0 créditos, QC sem problemas. Publicável: `ll-art21_v2_semfoto.mp4`; V1 preservada. Ficha, secção «V2».
-
-**Fórmula dos combos + MB-EP19 «O Robô Que Não Morre» (26/11/2026, 21h45)**: CONCLUÍDO, à espera de publicação. «Episódio de combo» passa a padrão recorrente (não exclusivo) do Mana & Burn (`manaburn/PERFIL.md`; `nucleo/DECISOES.md` 21:45). MB-EP19: Mikaeus, the Unhallowed + Triskelion, escolhido entre 3 candidatos; vozes 1.112 créditos; 50,90 s, QC sem P0/P1. MB-EP18 verificado sem alterações; re-render das vozes já pagas (0 créditos).
 
 **Falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` (claude.ai) e `nucleo/prompts/CHATGPT.md` (ChatGPT).
 
@@ -22,6 +16,7 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 | ID | O que falta | Onde |
 |---|---|---|
+| MB-EP20 O Monólito Infinito | escuta e publicação (`utm_campaign=MB-EP20`); não publicar no mesmo dia do MB-EP18/EP19 | `manaburn/episodios/ep20_monolito_infinito/` |
 | MB-ESP05 A Nova Aliança (Taverna de Avalon) | escuta e publicação (`utm_campaign=MB-ESP05`); decidir marca d'água vs licença da imagem (re-render 0 créditos); collab com a loja só por convite do fundador | `manaburn/episodios/esp05_taverna_avalon/` |
 | MB-EP19 O Robô Que Não Morre | escuta e publicação (`utm_campaign=MB-EP19`); não publicar no mesmo dia do MB-EP18 | `manaburn/episodios/ep19_robo_imortal/` |
 | LL-ART21 Will Murai (Reel **V4**, padrão) | escolher entre V1–**V4** (V4 = padrão do Lambe-lambe, com foto e cartas uma a uma); publicar a versão **sem foto** (`utm_campaign=LL-ART21`); música no Instagram; versão com foto só com autorização da imagem | `lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/` |
@@ -72,4 +67,4 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Handoff
 
-Último: 27/11/2026 (00h45), MB-ESP05, no fim de `manaburn/episodios/esp05_taverna_avalon/ficha.md`. Anterior: 26/11/2026 (21h45), MB-EP19 + fórmula dos combos, no fim de `manaburn/episodios/ep19_robo_imortal/ficha.md`. Anterior: LL-ART21 (`lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ficha.md`). Anteriores: `comum/status_arquivo.md` («Handoff»).
+Último: 27/11/2026 (09h30), MB-EP20, no fim de `manaburn/episodios/ep20_monolito_infinito/ficha.md`. Anterior: 27/11/2026 (00h45), MB-ESP05, no fim de `manaburn/episodios/esp05_taverna_avalon/ficha.md`. Anterior: 26/11/2026 (21h45), MB-EP19, no fim de `manaburn/episodios/ep19_robo_imortal/ficha.md`. Anterior: LL-ART21 (`lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ficha.md`). Anteriores: `comum/status_arquivo.md` («Handoff»).

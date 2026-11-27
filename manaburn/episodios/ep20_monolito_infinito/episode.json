@@ -1,0 +1,31 @@
+{
+ "schema": 2,
+ "versao": "MB-EP20 · O Monólito Infinito (27/11/2026)",
+ "chamada": "o monólito infinito",
+ "falas": [
+  {"quem": "B", "tags": "[shouting]", "legenda": "Esse monólito *não desvira* na sua etapa de desvirar… mas pode gerar mana *infinita*!"},
+  {"quem": "M", "tags": "[bored]", "legenda": "Com *Rings of Brighthearth*, ele transforma o próprio *desvirar* num *ciclo*.", "tts": "Com Rings óf Bráit-rárt, ele transforma o próprio desvirar num ciclo."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Mas o Basalt Monolith gera *três* e cobra *três* pra desvirar. Onde está o *lucro*?", "tts": "Mas o Basált Mônolit gera três e cobra três pra desvirar. Onde está o lucro?"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Quando você ativa o desvirar, Rings pode *copiar* essa habilidade se você pagar *mais duas* manas."},
+  {"quem": "B", "tags": "[shouting]", "legenda": "E a cópia resolve *primeiro*?"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Isso. Ela *desvira* o Monolith. Você *vira de novo* e gera outras *três*.", "tts": "Isso. Ela desvira o Mônolit. Você vira de novo e gera outras três."},
+  {"quem": "B", "tags": "[shouting]", "legenda": "E a habilidade *original* ainda está na *pilha*!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Ela resolve depois e desvira o artefato *outra vez*. Começando com *duas manas* disponíveis, cada ciclo completo deixa *uma mana incolor* a mais."},
+  {"quem": "B", "tags": "[shouting]", "legenda": "Uma por volta? Então dá pra repetir até ter *o quanto quiser*!"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "Exatamente. Mas é mana *incolor*, e mana infinita *sozinha* não derrota ninguém."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Então quem transforma esse infinito em *dano*?"},
+  {"quem": "M", "tags": "[deadpan]", "legenda": "*Walking Ballista*. Ela entra com *X marcadores*. Você remove um e causa *um de dano* a qualquer alvo. Com *120 marcadores*, que custam *240 manas*, são *40 de dano* pra cada um dos três oponentes, num *exemplo* de mesa a 40.", "tts": "Uóquin Balísta. Ela entra com xis marcadores. Você remove um e causa um de dano a qualquer alvo. Com cento e vinte marcadores, que custam duzentas e quarenta manas, são quarenta de dano pra cada um dos três oponentes, num exemplo de mesa a quarenta."},
+  {"quem": "B", "tags": "[outraged]", "legenda": "Você fecha com a *Ballista* ou usa o infinito pra conjurar um *Eldrazi colossal*?", "tts": "Você fecha com a Balísta ou usa o infinito pra conjurar um Eldrázi colossal?"},
+  {"quem": "M", "tags": "[bored]", "legenda": "Comenta aí."}
+ ],
+ "gap": [0, 0.0, -0.06, 0.0, -0.08, 0.02, -0.08, 0.02, -0.08, 0.02, -0.06, 0.02, 0.0, 0.38],
+ "ins": [[2, 0.1], [4, 0.1], [6, 0.1], [8, 0.1], [10, 0.1], [12, 0.1]],
+ "respiro_max": 0.1,
+ "tempo": {"B": 1.1, "M": 1.15},
+ "mix": {"intro_db": 0, "fala_db": -14, "pausa_db": -6, "fecho_db": 0},
+ "sfx": {"tv": true, "destaque": true, "carta": "flick", "raiva": true},
+ "outro": {"scanner": 0, "hold": 2.75},
+ "abertura": {"ate": 0.3},
+ "sfx_flip": [[1, 0.035], [3, 0.035], [11, 0.035]],
+ "sfx_destaque": [[1, 0.1], [3, 0.08], [11, 0.1], [11, 0.24]]
+}

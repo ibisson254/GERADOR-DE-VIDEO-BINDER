@@ -63,6 +63,13 @@ Primeiro descobre-se **qual história merece ser contada**; só depois se escrev
 6. **Rubrica de seleção (1–5, interna):** impacto do gancho, originalidade, facilidade de compreensão, potencial visual, potencial de compartilhamento, recompensa narrativa e adequação à personagem (critério próprio da frente, tabela). Escolhe-se um vencedor com uma frase sobre **porque supera os outros**; os preteridos ficam como **reserva** na ficha (não entram no registo). Se nenhum tiver pelo menos 4 em impacto, compreensão e adequação, continua-se a pesquisar.
 7. **Verificação antes do roteiro:** cada facto que vai para o ecrã é conferido na fonte primária da frente; dados de terceiros com fonte, data, período e amostra; o que não abre na sessão fica como limitação declarada e sai do vídeo.
 8. **Custo:** a pesquisa é gratuita; consultas pagas (vidIQ e afins) só quando mudam uma decisão.
+9. **Módulo de pesquisa de decks Commander (desde 27/11/2026, fundador, MB-EP20):** ativa-se quando o fundador escreve «deck Commander», «deck de Commander» ou «decks Commander». **Não substitui o router (§2.2):** Commander competitivo, torneios, metagame e decisões de jogo continuam no Meta em Curto; combos curiosos, interações inesperadas e caos de mesa podem ir para o Mana & Burn. O módulo acrescenta aos passos 3–7:
+   - listas reais e públicas, não só páginas isoladas de combos: EDHREC (frequência, inclusão, comandantes, deck médio), Commander Spellbook (pré-requisitos, sequência, resultado) e listas em Moxfield, Archidekt e MTGGoldfish, com **URL e data de atualização** de cada lista usada (sem data na página: «sem data, consultada a …»);
+   - cartas, legalidade, Oracle e rulings no Scryfall; Regras Completas quando a interação pede interpretação;
+   - pelo menos 3 candidatos com objetos e mecânicas diferentes; para cada um: comandante(s), identidade de cor, plano de jogo, cartas centrais, condições de vitória, dependências, vulnerabilidades e qualidade visual;
+   - separar **contagem de decks**, **popularidade**, **opinião da comunidade** e **resultado competitivo**: uma contagem do EDHREC não prova tendência no Brasil nem na Europa; fonte regional que não abre fica como limitação, nunca como «tendência»;
+   - não copiar a lista inteira de outro jogador; não inventar preços, disponibilidade, rankings nem bracket (bracket e Salt só com fonte, data, metodologia e amostra suficiente).
+   Primeira aplicação: `manaburn/episodios/ep20_monolito_infinito/ficha.md` («Pesquisa de decks Commander»).
 
 | Frente | Reação-alvo (pergunta de pesquisa) | Onde procurar (fonte primária primeiro) | Critério de adequação na rubrica |
 |---|---|---|---|

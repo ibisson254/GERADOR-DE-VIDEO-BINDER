@@ -1,0 +1,27 @@
+Com mana incolor infinita no pool: você fecha com a A, Walking Ballista, ou B, conjura um Eldrazi colossal?
+
+A resposta do Mana: A. A Ballista fecha no mesmo turno: X é o quanto você quiser e cada marcador tirado é 1 de dano em qualquer alvo. O Eldrazi precisa estar na sua mão e entra sem ímpeto: o Ulamog, the Ceaseless Hunger exila duas permanentes quando você conjura, mas só ataca no turno seguinte. E a mana some no fim da etapa, então use o infinito antes de passar.
+
+Como o ciclo funciona (Basalt Monolith + Rings of Brighthearth em campo, Monolith desvirado e 2 manas disponíveis):
+1. Vire o Monolith: +3 (você fica com 5).
+2. Ative o desvirar pagando 3 (fica com 2). Essa habilidade vai para a pilha.
+3. O Rings dispara: pague mais 2 (fica com 0) e copie o desvirar. A cópia fica no topo da pilha.
+4. A cópia resolve primeiro e desvira o Monolith.
+5. Com a original ainda na pilha, vire o Monolith de novo: +3 (fica com 3).
+6. A original resolve e desvira o Monolith outra vez.
+Começou com 2 e o Monolith desvirado, terminou com 3 e o Monolith desvirado: +1 mana incolor por ciclo. Repita quantas vezes quiser; o pagamento do Rings é opcional a cada volta.
+
+Por que funciona: o Rings só copia habilidade que não é de mana. O "virar" do Monolith é habilidade de mana; o "desvirar" não é (ruling de 10/11/2020). E a mesma ruling diz que o gatilho do Rings e a cópia resolvem antes da habilidade original.
+
+Como a mesa para: cada desvirar e cada gatilho do Rings usam a pilha, e os oponentes podem responder a cada volta. Destruir ou exilar o Monolith ou o Rings em resposta corta o ciclo; anular o gatilho do Rings também. Depois, a Walking Ballista é uma mágica de criatura (pode ser anulada) e cada tiro usa a pilha. Não é impossível de parar.
+
+Exemplo de mesa: 3 oponentes a 40 de vida (regra 903.7). Ballista com X = 120 custa 240 manas ({X}{X} = 2 vezes X, ruling de 07/08/2020): 40 de dano em cada um.
+
+Texto Oracle:
+Basalt Monolith: "This artifact doesn't untap during your untap step. {T}: Add {C}{C}{C}. {3}: Untap this artifact."
+Rings of Brighthearth: "Whenever you activate an ability, if it isn't a mana ability, you may pay {2}. If you do, copy that ability. You may choose new targets for the copy."
+Walking Ballista: "This creature enters with X +1/+1 counters on it. {4}: Put a +1/+1 counter on this creature. Remove a +1/+1 counter from this creature: It deals 1 damage to any target."
+
+Fontes (27/11/2026): Oracle e rulings no Scryfall; combo 4131-4235 no Commander Spellbook e no EDHREC (54.795 decks com o combo publicados no EDHREC: é contagem de listas, não de partidas); Regras Completas 405.5, 605.3a e 903.7.
+
+Achou o easter egg do relógio da TV SAL?
