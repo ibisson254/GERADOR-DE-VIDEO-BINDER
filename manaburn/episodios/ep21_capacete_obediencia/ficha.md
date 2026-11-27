@@ -2,7 +2,7 @@
 
 ## Identificação
 - ID editorial: MB-EP21
-- Estado no registo: EM PRODUÇÃO (prévia sem voz; vozes por autorizar)
+- Estado no registo: CONCLUÍDO (ver «Controlo de qualidade»); à espera de publicação pelo fundador
 - Pedido do fundador: «faça um episódio inspirado nesse» com o Reel https://www.instagram.com/reel/DRF269kE1bZ/ (27/11/2026, 18:00, na conversa do MB-EP18; encaminhado pelo coordenador do projeto claude.ai).
 - Inspirado = formato e ideia, não o conteúdo: o Reel de referência explica em 44 s um combo de duas cartas (Helm of Obedience + Rest in Peace) com a estrutura «o que precisa → como funciona» e memes de terceiros. Aqui fica o combo e a promessa («duas cartas que acabam com o grimório»); roteiro, correções, telas, piadas e personagens são do Mana & Burn, sem memes nem imagens do Reel.
 - O Instagram não abre por automação: o Reel foi visto pelo vidIQ (`vidiq_watch_shortform_content`, 10 créditos, 27/11/2026), porque sem isso não havia pauta (SHOWRUNNER §2.4 passo 8).
@@ -92,10 +92,26 @@ Pergunta final: de **conta** (o MB-EP20 foi de ação). Resposta no comentário 
 - Kit Mana & Burn v3 com abertura de carta, plano de prova, quadro do Conde e TV acesa no quadro 0; cópia de trabalho fora do repositório.
 - Telas: `telas_capacete.py` (12 telas, CSS do MB-EP19). Capa: `capas/capa_mb.py --carta helm.png --frase "Uma mana e some o grimório" --foco INTEIRO --selo "SÓ X = 1" --selo-y 420 --ep 21 --tag Commander`.
 - Prévia sem voz: `python3 previa_sem_voz.py` → `render.py` → `juntar_fecho.py` com `comum/outro/outro_binder_916.mp4`. 0 créditos.
-- Vozes: **não geradas**. Precisam de autorização do fundador (Talis + Erik, eleven_v4, ~1.000–1.150 créditos pela média da série).
+- Vozes: autorizadas pelo fundador (cartão da prévia + «Prossiga», 27/11/2026 18:16). ElevenLabs eleven_v4, flow «Mana & Burn — MB-EP21 (O Capacete Que Nunca Para)» (`7irp5GgIqRugB1Fjgq1p`). Burn: Talis (`E9a8LlXPNWtyvvSoZzrb`), 547 créditos, 28,9 s. Mana: Erik (`nfiLpQ54jEQninp3nNqL`), 687 créditos, 37,4 s. **Total 1.234 créditos**, uma geração cada, sem repetição; IDs confirmados no `creative_list_voices`. Texto das faixas: `faixas_elevenlabs.txt`. Corte pelo `tts` (`processar_vozes.py`).
 
-## Ficheiros
-- Prévia sem voz e capa: `/mnt/project-files/manaburn/ep21/` (fora do Git).
+## Controlo de qualidade (ficheiro final, 27/11/2026)
+- `qc_video.py --frente manaburn`: 1080x1920, 30 fps, **54,37 s** (50,5 s + fecho do scanner a partir de 50,5 s, dif. 0,07), **−14,9 LUFS**, pico −1,4 dBTP, **sem problemas mensuráveis**. `bordas.py` OK (1.136 quadros de TV, laterais 58–804 px). `check_quadro.py` OK (trocas do Conde em cortes).
+- Retenção: quadro 0 com a carta inteira e o selo (sim); mudança visual ≤ 3 s (cortes, aproximações, flips e trocas a meio; o maior intervalo sem corte de plano, 24,1–29,6 s, tem 3 telas: ruling → «MÓI 1…» → «MÓI TUDO»); som em cada revelação (pancada, flips, destaques, zaps).
+- Abertura: sai a 1,02 s (fração 0,36 da 1.ª fala), depois de «Paga UMA mana».
+- Pagamento do gancho: **24,1–29,5 s** (ruling + grimório 60 → 0), como previsto no campo 7.
+- Rubrica medida (folha de contacto sem som): relevância 5 · impacto 4 · clareza 4 · curiosidade 4 · pagamento 5 · identidade 5. Sem P0/P1.
 
-## Depende do fundador
-1. Ver a prévia sem voz e autorizar as vozes.
+## Ficheiros finais
+- Vídeo: `/mnt/project-files/manaburn/ep21/ManaBurn_Ep21_CapaceteInfinito_916.mp4` (não versionado). Prévia sem voz e faixas MP3 na mesma pasta.
+- Capa: `MB_EP21_CAPA.png` (+ `_grelha`) nesta pasta e na pasta do projeto. Folha de contacto: `folha_contacto_final.png`.
+
+## Pacote de publicação
+`legenda.txt`, `comentario_fixado.txt`, `texto_alternativo.txt`, `fontes.md`. UTM: `utm_campaign=MB-EP21`. Não publicar no mesmo dia do MB-EP19 (mesma Rest in Peace) nem do MB-EP20.
+
+## Encerramento
+- [x] Briefing e roteiro na ficha · [x] legenda, comentário fixado, texto alternativo · [x] fontes · [x] QC · [x] ficheiros finais
+- [x] `comum/REGISTRO_EDITORIAL.md` (CONCLUÍDO) · [x] `comum/historico.md` · [x] radar W48 (linha 12) · [x] `nucleo/DECISOES.md` (pauta liberada) · [x] `STATUS.md`
+- [x] `memoria.py encerramento MB-EP21`, `validar`, `validar_repo.py` · [x] commit na `main` conferido (hash no handoff)
+
+## Handoff
+Ver o fim do `STATUS.md` e a mensagem da sessão; resumo: MB-EP21 CONCLUÍDO a 27/11/2026 (~18h45 UTC), 1.234 créditos de voz, vídeo na pasta do projeto, à espera de publicação. Episódio inspirado num Reel visto pelo vidIQ (10 créditos). Pendente do fundador: escuta e publicação.
