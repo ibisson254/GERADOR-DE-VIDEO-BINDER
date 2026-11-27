@@ -176,7 +176,7 @@ Comparação v2 → v3: Mercadia identificada pelo logótipo e nome em destaque 
 
 ```
 HANDOFF · 27/11/2026, 16h10 (UTC) · Claude (v3)
-Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (merge de tubo/mc-ep09) · v1: commit 3256997, merge 1d51eaa; v2: commit 76304c2, merge 56f86ce (conferido no remoto: sim)
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main · v3: commit 19fafaa, merge 3f7bcb7 · v1: commit 3256997, merge 1d51eaa; v2: commit 76304c2, merge 56f86ce (conferido no remoto: sim)
 
 Objetivo atual: MC-EP09 v3 pronto para o fundador publicar (MC_EP09_FINAL_v3.mp4); opcionais: PNG original do logótipo e foto do campeão (re-render sem voz).
 
