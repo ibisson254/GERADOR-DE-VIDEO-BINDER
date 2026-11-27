@@ -14,6 +14,7 @@ from motor_video import Peca, T, caixa, peca_folha, peca_carta, peca_img, matte,
 ARG = [a for a in sys.argv[1:]]
 CACHE = os.path.abspath(ARG[0]); SAIDA = os.path.abspath(ARG[1])
 FOTO = os.path.abspath(ARG[ARG.index('--foto') + 1]) if '--foto' in ARG else None
+FUNDO = 'verde' if '--verde' in ARG else 'preto'      # --verde: cartazes de fundo verde-esmeralda do LL-ECO01 (fundador, 26/11 23:56)
 CAT = json.load(open(os.path.join(CACHE, 'catalogo.json')))
 def png(nome, s=None):
     x = [c for c in CAT if c['nome'] == nome and (s is None or c['set'] == s)][0]
@@ -146,7 +147,7 @@ for i, (n, _, _) in enumerate(HEROI):
     ap(Peca(peca_folha(860, 90, 'preto', 60 + i, (-1) ** i * .8, t[f'hr{i}'], claro=True), 540, 1475, t0 + .25, .18, modo='carimbo', som='nada'))
 ap(Peca(peca_folha(780, 60, 'creme', 34, 0, t['e3']), 540, 455, 17.0, .2, modo='carimbo', som='nada'))
 # 7 · o lado pessoal
-ap(Peca(peca_folha(1040, 1640, 'preto', 35, .4), 540, 955, 23.60, .40, de=(0, -1900), rot0=4, z0=1.15, som='grande'))
+ap(Peca(peca_folha(1040, 1640, FUNDO, 35, .4), 540, 955, 23.60, .40, de=(0, -1900), rot0=4, z0=1.15, som='grande'))
 ap(Peca(peca_folha(940, 250, 'preto', 36, 0, t['f1'], claro=True), 540, 470, 23.85, .2, modo='carimbo', som='pop'))
 ap(Peca(peca_folha(900, 260, 'creme', 37, -1.5, t['f2'], fitas=F2), 540, 820, 24.85, .34, de=(-900, -100), rot0=-10))
 ap(Peca(peca_folha(900, 200, 'kraft', 38, 1.2, t['f3']), 540, 1130, 26.10, .32, de=(900, 100), rot0=8))
@@ -178,7 +179,7 @@ tfim = 36.45 + .125 * len(resto)
 ap(Peca(peca_folha(920, 200, 'preto', 53, 1, t['i2'], claro=True), 540, 1470, tfim + .15, .30, de=(0, 1400), rot0=5))
 # 11 · assinatura
 ts = tfim + 1.9
-ap(Peca(peca_folha(1040, 1640, 'preto', 54, -.4), 540, 955, ts, .40, de=(0, -1900), rot0=-4, z0=1.15, som='grande'))
+ap(Peca(peca_folha(1040, 1640, FUNDO, 54, -.4), 540, 955, ts, .40, de=(0, -1900), rot0=-4, z0=1.15, som='grande'))
 if FOTO:
     ap(Peca(retrato(430, 9), 540, 640, ts + .25, .34, de=(0, -1500), rot0=6))
     ap(Peca(selo(.8, -6), 830, 380, ts + .7, .22, modo='pop', som='pop'))

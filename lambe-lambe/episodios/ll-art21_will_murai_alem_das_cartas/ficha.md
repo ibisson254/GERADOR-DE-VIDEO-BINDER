@@ -244,6 +244,7 @@ Pedido do fundador (claude.ai, 23:27): pôr a foto do artista na melhor posiçã
 - Ficheiros (não versionados; conversa claude.ai de 26/11/2026): `ll-art21_v4_foto.mp4`, `ll-art21_v4_foto_mudo.mp4`, `ll-art21_v4_semfoto.mp4`, folha de contacto.
 - **Autorização da foto: continua não confirmada** (ver «Fotografia e autorização», V2). Publicável sem condições: `ll-art21_v4_semfoto.mp4`. A versão com foto publica-se depois de registar a autorização do artista (ou de quem detém a foto) em `lambe-lambe/autorizacoes/`.
 - Legenda e comentário fixado: os da V2. Texto alternativo: `texto_alternativo_v4.txt`.
+- Variante `--verde` (fundador, 26/11 23:56): os dois cartazes de fundo preto (lado pessoal e assinatura) passam ao verde-esmeralda do LL-ECO01. Só a versão muda com foto: `ll-art21_v4_foto_verde_mudo.mp4` (0 créditos).
 
 ## Handoff
 
