@@ -1,5 +1,5 @@
 {
- "_leia": "MC-EP09 · Meta em Curto · cEDH na Mercadia Games (Lisboa, 22/11/2026). Campo (39 comandantes): TopDeck via cEDH Stats; lista do campeão: MTGTop8 (fonte TopDeck); combos: Commander Spellbook find-my-combos (27/11/2026); Oracle: Scryfall. Logótipo da loja: camada 'terceiros.loja' (opcional; sem ficheiro, não aparece). v2 (27/11, 15h30): campeão primeiro, mosaico dos 39, ficha do evento com mapa, efeitos por deixa (sfx); voz da mesma geração reordenada, 0 créditos.",
+ "_leia": "MC-EP09 · Meta em Curto · cEDH na Mercadia Games (Lisboa, 22/11/2026). Campo (39 comandantes): TopDeck via cEDH Stats; lista do campeão: MTGTop8 (fonte TopDeck); combos: Commander Spellbook find-my-combos (27/11/2026); Oracle: Scryfall. Logótipo da loja: camada 'terceiros.loja' (opcional; sem ficheiro, não aparece). v2 (27/11, 15h30): campeão primeiro, mosaico dos 39, ficha do evento com mapa, efeitos por deixa (sfx); voz da mesma geração reordenada, 0 créditos. v3 (27/11, 16h): logótipo da Mercadia (recorte do print do fundador, camada terceiros.loja) no cartão do evento (cena evento_v3), TUBO de volta entre o mosaico e o evento (tubo_abertura).",
  "confirmado": true,
  "faixa": "META EM CURTO · EP. 09",
  "faixa_collab": "",
@@ -279,7 +279,7 @@
  "capa_l2": "E GANHOU",
  "capa_foco": "1 DE 39",
  "capa_unidade": "THRASIOS + TYMNA · cEDH LISBOA",
- "saida": "MC_EP09_FINAL_v2.mp4",
+ "saida": "MC_EP09_FINAL_v3.mp4",
  "saida_previa": "MC_EP09_PREVIA_v2.mp4",
  "frases": [
   "O CAMPEÃO FOI O ÚNICO THRASIOS E TYMNA.",
@@ -320,10 +320,20 @@
    2.0
   ],
   [
-   "@1-0.1",
-   "evento",
-   "@1+0.9",
-   "@2-0.05"
+   "@0>-0.1",
+   "tubo_abertura",
+   2.75,
+   3.15
+  ],
+  [
+   3.45,
+   "evento_v3",
+   3.5,
+   4.2,
+   4.55,
+   "@2",
+   "@2+0.45",
+   "@2+1.15"
   ],
   [
    "@3-0.05",
@@ -730,13 +740,31 @@
    ]
   ],
   "credito_mapa": "Mapa: Natural Earth",
-  "selo": "FONTE: TOPDECK · cEDH STATS · MERCADIA GAMES · 22/11/2026"
+  "selo": "FONTE: TOPDECK · cEDH STATS · LOGÓTIPO: MERCADIA GAMES",
+  "loja_linhas": [
+   "MERCADIA",
+   "GAMES"
+  ],
+  "evento_v3": "OFFICIAL P9Q SIDE QUEST",
+  "data_v3": "22.11.2026",
+  "numeros_v3": [
+   [
+    "39",
+    "JOGADORES"
+   ],
+   [
+    "5 RODADAS",
+    "+ MESA FINAL"
+   ]
+  ]
  },
  "transicoes": {
   "dur": 0.18,
   "sem": [
    "previsao",
-   "tubo_fecho"
+   "tubo_fecho",
+   "tubo_abertura",
+   "evento_v3"
   ]
  },
  "abalos": [
@@ -747,10 +775,6 @@
   [
    2.0,
    16
-  ],
-  [
-   "@1+0.9",
-   6
   ],
   [
    "@3+1.4",
@@ -865,44 +889,54 @@
    0.5
   ],
   [
-   "@1-0.1",
+   2.75,
    "woosh",
-   0.5
+   0.55
   ],
   [
-   "@1+0.2",
-   "ui",
+   3.15,
+   "carimbo",
+   0.28
+  ],
+  [
+   3.45,
+   "woosh",
+   0.22
+  ],
+  [
+   3.5,
+   "thump",
    0.3
   ],
   [
-   "@1+0.9",
+   3.55,
+   "ui",
+   0.25
+  ],
+  [
+   3.7,
+   "tique",
+   0.2
+  ],
+  [
+   4.05,
+   "tique",
+   0.2
+  ],
+  [
+   4.2,
+   "ui",
+   0.25
+  ],
+  [
+   4.55,
    "alfinete",
-   0.75
+   0.6
   ],
   [
-   "@1+0.95",
-   "ui",
-   0.35
-  ],
-  [
-   "@2-0.05",
-   "woosh",
-   0.45
-  ],
-  [
-   "@2+0.35",
+   4.95,
    "tique",
-   0.3
-  ],
-  [
-   "@2+0.65",
-   "tique",
-   0.3
-  ],
-  [
-   "@2+0.95",
-   "tique",
-   0.3
+   0.25
   ],
   [
    "@3-0.05",
@@ -1014,6 +1048,26 @@
    "@9-0.1",
    "fecho",
    0.6
+  ],
+  [
+   "@0>-0.1",
+   "modem",
+   0.3
+  ],
+  [
+   "@2",
+   "pop",
+   0.45
+  ],
+  [
+   "@2+0.45",
+   "pop",
+   0.4
+  ],
+  [
+   "@2+1.15",
+   "ui",
+   0.2
   ]
  ]
 }
