@@ -69,6 +69,7 @@ t['j2'] = caixa(860, 90, RB('Um artista, muitos universos.', 54, '#FFD84A', 860)
 t['j3'] = caixa(900, 110, GE('Cartas: ilustrações de Willian Murai · © Wizards of the Coast. Fontes: Scryfall (26/11/2026), willmurai.com/about, Shoutout LA.<br>'
                             'Obras pessoais do artista não reproduzidas. Sem afiliação com a Wizards of the Coast.', 19, '#C9C2B4', 900))
 
+t['c_br2'] = caixa(260, 90, CB('Do Brasil', 62, PRETO, 260))
 t['este'] = caixa(620, 110, RB('Este é ele.', 64, PRETO, 620))
 t['e0'] = caixa(900, 120, T('E no Magic? <span style="color:#FFD84A">54 ilustrações.</span>', 54, '#fff', w=900, extra='white-space:nowrap;'))
 t['p0'] = caixa(900, 120, T('E as outras <span class="k">47?</span>', 80, w=900))
@@ -151,7 +152,7 @@ ap(Peca(peca_folha(1040, 1640, FUNDO, 35, .4), 540, 955, 23.60, .40, de=(0, -190
 ap(Peca(peca_folha(940, 250, 'preto', 36, 0, t['f1'], claro=True), 540, 470, 23.85, .2, modo='carimbo', som='pop'))
 ap(Peca(peca_folha(900, 260, 'creme', 37, -1.5, t['f2'], fitas=F2), 540, 820, 24.85, .34, de=(-900, -100), rot0=-10))
 ap(Peca(peca_folha(900, 200, 'kraft', 38, 1.2, t['f3']), 540, 1130, 26.10, .32, de=(900, 100), rot0=8))
-ap(Peca(peca_folha(280, 110, 'verde', 39, 5, t['c_br'], claro=True), 830, 1280, 26.65, .22, modo='pop', ang=5, som='pop'))
+ap(Peca(peca_folha(280, 110, 'amarelo', 39, 5, t['c_br2']) if FUNDO == 'verde' else peca_folha(280, 110, 'verde', 39, 5, t['c_br'], claro=True), 830, 1280, 26.65, .22, modo='pop', ang=5, som='pop'))
 # 8 · Hideki
 ap(COB('creme', 40, 27.80, -.6))
 ap(Peca(peca_folha(680, 420, 'kraft', 41, -1, t['g1'], fitas=F2), 540, 640, 28.05, .34, de=(0, -1500), rot0=-8))
@@ -171,14 +172,14 @@ usadas = {'Vendilion Clique'} | {n for n, _, _ in HEROI}
 resto = [c for c in CAT if c['nome'] not in usadas]
 rng = np.random.default_rng(7)
 for k, c in enumerate(resto):
-    t0 = 36.45 + .125 * k
+    t0 = 36.25 + .125 * k
     ap(Peca(carta_recortada(os.path.join(CACHE, 'cartas', c['ilustracao'] + '.png'), 560, rng.uniform(-5, 5), 100 + k, fitas=False),
             540 + rng.uniform(-30, 30), 1000 + rng.uniform(-20, 20), t0, .10, de=(rng.uniform(-300, 300), rng.uniform(-400, 400)), rot0=rng.uniform(-10, 10),
             z0=1.12, som='pop' if k % 4 == 0 else 'nada'))
-tfim = 36.45 + .125 * len(resto)
+tfim = 36.25 + .125 * len(resto)
 ap(Peca(peca_folha(920, 200, 'preto', 53, 1, t['i2'], claro=True), 540, 1470, tfim + .15, .30, de=(0, 1400), rot0=5))
 # 11 · assinatura
-ts = tfim + 1.9
+ts = tfim + 1.6
 ap(Peca(peca_folha(1040, 1640, FUNDO, 54, -.4), 540, 955, ts, .40, de=(0, -1900), rot0=-4, z0=1.15, som='grande'))
 if FOTO:
     ap(Peca(retrato(430, 9), 540, 640, ts + .25, .34, de=(0, -1500), rot0=6))
@@ -191,9 +192,19 @@ else:
     ap(Peca(peca_folha(880, 110, 'preto', 56, 0, t['j2'], claro=True), 540, 1010, ts + 1.1, .2, modo='carimbo', som='pop'))
     ap(Peca(carta_recortada(png('Saheeli Rai'), 330, -3, 70), 540, 1300, ts + 1.4, .28, de=(0, 900), rot0=6))
 ap(Peca(peca_folha(920, 120, 'preto', 57, 0, t['j3'], claro=True), 540, 1555, ts + 2.0, .25, modo='carimbo', som='nada'))
-DUR = ts + 4.4
+DUR = ts + 3.6
+# ritmo (fundador, 27/11 00:04: máximo 45 s com fecho): tudo antes da pilha das 47 fica 18 % mais rápido; a pilha mantém 0,125 s por carta
+K, CORTE = (.82, 35.7) if '--lento' not in ARG else (1.0, 35.7)
+for p in L:
+    if p.t0 < CORTE - 1e-6:
+        p.t0 *= K
+        if p.modo == 'bate': p.dur *= .9 if K < 1 else 1
+    else:
+        p.t0 += CORTE * K - CORTE
+    p.assenta = p.t0 + p.dur + .8
+DUR += CORTE * K - CORTE
 print('duração sem fecho', round(DUR, 2))
 V.render(L, DUR, SAIDA, audio='--mudo' not in sys.argv, abertura=(540, 1010), folha=())
-tt = [0, 1.2, 2.3, 4.8, 6.5, 8.5, 10.0, 12.0, 15.0, 16.9, 17.4, 18.5, 19.5, 20.6, 21.7, 22.8, 25.0, 27.0, 29.5, 33.0, 35.2, 37.5, 39.5, 42.0, ts - .5, ts + 3.0, DUR + 1]
+tt = [x * K for x in (0, 1.2, 2.3, 4.8, 6.5, 8.5, 10.0, 12.0, 15.0, 16.9, 17.4, 18.5, 19.5, 20.6, 21.7, 22.8, 25.0, 27.0, 29.5, 33.0, 35.2)] + [DUR - 8, DUR - 6, DUR - 4.5, DUR - 2.5, DUR - .3, DUR + 1]
 V.folha_contacto(SAIDA, SAIDA.replace('.mp4', '_folha.jpg'), tt)
 print('ok', SAIDA)

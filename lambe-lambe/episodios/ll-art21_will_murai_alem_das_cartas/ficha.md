@@ -245,6 +245,7 @@ Pedido do fundador (claude.ai, 23:27): pôr a foto do artista na melhor posiçã
 - **Autorização da foto: continua não confirmada** (ver «Fotografia e autorização», V2). Publicável sem condições: `ll-art21_v4_semfoto.mp4`. A versão com foto publica-se depois de registar a autorização do artista (ou de quem detém a foto) em `lambe-lambe/autorizacoes/`.
 - Legenda e comentário fixado: os da V2. Texto alternativo: `texto_alternativo_v4.txt`.
 - Variante `--verde` (fundador, 26/11 23:56): os dois cartazes de fundo preto (lado pessoal e assinatura) passam ao verde-esmeralda do LL-ECO01. Só a versão muda com foto: `ll-art21_v4_foto_verde_mudo.mp4` (0 créditos).
+- Ritmo (fundador, 27/11 00:04: máximo 45 s): tudo antes da pilha das 47 fica 18 % mais rápido (voos 10 % mais curtos); a pilha mantém 0,125 s por carta; entrada da pilha e assinatura encurtadas. Total **44,77 s** (40,9 + fecho). Refino: com fundo verde, a etiqueta «Do Brasil» do lado pessoal passa a amarela com texto preto (verde sobre verde não se lia). `--lento` repõe o ritmo anterior. Entregue: `ll-art21_v4b_foto_verde_mudo.mp4`.
 
 ## Handoff
 
