@@ -159,13 +159,26 @@ Ficheiros: `MC_EP09_FINAL_v2.mp4`, `folha_contacto_v2.png` (projeto claude.ai, `
 Pacote: legenda (evento e morada da loja; créditos do mosaico e do mapa), texto alternativo novo, `comentario_creditos.txt` (segundo comentário: artistas das 28 artes do mosaico).
 Por fazer: foto do campeão (com autorização) pode entrar no quadro 0, como no MC-EP08B; logótipo da Mercadia.
 
+## v3 · acabamento com o logótipo da Mercadia (27/11/2026, missão do fundador 15:53)
+Auditoria: v2 (`MC_EP09_FINAL_v2.mp4`, intocada), motor, `episodio.json`, SFX por deixa, QC v2. Logótipo recebido como print do perfil de Instagram (1080×2400 JPEG): círculo de ~710 px, crânio dourado com chifres diante de um arco de pedra em fundo escuro (#1d2120), sem texto; o botão de «gosto» do Instagram tapava o fundo no canto inferior direito → zona reposta com o espelho do fundo simétrico; recorte circular de 700 px com transparência (`terceiros/mercadia_logo.png`; recorte do print em `terceiros/mercadia_logo_recorte_print.png`). Proporção, cores e desenho intactos. Sobre o cartão escuro, um anel fino na cor dourada da marca separa o círculo do fundo.
+
+Mudanças (só o que melhorava):
+- **Cartão do evento (`evento_v3`, 3,45–8,45 s), uma só composição:** 1) logótipo (270 px, revelação em máscara circular, 0,45 s) + «MERCADIA GAMES» (Inter Black 104); 2) «OFFICIAL P9Q SIDE QUEST» (verde); 3) mapa pequeno de Portugal com alfinete em Lisboa + «LISBOA · PORTUGAL»; 4) «22.11.2026»; 5–6) blocos «39 JOGADORES» (entra com a voz «39 jogadores») e «5 RODADAS + MESA FINAL». Anel dourado discreto no logótipo quando a voz diz «Mercadia Games». Morada saiu do ecrã (fica na legenda) para aliviar a leitura.
+- **TUBO de volta** entre o campeão e o evento (2,36–3,45 s): as cartas do campeão voam para o ecrã do TUBO, que diz «No cEDH português…», e o mergulho abre o cartão (modelo MC-EP08B).
+- **Som:** deixas do cartão novas (mergulho, revelação do logótipo, tiques do nome e do evento, mapa, alfinete, data, dois «pops» dos números, realce); revelação do logótipo e mergulho com ganho baixo (medido: o pico momentâneo aos 3,5 s acompanha a palavra «português» da voz, −16,6 LUFS na voz sozinha). Mesma trilha do TUBO, mesma voz.
+- Mantido sem mudanças: mosaico e carimbo, lista, combo, Thrasios, previsão, pergunta, fecho.
+
+QC v3 (`qc_final_v3.json`): 1080×1920, 30 fps, 31,77 s (27,9 s sem fecho), −14,1 LUFS, pico −3,9 dBTP, fecho presente, «sem problemas mensuráveis». Cropdetect: 1080×1920 na maioria dos quadros; 1074 em ~45 quadros de abalo/transição (faixa escura de 6 px do deslize, nenhum conteúdo cortado). Folha de contacto conferida (quadro 0, campeão, TUBO, cartão, lista, combo, Thrasios, pergunta, fecho). Áudio conferido por medição (loudness momentânea de 0,5 em 0,5 s, picos, nada a clipar); a escuta humana final continua com o fundador.
+Ficheiros: `MC_EP09_FINAL_v3.mp4`, `MC_EP09_FOLHA_CONTACTO_v3.png`, `MC_EP09_QC_v3.json`, `mercadia_logo_recorte.png` (projeto claude.ai, `tubo/mc-ep09/`). Capa da v1 mantém-se (não precisa da loja).
+Comparação v2 → v3: Mercadia identificada pelo logótipo e nome em destaque (v2: só texto); cartão em 6 níveis em vez de 3 blocos densos; TUBO volta a aparecer aos 2,4 s (v2: só aos 20,5 s); mesma duração (27,9 s + fecho), mesma voz, 0 créditos.
+
 ## Handoff
 
 ```
-HANDOFF · 27/11/2026, 15h35 (UTC) · Claude (v2)
+HANDOFF · 27/11/2026, 16h10 (UTC) · Claude (v3)
 Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (merge de tubo/mc-ep09) · v1: commit 3256997, merge 1d51eaa; v2: commit 76304c2, merge 56f86ce (conferido no remoto: sim)
 
-Objetivo atual: MC-EP09 v2 pronto para o fundador publicar (MC_EP09_FINAL_v2.mp4); opcionais: logótipo da Mercadia e foto do campeão.
+Objetivo atual: MC-EP09 v3 pronto para o fundador publicar (MC_EP09_FINAL_v3.mp4); opcionais: PNG original do logótipo e foto do campeão (re-render sem voz).
 
 Conteúdos tocados (comum/REGISTRO_EDITORIAL.md):
 - MC-EP09 · (novo) → CONCLUÍDO
@@ -178,6 +191,7 @@ Decisões tomadas nesta sessão:
 - Campeonato escolhido pelo agente (Mercadia, 39/39 comandantes conhecidos); pauta liberada pelo fundador no cartão (11:03) · nucleo/DECISOES.md 27/11 sim
 - Voz autorizada pelo fundador («Pode prosseguir», 15:05; 411 créditos, uma geração) · na ficha
 - v2 sem créditos (fundador 15:23: usar o MC-EP08B como referência); voz reordenada, campeão primeiro · na ficha, secção v2
+- v3: logótipo da Mercadia (recorte do print do fundador) no cartão do evento, TUBO de volta aos 2,4 s · nucleo/DECISOES.md 27/11 (15:23–16:10) sim
 - Tese: motor do deck campeão; descartados «o mais jogado não ganhou» (repete MC-PAU08) e taxa de vitória por mesa (amostra pequena) · na ficha
 - Lista de 100 cartas em resposta ao comentário fixado (limite de 2.200 caracteres) · na ficha
 
@@ -193,9 +207,9 @@ Insights (domingo): não se aplica (sexta-feira)
 
 Tarefas pendentes:
 - Escutar e publicar o MC-EP09 (utm_campaign=MC-EP09), em dia diferente do MB-EP20 · fundador
-- Enviar o logótipo da Mercadia, se quiser no canto do gráfico de barras (terceiros/mercadia_logo.png; re-render sem voz) · fundador → agente
+- PNG original do logótipo (opcional, melhor que o print) e foto autorizada do campeão (opcional) · fundador → agente, re-render sem voz
 - P9 Quest Lisboa (104 jogadores) e contraste entre os dois eventos ficam de reserva para um MC futuro · agente
 
-Próximo passo concreto: publicar o MC-EP09 com legenda.txt, comentario_fixado.txt e comentario_lista.txt desta pasta.
+Próximo passo concreto: publicar MC_EP09_FINAL_v3.mp4 com legenda.txt, comentario_fixado.txt, comentario_lista.txt e comentario_creditos.txt desta pasta.
 ```
 

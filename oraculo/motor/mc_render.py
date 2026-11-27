@@ -589,6 +589,8 @@ def cena_tubo_abertura(t, i):
         if t < t0 + .45:                                              # o número e a pergunta saem a desvanecer
             kf = 1 - k; tl = tile_num(370, 420, D['grade'].get('numero', ''), D['grade'].get('unidade', ''), D['grade'].get('contexto', ''), PH, 0, D['grade'].get('rotulo', ''))
             a = tl.getchannel('A').point(lambda v: int(v * kf)); tl.putalpha(a); im.alpha_composite(tl, (650, int(440 - 80 * k)))
+    elif i > 0 and SEQ[i - 1][1] == 'mosaico':                       # MC-EP09 v3: as duas cartas do campeão saem do mosaico
+        pos = {'A': [(85, 560, 430), (80, 560, 220)], 'C': [(565, 560, 430), (820, 600, 180)]}
     else:
         pos = {'A': [(70, 452, 470), (80, 560, 200)], 'B': [(540, 452, 470), (800, 560, 200)]}
     for lado in [l for l in ('C', 'B', 'A') if l in pos]:
@@ -1065,6 +1067,87 @@ def cena_evento(t, i):
         if tem_logo: circulo(im, 'loja', 160, y0 + 80, 150, kk, contorno=PH)
     topo_fala(im, t); selo_txt(im, E.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
 CENAS.update(mosaico=cena_mosaico, evento=cena_evento)
+
+def _logo_circ(key, d, k, anel=(176, 138, 58)):
+    """Logótipo (recorte circular do fundador) com revelação em máscara circular e anel fino na cor da marca; sem rodar,
+    sem brilho, proporção intacta. k 0–1."""
+    if key not in TERC: return None
+    src = TERC[key]; c = src.resize((d, d), Image.LANCZOS); kk = eio(k)
+    m = Image.new('L', (d * 2, d * 2), 0); rr = d * (.15 + .85 * kk)
+    ImageDraw.Draw(m).ellipse((d - rr, d - rr, d + rr, d + rr), fill=255); m = m.resize((d, d), Image.LANCZOS)
+    a = Image.composite(c.getchannel('A'), Image.new('L', (d, d), 0), m); c = c.copy(); c.putalpha(a)
+    out = Image.new('RGBA', (d + 16, d + 16), (0, 0, 0, 0)); out.alpha_composite(c, (8, 8))
+    if kk > .05: ImageDraw.Draw(out).ellipse((5, 5, d + 10, d + 10), outline=anel + (int(230 * kk),), width=4)
+    return out
+def cena_evento_v3(t, i):
+    """Ficha do evento numa só composição (MC-EP09 v3): loja (logótipo + nome) → evento → cidade/país com mapa → data →
+    números do torneio. p = [t0, 'evento_v3', t_logo, t_mapa, t_alfinete, t_num1, t_num2, t_realce]; D['evento'] (chaves *_v3)."""
+    p = SEQ[i]; E = D['evento']; t0, tl, tm, tp, tn1, tn2, tr = p[0], p[2], p[3], p[4], p[5], p[6], p[7]
+    im = fundo(t); kp = eio((t - t0) / .3)
+    lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
+    dl.rounded_rectangle((60, 440, 1020, 1440), 28, fill=(5, 12, 14, int(238 * kp)), outline=(16, 185, 129, int(140 * kp)), width=3)
+    dl.line((100, 790, 980, 790), fill=(16, 185, 129, int(70 * kp)), width=2); im.alpha_composite(lay)
+    # 1 · loja: logótipo (máscara circular) + nome
+    lg = _logo_circ('loja', 270, (t - tl) / .45) if t >= tl else None
+    if lg is not None:
+        im.alpha_composite(lg, (92, 472))
+        if tr <= t < tr + .6:                                             # realce quando a voz diz o nome da loja
+            kr = (t - tr) / .6; g = Image.new('RGBA', im.size, (0, 0, 0, 0)); ImageDraw.Draw(g).ellipse((92 + 4 - 14 * kr, 472 + 4 - 14 * kr, 92 + 282 + 14 * kr, 472 + 282 + 14 * kr), outline=(176, 138, 58, int(200 * (1 - kr))), width=4)
+            im.alpha_composite(g)
+    xl = 400 if 'loja' in TERC else 100; d = ImageDraw.Draw(im, 'RGBA')
+    kn = eio((t - tl - .2) / .3)
+    if kn > 0:
+        lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
+        for j, w_ in enumerate(E.get('loja_linhas', [E.get('loja', '')])):
+            dl.text((xl + 24 * (1 - kn), 548 + j * 100), w_, font=fit(dl, w_, INTB, 104, 1000 - xl), fill=WHITE + (255,), anchor='lm')
+        ev = E.get('evento_v3', ''); ke = eio((t - tl - .55) / .3)
+        if ke > 0: dl.text((xl, 728), typed(ev, tl + .55, t, 60), font=fit(dl, ev, MONOB, 38, 1000 - xl), fill=PH + (int(255 * ke),), anchor='lm')
+        a = lay.getchannel('A').point(lambda v: int(v * kn)); lay.putalpha(a); im.alpha_composite(lay)
+    # 2 · onde: mapa pequeno + cidade/país + data
+    if 'g' not in _MAPA: _MAPA['g'] = json.load(open(HERE + E['mapa'], encoding='utf-8'))['paises']
+    G = _MAPA['g']; lo0, lo1, la0, la1 = E.get('caixa', [-10.2, -5.6, 36.6, 42.4]); cl = math.cos(math.radians((la0 + la1) / 2))
+    bx0, by0, bw, bh = 100, 822, 300, 380; sc = min(bw / ((lo1 - lo0) * cl), bh / (la1 - la0))
+    ox = bx0 + (bw - (lo1 - lo0) * cl * sc) / 2
+    def P(lo, la): return (ox + (lo - lo0) * cl * sc, by0 + (la1 - la) * sc)
+    km = eio((t - tm) / .5)
+    if km > 0:
+        lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
+        dl.rounded_rectangle((bx0 - 8, by0 - 8, bx0 + bw + 8, by0 + bh + 8), 18, fill=(8, 18, 20, 255), outline=(16, 185, 129, 90), width=2)
+        for nome, rings in G.items():
+            foco = nome == E.get('pais_mapa', 'Portugal')
+            for r in rings:
+                pts = [P(lo, la) for lo, la in r]
+                dl.polygon(pts, fill=(16, 185, 129, 110) if foco else (24, 36, 42, 255), outline=PH + (255,) if foco else (70, 100, 105, 200))
+        m = Image.new('L', im.size, 0); ImageDraw.Draw(m).rounded_rectangle((bx0 - 6, by0 - 6, bx0 + bw + 6, by0 + bh + 6), 16, fill=255)
+        lay.putalpha(Image.composite(lay.getchannel('A').point(lambda v: int(v * km)), Image.new('L', im.size, 0), m)); im.alpha_composite(lay)
+        d = ImageDraw.Draw(im, 'RGBA'); d.text((bx0 + 10, by0 + bh - 8), E.get('credito_mapa', ''), font=F(COND, 20), fill=(120, 140, 150, int(220 * km)), anchor='ls')
+    if t >= tp:
+        px, py = P(*E['alfinete']); kq = (t - tp) / .3; d = ImageDraw.Draw(im, 'RGBA')
+        drop = 0 if kq >= 1 else (1 - eio(kq)) * 90; bounce = 0 if kq < 1 else -8 * math.exp(-(t - tp - .3) * 10) * math.sin((t - tp - .3) * 30)
+        for q in range(2):
+            rr = ((t - tp) * 1.1 - q * .45) % 1.0
+            if t - tp > q * .45: d.ellipse((px - 60 * rr, py - 24 * rr, px + 60 * rr, py + 24 * rr), outline=PH + (int(200 * (1 - rr)),), width=3)
+        yy = py - drop + bounce; d.ellipse((px - 22, yy - 68, px + 22, yy - 24), fill=(230, 60, 60, 255), outline=WHITE + (255,), width=4)
+        d.polygon([(px - 16, yy - 38), (px + 16, yy - 38), (px, yy)], fill=(230, 60, 60, 255)); d.ellipse((px - 8, yy - 54, px + 8, yy - 38), fill=WHITE + (255,))
+    kc = eio((t - tp - .05) / .35)
+    if kc > 0:
+        lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); dl = ImageDraw.Draw(lay); xr = 450
+        dl.text((xr + 24 * (1 - kc), 880), E.get('cidade', ''), font=fit(dl, E.get('cidade', ''), INTB, 112, 540), fill=WHITE + (255,), anchor='lm')
+        dl.text((xr + 24 * (1 - kc), 975), E.get('pais', ''), font=fit(dl, E.get('pais', ''), MONOB, 52, 520), fill=PH + (255,), anchor='lm')
+        kd = eio((t - tp - .4) / .3)
+        dl.text((xr, 1090), E.get('data_v3', ''), font=fit(dl, E.get('data_v3', ''), INTB, 76, 520), fill=(236, 241, 245, int(255 * kd)), anchor='lm')
+        a = lay.getchannel('A').point(lambda v: int(v * kc)); lay.putalpha(a); im.alpha_composite(lay)
+    # 3 · números do torneio (dois blocos)
+    d = ImageDraw.Draw(im, 'RGBA')
+    for j, (tt_, (big, sub)) in enumerate(zip((tn1, tn2), E.get('numeros_v3', []))):
+        k = eio((t - tt_) / .25)
+        if k <= 0: continue
+        x0 = 100 if j == 0 else 545; w = 435 if j == 0 else 435; y0 = 1236 + 20 * (1 - k)
+        d.rounded_rectangle((x0, y0, x0 + w, y0 + 170), 20, fill=(8, 20, 16, int(250 * k)), outline=(PH if j == 0 else EM) + (int(255 * k),), width=4)
+        fb = fit(d, big, INTB, int(84 * (1.12 - .12 * k)), w - 40); d.text((x0 + w / 2, y0 + 66), big, font=fb, fill=(PH if j == 0 else WHITE) + (int(255 * k),), anchor='mm')
+        d.text((x0 + w / 2, y0 + 136), sub, font=fit(d, sub, MONOB, 34, w - 30), fill=(200, 215, 220, int(255 * k)), anchor='mm')
+    topo_fala(im, t); selo_txt(im, E.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
+CENAS.update(evento_v3=cena_evento_v3)
 
 # ---------- acabamento (MC-EP09 v2): abalo de câmara nos impactos e transição rápida entre cenas; só com
 # D['abalos'] / D['transicoes'] (os outros episódios não mudam) ----------
