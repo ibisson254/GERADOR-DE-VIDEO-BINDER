@@ -21,7 +21,7 @@ sys.path.insert(0, KIT)
 _cwd = os.getcwd()
 import motor_padrao as M          # muda o cwd para o kit (fontes relativas)
 os.chdir(_cwd)
-from compor import colar, rasgo_alpha, aplicar, CSS
+from compor import colar, rasgo_alpha, aplicar, CSS, navegador
 FECHO = os.path.join(RAIZ, 'comum/outro/outro_binder_916.mp4')
 MAGIC = os.path.join(RAIZ, 'comum/marcas/magic_logo_recortado.png')
 PLAY = os.path.join(RAIZ, 'comum/marcas/google_play_badge_ptbr.png')
@@ -38,7 +38,7 @@ def render_textos():
     from playwright.async_api import async_playwright
     async def go():
         async with async_playwright() as p:
-            b = await p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--allow-file-access-from-files"])
+            b = await p.chromium.launch(**navegador())
             pg = await b.new_page(viewport={"width": 1080, "height": 1920})
             for i, (html, w, h) in enumerate(_FILA):
                 if i in _TX: continue
@@ -216,18 +216,40 @@ def mat_peca(p, st):
     dst = ((loc @ R.T) + [st['cx'], st['cy']]).astype(np.float32)
     return cv2.getPerspectiveTransform(src, dst)
 
-def blend(out, rgb, al, Mx, op=1.0, WH=(CW, CH)):
-    al2 = cv2.warpPerspective(al, Mx, WH, flags=cv2.INTER_LINEAR)[..., None] * op
-    if rgb is None: return out * (1 - al2)
-    c = cv2.warpPerspective(rgb, Mx, WH, flags=cv2.INTER_LINEAR)
-    return out * (1 - al2) + c * al2
+def _roi(Mx, w, h, WH):
+    """retângulo do quadro onde a peça (w×h) cai depois da transformação, com 2 px de folga; None se fica fora"""
+    q = cv2.perspectiveTransform(np.float32([[[0, 0]], [[w, 0]], [[w, h]], [[0, h]]]), np.asarray(Mx, np.float64))[:, 0]
+    if not np.isfinite(q).all(): return 0, 0, WH[0], WH[1]
+    x0, y0 = max(0, int(np.floor(q[:, 0].min())) - 2), max(0, int(np.floor(q[:, 1].min())) - 2)
+    x1, y1 = min(WH[0], int(np.ceil(q[:, 0].max())) + 2), min(WH[1], int(np.ceil(q[:, 1].max())) + 2)
+    return None if x1 <= x0 or y1 <= y0 else (x0, y0, x1, y1)
 
-def desenha(out, p, st):
+def blend(out, rgb, al, Mx, op=1.0, WH=(CW, CH), inplace=False):
+    """compõe a peça só na região que ela ocupa (27/11/2026; antes: o quadro inteiro por peça, 42 % do render).
+    Fora dessa região o resultado antigo era out·(1−0) = out, por isso a imagem não muda (regressão em kit_video/LEIA-ME.md).
+    inplace=True escreve em `out` (float32 próprio do render); por defeito devolve uma cópia, como antes."""
+    # o mesmo tipo numérico que o cálculo antigo daria (op em np.float64 promove o quadro a float64): imagem igual bit a bit
+    dt = np.result_type(out.dtype, (np.zeros(1, al.dtype) * op).dtype, np.float32 if rgb is None else rgb.dtype)
+    if dt != out.dtype or not inplace: out = out.astype(dt)
+    r = _roi(Mx, al.shape[1], al.shape[0], WH)
+    if r is None: return out
+    x0, y0, x1, y1 = r
+    Mr = np.array([[1, 0, -x0], [0, 1, -y0], [0, 0, 1]], np.float64) @ np.asarray(Mx, np.float64)
+    al2 = cv2.warpPerspective(al, Mr, (x1 - x0, y1 - y0), flags=cv2.INTER_LINEAR)[..., None] * op
+    reg = out[y0:y1, x0:x1]
+    if rgb is None:
+        reg *= (1 - al2)
+    else:
+        reg[...] = reg * (1 - al2) + cv2.warpPerspective(rgb, Mr, (x1 - x0, y1 - y0), flags=cv2.INTER_LINEAR) * al2
+    return out
+
+def desenha(out, p, st, inplace=False):
     Mx = mat_peca(p, st)
     if st['alt'] > 0:
         off = np.array([[1, 0, 18 + 70 * st['alt']], [0, 1, 30 + 110 * st['alt']], [0, 0, 1]])
-        out = blend(out, None, cv2.GaussianBlur(p.al, (0, 0), 4 + 20 * st['alt']), off @ Mx, .45 * (1 - .5 * st['alt']))
-    return blend(out, p.rgb, p.al, Mx, st.get('op', 1.0))
+        out = blend(out, None, cv2.GaussianBlur(p.al, (0, 0), 4 + 20 * st['alt']), off @ Mx, .45 * (1 - .5 * st['alt']), inplace=inplace)
+        inplace = True                                          # a partir daqui `out` já é uma cópia própria
+    return blend(out, p.rgb, p.al, Mx, st.get('op', 1.0), inplace=inplace)
 
 # ------------------------------------------------------------------ muro (o mesmo método do motor_story: restos dos modelos aprovados)
 def muro(seed=3, W=CW, H=CH):
@@ -278,11 +300,11 @@ def render(L, dur, saida, fecho=True, audio=False, extras=(), abertura=(540, 990
     for i in range(NF):
         t = i / fps
         while baked < len(L) and t >= L[baked].assenta and all(t >= q.assenta for q in L[:baked]):
-            p = L[baked]; base = desenha(base, p, p.estado(p.assenta)); baked += 1
+            p = L[baked]; base = desenha(base, p, p.estado(p.assenta), inplace=True); baked += 1
         out = base.copy()
         for p in L[baked:]:
             st = p.estado(t)
-            if st is not None: out = desenha(out, p, st)
+            if st is not None: out = desenha(out, p, st, inplace=True)
         for f in extras: out = f(out, t)
         s = 1.025 + .03 * ((t % 2.6) / 2.6)
         z = zoom0 * (1 - ease_io(cl((t - .08) / .55))) if zoom0 else 0

@@ -15,7 +15,7 @@ Decisão do fundador (26/11/2026, 22:41): «torne padrão esse vídeo para todos
 - Carta inteira, sem filtro; fita só nos cantos de cima; nada sobre a arte nem sobre o rodapé (artista e ©). Para repetir cartas no mesmo sítio, colar a nova **por cima e do mesmo tamanho**.
 - Texto: nunca maior do que o papel (o `caixa()` centra; use `white-space:nowrap` em palavras longas e confira na folha de contacto).
 - Som: `audio=True` gera os efeitos (papel, cola, autocolante, carimbo) + leito de ar; pico real ≤ −6 dBFS verificado depois do AAC. `som='nada'` para peças em série (mosaicos).
-- Zero créditos externos; texto pelo Chrome local (Playwright); fontes do `kit_carrossel/preparar_fontes.sh` (correr numa cópia nova do repositório).
+- Zero créditos externos; texto pelo Chrome (Playwright): variável `CHROME`, senão `/usr/bin/google-chrome`, senão o Chromium do Playwright (funciona no PC do fundador desde 27/11/2026); fontes e dependências: `sh comum/ferramentas/preparar_ambiente.sh`.
 
 ## Uso
 ```python
@@ -29,6 +29,12 @@ V.render(L, dur, 'saida.mp4', audio=True)          # + fecho; '--mudo' → audio
 V.folha_contacto('saida.mp4', 'folha.jpg', [0, 1, 2.5, ...])
 ```
 Classes de cor no texto: `k` rosa #E61E6E, `g` verde #10B981. Fonte `JP` para kanji (Noto Serif CJK).
+
+## Desempenho e regressão (27/11/2026, `nucleo/auditorias/2026-11-27_motor_producao.md`)
+- Cada peça compõe-se só na região que ocupa no quadro (antes: o quadro inteiro por peça, 42 % do render). LL-ART21 V4 (44,1 s, 4 núcleos): **264,6 s → 190,2 s (−28 %)**. Imagem: 1 píxel com ±1 nível em 14 de 1324 quadros compostos (arredondamento da interpolação), invisível.
+- Onde o tempo vai agora: ~50 % no render dos quadros, ~35 % na preparação das peças (`matte`, 2 desenhos em tela cheia por peça, via `kit_carrossel/compor.py`), ~10 % no texto pelo Chrome. Próximo ganho possível: `matte` (ver o relatório, P2).
+- Antes de integrar uma alteração que não deva mudar a imagem: renderizar antes e depois e `python3 -I comum/qc/comparar_videos.py ANTES.mp4 DEPOIS.mp4`.
+- Pré-existente, não alterado: com `audio=True` o `-shortest` corta os 3 últimos quadros do fade final do fecho (1321 vs 1324).
 
 ## Exemplos
 - `lambe-lambe/episodios/ll-eco01_sua_colecao_sua_comunidade_seu_jogo/campanha.py` (origem; versão própria do motor)

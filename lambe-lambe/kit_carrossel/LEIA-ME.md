@@ -10,7 +10,7 @@ Padrão aprovado pelo fundador a 13/11/2026 («Modelo aceito se torne padrão pa
 - `preparar_fontes.sh` + `desgaste.py`: instalam as fontes livres em `fontes/` (Archivo Black, Barlow Condensed, Rubik, Caveat Brush, Playfair Display, Geist).
 
 ## Fazer um carrossel novo
-1. `sh lambe-lambe/kit_carrossel/preparar_fontes.sh` (uma vez por ambiente; precisa de npm e do Chrome em `/usr/bin/google-chrome` + Playwright).
+1. `sh lambe-lambe/kit_carrossel/preparar_fontes.sh` (uma vez por ambiente; precisa de npm e do Playwright; o Chrome é o da variável `CHROME`, o `/usr/bin/google-chrome` ou o Chromium do Playwright; tudo de uma vez: `sh comum/ferramentas/preparar_ambiente.sh`).
 2. Descarregar do Scryfall `png` e `art_crop` das cartas (não versionar).
 3. Copiar `lambe-lambe/episodios/ll-art13_nathanna_sete_cartas/carrossel.py`, trocar textos e cartas.
 4. `python3 -I carrossel.py <cartas> <foto.png> <foto_mask.png> <saida>` → slides 1080×1350.
