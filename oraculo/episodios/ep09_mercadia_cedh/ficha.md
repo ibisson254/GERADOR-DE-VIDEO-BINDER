@@ -181,7 +181,7 @@ Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main · v3: commit 19
 Objetivo atual: MC-EP09 v3 pronto para o fundador publicar (MC_EP09_FINAL_v3.mp4); opcionais: PNG original do logótipo e foto do campeão (re-render sem voz).
 
 Conteúdos tocados (comum/REGISTRO_EDITORIAL.md):
-- MC-EP09 · (novo) → CONCLUÍDO
+- MC-EP09 · (novo) → CONCLUÍDO (v1 15h20, v2 15h35, v3 16h10)
 
 Encerramento:
 - MC-EP09 · memoria.py encerramento: OK · memoria.py validar: OK · validar_repo: 0 graves (P2 antigo: vince/kit/v1/)
@@ -196,11 +196,13 @@ Decisões tomadas nesta sessão:
 - Lista de 100 cartas em resposta ao comentário fixado (limite de 2.200 caracteres) · na ficha
 
 Documentos consultados:
-- AGENTS.md, STATUS.md, nucleo/SHOWRUNNER.md, oraculo/PERFIL e LEIA-ME do TUBO, nucleo/DECISOES.md (fim), comum/REGISTRO_EDITORIAL.md, comum/radar/2026-W48.md, fichas MC-PAU08 e MC-EP08B, nucleo/modelos/HANDOFF.md
+- v3: AGENTS.md, STATUS.md, nucleo/CONSTITUICAO_EDITORIAL_BINDER_ORIGINALS.md (§6–7), comum/parcerias.md, nucleo/DECISOES.md (logótipos, MC-PAU02), oraculo/CONTEXTO.md, esta ficha, QC v2
+- v1: AGENTS.md, STATUS.md, nucleo/SHOWRUNNER.md, oraculo/PERFIL e LEIA-ME do TUBO, nucleo/DECISOES.md (fim), comum/REGISTRO_EDITORIAL.md, comum/radar/2026-W48.md, fichas MC-PAU08 e MC-EP08B, nucleo/modelos/HANDOFF.md
 
 Alterações realizadas:
 - oraculo/episodios/ep09_mercadia_cedh/ · episódio completo (dados, cartas, ficha, pacote, qc_final.json)
-- oraculo/motor/mc_render.py · cenas `decklist` e `combo` (regressão ESP03/PAU02/PAU08 idêntica)
+- oraculo/motor/mc_render.py · cenas `decklist` e `combo` (v1), `mosaico`/`evento` + deixas `sfx`/`abalos`/`transicoes` (v2), `evento_v3` + `tubo_abertura` vindo do mosaico (v3); regressão ESP03/PAU02/PAU08 idêntica em cada versão
+- v2/v3: dados/episodio.json, cartas/arte/, dados/mapa/, terceiros/ (logótipo), legenda, texto alternativo, comentario_creditos.txt, qc_final_v2.json, qc_final_v3.json · 76304c2, 19fafaa
 - comum/REGISTRO_EDITORIAL.md, comum/historico.md, comum/radar/2026-W48.md, nucleo/DECISOES.md, STATUS.md, comum/status_arquivo.md
 
 Insights (domingo): não se aplica (sexta-feira)
