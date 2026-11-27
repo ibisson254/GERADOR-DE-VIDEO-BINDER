@@ -1,5 +1,5 @@
 {
- "_leia": "MC-EP10 · Meta em Curto · Christoffer Larsen: de 1-3 a Jogador do Ano (Magic World Championship 32, MagicCon Atlanta, 13–15/11/2026). Factos: magic.gg (Day Two Highlights, The Finals, Final Standings, The Week That Was 27/11/2026); lista do Larsen: MTGTop8 (fonte melee.gg); Oracle: Scryfall; mapa: Natural Earth. Prévia sem voz: voz_tempos ESTIMADOS (14,5 car/s); na versão final vêm do mc_voz.py.",
+ "_leia": "MC-EP10 · Meta em Curto · Christoffer Larsen: de 1-3 a Jogador do Ano (Magic World Championship 32, MagicCon Atlanta, 13–15/11/2026). Factos: magic.gg (Day Two Highlights, The Finals, Final Standings, The Week That Was 27/11/2026); lista do Larsen: MTGTop8 (fonte melee.gg); Oracle: Scryfall; mapa: Natural Earth. voz_tempos do mc_voz.py (voz final, 27/11/2026).",
  "confirmado": true,
  "faixa": "META EM CURTO · EP. 10",
  "faixa_collab": "",
@@ -66,13 +66,13 @@
     "8-2",
     "nas 10 rodadas seguintes (cálculo nosso)",
     "verde",
-    "@3+0.7"
+    "@3+1.65"
    ],
    [
     "9-5",
     "20.º de 128 · US$ 12 mil · vaga no Pro Tour",
     "verde",
-    "@3+2.0"
+    "@3+2.9"
    ]
   ],
   "tese": "NÃO ABANDONOU",
@@ -100,7 +100,6 @@
  "capa_unidade": "CHRISTOFFER LARSEN · MUNDIAL 32",
  "saida": "MC_EP10_FINAL.mp4",
  "saida_previa": "MC_EP10_PREVIA_SEM_VOZ.mp4",
- "previa": "PRÉVIA SEM VOZ · NÃO PUBLICAR",
  "frases": [
   "ELE COMEÇOU O MUNDIAL COM 1 VITÓRIA E 3 DERROTAS.",
   "MUNDIAL 32, EM ATLANTA. DADOS DA WIZARDS:",
@@ -126,7 +125,7 @@
   }
  },
  "voz": {
-  "arquivo": "",
+  "arquivo": "voz_montada.wav (geração C0NyNEW8fgEiVgV1lXTf, flow 7TGmifQDu4TP7BOzTUsp, 463 créditos; mc_voz.py atempo 1,0)",
   "atempo": 1.0,
   "lead": 0.0,
   "pausas": []
@@ -211,57 +210,57 @@
   "ASK": "@8",
   "CLOSE": "@9-0.1",
   "CLOSE2": "@9+1",
-  "END": 35.49
+  "END": 31.0
  },
  "voz_tempos": [
   [
-   0.05,
-   3.77,
+   0.0,
+   3.43,
    "ELE COMEÇOU O MUNDIAL COM 1 VITÓRIA E 3 DERROTAS."
   ],
   [
-   4.03,
-   7.62,
+   3.58,
+   7.0,
    "MUNDIAL 32, EM ATLANTA. DADOS DA WIZARDS:"
   ],
   [
-   7.88,
-   10.78,
+   7.15,
+   9.5,
    "ESTEVE PERTO DE ABANDONAR NO PRIMEIRO DIA."
   ],
   [
-   11.04,
-   14.9,
+   9.85,
+   13.48,
    "CHRISTOFFER LARSEN FICOU: GANHOU 8 DAS 10 SEGUINTES."
   ],
   [
-   15.25,
-   18.28,
+   13.63,
+   16.29,
    "MAS O JOGADOR DO ANO SÓ SE DECIDIA NA FINAL."
   ],
   [
-   18.54,
-   22.13,
+   16.44,
+   19.39,
    "SE O SAJGALIK VENCESSE O MUNDIAL, O TÍTULO ERA DELE."
   ],
   [
-   22.39,
-   25.49,
+   19.69,
+   22.22,
    "PERDEU A FINAL POR 3 A 0 PARA O SCHÜTZ."
   ],
   [
-   25.79,
-   27.86,
+   22.72,
+   24.19,
    "E O TROFÉU FICOU COM O LARSEN."
   ],
   [
-   28.36,
-   30.78,
+   24.59,
+   26.59,
    "VOCÊ TERIA ABANDONADO NO 1 A 3?"
   ],
   [
-   31.18,
-   34.49,
+   26.74,
+   30.01,
    "PROBABILIDADE CALCULADA. HUMANOS, IMPREVISÍVEIS."
   ]
  ],
@@ -452,16 +451,6 @@
    0.5
   ],
   [
-   "@3+0.7",
-   "pop",
-   0.5
-  ],
-  [
-   "@3+2.0",
-   "pop",
-   0.5
-  ],
-  [
    "@3>-0.55",
    "riser",
    0.35,
@@ -491,6 +480,16 @@
    "@5+0.3",
    "pop",
    0.45
+  ],
+  [
+   "@3+1.65",
+   "pop",
+   0.5
+  ],
+  [
+   "@3+2.9",
+   "pop",
+   0.5
   ]
  ]
 }

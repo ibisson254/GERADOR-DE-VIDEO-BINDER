@@ -1,0 +1,41 @@
+{
+  "video": "MC_EP10_FINAL.mp4",
+  "frente": "tubo",
+  "formato": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30.0,
+    "dur": 34.866667
+  },
+  "duracao_sem_fecho": 31.0,
+  "lufs": -14.0,
+  "pico_dbtp": -3.9,
+  "fecho": {
+    "exigido": true,
+    "presente": true,
+    "diferenca_media": 0.06,
+    "inicio_s": 31.0
+  },
+  "cortes_s": [
+    0.03,
+    3.97,
+    4.2,
+    13.6,
+    16.4,
+    31.0
+  ],
+  "quadros_na_folha": 35,
+  "problemas": [],
+  "zona_segura_aprox_px": {
+    "topo": 220,
+    "base": 380,
+    "direita": 140
+  },
+  "conferir_a_olho": [
+    "legendas e textos fora da zona vermelha",
+    "carta inteira, também nos zooms",
+    "nada a tapar fontes ou rodapés",
+    "personagens inteiros e no modelo",
+    "sem corte lateral"
+  ]
+}

@@ -2,7 +2,7 @@
 
 ## Identificação
 - ID editorial: `MC-EP10` (próximo número livre; MC-EP09 é o último da série principal)
-- Estado no registo: EM PRODUÇÃO (prévia sem voz pronta a 27/11/2026, ~18h20 UTC); voz à espera de autorização
+- Estado no registo: CONCLUÍDO (27/11/2026, ~18h30 UTC), à espera de publicação pelo fundador
 - Pedido do fundador: «Vamos fazer outro episódio ache um que viralize» (27/11/2026, 17:56 UTC). Tema escolhido pelo fundador no cartão de decisão: «Larsen: de 1-3 a Jogador do Ano» (27/11/2026, 18:01 UTC).
 
 ## Classificação
@@ -55,8 +55,8 @@ Limitações: melee.gg, topdeck.gg e mtg.wiki fechados pela shell; lidos pelo ag
 | Pagamento | 5 | 5 |
 | Identidade | 5 | 5 |
 
-## Roteiro (texto da voz, 437 caracteres)
-Em `dados/episodio.json` → `frases` (10 falas). Voz prevista: Antonio de Jesus (MK5tXPmT83J5SUlpUo4K), eleven_v4, **uma** geração, ~440 créditos (estimativa pelo tamanho do texto, como no MC-EP09: 411 créditos para ~400 caracteres). Só com autorização do fundador.
+## Roteiro definitivo (texto da legenda = `frases`, 437 caracteres)
+Em `dados/episodio.json` → `frases` (10 falas). Voz autorizada pelo fundador no cartão (27/11/2026, 18:15 UTC, «Prossiga»). Texto enviado (Antonio de Jesus, eleven_v4, 1 geração): «Ele começou o Mundial com uma vitória e três derrotas. Mundial trinta e dois, em Atlanta. Dados da Uízards: esteve perto de abandonar no primeiro dia. Cristófer Lársen ficou: ganhou oito das dez seguintes. Mas o Jogador do Ano só se decidia na final. Se o Sáigalik vencesse o Mundial, o título era dele. Perdeu a final por três a zero para o Xúts. E o troféu ficou com o Lársen. Você teria abandonado no um a três? Probabilidade calculada. Humanos, imprevisíveis.» Gerado: **463 créditos**, geração C0NyNEW8fgEiVgV1lXTf (flow 7TGmifQDu4TP7BOzTUsp), 30,56 s em bruto; `mc_voz.py` a atempo 1,0 → 30,01 s; frases conferidas pelos silêncios.
 
 ## Estrutura (prévia sem voz, tempos estimados a 14,5 car/s)
 gancho_grade (0–3,5 s) → tubo_abertura com voo da Hydra e mergulho → **evento** (mapa Natural Earth do sudeste dos EUA, Geórgia a verde, alfinete em Atlanta; cartão «MAGICCON ATLANTA · MAGIC WORLD CHAMPIONSHIP 32 · 128 jogadores · US$ 1 milhão · Kai Budde Player of the Year decidido no último jogo») → linha_tempo (1-3 âmbar → 8-2 → 9-5, cada marco na palavra da voz; carimbo «NÃO ABANDONOU») → previsao (TUBO: «JOGADOR DO ANO?») → carta Michelangelo «SAJGALIK · se vencer o Mundial, leva os dois» → Anthropological Mission «3-0 · FINAL» → Mossborn Hydra «2026 · JOGADOR DO ANO · LARSEN» → pergunta A/B → fecho do TUBO + outro BINDER.
@@ -66,9 +66,19 @@ Feedback do fundador aplicado (MC-EP09): evento, cidade, país e data no ecrã; 
 ## Motor
 - `cena_linha_tempo`: cada marco aceita um 4.º campo opcional com o tempo («@frase±s»). Sem o campo, comportamento antigo. Regressão (`mc_render_regressao.py --passo 15`): EP09, ESP03, PAU01, PAU02, PAU08 com quadros iguais.
 
-## QC da prévia
+## Controlo de qualidade
+### Prévia
 `MC_EP10_PREVIA_SEM_VOZ.mp4`: 1080×1920, 30 fps, ~39,4 s (35,5 s + fecho), −14,4 LUFS, pico −4,4 dBTP, fecho presente; «sem problemas mensuráveis».
 
-## Próximo passo
-1. Fundador vê a prévia e autoriza a voz (~440 créditos).
-2. Uma geração → `mc_voz.py` → stills → render final → capa → QC → encerramento e merge na `main`.
+## Ficheiros finais
+- Controlo de qualidade final: `MC_EP10_FINAL.mp4`: 1080×1920, 30 fps, 34,87 s (31,0 s + fecho), −14,0 LUFS, pico −3,9 dBTP, fecho presente, QC «sem problemas mensuráveis» (`qc_final.json`); folha de contacto conferida a olho (marcos da linha do tempo na palavra da voz: 1-3 em «esteve perto», 8-2 em «ganhou», 9-5 e carimbo no fim da frase).
+- Capa: `MC_EP10_CAPA.png` («QUASE ABANDONOU / VIROU JOGADOR DO ANO / 1-3 / CHRISTOFFER LARSEN · MUNDIAL 32»), grelha conferida.
+- Entregas (não versionadas): `/mnt/project-files/tubo/mc-ep10/` (vídeo, capa, grelha, folha de contacto, voz em bruto, prévia sem voz, legenda, comentário fixado, texto alternativo, fontes). Publicar com `utm_campaign=MC-EP10`; não no mesmo dia do MC-EP09.
+- Rubrica medida no final: igual à da prévia (4 · 4 · 5 · 5 · 5 · 5).
+
+## Handoff (27/11/2026, ~18h30 UTC)
+Objetivo atual: MC-EP10 pronto para o fundador publicar.
+Feito: pesquisa (3 candidatos, escolha do fundador), factos verificados (magic.gg, MTGTop8), motor (`cena_linha_tempo` com tempo por marco; regressão igual), prévia, voz (463 créditos), render final, capa, QC, registo, decisão, STATUS.
+Pendente (fundador): publicar `MC_EP10_FINAL.mp4` com `MC_EP10_CAPA.png`, `legenda.txt` e `comentario_fixado.txt`; música/trilha já no ficheiro.
+Regenerável: `python3 -I oraculo/motor/mc_render.py <raiz> oraculo/episodios/ep10_larsen_jogador_ano final voz_montada.wav` (voz_montada.wav recria-se com `mc_voz.py` a partir de `MC_EP10_voz_bruta.mp3` na pasta do projeto).
+Próximo passo concreto: publicar; no domingo, Insights do MC-EP10 vs MC-EP08B.
