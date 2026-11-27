@@ -141,13 +141,31 @@ Desvio registado: a lista de 100 cartas é mostrada inteira a descer durante 4,6
 - [x] `fontes.md`
 - Publicação: `utm_campaign=MC-EP09`; não no mesmo dia do MB-EP20.
 
+## v2 · revisão pedida pelo fundador (27/11/2026, 15:18)
+Pedido: «as informações ficaram muito vagas… não diz qual é a loja… aonde… gancho visual inicial… som de efeitos melhor… feedback visual com som… nível profissional… até 45 segundos». Créditos: o fundador perguntou se era preciso gastá-los e pediu o MC-EP08B (campeão do mundo, maior audiência do TUBO) como referência (15:23) → **0 créditos**: a mesma voz (geração YkwAr3wZs9AcTA1I2Wjd) reordenada, campeão primeiro, como no MC-EP08B.
+
+Diagnóstico da v1: loja só na voz e no rodapé, sem cidade, evento nem data; quadro 0 com a carta parada e texto pequeno; SFX sintetizados simples (bipes) e pouco ligados ao movimento; 3,4 s de TUBO parado no fim.
+
+Mudanças:
+- Voz: ordem 3 → 1 → 2 → 4…10 («O campeão foi o único Thrasios e Tymna.» abre; depois «No cEDH português, dados do TopDeck: 39 jogadores na Mercadia Games.»). `voz_montada_v2.wav` (não versionado: recria-se cortando `voz_montada.wav` pelos `voz_tempos` da v1).
+- Quadro 0: **mosaico** com a arte real dos comandantes dos 39 jogadores (`cartas/arte/`, Scryfall; ordem da classificação com o campeão na posição 15); scanner apaga os quadros (contador 39 → 1); o Thrasios + Tymna salta para ecrã inteiro (1,55 s) e leva o carimbo «CAMPEÃO · 1 DE 39» (2,0 s) com abalo.
+- **Ficha do evento** (2,8–8,5 s): mapa Natural Earth com Portugal a verde e alfinete em Lisboa; «LISBOA · PORTUGAL · Commander competitivo (cEDH) · 22·11·2026»; cartão «MERCADIA GAMES · EVENTO PARALELO OFICIAL · POWER 9 QUEST · 39 jogadores · 5 rodadas suíças + mesa final · R. Cláudio Nunes 17A, Lisboa · resultados no TopDeck». Logótipo entra no cartão quando chegar (re-render, 0 créditos).
+- Barras e TUBO de abertura saem (o mosaico mostra o campo); lista, combo, Thrasios, previsão, pergunta e fecho mantêm-se.
+- Som: deixas de efeitos nos dados (`sfx`, 46 deixas: impacto, scanner, tiques, riser, woosh, carimbo, alfinete, papel de impressora, cartas, brilho de mana, UI, fecho), sintetizadas no motor com cauda de reverberação; abalos de câmara nos impactos e transição rápida entre cenas.
+- Motor: cenas `mosaico` e `evento`, deixas `sfx`, `abalos`, `transicoes` (só para episódios que as pedem; regressão ESP03/PAU02/PAU08 sem diferenças, 27/11).
+
+QC v2 (`qc_final_v2.json`): 1080×1920, 30 fps, 31,77 s (27,9 s sem fecho), −14,0 LUFS, pico −3,8 dBTP, fecho presente, «sem problemas mensuráveis». Cropdetect: 1080×1920 em 763 de 808 quadros; 1074 nos quadros de abalo/transição (6 px de margem do abalo, não é corte). Folha de contacto conferida a olho.
+Ficheiros: `MC_EP09_FINAL_v2.mp4`, `folha_contacto_v2.png` (projeto claude.ai, `tubo/mc-ep09/`). A capa da v1 mantém-se válida.
+Pacote: legenda (evento e morada da loja; créditos do mosaico e do mapa), texto alternativo novo, `comentario_creditos.txt` (segundo comentário: artistas das 28 artes do mosaico).
+Por fazer: foto do campeão (com autorização) pode entrar no quadro 0, como no MC-EP08B; logótipo da Mercadia.
+
 ## Handoff
 
 ```
-HANDOFF · 27/11/2026, 15h20 (UTC) · Claude
-Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (merge de tubo/mc-ep09) · commit do episódio 3256997, merge 1d51eaa (conferido no remoto: sim)
+HANDOFF · 27/11/2026, 15h35 (UTC) · Claude (v2)
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (merge de tubo/mc-ep09) · v1: commit 3256997, merge 1d51eaa; v2: branch tubo/mc-ep09-v2, ver git log (conferido no remoto: ver resposta no fio)
 
-Objetivo atual: MC-EP09 pronto para o fundador publicar; falta só o logótipo opcional da Mercadia.
+Objetivo atual: MC-EP09 v2 pronto para o fundador publicar (MC_EP09_FINAL_v2.mp4); opcionais: logótipo da Mercadia e foto do campeão.
 
 Conteúdos tocados (comum/REGISTRO_EDITORIAL.md):
 - MC-EP09 · (novo) → CONCLUÍDO
@@ -159,6 +177,7 @@ Encerramento:
 Decisões tomadas nesta sessão:
 - Campeonato escolhido pelo agente (Mercadia, 39/39 comandantes conhecidos); pauta liberada pelo fundador no cartão (11:03) · nucleo/DECISOES.md 27/11 sim
 - Voz autorizada pelo fundador («Pode prosseguir», 15:05; 411 créditos, uma geração) · na ficha
+- v2 sem créditos (fundador 15:23: usar o MC-EP08B como referência); voz reordenada, campeão primeiro · na ficha, secção v2
 - Tese: motor do deck campeão; descartados «o mais jogado não ganhou» (repete MC-PAU08) e taxa de vitória por mesa (amostra pequena) · na ficha
 - Lista de 100 cartas em resposta ao comentário fixado (limite de 2.200 caracteres) · na ficha
 

@@ -14,6 +14,10 @@ Lidas a 27/11/2026. Ficheiros de apoio: `dados/campo_39.tsv` (classificação e 
 | Thrasios: {4}: vidência 1, revela o topo; terreno entra virado, senão compra | facto | Scryfall (Oracle), C16 nº 46 | 27/11 |
 | «A lista não mostra como cada mesa acabou» | limitação | Não há VOD nem relato de partidas do evento | 27/11 |
 
+| Mosaico: comandante de cada um dos 39 jogadores (arte) | facto + imagem | cEDH Stats (comandantes); arte `art_crop` do Scryfall, créditos em `cartas/arte/creditos.json` | 27/11 |
+| Mapa de Portugal e alfinete em Lisboa (38,72 N; 9,14 O) | imagem | Natural Earth 1:50m (domínio público) via world-atlas 2.0.2 (`dados/mapa/iberia.json`) | 27/11 |
+| «Evento paralelo oficial do Power 9 Quest» | facto | nome oficial do evento no TopDeck: «Official P9Q - Side Quest at Mercadia Games 2.0» | 27/11 |
+
 ## Limitações
 - Sem VOD nem relato das mesas: o vídeo não diz que algum jogo foi ganho com estes combos. Analisa o que a lista pode fazer.
 - 39 jogadores, 16 listas públicas (MTGTop8/cedhdiff). Os comandantes dos 39 vêm do cEDH Stats (TopDeck). A distribuição é deste torneio só; não representa o metagame português.

@@ -910,15 +910,249 @@ def cena_combo(t, i):
         d = ImageDraw.Draw(im, 'RGBA'); y0 = 510 + int(w * 1.396) + 24; h = 62 * len(passos) + 30
         d.rounded_rectangle((70, y0, 1010, y0 + h), 20, fill=(5, 12, 14, 240), outline=(16, 185, 129, 160), width=3)
         for j, (a, s, cor) in enumerate(vis):
-            k = eio((t - a) / .2); col = PH if cor == 'verde' else WHITE
+            k = eio((t - a) / .2); col = PH if cor == 'verde' else ((150, 170, 175) if cor == 'cinza' else WHITE)
             d.text((100 + 20 * (1 - k), y0 + 46 + 62 * j), s, font=fit(d, s, CONDB, 40, 880), fill=col + (int(255 * k),), anchor='lm')
     topo_fala(im, t); selo_txt(im, C.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
 CENAS.update(decklist=cena_decklist, combo=cena_combo)
+
+# ---------- gancho em mosaico + ficha do evento com mapa (MC-EP09 v2, 27/11/2026). Todo o texto e imagens vêm do
+# episodio.json; cenas usadas só por episódios que as pedem (regressão dos outros intacta) ----------
+_ART = {}
+def _arte(f, w, h):
+    k = (f, w, h)
+    if k not in _ART:
+        a = Image.open(HERE + f).convert('RGB'); r = max(w / a.width, h / a.height)
+        a = a.resize((max(w, int(a.width * r + .5)), max(h, int(a.height * r + .5))), Image.LANCZOS)
+        x0, y0 = (a.width - w) // 2, (a.height - h) // 2; _ART[k] = a.crop((x0, y0, x0 + w, y0 + h))
+    return _ART[k]
+_TILE = {}
+def _tile(j, w, h, dim):
+    """Mosaico: arte do(s) comandante(s) do jogador j (dupla = diagonal), cantos arredondados; dim 0–1 = apagado."""
+    k = (j, w, h, round(dim, 1))
+    if k not in _TILE:
+        artes = D['mosaico']['jogadores'][j][1]; t_ = _arte(artes[0], w, h).copy()
+        if len(artes) > 1:
+            b = _arte(artes[1], w, h); m = Image.new('L', (w, h), 0); ImageDraw.Draw(m).polygon([(w * .62, 0), (w, 0), (w, h), (w * .38, h)], fill=255)
+            t_.paste(b, (0, 0), m); ImageDraw.Draw(t_).line((w * .62, 0, w * .38, h), fill=(5, 10, 16), width=4)
+        if dim > 0:
+            g = t_.convert('L').convert('RGB'); t_ = Image.blend(t_, g, min(1, dim * 1.2)); t_ = Image.blend(t_, Image.new('RGB', (w, h), BG), .78 * dim)
+        m = Image.new('L', (w, h), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w - 1, h - 1), 12, fill=255)
+        t_ = t_.convert('RGBA'); t_.putalpha(m)
+        if len(_TILE) > 400: _TILE.clear()
+        _TILE[k] = t_
+    return _TILE[k]
+def cena_mosaico(t, i):
+    """Gancho: os comandantes reais de todos os jogadores num mosaico; um scanner apaga-os um a um e só fica o campeão,
+    que salta para ecrã cheio (cartas inteiras) e leva o carimbo. p = [t0, 'mosaico', scan0, scan1, zoom, carimbo]."""
+    p = SEQ[i]; M = D['mosaico']; js = M['jogadores']; n = len(js); cam = M['campeao']
+    s0, s1, tz, tc = p[2], p[3], p[4], p[5]
+    im = fundo(t); cols = M.get('colunas', 6); tw, th, gp = 150, 118, 12; gx, gy = 60, 452
+    rows = (n + cols - 1) // cols
+    pos = []
+    for j in range(n):
+        r_, c_ = divmod(j, cols); nr = min(cols, n - r_ * cols); off = (cols - nr) * (tw + gp) / 2
+        pos.append((gx + off + c_ * (tw + gp), gy + r_ * (th + gp)))
+    yl = gy - 20 + (rows * (th + gp) + 40) * ease((t - s0) / max(.1, s1 - s0))   # linha do scanner
+    kz = eio((t - tz) / .45)
+    vivos = 0
+    for j, (x, y) in enumerate(pos):
+        ke = eio(t / .35 - j * .004) if t < .5 else 1.0                       # quadro 0 já mostra o mosaico inteiro
+        ccy = y + th / 2; dim = 0.0
+        if j != cam and t >= s0: dim = min(1, max(0, (yl - ccy) / 40))
+        if dim < .5: vivos += 1
+        if j == cam and kz > 0: continue
+        tl = _tile(j, tw, th, dim)
+        if kz > 0: a = tl.getchannel('A').point(lambda v: int(v * (1 - .7 * kz))); tl = tl.copy(); tl.putalpha(a)
+        sc = 1.12 - .12 * ke
+        if sc != 1: tl = tl.resize((int(tw * sc), int(th * sc)), Image.BILINEAR)
+        im.alpha_composite(tl, (int(x + (tw - tl.width) / 2), int(y + (th - tl.height) / 2)))
+        if 0 < dim < 1 and j != cam:                                          # corte vermelho quando o scanner passa
+            dd = ImageDraw.Draw(im, 'RGBA'); dd.rounded_rectangle((x, y, x + tw, y + th), 12, outline=(230, 60, 60, int(220 * (1 - dim))), width=4)
+    d = ImageDraw.Draw(im, 'RGBA')
+    if s0 <= t < s1 + .15 and kz <= 0:                                        # feixe do scanner
+        for k_ in range(18): d.line((50, yl - k_ * 3, 1030, yl - k_ * 3), fill=PH + (int(120 * (1 - k_ / 18) ** 2),), width=3)
+        d.line((50, yl, 1030, yl), fill=(200, 255, 220, 255), width=4)
+    x, y = pos[cam]
+    if kz <= 0:                                                                # campeão: brilho a pulsar no mosaico
+        pul = .5 + .5 * math.sin(t * 9) if t >= s0 else 0
+        tl = _tile(cam, tw, th, 0); im.alpha_composite(tl, (int(x), int(y)))
+        if t >= s0: glow_box(im, (int(x) - 4, int(y) - 4, int(x + tw) + 4, int(y + th) + 4), r=14); d = ImageDraw.Draw(im, 'RGBA'); d.rounded_rectangle((x - 4, y - 4, x + tw + 4, y + th + 4), 14, outline=PH + (int(150 + 105 * pul),), width=6)
+    else:                                                                      # salta para ecrã cheio: as duas cartas inteiras
+        im.alpha_composite(Image.new('RGBA', im.size, (5, 10, 16, int(150 * kz))))
+        cw = 430; ch = int(cw * 1.396); cyc = 560 + ch / 2
+        for q, (lado, cx) in enumerate((('A', 300), ('C', 780))):
+            kq = eio((t - tz - .06 * q) / .45)
+            w_ = tw + (cw - tw) * kq; h_ = w_ * 1.396
+            xx = (x + tw / 2) + (cx - (x + tw / 2)) * kq - w_ / 2; yy = (y + th / 2) + (cyc - (y + th / 2)) * kq - h_ / 2
+            c = card_img(lado, w_); im.alpha_composite(c, (int(xx), int(yy)))
+            if kq >= 1: glow_box(im, (int(xx), int(yy), int(xx + c.width), int(yy + c.height)))
+        if tz <= t < tz + .1: im.alpha_composite(Image.new('RGBA', im.size, (255, 255, 255, int(110 * (1 - (t - tz) / .1)))))
+    if kz <= 0 or t < tc:                                                      # contador 39 → 1
+        d = ImageDraw.Draw(im, 'RGBA'); vv = vivos if t >= s0 else n; a_ = int(255 * (1 - kz))
+        s_ = f"{vv}"; f = F(INTB, 96); r_ = M.get('contador', 'DE {n} AINDA NA DISPUTA').format(n=n)
+        d.rounded_rectangle((60, 1378, 1020, 1452), 18, fill=(5, 12, 14, int(235 * a_ / 255)), outline=(PH if vv == 1 else EM) + (a_,), width=4)
+        d.text((100, 1416), s_, font=F(INTB, 64), fill=(PH if vv == 1 else WHITE) + (a_,), anchor='lm')
+        d.text((100 + d.textlength(s_ + ' ', font=F(INTB, 64)), 1418), r_, font=fit(d, r_, MONOB, 38, 760), fill=(200, 215, 220, a_), anchor='lm')
+    if t >= tc:                                                                # carimbo «CAMPEÃO»
+        k = eio((t - tc) / .22); s1_, s2_ = M.get('carimbo', ['CAMPEÃO', ''])
+        f = F(INTB, 120); f2 = F(MONOB, 40); dd = ImageDraw.Draw(im)
+        wd = int(max(dd.textlength(s1_, font=f), dd.textlength(s2_, font=f2)) + 90)
+        lay = Image.new('RGBA', (wd + 40, 270), (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
+        dl.rounded_rectangle((20, 20, wd + 20, 250), 26, fill=(8, 20, 16, 250), outline=PH + (255,), width=8)
+        dl.text((wd / 2 + 20, 98), s1_, font=f, fill=PH + (255,), anchor='mm'); dl.text((wd / 2 + 20, 202), s2_, font=f2, fill=WHITE + (255,), anchor='mm')
+        sc = 1.45 - .45 * k; lay = lay.rotate(-4 * (1 - k) - 2, expand=True, resample=Image.BICUBIC)
+        lay = lay.resize((int(lay.width * sc), int(lay.height * sc)), Image.BILINEAR)
+        a = lay.getchannel('A').point(lambda v: int(v * min(1, k * 1.5))); lay.putalpha(a); im.alpha_composite(lay, (int(540 - lay.width / 2), int(1300 - lay.height / 2)))
+    topo_fala(im, t); selo_txt(im, M.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
+
+_MAPA = {}
+def cena_evento(t, i):
+    """Ficha do evento: mapa (Natural Earth) com o país em destaque e o alfinete na cidade, cidade em grande e o cartão
+    da loja com as linhas do evento. p = [t0, 'evento', t_alfinete, t_cartao]; D['evento'] = {...}."""
+    p = SEQ[i]; E = D['evento']; t0, tp, tcart = p[0], p[2], p[3]
+    im = fundo(t); d = ImageDraw.Draw(im, 'RGBA')
+    if 'g' not in _MAPA: _MAPA['g'] = json.load(open(HERE + E['mapa'], encoding='utf-8'))['paises']
+    G = _MAPA['g']; lo0, lo1, la0, la1 = E.get('caixa', [-10.2, -5.6, 36.6, 42.4]); cl = math.cos(math.radians((la0 + la1) / 2))
+    bx0, by0, bw, bh = 70, 450, 470, 600; sc = min(bw / ((lo1 - lo0) * cl), bh / (la1 - la0))
+    zoom = 1 + .06 * ease((t - t0) / 6)
+    cxm, cym = bx0 + bw / 2, by0 + bh / 2
+    def P(lo, la):
+        x = bx0 + (lo - lo0) * cl * sc; y = by0 + (la1 - la) * sc
+        return (cxm + (x - cxm) * zoom, cym + (y - cym) * zoom)
+    km = eio((t - t0) / .6)
+    lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
+    dl.rounded_rectangle((bx0 - 10, by0 - 10, bx0 + bw + 10, by0 + bh + 10), 22, fill=(5, 12, 16, 235), outline=(16, 185, 129, 110), width=3)
+    for nome, rings in G.items():
+        foco = nome == E.get('pais_mapa', 'Portugal')
+        for r in rings:
+            pts = [P(lo, la) for lo, la in r]
+            if foco: dl.polygon(pts, fill=(16, 185, 129, int(95 * km)), outline=PH + (int(255 * km),))
+            else: dl.polygon(pts, fill=(22, 34, 40, int(255 * km)), outline=(70, 100, 105, int(200 * km)))
+    m = Image.new('L', im.size, 0); ImageDraw.Draw(m).rounded_rectangle((bx0 - 8, by0 - 8, bx0 + bw + 8, by0 + bh + 8), 20, fill=255)
+    lay.putalpha(Image.composite(lay.getchannel('A'), Image.new('L', im.size, 0), m)); im.alpha_composite(lay)
+    d = ImageDraw.Draw(im, 'RGBA'); d.text((bx0 + 14, by0 + bh - 16), E.get('credito_mapa', 'Mapa: Natural Earth'), font=F(COND, 22), fill=(120, 140, 150, int(220 * km)), anchor='ls')
+    if t >= tp:                                                                # alfinete com ressalto e ondas
+        px, py = P(*E['alfinete']); kp = (t - tp) / .35
+        drop = 0 if kp >= 1 else (1 - eio(kp)) * 120; bounce = 0 if kp < 1 else -10 * math.exp(-(t - tp - .35) * 10) * math.sin((t - tp - .35) * 30)
+        for q in range(3):
+            rr = ((t - tp) * 1.2 - q * .33) % 1.0
+            if t - tp > q * .33: d.ellipse((px - 90 * rr, py - 36 * rr, px + 90 * rr, py + 36 * rr), outline=PH + (int(220 * (1 - rr)),), width=4)
+        yy = py - drop + bounce; d.ellipse((px - 30, yy - 92, px + 30, yy - 32), fill=(230, 60, 60, 255), outline=WHITE + (255,), width=5)
+        d.polygon([(px - 22, yy - 50), (px + 22, yy - 50), (px, yy)], fill=(230, 60, 60, 255)); d.ellipse((px - 11, yy - 73, px + 11, yy - 51), fill=WHITE + (255,))
+    # cidade em grande à direita do mapa
+    kc = eio((t - tp - .05) / .35)
+    if kc > 0:
+        lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); dl = ImageDraw.Draw(lay); xr = 590
+        dl.text((xr + 30 * (1 - kc), 600), E.get('cidade', ''), font=fit(dl, E.get('cidade', ''), INTB, 116, 440), fill=WHITE + (255,), anchor='lm')
+        dl.text((xr + 30 * (1 - kc), 700), E.get('pais', ''), font=fit(dl, E.get('pais', ''), MONOB, 54, 420), fill=PH + (255,), anchor='lm')
+        for j, s in enumerate(E.get('lado', [])):
+            kj = eio((t - tp - .3 - .15 * j) / .3)
+            dl.text((xr, 800 + j * 62), s, font=fit(dl, s, CONDB, 40, 420), fill=(200, 215, 220, int(255 * kj)), anchor='lm')
+        a = lay.getchannel('A').point(lambda v: int(v * kc)); lay.putalpha(a); im.alpha_composite(lay)
+    # cartão da loja e do evento
+    kk = eio((t - tcart) / .4)
+    if kk > 0:
+        y0 = 1080 + 60 * (1 - kk); lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
+        dl.rounded_rectangle((60, y0, 1020, y0 + 360), 26, fill=(8, 18, 16, 248), outline=PH + (255,), width=5)
+        tem_logo = 'loja' in TERC
+        xl = 260 if tem_logo else 100
+        dl.text((xl, y0 + 78), E.get('loja', ''), font=fit(dl, E.get('loja', ''), INTB, 86, 1000 - xl), fill=WHITE + (255,), anchor='lm')
+        for j, (s, cor) in enumerate(E.get('linhas', [])):
+            kj = eio((t - tcart - .35 - .3 * j) / .25)
+            col = PH if cor == 'verde' else (AMBER if cor == 'ambar' else (215, 226, 230))
+            dl.text((100 if j else xl, y0 + 160 + j * 64), typed(s, tcart + .35 + .3 * j, t, 70), font=fit(dl, s, CONDB if j == 0 else COND, 42 if j == 0 else 38, 880 if j else 1000 - xl), fill=col + (int(255 * kj),), anchor='lm')
+        a = lay.getchannel('A').point(lambda v: int(v * kk)); lay.putalpha(a); im.alpha_composite(lay)
+        if tem_logo: circulo(im, 'loja', 160, y0 + 80, 150, kk, contorno=PH)
+    topo_fala(im, t); selo_txt(im, E.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
+CENAS.update(mosaico=cena_mosaico, evento=cena_evento)
+
+# ---------- acabamento (MC-EP09 v2): abalo de câmara nos impactos e transição rápida entre cenas; só com
+# D['abalos'] / D['transicoes'] (os outros episódios não mudam) ----------
+_frame_base = frame
+def frame(t):
+    im = _frame_base(t)
+    tr = D.get('transicoes')
+    if tr:
+        i = plano_em(t); p = SEQ[i]; dur = tr.get('dur', .16)
+        if i > 0 and p[0] <= t < p[0] + dur and p[1] not in tr.get('sem', []) and SEQ[i - 1][1] not in tr.get('sem', []):
+            k = (t - p[0]) / dur; prev = _frame_base(p[0] - 1 / FPS)
+            sh = int(W * .18 * (1 - eio(k))); nv = Image.new('RGB', (W, H), BG)
+            nv.paste(im.crop((0, 0, W - sh, H)), (sh, 0)) if sh else nv.paste(im)
+            a = prev.crop((0, 0, W, H)).filter(ImageFilter.BoxBlur(6)); im = Image.blend(a, nv, eio(k) * .85 + .15)
+    for ta, amp in D.get('abalos', []):
+        ta = _tempo(ta) if isinstance(ta, str) else ta
+        if ta <= t < ta + .35:
+            e = math.exp(-(t - ta) * 12) * amp; dx, dy = int(e * math.sin((t - ta) * 90)), int(e * math.cos((t - ta) * 77))
+            if dx or dy:
+                z = 1.0 + .02 * e / max(1, amp); bw, bh = int(W * z), int(H * z); big = im.resize((bw, bh), Image.BILINEAR)
+                im = big.crop(((bw - W) // 2 - dx, (bh - H) // 2 - dy, (bw - W) // 2 - dx + W, (bh - H) // 2 - dy + H))
+    return im
 
 # ---------- áudio da prévia: trilha do TUBO + SFX do ESP01 (sem voz) ----------
 OUTRO = None
 def _dur_outro():
     return float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', K + 'comum/outro/outro_binder_916.mp4'], capture_output=True, text=True).stdout)
+def _sfx_cues(put, tt, SR, base):
+    """Deixas de efeitos do episódio: D['sfx'] = [[tempo|@âncora, nome, ganho], ...]. O nome procura primeiro um ficheiro
+    em D['sfx_banco'] (efeitos gravados, p. ex. ElevenLabs, com autorização) e, se não houver, o efeito sintetizado."""
+    rng_ = np.random.default_rng(11)
+    def ir(d=.6, dec=7.0):
+        x = tt(d); return (rng_.normal(0, 1, len(x)) * np.exp(-x * dec)).astype(np.float32)
+    def verb(x, mix=.25, d=.6, dec=7.0):
+        r = np.convolve(x, ir(d, dec))[:len(x) + int(d * SR)] * (mix / 30); y = np.zeros(len(r), np.float32); y[:len(x)] += x; return (y + r).astype(np.float32)
+    def lp(x, n): return np.convolve(x, np.ones(n) / n, 'same').astype(np.float32)
+    def impacto(d=1.2):
+        x = tt(d); sub = np.sin(2 * np.pi * (48 + 60 * np.exp(-x * 18)) * x) * np.exp(-x * 3.2)
+        crack = rng_.normal(0, 1, len(x)) * np.exp(-x * 45); body = lp(rng_.normal(0, 1, len(x)), 8) * np.exp(-x * 9)
+        return verb((sub * .95 + crack * .45 + body * .5).astype(np.float32), .35, .9, 5)
+    def riser(d=1.0):
+        x = tt(d); n = rng_.normal(0, 1, len(x)); e = (x / d) ** 2.2
+        hp = n - lp(n, int(40 - 34 * 1)); tone = np.sin(2 * np.pi * np.cumsum(220 + 900 * (x / d) ** 2) / SR) * .18
+        return ((hp * .35 + tone) * e).astype(np.float32)
+    def scan(d=2.0):
+        x = tt(d); fr = 600 + 2400 * x / d; s_ = np.sin(2 * np.pi * np.cumsum(fr) / SR) * (.5 + .5 * np.sign(np.sin(2 * np.pi * 14 * x)))
+        return (s_ * .16 * np.minimum(1, x / .05) * np.minimum(1, (d - x) / .1) + lp(rng_.normal(0, 1, len(x)), 3) * .05).astype(np.float32)
+    def tique(d=.05):
+        x = tt(d); return (np.sin(2 * np.pi * 2600 * x) * np.exp(-x * 140) * .5 + rng_.normal(0, 1, len(x)) * np.exp(-x * 300) * .2).astype(np.float32)
+    def carimbo(d=.5):
+        x = tt(d); return verb((np.sin(2 * np.pi * 95 * x) * np.exp(-x * 22) * .9 + lp(rng_.normal(0, 1, len(x)), 4) * np.exp(-x * 60) * .7).astype(np.float32), .3, .5, 8)
+    def woosh(d=.35):
+        x = tt(d); n = rng_.normal(0, 1, len(x)); e = np.sin(np.pi * x / d) ** 2; k = (1 + 20 * (1 - x / d)).astype(int)
+        y = np.array([0.0] * len(x), np.float32); acc = 0.0
+        for j in range(len(x)): acc += (n[j] - acc) / (k[j] if k[j] > 0 else 1); y[j] = acc
+        return (y * e * 1.6).astype(np.float32)
+    def alfinete(d=.6):
+        x = tt(d); return verb((np.sin(2 * np.pi * 1320 * x) * np.exp(-x * 9) * .35 + np.sin(2 * np.pi * 1980 * x) * np.exp(-x * 12) * .2 + np.sin(2 * np.pi * 70 * x) * np.exp(-x * 25) * .6).astype(np.float32), .4, .8, 5)
+    def papel(d=2.0):
+        x = tt(d); n = rng_.normal(0, 1, len(x)); step = (np.sin(2 * np.pi * 22 * x) > .6).astype(np.float32)
+        motor = np.sin(2 * np.pi * 180 * x + 2 * np.sin(2 * np.pi * 22 * x)) * .08
+        return ((lp(n, 3) - lp(n, 30)) * step * .3 + motor) * np.minimum(1, x / .08) * np.minimum(1, (d - x) / .15)
+    def carta(d=.22):
+        x = tt(d); n = rng_.normal(0, 1, len(x)); return ((n - lp(n, 6)) * np.exp(-x * 28) * .6 + np.sin(2 * np.pi * 160 * x) * np.exp(-x * 40) * .3).astype(np.float32)
+    def brilho(d=1.4):
+        x = tt(d); y = np.zeros(len(x), np.float32)
+        for q, f0 in enumerate((1046.5, 1318.5, 1568.0, 2093.0)):
+            xx = np.clip(x - q * .07, 0, None); y += (np.sin(2 * np.pi * f0 * xx + 1.5 * np.sin(2 * np.pi * f0 * 1.41 * xx) * np.exp(-xx * 4)) * np.exp(-xx * 3.5) * (x >= q * .07)).astype(np.float32) * .18
+        return verb(y, .45, 1.0, 3.5)
+    def ui(d=.12):
+        x = tt(d); return (np.sin(2 * np.pi * np.cumsum(900 + 700 * x / d) / SR) * np.exp(-x * 25) * .4 + np.sin(2 * np.pi * 1800 * x) * np.exp(-x * 60) * .15).astype(np.float32)
+    def fecho(d=1.5):
+        x = tt(d); return verb((np.sin(2 * np.pi * 55 * x) * np.exp(-x * 2.5) * .8 + np.sin(2 * np.pi * 110 * x) * np.exp(-x * 4) * .3).astype(np.float32), .4, 1.2, 3)
+    sint = dict(base, impacto=impacto, riser=riser, scan=scan, tique=tique, carimbo=carimbo, woosh=woosh, alfinete=alfinete,
+                papel=papel, carta=carta, brilho=brilho, ui=ui, fecho=fecho)
+    banco = {}
+    for nome, f in (D.get('sfx_banco') or {}).items():
+        if os.path.exists(HERE + f):
+            raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', HERE + f, '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
+            x = np.frombuffer(raw, np.float32).copy(); banco[nome] = (x / max(1e-6, np.abs(x).max())).astype(np.float32)
+    for c in D['sfx']:
+        at, nome, g = _tempo(c[0]), c[1], c[2]; dur = c[3] if len(c) > 3 else None
+        if nome in banco: x = banco[nome][:int(dur * SR)] if dur else banco[nome]
+        else: x = sint[nome](dur) if dur else sint[nome]()
+        if dur and nome in banco:
+            fade = min(len(x), int(.08 * SR)); x = x.copy(); x[-fade:] *= np.linspace(1, 0, fade)
+        put(np.asarray(x, np.float32), at, g)
+
 def audio_previa(out='mix_previa.wav', sem_sfx=False):
     SR = 48000; TOT = BEAT['END'] + _dur_outro(); N = int(TOT * SR)
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', K + 'oraculo/musica/tubo_tema.mp3', '-t', str(TOT), '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
@@ -938,7 +1172,9 @@ def audio_previa(out='mix_previa.wav', sem_sfx=False):
         lp = np.convolve(r, np.ones(24) / 24, 'same'); return (lp * e * .9).astype(np.float32)
     S = np.zeros(N, np.float32)
     def put(x, at, g): i = int(at * SR); n = min(len(x), N - i); S[i:i + n] += x[:n] * g
-    if D.get('grade', {}).get('heroi'):                         # abertura do MC-EP08B: «tum» + carimbo na carta-herói no quadro 0
+    if D.get('sfx'):                                            # MC-EP09 v2: lista de deixas nos dados (efeito ligado a cada movimento)
+        _sfx_cues(put, tt, SR, dict(thump=thump, modem=modem, click=click, pop=pop, stamp=stamp, whoosh=whoosh))
+    elif D.get('grade', {}).get('heroi'):                         # abertura do MC-EP08B: «tum» + carimbo na carta-herói no quadro 0
         put(thump(), 0, .9); put(stamp(), 0, .6); put(pop(), BEAT['NUM'], .55); put(click(), BEAT['HLB'], .4); put(click(), BEAT['HLB'] + .08, .3)
         if 'VOO' in BEAT: put(whoosh(), BEAT['VOO'], .6)
         put(stamp(), BEAT['DIVE'] - .05, .5)

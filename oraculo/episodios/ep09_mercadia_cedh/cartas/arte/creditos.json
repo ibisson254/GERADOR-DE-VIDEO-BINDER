@@ -1,0 +1,207 @@
+{
+ "Clan Crafter": {
+  "arquivo": "cartas/arte/clan_crafter.jpg",
+  "set": "CLB",
+  "num": "651",
+  "artista": "Yeong-Hao Han",
+  "scryfall": "https://scryfall.com/card/clb/651/clan-crafter?utm_source=api"
+ },
+ "Dihada, Binder of Wills": {
+  "arquivo": "cartas/arte/dihada_binder_of_wills.jpg",
+  "set": "DMC",
+  "num": "1",
+  "artista": "Néstor Ossandón Leal",
+  "scryfall": "https://scryfall.com/card/dmc/1/dihada-binder-of-wills?utm_source=api"
+ },
+ "Heliod, the Radiant Dawn": {
+  "arquivo": "cartas/arte/heliod_the_radiant_dawn.jpg",
+  "set": "MOM",
+  "num": "17",
+  "artista": "Victor Adame Minguez",
+  "scryfall": "https://scryfall.com/card/mom/17/heliod-the-radiant-dawn-heliod-the-warped-eclipse?utm_source=api"
+ },
+ "Kenrith, the Returned King": {
+  "arquivo": "cartas/arte/kenrith_the_returned_king.jpg",
+  "set": "PLST",
+  "num": "ELD-303",
+  "artista": "Kieran Yanner",
+  "scryfall": "https://scryfall.com/card/plst/ELD-303/kenrith-the-returned-king?utm_source=api"
+ },
+ "King T'Challa": {
+  "arquivo": "cartas/arte/king_t_challa.jpg",
+  "set": "MSH",
+  "num": "219",
+  "artista": "Aaron J. Riley & Eric Wilkerson",
+  "scryfall": "https://scryfall.com/card/msh/219/king-tchalla-black-panther-hope-enduring?utm_source=api"
+ },
+ "Kinnan, Bonder Prodigy": {
+  "arquivo": "cartas/arte/kinnan_bonder_prodigy.jpg",
+  "set": "IKO",
+  "num": "192",
+  "artista": "Jason Rainville",
+  "scryfall": "https://scryfall.com/card/iko/192/kinnan-bonder-prodigy?utm_source=api"
+ },
+ "Livio, Oathsworn Sentinel": {
+  "arquivo": "cartas/arte/livio_oathsworn_sentinel.jpg",
+  "set": "CMR",
+  "num": "31",
+  "artista": "Kekai Kotaki",
+  "scryfall": "https://scryfall.com/card/cmr/31/livio-oathsworn-sentinel?utm_source=api"
+ },
+ "Muxus, Goblin Grandee": {
+  "arquivo": "cartas/arte/muxus_goblin_grandee.jpg",
+  "set": "JMP",
+  "num": "24",
+  "artista": "Dmitry Burmak",
+  "scryfall": "https://scryfall.com/card/jmp/24/muxus-goblin-grandee?utm_source=api"
+ },
+ "Norin the Wary": {
+  "arquivo": "cartas/arte/norin_the_wary.jpg",
+  "set": "TSP",
+  "num": "171",
+  "artista": "Heather Hudson",
+  "scryfall": "https://scryfall.com/card/tsp/171/norin-the-wary?utm_source=api"
+ },
+ "Ob Nixilis, Captive Kingpin": {
+  "arquivo": "cartas/arte/ob_nixilis_captive_kingpin.jpg",
+  "set": "MAT",
+  "num": "41",
+  "artista": "Zezhou Chen",
+  "scryfall": "https://scryfall.com/card/mat/41/ob-nixilis-captive-kingpin?utm_source=api"
+ },
+ "Ral, Monsoon Mage": {
+  "arquivo": "cartas/arte/ral_monsoon_mage.jpg",
+  "set": "MH3",
+  "num": "247",
+  "artista": "Dmitry Burmak",
+  "scryfall": "https://scryfall.com/card/mh3/247/ral-monsoon-mage-ral-leyline-prodigy?utm_source=api"
+ },
+ "Rowan, Scion of War": {
+  "arquivo": "cartas/arte/rowan_scion_of_war.jpg",
+  "set": "WOE",
+  "num": "211",
+  "artista": "Magali Villeneuve",
+  "scryfall": "https://scryfall.com/card/woe/211/rowan-scion-of-war?utm_source=api"
+ },
+ "Samwise Gamgee": {
+  "arquivo": "cartas/arte/samwise_gamgee.jpg",
+  "set": "LTR",
+  "num": "222",
+  "artista": "Ekaterina Burmak",
+  "scryfall": "https://scryfall.com/card/ltr/222/samwise-gamgee?utm_source=api"
+ },
+ "Shang-Chi, Master of Kung Fu": {
+  "arquivo": "cartas/arte/shang_chi_master_of_kung_fu.jpg",
+  "set": "MSH",
+  "num": "187",
+  "artista": "Lee Woo-chul",
+  "scryfall": "https://scryfall.com/card/msh/187/shang-chi-master-of-kung-fu?utm_source=api"
+ },
+ "Sisay, Weatherlight Captain": {
+  "arquivo": "cartas/arte/sisay_weatherlight_captain.jpg",
+  "set": "MH1",
+  "num": "29",
+  "artista": "Anna Steinbauer",
+  "scryfall": "https://scryfall.com/card/mh1/29/sisay-weatherlight-captain?utm_source=api"
+ },
+ "Tayam, Luminous Enigma": {
+  "arquivo": "cartas/arte/tayam_luminous_enigma.jpg",
+  "set": "C20",
+  "num": "16",
+  "artista": "Sam Burley",
+  "scryfall": "https://scryfall.com/card/c20/16/tayam-luminous-enigma?utm_source=api"
+ },
+ "Vivi Ornitier": {
+  "arquivo": "cartas/arte/vivi_ornitier.jpg",
+  "set": "FIN",
+  "num": "248",
+  "artista": "Toni Infante",
+  "scryfall": "https://scryfall.com/card/fin/248/vivi-ornitier?utm_source=api"
+ },
+ "Winota, Joiner of Forces": {
+  "arquivo": "cartas/arte/winota_joiner_of_forces.jpg",
+  "set": "IKO",
+  "num": "216",
+  "artista": "Magali Villeneuve",
+  "scryfall": "https://scryfall.com/card/iko/216/winota-joiner-of-forces?utm_source=api"
+ },
+ "Zirda, the Dawnwaker": {
+  "arquivo": "cartas/arte/zirda_the_dawnwaker.jpg",
+  "set": "IKO",
+  "num": "233",
+  "artista": "Jesper Ejsing",
+  "scryfall": "https://scryfall.com/card/iko/233/zirda-the-dawnwaker?utm_source=api"
+ },
+ "Dargo": {
+  "nome": "Dargo, the Shipwrecker",
+  "arquivo": "cartas/arte/dargo.jpg",
+  "set": "CMR",
+  "num": "172",
+  "artista": "Zoltan Boros",
+  "scryfall": "https://scryfall.com/card/cmr/172/dargo-the-shipwrecker?utm_source=api"
+ },
+ "Jaheira": {
+  "nome": "Jaheira, Friend of the Forest",
+  "arquivo": "cartas/arte/jaheira.jpg",
+  "set": "CLB",
+  "num": "237",
+  "artista": "Mila Pesic",
+  "scryfall": "https://scryfall.com/card/clb/237/jaheira-friend-of-the-forest?utm_source=api"
+ },
+ "Kraum": {
+  "nome": "Kraum, Ludevic's Opus",
+  "arquivo": "cartas/arte/kraum.jpg",
+  "set": "C16",
+  "num": "34",
+  "artista": "Aaron Miller",
+  "scryfall": "https://scryfall.com/card/c16/34/kraum-ludevics-opus?utm_source=api"
+ },
+ "Malcolm": {
+  "nome": "Malcolm, Keen-Eyed Navigator",
+  "arquivo": "cartas/arte/malcolm.jpg",
+  "set": "LCC",
+  "num": "161",
+  "artista": "Eric Deschamps",
+  "scryfall": "https://scryfall.com/card/lcc/161/malcolm-keen-eyed-navigator?utm_source=api"
+ },
+ "Rograkh": {
+  "nome": "Rograkh, Son of Rohgahh",
+  "arquivo": "cartas/arte/rograkh.jpg",
+  "set": "CMR",
+  "num": "197",
+  "artista": "Chris Seaman",
+  "scryfall": "https://scryfall.com/card/cmr/197/rograkh-son-of-rohgahh?utm_source=api"
+ },
+ "Silas Renn": {
+  "nome": "Silas Renn, Seeker Adept",
+  "arquivo": "cartas/arte/silas_renn.jpg",
+  "set": "C16",
+  "num": "43",
+  "artista": "Joseph Meehan",
+  "scryfall": "https://scryfall.com/card/c16/43/silas-renn-seeker-adept?utm_source=api"
+ },
+ "Thrasios": {
+  "nome": "Thrasios, Triton Hero",
+  "arquivo": "cartas/arte/thrasios.jpg",
+  "set": "C16",
+  "num": "46",
+  "artista": "Josu Hernaiz",
+  "scryfall": "https://scryfall.com/card/c16/46/thrasios-triton-hero?utm_source=api"
+ },
+ "Tymna": {
+  "nome": "Tymna the Weaver",
+  "arquivo": "cartas/arte/tymna.jpg",
+  "set": "C16",
+  "num": "48",
+  "artista": "Winona Nelson",
+  "scryfall": "https://scryfall.com/card/c16/48/tymna-the-weaver?utm_source=api"
+ },
+ "Vial Smasher": {
+  "nome": "Vial Smasher the Fierce",
+  "arquivo": "cartas/arte/vial_smasher.jpg",
+  "set": "DSC",
+  "num": "239",
+  "artista": "Deruchenko Alexander",
+  "scryfall": "https://scryfall.com/card/dsc/239/vial-smasher-the-fierce?utm_source=api"
+ }
+}
