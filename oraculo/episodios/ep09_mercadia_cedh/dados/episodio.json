@@ -52,8 +52,8 @@
   "selo": "FONTE: TOPDECK (VIA cEDH STATS) · 39 JOGADORES · 5 RODADAS"
  },
  "decklist": {
-  "titulo": "LISTA DO CAMPEÃO · THRASIOS + TYMNA",
-  "sub": "Renato Faria · 1.º · 100 cartas · ▶ peça de combo",
+  "titulo": "LISTA DO CAMPEÃO · 100 CARTAS",
+  "sub": "1.º DE 39 · THRASIOS + TYMNA · ▶ PEÇA DE COMBO",
   "colunas": [
    [
     [
@@ -209,9 +209,12 @@
   ],
   "carimbo": [
    "13 COMBOS",
-   "12 terminam em mana infinita ou quase"
+   "12 terminam em mana ∞ ou quase"
   ],
-  "selo": "FONTE: MTGTOP8 (LISTA) · COMMANDER SPELLBOOK (COMBOS)"
+  "selo": "FONTE: MTGTOP8 (LISTA) · COMMANDER SPELLBOOK (COMBOS)",
+  "nome": "RENATO FARIA",
+  "carimbo_pos": "baixo",
+  "corpo": 31
  },
  "combo": {
   "druida": {
@@ -279,7 +282,7 @@
  "capa_l2": "E GANHOU",
  "capa_foco": "1 DE 39",
  "capa_unidade": "THRASIOS + TYMNA · cEDH LISBOA",
- "saida": "MC_EP09_FINAL_v3.mp4",
+ "saida": "MC_EP09_FINAL_v4.mp4",
  "saida_previa": "MC_EP09_PREVIA_v2.mp4",
  "frases": [
   "O CAMPEÃO FOI O ÚNICO THRASIOS E TYMNA.",
@@ -700,7 +703,7 @@
   "contador": "DE {n} AINDA NA DISPUTA",
   "carimbo": [
    "CAMPEÃO",
-   "THRASIOS + TYMNA · 1 DE 39"
+   "RENATO FARIA · THRASIOS + TYMNA"
   ],
   "selo": "39 JOGADORES · COMANDANTES: TOPDECK (VIA cEDH STATS) · ARTE: SCRYFALL"
  },

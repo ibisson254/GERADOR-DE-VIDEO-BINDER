@@ -855,15 +855,25 @@ def cena_decklist(t, i):
     'chave':[cartas a verde],'carimbo':[l1,l2],'selo'}); a lista desce como papel de impressora; p[2] = tempo do carimbo."""
     p = SEQ[i]; im = fundo(t); L = D.get('decklist', {}); d = ImageDraw.Draw(im, 'RGBA')
     d.rounded_rectangle((60, 440, 1020, 1440), 26, fill=(5, 10, 16, 232))
-    d.text((90, 486), L.get('titulo', ''), font=fit(d, L.get('titulo', ''), MONOB, 38, 900), fill=EM, anchor='lm')
-    d.text((90, 532), L.get('sub', ''), font=fit(d, L.get('sub', ''), MONO, 28, 900), fill=GREY, anchor='lm')
-    d.line((90, 562, 990, 562), fill=(16, 185, 129, 90), width=2)
-    t_fim = SEQ[i + 1][0] if i + 1 < len(SEQ) else p[0] + 5; win0, win1, ls = 578, 1424, 37
+    if L.get('nome'):                                                 # MC-EP09 v4: cabeçalho com o nome do campeão em grande
+        kh = eio((t - p[0]) / .3)
+        d.text((90, 478), L.get('titulo', ''), font=fit(d, L.get('titulo', ''), MONOB, 32, 900), fill=EM, anchor='lm')
+        d.text((90 + 20 * (1 - kh), 540), L['nome'], font=fit(d, L['nome'], INTB, 72, 900), fill=WHITE + (int(255 * kh),), anchor='lm')
+        d.text((90, 602), L.get('sub', ''), font=fit(d, L.get('sub', ''), MONOB, 28, 900), fill=(170, 195, 190), anchor='lm')
+        d.line((90, 630, 990, 630), fill=(16, 185, 129, 90), width=2); win0 = 640
+    else:
+        d.text((90, 486), L.get('titulo', ''), font=fit(d, L.get('titulo', ''), MONOB, 38, 900), fill=EM, anchor='lm')
+        d.text((90, 532), L.get('sub', ''), font=fit(d, L.get('sub', ''), MONO, 28, 900), fill=GREY, anchor='lm')
+        d.line((90, 562, 990, 562), fill=(16, 185, 129, 90), width=2); win0 = 578
+    t_fim = SEQ[i + 1][0] if i + 1 < len(SEQ) else p[0] + 5; win1, ls = 1424, L.get('entrelinha', 37)
+    baixo = L.get('carimbo_pos') == 'baixo'
+    if baixo: win1 = 1270                                             # o carimbo fica por baixo da lista, sem a tapar
     chave = set(L.get('chave', []))
-    lay = Image.new('RGBA', (W, win1 - win0), (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
     alt = []
     for col in L.get('colunas', []): alt.append(sum(ls + 8 + ls * len(c) for _, c in col))
     desl = max(0, max(alt or [0]) - (win1 - win0)) * ease((t - p[0] - 0.5) / max(0.5, t_fim - p[0] - 1.0))
+    if baixo and (len(p) <= 2 or t < p[2]): win1 = 1424               # antes do carimbo, a lista usa a altura toda
+    lay = Image.new('RGBA', (W, win1 - win0), (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
     for ci, col in enumerate(L.get('colunas', [])):
         x = 104 if ci == 0 else 566; y = 4 - desl; n = 0
         for g, cartas in col:
@@ -872,7 +882,7 @@ def cena_decklist(t, i):
             for nome in cartas:
                 if -ls < y < win1 - win0 and t >= p[0] + n * .006:
                     on = nome in chave
-                    dl.text((x, y), nome, font=fit(dl, nome, CONDB, 30, 430), fill=(PH if on else (150, 190, 170)))
+                    dl.text((x, y), nome, font=fit(dl, nome, CONDB, L.get('corpo', 30), 430), fill=(PH if on else (150, 190, 170)))
                     if on: dl.text((x - 26, y + 4), '▶', font=F(MONOB, 22), fill=PH)
                 y += ls; n += 1
             y += 8
@@ -882,8 +892,13 @@ def cena_decklist(t, i):
     if len(p) > 2 and t >= p[2]:
         k = eio((t - p[2]) / .25); d = ImageDraw.Draw(im, 'RGBA'); s1, s2 = L.get('carimbo', ['', ''])
         f = F(INTB, int(92 * (1.3 - .3 * k))); f2 = F(MONOB, 38); wd = max(d.textlength(s1, font=f), d.textlength(s2, font=f2)) + 80
-        d.rounded_rectangle((540 - wd / 2, 900, 540 + wd / 2, 1110), 22, fill=(8, 20, 16, 248), outline=PH, width=6)
-        d.text((540, 970), s1, font=f, fill=PH, anchor='mm'); d.text((540, 1060), s2, font=f2, fill=WHITE, anchor='mm')
+        if baixo:
+            f = F(INTB, int(72 * (1.25 - .25 * k))); f2 = F(MONOB, 34); w1 = d.textlength(s1, font=f)
+            d.rounded_rectangle((60, 1282, 1020, 1440), 22, fill=(8, 20, 16, 250), outline=PH, width=5)
+            d.text((96, 1361), s1, font=f, fill=PH, anchor='lm'); d.text((96 + w1 + 30, 1361), s2, font=fit(d, s2, MONOB, 34, 1000 - 126 - w1), fill=WHITE, anchor='lm')
+        else:
+            d.rounded_rectangle((540 - wd / 2, 900, 540 + wd / 2, 1110), 22, fill=(8, 20, 16, 248), outline=PH, width=6)
+            d.text((540, 970), s1, font=f, fill=PH, anchor='mm'); d.text((540, 1060), s2, font=f2, fill=WHITE, anchor='mm')
     topo_fala(im, t); selo_txt(im, L.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
 
 _CB = {}
