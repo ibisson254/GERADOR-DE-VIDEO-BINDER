@@ -177,13 +177,17 @@ Referência do fundador (imagem gerada) usada para a ideia: bandeira de Portugal
 Bandeira: SVG do flag-icons (MIT, `dados/bandeira/`), em tecido com dobras e luz rasante calculadas (sem IA), cores aprofundadas (vermelho 196/18/36, verde 0/102/52), a dissolver-se no fundo escuro do TUBO.
 Ficheiros: `MC_EP09_CAPA_BANDEIRA.png` + `_grelha.png` (projeto claude.ai, `tubo/mc-ep09/`); recriar: `python3 -I capa_bandeira.py <raiz> <pt.svg renderizado 2400×1800> <saída.png>`.
 
+## v4 · nome do campeão e lista em destaque (fundador, 27/11/2026 16:21)
+Pedido: «se tiver a lista do deck campeão encaixa no vídeo e o nome do campeão… reutilizando o que já está pronto». A lista já estava (8,45–13,3 s), mas pequena e tapada pelo carimbo «13 COMBOS» a partir dos 9,96 s. Mudanças, 0 créditos, mesma voz: carimbo do mosaico «CAMPEÃO · RENATO FARIA · THRASIOS + TYMNA» (2,0 s); lista com cabeçalho «LISTA DO CAMPEÃO · 100 CARTAS / RENATO FARIA / 1.º de 39 · Thrasios + Tymna», letra 31 px, e o carimbo «13 COMBOS» numa faixa por baixo da lista (já não a tapa). Motor: chaves opcionais `decklist.nome`, `carimbo_pos: "baixo"`, `corpo`, `entrelinha` (regressão ESP03/PAU02/PAU08 igual).
+QC v4 (`qc_final_v4.json`): 1080×1920, 30 fps, 31,77 s (27,9 s sem fecho), −14,1 LUFS, pico −3,9 dBTP, fecho presente, sem problemas mensuráveis; folha de contacto conferida. Ficheiros: `MC_EP09_FINAL_v4.mp4`, `MC_EP09_FOLHA_CONTACTO_v4.png`. **Versão a publicar: v4.**
+
 ## Handoff
 
 ```
 HANDOFF · 27/11/2026, 16h10 (UTC) · Claude (v3)
 Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main · v3: commit 19fafaa, merge 3f7bcb7 · v1: commit 3256997, merge 1d51eaa; v2: commit 76304c2, merge 56f86ce (conferido no remoto: sim)
 
-Objetivo atual: MC-EP09 v3 pronto para o fundador publicar (MC_EP09_FINAL_v3.mp4); opcionais: PNG original do logótipo e foto do campeão (re-render sem voz).
+Objetivo atual: MC-EP09 v4 pronto para o fundador publicar (MC_EP09_FINAL_v4.mp4: v3 + nome do campeão e lista em destaque); opcionais: PNG original do logótipo e foto do campeão (re-render sem voz).
 
 Conteúdos tocados (comum/REGISTRO_EDITORIAL.md):
 - MC-EP09 · (novo) → CONCLUÍDO (v1 15h20, v2 15h35, v3 16h10)
@@ -217,6 +221,6 @@ Tarefas pendentes:
 - PNG original do logótipo (opcional, melhor que o print) e foto autorizada do campeão (opcional) · fundador → agente, re-render sem voz
 - P9 Quest Lisboa (104 jogadores) e contraste entre os dois eventos ficam de reserva para um MC futuro · agente
 
-Próximo passo concreto: publicar MC_EP09_FINAL_v3.mp4 com legenda.txt, comentario_fixado.txt, comentario_lista.txt e comentario_creditos.txt desta pasta.
+Próximo passo concreto: publicar MC_EP09_FINAL_v4.mp4 (capa: MC_EP09_CAPA_BANDEIRA.png) com legenda.txt, comentario_fixado.txt, comentario_lista.txt e comentario_creditos.txt desta pasta.
 ```
 
