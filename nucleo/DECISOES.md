@@ -531,3 +531,10 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 ## 23/11/2026 (12:24) · Abertura do TUBO no modelo do MC-EP08B (motor)
 - **Fundador:** «Melhore a primeira transição da carta que vai para a tela, melhore a hierarquia visual das cartas do início e coloque um feedback de áudio assim que a primeira carta aparece, como no vídeo que mais deu visualizações (campeão mundial).»
 - **Padrão do motor (`oraculo/motor/mc_render.py`):** gancho `gancho_grade` com carta-herói grande e acesa + rótulo, número ao lado, cartas de apoio pequenas e escurecidas; «tum» + carimbo no quadro 0; SFX numa pista própria, sem ducking; `tubo_abertura` parte das posições da grelha, voo com rasto e flash ao entrar no ecrã.
+
+## 27/11/2026 (00:45) · Especial MB-ESP05 (Taverna de Avalon): exceções pontuais de cenário, figurinos e fecho
+- **Fundador:** prompt «ESPECIAL BINDER × TAVERNA DE AVALON» (26/11, 23:42), depois «use a imagem que te enviei de uma taverna para servir de cenário use a logo da Avalon da melhor forma possível» e «Pode usar essa imagem mesmo que tenha uma marca d'água prossiga» (23:46); «De um pouco mais de informações sobre a loja» e vozes autorizadas (27/11).
+- **Só neste especial:** cenário de taverna (imagem do fundador) em vez da sala; Burn guerreiro e Mana mago; sem TV SAL nem carta; fecho «Estamos juntos!» / «Juntos!» sem pergunta (a pergunta vai para o comentário fixado). A sala, os modelos mestres e o fecho da série **não mudam**.
+- **Pauta:** `memoria.py pauta` bloqueou por semelhança de palavras com MB-ESP04 (nome da série); avançou por pedido expresso do fundador.
+- **Imagem de cenário:** pré-visualização de banco de imagens com marca d'água, usada por decisão do fundador, sem licença; não versionada. Trocar por versão licenciada é um re-render sem nova voz (0 créditos).
+- **ID:** MB-ESP05 (MB-ESP04 já existia).

@@ -6,6 +6,8 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Última sessão
 
+**MB-ESP05 «A Nova Aliança» · especial BINDER × Taverna de Avalon (27/11/2026, 00h45)**: CONCLUÍDO, à espera de publicação. Mana & Burn de mago e guerreiro numa taverna (imagem e logo do fundador), números do MTGDC500 em plaquinhas, histórico da loja num pergaminho, selo da parceria; vozes 969 créditos; 47,07 s, QC sem problemas. Cenário com marca d'água por decisão do fundador (`nucleo/DECISOES.md` 27/11). Ficha: `manaburn/episodios/esp05_taverna_avalon/ficha.md`.
+
 **LL-ART21 V4 (26/11/2026, 23h55)**: foto do artista em cartaz P&B e cartas uma de cada vez, recortadas à mão (52,50 s). Publicável: `ll-art21_v4_semfoto.mp4`; com foto só após autorização registada. Ficha, secção «V4».
 
 **Padrão de vídeo do Lambe-lambe + LL-ART21 V3 (26/11/2026, 23h30)**: o vídeo do LL-ECO01 passa a padrão de todos os vídeos do Lambe-lambe (`lambe-lambe/kit_video/`, `nucleo/DECISOES.md`). LL-ART21 V3 «Will Murai» feito no padrão: 44,47 s, sem foto, 0 créditos, QC com P1 de loudness aceite. Ficha, secção «V3».
@@ -20,6 +22,7 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 | ID | O que falta | Onde |
 |---|---|---|
+| MB-ESP05 A Nova Aliança (Taverna de Avalon) | escuta e publicação (`utm_campaign=MB-ESP05`); decidir marca d'água vs licença da imagem (re-render 0 créditos); collab com a loja só por convite do fundador | `manaburn/episodios/esp05_taverna_avalon/` |
 | MB-EP19 O Robô Que Não Morre | escuta e publicação (`utm_campaign=MB-EP19`); não publicar no mesmo dia do MB-EP18 | `manaburn/episodios/ep19_robo_imortal/` |
 | LL-ART21 Will Murai (Reel **V4**, padrão) | escolher entre V1–**V4** (V4 = padrão do Lambe-lambe, com foto e cartas uma a uma); publicar a versão **sem foto** (`utm_campaign=LL-ART21`); música no Instagram; versão com foto só com autorização da imagem | `lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/` |
 | MB-EP18 O Lagarto Infinito | escuta e publicação; confirmar preços na LigaMagic antes de citar valores | `manaburn/episodios/ep18_lagarto_infinito/` |
@@ -69,4 +72,4 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Handoff
 
-Último: 26/11/2026 (21h45), MB-EP19 + fórmula dos combos, no fim de `manaburn/episodios/ep19_robo_imortal/ficha.md`. Anterior: LL-ART21 (`lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ficha.md`). Anteriores: `comum/status_arquivo.md` («Handoff»).
+Último: 27/11/2026 (00h45), MB-ESP05, no fim de `manaburn/episodios/esp05_taverna_avalon/ficha.md`. Anterior: 26/11/2026 (21h45), MB-EP19 + fórmula dos combos, no fim de `manaburn/episodios/ep19_robo_imortal/ficha.md`. Anterior: LL-ART21 (`lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ficha.md`). Anteriores: `comum/status_arquivo.md` («Handoff»).

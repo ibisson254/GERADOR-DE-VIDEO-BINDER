@@ -1,0 +1,129 @@
+{
+ "schema": 2,
+ "versao": "MB-ESP05 · A Nova Aliança · Especial Taverna de Avalon (26/11/2026)",
+ "chamada": "a nova aliança",
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "Mana, essa *taverna* já tem *história*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[calm]",
+   "legenda": "E números também! São *20 torneios* registrados, *162 jogadores*, *134 decks* e *49 comandantes* diferentes!"
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "Então já aconteceu *muita batalha* por aqui!"
+  },
+  {
+   "quem": "M",
+   "tags": "[calm]",
+   "legenda": "Muita! Teve etapa da *CLM*, *Top 8*… e até a *Final Interlojas* de Duel Commander!",
+   "tts": "Muita! Teve etapa da cê éle ême, Top oito… e até a Final Interlojas de Diuél Comânder!"
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "Uma taverna de *campeões*, então!"
+  },
+  {
+   "quem": "M",
+   "tags": "[calm]",
+   "legenda": "A Taverna de Avalon já construiu sua história na comunidade de Magic em *Maricá*. E agora o *BINDER* chega pra *somar*!"
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "Então essa aliança está *oficialmente forjada*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[warm]",
+   "legenda": "Está! A Taverna de Avalon agora é *parceira oficial* de apoio do BINDER!"
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Que venham muitos outros *duelos*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[warm]",
+   "legenda": "Taverna de Avalon, *muito obrigado* pela confiança e pelo apoio. É uma *honra* caminhar com vocês!"
+  },
+  {
+   "quem": "B",
+   "tags": "[excited]",
+   "legenda": "*Estamos juntos!*"
+  },
+  {
+   "quem": "M",
+   "tags": "[warm]",
+   "legenda": "*Juntos!*"
+  }
+ ],
+ "gap": [
+  0,
+  0.02,
+  -0.04,
+  0.02,
+  -0.04,
+  0.02,
+  -0.04,
+  0.04,
+  -0.02,
+  0.06,
+  0.04,
+  0.0
+ ],
+ "respiro_max": 0.12,
+ "tempo": {
+  "B": 1.06,
+  "M": 1.1
+ },
+ "mix": {
+  "intro_db": 0,
+  "fala_db": -14,
+  "pausa_db": -6,
+  "fecho_db": 0
+ },
+ "sfx": {
+  "tv": false,
+  "destaque": true,
+  "carta": "flick",
+  "raiva": false
+ },
+ "outro": {
+  "scanner": 0,
+  "hold": 1.2
+ },
+ "sfx_destaque": [
+  [
+   1,
+   0.14
+  ],
+  [
+   1,
+   0.33
+  ],
+  [
+   1,
+   0.545
+  ],
+  [
+   1,
+   0.75
+  ],
+  [
+   3,
+   0.08
+  ],
+  [
+   7,
+   0.22
+  ]
+ ]
+}
