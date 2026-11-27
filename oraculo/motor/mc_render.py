@@ -846,6 +846,75 @@ CENAS.update(lista=cena_lista, galeria=cena_galeria)
 CENAS.update(gancho_grade=cena_gancho_grade, creditos=cena_creditos, barras=cena_barras, linha_tempo=cena_linha_tempo,
              previsao=cena_previsao, pergunta1=cena_pergunta1, tubo_fecho=cena_tubo_fecho)
 
+# ---------- cenas de deck (MC-EP09, 27/11/2026): impressão da lista completa de 100 cartas (CONTEXTO §6.4) e combo com
+# cartas reais + passos verificados no Oracle. Todo o texto vem do episodio.json ----------
+def cena_decklist(t, i):
+    """Impressão da lista inteira em 2 colunas (D['decklist'] = {'titulo','sub','colunas':[[[grupo,[cartas]],...],...],
+    'chave':[cartas a verde],'carimbo':[l1,l2],'selo'}); a lista desce como papel de impressora; p[2] = tempo do carimbo."""
+    p = SEQ[i]; im = fundo(t); L = D.get('decklist', {}); d = ImageDraw.Draw(im, 'RGBA')
+    d.rounded_rectangle((60, 440, 1020, 1440), 26, fill=(5, 10, 16, 232))
+    d.text((90, 486), L.get('titulo', ''), font=fit(d, L.get('titulo', ''), MONOB, 38, 900), fill=EM, anchor='lm')
+    d.text((90, 532), L.get('sub', ''), font=fit(d, L.get('sub', ''), MONO, 28, 900), fill=GREY, anchor='lm')
+    d.line((90, 562, 990, 562), fill=(16, 185, 129, 90), width=2)
+    t_fim = SEQ[i + 1][0] if i + 1 < len(SEQ) else p[0] + 5; win0, win1, ls = 578, 1424, 37
+    chave = set(L.get('chave', []))
+    lay = Image.new('RGBA', (W, win1 - win0), (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
+    alt = []
+    for col in L.get('colunas', []): alt.append(sum(ls + 8 + ls * len(c) for _, c in col))
+    desl = max(0, max(alt or [0]) - (win1 - win0)) * ease((t - p[0] - 0.5) / max(0.5, t_fim - p[0] - 1.0))
+    for ci, col in enumerate(L.get('colunas', [])):
+        x = 104 if ci == 0 else 566; y = 4 - desl; n = 0
+        for g, cartas in col:
+            if t >= p[0] + n * .006: dl.text((x - 14, y), g, font=F(MONOB, 26), fill=GREY)
+            y += ls; n += 1
+            for nome in cartas:
+                if -ls < y < win1 - win0 and t >= p[0] + n * .006:
+                    on = nome in chave
+                    dl.text((x, y), nome, font=fit(dl, nome, CONDB, 30, 430), fill=(PH if on else (150, 190, 170)))
+                    if on: dl.text((x - 26, y + 4), '▶', font=F(MONOB, 22), fill=PH)
+                y += ls; n += 1
+            y += 8
+    fade = Image.new('L', lay.size, 255); fd = ImageDraw.Draw(fade)
+    for k in range(40): fd.line((0, k, W, k), fill=int(255 * k / 40)); fd.line((0, lay.height - 1 - k, W, lay.height - 1 - k), fill=int(255 * k / 40))
+    a = Image.composite(lay.getchannel('A'), Image.new('L', lay.size, 0), fade); lay.putalpha(a); im.alpha_composite(lay, (0, win0))
+    if len(p) > 2 and t >= p[2]:
+        k = eio((t - p[2]) / .25); d = ImageDraw.Draw(im, 'RGBA'); s1, s2 = L.get('carimbo', ['', ''])
+        f = F(INTB, int(92 * (1.3 - .3 * k))); f2 = F(MONOB, 38); wd = max(d.textlength(s1, font=f), d.textlength(s2, font=f2)) + 80
+        d.rounded_rectangle((540 - wd / 2, 900, 540 + wd / 2, 1110), 22, fill=(8, 20, 16, 248), outline=PH, width=6)
+        d.text((540, 970), s1, font=f, fill=PH, anchor='mm'); d.text((540, 1060), s2, font=f2, fill=WHITE, anchor='mm')
+    topo_fala(im, t); selo_txt(im, L.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
+
+_CB = {}
+def _carta_f(f, w):
+    k = (f, int(w))
+    if k not in _CB:
+        c = Image.open(HERE + f).convert('RGB'); c = c.resize((int(w), int(w * c.size[1] / c.size[0])), Image.LANCZOS)
+        m = Image.new('L', c.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, c.size[0] - 1, c.size[1] - 1), int(w * .05), fill=255)
+        c = c.convert('RGBA'); c.putalpha(m); _CB[k] = c
+    return _CB[k]
+def cena_combo(t, i):
+    """Uma ou duas cartas reais grandes + passos que entram com a voz (D['combo'][p[2]] = {'titulo','cartas':[ficheiros],
+    'passos':[[t, texto, 'verde'|'branco']], 'selo'}); tempos dos passos absolutos ou âncoras à voz."""
+    p = SEQ[i]; im = fundo(t); C = D.get('combo', {}).get(p[2], {}); d = ImageDraw.Draw(im, 'RGBA')
+    d.text((540, 468), C.get('titulo', ''), font=fit(d, C.get('titulo', ''), MONOB, 40, 920), fill=EM, anchor='mm')
+    cs = C.get('cartas', []); w = 430 if len(cs) > 1 else 500
+    xs = [70, 580] if len(cs) > 1 else [290]
+    for j, f in enumerate(cs):
+        k = eio((t - p[0] - .12 * j) / .3)
+        if k <= 0: continue
+        c = _carta_f(f, w); a = c.getchannel('A').point(lambda v, k=k: int(v * k)); c2 = c.copy(); c2.putalpha(a)
+        im.alpha_composite(c2, (xs[j], int(510 + 50 * (1 - k))))
+    if len(cs) > 1 and t >= p[0] + .3: ImageDraw.Draw(im, 'RGBA').text((540, 510 + int(w * 1.396) // 2), '+', font=F(INTB, 120), fill=PH, anchor='mm')
+    passos = [(_tempo(a), s, c) for a, s, c in C.get('passos', [])]; vis = [x for x in passos if t >= x[0]]
+    if vis:
+        d = ImageDraw.Draw(im, 'RGBA'); y0 = 510 + int(w * 1.396) + 24; h = 62 * len(passos) + 30
+        d.rounded_rectangle((70, y0, 1010, y0 + h), 20, fill=(5, 12, 14, 240), outline=(16, 185, 129, 160), width=3)
+        for j, (a, s, cor) in enumerate(vis):
+            k = eio((t - a) / .2); col = PH if cor == 'verde' else WHITE
+            d.text((100 + 20 * (1 - k), y0 + 46 + 62 * j), s, font=fit(d, s, CONDB, 40, 880), fill=col + (int(255 * k),), anchor='lm')
+    topo_fala(im, t); selo_txt(im, C.get('selo', D.get('selo_fonte', ''))); return im.convert('RGB')
+CENAS.update(decklist=cena_decklist, combo=cena_combo)
+
 # ---------- áudio da prévia: trilha do TUBO + SFX do ESP01 (sem voz) ----------
 OUTRO = None
 def _dur_outro():

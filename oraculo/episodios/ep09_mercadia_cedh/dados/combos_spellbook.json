@@ -1,0 +1,230 @@
+{
+ "consulta": "backend.commanderspellbook.com/find-my-combos, lista do MTGTop8 d=915657, 27/11/2026",
+ "combos": [
+  {
+   "id": "802-864-2404",
+   "cartas": [
+    "Eternal Witness",
+    "Snap",
+    "Gaea's Cradle"
+   ],
+   "produz": [
+    "Infinite creature ETB",
+    "Infinite creature LTB",
+    "Infinite green mana",
+    "Infinite magecraft triggers",
+    "Infinite mana lands you control can produce",
+    "Infinite storm count",
+    "Infinite untap of lands you control"
+   ],
+   "popularidade": 23251,
+   "bracket": "P",
+   "url": "https://commanderspellbook.com/combo/802-864-2404/"
+  },
+  {
+   "id": "1174-2404-6678",
+   "cartas": [
+    "Oboro Breezecaller",
+    "Talon Gates of Madara",
+    "Gaea's Cradle"
+   ],
+   "produz": [
+    "Infinite mana lands you control can produce",
+    "Infinite green mana",
+    "Infinite landfall triggers",
+    "Phase out any number of creatures any number of times"
+   ],
+   "popularidade": 19162,
+   "bracket": "P",
+   "url": "https://commanderspellbook.com/combo/1174-2404-6678/"
+  },
+  {
+   "id": "3807-4762",
+   "cartas": [
+    "Devoted Druid",
+    "Swift Reconfiguration"
+   ],
+   "produz": [
+    "Infinite green mana"
+   ],
+   "popularidade": 19110,
+   "bracket": "S",
+   "url": "https://commanderspellbook.com/combo/3807-4762/"
+  },
+  {
+   "id": "4762-5856",
+   "cartas": [
+    "Hazel's Brewmaster",
+    "Devoted Druid"
+   ],
+   "produz": [
+    "Infinite green mana"
+   ],
+   "popularidade": 18786,
+   "bracket": "S",
+   "url": "https://commanderspellbook.com/combo/4762-5856/"
+  },
+  {
+   "id": "2608-4499-5168",
+   "cartas": [
+    "Derevi, Empyrial Tactician",
+    "Emiel the Blessed",
+    "Bloom Tender"
+   ],
+   "produz": [
+    "Infinite untap of permanents you control",
+    "Infinite creature LTB",
+    "Infinite creature ETB",
+    "Infinite blinking",
+    "Infinite mana of colors among permanents you control",
+    "Infinite mana permanents you control can produce"
+   ],
+   "popularidade": 18401,
+   "bracket": "S",
+   "url": "https://commanderspellbook.com/combo/2608-4499-5168/"
+  },
+  {
+   "id": "2404-2608-4499",
+   "cartas": [
+    "Derevi, Empyrial Tactician",
+    "Emiel the Blessed",
+    "Gaea's Cradle"
+   ],
+   "produz": [
+    "Infinite untap of permanents you control",
+    "Infinite blinking",
+    "Infinite creature ETB",
+    "Infinite creature LTB",
+    "Infinite green mana",
+    "Infinite mana permanents you control can produce"
+   ],
+   "popularidade": 18342,
+   "bracket": "P",
+   "url": "https://commanderspellbook.com/combo/2404-2608-4499/"
+  },
+  {
+   "id": "2364-2608-4499",
+   "cartas": [
+    "Derevi, Empyrial Tactician",
+    "Emiel the Blessed",
+    "Mana Vault"
+   ],
+   "produz": [
+    "Infinite creature LTB",
+    "Infinite creature ETB"
+   ],
+   "popularidade": 16439,
+   "bracket": "P",
+   "url": "https://commanderspellbook.com/combo/2364-2608-4499/"
+  },
+  {
+   "id": "129-184-4682",
+   "cartas": [
+    "Faerie Mastermind",
+    "Smothering Tithe",
+    "Kinnan, Bonder Prodigy"
+   ],
+   "produz": [
+    "Infinite card draw for all players",
+    "Infinite draw triggers for all players",
+    "Near-infinite Treasure tokens",
+    "Near-infinite colored mana",
+    "Near-infinite colorless mana"
+   ],
+   "popularidade": 14170,
+   "bracket": "P",
+   "url": "https://commanderspellbook.com/combo/129-184-4682/"
+  },
+  {
+   "id": "2404-4499-7008",
+   "cartas": [
+    "Badgermole Cub",
+    "Emiel the Blessed",
+    "Gaea's Cradle"
+   ],
+   "produz": [
+    "Infinite creature ETB",
+    "Infinite creature LTB",
+    "Infinite blinking",
+    "Infinite green mana",
+    "Infinite landfall triggers",
+    "Infinite mana lands you control can produce"
+   ],
+   "popularidade": 10250,
+   "bracket": "P",
+   "url": "https://commanderspellbook.com/combo/2404-4499-7008/"
+  },
+  {
+   "id": "184-4682-4893",
+   "cartas": [
+    "Faerie Mastermind",
+    "Smothering Tithe",
+    "Training Grounds"
+   ],
+   "produz": [
+    "Infinite card draw for all players",
+    "Infinite draw triggers for all players",
+    "Near-infinite colored mana",
+    "Near-infinite colorless mana",
+    "Near-infinite Treasure tokens"
+   ],
+   "popularidade": 9130,
+   "bracket": "P",
+   "url": "https://commanderspellbook.com/combo/184-4682-4893/"
+  },
+  {
+   "id": "184-1912-4682",
+   "cartas": [
+    "Faerie Mastermind",
+    "Smothering Tithe",
+    "Biomancer's Familiar"
+   ],
+   "produz": [
+    "Infinite card draw for all players",
+    "Infinite draw triggers for all players",
+    "Near-infinite colored mana",
+    "Near-infinite colorless mana",
+    "Near-infinite Treasure tokens"
+   ],
+   "popularidade": 6207,
+   "bracket": "P",
+   "url": "https://commanderspellbook.com/combo/184-1912-4682/"
+  },
+  {
+   "id": "1741-4499-4893",
+   "cartas": [
+    "Cloud of Faeries",
+    "Emiel the Blessed",
+    "Training Grounds"
+   ],
+   "produz": [
+    "Infinite creature LTB",
+    "Infinite creature ETB",
+    "Infinite mana lands you control can produce",
+    "Infinite blinking",
+    "Infinite untap of lands you control"
+   ],
+   "popularidade": 4807,
+   "bracket": "E",
+   "url": "https://commanderspellbook.com/combo/1741-4499-4893/"
+  },
+  {
+   "id": "1741-1912-4499",
+   "cartas": [
+    "Cloud of Faeries",
+    "Emiel the Blessed",
+    "Biomancer's Familiar"
+   ],
+   "produz": [
+    "Infinite creature LTB",
+    "Infinite creature ETB",
+    "Infinite mana lands you control can produce",
+    "Infinite blinking",
+    "Infinite untap of lands you control"
+   ],
+   "popularidade": 4621,
+   "bracket": "E",
+   "url": "https://commanderspellbook.com/combo/1741-1912-4499/"
+  }
+ ]
+}
