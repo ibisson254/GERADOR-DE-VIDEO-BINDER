@@ -70,3 +70,37 @@ Roteiro-base do fundador, com estas mudanças técnicas: «por lá» → «por a
 ## Encerramento
 - Registo, histórico, decisão e STATUS atualizados nesta sessão.
 - Antes de publicar (fundador): decidir se publica com a marca d'água ou compra a licença da imagem (troca sem nova voz: `assets.py` + `render.py` + `juntar_fecho.py`, 0 créditos).
+
+## Handoff
+```
+HANDOFF · 27/11/2026 00h30 · Claude
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main · último commit 33ae1ce (conferido no remoto: sim; workflow validar verde)
+
+Objetivo atual: especial de parceria MB-ESP05 pronto para o fundador publicar.
+
+Conteúdos tocados (comum/REGISTRO_EDITORIAL.md):
+- MB-ESP05 · (novo) → CONCLUÍDO
+
+Encerramento:
+- MB-ESP05 · memoria.py encerramento: OK
+- Vídeo e capa finais: MB_ESP05_A_Nova_Alianca_916.mp4 e MB_ESP05_CAPA.jpg, entregues na conversa do projeto claude.ai (não versionados)
+
+Decisões tomadas nesta sessão:
+- Exceções pontuais do especial (cenário, figurinos, fecho) e uso da imagem com marca d'água (registadas em nucleo/DECISOES.md? sim)
+
+Documentos consultados:
+- AGENTS.md, STATUS.md, manaburn/LEIA-ME.md, manaburn/PERFIL.md, nucleo/auditorias/2026-11-16_parcerias.md, nucleo/modelos/HANDOFF.md, manaburn/episodios/ep19_robo_imortal/
+
+Alterações realizadas:
+- manaburn/episodios/esp05_taverna_avalon/ · pacote completo · commit 33ae1ce
+- comum/REGISTRO_EDITORIAL.md, comum/historico.md, nucleo/DECISOES.md, STATUS.md · commit 33ae1ce
+
+Insights (domingo): não se aplica
+
+Tarefas pendentes:
+- Publicar com utm_campaign=MB-ESP05 · depende do fundador
+- Decidir marca d'água vs licença da imagem (re-render 0 créditos) · depende do fundador
+- Reconferir os 4 números e o Top 8 CLM17 no MTGDC500 (a página da loja recusa o agente: 401) · depende do fundador
+
+Próximo passo concreto: fundador escuta o MP4 e publica, ou pede a troca da imagem licenciada.
+```
