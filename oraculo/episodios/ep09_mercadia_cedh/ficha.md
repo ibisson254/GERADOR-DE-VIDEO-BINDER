@@ -145,7 +145,7 @@ Desvio registado: a lista de 100 cartas é mostrada inteira a descer durante 4,6
 
 ```
 HANDOFF · 27/11/2026, 15h20 (UTC) · Claude
-Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (merge de tubo/mc-ep09) · commit do episódio: COMMIT_EP (conferido no remoto: CONF)
+Repositório: ibisson254/GERADOR-DE-VIDEO-BINDER · branch main (merge de tubo/mc-ep09) · commit do episódio 3256997, merge 1d51eaa (conferido no remoto: sim)
 
 Objetivo atual: MC-EP09 pronto para o fundador publicar; falta só o logótipo opcional da Mercadia.
 
