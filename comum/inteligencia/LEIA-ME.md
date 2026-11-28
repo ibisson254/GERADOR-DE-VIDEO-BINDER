@@ -44,6 +44,17 @@ Campos obrigatórios (o script recusa a ficha sem eles): `id`, `titulo`, `criada
 
 Valores para os atributos (texto livre curto, sempre os mesmos): `tipo_abertura` = `objeto`, `objeto-contraste`, `numero`, `pergunta`, `personagem`, `comentario`; `tipo_narrativa` = `combo-passo-a-passo`, `torneio-reviravolta`, `documental-linha-do-tempo`, `perfil`, `noticia`, `tribunal`.
 
+## Referências culturais (estética, design, comportamento)
+
+Desde 28/11/2026 o fundador envia referências (Reels, posts, peças) do que a cultura BINDER deve ter. Cada uma vira `referencias/REF-AAAA-MM-DD-nn.yaml`. **Uma referência inspira um princípio; nunca se copia a peça.**
+
+1. **Recebida:** url, data, as palavras do fundador tal como vieram, dimensões prováveis (`estetica`, `design`, `comportamento`, `ritmo`, `som`, `narrativa`, `tom`) e `nao_copiar` (o que é de terceiros). Nada mais: sem ver a peça não se escreve sobre ela.
+2. **Vista:** como e quando foi vista (`vista.como`, `vista.em`) e o que se viu, só em factos (`observado`). O Instagram não abre por automação: vê-se pelo vidIQ `vidiq_watch_shortform_content` (10 créditos, só com autorização) ou pela descrição do fundador.
+3. **Princípio proposto:** cada princípio tem `etiqueta` (minúsculas-com-hífens, a mesma sempre que a ideia se repete), `dimensao`, `principio` (geral, aplicável com objetos e personagens nossos), `aplicar_em` (frentes) e `teste` (como se prova em 3 episódios comparáveis, constituição §12).
+4. **Regra:** `python3 comum/ferramentas/inteligencia.py referencias` marca **RECORRENTE** quando a mesma etiqueta aparece em 3 referências. Só então se propõe ao fundador; se aprovar, a regra entra em `nucleo/DECISOES.md` e no perfil da frente ou na constituição, e a ficha fica `virou-regra` com `decisao.fundador`. O script recusa `virou-regra` sem essa decisão.
+
+Portão de identidade: uma referência que puxe para longe de arte, artistas, colecionismo e comunidade Magic/TCG fica `descartada`, com o porquê.
+
 ## Custos e limites
 
 - 0 créditos; só PyYAML (já usado pelo ciclo do TUBO e instalado no workflow `validar`).

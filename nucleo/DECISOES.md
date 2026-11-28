@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 28/11/2026 (10:30) · Referências culturais do fundador viram princípios, não cópias
+
+**O quê:** novo arquivo `comum/inteligencia/referencias/` (uma ficha YAML por referência enviada pelo fundador) e subcomando `inteligencia.py referencias`. Ciclo: recebida → vista → princípio proposto → regra. Só se tiram princípios de peças vistas; cada princípio diz onde se aplica e como se testa; um princípio só se propõe como regra quando aparece em 3 referências, e só vira regra com decisão do fundador. Primeira ficha: REF-2026-11-28-01.
+**Porquê:** fundador, 28/11/2026 (10:11): «as vezes vou te enviar referência para que futuramente usarmos na estética e designer e comportamento que precisamos que a cultura Binder tenha. Refine essa idéia».
+**Impacto:** nenhuma regra muda hoje; as referências acumulam-se até haver padrão. Ver uma referência do Instagram custa 10 créditos vidIQ e precisa de autorização (ou da descrição do fundador).
+
 ## 28/11/2026 (09:30) · Mana & Burn: telas de prova com 3 níveis e plano de prova a 690 px (MB-EP22)
 
 **O quê:** no MB-EP22, (1) cada tela de prova tem no máximo título gigante (Bangers), uma linha de apoio e fonte curta; o crédito completo das cartas fica só na tarja do topo; citações de ruling ou da Wizards cortadas à frase que prova; (2) `EP.prova.w` = 690 e `top` = 300 (o padrão de 22/11 diz «~620 px»), com o zoom das cartas a 1,4 para não cortar as bordas; (3) roteiro encurtado para ~39 s de falas (~43 s com o fecho), sem tirar correções.

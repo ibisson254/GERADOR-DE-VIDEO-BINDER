@@ -7,6 +7,7 @@ Precisa só de PyYAML (o mesmo do ciclo do TUBO). Correr a partir da raiz do rep
   python3 comum/ferramentas/inteligencia.py oportunidades            # tabela da semana, com os porquês
   python3 comum/ferramentas/inteligencia.py oportunidades --detalhe OP-2026-W48-01
   python3 comum/ferramentas/inteligencia.py padroes --por tipo_abertura --metrica tempo_medio_s
+  python3 comum/ferramentas/inteligencia.py referencias             # referências culturais e princípios recorrentes
   python3 comum/ferramentas/inteligencia.py validar
 
 Regras em comum/inteligencia/LEIA-ME.md. Códigos de saída: 0 = ok · 1 = erros de validação.
@@ -53,6 +54,15 @@ METRICAS = ['visualizacoes', 'alcance', 'guardados', 'partilhas', 'comentarios',
 ATRIBUTOS = ['frente', 'formato', 'tipo_abertura', 'tipo_narrativa']
 MIN_POR_GRUPO = 3   # abaixo disto um grupo não entra na leitura
 MIN_GRUPOS = 2      # sem dois grupos comparáveis não há padrão a ler
+
+# Referências culturais (fundador, 28/11/2026): exemplos de estética, design e comportamento que a
+# cultura BINDER deve ter. Uma referência inspira um princípio; nunca se copia a peça.
+DIMENSOES = {'estetica', 'design', 'comportamento', 'ritmo', 'som', 'narrativa', 'tom'}
+ESTADOS_REF = {'recebida', 'vista', 'principio-proposto', 'virou-regra', 'descartada'}
+REF_OBRIGATORIOS = ['id', 'url', 'recebida', 'enviada_por', 'palavras_do_fundador', 'estado', 'nao_copiar']
+RE_REF = re.compile(r'^REF-\d{4}-\d{2}-\d{2}-\d{2}$')
+RE_ETIQUETA = re.compile(r'^[a-z0-9]+(-[a-z0-9]+)*$')
+MIN_RECORRENCIA = 3  # um princípio só se propõe como regra quando aparece em 3 referências
 
 
 def raiz_repo():
@@ -110,6 +120,74 @@ def validar_oportunidade(op, nome='?'):
     if jan.get('ate') and not isinstance(jan['ate'], dt.date):
         erros.append(f'{nome}: janela.ate tem de ser data AAAA-MM-DD')
     return erros
+
+
+def ler_referencias(raiz):
+    pasta = raiz / 'comum' / 'inteligencia' / 'referencias'
+    refs = []
+    for p in sorted(pasta.glob('REF-*.yaml')):
+        with p.open(encoding='utf-8') as f:
+            refs.append((p, yaml.safe_load(f) or {}))
+    return refs
+
+
+def validar_referencia(ref, nome='?'):
+    """Regras: só se tiram princípios do que foi visto (nada inventado sobre uma peça que não se viu);
+    cada princípio diz onde se aplica e como se testa; regra só com decisão do fundador."""
+    erros = [f'{nome}: falta «{c}»' for c in REF_OBRIGATORIOS if ref.get(c) in (None, '', [])]
+    if erros:
+        return erros
+    if not RE_REF.match(str(ref['id'])):
+        erros.append(f'{nome}: id «{ref["id"]}» fora do formato REF-AAAA-MM-DD-nn')
+    if ref['estado'] not in ESTADOS_REF:
+        erros.append(f'{nome}: estado «{ref["estado"]}» (usar {", ".join(sorted(ESTADOS_REF))})')
+    if not isinstance(ref['recebida'], dt.date):
+        erros.append(f'{nome}: recebida tem de ser data AAAA-MM-DD')
+    dims = ref.get('dimensoes') or []
+    if set(dims) - DIMENSOES:
+        erros.append(f'{nome}: dimensões desconhecidas {sorted(set(dims) - DIMENSOES)}')
+    vista = ref.get('vista') or {}
+    princ = ref.get('principios') or []
+    if ref['estado'] != 'recebida' and ref['estado'] != 'descartada':
+        if not vista.get('como') or not vista.get('em'):
+            erros.append(f'{nome}: estado {ref["estado"]} pede «vista» (como e em que data a peça foi vista)')
+        if not ref.get('observado'):
+            erros.append(f'{nome}: estado {ref["estado"]} pede «observado» (o que se viu, em factos)')
+    if princ and not (vista.get('como') and vista.get('em')):
+        erros.append(f'{nome}: princípios sem a peça ter sido vista (não se tiram conclusões do que não se viu)')
+    for i, pr in enumerate(princ, 1):
+        for c in ('etiqueta', 'dimensao', 'principio', 'aplicar_em', 'teste'):
+            if not pr.get(c):
+                erros.append(f'{nome}: princípio {i} sem «{c}»')
+        if pr.get('dimensao') and pr['dimensao'] not in DIMENSOES:
+            erros.append(f'{nome}: princípio {i} com dimensão «{pr["dimensao"]}»')
+        if pr.get('etiqueta') and not RE_ETIQUETA.match(str(pr['etiqueta'])):
+            erros.append(f'{nome}: princípio {i}: etiqueta em minúsculas-com-hífens')
+    if ref['estado'] == 'virou-regra' and not (ref.get('decisao') or {}).get('fundador'):
+        erros.append(f'{nome}: virou-regra sem decisão do fundador registada (decisao.fundador)')
+    return erros
+
+
+def tabela_referencias(refs):
+    linhas = ['Referências culturais (comum/inteligencia/referencias/)', '']
+    if not refs:
+        return '\n'.join(linhas + ['nenhuma referência registada'])
+    for _, r in refs:
+        dims = ', '.join(r.get('dimensoes') or []) or '—'
+        linhas.append(f"{r['id']} · {r['estado']} · {dims} · {r['url']}")
+    contagem = {}
+    for _, r in refs:
+        if r['estado'] == 'descartada':
+            continue
+        for pr in r.get('principios') or []:
+            contagem.setdefault((pr['dimensao'], pr['etiqueta']), []).append(r['id'])
+    linhas += ['', f'Princípios (recorrente = em {MIN_RECORRENCIA}+ referências → propor ao fundador como regra):']
+    if not contagem:
+        linhas.append('  ainda nenhum (só se tiram princípios de referências vistas)')
+    for (dim, et), ids in sorted(contagem.items(), key=lambda kv: (-len(kv[1]), kv[0])):
+        marca = 'RECORRENTE' if len(ids) >= MIN_RECORRENCIA else f'{len(ids)}/{MIN_RECORRENCIA}'
+        linhas.append(f'  [{marca}] {dim} · {et} · {", ".join(ids)}')
+    return '\n'.join(linhas)
 
 
 def portoes(op, hoje):
@@ -281,7 +359,8 @@ def main(argv=None):
     p = sub.add_parser('padroes', help='padrões entre um atributo do vídeo e uma métrica do Insights')
     p.add_argument('--por', default='tipo_abertura', choices=ATRIBUTOS)
     p.add_argument('--metrica', default='tempo_medio_s', choices=METRICAS + ['pct_assistida_calc'])
-    sub.add_parser('validar', help='valida as fichas de oportunidade')
+    sub.add_parser('referencias', help='referências culturais e princípios recorrentes')
+    sub.add_parser('validar', help='valida as fichas de oportunidade e de referência')
     a = ap.parse_args(argv)
     raiz = a.raiz or raiz_repo()
 
@@ -301,11 +380,24 @@ def main(argv=None):
             e.append(f'{p_.name}: id repetido')
         ids.add(op.get('id'))
         erros += e
+    refs = ler_referencias(raiz)
+    rids = set()
+    for p_, ref in refs:
+        e = validar_referencia(ref, p_.name)
+        if not e and p_.stem != ref['id']:
+            e.append(f'{p_.name}: o nome do ficheiro tem de ser o id ({ref["id"]}.yaml)')
+        if ref.get('id') in rids:
+            e.append(f'{p_.name}: id repetido')
+        rids.add(ref.get('id'))
+        erros += e
     if erros:
         print('\n'.join(erros))
         return 1
     if a.cmd == 'validar':
-        print(f'OK · {len(ops)} oportunidade(s)')
+        print(f'OK · {len(ops)} oportunidade(s) · {len(refs)} referência(s)')
+        return 0
+    if a.cmd == 'referencias':
+        print(tabela_referencias(refs))
         return 0
     if a.detalhe:
         alvo = [op for _, op in ops if op['id'] == a.detalhe]

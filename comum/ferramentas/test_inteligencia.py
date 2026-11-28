@@ -128,5 +128,63 @@ class D_Padroes(unittest.TestCase):
         self.assertEqual(i.main(['padroes', '--por', 'tipo_abertura', '--metrica', 'tempo_medio_s']), 0)
 
 
+class E_Referencias(unittest.TestCase):
+    def ref(self, **kw):
+        r = {'id': 'REF-2026-11-28-09', 'url': 'https://exemplo', 'recebida': HOJE, 'enviada_por': 'fundador',
+             'palavras_do_fundador': '«gostei»', 'estado': 'recebida', 'dimensoes': ['estetica'],
+             'nao_copiar': 'peça de terceiros'}
+        r.update(kw)
+        return r
+
+    def principio(self, et='objeto-inteiro-no-quadro-0'):
+        return {'etiqueta': et, 'dimensao': 'estetica', 'principio': 'p', 'aplicar_em': ['MB'], 'teste': '3 episódios'}
+
+    def test_referencias_do_repo_validas(self):
+        for p, r in i.ler_referencias(RAIZ):
+            self.assertEqual(i.validar_referencia(r, p.name), [], p.name)
+            self.assertEqual(p.stem, r['id'])
+
+    def test_recebida_sem_principios_e_valida(self):
+        self.assertEqual(i.validar_referencia(self.ref()), [])
+
+    def test_nao_se_tiram_principios_sem_ver(self):
+        e = i.validar_referencia(self.ref(principios=[self.principio()]))
+        self.assertTrue(any('não se viu' in x for x in e))
+
+    def test_vista_pede_como_em_e_observado(self):
+        e = i.validar_referencia(self.ref(estado='vista'))
+        self.assertTrue(any('«vista»' in x for x in e) and any('«observado»' in x for x in e))
+        ok = self.ref(estado='principio-proposto', vista={'como': 'vidIQ', 'em': HOJE},
+                      observado=['abre com o objeto'], principios=[self.principio()])
+        self.assertEqual(i.validar_referencia(ok), [])
+
+    def test_principio_incompleto(self):
+        pr = self.principio()
+        del pr['teste']
+        r = self.ref(estado='vista', vista={'como': 'x', 'em': HOJE}, observado=['f'], principios=[pr])
+        self.assertTrue(any('«teste»' in x for x in i.validar_referencia(r)))
+
+    def test_regra_so_com_decisao_do_fundador(self):
+        r = self.ref(estado='virou-regra', vista={'como': 'x', 'em': HOJE}, observado=['f'])
+        self.assertTrue(any('decisão do fundador' in x for x in i.validar_referencia(r)))
+        r['decisao'] = {'fundador': '28/11 «sim»'}
+        self.assertEqual(i.validar_referencia(r), [])
+
+    def test_sem_copia_declarada_recusa(self):
+        self.assertTrue(i.validar_referencia(self.ref(nao_copiar='')))
+
+    def test_recorrencia_a_partir_de_tres(self):
+        vista = {'como': 'x', 'em': HOJE}
+        refs = [(None, self.ref(id=f'REF-2026-11-28-0{n}', estado='principio-proposto', vista=vista,
+                                observado=['f'], principios=[self.principio()])) for n in (1, 2)]
+        self.assertIn('[2/3]', i.tabela_referencias(refs))
+        refs.append((None, self.ref(id='REF-2026-11-28-03', estado='principio-proposto', vista=vista,
+                                    observado=['f'], principios=[self.principio()])))
+        self.assertIn('[RECORRENTE]', i.tabela_referencias(refs))
+
+    def test_cli(self):
+        self.assertEqual(i.main(['referencias']), 0)
+
+
 if __name__ == '__main__':
     unittest.main()
