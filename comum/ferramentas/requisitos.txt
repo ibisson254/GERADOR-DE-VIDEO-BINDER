@@ -1,0 +1,13 @@
+# Dependências Python dos motores do Estúdio BINDER (27/11/2026). Instalar com comum/ferramentas/preparar_ambiente.sh,
+# que trata da exceção do num2words (o docopt antigo não compila em Python ≥ 3.12; usa-se o docopt-ng).
+# Sistema (fora do pip): ffmpeg/ffprobe; Chrome/Chromium para o Playwright (CHROME=<caminho> ou `playwright install chromium`).
+numpy
+scipy                    # Mana & Burn (process.py, sfx.py)
+Pillow                   # QC e capas
+opencv-python-headless   # Lambe-lambe (kit_video, kit_carrossel), Meta em Curto (mc_render.py)
+playwright               # texto e cenas HTML (Mana & Burn, Lambe-lambe, Órbita)
+pyyaml                   # validar_repo.py, memoria.py
+fonttools                # fontes do kit (woff2)
+brotli                   # woff2
+docopt-ng                # substituto do docopt para o num2words
+# num2words              → instalado com --no-deps pelo preparar_ambiente.sh (roteiro.py, mc_voz.py: números por extenso)

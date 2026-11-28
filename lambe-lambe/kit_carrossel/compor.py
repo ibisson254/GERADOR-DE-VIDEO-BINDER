@@ -18,9 +18,16 @@ CSS = '''@font-face{font-family:AB;src:url(fontes/archivo-black-latin-400-normal
 .rb{font-family:RB;font-weight:800;line-height:1.08}
 .rb y{font-weight:900;font-style:italic;color:#F4B21A}
 '''
+def navegador():
+    """argumentos do Chromium para o Playwright (27/11/2026): variável CHROME, senão o Chrome do sistema em Linux, senão o
+    Chromium do próprio Playwright (PC do fundador, Windows). Antes: /usr/bin/google-chrome fixo, que só existe na cloud."""
+    for c in (os.environ.get('CHROME'), '/usr/bin/google-chrome'):
+        if c and os.path.exists(c):
+            return {'executable_path': c, 'args': ['--allow-file-access-from-files']}
+    return {'args': ['--allow-file-access-from-files']}
 async def camada(html, saida):
     async with async_playwright() as p:
-        b = await p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--allow-file-access-from-files"])
+        b = await p.chromium.launch(**navegador())
         pg = await b.new_page(viewport={"width":1080,"height":1350})
         f = os.path.abspath("_camada.html"); open(f,"w").write(f"<!DOCTYPE html><html><head><meta charset='utf-8'><style>{CSS}</style></head><body><div id='s'>{html}</div><script>window.fit=()=>document.querySelectorAll('[data-w]').forEach(e=>{{let s=parseFloat(e.style.fontSize);const r=()=>{{const g=document.createRange();g.selectNodeContents(e);return g.getBoundingClientRect().width}};while(r()>+e.dataset.w&&s>20){{s-=2;e.style.fontSize=s+'px'}}}});</script></body></html>")
         await pg.goto("file://"+f); await pg.evaluate("document.fonts.ready"); await pg.evaluate("fit()"); await pg.wait_for_timeout(300)

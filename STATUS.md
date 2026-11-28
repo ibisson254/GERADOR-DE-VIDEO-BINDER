@@ -61,6 +61,8 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Pendências técnicas (não bloqueiam)
 
+- **Auditoria do motor (27/11, 23h):** branch `auditoria/motor-producao-2026-11-27` pronta, sem push; o fundador decide o merge. Depois do merge, a 1.ª linha de cada sessão que renderiza é `sh comum/ferramentas/preparar_ambiente.sh`. Relatório: `nucleo/auditorias/2026-11-27_motor_producao.md`.
+
 - Mana & Burn: `montar.py`, `scryfall.py`, `lote.py`, `testes.py`, `formatos.*` e episódios 1, 5–7 continuam só no projeto claude.ai.
 - Órbita: faltam os PNG das cartas e as fontes em `node_modules/` para renderizar.
 - `oraculo/episodios/ep01_render_v2.py` importa `render` inexistente; `conde/montar_ep002.py` tem caminho absoluto (publicados: não se mexe sem necessidade).

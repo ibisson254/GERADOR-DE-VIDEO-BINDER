@@ -35,8 +35,10 @@ cd GERADOR-DE-VIDEO-BINDER/oraculo   # Meta em Curto (TUBO)
 
 ## Dependências
 
+- **Num comando (sessão nova, cloud ou PC):** `sh comum/ferramentas/preparar_ambiente.sh` (instala o que falta de `comum/ferramentas/requisitos.txt`, fontes do Lambe-lambe, confere ffmpeg e Chrome).
 - **Sistema:** Python 3, `ffmpeg`, fontes Lora (Google Fonts).
-- **Python:** `numpy`, `scipy`, `Pillow`, `playwright` (+ Chromium: `playwright install chromium`), `num2words` (`librosa` opcional).
+- **Python:** `numpy`, `scipy`, `Pillow`, `opencv-python-headless`, `playwright` (+ Chromium: `playwright install chromium`), `num2words` (`librosa` opcional).
+- **Cartas do Scryfall com créditos:** `python3 -I comum/ferramentas/cartas.py <pasta> "Nome|SET|nº" ...` (PNG + `creditos.json` + linha da legenda).
 
 ## Direitos Autorais e Créditos
 

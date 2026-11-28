@@ -12,7 +12,7 @@ Transversal. Cada `PERFIL.md` acrescenta os seus critérios. Proporcional ao ris
 
 Um conteúdo só está aprovado sem P0 e com os P1 corrigidos ou aceites. **Nenhuma média, nota de rubrica ou desempenho noutro critério compensa um P0.** Os critérios são medidos (segundos, píxeis, LUFS, sim/não), nunca adjetivos («bonito», «cinematográfico», «profissional»).
 
-**Passo automático:** `python3 -I comum/qc/qc_video.py VIDEO.mp4 --frente <frente>` (formato, duração, loudness, pico, fecho, cortes, folha de contacto com zona segura). Não dispensa o olho no bloco E.
+**Passo automático:** `python3 -I comum/qc/qc_video.py VIDEO.mp4 --frente <frente>` (formato, codec, duração, loudness e pico com o alvo da frente, fecho, quadros pretos, silêncios, cortes, folha de contacto com zona segura; `comum/qc/LEIA-ME.md`). Não dispensa o olho no bloco E.
 
 ## A. Antes de produzir
 
@@ -82,7 +82,7 @@ Todos P0.
 7. Humor contra uma pessoa real identificável.
 8. Segredo ou dado pessoal no vídeo ou no repositório.
 9. Identidade incorreta: voz, trilha, personagem, cenário ou fecho de outra frente; personagem regenerado em vez do recurso mestre; nome de carta, artista, jogador ou série errado no ecrã ou na legenda.
-10. Áudio defeituoso: clipping audível ou pico ≥ 0 dBFS; estalo, corte ou silêncio não intencional; voz trocada, cortada a meio de palavra ou ininteligível; dessincronia visível entre fala e legenda. (Loudness fora de −14 ± 1 LUFS ou pico ≥ −1 dBTP é P1, como mede o `qc_video.py`.)
+10. Áudio defeituoso: clipping audível ou pico ≥ 0 dBFS; estalo, corte ou silêncio não intencional; voz trocada, cortada a meio de palavra ou ininteligível; dessincronia visível entre fala e legenda. (Loudness fora de −14 ± 1 LUFS ou pico ≥ −1 dBTP é P1, como mede o `qc_video.py`; no Lambe-lambe o alvo é pico < −6 dBFS e o loudness é informativo, pela bíblia da frente.)
 11. Parceria ou colaboração afirmada sem autorização registada; crédito de autoria de dados ou de obra em falta.
 12. Gancho que promete algo que o vídeo nunca paga (rubrica: Pagamento = 1).
 
