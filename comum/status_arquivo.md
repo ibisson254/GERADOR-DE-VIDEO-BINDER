@@ -4,6 +4,33 @@ Histórico do `STATUS.md` até 26/11/2026 (14h30), copiado sem alterações quan
 
 ---
 
+## Arquivado a 28/11/2026 (07h55) · merge da auditoria, inteligência cultural e reconciliação
+
+Saiu do STATUS porque os quatro episódios passaram a PUBLICADO na reconciliação de 28/11 e as duas branches foram integradas na `main`.
+
+### Última sessão (até 28/11, 01h)
+
+**MB-EP21 «O Capacete Que Nunca Para» (27/11/2026, 18h45)**: CONCLUÍDO, à espera de publicação. Helm of Obedience + Rest in Peace, inspirado num Reel enviado pelo fundador (visto pelo vidIQ, 10 créditos; o Instagram não abre por automação); pauta bloqueada por palavra com o MB-EP19 e liberada pelo fundador (`nucleo/DECISOES.md` 18:10); vozes 1.234 créditos; 54,37 s, QC sem problemas. Ficha: `manaburn/episodios/ep21_capacete_obediencia/ficha.md`.
+
+**MC-EP10 «Larsen: de 1-3 a Jogador do Ano» (27/11/2026, ~18h30 UTC)**: CONCLUÍDO, à espera de publicação (voz 463 créditos; 34,87 s; QC sem problemas). Pedido «ache um que viralize»; tema escolhido pelo fundador no cartão. Mundial 32 (MagicCon Atlanta): Larsen começou 1-3, quase abandonou, ganhou 8 das 10 seguintes (9-5, 20.º) e ficou Jogador do Ano porque o Sajgalik perdeu a final por 3-0. Entregas em `/mnt/project-files/tubo/mc-ep10/`. Ficha: `oraculo/episodios/ep10_larsen_jogador_ano/ficha.md`.
+
+**MC-EP09 «cEDH na Mercadia Games» v3 (27/11/2026, 16h10)**: CONCLUÍDO, à espera de publicação (publicar a **v4** com a capa da bandeira: logótipo da Mercadia, TUBO aos 2,4 s, nome do campeão e lista em destaque). v2: campeão primeiro (voz reordenada, 0 créditos), mosaico dos 39, mapa de Lisboa e cartão da Mercadia, efeitos novos; cenas `mosaico`/`evento` + deixas `sfx` no motor. Primeiro cEDH do TUBO: Official P9Q Side Quest na Mercadia Games (Lisboa, 22/11, 39 jogadores, TopDeck); o campeão foi o único Thrasios + Tymna; 13 combos na lista (Commander Spellbook), Devoted Druid + Swift Reconfiguration. Cenas novas `decklist` e `combo` no motor TUBO (regressão sem diferenças); voz 411 créditos; 30,60 s, QC sem problemas. Falta o logótipo da loja (re-render sem voz). Ficha: `oraculo/episodios/ep09_mercadia_cedh/ficha.md`.
+
+**MB-EP20 «O Monólito Infinito» (27/11/2026, 09h30)**: CONCLUÍDO, à espera de publicação. Basalt Monolith + Rings of Brighthearth (mana incolor infinita por cópia de habilidade, pilha desenhada passo a passo) e Walking Ballista de finalizador; roteiro do fundador produzido pela SHOWRUNNER §4.3; vozes 1.423 créditos; 62,20 s, QC sem problemas. Novo **módulo de pesquisa «deck Commander»** (`nucleo/SHOWRUNNER.md` §2.4 passo 9; `nucleo/DECISOES.md` 27/11). Ficha: `manaburn/episodios/ep20_monolito_infinito/ficha.md`.
+
+**Inteligência cultural (28/11/2026, 01h)**: fases 1–5 na branch **local** `inteligencia-cultural-binder` (sem push nem merge, por pedido do fundador; bundle em `/mnt/project-files/inteligencia-cultural-2026-11-28/`). Oportunidades com 10 critérios (`comum/inteligencia/`, `python3 comum/ferramentas/inteligencia.py oportunidades`), radar v2, colunas de retenção no registo. Piloto OP-2026-W48-01 à espera de escolha. Relatório: `nucleo/auditorias/2026-11-28_inteligencia_cultural.md`.
+
+**Falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` (claude.ai) e `nucleo/prompts/CHATGPT.md` (ChatGPT).
+
+### Pendência técnica fechada
+
+- **Auditoria do motor (27/11, 23h):** branch `auditoria/motor-producao-2026-11-27` pronta, sem push; o fundador decide o merge. Depois do merge, a 1.ª linha de cada sessão que renderiza é `sh comum/ferramentas/preparar_ambiente.sh`. Relatório: `nucleo/auditorias/2026-11-27_motor_producao.md`.
+
+
+### Handoff
+
+Último: 27/11/2026 (18h45), MB-EP21, no fim de `manaburn/episodios/ep21_capacete_obediencia/ficha.md`. Anterior: 27/11/2026 (~18h30 UTC), MC-EP10, no fim de `oraculo/episodios/ep10_larsen_jogador_ano/ficha.md`. Anterior: 27/11/2026 (16h10), MC-EP09 v3, no fim de `oraculo/episodios/ep09_mercadia_cedh/ficha.md`. Anterior: 27/11/2026 (09h30), MB-EP20, no fim de `manaburn/episodios/ep20_monolito_infinito/ficha.md`. Anterior: 27/11/2026 (00h45), MB-ESP05, no fim de `manaburn/episodios/esp05_taverna_avalon/ficha.md`. Anterior: 26/11/2026 (21h45), MB-EP19, no fim de `manaburn/episodios/ep19_robo_imortal/ficha.md`. Anterior: LL-ART21 (`lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/ficha.md`). Anteriores: `comum/status_arquivo.md` («Handoff»).
+
 ## Saído do STATUS a 27/11/2026 (15h20, MC-EP09)
 
 **MB-ESP05 «A Nova Aliança» · especial BINDER × Taverna de Avalon (27/11/2026, 00h45)**: CONCLUÍDO, à espera de publicação. Mana & Burn de mago e guerreiro numa taverna (imagem e logo do fundador), números do MTGDC500 em plaquinhas, histórico da loja num pergaminho, selo da parceria; vozes 969 créditos; 47,07 s, QC sem problemas. Cenário com marca d'água por decisão do fundador (`nucleo/DECISOES.md` 27/11). Ficha: `manaburn/episodios/esp05_taverna_avalon/ficha.md`.
