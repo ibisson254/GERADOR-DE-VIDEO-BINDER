@@ -591,3 +591,9 @@ Testes de coerência (28/10/2026), sem produzir vídeos:
 ## 27/11/2026 (18:10) · MB-EP21: pauta bloqueada por palavra liberada pelo fundador
 - **Fundador:** «faça um episódio inspirado nesse» (Reel do Instagram DRF269kE1bZ, combo Helm of Obedience + Rest in Peace; 27/11/2026, 18:00). «Inspirado» = formato e ideia; roteiro, telas e piadas próprios do Mana & Burn.
 - **Pauta:** `memoria.py pauta` bloqueou por «mesmo objeto» com o MB-EP19 (a Rest in Peace aparece lá só como resposta ao combo do robô). O fundador escolheu «Avançar com Helm + RiP» no cartão de decisão (27/11/2026, 18:10). Objeto principal, tese, mecânica e vitória diferentes; a fala 7 faz a ponte com o MB-EP19.
+
+## 28/11/2026 (09:11) · Meta em Curto: trilha mais baixa sob a voz (tradução automática do Instagram)
+- **Contexto:** o MC-EP10 foi publicado a 28/11 (~09:00) e o Instagram avisou: «Não foi possível traduzir seu reel porque a música de fundo estava muito alta». O mix do TUBO baixava a trilha só ~12 dB sob a voz.
+- **Fundador (cartão, 09:11):** «Sim, nos próximos episódios».
+- **Regra:** episódios novos do TUBO com ducking de **20 dB** sob a voz (`ducking_db: 20`; `oraculo/CONTEXTO.md` §7.1, motor `audio_final`). A trilha continua igual nas pausas, no corte seco e no fecho; −14 LUFS no ficheiro final. Publicados e aprovados não se refazem. Conferir no próximo episódio se o Instagram passa a traduzir.
+

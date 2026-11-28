@@ -113,7 +113,7 @@ Tema oficial: `musica/tubo_tema.mp3` (40,6 s). Composição própria do Ibisson 
   - ~12,6 s: banda entra cheia → mergulho no tubo / análise.
   - **29,0–30,2 s: corte seco (silêncio) → revelação.** Assinatura sonora da série: o silêncio anuncia a jogada.
   - 30,2 s: banda volta → pergunta e frase de fecho; termina em 40,6 s e passa ao outro.
-- Montagem: baixar a trilha ~12 dB enquanto o TUBO fala (ducking) e subir nas pausas. Alinhar o corte seco à revelação: o silêncio segue a revelação, não um segundo fixo (no EP01 ficou entre 23,0 e 24,9 s). Desde 14/11/2026: corte seco curto (~0,6 s) e com movimento (aproximação lenta), nunca pausa morta; quando o TUBO erra, «Erro de sistema» com som de glitch (`nucleo/DECISOES.md`, 14/11 02:22).
+- Montagem: baixar a trilha **~20 dB** enquanto o TUBO fala (ducking; `ducking_db: 20` no `episodio.json`) e subir nas pausas. Era ~12 dB até 28/11/2026; mudou para o Instagram conseguir traduzir a voz (o MC-EP10 não foi traduzido: «música de fundo muito alta»; `nucleo/DECISOES.md` 28/11). Alinhar o corte seco à revelação: o silêncio segue a revelação, não um segundo fixo (no EP01 ficou entre 23,0 e 24,9 s). Desde 14/11/2026: corte seco curto (~0,6 s) e com movimento (aproximação lenta), nunca pausa morta; quando o TUBO erra, «Erro de sistema» com som de glitch (`nucleo/DECISOES.md`, 14/11 02:22).
 
 ## 7.2 Identidade extra (aprovada 27/10/2026)
 

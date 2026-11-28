@@ -1,6 +1,7 @@
 {
  "_leia": "Modelo do dados/episodio.json do Meta em Curto (padrão de edição de 19/11/2026). Copiar para <pasta do episódio>/dados/episodio.json e preencher. Tempos podem ser segundos ou âncoras à voz: \"@3\" = início da frase 3 de voz_tempos, \"@3+0.2\", \"@3>\" = fim da frase 3. Exemplo completo e real: oraculo/episodios/esp03_dc500/dados/episodio.json + o teste em oraculo/motor/LEIA-ME.md.",
  "confirmado": false,
+ "ducking_db": 20,
  "previa": "PRÉVIA SEM VOZ · NÃO PUBLICAR",
  "faixa": "META EM CURTO · EP. NN",
  "faixa_collab": "",

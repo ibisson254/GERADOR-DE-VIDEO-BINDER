@@ -1320,7 +1320,7 @@ def audio_final(voz, out='mix_final.wav'):
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', mix_trilha, '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
     M = np.zeros(N, np.float32); m = np.frombuffer(raw, np.float32)[:N]; M[:len(m)] = m
     env = np.convolve((np.abs(V) > 0.01).astype(np.float32), np.ones(int(.25 * SR)) / int(.25 * SR), 'same')
-    duck = 10 ** (-12 * np.clip(env * 3, 0, 1) / 20)
+    duck = 10 ** (-D.get('ducking_db', 12) * np.clip(env * 3, 0, 1) / 20)   # 28/11/2026: episódios novos 20 dB (tradução automática do Instagram); sem a chave, 12 dB como antes
     x = V * 1.0 + M * 0.55 * duck + Sfx; x = (x / max(1e-6, np.abs(x).max()) * .9 * 32767).astype(np.int16)
     with wave.open('mix_raw.wav', 'wb') as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(x.tobytes())
     mm = subprocess.run(['ffmpeg', '-v', 'info', '-i', 'mix_raw.wav', '-af', 'loudnorm=I=-14:TP=-2.2:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr
