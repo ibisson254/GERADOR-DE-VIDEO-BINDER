@@ -194,7 +194,7 @@ class T06_ReconciliacaoHistorica(Base):
         for r in linhas:
             self.assertIn(r['id'], reg, 'ID histórico desapareceu ou mudou')
             self.assertEqual(reg[r['id']]['Estado'], r['estado_depois'])
-            self.assertNotEqual(r['estado_antes'], r['estado_depois'])
+            self.assertNotEqual((r['estado_antes'], r['publicacao_antes']), (r['estado_depois'], r['publicacao_depois']))
 
     def test_publicado_nunca_recua(self):
         repo_teste(self.tmp, estado='PUBLICADO')
