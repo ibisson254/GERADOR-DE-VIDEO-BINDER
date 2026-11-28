@@ -39,3 +39,7 @@ jobs:
         run: python3 -I comum/ferramentas/inteligencia.py validar
       - name: Testes da inteligência cultural
         run: python3 -I comum/ferramentas/test_inteligencia.py
+      - name: Eventos do ciclo de vida
+        run: python3 -I comum/ferramentas/eventos.py validar
+      - name: Testes dos eventos
+        run: python3 -I comum/ferramentas/test_eventos.py

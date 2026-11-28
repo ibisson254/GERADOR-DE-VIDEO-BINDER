@@ -8,6 +8,7 @@ Só biblioteca padrão. Correr a partir da raiz do repositório (ou passar --rai
   python3 comum/ferramentas/memoria.py encerramento MB-EP10
   python3 comum/ferramentas/memoria.py semana 2026-11-08
   python3 comum/ferramentas/memoria.py segredos
+  python3 comum/ferramentas/memoria.py painel
 
 Códigos de saída: 0 = ok · 1 = erros de validação · 2 = pauta bloqueada / encerramento incompleto.
 """
@@ -333,6 +334,38 @@ def procurar_segredos(raiz, ficheiros=None):
 
 # ---------------------------------------------------------------- CLI
 
+PAINEL = [  # (título, estados) · ordem do ciclo de vida
+    ('Em desenvolvimento (pauta)', {'IDEIA', 'EM ANÁLISE'}),
+    ('Aprovado, por produzir', {'APROVADO'}),
+    ('Em produção', {'EM PRODUÇÃO'}),
+    ('Concluído, por publicar', {'CONCLUÍDO'}),
+]
+
+
+def painel(raiz, entradas):
+    """Estado do ciclo de vida: o que exige ação. Publicados divididos por terem ou não números no registo."""
+    com_numeros = set()
+    csv_p = raiz / 'comum' / 'insights' / 'registo_posts.csv'
+    if csv_p.exists():
+        with csv_p.open(encoding='utf-8', newline='') as f:
+            com_numeros = {r['id_editorial'] for r in csv.DictReader(f)}
+    out = []
+    for titulo, estados in PAINEL:
+        ids = [e['ID'] for e in entradas if e['Estado'] in estados]
+        out.append(f'{titulo}: {len(ids)}' + (f' · {", ".join(ids)}' if ids else ''))
+    pub = [e['ID'] for e in entradas if e['Estado'] == 'PUBLICADO']
+    sem = [i for i in pub if i not in com_numeros]
+    out.append(f'Publicado: {len(pub)} · com números no registo: {len(pub) - len(sem)} · à espera de métricas: {len(sem)}')
+    if sem:
+        out.append(f'  à espera de métricas: {", ".join(sem)}')
+    outros = {}
+    for e in entradas:
+        if e['Estado'] in {'PAUSADO', 'REJEITADO', 'NÃO PUBLICÁVEL', 'POR AUDITAR'}:
+            outros.setdefault(e['Estado'], []).append(e['ID'])
+    out.append('Fora do ciclo: ' + (' · '.join(f'{k} {len(v)}' for k, v in sorted(outros.items())) or 'nenhum'))
+    return '\n'.join(out)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--raiz', default=None, help='raiz do repositório (por defeito: deduzida)')
@@ -347,6 +380,7 @@ def main(argv=None):
     p = sub.add_parser('semana', help='cria comum/insights/semanas/AAAA-MM-DD.md a partir do modelo')
     p.add_argument('data')
     sub.add_parser('segredos', help='procura credenciais nos ficheiros versionados')
+    sub.add_parser('painel', help='estado do ciclo de vida: em produção, por publicar, à espera de métricas')
     a = ap.parse_args(argv)
     raiz = Path(a.raiz) if a.raiz else Path(__file__).resolve().parents[2]
 
@@ -388,6 +422,9 @@ def main(argv=None):
         except FileExistsError as x:
             print('ERRO', x)
             return 1
+        return 0
+    if a.cmd == 'painel':
+        print(painel(raiz, entradas))
         return 0
     if a.cmd == 'segredos':
         seg = procurar_segredos(raiz)

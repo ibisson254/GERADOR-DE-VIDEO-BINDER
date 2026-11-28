@@ -2,6 +2,18 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 28/11/2026 (03:10) · Episódio concluído gera evento para o Data Binder (`eventos.py concluir`)
+
+**O quê:** um episódio só passa a CONCLUÍDO por `python3 comum/ferramentas/eventos.py concluir <ID> --qc <qc.json>`, que exige, por esta ordem, QC sem P0, a linha «Aprovação final: <nome> · <data>» na ficha e o pacote completo; grava então um evento `episode.completed` com id determinístico em `comum/eventos/episodios.jsonl` e muda o registo. `eventos.py sincronizar --destino <Data Binder>` entrega os pendentes; falha = continua pendente. Testes 1–10 em `test_eventos.py`, no workflow `validar`.
+**Porquê:** fundador, 28/11/2026 (02:51), escolheu «Sim, implementar com testes» no cartão sobre o evento automático (missão «Integração Data Binder + Binder Originals»).
+**Impacto:** a aprovação final continua humana (o script recusa sem ela e recusa nomes como «Claude»); o registo deixa de depender de edição manual para o CONCLUÍDO; o Data Binder recebe os episódios sem segundo sistema. Episódios antigos não geram eventos retroativos (a reconciliação de 28/11 cobre-os). Documentação em `comum/eventos/LEIA-ME.md`.
+
+## 28/11/2026 (02:30) · Reconciliação: conteúdos criados e finalizados contam como publicados
+
+**O quê:** os 38 conteúdos `CONCLUÍDO` (26) e Órbita `APROVADO` com «sequência publicada» (12) passam a `PUBLICADO`, com a publicação «até 28/11/2026 (data exata por confirmar)», como na confirmação global de 12/11. Nenhum ID, tema, ficha ou outra coluna mudou; o antes e o depois estão em `comum/reconciliacao/2026-11-28_publicados.csv`, com 8 versões publicadas por confirmar. Fica de fora o que não estava finalizado (EM PRODUÇÃO, EM ANÁLISE, ORB-21 «agendado») e as 30 linhas `POR AUDITAR`. Novo `memoria.py painel`: em desenvolvimento, por produzir, em produção, concluído por publicar, publicado com e sem métricas.
+**Porquê:** fundador, 28/11/2026 (02:13), missão «Integração Data Binder + Binder Originals»: «Os episódios que já foram criados e finalizados também já foram publicados. Portanto, não devem continuar aparecendo como uma fila de conteúdos aguardando publicação.»
+**Impacto:** o `STATUS.md` deixa de ter a tabela «Prontos, à espera do fundador»; o que exige ação passa a ser a métrica (80 de 90 publicados sem números). Para os episódios futuros, a regra «concluído = feito» passou ao evento automático (entrada de 03:10) (relatório `nucleo/auditorias/2026-11-28_integracao_data_binder.md`).
+
 ## 28/11/2026 (01:00) · Inteligência cultural: oportunidades com 10 critérios, radar v2 e colunas de retenção
 
 **O quê:** (1) nova pasta `comum/inteligencia/`: cada oportunidade editorial é uma ficha YAML com evidências (fonte, URL, datas, tipo, incluindo «ausência»), pergunta central, ângulo, «porquê agora» e os **10 critérios** do fundador (1–5, cada um com a frase que o justifica), mais portões que nenhuma soma compensa (identidade BINDER ≤ 2, saturado ou janela vencida → fora; fontes ≤ 2 → esperar); `comum/ferramentas/inteligencia.py` valida e mostra a tabela, nunca escolhe. (2) Radar formato v2: colunas Categoria (A–F), Confiança e Janela, e varrimento mínimo semanal (1 linha por região + 2 fora de combos e torneios) (`comum/radar/LEIA-ME.md`). (3) `registo_posts.csv` ganha no fim `publicado_em`, `duracao_s`, `tempo_medio_s`, `pct_assistida`, `taxa_saltos`, `tipo_abertura`, `tipo_narrativa`; métricas calculadas não se gravam, calcula-as `inteligencia.py padroes`, que só lê padrões com ≥ 2 grupos de n ≥ 3. (4) `SHOWRUNNER.md` §2.4 passo 10 aponta para a tabela.

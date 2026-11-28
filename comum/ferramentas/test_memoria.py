@@ -182,6 +182,20 @@ class E_Impulsionamento(unittest.TestCase):
             self.assertTrue(any('acima de 100' in e for e in erros))
 
 
+class G_Painel(unittest.TestCase):
+    def test_publicado_nao_volta_a_fila(self):
+        entradas = [{'ID': 'MB-EP20', 'Estado': 'PUBLICADO'}, {'ID': 'MB-EP99', 'Estado': 'CONCLUÍDO'}]
+        with tempfile.TemporaryDirectory() as d:
+            txt = m.painel(Path(d), entradas)
+        linha = next(l for l in txt.splitlines() if l.startswith('Concluído, por publicar'))
+        self.assertIn('MB-EP99', linha)
+        self.assertNotIn('MB-EP20', linha)
+        self.assertIn('à espera de métricas: MB-EP20', txt)
+
+    def test_painel_no_registo_real(self):
+        self.assertEqual(m.main(['painel']), 0)
+
+
 class F_Seguranca(unittest.TestCase):
     def test_repositorio_sem_segredos(self):
         self.assertEqual(m.procurar_segredos(RAIZ), [])
