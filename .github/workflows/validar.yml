@@ -35,3 +35,7 @@ jobs:
           command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg) || echo "ffmpeg indisponível: os testes do QC saltam"
           pip install numpy pillow
           python3 -I comum/qc/test_qc.py
+      - name: Oportunidades editoriais (inteligência cultural)
+        run: python3 -I comum/ferramentas/inteligencia.py validar
+      - name: Testes da inteligência cultural
+        run: python3 -I comum/ferramentas/test_inteligencia.py
