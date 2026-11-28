@@ -30,3 +30,7 @@ jobs:
         run: python3 -I comum/ferramentas/test_memoria.py
       - name: Testes do ciclo
         run: python3 -I oraculo/previsoes/test_ciclo.py
+      - name: Eventos do ciclo de vida
+        run: python3 -I comum/ferramentas/eventos.py validar
+      - name: Testes dos eventos
+        run: python3 -I comum/ferramentas/test_eventos.py

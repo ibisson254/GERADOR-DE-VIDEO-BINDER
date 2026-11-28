@@ -1,6 +1,6 @@
 # Integração Data Binder + BINDER Originals · diagnóstico (fase zero), reconciliação e pré-merge
 
-28/11/2026, missão de engenharia do fundador (02:13). **Nenhuma integração foi implementada:** este documento é o diagnóstico pedido antes dela. Sem push, sem merge, 0 créditos, nenhuma conta ligada.
+28/11/2026, missão de engenharia do fundador (02:13). **Nenhuma integração foi implementada antes deste diagnóstico.** Depois dele, o fundador escolheu implementar o evento (§6). Sem push, sem merge, 0 créditos, nenhuma conta ligada.
 
 ## 1. Onde está o Data Binder (fase zero)
 
@@ -102,14 +102,14 @@ Ensaio numa worktree local (`premerge/teste-2026-11-28`): A → B → passo no w
 **Ordem recomendada:** A, depois B, depois o passo no `validar.yml`, depois esta reconciliação (toca `memoria.py`, `STATUS`, `DECISOES`, `historico`; rebase trivial).
 **Prontidão:** pronto para merge assim que o fundador autorizar.
 
-## 6. Proposta: evento `episode.completed` (não implementado)
+## 6. Evento `episode.completed` (implementado a 28/11, 03h, depois da escolha do fundador; ver `comum/eventos/LEIA-ME.md`)
 
 - **Onde:** `comum/eventos/episodios.jsonl` no repo (append-only). Sem servidor, sem base, sem custo.
-- **Quando:** `memoria.py encerramento <ID>` passa a exigir QC aprovado **e** aprovação humana registada (nome + data na ficha); só então escreve o evento e marca CONCLUÍDO. O modelo nunca aprova.
+- **Quando:** `eventos.py concluir <ID> --qc qc.json` exige QC sem P0, a linha «Aprovação final: <nome> · <data>» na ficha e o pacote do `memoria.py encerramento`; só então escreve o evento e marca CONCLUÍDO. O modelo nunca aprova.
 - **Idempotência:** `event_id = sha256(episode_id + "episode.completed" + event_version)`; repetir não duplica.
 - **Campos:** os 15 da missão (episode_id, series_id, production_status, approval_status, qc_status, created_at, completed_at, video_path, duration_s, format, resolution, fps, creative_attributes, source_branch, event_version).
-- **Sync:** cada evento nasce `sync: pendente`; o Data Binder, ao ler, marca `sincronizado` num ficheiro à parte (`comum/eventos/sync.jsonl`). O que falha fica pendente e é retomado na próxima leitura. Nada se perde.
-- **Testes 1–10 previstos:** conclusão normal, duplicado, falha de sync, render sem aprovação (recusa), QC falhado (recusa), reconciliação histórica, métrica ausente fica vazia, consulta preserva origem/período/definição/id, validações entre branches, reexecução sem duplicar. Tudo com mocks, 0 créditos.
+- **Sync:** cada evento nasce pendente; `eventos.py sincronizar --destino <pasta do Data Binder>` entrega-o (idempotente) e regista a tentativa em `comum/eventos/sync.jsonl`. O que falha fica pendente e é retomado na próxima vez. Nada se perde.
+- **Testes 1–10 (`test_eventos.py`, 23 casos, no workflow):** conclusão normal, duplicado, falha de sync, render sem aprovação (recusa), QC falhado (recusa), reconciliação histórica, métrica ausente fica vazia, consulta preserva origem/período/definição/id, validações entre branches, reexecução sem duplicar. Tudo com mocks, 0 créditos.
 - **Custo de manutenção:** zero diário; corre só quando se encerra um episódio.
 
 ## 7. Outros achados

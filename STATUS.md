@@ -20,6 +20,8 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 Reconciliação de 28/11 (fundador, 02:13: «os episódios que já foram criados e finalizados também já foram publicados»): os 26 `CONCLUÍDO` e 12 Órbita `APROVADO` («sequência publicada») passaram a `PUBLICADO`, com a data exata por confirmar; antes/depois em `comum/reconciliacao/2026-11-28_publicados.csv`. **Já não há fila de publicação.** O que exige ação agora é a **métrica**: 80 dos 90 publicados não têm números no registo. Versão publicada por confirmar em 8 (MB-EP17, MC-ESP03, MB-ESP05, LL-ART21, AB-04, MC-EP09, MC-EP10, LL-ECO01; coluna `confirmar` do CSV). Em produção: MB-GIRO01, EX-01, PM-EP01, LM-EP00; ORB-21 continua `APROVADO` (estava «agendado 06/11», sem confirmação).
 
+Para fechar um episódio novo: QC → o fundador escreve «Aprovação final: <nome> · <data>» na ficha → `python3 comum/ferramentas/eventos.py concluir <ID> --qc <qc.json>` (grava o evento para o Data Binder e muda o registo; `comum/eventos/LEIA-ME.md`).
+
 ## Em desenvolvimento
 
 - **Lisa Marie no Ar:** veredito do fundador sobre o recorte 2D e as prévias LM-EP00/LM-EP01; faltam personagem-mestre, voz e trilha oficiais (autorização de custo) e as decisões de 19/11 (paleta, estética de papel, símbolos). Próxima tarefa: `lisa-marie/PROMPT_CLAUDE.md` → ficha de modelo + preview estático.
