@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 28/11/2026 (02:30) · Reconciliação: conteúdos criados e finalizados contam como publicados
+
+**O quê:** os 38 conteúdos `CONCLUÍDO` (26) e Órbita `APROVADO` com «sequência publicada» (12) passam a `PUBLICADO`, com a publicação «até 28/11/2026 (data exata por confirmar)», como na confirmação global de 12/11. Nenhum ID, tema, ficha ou outra coluna mudou; o antes e o depois estão em `comum/reconciliacao/2026-11-28_publicados.csv`, com 8 versões publicadas por confirmar. Fica de fora o que não estava finalizado (EM PRODUÇÃO, EM ANÁLISE, ORB-21 «agendado») e as 30 linhas `POR AUDITAR`. Novo `memoria.py painel`: em desenvolvimento, por produzir, em produção, concluído por publicar, publicado com e sem métricas.
+**Porquê:** fundador, 28/11/2026 (02:13), missão «Integração Data Binder + Binder Originals»: «Os episódios que já foram criados e finalizados também já foram publicados. Portanto, não devem continuar aparecendo como uma fila de conteúdos aguardando publicação.»
+**Impacto:** o `STATUS.md` deixa de ter a tabela «Prontos, à espera do fundador»; o que exige ação passa a ser a métrica (80 de 90 publicados sem números). Para os episódios futuros, a regra «concluído = feito» fica à espera do desenho do evento automático (relatório `nucleo/auditorias/2026-11-28_integracao_data_binder.md`).
+
 ## 26/11/2026 (23:30) · Lambe-lambe: o vídeo do LL-ECO01 passa a padrão de todos os vídeos; LL-ART21 V3 no padrão
 
 **O quê:** todos os vídeos 9:16 do Lambe-lambe passam a seguir a linguagem do LL-ECO01 (cartaz grande por cena, peças a bater no muro, carimbos, autocolantes, abertura em tela cheia, tremor, efeitos próprios, fecho do scanner), feitos com o motor novo `lambe-lambe/kit_video/motor_video.py` (`kit_video/LEIA-ME.md`; `lambe-lambe/CONTEXTO.md` §3). Primeiro episódio no kit: **LL-ART21 V3** (Will Murai, 44,47 s). V1 e V2 ficam intactas.

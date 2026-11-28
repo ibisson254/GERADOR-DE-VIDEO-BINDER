@@ -16,32 +16,9 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 **Falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` (claude.ai) e `nucleo/prompts/CHATGPT.md` (ChatGPT).
 
-## Prontos, à espera do fundador (publicação ou envio)
+## Ciclo de vida (desde 28/11/2026: `python3 comum/ferramentas/memoria.py painel`)
 
-| ID | O que falta | Onde |
-|---|---|---|
-| MC-EP10 Larsen, Jogador do Ano | escuta e publicação da **v2** com a foto do Larsen (`MC_EP10_FINAL_v2.mp4`, capa `MC_EP10_CAPA.png`, `utm_campaign=MC-EP10`); não no mesmo dia do MC-EP09 | `oraculo/episodios/ep10_larsen_jogador_ano/` |
-| MC-EP09 cEDH na Mercadia Games | escuta e publicação da **v4** (`MC_EP09_FINAL_v4.mp4`, capa `MC_EP09_CAPA_BANDEIRA.png`, `utm_campaign=MC-EP09`); opcionais: PNG original do logótipo e foto do campeão (re-render sem voz), não no mesmo dia do MB-EP20; enviar o logótipo da Mercadia (re-render sem voz) ou publicar sem ele; loja só como contexto, sem collab | `oraculo/episodios/ep09_mercadia_cedh/` |
-| MB-EP21 O Capacete Que Nunca Para | escuta e publicação (`utm_campaign=MB-EP21`); não publicar no mesmo dia do MB-EP19/EP20 | `manaburn/episodios/ep21_capacete_obediencia/` |
-| MB-EP20 O Monólito Infinito | escuta e publicação (`utm_campaign=MB-EP20`); não publicar no mesmo dia do MB-EP18/EP19 | `manaburn/episodios/ep20_monolito_infinito/` |
-| MB-ESP05 A Nova Aliança (Taverna de Avalon) | escuta e publicação (`utm_campaign=MB-ESP05`); decidir marca d'água vs licença da imagem (re-render 0 créditos); collab com a loja só por convite do fundador | `manaburn/episodios/esp05_taverna_avalon/` |
-| MB-EP19 O Robô Que Não Morre | escuta e publicação (`utm_campaign=MB-EP19`); não publicar no mesmo dia do MB-EP18 | `manaburn/episodios/ep19_robo_imortal/` |
-| LL-ART21 Will Murai (Reel **V4**, padrão) | escolher entre V1–**V4** (V4 = padrão do Lambe-lambe, com foto e cartas uma a uma); publicar a versão **sem foto** (`utm_campaign=LL-ART21`); música no Instagram; versão com foto só com autorização da imagem | `lambe-lambe/episodios/ll-art21_will_murai_alem_das_cartas/` |
-| MB-EP18 O Lagarto Infinito | escuta e publicação; confirmar preços na LigaMagic antes de citar valores | `manaburn/episodios/ep18_lagarto_infinito/` |
-| MB-EP17 React @magicamador | ouvir o corte aos 43,6 s; pedir ao parceiro o OK do âmbito + collab; resposta em `manaburn/autorizacoes/2026-11-24_magicamador_react.md` (se recusar: arquivar) | `manaburn/episodios/ep17_react_magicamador/` |
-| MC-PAU02 «Vai ser banida?» | escutar a pronúncia; enviar as duas mensagens (resposta até 28/11); publicar a 29/11 com `utm_campaign=MC-PAU02` | `oraculo/episodios/pau02_tenda_snacker/` |
-| MC-PAU08 «O mais jogado não ganhou» | publicar (collab Tiago Fuguete + Tenda da Liliana) | `oraculo/episodios/pau08_fuguete_tenda/` |
-| MC-PAU01 «86 dólares» | publicar | `oraculo/pau01/` |
-| MB-EP14 Everything | escuta e publicação **antes de 30/11, 14h de Brasília** (venda do Secret Lair) | `manaburn/episodios/ep14_everything/` |
-| MB-EP16 Alexander (v2) | escuta e publicação; decidir como registar o «EP. 12» do Olag já publicado | `manaburn/episodios/ep16_alexander/` |
-| MB-EP12 Money Burn | escuta e publicação | `manaburn/episodios/ep12_money_burn/` |
-| LL-ECO01 ecossistema | confirmar se qualquer utilizador cria campeonatos; publicar carrossel + Reel + Story com `utm_campaign=LL-ECO01` | ficha do LL-ECO01 |
-| LL-MEME01 «a vida é uma maravilha» | confirmar que «booster» não conflita com MB-EP06/MB-GIRO01; publicar | ficha do LL-MEME01 |
-| LL-LISA01 teaser Lisa Marie | publicar a v2 | `lambe-lambe/episodios/ll-lisa01_estreia_lisa_marie/` |
-| MC-ESP03 Farpas de Mana | enviar a prévia (`oraculo/episodios/esp03_dc500/mensagem_farpas.txt`); plano B: publicar com crédito, sem collab | `oraculo/episodios/esp03_dc500/` |
-| AB-03 a AB-10 (ABISMO) | escolher v1 ou v2 do AB-04; aprovar e publicar | `abismo/publicacoes/CAMPANHA_NAUCTIS_EMBALAGENS.md` |
-| EX-01 Nauctis | escolher A ou B; licença da «Auction of Power» | registo |
-| Especial «Precon em jogo» V2 | aprovar a V2 (branch `especial/precon-em-jogo-v2`) | `comum/status_arquivo.md` |
+Reconciliação de 28/11 (fundador, 02:13: «os episódios que já foram criados e finalizados também já foram publicados»): os 26 `CONCLUÍDO` e 12 Órbita `APROVADO` («sequência publicada») passaram a `PUBLICADO`, com a data exata por confirmar; antes/depois em `comum/reconciliacao/2026-11-28_publicados.csv`. **Já não há fila de publicação.** O que exige ação agora é a **métrica**: 80 dos 90 publicados não têm números no registo. Versão publicada por confirmar em 8 (MB-EP17, MC-ESP03, MB-ESP05, LL-ART21, AB-04, MC-EP09, MC-EP10, LL-ECO01; coluna `confirmar` do CSV). Em produção: MB-GIRO01, EX-01, PM-EP01, LM-EP00; ORB-21 continua `APROVADO` (estava «agendado 06/11», sem confirmação).
 
 ## Em desenvolvimento
 
@@ -68,7 +45,7 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Próximo passo concreto
 
-1. Antes de 30/11: publicar MB-EP14 e MC-PAU02 (fundador).
+1. Métricas dos publicados (fundador ou Binder Dados): prints/export do Insights por Reel → `comum/insights/` (rotina de domingo 29/11).
 2. 30/11: conferência PR-PAU02-01 → MC-PAU03 (`tubo segunda`).
 3. Primeiro episódio de cada semana: criar ou atualizar `comum/radar/<AAAA-Www>.md` pelo modelo de `comum/radar/LEIA-ME.md`.
 
