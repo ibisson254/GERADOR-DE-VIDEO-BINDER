@@ -20,7 +20,7 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 | ID | O que falta | Onde |
 |---|---|---|
-| MC-EP10 Larsen, Jogador do Ano | escuta e publicação (`MC_EP10_FINAL.mp4`, capa `MC_EP10_CAPA.png`, `utm_campaign=MC-EP10`); não no mesmo dia do MC-EP09 | `oraculo/episodios/ep10_larsen_jogador_ano/` |
+| MC-EP10 Larsen, Jogador do Ano | escuta e publicação da **v2** com a foto do Larsen (`MC_EP10_FINAL_v2.mp4`, capa `MC_EP10_CAPA.png`, `utm_campaign=MC-EP10`); não no mesmo dia do MC-EP09 | `oraculo/episodios/ep10_larsen_jogador_ano/` |
 | MC-EP09 cEDH na Mercadia Games | escuta e publicação da **v4** (`MC_EP09_FINAL_v4.mp4`, capa `MC_EP09_CAPA_BANDEIRA.png`, `utm_campaign=MC-EP09`); opcionais: PNG original do logótipo e foto do campeão (re-render sem voz), não no mesmo dia do MB-EP20; enviar o logótipo da Mercadia (re-render sem voz) ou publicar sem ele; loja só como contexto, sem collab | `oraculo/episodios/ep09_mercadia_cedh/` |
 | MB-EP21 O Capacete Que Nunca Para | escuta e publicação (`utm_campaign=MB-EP21`); não publicar no mesmo dia do MB-EP19/EP20 | `manaburn/episodios/ep21_capacete_obediencia/` |
 | MB-EP20 O Monólito Infinito | escuta e publicação (`utm_campaign=MB-EP20`); não publicar no mesmo dia do MB-EP18/EP19 | `manaburn/episodios/ep20_monolito_infinito/` |

@@ -771,6 +771,14 @@ def cena_linha_tempo(t, i):
         k = eio((t - p[2]) / 0.22); s = lt.get('tese', ''); f = fit(d, s, INTB, int(76 * (1.2 - .2 * k)), 820); wd = d.textlength(s, font=f) + 70
         d.rounded_rectangle((540 - wd / 2, 1250, 540 + wd / 2, 1380), 18, fill=(30, 22, 4, 245), outline=AMBER, width=5)
         d.text((540, 1315), s, font=f, fill=AMBER, anchor='mm')
+    fo = lt.get('foto')                                             # MC-EP10 v2: foto do jogador (camada terceiros.foto) quando a voz o nomeia
+    if fo and 'foto' in TERC and t >= _tempo(fo['t']):
+        kf = eio((t - _tempo(fo['t'])) / .35); cx, cy, dm = fo.get('cx', 540), fo.get('cy', 1090), fo.get('d', 280)
+        circulo(im, 'foto', cx, cy, dm, kf, contorno=PH); d = ImageDraw.Draw(im, 'RGBA')
+        if fo.get('nome'):
+            s = fo['nome']; f = fit(d, s, MONOB, 34, 520); wd = d.textlength(s, font=f) + 36; yy = cy + dm / 2 - 6
+            d.rounded_rectangle((cx - wd / 2, yy - 26, cx + wd / 2, yy + 26), 12, fill=(8, 20, 16, int(245 * kf)), outline=PH + (int(255 * kf),), width=3)
+            d.text((cx, yy), s, font=f, fill=PH + (int(255 * kf),), anchor='mm')
     topo_fala(im, t); selo_txt(im, lt.get('selo', '')); return im.convert('RGB')
 
 def cena_previsao(t, i):

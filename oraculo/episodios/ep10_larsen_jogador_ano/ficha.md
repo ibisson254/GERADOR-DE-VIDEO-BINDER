@@ -76,6 +76,12 @@ Feedback do fundador aplicado (MC-EP09): evento, cidade, país e data no ecrã; 
 - Entregas (não versionadas): `/mnt/project-files/tubo/mc-ep10/` (vídeo, capa, grelha, folha de contacto, voz em bruto, prévia sem voz, legenda, comentário fixado, texto alternativo, fontes). Publicar com `utm_campaign=MC-EP10`; não no mesmo dia do MC-EP09.
 - Rubrica medida no final: igual à da prévia (4 · 4 · 5 · 5 · 5 · 5).
 
+## v2 · foto do Larsen (fundador, 28/11/2026 01:11)
+Pedido: «Coloque a imagem do cristoffer Larsen no episódio, para mostrar quem e quando cita ele no vídeo pela primeira vez», com a foto em anexo. Registo: `oraculo/autorizacoes/2026-11-28_ep10_foto_larsen.md` (origem e licença não indicadas; responsabilidade do fundador).
+- Foto em recorte circular (290 px, contorno verde) + etiqueta «CHRISTOFFER LARSEN» no plano da linha do tempo, a entrar em 9,85 s, quando a voz diz «Christoffer Larsen» pela primeira vez; woosh + brilho + carimbo e abalo curto. Camada `terceiros.foto` (sem o ficheiro, o plano sai como na v1).
+- Motor: chave opcional `linha_tempo.foto` (`t`, `cx`, `cy`, `d`, `nome`); regressão EP09/ESP03/PAU01/PAU02/PAU08 igual.
+- Controlo de qualidade v2: `MC_EP10_FINAL_v2.mp4`, 34,87 s, −14,0 LUFS, pico −3,8 dBTP, fecho presente, sem problemas (`qc_final_v2.json`). Mesma voz, 0 créditos. Capa sem alterações. **Versão a publicar: v2.**
+
 ## Handoff (27/11/2026, ~18h30 UTC)
 Objetivo atual: MC-EP10 pronto para o fundador publicar.
 Feito: pesquisa (3 candidatos, escolha do fundador), factos verificados (magic.gg, MTGTop8), motor (`cena_linha_tempo` com tempo por marco; regressão igual), prévia, voz (463 créditos), render final, capa, QC, registo, decisão, STATUS.
