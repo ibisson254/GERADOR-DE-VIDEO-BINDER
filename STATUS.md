@@ -30,7 +30,7 @@ Para fechar um episódio novo: vozes autorizadas → `eventos.py vozes` → QC �
 - Insights: ecrã Conteúdo, visitas ao perfil, toques no link, impulso de 8–14/11; datas de publicação dos conteúdos fechados a 16/11; R$ 11 de impulso de 26/10 (quais vídeos).
 - Registo: confirmar as 30 linhas `POR AUDITAR` de `comum/REGISTRO_EDITORIAL.md`.
 - BINDER Vision: prints de visitas e toques no link, Play Console, bio e destaque «Comece aqui», gravações de `binder-vision/ESTRATEGIA.md` §8, pautas da Camada 2.
-- Inteligência cultural: escolher (ou não) a oportunidade OP-2026-W48-01 (`python3 comum/ferramentas/inteligencia.py oportunidades`); referências culturais em `comum/inteligencia/referencias/` (REF-2026-11-28-01 por ver: vidIQ 10 créditos ou descrição do fundador).
+- Inteligência cultural: escolher (ou não) a oportunidade OP-2026-W48-01 (`python3 comum/ferramentas/inteligencia.py oportunidades`); referências culturais em `comum/inteligencia/referencias/` (REF-2026-11-28-01 vista, 4 princípios a 1/3; `inteligencia.py referencias`).
 - Infraestrutura: ligar a @binder_vision no vidIQ (0 créditos por leitura; desbloqueia métricas e `inteligencia.py padroes`); RLS em `public.spatial_ref_sys` (Supabase); atualizar as skills `binder-*` (ainda mandam ler o Drive primeiro).
 - Mana & Burn: esboço das expressões novas do Mana e do Burn; PR #2 (Pequeno Mestre) e PR #7 (TV analógica).
 - Parcerias: LL-ART20 Caio Monteiro (prazo de 21/11 passado; registar a resposta) → MC-ESP04 Preconauta.
