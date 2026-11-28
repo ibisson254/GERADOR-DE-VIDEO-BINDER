@@ -35,7 +35,11 @@ CSV_COLUNAS = ['semana_fim', 'periodo', 'id_editorial', 'frente', 'post_ref', 'f
                'visualizacoes', 'alcance', 'impressoes', 'curtidas', 'comentarios', 'guardados',
                'partilhas', 'visitas_perfil', 'novos_seguidores', 'cliques_link', 'outras_acoes',
                'impulsionado', 'investimento', 'moeda', 'campanha_periodo', 'objetivo_anuncio',
-               'alcance_pago', 'fonte', 'notas']
+               'alcance_pago', 'fonte', 'notas',
+               # desde 28/11/2026 (inteligência cultural, nucleo/DECISOES.md): retenção observada e atributos do vídeo
+               'publicado_em', 'duracao_s', 'tempo_medio_s', 'pct_assistida', 'taxa_saltos',
+               'tipo_abertura', 'tipo_narrativa']
+DECIMAIS = ['duracao_s', 'tempo_medio_s', 'pct_assistida', 'taxa_saltos']
 NUMERICAS = ['visualizacoes', 'alcance', 'impressoes', 'curtidas', 'comentarios', 'guardados',
              'partilhas', 'visitas_perfil', 'novos_seguidores', 'cliques_link', 'alcance_pago']
 VAZIOS = {'', '—', '-', 'LACUNA'}
@@ -244,6 +248,14 @@ def validar_insights(raiz, ids):
             for c in NUMERICAS:
                 if r[c] and not re.fullmatch(r'\d+', r[c]):
                     erros.append(f'registo_posts.csv:{n}: {c}="{r[c]}" não é inteiro (vazio se não visível)')
+            for c in DECIMAIS:
+                if r[c] and not re.fullmatch(r'\d+(\.\d+)?', r[c]):
+                    erros.append(f'registo_posts.csv:{n}: {c}="{r[c]}" não é número (ponto decimal; vazio se não visível)')
+            for c in ('pct_assistida', 'taxa_saltos'):
+                if re.fullmatch(r'\d+(\.\d+)?', r[c]) and float(r[c]) > 100:
+                    erros.append(f'registo_posts.csv:{n}: {c}="{r[c]}" acima de 100 %')
+            if r['publicado_em'] and not re.fullmatch(r'\d{4}-\d{2}-\d{2}( \d{2}:\d{2})?', r['publicado_em']):
+                erros.append(f'registo_posts.csv:{n}: publicado_em "{r["publicado_em"]}" (AAAA-MM-DD ou AAAA-MM-DD HH:MM)')
             sem = base / 'semanas' / f'{r["semana_fim"]}.md'
             if not sem.exists():
                 erros.append(f'registo_posts.csv:{n}: falta o relatório semanas/{r["semana_fim"]}.md')

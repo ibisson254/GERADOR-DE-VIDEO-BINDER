@@ -1,0 +1,143 @@
+# Caso-piloto da inteligência cultural (28/11/2026). Regras: comum/inteligencia/LEIA-ME.md
+id: OP-2026-W48-01
+titulo: "A nebulosa de outro artista: a carta de Star Trek que ganhou um segundo crédito depois de impressa"
+criada: 2026-11-28
+atualizada: 2026-11-28
+estado: aberta            # aberta · esperar · escolhida · descartada · virou-pauta
+categoria: C              # A emergente · B consolidada · C oportunidade editorial · D saturado · E janela · F movimento
+confianca:
+  nivel: média
+  porque: >-
+    O crédito duplo está confirmado na fonte primária de dados da carta (Scryfall, lida a 28/11).
+    O comunicado original da Wizards de 12/11 não foi lido nesta sessão: as frases dele chegam por
+    terceiros (ICv2, 13/11). Não há medida do interesse da comunidade (Reddit e Instagram não abrem).
+frente_sugerida: >-
+  Lambe-lambe, Reel documental «Artistas de Magic» (piloto LL-ART21): curiosidade de bastidores com
+  foco em quem desenhou. Alternativa: Conde de Manaforte (território «bastidores, artistas»), mas o
+  humor do Conde arrisca parecer acusação a uma artista. Decisão do fundador.
+janela:
+  ate: 2026-12-08
+  motivo: >-
+    O set Star Trek saiu a 13/11 e está no Arena até 08/12 (oraculo/previsoes/calendario.yaml,
+    TRK-ARENA). Depois disso a carta deixa de ser «do momento», mas o tema da autoria não vence.
+pergunta_central: "Quem desenhou esta carta? E por que é que a resposta mudou depois de ela estar à venda?"
+angulo: >-
+  Não é escândalo nem acusação: é a história de como uma carta é feita (várias mãos, referências,
+  licenças) e de por que o nome no rodapé importa tanto para a comunidade. A carta de Star Trek é a
+  porta de entrada; os casos anteriores mostram que não é a primeira vez e o que muda em cada uma.
+diferenca: >-
+  O registo do BINDER nunca tratou crédito de artista como tema (memoria.py pauta: livre para
+  «There's Coffee in that Nebula»). A maioria da cobertura em inglês é notícia de um parágrafo; ninguém
+  em português juntou os casos numa linha do tempo nem explicou onde o crédito muda (digital) e onde
+  não muda (carta impressa).
+porque_agora: >-
+  Agora: o set tem duas semanas e a correção é de 12/11. Esperar não melhora as fontes; o que falta
+  verificar (comunicado original) resolve-se em minutos num navegador.
+publico: >-
+  Colecionadores e jogadores casuais do Brasil e de Portugal que olham para a arte e o artista de cada
+  carta; fãs de Star Trek que chegaram ao Magic pelo set; artistas e estudantes de ilustração.
+evidencias:
+  - tipo: facto
+    fonte: Scryfall (dados da carta)
+    url: https://scryfall.com/card/trk/369/theres-coffee-in-that-nebula
+    data_publicacao: 2026-11-13
+    data_coleta: 2026-11-28
+    evidencia: "Versão showcase (LCARS) #369 creditada a «Anna Czeszejko & Rutger van de Steeg»; a #503 (surge foil) igual; a versão regular #40 a Pauline Voss."
+  - tipo: facto
+    fonte: ICv2 (Jeffrey Dohm-Sanchez)
+    url: https://icv2.com/articles/news/view/63876/theres-another-artists-nebula-floating-magic-the-gathering-coffee
+    data_publicacao: 2026-11-13
+    data_coleta: 2026-11-28
+    evidencia: "A arte da versão LCARS incorpora «Nebula Explosion», matte painting de Rutger van de Steeg para Star Trek: Prodigy; o artigo diz que não está claro se a decisão foi da artista ou da direção de arte, e que a licença pode ter coberto o uso."
+  - tipo: opinião
+    fonte: Polkastarter (blog de terceiro, com conteúdo promocional; fonte fraca)
+    url: https://polkastarter.com/blog/magic-star-trek-coffee-nebula-artist-credit
+    data_publicacao: 2026-11-16
+    data_coleta: 2026-11-28
+    evidencia: "Relata que a Wizards anunciou a alteração a 12/11 e que as cartas impressas mantêm o crédito original; a correção vale para Arena, MTGO e Gatherer. Usar só para saber o que procurar no comunicado original."
+  - tipo: facto
+    fonte: Scryfall (dados da carta)
+    url: https://scryfall.com/card/hoc/44/the-one-ring
+    data_publicacao: 2026-08-14
+    data_coleta: 2026-11-28
+    evidencia: "The One Ring do set The Hobbit (hoc #44 e #84) creditada a «Dan Frazier & Marta Nael»; a versão de Marta Nael de 2023 (ltr #451) existe separada."
+  - tipo: facto
+    fonte: EpicFlix (notícia)
+    url: https://epicflix.com/magic-the-gathering-artist-sparks-controversy-over-the-one-ring-card
+    data_publicacao: 2026-05-03
+    data_coleta: 2026-11-28
+    evidencia: "Donato Giancola apontou que a arte partia da versão de Marta Nael; Frazier admitiu ter usado a obra como referência; a Wizards falou em erro de processo e crédito duplo no digital (citações do comunicado conjunto, não lido diretamente)."
+  - tipo: facto
+    fonte: Wizards of the Coast (comunicado oficial)
+    url: https://magic.wizards.com/en/news/announcements/final-fantasy-promise-of-loyalty-jumbo-cactuar
+    data_publicacao: 2025-06-09
+    data_coleta: 2026-11-28
+    evidencia: "Créditos trocados em Promise of Loyalty e Jumbo Cactuar (FINAL FANTASY); corrigidos no Arena, Gatherer e MTGO."
+  - tipo: facto
+    fonte: Wizards of the Coast (comunicado oficial)
+    url: https://magic.wizards.com/en/news/announcements/statement-on-march-of-the-machine-artwork-for-furnace-host-charger
+    data_publicacao: 2023-04-05
+    data_coleta: 2026-11-28
+    evidencia: "Furnace Host Charger creditada a Daniel Romanovsky; o artista correto é Andreas Zafiratos."
+  - tipo: facto
+    fonte: Wizards of the Coast (comunicado oficial)
+    url: https://magic.wizards.com/en/news/announcements/statement-crux-fate-2021-03-30
+    data_publicacao: 2021-03-30
+    data_coleta: 2026-11-28
+    evidencia: "Crux of Fate (Mystical Archive) incorporava fan art sem permissão; a Wizards suspendeu trabalhos futuros com o artista contratado."
+  - tipo: cálculo
+    fonte: BINDER, a partir das quatro linhas oficiais/primárias acima
+    url: https://scryfall.com/card/trk/369/theres-coffee-in-that-nebula
+    data_coleta: 2026-11-28
+    evidencia: "Cinco casos públicos de autoria corrigida ou contestada entre 03/2021 e 11/2026, todos lidos nesta sessão. Não é uma contagem completa: é só o que foi encontrado."
+  - tipo: ausência
+    evidencia: "Sem medida do interesse da comunidade: Reddit e Instagram não abrem na cloud; nenhuma fonte brasileira ou portuguesa encontrada sobre o caso."
+verificar:
+  - "Ler o comunicado original da Wizards de 12/11/2026 (texto exato, o que muda e onde) antes de qualquer frase sobre ele."
+  - "Confirmar se a licença de Star Trek: Prodigy cobria o uso da pintura (o ICv2 diz que pode ter coberto): sem isso, nada de «plágio» nem «cópia»."
+  - "Não atribuir a decisão a Anna Czeszejko: a fonte diz que não se sabe se foi dela ou da direção de arte."
+  - "The One Ring é objeto bloqueado no registo (LL-R02, LL-CUR07, ambos POR AUDITAR): entra só como contexto de uma linha, nunca como objeto central, sem decisão do fundador."
+  - "Procurar reação da comunidade (r/magicTCG, Bluesky de artistas) num navegador do PC; até lá, «interesse da audiência» fica em 3."
+criterios:
+  relevancia_cultural:
+    nota: 5
+    porque: "Autoria e crédito de artistas é um valor central da comunidade de Magic (artistas assinam cartas, têm fãs, a comunidade denuncia quando falha); cinco casos em cinco anos mostram que o tema volta."
+  interesse_audiencia:
+    nota: 3
+    porque: "Plausível (Star Trek é o set do momento e o BINDER já faz «Artistas de Magic»), mas sem nenhuma métrica: nem do nosso Instagram para este tema, nem de discussão pública lida nesta sessão."
+  originalidade:
+    nota: 4
+    porque: "Livre no registo; em português não há linha do tempo dos casos. Não é 5 porque a notícia em si já foi dada em inglês."
+  profundidade:
+    nota: 4
+    porque: "Tem camadas reais: como se faz uma carta, referência × incorporação × fan art, digital corrige e impresso não, o que a comunidade cobra."
+  potencial_visual:
+    nota: 4
+    porque: "Cartas reais lado a lado (#40 vs #369; o rodapé com um nome e depois com dois) dão abertura de objeto forte. Não é 5 porque a pintura original de Prodigy não pode ser mostrada sem licença."
+  fontes:
+    nota: 4
+    porque: "Dados da carta na fonte primária (Scryfall) e três comunicados oficiais lidos; falta ler o comunicado de 12/11, daí não ser 5."
+  compartilhamento:
+    nota: 3
+    porque: "Artistas e fãs de ilustração partilham temas de crédito; risco de virar «polémica» se mal contado. Sem dados: nota prudente."
+  longevidade:
+    nota: 4
+    porque: "A carta envelhece em semanas, a pergunta «quem desenhou?» não; o vídeo serve de referência quando surgir o próximo caso."
+  identidade_binder:
+    nota: 5
+    porque: "Território exato do BINDER Originals: arte, artistas, colecionismo; reforça a confiança com artistas, que é a base de qualquer colaboração futura."
+  custo_esforco:
+    nota: 4
+    porque: "Só cartas do Scryfall e texto; sem voz no formato documental do Lambe-lambe (0 créditos). Pede cuidado de redação jurídica."
+marca:
+  valor: >-
+    Posiciona o BINDER como o canal que dá nome a quem desenhou, sem caça às bruxas. Constrói o crédito
+    que um dia permite convidar artistas (só pelo fundador, nucleo/auditorias/2026-11-16_parcerias.md).
+    Nenhuma oportunidade comercial aqui.
+  direitos: >-
+    Cartas do Scryfall com crédito do artista e da Wizards (Política de Conteúdo de Fãs). A pintura
+    «Nebula Explosion» e imagens de Star Trek: Prodigy não se mostram (direitos de terceiros). Nada de
+    acusar pessoas: só o que os comunicados e os dados da carta dizem.
+decisao:
+  fundador: ""
+  data: ""

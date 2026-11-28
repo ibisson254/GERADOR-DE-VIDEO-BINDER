@@ -1,0 +1,62 @@
+# Exemplo real de oportunidade que ainda NÃO tem fontes lidas: o portão manda esperar.
+id: OP-2026-W48-02
+titulo: "Artistas convidados de fora do Magic (Junji Ito, concept art de Metal Gear) chegam às cartas"
+criada: 2026-11-28
+atualizada: 2026-11-28
+estado: esperar
+categoria: A
+confianca:
+  nivel: baixa
+  porque: "Só o título de um resultado de pesquisa (PC Gamer); o artigo não foi lido, não há data nem lista de cartas."
+frente_sugerida: "Lisa Marie no Ar (ponte entre culturas) ou Lambe-lambe «Artistas de Magic»; decidir depois de ler as fontes."
+janela:
+  ate: null
+  motivo: "Desconhecida até saber a data de lançamento das cartas."
+pergunta_central: "O que muda numa carta de Magic quando o artista vem da manga ou dos videojogos?"
+angulo: "Comparar a linguagem visual do artista convidado com as convenções da ilustração de Magic, com as cartas reais lado a lado."
+diferenca: "Por apurar: sem ler a cobertura existente não se sabe se o ângulo já foi feito."
+porque_agora: "Esperar: primeiro ler a notícia e confirmar datas e cartas na fonte oficial."
+publico: "Fãs de manga, terror e videojogos que conhecem os artistas mas não o Magic; colecionadores de arte de cartas."
+evidencias:
+  - tipo: ausência
+    evidencia: "Resultado de pesquisa (28/11/2026) com o título «What do Post Malone, Junji Ito and Metal Gear's concept artist have in common? They're all coming to Magic the Gathering» em pcgamer.com; página não lida, sem data."
+verificar:
+  - "Ler o artigo da PC Gamer e o anúncio oficial da Wizards: produto, data, cartas e artistas."
+  - "memoria.py pauta com o nome de cada artista antes de avançar."
+criterios:
+  relevancia_cultural:
+    nota: 4
+    porque: "Cruzamento real entre cultura geek e Magic, se se confirmar."
+  interesse_audiencia:
+    nota: 3
+    porque: "Sem dados; nomes conhecidos fora do Magic sugerem interesse, mas é suposição."
+  originalidade:
+    nota: 2
+    porque: "Anúncios de artistas famosos costumam ser muito cobertos; por confirmar."
+  profundidade:
+    nota: 3
+    porque: "Depende de haver cartas publicadas para analisar."
+  potencial_visual:
+    nota: 5
+    porque: "Se as cartas existirem, a comparação visual é o próprio vídeo."
+  fontes:
+    nota: 1
+    porque: "Nenhuma fonte lida."
+  compartilhamento:
+    nota: 3
+    porque: "Sem dados."
+  longevidade:
+    nota: 3
+    porque: "Depende do produto."
+  identidade_binder:
+    nota: 4
+    porque: "Arte e artistas: território do BINDER."
+  custo_esforco:
+    nota: 4
+    porque: "Cartas do Scryfall quando saírem; sem voz no formato documental."
+marca:
+  valor: "Potencial ponte para públicos de manga e videojogos; nenhuma ação comercial."
+  direitos: "Só cartas oficiais com crédito; nada de obras do artista fora das cartas sem licença."
+decisao:
+  fundador: ""
+  data: ""

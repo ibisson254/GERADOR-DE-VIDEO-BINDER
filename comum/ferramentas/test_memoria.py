@@ -163,6 +163,24 @@ class E_Impulsionamento(unittest.TestCase):
             ids = {e['ID'] for e in m.ler_registo(raiz)[0]}
             self.assertTrue(any('A CONFIRMAR' in e for e in m.validar_insights(raiz, ids)))
 
+    def test_retencao_invalida(self):
+        with tempfile.TemporaryDirectory() as d:
+            raiz = Path(d)
+            repo_minimo(raiz)
+            p = raiz / 'comum/insights/registo_posts.csv'
+            with p.open(encoding='utf-8', newline='') as f:
+                linhas = list(csv.DictReader(f))
+            linhas[0]['tempo_medio_s'] = '31,5'
+            linhas[0]['pct_assistida'] = '130'
+            with p.open('w', encoding='utf-8', newline='') as f:
+                w = csv.DictWriter(f, m.CSV_COLUNAS)
+                w.writeheader()
+                w.writerows(linhas)
+            ids = {e['ID'] for e in m.ler_registo(raiz)[0]}
+            erros = m.validar_insights(raiz, ids)
+            self.assertTrue(any('tempo_medio_s' in e for e in erros))
+            self.assertTrue(any('acima de 100' in e for e in erros))
+
 
 class F_Seguranca(unittest.TestCase):
     def test_repositorio_sem_segredos(self):
