@@ -6,7 +6,9 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 ## Última sessão
 
-**Integração Data Binder + Originals (28/11/2026, 02h–08h)**: auditoria do motor, inteligência cultural e reconciliação juntas na `main` com autorização do fundador (07:53). (1) Fase zero: o Data Binder é o repo `-Binder-Dados` (consultas e relatórios do funil do app); os números dos Originals ficam em `comum/insights/registo_posts.csv`. (2) Evento `episode.completed`: `comum/eventos/LEIA-ME.md`. (3) Revisão pré-merge e divergências por confirmar: `nucleo/auditorias/2026-11-28_integracao_data_binder.md`. Sessões que renderizam começam por `sh comum/ferramentas/preparar_ambiente.sh`.
+**MB-EP22 «A Fada Infinita» (28/11/2026, 09h–09h45)**: Splinter Twin + Pestermite, ideia do fundador «duas cartas, turno 4». v2 a pedido do fundador (telas com 3 níveis, prova a 690 px, 43 s; `nucleo/DECISOES.md` 09:30). Vozes autorizadas 09:24 (994 créditos) → PUBLICADO por `eventos.py vozes`. Falta a aprovação final na ficha para o `eventos.py concluir MB-EP22`. Ficha: `manaburn/episodios/ep22_fada_infinita/ficha.md`.
+
+Antes: **Integração Data Binder + Originals (28/11/2026, 02h–08h)**: auditoria do motor, inteligência cultural e reconciliação na `main` (07:53). Evento `episode.completed`: `comum/eventos/LEIA-ME.md`; divergências por confirmar em `nucleo/auditorias/2026-11-28_integracao_data_binder.md`. Sessões que renderizam começam por `sh comum/ferramentas/preparar_ambiente.sh`.
 
 **Falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` (claude.ai) e `nucleo/prompts/CHATGPT.md` (ChatGPT).
 
@@ -48,4 +50,4 @@ Para fechar um episódio novo: vozes autorizadas → `eventos.py vozes` → QC �
 
 ## Handoff
 
-Último: 28/11/2026 (07h55), integração Data Binder, em `nucleo/auditorias/2026-11-28_integracao_data_binder.md`. Anteriores: `comum/status_arquivo.md` («Handoff»).
+Último: 28/11/2026 (09h45), MB-EP22, na ficha (`manaburn/episodios/ep22_fada_infinita/ficha.md`, «Handoff»). Antes: 28/11/2026 (07h55), integração Data Binder, em `nucleo/auditorias/2026-11-28_integracao_data_binder.md`. Anteriores: `comum/status_arquivo.md` («Handoff»).

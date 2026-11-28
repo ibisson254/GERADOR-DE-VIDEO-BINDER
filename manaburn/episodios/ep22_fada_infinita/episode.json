@@ -1,0 +1,192 @@
+{
+ "schema": 2,
+ "versao": "MB-EP22 v2 · A Fada Infinita (28/11/2026): roteiro encurtado e telas com hierarquia nova",
+ "chamada": "a fada infinita",
+ "falas": [
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "*DUAS* cartas… e no turno *QUATRO* você tem fadas *INFINITAS*!",
+   "tts": "DUAS cartas… e no turno QUATRO você tem fadas INFINITAS!"
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "*Pestermite*: três manas. Quando entra, *vira ou desvira* uma permanente.",
+   "tts": "Péstermait: três manas. Quando entra, vira ou desvira uma permanente."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Desvirar *terreno*? Grande coisa!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "*Lê a carta:* *qualquer* permanente. No turno quatro, *Splinter Twin* nela.",
+   "tts": "Lê a carta: qualquer permanente. No turno quatro, Esplínter Tuín nela."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "A cópia nasce *enjoada*, mano!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Tem *ímpeto*. E entra como Pestermite: *desvira a original*.",
+   "tts": "Tem ímpeto. E entra como Péstermait: desvira a original."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Então a cópia *também* tem a Twin!",
+   "tts": "Então a cópia também tem a Tuín!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Não. A *ruling* diz: *não copia* a Aura. A original vira e desvira: *uma fada por volta*.",
+   "tts": "Não. A rúling diz: não copia a Aura. A original vira e desvira: uma fada por volta."
+  },
+  {
+   "quem": "B",
+   "tags": "[shouting]",
+   "legenda": "Fada *infinita* com ímpeto! Isso devia ser *BANIDO*!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "*Já foi*, no Modern, em *2016*. E *liberaram* em *2024*.",
+   "tts": "Já foi, no Módern, em dois mil e dezesseis. E liberaram em dois mil e vinte e quatro."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "E *ninguém* para isso!"
+  },
+  {
+   "quem": "M",
+   "tags": "[deadpan]",
+   "legenda": "Para: mata a *Pestermite em resposta* e o loop *acaba*.",
+   "tts": "Para: mata a Péstermait em resposta e o lúpi acaba."
+  },
+  {
+   "quem": "B",
+   "tags": "[outraged]",
+   "legenda": "Pergunta: *A*, bane de novo. *B*, deixa solta.",
+   "tts": "Pergunta: Á, bane de novo. Bê, deixa solta."
+  },
+  {
+   "quem": "M",
+   "tags": "[bored]",
+   "legenda": "Comenta aí."
+  }
+ ],
+ "gap": [
+  0,
+  0.0,
+  -0.06,
+  0.0,
+  -0.08,
+  0.02,
+  -0.08,
+  0.02,
+  -0.08,
+  0.02,
+  -0.06,
+  0.02,
+  0.0,
+  0.38
+ ],
+ "ins": [
+  [
+   2,
+   0.1
+  ],
+  [
+   4,
+   0.1
+  ],
+  [
+   6,
+   0.1
+  ],
+  [
+   8,
+   0.1
+  ],
+  [
+   10,
+   0.1
+  ],
+  [
+   12,
+   0.1
+  ]
+ ],
+ "respiro_max": 0.1,
+ "tempo": {
+  "B": 1.1,
+  "M": 1.15
+ },
+ "mix": {
+  "intro_db": 0,
+  "fala_db": -14,
+  "pausa_db": -6,
+  "fecho_db": 0
+ },
+ "sfx": {
+  "tv": true,
+  "destaque": true,
+  "carta": "flick",
+  "raiva": true
+ },
+ "outro": {
+  "scanner": 0,
+  "hold": 2.75
+ },
+ "abertura": {
+  "ate": 0.6
+ },
+ "sfx_flip": [
+  [
+   1,
+   0.035
+  ],
+  [
+   5,
+   0.035
+  ]
+ ],
+ "sfx_destaque": [
+  [
+   1,
+   0.1
+  ],
+  [
+   1,
+   0.6
+  ],
+  [
+   3,
+   0.08
+  ],
+  [
+   5,
+   0.1
+  ],
+  [
+   7,
+   0.1
+  ],
+  [
+   9,
+   0.1
+  ],
+  [
+   11,
+   0.1
+  ]
+ ]
+}

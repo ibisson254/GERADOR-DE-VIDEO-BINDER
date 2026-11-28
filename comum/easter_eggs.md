@@ -23,3 +23,4 @@
 | 26/11/2026 | Mana & Burn · Ep. 18 (O Lagarto Infinito) | relógio da TV SAL em "01:45" = nº de coleção 145 do Basking Broodscale (Modern Horizons 3) | canto inferior direito da TV, em todos os planos da TV (0–46 s) |
 | 26/11/2026 | Mana & Burn · Ep. 19 (O Robô Que Não Morre) | relógio da TV SAL em "06:03" = o Triskelion custa 6 e entra com 3 marcadores +1/+1 | canto inferior direito da TV, em todos os planos da TV (≈ 2–47 s) |
 | 27/11/2026 | Mana & Burn · Ep. 20 (O Monólito Infinito) | relógio da TV SAL em "03:32" = o Basalt Monolith vira por 3, desvira por 3 e o Rings of Brighthearth cobra 2 pela cópia | canto inferior direito da TV, em todos os planos da TV (≈ 2–4,9 s, 31,6–34,6 s, 52,5–56,5 s) |
+| 28/11/2026 | Mana & Burn · Ep. 22 (A Fada Infinita) | relógio da TV SAL em "20:16" = ano em que a Splinter Twin foi banida no Modern (liberada a 16/12/2024) | canto inferior direito da TV, em todos os planos da TV |

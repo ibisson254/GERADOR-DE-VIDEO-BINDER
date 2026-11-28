@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 28/11/2026 (09:30) · Mana & Burn: telas de prova com 3 níveis e plano de prova a 690 px (MB-EP22)
+
+**O quê:** no MB-EP22, (1) cada tela de prova tem no máximo título gigante (Bangers), uma linha de apoio e fonte curta; o crédito completo das cartas fica só na tarja do topo; citações de ruling ou da Wizards cortadas à frase que prova; (2) `EP.prova.w` = 690 e `top` = 300 (o padrão de 22/11 diz «~620 px»), com o zoom das cartas a 1,4 para não cortar as bordas; (3) roteiro encurtado para ~39 s de falas (~43 s com o fecho), sem tirar correções.
+**Porquê:** fundador, 28/11/2026 (09:16), ao ver a prévia v1 no telemóvel: «Essa demonstração e possível melhorar a hierarquia visual e o designer? Se sim melhore o tempo de duração dos reels». Prévia v2 aceite com «Pode / E gerar as vezes» (09:24).
+**Impacto:** motor sem alterações (só parâmetros do `episode.js`). Proposta para os próximos episódios de combo: usar `ep22_fada_infinita/telas_fada.py` (v2) como modelo de tela e 690 px; vira regra se o MB-EP22 não perder guardados/partilhas face ao MB-EP13 (medir às 48 h e aos 7 dias).
+
 ## 28/11/2026 (08:10) · Vozes autorizadas = publicado
 
 **O quê:** a partir de agora, um episódio conta como `PUBLICADO` **no momento em que o fundador autoriza as vozes**. A sessão regista-o com `python3 comum/ferramentas/eventos.py vozes <ID> --data <data> --fonte "<palavras do fundador, data, onde>"` (sem fonte, recusa). O `eventos.py concluir` passa a marcar `PUBLICADO` (e não `CONCLUÍDO`) e o evento leva `production_status: PUBLICADO`. Os 8 episódios com versão por confirmar na reconciliação (MB-ESP05, MB-EP17, MC-ESP03, MC-EP09, MC-EP10, LL-ART21, LL-ECO01, AB-04) ficam com a publicação confirmada (coluna `resolucao` do CSV e Fonte do registo).

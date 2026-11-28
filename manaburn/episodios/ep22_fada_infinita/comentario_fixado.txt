@@ -1,0 +1,27 @@
+Twin com Pestermite no Modern: A, bane de novo, ou B, deixa solta?
+
+Como o combo funciona (Splinter Twin encantando a Pestermite):
+1. Turno 3: Pestermite (3 manas, com lampejo: dá para jogar no fim do turno do oponente).
+2. Turno 4: Splinter Twin (4 manas) na Pestermite. Ela já está com você desde o começo do turno, então pode virar.
+3. Vire a Pestermite: cria uma ficha cópia dela, com ímpeto.
+4. A ficha entra e o gatilho da Pestermite dispara: desvire a Pestermite original.
+5. Repita quantas vezes quiser. São fichas 2/1 com voar e ímpeto: atacam no mesmo turno.
+Exemplo: mesa de 4 no Commander, três oponentes com 40 de vida = 120 de dano = 60 fadas, sem bloqueadores voadores.
+
+O que a mesa costuma errar:
+- A Pestermite vira ou desvira QUALQUER permanente, não só terreno.
+- A ficha não nasce "enjoada": a Splinter Twin dá ímpeto a ela.
+- A ficha não copia a Aura nem a habilidade que a Twin dá (ruling de 15/06/2010). O infinito vem da original virando e desvirando.
+- As fichas são exiladas no começo da próxima etapa final. O combo precisa ganhar no ataque do mesmo turno.
+
+Como a mesa para: com a habilidade na pilha, matar a Pestermite original em resposta. A ficha ainda é criada (ruling), mas não há mais original para desvirar e o loop acaba. Também dá para anular ou destruir a Splinter Twin.
+
+Variante: Kiki-Jiki, Mirror Breaker + Pestermite faz o mesmo, mas o Kiki custa 5 manas e só fecha no turno 4 com aceleração de mana.
+
+Texto Oracle:
+Splinter Twin: "Enchant creature. Enchanted creature has '{T}: Create a token that's a copy of this creature, except it has haste. Exile that token at the beginning of the next end step.'"
+Pestermite: "Flash. Flying. When this creature enters, you may tap or untap target permanent."
+
+Fontes (28/11/2026): Oracle e rulings no Scryfall; combo 2905-4702 no Commander Spellbook (1.277 listas no EDHREC com as duas cartas: é contagem de listas, não de partidas); Salt Score da Splinter Twin no EDHREC 0,47 (putômetro 12 %); Banned and Restricted Announcement da Wizards, 16/12/2024.
+
+O relógio da TV SAL está marcando uma data. Achou?
