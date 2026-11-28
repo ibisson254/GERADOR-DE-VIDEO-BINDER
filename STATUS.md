@@ -14,6 +14,8 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 
 **MB-EP20 «O Monólito Infinito» (27/11/2026, 09h30)**: CONCLUÍDO, à espera de publicação. Basalt Monolith + Rings of Brighthearth (mana incolor infinita por cópia de habilidade, pilha desenhada passo a passo) e Walking Ballista de finalizador; roteiro do fundador produzido pela SHOWRUNNER §4.3; vozes 1.423 créditos; 62,20 s, QC sem problemas. Novo **módulo de pesquisa «deck Commander»** (`nucleo/SHOWRUNNER.md` §2.4 passo 9; `nucleo/DECISOES.md` 27/11). Ficha: `manaburn/episodios/ep20_monolito_infinito/ficha.md`.
 
+**Inteligência cultural (28/11/2026, 01h)**: fases 1–5 na branch **local** `inteligencia-cultural-binder` (sem push nem merge, por pedido do fundador; bundle em `/mnt/project-files/inteligencia-cultural-2026-11-28/`). Oportunidades com 10 critérios (`comum/inteligencia/`, `python3 comum/ferramentas/inteligencia.py oportunidades`), radar v2, colunas de retenção no registo. Piloto OP-2026-W48-01 à espera de escolha. Relatório: `nucleo/auditorias/2026-11-28_inteligencia_cultural.md`.
+
 **Falta o fundador colar** `nucleo/prompts/CLAUDE_PROJECT.md` (claude.ai) e `nucleo/prompts/CHATGPT.md` (ChatGPT).
 
 ## Prontos, à espera do fundador (publicação ou envio)
@@ -55,6 +57,7 @@ Branch principal: `main`. Git direto para a `main` com validação verde (`AGENT
 - Insights: ecrã Conteúdo, visitas ao perfil, toques no link, impulso de 8–14/11; datas de publicação dos conteúdos fechados a 16/11; R$ 11 de impulso de 26/10 (quais vídeos).
 - Registo: confirmar as 30 linhas `POR AUDITAR` de `comum/REGISTRO_EDITORIAL.md`.
 - BINDER Vision: prints de visitas e toques no link, Play Console, bio e destaque «Comece aqui», gravações de `binder-vision/ESTRATEGIA.md` §8, pautas da Camada 2.
+- Inteligência cultural: integrar a branch `inteligencia-cultural-binder`; escolher (ou não) a oportunidade OP-2026-W48-01; ligar a @binder_vision no vidIQ é o que desbloqueia `inteligencia.py padroes`.
 - Infraestrutura: ligar a @binder_vision no vidIQ; RLS em `public.spatial_ref_sys` (Supabase); atualizar as skills `binder-*` (ainda mandam ler o Drive primeiro).
 - Mana & Burn: esboço das expressões novas do Mana e do Burn; PR #2 (Pequeno Mestre) e PR #7 (TV analógica).
 - Parcerias: LL-ART20 Caio Monteiro (prazo de 21/11 passado; registar a resposta) → MC-ESP04 Preconauta.

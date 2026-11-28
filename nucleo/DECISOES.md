@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 28/11/2026 (01:00) · Inteligência cultural: oportunidades com 10 critérios, radar v2 e colunas de retenção
+
+**O quê:** (1) nova pasta `comum/inteligencia/`: cada oportunidade editorial é uma ficha YAML com evidências (fonte, URL, datas, tipo, incluindo «ausência»), pergunta central, ângulo, «porquê agora» e os **10 critérios** do fundador (1–5, cada um com a frase que o justifica), mais portões que nenhuma soma compensa (identidade BINDER ≤ 2, saturado ou janela vencida → fora; fontes ≤ 2 → esperar); `comum/ferramentas/inteligencia.py` valida e mostra a tabela, nunca escolhe. (2) Radar formato v2: colunas Categoria (A–F), Confiança e Janela, e varrimento mínimo semanal (1 linha por região + 2 fora de combos e torneios) (`comum/radar/LEIA-ME.md`). (3) `registo_posts.csv` ganha no fim `publicado_em`, `duracao_s`, `tempo_medio_s`, `pct_assistida`, `taxa_saltos`, `tipo_abertura`, `tipo_narrativa`; métricas calculadas não se gravam, calcula-as `inteligencia.py padroes`, que só lê padrões com ≥ 2 grupos de n ≥ 3. (4) `SHOWRUNNER.md` §2.4 passo 10 aponta para a tabela.
+**Porquê:** missão do fundador «BINDER Cultural Intelligence» (28/11/2026) e escolha «Sim, conjunto mínimo + piloto» no cartão (00:57 UTC), depois do diagnóstico `nucleo/auditorias/2026-11-28_inteligencia_cultural.md` (radar só com combos/EUA; rubrica sem fontes, longevidade, custo e identidade; 1 de 52 publicados com tempo médio).
+**Impacto:** nenhum motor, episódio publicado, identidade visual ou rubrica de 7 critérios muda; a rubrica do §2.4 continua a escolher o ângulo, as oportunidades decidem se e quando. Linhas antigas do CSV ficam com as colunas novas vazias. Caso-piloto: `OP-2026-W48-01` (crédito duplo em «There's Coffee in that Nebula»), à espera de escolha do fundador. 0 créditos.
+
 ## 26/11/2026 (23:30) · Lambe-lambe: o vídeo do LL-ECO01 passa a padrão de todos os vídeos; LL-ART21 V3 no padrão
 
 **O quê:** todos os vídeos 9:16 do Lambe-lambe passam a seguir a linguagem do LL-ECO01 (cartaz grande por cena, peças a bater no muro, carimbos, autocolantes, abertura em tela cheia, tremor, efeitos próprios, fecho do scanner), feitos com o motor novo `lambe-lambe/kit_video/motor_video.py` (`kit_video/LEIA-ME.md`; `lambe-lambe/CONTEXTO.md` §3). Primeiro episódio no kit: **LL-ART21 V3** (Will Murai, 44,47 s). V1 e V2 ficam intactas.

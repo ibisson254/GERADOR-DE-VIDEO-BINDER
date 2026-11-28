@@ -70,6 +70,7 @@ Primeiro descobre-se **qual história merece ser contada**; só depois se escrev
    - separar **contagem de decks**, **popularidade**, **opinião da comunidade** e **resultado competitivo**: uma contagem do EDHREC não prova tendência no Brasil nem na Europa; fonte regional que não abre fica como limitação, nunca como «tendência»;
    - não copiar a lista inteira de outro jogador; não inventar preços, disponibilidade, rankings nem bracket (bracket e Salt só com fonte, data, metodologia e amostra suficiente).
    Primeira aplicação: `manaburn/episodios/ep20_monolito_infinito/ficha.md` («Pesquisa de decks Commander»).
+10. **Oportunidades culturais (desde 28/11/2026, fundador):** quando a pauta não nasce de um pedido do fundador, parte-se da tabela `python3 comum/ferramentas/inteligencia.py oportunidades` (10 critérios com porquês e portões; regras em `comum/inteligencia/LEIA-ME.md`). A oportunidade escolhida pelo fundador entra aqui no passo 3 como tema dado; a rubrica dos passos 3–6 continua a escolher o ângulo.
 
 | Frente | Reação-alvo (pergunta de pesquisa) | Onde procurar (fonte primária primeiro) | Critério de adequação na rubrica |
 |---|---|---|---|

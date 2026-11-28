@@ -2,7 +2,7 @@
 
 28/11/2026 · pedido do fundador «Missão: BINDER Cultural Intelligence» · branch local `inteligencia-cultural-binder` (sem push, sem merge) · 0 créditos gastos.
 
-Este documento cobre as fases 1 a 3 do pedido (diagnóstico, arquitetura, priorização). **Nada foi implementado**: o pedido manda entregar o diagnóstico antes de implementar, e três das mudanças propostas alteram regras (radar, rubrica do Showrunner, colunas do registo de insights), que só mudam com decisão do fundador (`AGENTS.md` §2, constituição §1).
+As secções 1–7 são as fases 1 a 3 (entregues antes de implementar). O fundador escolheu «Sim, conjunto mínimo + piloto» no cartão (28/11, 00:57 UTC); as fases 4 e 5 e o relatório final no formato A–I estão no §8.
 
 ## 1. Estado verificado do repositório (28/11/2026, 00h50 UTC)
 
@@ -97,6 +97,70 @@ Nada de sistema novo. Três peças existentes ganham o que lhes falta e um scrip
 3. Ligar a @binder_vision no vidIQ; autorizar (ou não) créditos para ler os Insights por API.
 4. Independente desta missão: integrar a branch da auditoria de 27/11.
 
+## 8. Fases 4 e 5 · relatório final (A–I)
+
+### A. Diagnóstico
+§1–§4. Em resumo: 70 % da camada já existia; faltavam descoberta fora dos combos (radar), uma avaliação com fontes, longevidade, custo, identidade e «agora ou esperar», e dados de retenção (1 de 52 publicados com tempo médio). O gargalo é publicar e medir (39 conteúdos à espera), não descobrir.
+
+### B. Arquitetura
+§5, implementada só na parte mínima: radar v2 → ficha de oportunidade (10 critérios + portões) → escolha do fundador → Showrunner e ficha como hoje → registo com retenção e atributos → `padroes` só com amostra.
+
+### C. O que foi implementado
+
+| Ficheiro | Novo/alterado | Porquê |
+|---|---|---|
+| `comum/inteligencia/LEIA-ME.md` | novo | regras, fluxo de 30 min, critérios, portões, limites |
+| `comum/inteligencia/oportunidades/OP-2026-W48-01.yaml` | novo | caso-piloto real (10 evidências, 5 verificações pendentes) |
+| `comum/inteligencia/oportunidades/OP-2026-W48-02.yaml` | novo | exemplo real sem fontes lidas: o portão manda **esperar** |
+| `comum/inteligencia/pilotos/OP-2026-W48-01_proposta.md` | novo | proposta audiovisual completa (14 pontos) e plano de medição |
+| `comum/ferramentas/inteligencia.py` | novo (~300 linhas, só PyYAML) | `validar`, `oportunidades [--detalhe]`, `padroes` |
+| `comum/ferramentas/test_inteligencia.py` | novo | 18 testes |
+| `comum/ferramentas/memoria.py`, `test_memoria.py` | alterado | aceita e valida as 7 colunas novas (números com ponto, % ≤ 100, data) + 1 teste |
+| `comum/insights/registo_posts.csv` | alterado | 7 colunas vazias no fim; conferido por script que **todas as linhas antigas ficaram iguais** antes da vírgula nova |
+| `comum/insights/LEIA-ME.md`, `comum/radar/LEIA-ME.md`, `comum/radar/2026-W48.md` | alterado | colunas novas documentadas; radar v2 com varrimento; linhas 13–15 no formato v2 |
+| `nucleo/SHOWRUNNER.md` | +1 passo (§2.4 passo 10) | aponta para a tabela; a rubrica de 7 critérios não muda |
+| `nucleo/DECISOES.md`, `comum/historico.md`, `STATUS.md` | alterado | registo da decisão e do estado |
+
+Não mexido: motores, QC, episódios, identidade visual, workflow do GitHub (a branch da auditoria também o altera; acrescentar o passo dos testes novos depois do merge dela evita conflito).
+
+### D. Testes (resultados reais, 28/11)
+- `test_inteligencia.py`: 18 testes OK (nota sem porquê recusada, critério em falta, evidência sem URL, ausência sem URL aceite, portões identidade/fontes/janela/saturado, ordenação, padrões com e sem amostra, vazio ≠ zero, % calculada identificada, registo real).
+- `test_memoria.py`: 18 OK (17 antigos + retenção inválida). `test_ciclo.py`: OK. `memoria.py validar`: OK. `ciclo.py validar`: OK. `validar_repo.py`: 1 problema não grave, **já existente** (`vince/kit/v1/`).
+- `inteligencia.py oportunidades`: 0,06 s. `padroes` no registo real: «amostra insuficiente» (nenhum conteúdo tem `tempo_medio_s` nas colunas novas). É o resultado correto, não uma falha: o M4 está à espera de dados.
+- Não testado: Windows/PowerShell (só Python + PyYAML, sem caminhos fixos; deve correr, mas não foi visto); o workflow `validar` no GitHub (sem push).
+
+### E. Economia operacional (estimativas, ditas como tal)
+- **Evitado construir:** crawler, base de dados, dashboard, agentes por módulo, MCP novo (§4). Tudo o que existe são ~44 KB de texto e código num formato que o fundador lê sem ferramentas.
+- **Custo de execução:** 0 créditos e 0 assinaturas; a pesquisa do piloto usou pesquisa web, um agente de leitura de páginas (6 páginas) e a API gratuita do Scryfall.
+- **Tempo:** a avaliação fica escrita uma vez e reaproveita-se; hoje as reservas de cada ficha perdem-se e a escuta refaz-se por episódio. Estimativa (não medida): 15–30 min poupados por pauta nova quando a oportunidade já está avaliada. Medir nas próximas 3 pautas: tempo da escolha do tema na ficha.
+- **Risco evitado:** o `memoria.py pauta` apanhou durante o piloto que The One Ring é objeto bloqueado (LL-R02, LL-CUR07): entrou só como contexto.
+
+### F. Demonstração (caso-piloto)
+- **Assunto:** a versão LCARS de «There's Coffee in that Nebula» (Star Trek, 13/11/2026) passou a creditar também Rutger van de Steeg; a nebulosa é uma pintura dele para Star Trek: Prodigy.
+- **Fontes e evidências:** Scryfall (#369, #503, #40; hoc #44), ICv2 (13/11), três comunicados oficiais da Wizards (2021, 2023, 2025), EpicFlix (05/2026); um blog promocional marcado como fonte fraca; ausência de dados de interesse e de fontes BR/PT registada.
+- **Avaliação:** 40/50, veredito AVALIAR, confiança média, janela até 08/12; notas 5·3·4·4·4·4·3·4·5·4 com as frases em `--detalhe`. A OP-02 (artistas convidados) fica em ESPERAR porque só há um título de pesquisa.
+- **Abordagem:** Reel documental do Lambe-lambe, sem voz, 35–40 s, «1 carta · 2 artistas», linha do tempo de casos, sem acusar pessoas nem mostrar a pintura original.
+- **Medição pós-publicação:** taxa de saltos, tempo médio, % assistida, guardados, partilhas, comentários, UTM; atributos `objeto-contraste` e `documental-linha-do-tempo`.
+- **Bloqueante antes de produzir:** ler o comunicado da Wizards de 12/11/2026.
+
+### G. Riscos
+- O radar v2 só funciona se for feito: sem varrimento semanal, as oportunidades voltam a nascer dos combos.
+- Notas 1–5 continuam a ser juízo; a frase obrigatória torna o juízo revisível, não objetivo.
+- `padroes` com amostras pequenas pode tentar a ler causas: o texto diz «hipótese» e «não é causa», mas a leitura humana tem de respeitar isso.
+- Fontes que só abrem por navegador (Reddit, Instagram, magic.wizards.com) dependem da sessão; a ausência fica registada.
+- Temas de autoria envolvem pessoas reais: o piloto tem de passar pela verificação jurídica de redação (§13 da proposta).
+- `STATUS.md` continua acima de 6 KB (já estava; não reduzido aqui para não colidir com outras conversas).
+
+### H. Decisões do fundador
+1. Integrar a branch `inteligencia-cultural-binder` (push + merge), e depois a da auditoria de 27/11; a seguir, acrescentar `test_inteligencia.py` ao workflow `validar`.
+2. Escolher, mandar esperar ou descartar a OP-2026-W48-01 (e a frente: Lambe-lambe ou Conde).
+3. Ligar a @binder_vision no vidIQ e dizer se autoriza créditos para ler os Insights por API (custo por confirmar); ou enviar os prints de domingo com tempo médio e taxa de saltos.
+4. Autorizar preencher as colunas novas das linhas antigas a partir dos prints/exports originais (só onde existirem).
+5. Publicar a fila (39 conteúdos) antes de abrir pautas novas: é o que dá dados ao M4.
+
+### I. Próxima missão
+**Primeira semana real do ciclo:** com a @binder_vision ligada no vidIQ, fazer o radar v2 de 2026-W49 (segunda, 30 min), avaliar 3 oportunidades, e registar a retenção dos Reels publicados nessa semana nas colunas novas. É o que transforma o desenho em aprendizagem; nada mais deve ser construído antes disso.
+
 ## Handoff
 
-Branch local `inteligencia-cultural-binder` (1 commit: este documento). Sem push. Próximo passo: com o «sim» do fundador, Fase 4 pelo conjunto mínimo do §6.
+Branch local `inteligencia-cultural-binder` (2 commits: diagnóstico; fases 4–5). Sem push nem merge, por pedido do fundador; bundle em `/mnt/project-files/inteligencia-cultural-2026-11-28/`. Próximo passo: decisões do §8 H.
