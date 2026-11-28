@@ -3,6 +3,7 @@
 
 Só biblioteca padrão, 0 créditos, sem rede. Correr a partir da raiz do repositório (ou passar --raiz).
 
+  python3 comum/ferramentas/eventos.py vozes MB-EP22 --data 2026-11-29 --fonte "fundador, 29/11 10:02, conversa X: «pode gerar as vozes»"
   python3 comum/ferramentas/eventos.py concluir MB-EP22 --qc /caminho/qc_video/qc.json
   python3 comum/ferramentas/eventos.py sincronizar --destino ../-Binder-Dados/entradas
   python3 comum/ferramentas/eventos.py pendentes
@@ -11,7 +12,10 @@ Só biblioteca padrão, 0 créditos, sem rede. Correr a partir da raiz do reposi
 
 Ordem que o `concluir` impõe: render → QC sem P0 (qc.json do `comum/qc/qc_video.py`) →
 **aprovação final humana escrita na ficha** → pacote completo (memoria.py encerramento) →
-evento no outbox + registo em CONCLUÍDO → sincronização com o Data Binder.
+evento no outbox + registo em PUBLICADO → sincronização com o Data Binder.
+
+Regra do fundador (28/11/2026, 08:05): assim que ele autoriza as vozes, o episódio conta como publicado.
+O `vozes` regista esse momento; o `concluir` garante PUBLICADO para quem ainda não estiver.
 
 O modelo nunca aprova: sem a linha «Aprovação final: <nome> · <data>» na ficha, escrita pelo
 fundador ou copiada das palavras dele com a fonte, o comando recusa.
@@ -136,7 +140,7 @@ def montar_evento(raiz, entrada, ficha_txt, ficha_rel, aprov, qc_estado, formato
         'event_type': TIPO,
         'episode_id': entrada['ID'],
         'series_id': entrada['ID'].split('-')[0],
-        'production_status': 'CONCLUÍDO',
+        'production_status': 'PUBLICADO',
         'approval_status': 'aprovado',
         'approved_by': aprov[0],
         'qc_status': qc_estado,
@@ -153,21 +157,44 @@ def montar_evento(raiz, entrada, ficha_txt, ficha_rel, aprov, qc_estado, formato
     }
 
 
-def marcar_concluido(raiz, entrada, eid):
-    """Passa a linha do registo a CONCLUÍDO (só a partir de APROVADO/EM PRODUÇÃO). Nunca recua um PUBLICADO."""
-    if entrada['Estado'] not in ('APROVADO', 'EM PRODUÇÃO'):
+REGRA_VOZES = 'regra do fundador de 28/11/2026 08:05: vozes autorizadas = publicado'
+ANTES_DE_PUBLICADO = ('APROVADO', 'EM PRODUÇÃO', 'CONCLUÍDO')
+
+
+def marcar_publicado(raiz, entrada, fonte, data):
+    """Passa a linha do registo a PUBLICADO (regra de 28/11: vozes autorizadas = publicado).
+    Só a partir de APROVADO/EM PRODUÇÃO/CONCLUÍDO; só muda Estado, Publicação (se vazia) e acrescenta à Fonte."""
+    if entrada['Estado'] not in ANTES_DE_PUBLICADO:
         return False
     caminho = raiz / 'comum' / 'REGISTRO_EDITORIAL.md'
     linhas = caminho.read_text(encoding='utf-8').split('\n')
     i = entrada['_linha'] - 1
     cel = [c.strip() for c in linhas[i].strip().strip('|').split('|')]
     assert cel[0] == entrada['ID'], 'linha do registo mudou desde a leitura'
-    cel[m.COLUNAS.index('Estado')] = 'CONCLUÍDO'
+    cel[m.COLUNAS.index('Estado')] = 'PUBLICADO'
+    k = m.COLUNAS.index('Publicação')
+    if cel[k] in m.VAZIOS | {'A CONFIRMAR', 'não publicada'} or cel[k].startswith(('agendad', 'não publicad')):
+        cel[k] = f'vozes autorizadas a {data} ({REGRA_VOZES}; data exata do post por confirmar)'
     k = m.COLUNAS.index('Fonte do estado')
-    cel[k] = f'{cel[k]} · CONCLUÍDO por `eventos.py concluir` ({eid})'
+    cel[k] = f'{cel[k]} · PUBLICADO: {fonte}'
     linhas[i] = '| ' + ' | '.join(cel) + ' |'
     caminho.write_text('\n'.join(linhas), encoding='utf-8')
     return True
+
+
+def vozes_autorizadas(raiz, episodio, data, fonte):
+    """Registo do momento em que o fundador autoriza as vozes: o episódio passa a PUBLICADO."""
+    if not fonte or not fonte.strip():
+        return 2, ['RECUSADO: falta a fonte (as palavras do fundador, com data e onde)']
+    if not re.fullmatch(r'\d{4}-\d{2}-\d{2}|\d{2}/\d{2}/\d{4}', data or ''):
+        return 2, ['RECUSADO: data em AAAA-MM-DD ou DD/MM/AAAA']
+    entradas, _ = m.ler_registo(raiz)
+    e = next((x for x in entradas if x['ID'] == episodio), None)
+    if not e:
+        return 2, [f'{episodio} não está no registo']
+    if marcar_publicado(raiz, e, f'fundador autorizou as vozes ({fonte.strip()})', data):
+        return 0, [f'{episodio}: {e["Estado"]} → PUBLICADO ({REGRA_VOZES})']
+    return 0, [f'{episodio}: estado {e["Estado"]} mantido']
 
 
 def concluir(raiz, episodio, qc_json, video=None, branch=None):
@@ -199,8 +226,8 @@ def concluir(raiz, episodio, qc_json, video=None, branch=None):
     ev = montar_evento(raiz, e, txt, str(ficha.relative_to(raiz)), aprov, qc_estado, formato, video, branch)
     _append(outbox, ev)
     msgs = [f'evento {eid} gravado em {OUTBOX} (sincronização pendente)']
-    if marcar_concluido(raiz, e, eid):
-        msgs.append(f'{episodio}: registo passou a CONCLUÍDO')
+    if marcar_publicado(raiz, e, f'`eventos.py concluir` ({eid}; {REGRA_VOZES})', aprov[1]):
+        msgs.append(f'{episodio}: registo passou a PUBLICADO')
     else:
         msgs.append(f'{episodio}: estado {e["Estado"]} mantido')
     return 0, msgs, ev
@@ -316,6 +343,10 @@ def main(argv=None):
     p.add_argument('--video', default=None, help='caminho do vídeo final (por defeito: linha «Vídeo:» da ficha)')
     p = sub.add_parser('sincronizar', help='entrega os eventos pendentes ao Data Binder')
     p.add_argument('--destino', required=True, help='pasta do clone do Data Binder (ex.: ../-Binder-Dados/entradas)')
+    p = sub.add_parser('vozes', help='o fundador autorizou as vozes: o episódio passa a PUBLICADO (regra de 28/11)')
+    p.add_argument('id')
+    p.add_argument('--data', required=True)
+    p.add_argument('--fonte', required=True, help='palavras do fundador, com data e onde')
     sub.add_parser('pendentes', help='lista eventos por sincronizar')
     p = sub.add_parser('metricas', help='leituras de um episódio com origem, período e definição')
     p.add_argument('id')
@@ -325,6 +356,10 @@ def main(argv=None):
 
     if a.cmd == 'concluir':
         cod, msgs, _ = concluir(raiz, a.id, a.qc, a.video)
+        print('\n'.join(msgs))
+        return cod
+    if a.cmd == 'vozes':
+        cod, msgs = vozes_autorizadas(raiz, a.id, a.data, a.fonte)
         print('\n'.join(msgs))
         return cod
     if a.cmd == 'sincronizar':

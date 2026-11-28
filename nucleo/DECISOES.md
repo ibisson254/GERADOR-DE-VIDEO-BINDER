@@ -2,6 +2,12 @@
 
 Uma entrada por alteração de regra: data · o quê · porquê · impacto. Mais recente no topo.
 
+## 28/11/2026 (08:10) · Vozes autorizadas = publicado
+
+**O quê:** a partir de agora, um episódio conta como `PUBLICADO` **no momento em que o fundador autoriza as vozes**. A sessão regista-o com `python3 comum/ferramentas/eventos.py vozes <ID> --data <data> --fonte "<palavras do fundador, data, onde>"` (sem fonte, recusa). O `eventos.py concluir` passa a marcar `PUBLICADO` (e não `CONCLUÍDO`) e o evento leva `production_status: PUBLICADO`. Os 8 episódios com versão por confirmar na reconciliação (MB-ESP05, MB-EP17, MC-ESP03, MC-EP09, MC-EP10, LL-ART21, LL-ECO01, AB-04) ficam com a publicação confirmada (coluna `resolucao` do CSV e Fonte do registo).
+**Porquê:** fundador, 28/11/2026 (08:05): «Já foram publicadas os 8 episódio assim que eu aceitar criar as vozes já tem que dar como publicada».
+**Impacto:** deixa de haver estado «concluído à espera de publicação» na prática; `CONCLUÍDO` só sobra para frentes sem voz até à aprovação final (o `concluir` também as passa a `PUBLICADO`). A data exata do post continua «por confirmar» até haver insights. Episódios em produção cujas vozes já foram autorizadas devem ser marcados com `eventos.py vozes` quando a sessão o confirmar na ficha.
+
 ## 28/11/2026 (03:10) · Episódio concluído gera evento para o Data Binder (`eventos.py concluir`)
 
 **O quê:** um episódio só passa a CONCLUÍDO por `python3 comum/ferramentas/eventos.py concluir <ID> --qc <qc.json>`, que exige, por esta ordem, QC sem P0, a linha «Aprovação final: <nome> · <data>» na ficha e o pacote completo; grava então um evento `episode.completed` com id determinístico em `comum/eventos/episodios.jsonl` e muda o registo. `eventos.py sincronizar --destino <Data Binder>` entrega os pendentes; falha = continua pendente. Testes 1–10 em `test_eventos.py`, no workflow `validar`.

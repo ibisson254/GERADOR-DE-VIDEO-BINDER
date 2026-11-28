@@ -6,13 +6,15 @@ Criado a 28/11/2026 (`nucleo/DECISOES.md`; desenho em `nucleo/auditorias/2026-11
 
 ## Fluxo
 
+0. **Vozes autorizadas = publicado** (fundador, 28/11/2026 08:05). No momento em que o fundador autoriza as vozes: `python3 comum/ferramentas/eventos.py vozes <ID> --data <data> --fonte "<palavras dele, data, onde>"`. O registo passa a PUBLICADO (data exata do post por confirmar).
+
 1. Render do vídeo final.
 2. `python3 -I comum/qc/qc_video.py VIDEO.mp4 --frente <frente>` → `qc_<video>/qc.json`. P0 bloqueia.
 3. **O fundador aprova** e fica escrito na ficha, numa linha própria:
    `- Aprovação final: <nome> · <AAAA-MM-DD ou DD/MM/AAAA>`
    Só o fundador a escreve, ou a sessão copia as palavras dele com a fonte. O modelo nunca aprova: o script recusa nomes como «Claude», «modelo», «agente».
 4. `python3 comum/ferramentas/eventos.py concluir <ID> --qc <caminho>/qc.json`
-   Confere QC, aprovação e o pacote (`memoria.py encerramento`), grava o evento e passa o registo de APROVADO/EM PRODUÇÃO a CONCLUÍDO (um PUBLICADO nunca recua). Repetir não duplica.
+   Confere QC, aprovação e o pacote (`memoria.py encerramento`), grava o evento e passa o registo de APROVADO/EM PRODUÇÃO/CONCLUÍDO a PUBLICADO (um PUBLICADO fica como está). Repetir não duplica.
 5. `python3 comum/ferramentas/eventos.py sincronizar --destino <clone do Data Binder>/entradas`
    Entrega os pendentes em `originals_episodios.jsonl`. Se falhar, o evento fica pendente e a tentativa fica registada; corre-se outra vez mais tarde.
 

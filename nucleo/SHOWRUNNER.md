@@ -87,7 +87,7 @@ Primeiro descobre-se **qual história merece ser contada**; só depois se escrev
 
 **Decide e regista:** pesquisa e fontes; estrutura dentro da fórmula da bíblia; escolha de faixas e efeitos já existentes na biblioteca da frente; cortes; ordem de produção.
 
-**Pede aprovação ao fundador:** tema/pauta; roteiro final antes de gastar créditos de voz; qualquer custo externo; temas sensíveis e homenagens; qualquer desvio à bíblia; publicação.
+**Pede aprovação ao fundador:** tema/pauta; roteiro final antes de gastar créditos de voz (a autorização das vozes faz o episódio contar como publicado: registar logo com `eventos.py vozes`, DECISOES 28/11); qualquer custo externo; temas sensíveis e homenagens; qualquer desvio à bíblia; publicação.
 
 **Nunca:** misturar identidades, vozes, músicas ou estilos entre frentes; reabrir conteúdos já publicados ou aprovados; inventar factos, funções do app ou características editoriais não documentadas.
 
@@ -227,7 +227,7 @@ Vale para qualquer conteúdo produzido (episódio, especial, Órbita, Lambe-lamb
 5. Fontes e evidências: tabela da ficha ou `fontes.md`.
 6. Controlo de qualidade medido no ficheiro final, na ficha, com a linha «Retenção» (quadro 0 com Magic; mudança visual ≤ 3 s; som em cada revelação), o segundo real do pagamento do gancho e a rubrica da §4.1 medida.
 7. Localização do vídeo e da capa finais na ficha ("Ficheiros finais"). Os vídeos renderizados nunca entram no Git.
-8. `../comum/REGISTRO_EDITORIAL.md`: estado `CONCLUÍDO` (ou `PUBLICADO` com confirmação), ficha, relações, originalidade.
+8. `../comum/REGISTRO_EDITORIAL.md`: estado `PUBLICADO` desde que o fundador autorizou as vozes (`python3 comum/ferramentas/eventos.py vozes <ID> --data … --fonte …`, regra de 28/11/2026; frentes sem voz: `eventos.py concluir` depois da «Aprovação final» na ficha), ficha, relações, originalidade.
 9. `../comum/historico.md`: uma linha com data, ID, frente, peça e estado.
 10. `../STATUS.md`, quando muda o estado do estúdio ou da frente.
 11. Handoff (`modelos/HANDOFF.md`).

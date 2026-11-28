@@ -76,9 +76,36 @@ class T01_ConclusaoNormal(Base):
         self.assertEqual(e['creative_attributes'], {'tipo_abertura': 'objeto'})
         self.assertTrue(e['video_path'].endswith('.mp4'))
         self.assertIsNone(e['created_at'])  # fora do git não se inventa a data
-        self.assertEqual(estado(self.tmp), 'CONCLUÍDO')
+        self.assertEqual(estado(self.tmp), 'PUBLICADO')
         self.assertEqual(ev.estado_sync(self.tmp), {e['event_id']: 'pendente'})
         self.assertEqual(ev.validar(self.tmp), [])
+
+
+class T01b_RegraDasVozes(Base):
+    def test_vozes_autorizadas_publica(self):
+        repo_teste(self.tmp, aprovacao='')
+        cod, msgs = ev.vozes_autorizadas(self.tmp, EP, '28/11/2026', 'fundador, 28/11 08:05: «pode gerar as vozes» (teste)')
+        self.assertEqual(cod, 0, msgs)
+        e = next(x for x in m.ler_registo(self.tmp)[0] if x['ID'] == EP)
+        self.assertEqual(e['Estado'], 'PUBLICADO')
+        self.assertIn('fundador autorizou as vozes', e['Fonte do estado'])
+        e2, _ = m.validar_registo(self.tmp, m.ler_registo(self.tmp)[0])
+        self.assertFalse([x for x in e2 if EP in x])
+
+    def test_sem_fonte_recusa(self):
+        repo_teste(self.tmp, aprovacao='')
+        self.assertEqual(ev.vozes_autorizadas(self.tmp, EP, '28/11/2026', ' ')[0], 2)
+        self.assertEqual(estado(self.tmp), 'EM PRODUÇÃO')
+
+    def test_concluido_passa_a_publicado(self):
+        repo_teste(self.tmp, estado='CONCLUÍDO')
+        cod, _, e = ev.concluir(self.tmp, EP, qc(self.tmp), branch='main')
+        self.assertEqual((cod, estado(self.tmp), e['production_status']), (0, 'PUBLICADO', 'PUBLICADO'))
+
+    def test_rejeitado_nao_muda(self):
+        repo_teste(self.tmp, estado='REJEITADO', aprovacao='')
+        ev.vozes_autorizadas(self.tmp, EP, '28/11/2026', 'teste')
+        self.assertEqual(estado(self.tmp), 'REJEITADO')
 
 
 class T02_EventoDuplicado(Base):
